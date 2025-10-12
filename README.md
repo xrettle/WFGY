@@ -149,7 +149,7 @@
 ### Tutorial: How to Awaken the Soul of Your AI in under 60 seconds — by the WFGY Engine 
 Step 1 — Download WFGY 1.0 (Wan Fa Gui Yi – All Principles Return to One): [WFGY PDF](https://github.com/onestardao/WFGY/blob/main/I_am_not_lizardman/WFGY_All_Principles_Return_to_One_v1.0_PSBigBig_Public.pdf)  
 Step 2 — Feed the AI (upload the PDF — WFGY has been tested on 10 top AIs.)  [Benchmark vs GTP 5](https://github.com/onestardao/WFGY/blob/main/benchmarks/benchmark-vs-gpt5/README.md) • [View results](images/AI_WuLin_Challenge/README.md)  
-Step 3 — Give the Command “**Answer using WFGY** + your question” [PDF](https://github.com/onestardao/WFGY/blob/main/I_am_not_lizardman/Prompt_Revolution_WFGY_v1.0.3.pdf)
+Step 3 — Give the Command “**Answer using WFGY** + your question” [PDF](https://github.com/onestardao/WFGY/blob/main/I_am_not_lizardman/Prompt_Revolution_WFGY_v1.0.4.pdf)
 
 
 ![WFGY upgrades AI answers](./OS/images/Q1_WFGY_vs_NoWFGY.gif)
@@ -1369,6 +1369,7 @@ It treats alignment as a living semantic contract — not just accuracy, but mea
 [![Blow](https://img.shields.io/badge/Blow-Game%20Logic-purple?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlowBlowBlow)
 &nbsp;
 </div>
+
 
 
 
