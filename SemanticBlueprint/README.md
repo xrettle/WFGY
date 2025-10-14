@@ -208,16 +208,17 @@ All papers have been independently rated using ChatGPT's built-in [SciSpace](htt
 
 ---
 
-| #   | Title                                           | Score | DOI                                                                |
-|-----|--------------------------------------------------|-------|--------------------------------------------------------------------|
-| P1  | **Semantic Relativity Theory**                  | 93    | [10.5281/zenodo.15630802](https://doi.org/10.5281/zenodo.15630802) |
-| P2  | **Semantic BioEnergy: Plants vs. Einstein**     | 94    | [10.5281/zenodo.15630370](https://doi.org/10.5281/zenodo.15630370) |
-| P3  | **Semantic Collapse in Quantum Measurement**    | 94    | [10.5281/zenodo.15630681](https://doi.org/10.5281/zenodo.15630681) |
-| P4  | **Semantic Field–Mediated Fifth Force**         | 93    | [10.5281/zenodo.15630650](https://doi.org/10.5281/zenodo.15630650) |
-| P5  | **Semantic Entropy under Landauer's Principle** | 94    | [10.5281/zenodo.15630478](https://doi.org/10.5281/zenodo.15630478) |
-| P6  | **Semantic Holography & Causal Fields**         | 94    | [10.5281/zenodo.15630163](https://doi.org/10.5281/zenodo.15630163) |
+| #   | Title                                           | Score | DOI                                                                 |
+|-----|--------------------------------------------------|-------|---------------------------------------------------------------------|
+| P1  | **Semantic Relativity Theory**                  | 93    | [10.6084/m9.figshare.30351508](https://doi.org/10.6084/m9.figshare.30351508) |
+| P2  | **Semantic BioEnergy: Plants vs. Einstein**     | 94    | [10.6084/m9.figshare.30352828](https://doi.org/10.6084/m9.figshare.30352828) |
+| P3  | **Semantic Collapse in Quantum Measurement**    | 94    | [10.6084/m9.figshare.30351640](https://doi.org/10.6084/m9.figshare.30351640) |
+| P4  | **Semantic Field–Mediated Fifth Force**         | 93    | [10.6084/m9.figshare.30351763](https://doi.org/10.6084/m9.figshare.30351763) |
+| P5  | **Semantic Entropy under Landauer's Principle** | 94    | [10.6084/m9.figshare.30352399](https://doi.org/10.6084/m9.figshare.30352399) |
+| P6  | **Semantic Holography & Causal Fields**         | 94    | [10.6084/m9.figshare.30353182](https://doi.org/10.6084/m9.figshare.30353182) |
 
 📎 Full annotated reviews with visual diagrams:  👉 [I_am_not_lizardman](https://github.com/onestardao/WFGY/tree/main/I_am_not_lizardman)
+
 
 ### Quick Notes for First-Time Readers:
 
