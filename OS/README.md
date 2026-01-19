@@ -36,7 +36,7 @@
      ──────────────────────────────── -->
 # TXT ≠ Notepad — It’s called TXT OS. Your Next AI Reasoning System.
 
-> 👑 **Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)** — Verified by real engineers · 🏆 **Terminal-Bench: [Public Exam — Coming Soon](https://github.com/onestardao/WFGY/blob/main/core/README.md#terminal-bench-proof)**
+> 👑 **Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)** — Verified by real engineers · 🏆 **Terminal-Bench: [Public Exam — Coming Soon](https://github.com/onestardao/WFGY/blob/main/core/README.md#terminal-bench-proof)** 🧪 **Tension Universe (candidate): [Internal Stress Test in Progress](https://github.com/onestardao/WFGY/tree/main/TensionUniverse)** — exploring structural limits beyond scaling
 
 
 
