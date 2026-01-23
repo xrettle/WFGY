@@ -783,3 +783,21 @@ Then we compare two world patterns:
 * In a RH-false world, under the same frozen admissible encoding class, any consistent sequence eventually shows tension bounded away from zero.
 
 This does not decide RH. It does something different and testable: it makes the RH world-vs-non-RH world distinction auditable at the effective layer, without revealing any deep TU internal construction rules.
+
+## Footer: Beta scope, falsifiability, and non-mutation policy
+
+This document is part of the "TensionUniverse / BlackHole S-problem" Beta.
+
+Scope boundary:
+- This file does NOT claim a proof or a solution of the canonical statement.
+- This file provides an effective-layer encoding: state space, fields, observables, invariants, and discriminating tests.
+- Any TU Deep axioms, generators, or constructive rules are intentionally not included.
+
+Falsifiability boundary:
+- The tests in Block 6 are designed to falsify the TU encoding, not to settle the underlying open problem.
+- "Encoding falsified" and "canonical statement solved" are different claims.
+
+Non-mutation policy:
+- Definitions and symbols in this file are frozen for this version.
+- Revisions, if needed, must be published as a new versioned file (or a changelog entry) and must not silently alter prior definitions.
+
