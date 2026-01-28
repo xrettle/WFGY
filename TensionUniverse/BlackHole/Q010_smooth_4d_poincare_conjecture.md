@@ -1,4 +1,4 @@
-# Q010 · Smooth 4 dimensional Poincaré conjecture
+# Q010 · Smooth 4 dimensional Poincaré conjecture · run 2 (effective layer)
 
 ## 0. Header metadata
 
@@ -15,7 +15,8 @@ Status: Open
 Semantics: discrete
 E_level: E1
 N_level: N2
-Last_updated: 2026-01-24
+Encoding_version: 2
+Last_updated: 2026-01-28
 ```
 
 ---
@@ -26,126 +27,142 @@ Last_updated: 2026-01-24
 
 A closed smooth 4 manifold is a compact, connected, oriented 4 dimensional manifold without boundary, equipped with a smooth structure.
 
-The smooth 4 dimensional Poincaré conjecture can be stated at the effective level as:
+The **smooth 4 dimensional Poincaré conjecture** says informally that the only smooth structure on the topological 4 sphere is the standard one.
 
-> Every closed smooth 4 manifold that is homeomorphic to the standard 4 sphere S4 is in fact diffeomorphic to S4.
+At the canonical level it can be stated as:
+
+> Every closed smooth 4 manifold that is homeomorphic to the standard 4 sphere (S^4) is in fact diffeomorphic to (S^4).
 
 Equivalently:
 
-> There is no exotic smooth structure on S4.  
-> Any smooth manifold M with the same topological type as S4 admits a smooth structure that is smoothly equivalent to the standard one.
+> There is no exotic smooth structure on (S^4).
+> If a smooth manifold (M) is homeomorphic to (S^4), then there is a diffeomorphism between (M) and the standard (S^4).
 
-In contrast, the purely topological 4 dimensional Poincaré conjecture says:
+For comparison, the **topological** 4 dimensional Poincaré conjecture says:
 
-> Every closed simply connected topological 4 manifold with the same homology as S4 is homeomorphic to S4.
+> Every closed simply connected topological 4 manifold with the same homology as (S^4) is homeomorphic to (S^4).
 
-This topological version is known to be true. The smooth version remains open.
+The topological version is known to be true. The smooth version is open.
 
 ### 1.2 Status and difficulty
 
-Key facts at the effective layer:
+At the effective layer we only record standard facts.
 
-* Topological 4 dimensional Poincaré is known to be true, due to work of Freedman and others on the topology of 4 manifolds.
-* Gauge theoretic and smooth invariants, such as Donaldson and Seiberg–Witten invariants, show that many compact 4 manifolds admit exotic smooth structures that are not standard.
-* Exotic smooth structures are known in dimension 4 on R4 and on many compact 4 manifolds, but there is no known example of an exotic smooth S4.
-* There is no known proof that rules out exotic smooth S4 either.
+* Topological 4 dimensional Poincaré is known to hold, by work of Freedman and others on the topology of 4 manifolds.
+* Gauge theoretic and smooth invariants such as Donaldson and Seiberg–Witten invariants show that:
 
-As a result:
+  * many compact 4 manifolds admit exotic smooth structures, and
+  * smooth structure in dimension 4 is much more subtle than in dimensions 2 or 3.
+* Exotic smooth structures are known on (\mathbb{R}^4) and on many compact 4 manifolds.
+* There is no known example of an exotic smooth (S^4), and no proof that such examples do not exist.
 
-* The smooth 4 dimensional Poincaré conjecture is widely regarded as open and very hard.
+So:
+
+* The smooth 4 dimensional Poincaré conjecture is open and widely believed to be very hard.
 * It sits at the intersection of combinatorial topology, smooth geometry, and gauge theory.
-* The conjecture is closely connected to the broader structure theory of smooth 4 manifolds and to questions about which invariants fully control smooth structure.
+* It connects to the broader structure theory of smooth 4 manifolds and to questions about which invariants control smooth structure.
 
 ### 1.3 Role in the BlackHole project
 
-Within the BlackHole S problem collection, Q010 has three main roles:
+Within the BlackHole S problem collection, Q010 has three roles.
 
-1. It is the flagship consistency_tension node for smooth 4 manifolds, where:
+1. **Flagship consistency_tension node for smooth 4 manifolds**
+
+   Q010 is the main node where:
+
    * topological invariants fix a 4 sphere type, and
-   * smooth invariants and handle data must be compatible with this type.
+   * smooth invariants and combinatorial encodings must remain compatible with this type.
 
-2. It provides the canonical example of a discrete, combinatorial encoding of geometry:
-   * manifolds are represented by finite combinatorial descriptions, and
-   * smooth invariants are treated as observable summaries attached to these descriptions.
+2. **Canonical example of discrete encodings of smooth geometry**
 
-3. It serves as a bridge between:
+   Q010 provides the pattern for representing smooth 4 manifolds using finite combinatorial data:
+
+   * a handle decomposition or triangulation is treated as a finite code,
+   * topological and smooth observables are finite summaries attached to that code.
+
+3. **Bridge node**
+
+   Q010 is a bridge between:
+
    * pure 4 manifold theory,
    * gauge theory on 4 manifolds,
-   * and applications where spacetime smooth structure matters (for example Q032, Q040).
+   * applications where spacetime smooth structure matters (for example Q032, Q040).
 
 ### References
 
-1. Michael H. Freedman, “The topology of four dimensional manifolds”, Journal of Differential Geometry, 17 (1982), pages 357–453.  
-2. S. K. Donaldson, “An application of gauge theory to four dimensional topology”, Journal of Differential Geometry, 18 (1983), pages 279–315.  
-3. Robert E. Gompf and András I. Stipsicz, “4-Manifolds and Kirby Calculus”, American Mathematical Society, 1999, especially introductory chapters on smooth and topological 4 manifolds.  
-4. Robion C. Kirby, “Problems in Low Dimensional Topology”, in “Geometric Topology” (Proceedings of the 1993 Georgia International Topology Conference), American Mathematical Society, problem list section on smooth 4 dimensional Poincaré conjecture.
+1. Michael H. Freedman, “The topology of four dimensional manifolds”, Journal of Differential Geometry, 17 (1982), 357–453.
+2. S. K. Donaldson, “An application of gauge theory to four dimensional topology”, Journal of Differential Geometry, 18 (1983), 279–315.
+3. Robert E. Gompf and András I. Stipsicz, “4-Manifolds and Kirby Calculus”, American Mathematical Society, 1999.
+4. Robion C. Kirby, “Problems in Low Dimensional Topology”, in “Geometric Topology” (Proc. Georgia Int. Topology Conference 1993), AMS, problem list section on smooth 4 dimensional Poincaré conjecture.
 
 ---
 
 ## 2. Position in the BlackHole graph
 
-This block records how Q010 sits inside the BlackHole graph, using only Q identifiers and one line reasons that reference concrete components or tension types.
+This block records how Q010 sits in the BlackHole graph, using only Q identifiers and one line reasons that refer to concrete components or tension types.
 
 ### 2.1 Upstream problems
 
-These nodes provide prerequisites and tools used by Q010 at the effective layer.
+Nodes that supply prerequisites or templates.
 
-* Q004 (BH_MATH_HODGE_TYPE_L3_004)  
-  Reason: supplies cohomology and intersection form viewpoints used to define the finite observable library for 4 manifold encodings.
+* **Q004 (BH_MATH_HODGE_TYPE_L3_004)**
+  Reason: provides cohomology and intersection form viewpoints used when defining the observable library for 4 manifold encodings.
 
-* Q012 (BH_MATH_YM_MASSGAP_L3_012)  
-  Reason: provides the gauge theory framework from which Donaldson and Seiberg–Witten style invariants arise on smooth 4 manifolds.
+* **Q012 (BH_MATH_YM_MASSGAP_L3_012)**
+  Reason: provides the gauge theory framework from which Donaldson and Seiberg–Witten type observables arise.
 
-* Q019 (BH_MATH_DIOPH_DENSITY_L3_019)  
-  Reason: contributes a template for encoding tension between discrete combinatorial data and continuous invariants, reused in Q010 for 4 manifold encodings.
+* **Q019 (BH_MATH_DIOPH_DENSITY_L3_019)**
+  Reason: contributes a template for encoding consistency_tension between discrete combinatorial data and continuous invariants, reused here for 4 manifolds.
 
 ### 2.2 Downstream problems
 
-These nodes directly reuse Q010 components or treat Q010 as a prerequisite.
+Nodes that directly reuse Q010 components.
 
-* Q032 (BH_PHYS_4D_GEOM_PHASES_L3_032)  
-  Reason: reuses the FourManifold_Descriptor and Tension_4Sphere_Score components to constrain which smooth 4 geometries are admissible in state sum models.
+* **Q032 (BH_PHYS_4D_GEOM_PHASES_L3_032)**
+  Reason: reuses `FourManifold_Descriptor` and `Tension_4Sphere_Score` components to constrain admissible smooth 4 geometries in state sum models.
 
-* Q040 (BH_PHYS_QBLACKHOLE_INFO_L3_040)  
+* **Q040 (BH_PHYS_QBLACKHOLE_INFO_L3_040)**
   Reason: uses Q010’s encoding of 4 dimensional smooth structures to track how spacetime topology and smoothness influence information flow near horizons.
 
-* Q059 (BH_CS_INFO_THERMODYN_L3_059)  
+* **Q059 (BH_CS_INFO_THERMODYN_L3_059)**
   Reason: generalizes the consistency_tension between micro combinatorial data and macro invariants from 4 manifolds to structured state spaces in information thermodynamics.
 
 ### 2.3 Parallel problems
 
-Parallel nodes share similar tension styles but do not directly reuse components.
+Nodes that share similar tension types but do not reuse components directly.
 
-* Q001 (BH_MATH_NUM_L3_001)  
+* **Q001 (BH_MATH_NUM_L3_001)**
   Reason: both Q001 and Q010 encode consistency_tension between deep hidden structure and observable invariants, phrased as low tension vs persistent high tension worlds.
 
-* Q011 (BH_MATH_NAVIER_STOKES_L3_011)  
-  Reason: both involve existence and smoothness in 4 dimensional settings, with refinement schemes and finite libraries of observables used to define tension.
+* **Q011 (BH_MATH_NAVIER_STOKES_L3_011)**
+  Reason: both involve existence and smoothness in a 4 dimensional setting, with refinement schemes and finite observable libraries.
 
-* Q036 (BH_PHYS_HIGH_TC_MECH_L3_036)  
-  Reason: shares the idea of hidden smooth structure constrained by observed macroscopic patterns, organized as a consistency_tension problem.
+* **Q036 (BH_PHYS_HIGH_TC_MECH_L3_036)**
+  Reason: shares the idea of hidden smooth structure constrained by observed macroscopic patterns.
 
 ### 2.4 Cross domain edges
 
-Cross domain edges reuse Q010’s components or ideas outside pure 4 manifold theory.
+Cross domain reuse of Q010 components.
 
-* Q011 (BH_MATH_NAVIER_STOKES_L3_011)  
-  Reason: uses 4 dimensional manifold descriptors from Q010 as the underlying stage for smooth fluid dynamics.
+* **Q011 (BH_MATH_NAVIER_STOKES_L3_011)**
+  Reason: uses Q010 style 4 manifold descriptors as the background stage for smooth fluid dynamics.
 
-* Q012 (BH_MATH_YM_MASSGAP_L3_012)  
-  Reason: relies on Q010’s combinatorial encodings of 4 manifolds when defining gauge field observables and smooth invariants.
+* **Q012 (BH_MATH_YM_MASSGAP_L3_012)**
+  Reason: relies on Q010’s encodings of 4 manifolds when defining gauge field observables and smooth invariants.
 
-* Q040 (BH_PHYS_QBLACKHOLE_INFO_L3_040)  
-  Reason: applies Q010’s Tension_4Sphere_Score to consistency between spacetime topology and black hole behavior.
+* **Q040 (BH_PHYS_QBLACKHOLE_INFO_L3_040)**
+  Reason: applies `Tension_4Sphere_Score` when comparing spacetime topology and black hole behavior.
 
-* Q123 (BH_AI_INTERP_GEOM_L3_123)  
-  Reason: uses the FourManifold_Descriptor abstraction as an analogy for structured representation spaces in AI interpretability.
+* **Q123 (BH_AI_INTERP_GEOM_L3_123)**
+  Reason: uses `FourManifold_Descriptor` as an analogy for structured representation spaces in AI interpretability.
 
 ---
 
 ## 3. Tension Universe encoding (effective layer)
 
-All content in this block is at the effective layer. We specify:
+Everything in this block stays at the effective layer.
+
+We specify:
 
 * state space and descriptors,
 * a finite observable library,
@@ -153,752 +170,1123 @@ All content in this block is at the effective layer. We specify:
 * mismatch observables and an effective tension tensor,
 * singular sets and domain restrictions.
 
-We do not specify any hidden generative rule that constructs states from raw geometric data.
+No deep generative rule for 4 manifolds is given. Q010 does not claim to construct any manifold, classify smooth structures, or solve the conjecture.
 
 ### 3.1 State space
 
 We assume a state space
 
-`M`
+```txt
+M
+```
 
-with the following interpretation:
+with the following interpretation.
 
-* Each state `m` in `M` represents the effective data of a compact, connected, oriented smooth 4 manifold together with:
-  * a finite combinatorial description (for example a handle decomposition or triangulation),
-  * evaluations of a fixed finite set of topological and smooth observables on that description.
+* Each state `m` in `M` represents effective data of a compact, connected, oriented smooth 4 manifold, including:
 
-We further assume:
+  * a finite combinatorial description (for example a handle decomposition, Kirby diagram, or triangulation), and
+  * evaluated values for a fixed finite set of topological and smooth observables.
 
-* There is a distinguished subclass `M_S4_top` of states that are declared to encode manifolds homeomorphic to S4 at the topological level.
-* For each such manifold, there exist states `m` in `M` that are faithful encodings in the sense defined below.
+We assume:
 
-We do not describe how the combinatorial descriptions or observables are computed. We only require that for each manifold of interest, such encodings exist in principle.
+* There is a distinguished subset
+
+  ```txt
+  M_S4_top ⊆ M
+  ```
+
+  containing states that the external data pipeline has **labeled** as encoding manifolds homeomorphic to (S^4) at the topological level.
+  Q010 itself does not decide membership in `M_S4_top`; it treats the label as input.
+
+* For each manifold of interest, there exist states `m` in `M` that are **faithful encodings** in the sense that:
+
+  * the underlying combinatorial description actually corresponds to that manifold,
+  * the observable values are computed correctly from that description.
+
+We do not specify how combinatorial descriptions or observables are computed. Existence of such encodings is assumed at the effective layer.
 
 ### 3.2 Finite observable library
 
-We fix once and for all a finite observable library `L_obs` for Q010. Each observable is a map from `M` to a finite dimensional discrete range.
-
-Examples of observables in `L_obs`:
-
-1. Fundamental group triviality indicator
+We fix once and for all a finite observable library
 
 ```txt
-obs_pi1_trivial(m) in {0, 1}
+L_obs
 ```
 
-* Equals 1 if the encoding asserts that the fundamental group is trivial.
-* Equals 0 otherwise.
+for Q010. Each observable is a map from `M` to a finite discrete range.
 
-2. Homology summary
+Examples:
 
-```txt
-obs_H(m) = (b0, b1, b2, b3, b4)
-```
+1. **Fundamental group triviality indicator**
 
-* A 5 tuple of nonnegative integers representing Betti numbers as encoded in `m`.
+   ```txt
+   obs_pi1_trivial(m) ∈ {0, 1}
+   ```
 
-3. Intersection form summary
+   * Equals 1 if the encoding asserts that the fundamental group is trivial.
+   * Equals 0 otherwise, or if this information is not established.
 
-```txt
-obs_Q(m)
-```
+2. **Homology summary**
 
-* A finite code that summarizes the intersection form on `H2`, for example via rank, signature, and parity flags.
+   ```txt
+   obs_H(m) = (b0, b1, b2, b3, b4)
+   ```
 
-4. Gauge theoretic smooth invariants
+   * 5 tuple of nonnegative integers representing Betti numbers.
 
-```txt
-obs_SW(m)
-obs_Don(m)
-```
+3. **Intersection form summary**
 
-* Finite tuples representing Seiberg–Witten type and Donaldson type invariants when defined, or a special symbol indicating “not defined in this encoding”.
+   ```txt
+   obs_Q(m)
+   ```
 
-5. Complexity indicator
+   * A finite code summarizing the intersection form on (H^2).
+   * This code may include rank, signature, parity, and other coarse features, in a fixed finite alphabet.
 
-```txt
-obs_complexity(m) in N
-```
+4. **Gauge theoretic smooth invariants**
 
-* A nonnegative integer summarizing combinatorial complexity such as handle count or number of simplices.
+   ```txt
+   obs_SW(m)
+   obs_Don(m)
+   ```
+
+   * Finite tuples representing Seiberg–Witten type and Donaldson type invariants, where defined.
+   * May take special values in a distinguished symbol set such as `{code, undefined_for_this_encoding}`.
+
+5. **Complexity indicator**
+
+   ```txt
+   obs_complexity(m) ∈ ℕ
+   ```
+
+   * Nonnegative integer summarizing combinatorial complexity, for example total handle count or number of simplices.
 
 Constraints:
 
 * The library `L_obs` is fixed globally for Q010.
-* Every tension functional in this problem may depend only on the values of `L_obs` and on a finite set of global scalar parameters chosen once for Q010.
+* Every tension functional in this problem depends only on:
+
+  * values of observables in `L_obs`, and
+  * a finite set of global scalar parameters chosen once for Q010.
 
 ### 3.3 Admissible encoding class and fairness
 
-We define an admissible encoding class `Enc_4D` as the set of states `m` in `M` that satisfy:
+We define the admissible encoding class `Enc_4D` as the set of states `m` in `M` satisfying:
 
-* `m` carries a combinatorial description of a compact, connected, oriented smooth 4 manifold.
-* All observables in `L_obs` take well defined finite values on `m`.
-* The declared topological type of the manifold and the observables are mutually consistent in a standard sense (for example Betti numbers and intersection form are not contradictory).
+* `m` encodes a compact, connected, oriented smooth 4 manifold.
+* All observables in `L_obs` are syntactically well formed on `m` (values belong to their declared finite ranges).
+* Basic internal consistency checks pass, such as:
+
+  * Betti numbers are nonnegative and compatible with Euler characteristic,
+  * the intersection form code `obs_Q(m)` is compatible with `obs_H(m)`.
 
 Fairness constraints:
 
-* All global scalar parameters used in tension definitions (weights, thresholds) are fixed once for Q010 and do not depend on the specific manifold or on the particular encoding of that manifold.
-* When multiple encodings exist for the same manifold, they must all use the same global parameters and the same observable library.
+* All global scalar parameters used in tension definitions (weights, thresholds, scaling constants) are fixed once for Q010 and do not depend on:
 
-Thus `Enc_4D` is a class of encodings with:
+  * the specific manifold,
+  * the specific encoding of that manifold,
+  * the outcome of any experiment.
+* The set of admissible parameter tuples is a finite set. Choosing one of them is part of defining an **encoding version** (here Encoding_version: 2).
+* When several encodings exist for the same manifold, they must all use:
 
-* fixed observable library,
-* fixed global parameters,
-* no per manifold tuning.
+  * the same observable library `L_obs`,
+  * the same global parameter choice.
 
-### 3.4 Refinement scheme refine(k)
+Q010 is only about encodings in `Enc_4D`. Any change to `L_obs` or to the global parameter set is treated as a new encoding version, not as post hoc retuning inside a fixed version.
 
-We introduce a monotone refinement parameter
+### 3.4 Refinement scheme `refine(k)`
 
-`k in N` with `k >= 1`
+We introduce a refinement parameter
 
-and a refinement scheme `refine(k)` that acts on encodings in `Enc_4D`.
+```txt
+k ∈ ℕ,  k ≥ 1
+```
 
-For each integer `k`:
+and a refinement scheme `refine(k)` acting on `Enc_4D`.
 
-* `refine(k)` restricts to states in `Enc_4D` with:
-  * combinatorial complexity `obs_complexity(m)` bounded by a known function of `k`, and
-  * precision of observables in `L_obs` at least as good as a standard profile associated with `k`.
+Informally, `k` controls how detailed and faithful the encoding is.
 
-Refinement properties:
+For each integer `k ≥ 1`:
 
-* For a fixed manifold, there exist encodings `m_k` in `Enc_4D` for arbitrarily large `k` that become more faithful descriptions of the same manifold.
-* The observable library `L_obs` does not change with `k`. Only the accuracy and internal consistency of the encoded values improve.
-* Tension functionals defined below must behave in a controlled way under `refine(k)`, for example remaining bounded or converging for faithful encodings of a fixed manifold.
+* `refine(k)` selects encodings with:
+
+  * combinatorial complexity bounded by a fixed function of `k`,
+  * precision of observables at least as strong as a standard profile associated with `k`.
+
+For a fixed manifold `X` we assume:
+
+* There exist **refinement paths**
+
+  ```txt
+  γ_X = (m_k)_{k≥k0}
+  ```
+
+  where each `m_k` lies in `Enc_4D`, encodes `X`, and:
+
+  * `obs_complexity(m_{k+1}) ≥ obs_complexity(m_k)` (complexity is monotone nondecreasing),
+  * the observable library does not change with `k`.
+
+Coarse graining and comparability:
+
+* For each observable `obs` in `L_obs` that outputs a structured code, there exists a fixed **coarse graining map**
+
+  ```txt
+  coarse_obs: Range(obs at level k+1) → Range(obs at level k)
+  ```
+
+  such that along any refinement path for a given manifold:
+
+  ```txt
+  coarse_obs(obs(m_{k+1})) = obs(m_k)
+  ```
+
+  whenever both sides are defined.
+
+Definability monotonicity:
+
+* For the definability gap defined later, we require that along a refinement path for a fixed manifold, definability cannot worsen.
+  Intuitively: encoding a manifold “with more work” should not freely erase previously defined smooth data.
+
+These conditions guarantee that:
+
+* encodings for a fixed manifold become at least as informative under refinement,
+* observables across refinements are comparable through fixed coarse graining maps,
+* stability or instability of smooth data along a path is well defined.
 
 ### 3.5 Mismatch observables
 
-We define two nonnegative mismatch observables for states in `Enc_4D`.
+We now define mismatch observables for encodings in `Enc_4D`. They are designed to:
 
-1. Topological mismatch
+* respect the external label of S4 type,
+* avoid smuggling in hidden “true S4 invariants” at the effective layer,
+* separate three kinds of gap:
 
-```txt
-DeltaS_top(m) >= 0
-```
+  * topological mismatch,
+  * definability and consistency of smooth data,
+  * stability of smooth data under refinement.
 
-for all `m` in `Enc_4D`, with the following interpretation:
+#### 3.5.1 Topological mismatch `DeltaS_top`
 
-* `DeltaS_top(m)` measures the deviation of the topological data encoded in `L_obs` from that of standard S4.
-* It is constructed from:
-
-  * whether `obs_pi1_trivial(m) = 1`,
-  * whether `obs_H(m)` equals `(1, 0, 0, 0, 1)`,
-  * whether `obs_Q(m)` encodes the intersection form expected for S4.
-
-We require:
-
-* `DeltaS_top(m) = 0` if and only if the encoded topological invariants match those of S4 exactly.
-* `DeltaS_top(m)` increases as the topological invariants deviate further from the S4 pattern according to fixed global rules.
-
-2. Smooth mismatch
+We define
 
 ```txt
-DeltaS_smooth(m) >= 0
+DeltaS_top: Enc_4D → ℝ_{\ge 0}
 ```
 
-for all `m` in `Enc_4D`, with the following interpretation:
+as a nonnegative functional built from:
 
-* `DeltaS_smooth(m)` measures the deviation of the smooth invariants encoded in `obs_SW(m)` and `obs_Don(m)` from a reference profile that is declared S4 compatible.
-* We require:
+* `obs_pi1_trivial(m)`,
+* `obs_H(m) = (b0, b1, b2, b3, b4)`,
+* `obs_Q(m)`.
 
-  * `DeltaS_smooth(m) = 0` if the encoded smooth invariants match the S4 compatible reference profile.
-  * `DeltaS_smooth(m)` becomes larger when smooth invariants differ in ways that cannot occur for S4 under standard conjectures and known constraints.
-
-Fairness and global parameters:
-
-* Any combination of terms used to compute `DeltaS_top(m)` and `DeltaS_smooth(m)` uses fixed global weights and thresholds chosen once for Q010.
-* These weights and thresholds are not adjusted after inspecting individual manifolds.
-
-We define a combined mismatch observable
+We fix once and for all a **reference topological pattern** for the standard 4 sphere:
 
 ```txt
-DeltaS_4S(m) = DeltaS_top(m) + DeltaS_smooth(m)
+H_S4_ref = (1, 0, 0, 0, 1)
+Q_S4_ref = Q_code_for_standard_S4
+pi1_S4_ref = 1
 ```
 
-for all `m` in `Enc_4D`.
+and we define `DeltaS_top(m)` so that:
+
+* `DeltaS_top(m)` is small when:
+
+  * `obs_pi1_trivial(m)` matches `pi1_S4_ref`,
+  * `obs_H(m)` is close to `H_S4_ref` according to a fixed discrete metric,
+  * `obs_Q(m)` is compatible with `Q_S4_ref` under a fixed code distance.
+* `DeltaS_top(m)` grows as these observables deviate from the S4 template.
+
+We do **not** assert that `DeltaS_top(m) = 0` if and only if the underlying manifold is topologically S4. Topological classification is taken from the label (membership in `M_S4_top`) and from external mathematics. Q010 only measures how the encoded invariants align with the S4 template chosen for this encoding version.
+
+Intended properties:
+
+* For S4 labeled manifolds with faithful encodings and sufficiently large refinement level, there should exist paths where `DeltaS_top(m_k)` can be made arbitrarily small.
+* For manifolds that are not topological S4, we expect that `DeltaS_top(m)` cannot be uniformly small across all faithful encodings, but this is not encoded as an axiom.
+
+#### 3.5.2 Smooth mismatch: definability and consistency gaps
+
+Smooth mismatch is split into two per state gaps plus a path level stability gap.
+
+We define for each `m` in `Enc_4D`:
+
+1. **Definability gap `G_def(m)`**
+
+   * Measures how much of the smooth observable library is actually defined in the encoding.
+   * For example, let `S_smooth` be the subset of observables in `L_obs` that are tagged as smooth invariants (e.g. components of `obs_SW`, `obs_Don`).
+   * For each such component we decide whether it is:
+
+     * explicitly defined,
+     * explicitly marked as “undefined for this encoding”,
+     * inconsistent or missing.
+
+   Then `G_def(m)` can be taken as a normalized count of undefined or structurally missing entries, so that:
+
+   ```txt
+   G_def(m) = 0      if all smooth components required for Q010 are defined,  
+   G_def(m) → 1      as the fraction of undefined or missing components increases.
+   ```
+
+   The exact normalization and weighting across components is fixed once for Q010.
+
+2. **Internal consistency gap `G_cons(m)`**
+
+   * Measures how many “topology vs smooth” constraints are violated inside the encoding.
+   * We fix a finite constraint library of implications like:
+
+     * “If `obs_pi1_trivial(m) = 1` and `obs_H(m) = H_S4_ref`, then certain smooth codes must lie in an admissible subset.”
+     * “If `obs_Q(m)` encodes a given form, then a subset of Seiberg–Witten codes are ruled out.”
+
+   For each encoding we check these constraints and define:
+
+   ```txt
+   G_cons(m) = (# of violated constraints) / (# of checked constraints)
+   ```
+
+   with the convention that when no constraint applies, `G_cons(m)` is set to 0.
+
+Both gaps are defined in terms of:
+
+* the actual values (or missing values) of observables in `L_obs`,
+* a fixed constraint library chosen once for Q010.
+
+They do not assume any hidden “true invariant values” for S4 beyond what is already accepted in the mathematical literature and what is visible in `L_obs`.
+
+#### 3.5.3 Path level stability gap `G_stab(γ)`
+
+Let `γ = (m_k)_{k≥k0}` be a refinement path for a fixed manifold.
+
+We define a **stability gap**
+
+```txt
+G_stab(γ) ≥ 0
+```
+
+as a functional on paths, not on individual states. It measures how stable the smooth data are under refinement, after coarse graining.
+
+One possible definition at the effective layer is:
+
+* For each smooth observable `obs` in `L_obs` we fix a discrete distance `d_obs` on its range.
+
+* For each consecutive pair `m_k, m_{k+1}` in a path, we consider the coarse grained values:
+
+  ```txt
+  v_k   = obs(m_k)
+  v_k+1 = coarse_obs(obs(m_{k+1}))
+  ```
+
+* We take a normalized maximum or average of `d_obs(v_k, v_k+1)` across all smooth observables and across a window of refinement levels.
+
+The stability gap `G_stab(γ)` is then built from these distances, with:
+
+* `G_stab(γ) = 0` if all coarse grained observables become eventually constant along the path,
+* `G_stab(γ)` positive if smooth data keep jumping around under refinement.
+
+The exact shape of `G_stab` (max vs average, window size) is fixed once for Q010 and is treated as part of the encoding version.
+
+#### 3.5.4 Smooth mismatch `DeltaS_smooth`
+
+Smooth mismatch is defined on a pair consisting of a state and a chosen refinement path for its underlying manifold.
+
+Given:
+
+* a manifold `X`,
+* a refinement path `γ_X = (m_k)_{k≥k0}` encoding `X`,
+
+we define
+
+```txt
+DeltaS_smooth(m_k; γ_X) =
+    b1 * G_def(m_k)
+  + b2 * G_cons(m_k)
+  + b3 * G_stab(γ_X)
+```
+
+where:
+
+* `b1, b2, b3 ≥ 0`,
+* `(b1, b2, b3)` is chosen once for Q010 from a finite admissible set of weight triples,
+* the same weight triple is used for all manifolds and all paths in this encoding version.
+
+Notationally we often suppress the explicit path label and write `DeltaS_smooth(m_k)` when the path is clear from context.
+
+Interpretation:
+
+* `G_def` penalizes encodings that avoid defining relevant smooth data.
+* `G_cons` penalizes encodings where topological and smooth summaries violate the fixed constraint library.
+* `G_stab` penalizes world models in which the smooth data of a manifold refuse to stabilize across refinement.
+
+All three contributions are designed to live purely at the effective layer.
+
+#### 3.5.5 Combined mismatch `DeltaS_4S`
+
+For any `m` in `Enc_4D` and any refinement path `γ` containing `m`, we define:
+
+```txt
+DeltaS_4S(m; γ) = DeltaS_top(m) + DeltaS_smooth(m; γ)
+```
+
+This combined mismatch is the raw input to the tension tensor. It is nonnegative and equals zero only when:
+
+* the encoded topological data match the S4 template according to the chosen discrete metrics, and
+* definability gap, consistency gap and stability gap all vanish according to their definitions.
+
+The “equals zero” condition is not used as a classification theorem. It is only a statement about the encoding and the fixed parameter choices of this version.
 
 ### 3.6 Effective tension tensor
 
-Consistent with the TU core decision, we assume an effective tension tensor `T_ij` over `M` defined on `Enc_4D` by:
+In line with the Tension Universe core, we define an effective tension tensor
 
 ```txt
-T_ij(m) = S_i(m) * C_j(m) * DeltaS_4S(m) * lambda(m) * kappa_4S
+T_ij(m; γ) =
+    S_i(m) * C_j(m)
+  * DeltaS_4S(m; γ)
+  * lambda(m; γ) * kappa_4S
 ```
 
 where:
 
 * `S_i(m)` are source like factors associated with different semantic or structural components of the 4 manifold as encoded in `m`.
-* `C_j(m)` are receptivity like factors associated with different cognitive or physical subsystems that respond to smooth structure deviations.
-* `DeltaS_4S(m)` is the combined mismatch defined above.
-* `lambda(m)` is a convergence state factor drawn from a fixed finite range that encodes whether local reasoning in the 4 manifold context is convergent, recursive, divergent, or chaotic.
-* `kappa_4S` is a fixed positive scaling constant for Q010.
+* `C_j(m)` are receptivity like factors associated with different cognitive or physical subsystems that respond to deviations in smooth 4 sphere structure.
+* `DeltaS_4S(m; γ)` is the combined mismatch defined above.
+* `lambda(m; γ)` is a convergence state factor, taking values in a fixed bounded interval, indicating whether reasoning about this manifold is convergent, marginal, or divergent at the current refinement level.
+* `kappa_4S` is a fixed positive coupling constant for Q010.
 
-The indexing details of `i` and `j` are not needed at the effective layer. It is sufficient that for each `m` in `Enc_4D`, `T_ij(m)` is well defined and finite.
+The index sets for `i` and `j` are finite but not specified at this layer. It is enough that for each `m` in `Enc_4D` and each admissible path `γ` containing `m`, all quantities are finite and well defined.
 
-### 3.7 Singular set and domain restrictions
+### 3.7 Singular sets and domain restrictions
 
-Certain encodings may be incomplete or inconsistent. For example:
+Some encodings are too malformed to be used at all. Others have incomplete or inconsistent data that should count as tension, not as “out of domain”.
 
-* Some observables in `L_obs` may be undefined.
-* Topological and smooth invariants may disagree in ways that cannot correspond to any manifold.
+We distinguish two types of singularity.
 
-We define the singular set
+1. **Hard singularities `S_sing_hard`**
+
+   ```txt
+   S_sing_hard =
+       { m in Enc_4D :
+         the underlying combinatorial data do not represent a valid
+         compact, connected, oriented smooth 4 manifold, or
+         some observable in L_obs is syntactically ill formed }
+   ```
+
+   Encodings in `S_sing_hard` are treated as outside the domain of Q010. Attempting to evaluate mismatch or tension on them is “out of domain” and not evidence for or against any conjecture.
+
+2. **Soft singularities**
+
+   These include cases where:
+
+   * some smooth observables are marked undefined,
+   * some topology vs smooth constraints are violated,
+
+   but the encoding still represents a coherent 4 manifold.
+
+   Such states are **not** removed from the domain. Instead:
+
+   * undefined entries contribute to `G_def(m)`,
+   * violated constraints contribute to `G_cons(m)`.
+
+We define the regular domain for tension analysis as:
 
 ```txt
-S_sing = { m in Enc_4D :
-           some observable in L_obs is undefined,
-           or internal consistency checks fail }
+M_reg = Enc_4D \ S_sing_hard
 ```
 
-and its complement
-
-```txt
-M_reg = Enc_4D \ S_sing
-```
-
-We impose the following rule:
-
-* All tension analysis for Q010 is restricted to `M_reg`.
-* When an encoding lies in `S_sing`, any attempt to evaluate `DeltaS_4S(m)` or related tension quantities is treated as “out of domain” and not as evidence for or against the underlying conjecture.
+All Q010 tension quantities are only evaluated on `M_reg`. Soft singular behavior is recorded inside mismatch functionals rather than excluded.
 
 ---
 
 ## 4. Tension principle for this problem
 
-This block states how Q010 is characterized as a tension problem in TU at the effective layer.
+This block states how Q010 is treated as a tension problem at the effective layer.
 
-### 4.1 Core tension functional
+### 4.1 Core tension functional `Tension_4S`
 
-We define a 4 sphere tension functional on `M_reg`:
+On `M_reg` and with a chosen refinement path `γ` we define:
 
 ```txt
-Tension_4S(m) = a_top * DeltaS_top(m) + a_smooth * DeltaS_smooth(m)
+Tension_4S(m; γ) =
+    a_top    * DeltaS_top(m)
+  + a_smooth * DeltaS_smooth(m; γ)
 ```
 
 where:
 
-* `a_top > 0` and `a_smooth > 0` are fixed global weights chosen once for Q010.
-* `Tension_4S(m) >= 0` for all `m` in `M_reg`.
-* `Tension_4S(m) = 0` if and only if both topological and smooth mismatch vanish.
+* `a_top > 0` and `a_smooth > 0` are fixed global weights chosen once for Q010 from a finite admissible set,
+* the same `(a_top, a_smooth)` pair is used for all manifolds and all paths in this encoding version.
 
-This functional aggregates:
+Properties:
 
-* how close the encoded manifold is to S4 at the topological level, and
-* how close it is at the smooth invariant level.
+* `Tension_4S(m; γ) ≥ 0` for all `m` in `M_reg`.
+* `Tension_4S(m; γ) = 0` only when both topological mismatch and smooth mismatch vanish according to the selected functionals.
 
-The weights control the relative importance of these contributions but are not tuned per manifold.
+Interpretation:
+
+* `Tension_4S` summarizes how far a given encoded manifold is, in this encoding version, from a standard S4 pattern, taking into account:
+
+  * topological summaries,
+  * definability and consistency of smooth data,
+  * stability of smooth data across refinement.
 
 ### 4.2 Conjecture as a low tension principle
 
-At the effective layer, the smooth 4 dimensional Poincaré conjecture can be restated as a low tension principle:
+Let `X` be a manifold that external mathematics and labeling declare to be homeomorphic to (S^4). That is, its encodings lie in `M_S4_top`.
 
-> In all coherent world models matching the actual universe, every manifold with 4 sphere topological type admits encodings in `Enc_4D` for which the 4 sphere tension is small and stable under refinement.
+In the Tension Universe effective layer, the smooth 4 dimensional Poincaré conjecture is rephrased as the following **low tension principle**.
 
-More precisely:
+> For every 4 manifold `X` that is topologically S4, there exists at least one faithful refinement path `γ_X = (m_k)` in `M_reg` such that:
+>
+> * `DeltaS_top(m_k)` tends to 0 as `k` increases,
+> * `DeltaS_smooth(m_k; γ_X)` tends to 0 as `k` increases,
+> * the combined tension
+>
+>   ```txt
+>   Tension_4S(m_k; γ_X) ≤ ε_4S(k)
+>   ```
+>
+>   where `ε_4S(k)` is a nonincreasing function of `k` that tends to 0 or to a small positive limit independent of `X` and of the particular path, within the fairness constraints.
 
-* For every closed smooth 4 manifold that is homeomorphic to S4, there exist faithful encodings `m_k` in `M_reg` indexed by refinement parameter `k` such that:
-  * `DeltaS_top(m_k)` tends to 0 as `k` increases.
-  * `DeltaS_smooth(m_k)` tends to 0 as `k` increases.
-  * Consequently:
+This principle is couched entirely in terms of:
 
-    ```txt
-    Tension_4S(m_k) <= epsilon_4S(k)
-    ```
+* encodings,
+* observables,
+* mismatch functionals,
+* refinement behavior.
 
-    where `epsilon_4S(k)` is a nonincreasing function of `k` that tends to 0 or to a small positive limit independent of the particular manifold.
-
-This principle is expressed entirely in terms of encodings, observables, and refinement behavior, without claiming a proof of the underlying manifold statement.
+It does not assert any new theorem about 4 manifolds. It simply describes what “smooth Poincaré true” looks like inside the encoding framework of Q010.
 
 ### 4.3 Failure as persistent high tension
 
-If the smooth 4 dimensional Poincaré conjecture is false, then the following high tension pattern must occur in any world model that accurately reflects the actual 4 manifold landscape.
+If the smooth 4 dimensional Poincaré conjecture is false, then in any world model that accurately reflects the actual 4 manifold landscape there must exist at least one manifold `X` that is topologically S4 but not diffeomorphic to the standard S4.
 
-There exists at least one closed smooth 4 manifold homeomorphic to S4 such that:
+In the Q010 effective encoding this appears as a **persistent high tension pattern**.
 
-* For every family of faithful encodings `m_k` in `M_reg` produced by the refinement scheme, the smooth mismatch remains bounded away from 0:
+> There exists a topological S4 manifold `X` such that for every faithful refinement path `γ_X = (m_k)` in `M_reg`:
+>
+> * `DeltaS_top(m_k)` can be made arbitrarily small (since `X` is topologically S4),
+> * but there exist constants `δ_smooth > 0`, `δ_4S > 0` with
+>
+>   ```txt
+>   DeltaS_smooth(m_k; γ_X) ≥ δ_smooth
+>   Tension_4S(m_k; γ_X) ≥ δ_4S
+>   ```
+>
+>   for all sufficiently large `k`.
 
-  ```txt
-  DeltaS_smooth(m_k) >= delta_smooth
-  ```
+In words:
 
-  for all sufficiently large `k`, with `delta_smooth > 0` independent of `k`.
+* Topological data can be aligned with the S4 template under refinement.
+* Smooth mismatch refuses to vanish along **any** fair refinement path for that manifold.
+* Consistency_tension between “topological S4 label” and “smooth invariant profile” persists and cannot be removed.
 
-* The combined tension satisfies:
-
-  ```txt
-  Tension_4S(m_k) >= delta_4S
-  ```
-
-  for all sufficiently large `k`, where `delta_4S > 0` is a constant independent of the particular encoding sequence for that manifold.
-
-In this high tension scenario:
-
-* Topological mismatch `DeltaS_top(m_k)` may still tend to 0, because the manifold is topologically S4.
-* Smooth mismatch `DeltaS_smooth(m_k)` refuses to vanish under refinement.
-* The consistency_tension between “topological S4 type” and “smooth invariant profile” persists and cannot be removed.
-
-Thus Q010 is treated as the question of whether the actual universe belongs to the low tension or high tension regime for 4 sphere type manifolds, given the fixed encoding class `Enc_4D`.
+Q010 does not claim to exhibit such a manifold or prove that none exist. It only states how a failure of the conjecture would manifest in the encoding and tension framework.
 
 ---
 
 ## 5. Counterfactual tension worlds
 
-We now outline two counterfactual worlds described entirely at the effective layer:
+We now outline two counterfactual worlds described entirely at the effective layer.
 
-* World T: the smooth 4 dimensional Poincaré conjecture holds.
-* World F: it fails.
+* World T: smooth 4 dimensional Poincaré holds.
+* World F: smooth 4 dimensional Poincaré fails.
 
 ### 5.1 World T (conjecture true, low 4 sphere tension)
 
 Patterns in World T:
 
-1. Alignment of topological and smooth data
+1. **Alignment of topological and smooth data**
 
-   * For any manifold homeomorphic to S4, there exist refinement sequences `m_k` in `M_reg` such that both `DeltaS_top(m_k)` and `DeltaS_smooth(m_k)` become arbitrarily small.
-   * In these sequences, `Tension_4S(m_k)` remains within an ever shrinking band.
+   * For every manifold `X` with label in `M_S4_top` there exist faithful refinement paths `γ_X = (m_k)` satisfying:
 
-2. Stability under refinement
+     * `DeltaS_top(m_k)` tending to 0,
+     * `DeltaS_smooth(m_k; γ_X)` tending to 0,
+     * `Tension_4S(m_k; γ_X)` staying in an ever shrinking band around 0.
 
-   * For a fixed 4 sphere type manifold, once `k` is large enough, further refinement changes `Tension_4S(m_k)` only slightly.
-   * The low tension band becomes a refinement invariant signature of S4.
+2. **Stability under refinement**
 
-3. Separation from non S4 manifolds
+   * For each such `X` there is at least one refinement path where:
 
-   * Manifolds that are not topologically S4 exhibit nonzero `DeltaS_top(m)` for all encodings in `M_reg`.
-   * Their tension values stay in a high or intermediate band that cannot be confused with the low band of genuine S4 manifolds.
+     * `G_stab(γ_X)` is small,
+     * further refinement changes `Tension_4S(m_k; γ_X)` only slightly beyond some `k`.
 
-4. Absence of exotic smooth S4
+3. **Separation from non S4 manifolds**
 
-   * No manifold exists for which all faithful encodings in `Enc_4D` exhibit `DeltaS_top` small but `DeltaS_smooth` persistently large under refinement.
+   * Manifolds that are not topological S4, or that the external data label as non S4, occupy tension bands that do not overlap the lowest band achieved by standard S4 encodings.
+   * An attempt to treat a clearly non S4 manifold as S4 will show up as nonzero `DeltaS_top`, nonzero `DeltaS_smooth`, or both, across refinement.
+
+4. **Absence of exotic smooth S4 behavior**
+
+   * There is no manifold of S4 topological type for which all faithful refinement paths have `DeltaS_smooth` bounded away from 0.
+   * Whenever topological data look like S4 and encodings are faithful, smooth mismatch can be made small along at least one path.
 
 ### 5.2 World F (conjecture false, persistent high smooth tension)
 
 Patterns in World F:
 
-1. Existence of exotic smooth S4
+1. **Existence of exotic smooth S4 encodings**
 
-   * There exists at least one manifold homeomorphic to S4 for which every faithful encoding sequence `m_k` in `M_reg` satisfies:
-     * `DeltaS_top(m_k)` tends to 0, but
-     * `DeltaS_smooth(m_k)` is bounded below by `delta_smooth > 0`.
+   * There exists at least one manifold `X` labeled topological S4 such that every faithful refinement path `γ_X` satisfies:
 
-2. Robust high tension
+     * `DeltaS_top(m_k)` small for large `k`,
+     * `DeltaS_smooth(m_k; γ_X)` bounded below by `δ_smooth > 0`.
 
-   * For such manifolds, any fair choice of global parameters and admissible encodings in `Enc_4D` leads to `Tension_4S(m_k)` staying above a strictly positive `delta_4S`.
-   * This cannot be removed by re encoding or refinement.
+2. **Robust high tension**
 
-3. Mixed landscape
+   * For such `X`, regardless of which admissible weight choices and paths (within the fixed encoding version) we use, there is a constant `δ_4S > 0` with
 
-   * Some 4 sphere type manifolds may still behave like standard S4 with low tension.
-   * Others behave as exotic S4 with persistent high tension, giving a split structure in the 4 sphere sector.
+     * `Tension_4S(m_k; γ_X) ≥ δ_4S` for all large `k`.
+   * This persistent high band cannot be removed without changing the observable library or global parameter set, in which case we are simply defining a **different** encoding version.
 
-4. Ambiguity in classification
+3. **Mixed S4 sector**
 
-   * Observers relying only on the observable library `L_obs` and the fixed tension functional may find that the set of manifolds topologically S4 splits into low tension and high tension subclasses, signaling a structural failure of the conjecture.
+   * Some S4 labeled manifolds show low tension patterns.
+   * Others show persistent high tension patterns.
+   * The 4 sphere sector in the BlackHole graph splits into low tension and high tension subclasses when seen through Q010 observables.
+
+4. **Ambiguous classification for encoding level observers**
+
+   * Observers restricted to `L_obs` and the fixed tension functional may see that:
+
+     * some S4 labeled manifolds behave like standard S4 in tension terms,
+     * some behave as exotic S4 candidates,
+     * the encoding itself cannot collapse them to a single class.
+
+Q010 does not decide whether the real universe is closer to World T or World F. It only supplies a structured language for that distinction.
 
 ### 5.3 Interpretive note
 
-These worlds do not commit to any particular construction of manifolds. They only specify patterns that must hold for encodings and observables if the conjecture is true or false. Q010 is not a claim that a proof or disproof exists, but a structured way to talk about the consistency or inconsistency between:
+These world descriptions:
 
-* topological S4 type, and
-* smooth invariants of 4 manifolds,
+* do not commit to any particular construction of manifolds,
+* do not introduce any new smooth invariants beyond those represented in `L_obs`,
+* do not assert any theorem about existence or nonexistence of exotic S4.
 
-through the lens of tension and refinement.
+They only specify patterns of:
+
+* definability,
+* consistency,
+* stability,
+* tension values
+
+that would have to hold in different scenarios.
 
 ---
 
 ## 6. Falsifiability and discriminating experiments
 
-This block specifies experiments and protocols that can:
+This block defines experiments that can falsify or validate specific choices of:
 
-* test the coherence of the Q010 encoding,
-* distinguish between different encoding choices,
-* falsify particular combinations of observable libraries and tension functionals,
+* observable library,
+* encoding class,
+* mismatch functionals,
+* tension weights,
 
-while staying strictly at the effective layer. None of these experiments proves or disproves the conjecture itself.
+**within** the Q010 effective encoding. They do not prove or disprove the conjecture itself.
 
 ### Experiment 1: Tension profile on known 4 manifolds
 
-*Goal:*
+**Goal**
 
-Evaluate whether the chosen observable library `L_obs`, admissible encoding class `Enc_4D`, and tension functional `Tension_4S` behave coherently on a curated set of known 4 manifolds.
+Evaluate whether:
 
-*Setup:*
+* `L_obs`,
+* `Enc_4D` and its refinement scheme,
+* `DeltaS_top`, `DeltaS_smooth`,
+* `Tension_4S`
 
-* Construct a finite dataset of smooth 4 manifolds with varied properties, for example:
-  * standard S4,
-  * known simply connected smooth 4 manifolds with different intersection forms,
-  * manifolds known to admit exotic smooth structures but not of S4 type.
-* For each manifold in the dataset, prepare one or more encodings `m` in `Enc_4D` that are intended to be faithful.
-* Fix once and for all:
-  * global weights and thresholds used to compute `DeltaS_top` and `DeltaS_smooth`,
-  * the functional form of `Tension_4S`.
+behave coherently on a curated set of known 4 manifolds.
 
-*Protocol:*
+**Setup**
 
-1. For each encoded manifold state `m` in the dataset:
-   * Evaluate all observables in `L_obs`.
-   * Compute `DeltaS_top(m)` and `DeltaS_smooth(m)` according to the fixed rules.
-   * Compute `Tension_4S(m)`.
-2. Mark which encodings belong to:
-   * manifolds known to be homeomorphic to S4,
-   * manifolds known not to be homeomorphic to S4.
-3. Compare the distribution of `Tension_4S(m)` across these groups.
-4. If possible, consider refinement sequences `m_k` for some manifolds and track how `Tension_4S(m_k)` changes with `k`.
+* Build a finite dataset of smooth 4 manifolds including:
 
-*Metrics:*
+  * standard (S^4),
+  * other simply connected smooth 4 manifolds with varied intersection forms,
+  * manifolds known to admit exotic smooth structures but not of (S^4) type.
+* For each manifold, prepare one or more encodings `m` in `Enc_4D` that are intended to be faithful.
+* Fix once and for all for this experiment:
 
-* Range and clustering of `Tension_4S(m)` for manifolds not homeomorphic to S4.
-* Range and clustering of `Tension_4S(m)` for S4 itself.
-* Stability or variability of `Tension_4S(m_k)` under refinement.
-* Frequency of obvious misclassifications, interpreted at the encoding level.
+  * the observable library `L_obs`,
+  * the admissible parameter tuple `(a_top, a_smooth, b1, b2, b3, kappa_4S)` taken from the finite global option set.
 
-*Falsification conditions:*
+This choice is logged and not adjusted after seeing results. Any later change defines a new experiment and a new encoding version.
 
-* If the encoding systematically assigns low `DeltaS_top` and low `Tension_4S` to manifolds that are clearly not topological S4, the current combination of library and tension functional is considered falsified.
-* If small changes in refinement level `k` cause large uncontrolled swings in `Tension_4S(m_k)` for a fixed manifold, the refinement scheme is considered unstable and the encoding rejected.
-* If S4 itself, under reasonable encodings and refinement, is never placed in a lower tension band than clearly non S4 manifolds, the encoding fails to capture the intended structure.
+**Protocol**
 
-*Semantics implementation note:*
+1. For each encoded manifold state `m`:
 
-All encodings and observables are treated as discrete combinatorial data with finite precision, consistent with the discrete setting declared in the metadata. No additional continuous field structure is introduced in the implementation of this experiment.
+   * evaluate all observables in `L_obs`,
+   * compute `DeltaS_top(m)`,
+   * compute `G_def(m)` and `G_cons(m)`,
+   * assign `m` to a refinement path and compute `G_stab(γ)` then `DeltaS_smooth(m; γ)`,
+   * compute `Tension_4S(m; γ)`.
+2. Mark encodings by external label:
 
-*Boundary note:*
+   * S4 labeled (`m ∈ M_S4_top`),
+   * non S4 labeled.
+3. For a subset of manifolds, construct explicit refinement paths `γ_X = (m_k)` and track
 
-Falsifying TU encoding != solving canonical statement.  
-This experiment can invalidate particular choices of observable library, encoding class, or tension functional, but does not prove or disprove the smooth 4 dimensional Poincaré conjecture itself.
+   * `DeltaS_top(m_k)`,
+   * `DeltaS_smooth(m_k; γ_X)`,
+   * `Tension_4S(m_k; γ_X)`.
+
+**Metrics**
+
+* Distribution of `Tension_4S` for S4 labeled vs non S4 manifolds.
+* The extent to which standard S4 encodings cluster in a lower tension band.
+* Stability of `Tension_4S(m_k; γ_X)` along refinement for each manifold.
+* Frequency of obvious misalignments, such as:
+
+  * non S4 manifolds systematically occupying the same low band as standard S4,
+  * S4 encodings that cannot achieve any lower tension band under refinement.
+
+**Falsification conditions**
+
+The encoding version is considered falsified at the effective layer if any of the following occur robustly:
+
+* For a wide range of faithful encodings and reasonable refinement paths, standard S4 encodings never form a measurably lower tension band than clearly non S4 manifolds.
+* Small changes in refinement level cause uncontrolled swings in `Tension_4S(m_k; γ_X)` for a fixed manifold, violating the intended stability of the refinement scheme.
+* The separation between S4 and non S4 manifolds depends sensitively on per manifold parameter choices rather than on a single global parameter tuple.
+
+**Boundary note**
+
+Invalidating this encoding version does **not** prove or disprove the smooth 4 dimensional Poincaré conjecture. It only shows that this particular combination of `L_obs`, refinement, mismatch definitions, and weights is not a good effective layer encoding.
 
 ---
 
-### Experiment 2: Model world families with artificial encodings
+### Experiment 2: Artificial S4 like vs exotic like encoding families
 
-*Goal:*
+**Goal**
 
-Test whether the Q010 encoding can reliably distinguish between artificial “standard S4 like” and “exotic S4 like” encodings at the effective layer.
+Test whether Q010 mismatch and tension functionals can reliably distinguish between artificial “standard S4 like” and “exotic S4 like” encodings, under fixed global parameters.
 
-*Setup:*
+**Setup**
 
-* Construct two artificial families of encodings in `Enc_4D`:
+Construct two artificial families of encodings in `Enc_4D`:
 
-  * Family T (S4 like):
-    * encodings where `DeltaS_top(m)` is forced to be small and consistent with S4,
-    * smooth invariants are chosen to match a reference S4 compatible profile.
+* **Family T (standard like)**
+  Encodings with:
 
-  * Family F (exotic like):
-    * encodings where `DeltaS_top(m)` is forced to be small and consistent with S4,
-    * smooth invariants are perturbed in ways that mimic known exotic behavior on other 4 manifolds while still respecting observable library constraints.
+  * `DeltaS_top(m)` small and compatible with S4,
+  * smooth invariants chosen to satisfy all constraints in the library and to stabilize quickly along refinement paths,
+  * `G_def(m)` and `G_cons(m)` near 0, and `G_stab(γ)` small.
 
-* All encodings must obey the global parameter choices fixed for Q010.
+* **Family F (exotic like)**
+  Encodings with:
 
-*Protocol:*
+  * `DeltaS_top(m)` small (topological data mimic S4),
+  * smooth invariants arranged to violate some of the constraint library in ways that imitate exotic behavior seen on other 4 manifolds,
+  * definability gaps, consistency gaps, or stability gaps that remain nontrivial under refinement.
+
+All encodings use the same observable library and the same global parameter tuple.
+
+**Protocol**
 
 1. For each `m_T` in Family T:
-   * Evaluate `DeltaS_top(m_T)` and `DeltaS_smooth(m_T)`.
-   * Compute `Tension_4S(m_T)`.
-2. For each `m_F` in Family F:
-   * Perform the same evaluations.
-3. Compare the distributions of `Tension_4S` across Family T and Family F.
-4. Optionally vary refinement parameter `k` to see if the separation improves with refinement.
 
-*Metrics:*
+   * compute `DeltaS_top(m_T)`, `DeltaS_smooth(m_T; γ_T)`, `Tension_4S(m_T; γ_T)` for one or more refinement paths `γ_T`.
+2. For each `m_F` in Family F:
+
+   * compute the same quantities along appropriate refinement paths `γ_F`.
+3. Compare the distributions of `Tension_4S` values for the two families.
+4. Optionally test robustness under small changes in the global parameter tuple, within the finite admissible set, but without per encoding tuning.
+
+**Metrics**
 
 * Mean and variance of `Tension_4S` in Family T and Family F.
-* Percentage of cases where an artificial exotic like encoding receives lower tension than a standard like encoding.
-* Sensitivity of these statistics to small changes in global parameters that remain within the fairness constraints.
+* Fraction of cases where `Tension_4S(m_F; γ_F)` is lower than `Tension_4S(m_T; γ_T)`.
+* Sensitivity of these statistics to allowed global parameter changes.
 
-*Falsification conditions:*
+**Falsification conditions**
 
-* If, across reasonable choices of global parameters consistent with known mathematical constraints, the encoding fails to produce a statistically clear separation between Family T and Family F, it is considered ineffective and rejected.
-* If in a large fraction of cases artificial exotic like encodings receive lower `Tension_4S` than standard like encodings, the chosen mismatch definitions are considered misaligned with the intended consistency_tension.
+The encoding version is considered ineffective if:
 
-*Semantics implementation note:*
+* Across reasonable global parameter choices, tension values for Family T and Family F are systematically indistinguishable, or
+* In a significant fraction of cases, exotic like encodings receive lower tension than standard like encodings, despite being constructed to violate more constraints and to have less stable smooth data.
 
-Artificial encodings in this experiment are treated purely as combinatorial states in `Enc_4D` with values in the finite observable library. No additional structure beyond that declared in the metadata is used.
-
-*Boundary note:*
-
-Falsifying TU encoding != solving canonical statement.  
-Success or failure on artificial model families only evaluates the quality of the encoding and its robustness, not the truth value of the smooth 4 dimensional Poincaré conjecture for actual manifolds.
+Again this is a verdict on the encoding design, not on the mathematical conjecture.
 
 ---
 
 ## 7. AI and WFGY engineering spec
 
-This block describes how Q010 can be used as an engineering module in AI and WFGY systems, at the effective layer and without revealing deep TU generative rules.
+This block describes how Q010 can be used inside AI and WFGY systems, at the effective layer.
 
 ### 7.1 Training signals
 
-We define several training or auxiliary signals derived from Q010 components.
+We define signals that can be used as auxiliary losses or diagnostics.
 
 1. `signal_4sphere_consistency`
 
-   * Definition: a scalar signal proportional to `Tension_4S(m)` in contexts where the model is reasoning about 4 sphere type manifolds.
-   * Purpose: encourage internal states where topological and smooth summaries for S4 like contexts remain in a low tension band.
+   * Definition: scalar signal proportional to `Tension_4S(m; γ)` in contexts where the model is reasoning about S4 type manifolds.
+   * Purpose: encourage internal states where topological and smooth summaries for S4 contexts stay in a low tension band.
 
 2. `signal_handle_complexity_penalty`
 
-   * Definition: a penalty based on `obs_complexity(m)` when it grows faster than a fixed profile compatible with low tension encodings.
+   * Definition: penalty increasing with `obs_complexity(m)` when it grows faster than a fixed profile compatible with low tension encodings for S4.
    * Purpose: discourage internal representations that encode 4 sphere type manifolds with unnecessary combinatorial complexity.
 
 3. `signal_top_vs_smooth_alignment`
 
-   * Definition: a signal derived from the difference between normalized `DeltaS_top(m)` and `DeltaS_smooth(m)`.
-   * Purpose: penalize states where topological summaries suggest S4 while smooth summaries suggest a different class, unless the context explicitly describes exotic possibilities.
+   * Definition: scalar based on `DeltaS_top(m)` and `DeltaS_smooth(m; γ)`, for example their normalized difference.
+   * Purpose: penalize states where labels and topological summaries suggest S4, but smooth summaries remain in a high mismatch band, unless the context explicitly asks for exotic scenarios.
 
 4. `signal_exotic_suspect_flag`
 
-   * Definition: a binary or soft flag that activates when `DeltaS_top(m)` is small but `DeltaS_smooth(m)` is above a fixed threshold.
-   * Purpose: mark internal representations that resemble the high tension pattern associated with exotic S4 like behavior at the encoding level.
+   * Definition: binary or soft flag that activates when:
+
+     * `DeltaS_top(m)` is small (looks like S4),
+     * `DeltaS_smooth(m; γ)` exceeds a fixed threshold.
+   * Purpose: mark internal states that structurally resemble exotic S4 candidates at the encoding level.
 
 ### 7.2 Architectural patterns
 
-We outline module patterns that reuse Q010 components.
+Possible module patterns that reuse Q010 ideas.
 
 1. `FourManifoldDescriptorHead`
 
    * Role: from internal embeddings representing a mathematical or physical context, produce a discrete descriptor suitable as an element of `Enc_4D`.
    * Interface:
-     * inputs: context embeddings and symbolic tokens,
-     * outputs: a structured descriptor including approximations to the observables in `L_obs`.
+
+     * inputs: contextual embeddings and tokens,
+     * outputs: structured values for observables in `L_obs`.
 
 2. `SmoothStructureConsistencyHead`
 
-   * Role: consume a `FourManifold_Descriptor` and output estimates of `DeltaS_top(m)`, `DeltaS_smooth(m)`, and `Tension_4S(m)`.
+   * Role: consume a `FourManifold_Descriptor` and output estimates of:
+
+     * `DeltaS_top(m)`,
+     * `DeltaS_smooth(m; γ)`,
+     * `Tension_4S(m; γ)`.
    * Interface:
-     * inputs: descriptor,
-     * outputs: a small tuple `(DeltaS_top_est, DeltaS_smooth_est, Tension_4S_est)`.
+
+     * inputs: descriptor plus optional refinement state,
+     * outputs: approximation of the three mismatch or tension values.
 
 3. `Counterfactual4SphereWorldSelector`
 
-   * Role: manage the separation between World T and World F assumptions in multi step reasoning.
+   * Role: manage separation between World T and World F assumptions when answering multi step questions about smooth 4 spheres.
    * Interface:
-     * inputs: descriptor, high level prompt about whether exotic smooth structures are being considered,
-     * outputs: internal mode flags that influence how signals and tension scores are interpreted.
+
+     * inputs: descriptor, prompt level hints about whether exotic S4 is assumed,
+     * outputs: mode flags that influence which tension band is regarded as “baseline”.
 
 ### 7.3 Evaluation harness
 
-We propose an evaluation harness for AI systems equipped with Q010 modules.
+An evaluation harness for models augmented with Q010 components can be built as follows.
 
-1. Task families
+1. **Task families**
 
-   * Conceptual questions about the difference between topological and smooth structures in 4 dimensions.
-   * Classification tasks: given descriptions of 4 manifolds, decide whether they are plausible S4, clearly not S4, or ambiguous.
-   * Counterfactual scenarios: reason about how physical theories on 4 manifolds would differ if exotic S4 existed.
+   * Conceptual questions about:
 
-2. Conditions
+     * difference between topological and smooth structures in 4 dimensions,
+     * known results on exotic smooth structures.
+   * Classification tasks:
 
-   * Baseline condition:
-     * model operates without explicit Q010 modules,
-     * evaluation uses only standard metrics like correctness and coherence.
-   * TU augmented condition:
-     * Q010 modules (descriptor head and consistency head) are active,
-     * training signals in 7.1 are used as auxiliary losses or regularizers.
+     * given descriptions of 4 manifolds, decide whether they are plausible S4, clearly not S4, or ambiguous.
+   * Counterfactual scenarios:
 
-3. Metrics
+     * reason about physics on 4 manifolds under assumptions of existence or nonexistence of exotic S4.
 
-   * Logical consistency across sequences of questions about smooth and topological classification.
-   * Stability of answers when prompts vary in wording but keep the same mathematical content.
-   * Ability to keep track of whether exotic S4 is being assumed or not, reflected in how often `signal_exotic_suspect_flag` is activated in appropriate contexts.
+2. **Conditions**
+
+   * Baseline:
+
+     * model runs without Q010 specific modules or signals,
+     * only standard metrics like correctness and coherence are tracked.
+   * TU augmented:
+
+     * Q010 modules and signals are active,
+     * evaluation logs include `Tension_4S` estimates and exotic suspect flags.
+
+3. **Metrics**
+
+   * Logical consistency across sequences of questions that mix topology and smooth structure.
+   * Stability of answers under variations in wording.
+   * Ability to keep track of which counterfactual world (T vs F) is assumed in the prompt.
+   * Correlation between “exotic suspect” flags and prompts that intentionally construct exotic like encodings.
 
 ### 7.4 60 second reproduction protocol
 
-This protocol allows external users to experience the effect of Q010 style encoding in a simple way.
+A simple protocol that external users can run with a general purpose AI model.
 
-*Baseline setup:*
+**Baseline**
 
-* Prompt an AI system:
+* Prompt the model:
 
-  * Ask it to explain the difference between the topological 4 dimensional Poincaré conjecture and the smooth version, and to describe whether exotic S4 is known to exist.
-  * Do not mention WFGY or tension.
+  * Explain the difference between the topological and smooth 4 dimensional Poincaré conjectures.
+  * State whether exotic smooth (S^4) is known to exist.
 
-* Observation:
+* Record whether the model:
 
-  * Record whether the explanation:
-    * correctly distinguishes topological and smooth versions,
-    * acknowledges that topological 4 dimensional Poincaré is solved but smooth is open,
-    * avoids conflating exotic S4 with known exotic R4.
+  * distinguishes topological and smooth versions,
+  * acknowledges that topological 4D Poincaré is solved while smooth is open,
+  * avoids conflating exotic (S^4) with exotic (\mathbb{R}^4).
 
-*TU encoded setup:*
+**TU style**
 
-* Prompt the same system, but now with an instruction to use:
+* Prompt the same model with an instruction to organize the explanation around:
 
-  * a fixed observable library for 4 manifolds,
-  * notions of topological mismatch `DeltaS_top` and smooth mismatch `DeltaS_smooth`,
-  * the idea of low vs high tension worlds (World T and World F) at the effective layer.
+  * a finite observable library for 4 manifolds,
+  * topological mismatch `DeltaS_top`,
+  * smooth mismatch `DeltaS_smooth`,
+  * low vs high `Tension_4S` and the World T / World F split.
 
-* Observation:
+* Record whether the explanation:
 
-  * Record whether the explanation becomes:
-    * more structured around the observable library,
-    * clearer in separating classification of S4 by topology and smooth structure,
-    * explicit about the possibility of exotic S4 and how it would show up in tension patterns.
+  * clearly separates what is known vs unknown,
+  * treats S4 classification as a tension question rather than as a solved fact,
+  * explains what exotic S4 would mean at the level of mismatch patterns.
 
-*Comparison metric:*
+**Comparison**
 
-* Use a rubric with simple scores for:
+* Use a simple rubric scoring:
+
   * correctness,
   * structural clarity,
   * explicit handling of low vs high tension scenarios.
 
-*What to log:*
-
-* Both prompts and responses.
-* Any available estimates of `Tension_4S` or related signals produced by Q010 modules.
-* These logs allow later inspection of how Q010 encoding influenced the reasoning pattern without exposing any deep TU generative mechanism.
+* The TU style prompt is judged an improvement if it raises these scores without introducing incorrect mathematical claims.
 
 ---
 
 ## 8. Cross problem transfer template
 
-This block lists reusable components produced by Q010 and how they transfer to other problems.
+Reusable components and their transfer targets.
 
-### 8.1 Reusable components produced by this problem
+### 8.1 Reusable components
 
-1. ComponentName: `FourManifold_Descriptor`
+1. **`FourManifold_Descriptor`**
 
    * Type: field
-   * Minimal interface:
-     * Inputs: symbolic or structured description of a compact smooth 4 manifold (for example a handle diagram, triangulation encoding, or algebraic construction tag).
-     * Output: a standardized descriptor object containing values for all observables in `L_obs` plus a complexity indicator.
-   * Preconditions:
-     * The input description must represent a valid compact, connected, oriented smooth 4 manifold in the intended class.
+   * Interface:
 
-2. ComponentName: `Tension_4Sphere_Score`
+     * Inputs: a symbolic or structured description of a compact smooth 4 manifold, such as:
+
+       * handle diagram,
+       * triangulation encoding,
+       * algebraic construction tag.
+     * Output: a standardized descriptor object with values for all observables in `L_obs` plus `obs_complexity`.
+   * Preconditions:
+
+     * Input description must represent a valid compact, connected, oriented smooth 4 manifold.
+
+2. **`Tension_4Sphere_Score`**
 
    * Type: functional
-   * Minimal interface:
-     * Inputs: `FourManifold_Descriptor` for an encoding `m` in `Enc_4D`.
-     * Output: `tension_value` which equals `Tension_4S(m)` as defined in Block 4.
-   * Preconditions:
-     * Descriptor must identify the manifold as either topological S4 type or as a candidate where such a classification is at least meaningful.
+   * Interface:
 
-3. ComponentName: `ExoticSmoothWorld_Template`
+     * Inputs: `FourManifold_Descriptor` and a refinement path label,
+     * Output: `tension_value = Tension_4S(m; γ)`.
+   * Preconditions:
+
+     * Descriptor must be in `M_reg`,
+     * manifold type must make “S4 vs non S4” comparison meaningful (typically labeled or candidate S4).
+
+3. **`ExoticSmoothWorld_Template`**
 
    * Type: experiment_pattern
-   * Minimal interface:
-     * Inputs: a family of `FourManifold_Descriptor` objects with fixed topological type and varied smooth invariants.
-     * Output: a pair of experiment definitions that instantiate World T like and World F like scenarios for that family, including which observables and tension thresholds to monitor.
+   * Interface:
+
+     * Inputs: a family of `FourManifold_Descriptor` objects with fixed or tightly controlled topological data and varied smooth data,
+     * Output: a pair of experiment templates corresponding to World T like and World F like scenarios, specifying:
+
+       * which observables to monitor,
+       * how to compute mismatch gaps,
+       * what tension thresholds to treat as low vs high.
    * Preconditions:
-     * The family must contain meaningful variation in smooth invariants while holding topological invariants fixed or tightly controlled.
+
+     * The family must contain nontrivial variation in smooth invariants while holding topology fixed or controlled.
 
 ### 8.2 Direct reuse targets
 
-1. Q011 (Navier–Stokes smoothness in 4 dimensions)
+1. **Q011 (Navier–Stokes smoothness in 4 dimensions)**
 
-   * Reused component: `FourManifold_Descriptor`.
-   * Why it transfers: Navier–Stokes in 4 dimensional spacetime is defined on a smooth 4 manifold background, which can be described and constrained using the same descriptor interface.
-   * What changes: the observables used in Navier–Stokes analysis add PDE specific data on top of the manifold descriptor.
+   * Reused: `FourManifold_Descriptor`.
+   * Transfer: Navier–Stokes equations are defined on smooth 4 manifolds; descriptor can carry the background geometry before PDE data are added.
 
-2. Q012 (Yang–Mills existence and mass gap)
+2. **Q012 (Yang–Mills existence and mass gap)**
 
-   * Reused components: `FourManifold_Descriptor` and `ExoticSmoothWorld_Template`.
-   * Why it transfers: Yang–Mills theories are naturally defined on smooth 4 manifolds; exotic or standard smooth structures can be encoded as different world templates.
-   * What changes: the experiment pattern is adapted so that tension scores involve both manifold invariants and gauge field observables.
+   * Reused: `FourManifold_Descriptor`, `ExoticSmoothWorld_Template`.
+   * Transfer: Yang–Mills theories live on smooth 4 manifolds; exotic vs standard smooth structures can be explored as different world templates.
 
-3. Q040 (black hole information in 4D spacetime)
+3. **Q040 (black hole information in 4D spacetime)**
 
-   * Reused component: `Tension_4Sphere_Score`.
-   * Why it transfers: some toy models of black holes treat the ambient spacetime as a 4 sphere or related compact 4 manifold; consistency between spacetime topology and information behavior can be framed using the same tension score.
-   * What changes: thresholds and interpretations of `tension_value` are adjusted to match physical observables rather than purely mathematical ones.
+   * Reused: `Tension_4Sphere_Score`.
+   * Transfer: in toy models where spacetime is a compact 4 manifold, consistency between spacetime topology and information behavior can be framed using the same tension score.
 
 ---
 
 ## 9. TU roadmap and verification levels
 
-This block explains how Q010 fits into the TU verification ladder and what the next measurable steps are.
-
 ### 9.1 Current levels
 
-* E_level: E1
+* **E_level: E1**
 
   * A finite observable library `L_obs` has been specified.
-  * An admissible encoding class `Enc_4D` and refinement scheme `refine(k)` have been defined.
-  * Mismatch observables `DeltaS_top`, `DeltaS_smooth`, and the tension functional `Tension_4S` have clear qualitative properties and fairness constraints.
-  * At least two discriminating experiments at the encoding level have been described.
+  * An admissible encoding class `Enc_4D` and refinement scheme `refine(k)` have been defined, including coarse graining relations.
+  * Mismatch observables `DeltaS_top`, `DeltaS_smooth`, and tension functional `Tension_4S` are defined with explicit fairness constraints and without hidden per manifold tuning.
+  * At least two discriminating experiments have been described at the encoding level.
 
-* N_level: N2
+* **N_level: N2**
 
-  * The narrative connecting topological invariants, smooth invariants, and tension is explicit at the effective layer.
-  * World T and World F descriptions are present and clearly differentiated.
-  * Cross problem reuse points have been identified.
+  * The narrative linking topological invariants, smooth invariants, and tension is explicit.
+  * World T and World F descriptions are given and distinguished.
+  * Cross problem reuse points are identified.
 
 ### 9.2 Next measurable step toward E2
 
-To raise Q010 from E1 to E2, the following measurable steps should be implemented:
+To move Q010 from E1 to E2, the following steps are proposed.
 
-1. Construct a concrete prototype for Experiment 1:
+1. **Concrete prototype of Experiment 1**
 
    * Select a small but nontrivial dataset of real 4 manifolds.
-   * Implement an approximation to `FourManifold_Descriptor` using existing mathematical data.
-   * Compute approximate values of `DeltaS_top`, `DeltaS_smooth`, and `Tension_4S` and publish summary statistics.
+   * Implement a prototype `FourManifold_Descriptor` using existing mathematical data.
+   * Compute approximate values of:
 
-2. Implement an artificial model family for Experiment 2:
+     * `DeltaS_top`,
+     * `G_def`, `G_cons`, `G_stab`,
+     * `DeltaS_smooth`,
+     * `Tension_4S`,
+     * and publish summary statistics with fixed parameters logged.
 
-   * Design synthetic encodings for standard like and exotic like 4 sphere candidates.
-   * Evaluate how well the current encoding separates these families without parameter tuning.
+2. **Implementation of artificial families for Experiment 2**
 
-3. Document explicit numeric or qualitative thresholds:
+   * Design synthetic encodings for:
 
-   * For example, specify ranges of `Tension_4S` that are treated as low, intermediate, or high tension in these prototypes.
+     * standard like S4 candidates,
+     * exotic like S4 candidates.
+   * Evaluate separation between families using the fixed encoding version.
 
-These steps remain strictly at the effective layer and do not require any claim about the actual existence or non existence of exotic S4.
+3. **Explicit band thresholds**
 
-### 9.3 Long term role in the TU program
+   * Document explicit numeric or qualitative thresholds for:
+
+     * low tension band,
+     * intermediate band,
+     * high tension band,
+   * and check that bands are robust under modest changes of global parameters within the finite option set.
+
+All these steps remain at the effective layer. They do not require any claim about the actual existence or nonexistence of exotic S4.
+
+### 9.3 Long term role in TU
 
 Long term, Q010 is expected to serve as:
 
-* The canonical node for consistency_tension between topology and smooth structure in 4 dimensions.
-* A test case for the idea that very hard open problems can be encoded in TU without over claiming, by carefully separating:
+* the canonical node for consistency_tension between topology and smooth structure in dimension 4,
+* a test case for encoding very hard open problems in TU without overstating claims, by separating:
+
   * encoding level falsifiability,
-  * world level truth,
-  * and deep generative rules.
-* A reusable source of components and experiment patterns for:
+  * world level truth questions,
+  * deep generative rules,
+* a reusable source of components and experiment templates for:
+
   * gauge theories on 4 manifolds,
-  * models of spacetime topology in physics,
-  * and geometric analogies in AI interpretability.
+  * models of spacetime topology,
+  * geometric analogies in AI interpretability.
 
-As TU develops, the Q010 encoding can be refined by:
+As TU develops, Q010 can be refined by:
 
-* enriching the observable library,
+* enriching `L_obs`,
 * tightening fairness constraints,
-* expanding the range of manifolds and model families used in experiments,
+* expanding the manifold and model family datasets,
 
-without crossing the boundary into constructive generative rules for 4 manifolds.
+while still respecting the effective layer boundary.
 
 ---
 
 ## 10. Elementary but precise explanation
 
-This block gives an explanation suitable for non experts, while remaining faithful to the effective layer description.
+This block gives a precise but accessible explanation, aligned with the effective layer description.
 
-The classical smooth 4 dimensional Poincaré conjecture asks a simple sounding question:
+The smooth 4 dimensional Poincaré conjecture asks, in simple terms:
 
-> If you have a 4 dimensional shape that is topologically the same as a 4 sphere, is it automatically the same in the smooth sense, or could there be a “strange” smooth version of the 4 sphere?
+> If a 4 dimensional shape is topologically the same as a 4 sphere, is it automatically the same in the smooth sense, or could there be a “strange” smooth version of the 4 sphere?
 
-Topologically the answer is known: if a 4 dimensional space looks like a sphere from the viewpoint of continuous deformations and homology, then it is topologically a sphere. But in the smooth world, where we care about smooth coordinates and derivatives, it is still unknown whether there might be an exotic smooth S4.
+From the topological point of view, the story is finished. If a 4 dimensional space looks like a sphere under continuous deformations and homology, then it is a sphere. But when we care about smooth coordinates and derivatives, it is still unknown whether every 4 sphere is smoothly the same as the standard one.
 
-In the Tension Universe view, we do not try to build or classify these manifolds directly. Instead we do three things:
+In the Tension Universe view we do not try to build all 4 manifolds or prove the conjecture. Instead we do three things.
 
-1. We agree on a way to describe 4 manifolds with a finite checklist of data:
-   * basic topological summaries,
-   * smooth invariants from gauge theory,
-   * a measure of combinatorial complexity.
+1. **Describe manifolds with a finite checklist**
 
-2. We define two nonnegative numbers for each description:
-   * one number `DeltaS_top` says how far the topological data are from those of the standard 4 sphere,
-   * another number `DeltaS_smooth` says how far the smooth data are from what we would expect for the standard 4 sphere.
+   We fix a finite list of observables that can be read from a combinatorial description:
 
-3. We combine these into a tension score `Tension_4S` that is small when everything looks like the standard 4 sphere and larger when there is a mismatch.
+   * basic topological summaries (fundamental group, homology, intersection form),
+   * smooth summaries coming from gauge theory,
+   * a simple complexity measure for the description.
 
-Then we imagine two kinds of possible universes:
+   Any particular manifold is then represented by a finite “descriptor” that fills in this checklist.
 
-* In a “conjecture true” universe, every way of describing a 4 sphere can be refined so that both mismatch numbers become very small. The tension stays low and stable. There are no genuinely exotic 4 spheres.
+2. **Measure mismatch in two directions**
 
-* In a “conjecture false” universe, there is at least one 4 sphere whose descriptions always show a smooth mismatch that refuses to go away, even when we refine them. The tension for that manifold never drops below a fixed positive level.
+   For each descriptor we compute:
 
-This way of talking does not prove anything about 4 manifolds. Instead it:
+   * a **topological mismatch** `DeltaS_top` that says how far the topological observables are from those of the standard 4 sphere, and
+   * a **smooth mismatch** `DeltaS_smooth` that combines:
 
-* gives a precise language for what it would mean for topology and smooth structure on S4 to agree or disagree,
-* defines experiments that can test whether our chosen descriptions and tension formulas make sense,
-* produces reusable tools for other problems where the fit between discrete structure and smooth behavior is important.
+     * how many smooth observables are left undefined (`G_def`),
+     * how many topology vs smooth constraints are violated (`G_cons`),
+     * how unstable the smooth data are when we refine the description (`G_stab`).
 
-Q010 is therefore the prototype for describing smooth 4 dimensional Poincaré as a consistency_tension problem on encodings rather than as a direct claim about the unknown geometry of 4 manifolds. It stays inside the effective layer while still capturing what is at stake if exotic smooth 4 spheres exist or do not exist.
+   All of these are functions of the descriptor and of a fixed set of rules chosen in advance. They do not assume any hidden magic value for an invariant.
+
+3. **Combine them into a tension score**
+
+   We add the two mismatch numbers to get a tension score `Tension_4S`. It is small when everything looks like a standard 4 sphere in this encoding version, and larger when there is disagreement or instability.
+
+Then we imagine two types of universe.
+
+* In a **“conjecture true”** universe, every 4 sphere, when described more and more carefully, has encodings whose mismatch numbers can be made small and stable. Topology and smooth structure agree in that sense.
+
+* In a **“conjecture false”** universe, there is at least one 4 sphere for which no matter how carefully we describe it, the smooth mismatch refuses to go away. Topology says “this is a 4 sphere” while smooth data never fully settle into the 4 sphere pattern.
+
+This does not settle the conjecture. What it does is:
+
+* provide a clear language for what it would mean for topology and smooth structure to agree or disagree in dimension 4,
+* define experiments that can reject or improve particular ways of encoding manifolds and computing tension,
+* produce tools that can be reused in other problems where discrete structure and smooth behavior must be reconciled.
+
+Q010 is therefore the “smooth 4 sphere tension node” of the Tension Universe. It treats the conjecture as a question about low vs high tension patterns in encodings, and it stays within the effective layer, without claiming any constructive control over the full 4 manifold world.
+
+---
+
+## Tension Universe effective-layer footer
+
+This page is part of the **WFGY / Tension Universe** S-problem collection.
+
+### Scope of claims
+
+* The goal of this document is to specify an **effective-layer encoding** of the smooth 4 dimensional Poincaré conjecture.
+* It does not claim to prove or disprove the canonical statement in Section 1.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the corresponding open problem has been solved.
+
+### Effective-layer boundary
+
+* All objects used here (state spaces `M`, encodings, observables, invariants, mismatch scores, counterfactual “worlds”) live at the **effective layer**, as defined in the TU Effective Layer Charter.
+* No rule is given for constructing manifolds or computing invariants from first principles.
+  Existence of suitable encodings is assumed, not derived.
+* World T and World F are described only through patterns of observable summaries and tension behavior, never through deep generative rules.
+
+### Encoding and fairness
+
+* The observable library `L_obs` is finite and fixed for this encoding version.
+* All weights, thresholds, and scale factors used in mismatch and tension functionals are chosen from finite admissible sets and fixed **before** experiments.
+* A change to `L_obs` or to the global parameter tuple defines a new encoding version.
+  Past experiments remain tied to their original version and are not retroactively reinterpreted.
+* No per manifold or per experiment tuning of parameters is allowed.
+  If such tuning is introduced, it must be documented as a different encoding and treated as a separate object.
+
+### Tension scale and world selection
+
+* “Low tension” and “high tension” refer to bands of the tension functional defined with the fixed parameter choice of this encoding version.
+* The World T / World F descriptions in this page are **interpretations** of how the conjecture would appear at the effective layer, not claims that one world or the other is realized.
+* Moving from one encoding version to another changes the mapping from raw data to tension bands, and must be treated as a model change, not as new evidence inside a fixed model.
+
+### TU charters
+
+This document is intended to be read together with the following Tension Universe charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
