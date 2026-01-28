@@ -1,4 +1,4 @@
-# Q007 · Twin prime conjecture
+# Q007 · Twin prime conjecture (run 2 · effective-layer spec)
 
 ## 0. Header metadata
 
@@ -9,13 +9,15 @@ Domain: Mathematics
 Family: Number theory (analytic and combinatorial)
 Rank: S
 Projection_dominance: I
-Field_type: discrete_field
+Field_type: counting_field
 Tension_type: counting_tension
 Status: Open
 Semantics: hybrid
 E_level: E1
 N_level: N1
+Encoding_class: encoding_class_TP_E2_proto
 Last_updated: 2026-01-28
+Run: 2
 ```
 
 ---
@@ -26,950 +28,937 @@ Last_updated: 2026-01-28
 
 A prime number is an integer greater than 1 that has no positive divisors other than 1 and itself.
 
-A twin prime pair is a pair of primes ((p, p + 2)).
+A twin prime pair is a pair of primes `(p, p + 2)`.
 
-The **twin prime conjecture** states:
+The twin prime conjecture (TPC) states:
 
-> There exist infinitely many primes (p) such that (p) and (p + 2) are both prime.
+> There exist infinitely many primes `p` such that `p` and `p + 2` are both prime.
 
 Equivalently:
 
-> The set of twin prime pairs ((p, p + 2)) is infinite.
-
-This is a central open problem in analytic number theory. It is one of the simplest natural statements about prime numbers whose truth value is still unknown.
+> The set of twin prime pairs `(p, p + 2)` is infinite.
 
 ### 1.2 Status and difficulty
 
 Classical facts:
 
-* It is known that there are infinitely many primes in total.
-* It is unknown whether infinitely many twin prime pairs exist.
-* Sieve methods provide strong upper bounds and conditional asymptotics for twin prime counts, but do not yet prove infinitude.
-* The Hardy–Littlewood prime pair conjecture predicts an asymptotic of the form
-  [
-  \pi_2(x) \sim 2 C_2 \int_2^x \frac{dt}{(\log t)^2}
-  ]
-  for the number (\pi_2(x)) of twin pairs up to (x), with a specific constant (C_2).
+* It is known that there are infinitely many primes, but it is not known whether infinitely many twin prime pairs exist.
+* Sieve methods and analytic number theory give upper bounds and conditional asymptotic formulas for twin prime counts, but no unconditional proof of infinitude.
+* The Hardy–Littlewood prime pair conjecture predicts a precise asymptotic for the number of twin primes up to `x`, involving the twin prime constant `C_2`.
 
-Modern partial progress:
+Modern progress:
 
-* Work on **bounded gaps between primes** (Zhang, Maynard, Tao, Polymath and others) proves that there are infinitely many pairs of distinct primes whose difference is bounded by an explicit constant.
-* These results show that small prime gaps occur infinitely often, but they do not yet show that the exact gap 2 occurs infinitely often.
+* Results on bounded gaps between primes (Zhang, Maynard, Tao, Polymath and others) show there are infinitely many prime pairs with bounded gap, currently much larger than `2`.
+* These results are compatible with TPC but do not imply it.
 
-The conjecture is widely regarded as very difficult. It sits at the interface of:
+TPC is widely regarded as a very difficult open problem. It is simple to state, strongly constrained by analytic number theory, and deeply tied to the fine-scale structure of primes.
 
-* fine distribution of primes,
-* sieve theory,
-* conjectural connections between zero statistics of L-functions and prime gaps.
+### 1.3 Role in the BlackHole / TU program
 
-### 1.3 Role in the BlackHole project
+Within the BlackHole S-problem collection and Tension Universe (TU), Q007 plays several roles:
 
-Within the BlackHole S-problem collection, Q007 plays several roles:
+1. It is the canonical **prime-pair / small-gap counting_tension** problem: we compare actual twin prime counts with fixed analytic expectations and sieve-compatible bands.
+2. It anchors a cluster of problems about prime gaps and additive structure of primes, including Goldbach-type questions and bounded gap phenomena.
+3. It provides a clean E1/E2 testbed for TU encoding principles:
 
-1. It is the canonical example of a **prime pair gap** problem in the discrete_field, where small gaps are compared against analytic expectations.
-2. It anchors a cluster of problems about additive structure of primes and small gaps, including Goldbach type problems and bounded gap phenomena.
-3. It provides a testbed for Tension Universe encodings that compare empirical prime pair statistics with a **frozen library of counting heuristics and sieve bounds**, under explicit fairness constraints.
+   * freeze the interval family once,
+   * freeze the reference library once,
+   * define one reproducible way to aggregate mismatches into a tension functional.
 
-### References
+This document does not attempt to prove or disprove TPC. It only specifies an **effective-layer encoding** of how twin prime behavior is turned into a scalar tension signal under strict fairness constraints.
 
-1. Standard encyclopedia entry on the “Twin prime conjecture”, including definition, history, and known partial results.
-2. G. H. Hardy, E. M. Wright, “An Introduction to the Theory of Numbers”, Academic Press, chapters on primes and prime gaps.
-3. H. Halberstam, H. E. Richert, “Sieve Methods”, Academic Press, 1974, sections on prime pairs and small gaps.
-4. Expository survey on bounded gaps between primes and connections to twin primes, by a recognized expert in analytic number theory.
+### 1.4 References
+
+1. Standard encyclopedia entry on the “Twin prime conjecture”, including historical background and known results.
+2. G. H. Hardy, E. M. Wright, *An Introduction to the Theory of Numbers*, chapters on primes and prime gaps.
+3. H. Halberstam, H. E. Richert, *Sieve Methods*, sections on prime pairs and small gaps.
+4. Expository surveys on bounded gaps between primes and connections to twin primes by contemporary experts.
 
 ---
 
 ## 2. Position in the BlackHole graph
 
-This block records how Q007 sits inside the BlackHole graph among Q001–Q125. Each edge gives a one line reason pointing to a concrete component or tension type.
+This block records how Q007 sits in the BlackHole graph among Q001–Q125. Each edge is justified by a concrete component or tension type at the effective layer.
 
 ### 2.1 Upstream problems
 
-These nodes provide prerequisites, tools, or general foundations that Q007 relies on at the effective layer.
+Upstream nodes provide prerequisites or tools Q007 relies on.
 
-* Q001 · Riemann Hypothesis
-  Code: BH_MATH_NUM_L3_001
-  Reason: Supplies spectral and density templates that underlie reference expectations for prime gaps and twin prime counts, although Q007 itself is encoded as counting_tension rather than spectral_tension.
+* **Q001 · Riemann Hypothesis**
+  Code: `BH_MATH_NUM_L3_001`
+  Reason: Supplies spectral tools and zero statistics templates that motivate the reference heuristics encoded in the frozen twin-prime library, though Q007 itself is a counting_field problem at E1.
 
-* Q005 · abc conjecture
-  Code: BH_MATH_ABC_L3_005
-  Reason: Provides global constraints on prime factors that inform admissible density patterns for prime pairs in certain heuristic regimes.
+* **Q005 · abc conjecture**
+  Code: `BH_MATH_ABC_L3_005`
+  Reason: Provides global constraints on prime factors and densities that shape admissible long-range prime patterns, including possible twin prime densities.
 
-* Q006 · Goldbach conjecture
-  Code: BH_MATH_GOLDBACH_L3_006
-  Reason: Shares additive structure on primes and motivates a common framework for prime pair and small gap tension.
+* **Q006 · Goldbach conjecture**
+  Code: `BH_MATH_GOLDBACH_L3_006`
+  Reason: Shares additive structure on primes and motivates a common framework for prime pair and small-gap encodings.
 
-* Q019 · distribution of rational points
-  Code: BH_MATH_DIOPH_DENSITY_L3_019
-  Reason: Encodes general density and distribution methods that can be reused for twin prime density analysis.
+* **Q019 · distribution of rational points**
+  Code: `BH_MATH_DIOPH_DENSITY_L3_019`
+  Reason: Encodes general density and distribution methods that are reused for twin prime density analysis.
 
 ### 2.2 Downstream problems
 
-These nodes directly reuse components from Q007 or depend on its tension structure.
+Downstream nodes reuse Q007 components or depend on its tension structure.
 
-* Q018 · pair correlation of zeros of zeta functions
-  Code: BH_MATH_RANDOM_MATRIX_ZEROS_L3_018
-  Reason: Reuses `TwinPrimeGap_TensionFunctional` as a template for linking zero pair correlations to prime pair statistics.
+* **Q018 · pair correlation of zeros of zeta functions**
+  Code: `BH_MATH_RANDOM_MATRIX_ZEROS_L3_018`
+  Reason: Reuses `TwinPrimeGap_TensionFunctional` as a template for linking zero pair statistics to prime pair statistics.
 
-* Q051 · P versus NP
-  Code: BH_CS_PVNP_L3_051
-  Reason: Uses structured prime pair counting as a case study for hard counting problems and approximate counting tension.
+* **Q051 · P versus NP**
+  Code: `BH_CS_PVNP_L3_051`
+  Reason: Uses structured prime-pair counting as a toy model for hard counting problems and approximate counting tension.
 
-* Q105 · prediction of systemic crashes
-  Code: BH_COMPLEX_CRASHES_L3_105
+* **Q105 · prediction of systemic crashes**
+  Code: `BH_COMPLEX_CRASHES_L3_105`
   Reason: Reuses prime gap clustering and twin pair scale profiles as toy models for clustering near critical thresholds in complex systems.
 
 ### 2.3 Parallel problems
 
-Parallel nodes share similar tension types but do not depend on Q007 components.
+Parallel nodes share similar tension types or narrative roles.
 
-* Q006 · Goldbach conjecture
-  Code: BH_MATH_GOLDBACH_L3_006
-  Reason: Both study patterns in primes with simple additive relations and similar counting_tension encodings.
+* **Q006 · Goldbach conjecture**
+  Code: `BH_MATH_GOLDBACH_L3_006`
+  Reason: Both study patterns in primes with simple additive relations, using similar counting_tension encodings.
 
-* Q008 · Collatz conjecture
-  Code: BH_MATH_COLLATZ_L3_008
-  Reason: Both are simple discrete statements about integers with unresolved long range behavior, producing high combinatorial tension.
+* **Q008 · Collatz conjecture**
+  Code: `BH_MATH_COLLATZ_L3_008`
+  Reason: Both are simple discrete statements with unresolved long-range behavior, producing high combinatorial tension.
 
-* Q009 · odd perfect numbers
-  Code: BH_MATH_ODDPERF_L3_009
-  Reason: Shares the property of a simple number theory statement with deep unresolved structure in prime factors.
+* **Q009 · odd perfect numbers**
+  Code: `BH_MATH_ODDPERF_L3_009`
+  Reason: Shares the property of a simple number-theoretic statement with deep unresolved structure in prime factors.
 
-### 2.4 Cross domain edges
+### 2.4 Cross-domain edges
 
-Cross-domain edges connect Q007 to problems in other domains that can reuse its components.
+Cross-domain edges connect Q007 to problems in other domains that reuse its components.
 
-* Q032 · quantum foundations of thermodynamics
-  Code: BH_PHYS_QTHERMO_L3_032
+* **Q032 · quantum foundations of thermodynamics**
+  Code: `BH_PHYS_QTHERMO_L3_032`
   Reason: Reuses `PrimePair_ScaleProfile` as a toy model for gap statistics in energy spectra and microstates.
 
-* Q059 · thermodynamic cost of information processing
-  Code: BH_CS_INFO_THERMODYN_L3_059
-  Reason: Uses twin prime gap patterns as examples of structured but nontrivial sequences when studying compression and energy cost.
+* **Q059 · thermodynamic cost of information processing**
+  Code: `BH_CS_INFO_THERMODYN_L3_059`
+  Reason: Uses twin prime gap patterns as examples of structured, non-trivial sequences in studying compression and energy cost.
 
-* Q123 · scalable interpretability
-  Code: BH_AI_INTERP_L3_123
-  Reason: Uses `TwinPrimeGap_TensionFunctional` as a structured field to test whether AI internal representations capture deep arithmetic patterns.
+* **Q123 · scalable interpretability**
+  Code: `BH_AI_INTERP_L3_123`
+  Reason: Uses `TwinPrimeGap_TensionFunctional` as a structured field to test whether AI representations capture deep arithmetic patterns.
 
 ---
 
-## 3. Tension Universe encoding (effective layer)
+## 3. Tension Universe encoding (effective layer, run 2)
 
 All content in this block is at the effective layer. We only describe:
 
 * state space,
-* fixed interval family and scales,
-* frozen reference libraries,
 * observables and fields,
-* dimensionless mismatch quantities and tension scores,
+* fixed interval family and reference library,
+* invariants and tension scores,
 * singular sets and domain restrictions.
 
-We do not describe any hidden rules for constructing TU internal fields from raw data.
+We do **not** describe any hidden TU generative rules or any constructive mapping from raw data to internal TU fields.
 
-### 3.1 State space
+### 3.1 Canonical interval family
 
-We assume a semantic state space
+To eliminate degrees of freedom in the choice of regions, we fix a **single deterministic interval family** for Q007.
+
+We define, for each integer `k >= 10`:
+
+```txt
+I_k = [2^k, 2^(k+1)]
+```
+
+Given a maximum data bound `X_max >= 2^11`, we define:
+
+```txt
+k_min = 10
+k_max(X_max) = max { k in Z : k_min <= k and 2^(k+1) <= X_max }
+K_all(X_max) = { k in Z : k_min <= k <= k_max(X_max) }
+```
+
+For any experiment that uses actual prime/twin data up to `X_max`, the **only** allowed index set of scales is:
+
+```txt
+K_finite = K_all(X_max)
+```
+
+No experiment is allowed to:
+
+* drop individual `k` inside `K_all(X_max)`,
+* reorder intervals,
+* or inject additional intervals not of the form `I_k`.
+
+This removes “interval-selection tuning” as a degree of freedom for Q007.
+
+### 3.2 State space
+
+We define a semantic state space:
 
 ```txt
 M_TP
 ```
 
-with the following effective interpretation:
+with the following effective interpretation.
 
-* Each state `m` in `M_TP` represents a coherent **prime gap world** configuration, including:
+Each state `m` in `M_TP` represents a coherent “prime gap and twin prime world” for a specific finite bound `X_max(m)`, including:
 
-  * summaries of primes in selected integer ranges,
-  * summaries of twin prime pairs ((p, p + 2)) in those ranges,
-  * coarse information about resolution and reliability of the summaries.
+* the list of indices `K_finite(m) = K_all(X_max(m))`,
+* summaries of primes and twin prime pairs in each interval `I_k` with `k in K_finite(m)`,
+* meta information about data quality and completeness.
 
-We do not specify how lists of primes or computations are mapped into `M_TP`. We only assume that, for each finite set of ranges and resolutions that we care about, there exist states in `M_TP` whose summaries match those ranges and resolutions.
+We do not specify how raw lists of primes are turned into states. We only assume:
 
-### 3.2 Fixed interval family and scale system
+* for each admissible `X_max` and associated `K_all(X_max)`, there exist states `m` whose summaries match actual or synthetic data for all `I_k`,
+* these summaries are coherent on a regular subset of `M_TP`.
 
-To avoid freehand interval selection, we fix a discrete family of intervals ({I_k}_{k \in K}) once at the encoding level.
+### 3.3 Effective observables
 
-* Choose positive constants `X_0 > 0`, `B > 1`, and `L_rel in (0, 1]` in the TU charters for counting problems.
-* For each integer scale index `k >= 0` define:
-
-  ```txt
-  X_k    = X_0 * B^k
-  L_k    = L_rel * X_k
-  I_k    = [X_k, X_k + L_k]
-  ```
-
-The index set `K = {0, 1, 2, ...}` is fixed.
-
-For any experiment we only use **prefix families** of the form:
-
-```txt
-K_finite(N) = { k in K : X_k + L_k <= N }
-```
-
-for some externally specified cutoff `N > 0` determined by data availability or computational budget. The rule “take all scales up to N” depends only on `N`, not on observed counts in those intervals. No cherry-picking of scattered scales is allowed inside a single experiment.
-
-### 3.3 Frozen reference library for twin primes and sieve bands
-
-We fix a finite reference library `RefLib_TP` at the encoding level:
-
-```txt
-RefLib_TP = { ref_1, ref_2, ..., ref_L }
-```
-
-Each entry `ref_ℓ` consists of three families of nonnegative reals, indexed by `k in K`:
-
-```txt
-pi2_ref_ℓ(k)      = reference twin prime count for interval I_k
-pi2_lower_ℓ(k)    = sieve-based lower reference for pi_2(I_k)
-pi2_upper_ℓ(k)    = sieve-based upper reference for pi_2(I_k)
-```
-
-with the constraints:
-
-* `0 <= pi2_lower_ℓ(k) <= pi2_ref_ℓ(k) <= pi2_upper_ℓ(k)` for all `k`.
-* The construction of these functions uses only:
-
-  * classical prime counting approximations,
-  * standard twin prime heuristics (for example Hardy–Littlewood style),
-  * sieve bounds from the literature,
-  * and global constants fixed in the charters.
-* None of these functions are allowed to depend on `pi_2(m; I_k)` or other state-specific data.
-
-For a given **encoding choice** inside Q007 we select:
-
-```txt
-ref_id in {1, ..., L}
-```
-
-once and for all. All tension computations in that encoding use `ref_id` and the associated families:
-
-```txt
-pi2_ref(k)   = pi2_ref_ref_id(k)
-pi2_lower(k) = pi2_lower_ref_id(k)
-pi2_upper(k) = pi2_upper_ref_id(k)
-```
-
-Selecting a different `ref_id` defines a different encoding in the same encoding class.
-
-### 3.4 Effective observables
-
-On `M_TP` we introduce the following observables.
+On `M_TP` we define the following observables, all tied to the frozen interval family.
 
 1. Prime count observable
 
 ```txt
-pi_1(m; I_k) >= 0
+pi_1(m; k) >= 0
 ```
 
-* Input: state `m` and index `k in K`.
-* Output: an effective scalar that summarizes the number of primes in `I_k` as encoded in `m`.
+* Input: state `m`, scale index `k` with `k in K_finite(m)`.
+* Output: integer equal to the number of primes `p` with `p in I_k`.
 
 2. Twin prime count observable
 
 ```txt
-pi_2(m; I_k) >= 0
+pi_2(m; k) >= 0
 ```
 
-* Input: state `m` and index `k in K`.
-* Output: an effective scalar summarizing the number of twin prime pairs `(p, p + 2)` with `p in I_k` as encoded in `m`.
+* Input: state `m`, scale index `k`.
+* Output: integer equal to the number of twin prime pairs `(p, p + 2)` with `p in I_k`.
 
-Both observables are required to be finite and nonnegative on the **regular domain** (defined below) for all `k` in the relevant `K_finite(N)`.
-
-### 3.5 Dimensionless mismatch quantities
-
-All mismatch terms defined here are treated as **dimensionless or normalized quantities**, consistent with the TU Tension Scale Charter for counting problems. Changing the underlying tension scale requires updating that charter, not editing this file.
-
-#### 3.5.1 Per scale relative twin pair mismatch
-
-For each `m in M_TP` and `k in K` we define:
+3. Data-bound observable
 
 ```txt
-RelErr_pair(m; k) =
-  |pi_2(m; I_k) - pi2_ref(k)| / max(pi2_ref(k), 1)
+X_max(m) >= 0
 ```
 
-This is a dimensionless nonnegative real. It measures the relative deviation of encoded twin pair counts from the frozen reference value at scale `k`, clipped against the trivial scale 1 when `pi2_ref(k)` is small.
+* Input: state `m`.
+* Output: finite real or integer satisfying `2^(k_max(m)+1) <= X_max(m)` and `K_finite(m) = K_all(X_max(m))` as defined above.
 
-#### 3.5.2 Per scale sieve band mismatch
+We require that, for any `m` in the regular domain, `pi_1`, `pi_2`, and `X_max` are all well-defined and finite.
 
-Using the lower and upper reference bands we define:
+### 3.4 Frozen reference library RefLib_TP
+
+To remove ambiguity in “standard heuristics”, we fix a **single reference model** for twin prime counts, based on the Hardy–Littlewood twin prime heuristic.
+
+Let `C_2` be the twin prime constant, defined by the convergent Euler product:
 
 ```txt
-RelErr_sieve(m; k) =
-  0                               if pi2_lower(k) <= pi_2(m; I_k) <= pi2_upper(k)
-  (pi2_lower(k) - pi_2(m; I_k)) / max(pi2_lower(k), 1)   if pi_2(m; I_k) < pi2_lower(k)
-  (pi_2(m; I_k) - pi2_upper(k)) / max(pi2_upper(k), 1)   if pi_2(m; I_k) > pi2_upper(k)
+C_2 = product over primes p > 2 of [ p (p - 2) / (p - 1)^2 ]
 ```
 
-This is also dimensionless and nonnegative. It is zero when the encoded count lies within the sieve band, and grows linearly in normalized distance from the closer boundary when the count lies outside.
-
-#### 3.5.3 Aggregated mismatch across scales
-
-Given a finite prefix index set `K_finite(N)` and a fixed weight vector
+For each integer `n >= 3`, define a weight:
 
 ```txt
-w = (w_k)_{k in K_finite(N)},   w_k >= 0,   sum_{k in K_finite(N)} w_k = 1
+w_HL(n) = 1 / (log n)^2
 ```
 
-chosen before looking at any `pi_2(m; I_k)` values, we define:
+For each interval `I_k = [2^k, 2^(k+1)]`, define the reference twin prime count:
 
 ```txt
-DeltaS_pair_aggregate(m; N) =
-  sum over k in K_finite(N) of w_k * RelErr_pair(m; k)
-
-DeltaS_sieve_aggregate(m; N) =
-  sum over k in K_finite(N) of w_k * RelErr_sieve(m; k)
+pi_2_ref(k) =
+  round( C_2 * sum over integers n in I_k with n >= 3 of w_HL(n) )
 ```
 
-Both quantities are dimensionless, nonnegative, and finite for regular states.
-
-### 3.6 Core twin prime tension functional
-
-We fix positive weights:
+The **reference library** for Q007 is the singleton set:
 
 ```txt
-alpha_pair > 0
-beta_sieve > 0
-alpha_pair + beta_sieve = 1
+RefLib_TP = { HL_fixed }
 ```
 
-at the encoding level, again **before** any tension experiment is run.
+where `HL_fixed` denotes the above rule. There is no freedom to choose alternative reference functions inside this problem file.
 
-The core twin prime tension functional for a world-representing state `m` and cutoff `N` is:
+For any state `m` and scale `k in K_finite(m)` we define:
 
 ```txt
-Tension_TP(m; N) =
-  alpha_pair * DeltaS_pair_aggregate(m; N)
-  + beta_sieve * DeltaS_sieve_aggregate(m; N)
+pi_2_ref(m; k) = pi_2_ref(k)
 ```
 
-Properties:
+Note:
 
-* `Tension_TP(m; N) >= 0` for all regular `m`.
-* It is monotone in each aggregated mismatch component when the other is held fixed.
-* It is dimensionless and normalized in the sense of the TU Tension Scale Charter.
+* `pi_2_ref(m; k)` only depends on `k` and the fixed analytic formula, **not** on `pi_2(m; k)` or any other data in `m`.
+* Updating or replacing `RefLib_TP` would define a new encoding class at the charter level, not a silent change of this file.
 
-This functional is the primary counting_tension quantity for Q007 at the effective layer.
+### 3.5 Sieve-based bounds and DeltaS_sieve
 
-### 3.7 Admissible encoding class and fairness constraints
+We now define a concrete sieve-based mismatch observable.
 
-The **admissible encoding class** `encoding_class_TP` consists of all encodings that respect the following rules.
-
-1. **Frozen libraries and scales**
-
-   * The interval family parameters `X_0`, `B`, `L_rel` and the resulting `I_k` are fixed at the charter level.
-   * The reference library `RefLib_TP` is fixed and finite.
-   * For each encoding instance we pick exactly one `ref_id` in `{1, ..., L}`.
-   * The weights `alpha_pair`, `beta_sieve` are fixed for that encoding.
-   * For each experiment with cutoff `N` we use `K_finite(N)` and pick a single weight vector `w` over that prefix, before inspecting any `pi_2(m; I_k)`.
-
-2. **No data dependent tuning**
-
-   * `ref_id` cannot be chosen or changed in response to the values of `pi_2(m; I_k)` for the states under test.
-   * The weight vector `w` cannot be adapted based on which scales show larger or smaller mismatch.
-   * The cutoff `N` is determined by external constraints (for example the largest range for which data is available), not by tension outcomes.
-
-3. **Encoding updates are versioned**
-
-   * Any modification to interval parameters, `RefLib_TP`, `ref_id` or weight families defines a **new encoding**.
-   * Comparing results across encodings is allowed, but each encoding must be documented and evaluated separately.
-   * It is not permitted to retroactively adjust encoding parameters within a single experiment to force low tension; that would count as changing the encoding, not as running the same encoding.
-
-These fairness constraints are intentionally strict. They are designed so that low or high `Tension_TP` values are consequences of actual prime/twin behavior relative to frozen heuristics, not of post hoc parameter choices.
-
-### 3.8 Singular set and domain restrictions
-
-Some states may encode incomplete or inconsistent information. We define the singular set:
+For each interval `I_k` we define lower and upper expected bands:
 
 ```txt
-S_sing_TP(N) = { m in M_TP :
-                 pi_1(m; I_k) or pi_2(m; I_k) undefined or not finite
-                 for some k in K_finite(N),
-                 or Tension_TP(m; N) not finite }
+L_k = max( 0, c_L * pi_2_ref(k) )
+U_k = c_U * pi_2_ref(k)
 ```
 
-We restrict effective tension analysis to the regular domain
+with fixed constants:
 
 ```txt
-M_reg_TP(N) = M_TP \ S_sing_TP(N)
+c_L = 0.25
+c_U = 4.0
 ```
 
-If an experiment attempts to evaluate `Tension_TP(m; N)` for `m` in `S_sing_TP(N)`, the outcome is recorded as “out of domain” rather than as evidence about the twin prime conjecture itself.
+These constants are chosen once at the TU charter level for Q007 and are not tuned on the basis of data for any particular state.
+
+Given a state `m` and index `k in K_finite(m)` we define the per-interval sieve violation:
+
+```txt
+v_sieve(m; k) =
+  max( max(0, pi_2(m; k) - U_k),
+       max(0, L_k - pi_2(m; k)) )
+```
+
+This quantity is:
+
+* zero if the encoded twin prime count lies inside `[L_k, U_k]`,
+* positive otherwise, increasing linearly with the distance from the band.
+
+We then define the aggregate sieve mismatch:
+
+```txt
+DeltaS_sieve(m) =
+  (1 / |K_finite(m)|) * sum over k in K_finite(m) of v_sieve(m; k)
+```
+
+This is a nonnegative scalar that:
+
+* is small when twin prime counts stay within the band for most scales,
+* grows when counts systematically fall outside the band.
+
+### 3.6 Pair-count mismatch DeltaS_pair and aggregation
+
+Per-interval twin prime mismatch is defined by:
+
+```txt
+DeltaS_pair(m; k) =
+  | pi_2(m; k) - pi_2_ref(k) |
+```
+
+We aggregate these mismatches across all allowed scales for state `m`:
+
+```txt
+DeltaS_pair_aggregate(m) =
+  (1 / |K_finite(m)|) *
+  sum over k in K_finite(m) of DeltaS_pair(m; k)
+```
+
+By construction:
+
+```txt
+DeltaS_pair_aggregate(m) >= 0
+```
+
+This scalar is small when encoded twin prime counts track the HL fixed reference across scales and large when there is persistent deviation.
+
+### 3.7 Fixed weights and combined mismatch DeltaS_TP
+
+To avoid functional degrees of freedom, we fix the weights:
+
+```txt
+alpha_pair = 1/2
+beta_sieve = 1/2
+```
+
+for all uses of Q007 in this file.
+
+The combined twin prime mismatch is defined as:
+
+```txt
+DeltaS_TP(m) =
+  alpha_pair * DeltaS_pair_aggregate(m)
+  + beta_sieve * DeltaS_sieve(m)
+```
+
+This is the only combined mismatch scalar used by Q007 at the effective layer.
+
+No other weighting schemes or non-linear combinations are allowed inside this file. Any alternative combination belongs to a distinct encoding class defined at the charter level.
+
+### 3.8 Core tension functional Tension_TP
+
+The core twin prime tension functional is identified with the combined mismatch:
+
+```txt
+Tension_TP(m) = DeltaS_TP(m)
+```
+
+That is:
+
+```txt
+Tension_TP(m) =
+  (1/2) * DeltaS_pair_aggregate(m)
+  + (1/2) * DeltaS_sieve(m)
+```
+
+This choice removes the earlier freedom to pick an arbitrary monotone continuous function of the mismatch components.
+
+The interpretation is:
+
+* low `Tension_TP(m)` means twin prime counts match the frozen HL reference and stay within the sieve band across all allowed scales,
+* high `Tension_TP(m)` means systematic deviation from both the reference and the sieve band.
+
+### 3.9 Singular set and regular domain
+
+Some states may encode incomplete or inconsistent information. We collect these in a singular set:
+
+```txt
+S_sing_TP =
+  { m in M_TP :
+      X_max(m) undefined
+      or K_finite(m) != K_all(X_max(m))
+      or there exists k in K_finite(m) with
+         pi_1(m; k) undefined
+         or pi_2(m; k) undefined
+      or DeltaS_TP(m) not finite }
+```
+
+We define the regular domain:
+
+```txt
+M_reg_TP = M_TP \ S_sing_TP
+```
+
+All Q007 tension analysis is restricted to `M_reg_TP`. Any attempt to evaluate `Tension_TP(m)` for `m in S_sing_TP` must be recorded as “out of domain” for that protocol and not as evidence for or against the twin prime conjecture.
 
 ---
 
-## 4. Tension principle for this problem
+## 4. Tension principle for this problem (run 2)
 
-This block states how Q007 is characterized as a tension problem within TU at the effective layer.
+This block states how Q007 is characterized as a tension problem within TU at the effective layer, using the frozen interval family, reference library, and functional defined above.
 
-### 4.1 Classical statement in tension friendly form
+### 4.1 Twin prime conjecture as low counting_tension
 
-Classically, write (\pi_2(x)) for the number of twin prime pairs with first element at most (x). The twin prime conjecture claims:
+At the effective layer, the twin prime conjecture is recast as the existence of world-representing states `m_T` in `M_reg_TP` such that:
 
-* There is no finite cutoff (X_0) beyond which no twin primes occur.
-* More strongly, twin primes continue to occur with a density pattern compatible with standard heuristics.
+* twin primes continue to appear at all tested scales inside the frozen interval family,
+* the combined tension `Tension_TP(m_T)` stays within a low band that does not blow up as data quality and `X_max` increase.
 
-In terms of the interval family (I_k), this means that for arbitrarily large (k) the intervals (I_k) continue to contain many twin pairs.
+More concretely, in a world where TPC holds and where prime data is faithfully encoded, we expect:
 
-From the Tension Universe viewpoint, we compare two descriptions of twin prime statistics:
+* for each admissible `X_max`, there exists at least one state `m_T(X_max) in M_reg_TP` such that:
 
-1. The **empirical description** given by `pi_2(m; I_k)` for a world state `m`.
-2. The **reference description** given by `pi2_ref(k)`, `pi2_lower(k)` and `pi2_upper(k)` from the frozen library.
+  ```txt
+  Tension_TP(m_T(X_max)) <= epsilon_TP
+  ```
 
-The conjecture becomes the claim that **for the actual universe** there exist world states and cutoffs for which:
+  for some finite `epsilon_TP` that:
 
-* aggregated relative mismatches stay inside a low, stable band as the scale grows,
-* under any admissible encoding in `encoding_class_TP`.
+  * depends on the encoding class and sieve constants,
+  * may depend mildly on computational approximation quality,
+  * does **not** grow without bound as `X_max` increases.
 
-### 4.2 Twin prime conjecture as a low tension principle
+In this view, TPC becomes the assertion that the actual universe admits **low counting_tension representations** at all large scales under the frozen Q007 encoding.
 
-At the effective layer, we restate the twin prime conjecture as the existence of low tension worlds for all admissible encodings.
+### 4.2 Twin prime failure as persistent high counting_tension
 
-For a fixed encoding in `encoding_class_TP`, the low tension principle is:
+If the twin prime conjecture were false, then for any encoding in `encoding_class_TP_E2_proto` that remains faithful to the actual prime sequence, we would expect:
 
-> There exists a family of world representing states (m_T(N) in M_reg_TP(N)) for arbitrarily large cutoffs (N) such that
-> [
-> Tension_TP(m_T(N); N) \leq \epsilon_TP
-> ]
-> for some finite threshold (\epsilon_TP) that does not grow unboundedly with (N).
+* for some sufficiently large scales `k`, `pi_2(m; k)` becomes extremely small or zero, while `pi_2_ref(k)` remains positive,
+* the sieve band `[L_k, U_k]` becomes increasingly strained or violated.
 
-The constant (\epsilon_TP) is allowed to depend on:
+In such a world, there would exist world-representing states `m_F` in `M_reg_TP` and a positive constant `delta_TP` such that, for all sufficiently large `X_max`:
 
-* the encoding choice (`ref_id`, interval parameters, weights),
-* the quality and completeness of the data embedded into `m_T(N)`,
+```txt
+Tension_TP(m_F(X_max)) >= delta_TP
+```
 
-but not on the detailed pattern of twin primes in any specific range.
+and `delta_TP` cannot be made arbitrarily small by:
 
-In this formulation, Q007 encodes the assertion that **our universe admits low counting_tension descriptions of twin prime behavior across unbounded scales**.
+* changing `K_finite`,
+* changing the reference function inside `RefLib_TP`,
+* or changing the weights inside this file,
 
-### 4.3 Twin prime failure as persistent high tension
+because all of those are frozen by construction.
 
-If the twin prime conjecture is false in a strong sense, then beyond some scale twin pairs become so sparse that they cannot be reconciled with any library entry in `RefLib_TP` that remains within standard analytic heuristics.
+### 4.3 Interpretive summary
 
-At the effective layer this is represented as:
+Q007, in run 2, is explicitly a **counting_tension harness**:
 
-> For every encoding in `encoding_class_TP` that remains faithful to actual prime and twin data, there exist large enough cutoffs (N) and world representing states (m_F(N)) such that
-> [
-> Tension_TP(m_F(N); N) \geq \delta_TP
-> ]
-> for some positive lower bound (\delta_TP > 0) that cannot be driven arbitrarily close to zero without changing the encoding.
+* the only free aspect of the world is the actual prime sequence up to `X_max`,
+* the interval family, reference library, sieve bands, and combination function are fully frozen,
+* the resulting scalar `Tension_TP(m)` is a reproducible gauge of “how twin-prime-like” the encoded data is, under a fixed analytic and sieve template.
 
-In other words, in a high tension world, as we push `N` to larger and larger scales, the aggregated mismatches do not settle into any stable low band.
+This formulation does not claim that:
 
-### 4.4 Interpretive summary
+* low tension proves TPC, or
+* high tension disproves TPC.
 
-In this view, Q007 is not encoded as a proof or disproof, but as a **choice between two families of effective layer worlds**:
-
-* low tension worlds where empirical twin prime counts track frozen heuristics reasonably well at all scales tested, and
-* high tension worlds where any faithful encoding exhibits a persistent and irreducible mismatch.
-
-The role of the encoding is to make this distinction measurable and falsifiable for specific choices of interval families and reference libraries, not to settle the conjecture itself.
+It only states what **patterns of mismatch** we should see in hypothetical worlds where TPC is true or false, given the Q007 encoding.
 
 ---
 
 ## 5. Counterfactual tension worlds
 
-We now describe two counterfactual worlds, entirely in terms of observables and tension patterns.
+We describe two counterfactual worlds at the effective layer:
 
-* World T: twin primes are infinite and behave in a way compatible with the chosen reference library.
-* World F: twin primes are finite or deviate so strongly that no admissible encoding can achieve low tension.
+* World T: twin primes are infinite and follow patterns compatible with the frozen reference and sieve band.
+* World F: twin primes are finite, or so sparse that they cannot be reconciled with the frozen reference and sieve band in any faithful encoding.
 
-These worlds are tools for structuring reasoning and experiments; they are not physical universes.
+The description is entirely in terms of observable counts and tension patterns.
 
 ### 5.1 World T (twin primes infinite, low tension)
 
-In World T, for a fixed encoding and for arbitrarily large cutoffs `N`, there exist states `m_T(N) in M_reg_TP(N)` with the following properties.
+In World T:
 
-1. Abundant twin primes at all tested scales
+1. For each admissible `X_max`, there exists a state `m_T(X_max) in M_reg_TP` with:
 
-   * For each `k in K_finite(N)`, `pi_2(m_T(N); I_k)` is of the same order of magnitude as `pi2_ref(k)`.
-   * The relative deviations `RelErr_pair(m_T(N); k)` remain bounded by a modest constant across all scales.
+   * `K_finite(m_T) = K_all(X_max)`,
+   * nonzero `pi_2(m_T; k)` for all sufficiently large `k` in `K_all(X_max)`.
 
-2. Controlled sieve band mismatch
+2. For each such `m_T(X_max)`:
 
-   * For most scales in `K_finite(N)`, `pi_2(m_T(N); I_k)` lies inside the sieve band `[pi2_lower(k), pi2_upper(k)]`.
-   * The aggregated `DeltaS_sieve_aggregate(m_T(N); N)` remains small and stable when `N` grows.
+   * per-interval mismatches `DeltaS_pair(m_T; k)` fluctuate within a bounded range compatible with the fixed heuristic `pi_2_ref(k)`,
+   * sieve violations `v_sieve(m_T; k)` are zero or small for most `k`.
 
-3. Low global tension
+3. The aggregate mismatch and tension satisfy:
 
-   * There exists a finite (\epsilon_TP) such that for all sufficiently large `N`:
+   ```txt
+   DeltaS_pair_aggregate(m_T(X_max)) stays within a moderate band
+   DeltaS_sieve(m_T(X_max)) stays within a moderate band
+   Tension_TP(m_T(X_max)) <= epsilon_TP
+   ```
 
-     ```txt
-     Tension_TP(m_T(N); N) <= epsilon_TP
-     ```
-   * Small improvements in input data quality or in the length of intervals do not cause `Tension_TP` to explode, as long as the encoding is kept fixed.
+   where `epsilon_TP` does not explode with `X_max`.
 
-### 5.2 World F (twin primes finite or strongly suppressed, high tension)
+Twin primes may show irregularities and local clustering, but not persistent, scale-wide suppression relative to the frozen model.
 
-In World F, twin primes are eventually absent, or their frequency decays more rapidly than any reference function allowed in `RefLib_TP`.
+### 5.2 World F (twin primes finite, high tension)
 
-There exist constants `N_0` and `delta_TP > 0` such that for any cutoff `N >= N_0` and for any regular world state `m_F(N)` faithfully encoding prime data up to `N`:
+In World F:
 
-1. Sparse or absent twin primes at large scales
+1. There exists some scale `k_0` such that, above that scale, twin primes are absent or extremely rare:
 
-   * For many `k in K_finite(N)` with large `X_k`, `pi_2(m_F(N); I_k)` is much smaller than `pi2_ref(k)`, possibly zero.
-   * The per scale mismatches `RelErr_pair(m_F(N); k)` stay uniformly bounded away from zero for those scales.
+   * for all sufficiently large `k >= k_0`, `pi_2(m_F; k)` is zero or much smaller than `pi_2_ref(k)`.
 
-2. Persistent sieve band mismatch
+2. For large enough `X_max`, any faithful state `m_F(X_max)` must satisfy:
 
-   * For those large scales, `pi_2(m_F(N); I_k)` systematically lies near or beyond the sieve bounds, producing per scale `RelErr_sieve(m_F(N); k)` with a positive lower bound.
+   * `DeltaS_pair(m_F; k)` large for many `k` in `K_all(X_max)`,
+   * `v_sieve(m_F; k)` nonzero for many `k` as `L_k` is violated.
 
-3. High global tension
+3. Consequently,
 
-   * For all sufficiently large `N` we have:
+   ```txt
+   DeltaS_pair_aggregate(m_F(X_max)) >= c_pair > 0
+   DeltaS_sieve(m_F(X_max)) >= c_sieve > 0
+   Tension_TP(m_F(X_max)) >= delta_TP
+   ```
 
-     ```txt
-     Tension_TP(m_F(N); N) >= delta_TP
-     ```
-   * This lower bound cannot be removed by adjusting interval weights or switching to another reference entry, as long as the encoding stays within `encoding_class_TP`.
+   for some positive constants `c_pair`, `c_sieve`, `delta_TP` that cannot be driven arbitrarily small by re-encoding inside the same class.
 
 ### 5.3 Interpretive note
 
-These counterfactual worlds do not construct sequences of primes or expose any TU internal fields. They describe only what patterns of:
+These counterfactuals do **not** claim to construct primes, and they do not exist at the level of internal TU fields. They are:
 
-* per scale relative mismatches, and
-* aggregated tension scores
+* templates for how an **observable counting_tension functional** behaves,
+* given that we accept the frozen Q007 encoding and suppose that TPC is either true or false.
 
-would be seen under different assumptions about twin prime infinitude.
-
-Their role is to clarify what “low tension world” and “high tension world” mean in Q007, and to guide the design of experiments that stress test specific encodings.
+They guarantee that if different teams implement Q007 correctly, using the same `I_k`, `RefLib_TP`, and sieve bands, their `Tension_TP` profiles are comparable.
 
 ---
 
-## 6. Falsifiability and discriminating experiments
+## 6. Falsifiability and discriminating experiments (run 2)
 
-This block specifies experiments and protocols at the effective layer that can:
+This block specifies experiments that:
 
-* test the coherence of the Q007 encoding,
-* detect unfair or unstable uses of the reference library,
-* assess whether the encoding behaves as intended in low tension and high tension scenarios.
+* test the coherence and robustness of the Q007 encoding,
+* expose unfair or unstable choices (which now should only come from outside this file),
+* do **not** prove or disprove the twin prime conjecture.
 
-They can falsify or refine encodings. They cannot prove or disprove the canonical twin prime statement.
+### Experiment 1: Numerical twin prime tension profiles with fixed encoding
 
-### Experiment 1: Numerical twin prime tension profiles
+**Goal.**
+Evaluate `Tension_TP` on actual prime data up to `X_max` for the frozen encoding and examine stability under extension of `X_max`.
 
-**Goal:**
-Test whether the chosen `Tension_TP` functional and encoding choices produce stable and reasonable tension profiles on actual prime and twin prime data.
+**Setup.**
 
-**Setup:**
+* Input: published tables or computed lists of primes and twin prime pairs up to some `X_max`.
+* Interval family: always `I_k = [2^k, 2^(k+1)]` with `K_finite = K_all(X_max)`.
+* Reference: `RefLib_TP = {HL_fixed}`, as defined in Section 3.4.
+* Weights: fixed `(alpha_pair, beta_sieve) = (1/2, 1/2)` and uniform averaging over `K_finite`.
 
-* Input data: published tables of primes and twin prime pairs up to a large bound `N_data`.
-* Fix encoding parameters:
+**Protocol.**
 
-  * interval family `I_k` with specific `X_0`, `B`, `L_rel`,
-  * a single `ref_id` in `RefLib_TP`,
-  * weights `alpha_pair`, `beta_sieve`,
-  * weight rule for `w_k`, for example:
+1. For a sequence of increasing bounds `X_max^(1) < X_max^(2) < ...`, construct states `m_data^(r)` in `M_reg_TP` by:
 
-    ```txt
-    w_k = 1 / |K_finite(N)|   for all k in K_finite(N)
-    ```
-* For each chosen cutoff `N <= N_data`, define `K_finite(N)` as the full prefix of scales with `X_k + L_k <= N`.
+   * encoding `K_finite(m_data^(r)) = K_all(X_max^(r))`,
+   * computing `pi_1(m_data^(r); k)` and `pi_2(m_data^(r); k)` for all `k in K_finite(m_data^(r))`.
 
-**Protocol:**
+2. For each `m_data^(r)`:
 
-1. For each cutoff `N` in a monotone sequence `N_1 < N_2 < ... < N_R <= N_data`:
+   * compute `DeltaS_pair(m_data^(r); k)` and `DeltaS_pair_aggregate(m_data^(r))`,
+   * compute `v_sieve(m_data^(r); k)` and `DeltaS_sieve(m_data^(r))`,
+   * compute `Tension_TP(m_data^(r))`.
 
-   * Construct a state `m_data(N)` encoding `pi_1(m_data(N); I_k)` and `pi_2(m_data(N); I_k)` for all `k in K_finite(N)`, using the same extraction rules.
-   * Verify that `m_data(N)` is in `M_reg_TP(N)`.
-2. For each `m_data(N)` compute:
+3. Record the trajectory:
 
-   * `RelErr_pair(m_data(N); k)` and `RelErr_sieve(m_data(N); k)` for all `k in K_finite(N)`,
-   * `DeltaS_pair_aggregate(m_data(N); N)`,
-   * `DeltaS_sieve_aggregate(m_data(N); N)`,
-   * `Tension_TP(m_data(N); N)`.
-3. Record the sequence of `Tension_TP(m_data(N); N)` values as `N` increases.
+   ```txt
+   Tension_TP(m_data^(1)), Tension_TP(m_data^(2)), ...
+   ```
 
-**Metrics:**
+   together with the decomposed components.
 
-* The trend of `Tension_TP(m_data(N); N)` as a function of `N`.
-* The distribution of per scale mismatches across `K_finite(N)` at each `N`.
-* Sensitivity of tension profiles to small, pre justified variations in the reference functions within the same `ref_id`.
+**Metrics.**
 
-**Falsification conditions:**
+* Behavior of `Tension_TP(m_data^(r))` as `X_max^(r)` increases.
+* Relative contributions of `DeltaS_pair_aggregate` and `DeltaS_sieve`.
+* Sensitivity to small implementation differences (for example different but equivalent ways of computing `C_2`), which should be minimal.
 
-* If under all reasonable choices of `RefLib_TP` entries (consistent with standard heuristics) the tension profiles are wildly unstable as `N` increases, the encoding is considered unstable and rejected.
-* If tiny changes in reference functions, still consistent with the same heuristic class, cause `Tension_TP` to oscillate between very low and very high values for the same data, the encoding is considered over tunable.
-* If keeping tension low requires **retuning** `ref_id`, weights, or `w_k` after inspecting `pi_2(m; I_k)`, this violates the fairness constraints; such behavior is flagged as invalid use of the encoding.
+**Falsification conditions (encoding-level).**
 
-**Boundary note:**
-Rejecting a specific encoding or parameter set does not prove or disprove the twin prime conjecture. It only shows that a particular effective layer representation is not robust.
+* If implementations that follow the spec produce wildly different `Tension_TP` values on the **same** prime data, the encoding is considered underspecified and must be tightened.
+* If small, justified numerical approximations to `C_2` or to the HL sum cause tension to swing from very low to very high, the encoding is considered too fragile and must be revised at the charter level.
+* If keeping RefLib, interval family and weights fixed, the tension profile shows unexplainable discontinuities tied to technical encoding choices rather than to actual prime data, that is taken as evidence against the robustness of the current Q007 encoding.
+
+**Boundary note.**
+Even if the tension trajectory looks “low and stable” or “high and unstable”, this experiment **does not** settle TPC. It only evaluates the behavior of the run 2 encoding.
 
 ---
 
-### Experiment 2: Synthetic twin prime and non twin prime worlds
+### Experiment 2: Synthetic twin-prime-like and twin-prime-suppressed worlds
 
-**Goal:**
-Check that the Q007 encoding and `Tension_TP` functional can distinguish between:
+**Goal.**
+Verify that `Tension_TP` reliably distinguishes between synthetic sequences that imitate HL-like twin prime behavior and sequences where twin prime pairs are systematically suppressed beyond some scale.
 
-* synthetic sequences that mimic twin prime statistics, and
-* sequences where twin pairs are systematically suppressed or distorted.
+**Setup.**
 
-**Setup:**
+* Fix the same interval family, reference model, sieve bands, and weights as in Experiment 1.
+* Construct two families of synthetic sequences of integers:
 
-* Define a family `T_syn` of synthetic sequences of integers designed so that:
+  * Family `T_model`: sequences with abundant gap-2 pairs, tuned to mimic HL densities in each `I_k`.
+  * Family `F_model`: sequences where gap-2 pairs are removed or heavily suppressed for all `k` beyond some fixed `k_0`.
 
-  * positions marked as “prime like” have gap statistics similar to actual primes,
-  * positions marked as “twin like” approximately follow `pi2_ref(k)` at each scale.
-* Define a family `F_syn` of synthetic sequences where:
+**Protocol.**
 
-  * prime like positions still follow a reasonable prime model,
-  * gap 2 pairs are rare or deleted beyond some scale.
-* Use the same interval family `I_k`, encoding parameters, and `RefLib_TP` entry `ref_id` as in Experiment 1.
+1. For each synthetic sequence `S` in `T_model` and bound `X_max`, construct a state `m_T_model(S, X_max)`:
 
-**Protocol:**
+   * define `K_finite` via `X_max`,
+   * compute `pi_1` and `pi_2` counts from the synthetic sequence.
 
-1. For each sequence `s` in `T_syn` and cutoff `N`, build a state `m_T_model(N)` encoding prime like and twin like counts in each `I_k` for `k in K_finite(N)`.
-2. For each sequence `s` in `F_syn`, build analogous states `m_F_model(N)`.
-3. For each state, compute:
+2. For each synthetic sequence `S` in `F_model` and the same `X_max`, construct `m_F_model(S, X_max)` similarly.
 
-   * `DeltaS_pair_aggregate(m; N)`,
-   * `DeltaS_sieve_aggregate(m; N)`,
-   * `Tension_TP(m; N)`.
-4. Compare the empirical distributions of `Tension_TP` for `T_syn` and `F_syn` across multiple choices of `N`.
+3. For all such states, compute:
 
-**Metrics:**
+   * `DeltaS_pair_aggregate`,
+   * `DeltaS_sieve`,
+   * `Tension_TP`.
 
-* Mean and variance of `Tension_TP` over `T_syn` and over `F_syn`.
-* The fraction of paired samples `(m_T_model, m_F_model)` where `Tension_TP(m_T_model; N) < Tension_TP(m_F_model; N)`.
+4. Compare the empirical distributions of `Tension_TP` for family `T_model` and `F_model`.
 
-**Falsification conditions:**
+**Metrics.**
 
-* If across a broad range of synthetic constructions, the encoding fails to give systematically lower tension to `T_syn` than to `F_syn`, it is considered ineffective for its intended purpose.
-* If some variants of `F_syn` consistently achieve lower tension than `T_syn` despite clearly suppressing twin like behavior, the encoding is misaligned with the notion of twin prime abundance.
+* Mean and variance of `Tension_TP` for `T_model` vs `F_model`.
 
-**Boundary note:**
-Success or failure on synthetic sequences tests only the encoding. It does not provide evidence directly for or against the true world’s twin prime behavior.
+* Separation statistics, such as:
+
+  ```txt
+  P( Tension_TP(T_model) < Tension_TP(F_model) )
+  ```
+
+* Robustness under different synthetic constructions, as long as they respect the same frozen encoding.
+
+**Falsification conditions (encoding-level).**
+
+* If `Tension_TP` does not tend to be systematically lower for `T_model` than for `F_model` across a range of synthetic designs, the current encoding fails as a twin-prime tension discriminator.
+* If some `F_model` variants consistently get lower tension than plausible HL-like `T_model` variants, in ways that contradict the intended semantics, the run 2 encoding must be reconsidered.
+
+**Boundary note.**
+Success or failure on synthetic families constrains the **usefulness** of the encoding. It does not provide evidence for or against TPC itself.
 
 ---
 
-## 7. AI and WFGY engineering spec
+## 7. AI and WFGY engineering spec (run 2)
 
-This block describes how Q007 can be used as an engineering module for AI systems within WFGY, at the effective layer and within the discrete_field semantics.
+This block describes how Q007 can be used as an engineering module for AI systems within WFGY, strictly at the effective layer.
 
 ### 7.1 Training signals
 
-The following scalar signals can be derived from Q007 observables and used in training or evaluation.
+We define several training signals derived from Q007 observables.
 
-1. `signal_twin_pair_consistency`
+1. `signal_twin_pair_mismatch`
 
-   * Definition: a normalized version of `DeltaS_pair_aggregate(m; N)` for the current context.
-   * Use: penalize internal states whose implied twin pair statistics differ strongly from the chosen reference pattern when reasoning under standard heuristics.
+   * Definition: a normalized version of `DeltaS_pair_aggregate(m)` for the current context.
+   * Use: discourages internal states that imply twin prime statistics wildly inconsistent with the frozen HL reference when the context assumes standard twin prime heuristics.
 
-2. `signal_sieve_band_respect`
+2. `signal_sieve_band_violation`
 
-   * Definition: a normalized version of `DeltaS_sieve_aggregate(m; N)`.
-   * Use: encourage models to keep inferred twin pair counts within established sieve bands when explicitly assuming compatibility with those bands.
+   * Definition: a normalized version of `DeltaS_sieve(m)`.
+   * Use: penalizes states where implied twin prime counts systematically lie outside the fixed sieve band.
 
-3. `signal_counterfactual_separation_TP`
+3. `signal_twinprime_tension_total`
 
-   * Definition: a pair of scores measuring how distinct the model’s internal states are under prompts tagged as “World T” versus “World F” for the same base context.
-   * Use: enforce clear separation between reasoning that temporarily assumes abundant twin primes and reasoning that explores scenarios with their suppression.
+   * Definition: scaled `Tension_TP(m)` for the current state, mapped into a fixed range (for example via a bounded monotone transform).
+   * Use: provides an overall scalar that downstream modules can attempt to minimize in contexts where “twin-prime-consistent behavior” is desired, or to keep track of when exploring counterfactual worlds.
 
-4. `signal_gap_structure_awareness`
+4. `signal_counterfactual_split_T_vs_F`
 
-   * Definition: a summary of how much information about small gaps (including gap 2) is preserved in internal representations, derived from features related to `pi_1`, `pi_2`, and `PrimePair_ScaleProfile`.
-   * Use: reward models that explicitly track small gap structures in number theoretic contexts.
+   * Definition: a measure of how distinctly the model separates internal states when prompted under “World T” vs “World F” assumptions, based on differences in `Tension_TP` and its components.
+   * Use: encourages the model to maintain clear internal bookkeeping over which world assumption is active.
 
 ### 7.2 Architectural patterns
 
-We describe module patterns that reuse Q007 structures without exposing any TU internal generative rules.
+We outline module patterns that reuse Q007 structures.
 
 1. `PrimeGapField_Observer`
 
-   * Role: map internal embeddings for number theory contexts into a low dimensional summary of prime and twin prime gap statistics across several scales.
-   * Input: a context embedding that encodes a range of integers and number theoretic claims.
-   * Output: a structured vector containing:
+   * Role: map internal embeddings from number-theoretic contexts into a structured summary of prime and twin prime statistics over the frozen intervals.
+   * Inputs: an internal embedding representing “numbers up to X_max”.
+   * Outputs: a vector of approximate counts or densities for `pi_1` and `pi_2` over each `I_k`.
 
-     * approximate normalized prime densities at several `I_k`,
-     * approximate normalized twin pair densities,
-     * coarse gap histograms.
+2. `TwinPrimeTensionHead`
 
-2. `TwinPairTensionHead`
-
-   * Role: estimate `Tension_TP(m; N)` and its components from the output of `PrimeGapField_Observer`.
-   * Input: the summary vector and a scale cutoff proxy.
-   * Output:
-
-     * a scalar estimate of total tension,
-     * optional decomposed scores approximating `DeltaS_pair_aggregate` and `DeltaS_sieve_aggregate`.
+   * Role: approximate `DeltaS_pair_aggregate`, `DeltaS_sieve`, and `Tension_TP` from the outputs of `PrimeGapField_Observer`.
+   * Inputs: the summary vector per context.
+   * Outputs: scalars approximating the Q007-defined quantities, plus optional decomposed components.
 
 3. `TU_PrimePair_Filter`
 
-   * Role: check candidate model outputs about prime gaps and twin primes against tension signals.
-   * Input: proposed intermediate conclusions or final statements about prime gaps, plus the tension summary.
-   * Output: soft masks or confidence adjustments based on consistency with low tension regimes.
+   * Role: check candidate statements about twin primes and prime gaps against the tension signals.
+   * Inputs: candidate explanations or claims (for example “twin primes behave HL-like at these scales”).
+   * Outputs: confidence scores or masks based on `signal_twin_pair_mismatch` and `signal_sieve_band_violation`.
 
 ### 7.3 Evaluation harness
 
-To evaluate the impact of Q007 based modules in AI systems, we propose the following harness.
+To evaluate the effect of Q007-based modules on an AI model:
 
-1. Task selection
+1. **Task selection**
 
-   * Mathematical question answering about:
+   * Questions and explanations involving:
 
-     * definitions and status of the twin prime conjecture,
-     * known results on bounded prime gaps,
-     * sieve methods relevant to prime pairs.
-   * Explanatory tasks where the model must articulate:
+     * definitions of TPC and twin primes,
+     * known partial results and bounded gaps,
+     * informal heuristic arguments based on HL and sieve methods.
 
-     * what is known,
-     * what is conjectured,
-     * how data and heuristics interact.
+2. **Conditions**
 
-2. Conditions
+   * Baseline: model without Q007 modules or signals.
+   * TU-enhanced: same backbone with `PrimeGapField_Observer`, `TwinPrimeTensionHead`, and the training signals from 7.1.
 
-   * Baseline: model without Q007 modules or tension signals.
-   * TU-enhanced: same model family with `PrimeGapField_Observer`, `TwinPairTensionHead`, and `TU_PrimePair_Filter` active, trained with signals from 7.1.
+3. **Metrics**
 
-3. Metrics
+   * Correctness and faithfulness in separating:
 
-   * Accuracy on factual questions.
-   * Faithfulness in distinguishing theorems from conjectures.
-   * Internal consistency between answers under explicit “assume twin primes behave as heuristics predict” prompts and “assume twin primes are much rarer” prompts.
-   * Qualitative structure of explanations:
+     * proven results,
+     * conjectures,
+     * heuristic expectations.
 
-     * do they reference counts across scales,
-     * do they articulate tension between data, heuristics, and open status?
+   * Consistency across prompts that explicitly switch between “assume TPC is true” and “assume TPC is false”.
 
-### 7.4 60 second reproduction protocol
+   * Stability of explanations when asked to reference scale-by-scale behavior (`I_k` intervals) instead of vague informal talk.
 
-A minimal protocol external users can run to see the effect of Q007 based guidance.
+### 7.4 60-second reproduction protocol
+
+A minimal protocol for external users:
 
 * Baseline prompt:
 
-  > “Explain the twin prime conjecture, what is known about prime gaps, and how sieve methods relate to this problem. Make clear which statements are proven and which are conjectural.”
+  > Explain the twin prime conjecture, summarize what is known about bounded gaps between primes, and how sieve methods inform our expectations about twin primes. Clearly distinguish between theorems and conjectures.
 
-* TU encoded prompt:
+* TU prompt:
 
-  > “Using the idea of a tension between observed twin prime counts and a fixed heuristic model across scales, explain the twin prime conjecture. Describe what would be observed in a low tension world where twin primes behave as expected, and in a high tension world where twin primes become too rare.”
+  > Using a fixed family of intervals `[2^k, 2^(k+1)]` and a Hardy–Littlewood style reference for twin primes, explain the twin prime conjecture as a tension between observed twin prime counts and this frozen model. Describe what a low-tension world and a high-tension world would look like.
 
-Users can compare:
+The user compares:
 
-* how clearly the model separates data, heuristics, and open status,
-* whether the TU encoded version introduces explicit references to scale dependent counts and mismatch patterns.
-
-All such tests operate at the effective layer and do not reveal any TU internal generative rules.
+* structural clarity,
+* explicit mention of scale-wise behavior,
+* explicit distinction between observed data, heuristic expectations, and open status.
 
 ---
 
 ## 8. Cross problem transfer template
 
-This block lists reusable components produced by Q007 and their transfer to other problems.
+### 8.1 Reusable components produced by Q007 run 2
 
-### 8.1 Reusable components produced by this problem
-
-1. ComponentName: `TwinPrimeGap_TensionFunctional`
+1. `TwinPrimeGap_TensionFunctional`
 
    * Type: functional.
-   * Minimal interface:
+
+   * Interface:
 
      * Inputs:
 
-       * `prime_gap_summary` for a set of intervals,
-       * `twin_pair_summary` for the same intervals,
-       * `reference_library_id` pointing into `RefLib_TP`,
-       * `weights` for scale aggregation.
-     * Output:
+       * `prime_gap_summary` and `twin_pair_summary` over the fixed intervals `I_k`,
+       * implicit reference to the frozen HL model and sieve bands.
+     * Output: `twin_gap_tension_value = Tension_TP(m)` in `[0, infinity)`.
 
-       * `twin_gap_tension_value`, a nonnegative dimensionless scalar.
    * Preconditions:
 
-     * summaries must arise from a coherent discrete_field state,
-     * the reference library entry and weights must be fixed before applying the functional.
+     * summaries correspond to a coherent state in `M_reg_TP`,
+     * intervals are exactly `I_k` as defined in Section 3.1.
 
-2. ComponentName: `PrimePair_ScaleProfile`
+2. `PrimePair_ScaleProfile`
 
    * Type: field.
-   * Minimal interface:
+   * Interface:
+
+     * Inputs: `k` with `k >= 10` and `X_max` such that `2^(k+1) <= X_max`.
+     * Output: a descriptor of twin prime density and gap statistics within `I_k` (for example normalized counts and simple histograms).
+
+3. `TwinPrime_CounterfactualWorld_Template`
+
+   * Type: experiment pattern.
+   * Interface:
 
      * Inputs:
 
-       * `scale_index_k in K`,
-       * flags selecting subsets of scales (for example contiguous prefixes).
+       * data source (`actual primes` or `synthetic sequence`),
+       * bound `X_max`.
      * Output:
 
-       * `pair_density_profile_k`, a descriptor summarizing prime and twin pair densities and basic gap statistics at scale `k`.
-   * Preconditions:
-
-     * the mapping from `k` to `I_k` must use the fixed rule described in 3.2.
-
-3. ComponentName: `TwinPrime_CounterfactualWorld_Template`
-
-   * Type: experiment_pattern.
-   * Minimal interface:
-
-     * Inputs:
-
-       * `encoding_choice` in `encoding_class_TP`,
-       * `data_source` describing either actual prime data or synthetic sequences.
-     * Output:
-
-       * a pair of experiment descriptions corresponding to World T and World F, with explicit uses of `Tension_TP`.
-   * Preconditions:
-
-     * data sources must support consistent estimation of `pi_2` on the fixed interval family.
+       * a pair of experiment definitions corresponding to World T and World F scenarios using `Tension_TP`.
 
 ### 8.2 Direct reuse targets
 
-1. Q006 · Goldbach conjecture
+1. **Q006 · Goldbach conjecture**
 
-   * Reused component: `PrimePair_ScaleProfile`.
-   * Why it transfers: Goldbach type questions depend on how primes can form pairs summing to even integers. Gap 2 is a specific case; more general small gaps can be analyzed through a similar scale profile.
-   * What changes: the gap of interest is no longer fixed at 2, and the relevant counting functions change accordingly.
+   * Reuse: `PrimePair_ScaleProfile`.
+   * Reason: Goldbach statements depend on prime pairs around even integers; the same scale profiles can be adapted to study how often near-by prime pairs appear for such sums.
 
-2. Q018 · pair correlation of zeros of zeta functions
+2. **Q018 · pair correlation of zeros of zeta functions**
 
-   * Reused component: `TwinPrimeGap_TensionFunctional`.
-   * Why it transfers: heuristic links between zero pair statistics and prime gaps suggest that tension based comparisons for twin primes can be mirrored by tension comparisons for zero pairs.
-   * What changes: input summaries describe zero correlations instead of prime gaps, while the aggregation and normalization structure remains similar.
+   * Reuse: `TwinPrimeGap_TensionFunctional`.
+   * Reason: the analogy between zero pair statistics and prime pair statistics allows similar tension functionals to be used for zeros and primes.
 
-3. Q059 · thermodynamic cost of information processing
+3. **Q059 · thermodynamic cost of information processing**
 
-   * Reused component: `PrimePair_ScaleProfile`.
-   * Why it transfers: twin prime patterns provide concrete examples of discrete signals that are structured yet nontrivial, useful in studying compressibility and energy cost.
-   * What changes: the interpretation of densities and gaps shifts from arithmetic structure to resource usage.
+   * Reuse: `PrimePair_ScaleProfile`.
+   * Reason: structured but irregular sequences like twin primes are good examples of compressible yet non-trivial signals, useful for encoding cost studies.
 
 ---
 
 ## 9. TU roadmap and verification levels
 
-This block explains how Q007 is positioned along the TU verification ladder and what the next measurable steps are.
-
 ### 9.1 Current levels
 
 * **E_level: E1**
 
-  * The effective layer encoding of twin prime counting_tension has been specified:
+  * The run 2 effective encoding for Q007 specifies:
 
-    * state space `M_TP` and regular domain `M_reg_TP(N)`,
-    * fixed interval family `I_k`,
-    * frozen reference library `RefLib_TP`,
-    * observables `pi_1`, `pi_2`,
-    * dimensionless mismatch quantities `RelErr_pair`, `RelErr_sieve`,
-    * aggregated quantities `DeltaS_pair_aggregate`, `DeltaS_sieve_aggregate`,
-    * tension functional `Tension_TP(m; N)`,
-    * singular set `S_sing_TP(N)`,
-    * fairness constrained encoding class `encoding_class_TP`.
+    * a frozen interval family `I_k`,
+    * a frozen reference library `RefLib_TP = {HL_fixed}`,
+    * explicit sieve-based bands and a concrete definition of `DeltaS_sieve`,
+    * fixed weights `(alpha_pair, beta_sieve)` and a fixed linear `Tension_TP`,
+    * a singular set and regular domain.
 
 * **N_level: N1**
 
-  * The narrative explains Q007 as a counting_tension problem:
+  * The narrative:
 
-    * between empirical twin pair counts and frozen heuristic expectations,
-    * with clear low tension and high tension counterfactual worlds.
-  * Experiments and AI modules are described strictly at the effective layer.
+    * explains TPC as a counting_tension problem under fixed analytic/sieve templates,
+    * defines World T and World F,
+    * clarifies that rejecting encodings is not the same as proving or disproving TPC.
 
 ### 9.2 Next measurable step toward E2
 
-To move Q007 from E1 to E2, at least one of the following artifacts should be implemented and published:
+To reach E2 for Q007, the following should be implemented and published:
 
-1. A **minimal reproducible pipeline** that:
+1. A reference implementation that:
 
-   * takes as input a table of prime and twin prime counts for each interval `I_k` up to a specified cutoff `N`,
-   * uses a documented encoding choice (interval parameters, `ref_id`, `alpha_pair`, `beta_sieve`, `w_k`),
-   * computes for each `N`:
+   * takes as input prime and twin prime tables up to `X_max`,
+   * constructs `m_data(X_max)`,
+   * computes `DeltaS_pair_aggregate(m_data)`, `DeltaS_sieve(m_data)`, and `Tension_TP(m_data)`,
+   * outputs tension profiles for a sequence of `X_max`.
 
-     * `DeltaS_pair_aggregate(m_data(N); N)`,
-     * `DeltaS_sieve_aggregate(m_data(N); N)`,
-     * `Tension_TP(m_data(N); N)`,
-   * outputs a tension profile as a function of `N`.
+2. A small benchmark report that:
 
-2. A public **synthetic benchmark suite** based on `T_syn` and `F_syn` families, with:
+   * documents the implementation choices,
+   * publishes the tension trajectory and component decompositions,
+   * allows other teams to re-run the same pipeline and compare results.
 
-   * fixed encoding parameters and data generation rules,
-   * reference implementation of tension computations,
-   * baseline results for several encoding variants.
+These steps remain entirely at the effective layer and must respect the frozen encoding of this file and the shared TU charters.
 
-Both steps operate entirely on observable summaries and respect all fairness constraints. They do not expose any TU internal generative rules.
+### 9.3 Long-term role in TU
 
-### 9.3 Long term role in the TU program
+In the longer term Q007 is intended to be:
 
-In the longer term, Q007 is expected to serve as:
+* the canonical example of a prime-pair counting_tension problem,
+* a calibration point for how TU handles simple statements with deep unresolved structure,
+* a reusable test field for AI-based reasoning modules that need to respect:
 
-* a standard example of counting_tension on discrete_field problems,
-* a calibration point for how TU encodings treat very simple statements with deep unresolved structure,
-* a bridge between:
-
-  * analytic number theory,
-  * models of complex discrete patterns,
-  * AI systems that must keep track of the distinction between proven results and long standing conjectures while handling scale dependent statistical data.
-
-As more problems reach higher E and N levels, shared components such as `TwinPrimeGap_TensionFunctional` and `PrimePair_ScaleProfile` will provide anchors for cross problem integration.
+  * the difference between proofs and heuristics,
+  * the constraints of fixed encodings and non-mutation policies.
 
 ---
 
-## 10. Elementary but precise explanation
+## 10. Elementary but precise explanation (aligned with run 2)
 
-This block offers a non technical explanation that remains faithful to the effective layer description.
+The twin prime conjecture asks:
 
-The twin prime conjecture asks a very simple question:
+> Are there infinitely many pairs of primes of the form `(p, p + 2)`?
 
-> Do prime numbers keep appearing in pairs that are exactly 2 apart, like (3, 5), (5, 7), (11, 13), forever?
+We know there are infinitely many primes, and we can find many twin pairs like `(3, 5)`, `(5, 7)`, `(11, 13)`, `(17, 19)`. What nobody has proved is whether such pairs keep appearing forever or eventually “run out”.
 
-We can find many such pairs, but nobody has proved that they never run out.
+In the Tension Universe view, instead of trying to prove the conjecture directly, we:
 
-In the Tension Universe perspective, we do not try to prove the conjecture directly. Instead we:
+1. Fix once and for all a **way to look at the data**:
 
-1. Look at prime numbers in many non overlapping ranges, like blocks of the form `[X, X + L]`.
-2. In each block we count:
+   * intervals of the form `[2^k, 2^(k+1)]` for `k >= 10`,
+   * for each interval, count how many primes there are and how many twin prime pairs there are.
 
-   * how many primes there are,
-   * how many twin pairs there are.
-3. We compare those counts with:
+2. Fix once and for all a **reference model**:
 
-   * a fixed “best guess” formula for how many twin pairs we expect,
-   * and a fixed band of values that standard sieve methods allow.
+   * a standard Hardy–Littlewood formula that predicts how many twin primes we “should” see in each interval,
+   * simple sieve-based bands saying roughly how far above or below that prediction we consider “acceptable”.
 
-From these comparisons, we build a single number called **twin prime tension**:
+3. Turn the comparison into a single number called `Tension_TP`:
 
-* It is small if the observed twin pair counts are close to the expected values and inside the sieve band across all tested ranges.
-* It is large if there are too few twin pairs compared to the expectations, or if the counts repeatedly push against or outside the allowed band.
+   * if actual twin prime counts track the reference model and stay inside the band, `Tension_TP` is small,
+   * if they systematically fall outside, `Tension_TP` is large.
 
-We then imagine two kinds of world:
+Then we ask:
 
-* In a **low tension world**, twin primes behave roughly as predicted at all scales we can probe. In such a world, even if we still cannot prove the conjecture, our tension measure stays in a stable low band as we look further and further out.
-* In a **high tension world**, twin primes eventually become so rare that no reasonable model from our fixed library can explain the data. In that world, the tension measure stays noticeably positive no matter how we refine our analysis.
+* In a world where twin primes really do go on forever with a roughly HL-like distribution, can we keep `Tension_TP` small and reasonably stable as we look at larger and larger powers of 2?
+* In a world where twin primes eventually disappear or become extremely rare, are we forced to see `Tension_TP` stay large no matter how we encode the data, as long as we respect the fixed rules?
 
-This framework does not tell us which world we live in. What it does is:
+This framework does **not** answer the conjecture. It does:
 
-* turn the twin prime conjecture into a precise question about low or high counting_tension,
-* force us to freeze interval choices, models, and parameters before looking at the detailed data,
-* provide an experimental and engineering interface that AI systems can use to reason about prime patterns without inventing new mathematics or claiming proofs.
+* give a precise, reproducible way to talk about how twin prime behavior matches or fails to match a fixed analytic and sieve picture,
+* make it possible to compare different experiments and implementations, because the interval family and reference are frozen,
+* provide a reusable “tension field” for AI systems and other TU problems that need a structured, non-trivial number-theoretic benchmark.
 
-Q007 is therefore the standard test case for “discrete field tension” in the Tension Universe program, showing how very hard open problems can be encoded in terms of observable patterns and fairness constrained comparisons, while leaving deep generative rules and proofs outside the scope of the effective layer.
+Q007 in run 2 is therefore the **counting_tension laboratory** for twin primes: simple to state, strictly encoded, and deliberately neutral about whether twin primes are infinite, while forcing all the “knobs” that could hide the answer to be fixed in advance.
 
 ---
 
-## Tension Universe effective layer footer
+## Tension Universe effective-layer footer
 
-This page is part of the **WFGY / Tension Universe** S problem collection.
+This page is part of the **WFGY / Tension Universe** S-problem collection.
 
 ### Scope of claims
 
-* The goal of this document is to specify an **effective layer encoding** of the named problem.
+* The goal of this document is to specify an **effective-layer encoding** of the named problem.
 * It does not claim to prove or disprove the canonical statement in Section 1.
 * It does not introduce any new theorem beyond what is already established in the cited literature.
 * It should not be cited as evidence that the corresponding open problem has been solved.
 
-### Effective layer boundary
+### Effective-layer boundary
 
-* All objects used here (state spaces, observables, invariants, tension scores, counterfactual worlds) live at the effective layer.
-* No step in this file gives a constructive mapping from raw data into internal TU fields.
-* No step exposes any first principle axiom system or any generative rule for the full Tension Universe.
+* All objects used here (state spaces `M`, observables, invariants, tension scores, counterfactual "worlds") live at the effective layer.
+* No step in this file gives a constructive mapping from raw experimental or simulation data into internal TU fields.
+* No step exposes any deep TU generative rule or any first-principle axiom system.
 
 ### Encoding and fairness
 
-* Admissible encoding classes, reference profiles, interval families and weight families used in this page are constrained by shared Tension Universe charters.
-* For every encoding discussed here:
+* Admissible encoding classes, reference profiles and weight families used in this page are constrained by shared Tension Universe charters:
 
-  * its definition, parameter ranges and reference families are fixed at the charter level or at the encoding declaration level before any problem specific tension evaluation;
-  * these choices may depend on general mathematical considerations and on public benchmark selections, but not on the unknown truth value of this specific problem;
+  * [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+  * [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+  * [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
+
+* For every encoding class referenced here:
+
+  * its definition, parameter ranges and reference families are fixed at the charter level before any problem-specific tuning;
+  * these choices may depend on general physical or mathematical considerations and on public benchmark selections, but not on the unknown truth value of this specific problem;
   * no encoding is allowed to hide the canonical answer as an uninterpreted field, label or parameter.
-* Within a given experiment:
-
-  * the interval family, the choice of reference library entry, and the aggregation weights must be fixed **before** looking at the resulting tension scores;
-  * any change to those choices after seeing the outcomes defines a new encoding or a new experiment and must be documented as such;
-  * “keeping tension low” by post hoc parameter tuning is explicitly disallowed and counted as leaving the admissible encoding class.
 
 ### Tension scale and thresholds
 
@@ -980,7 +969,7 @@ This page is part of the **WFGY / Tension Universe** S problem collection.
 ### Falsifiability and experiments
 
 * Experiments described in this document are **tests of TU encodings**, not tests of the underlying canonical problem itself.
-* The rule “falsifying a TU encoding is not the same as solving the canonical statement” applies globally, even where it is not restated.
+* The rule “falsifying a TU encoding is not the same as solving the canonical statement” is understood to apply globally, even where it is not restated.
 * When required observables cannot be reliably estimated in practice, the outcome of the corresponding experiment is recorded as “inconclusive”, not as confirmation.
 
 ### Interaction with established results
@@ -988,7 +977,14 @@ This page is part of the **WFGY / Tension Universe** S problem collection.
 * All encodings and counterfactual worlds described here are required to respect known theorems and hard constraints in the relevant field.
 * If a later analysis finds a concrete conflict with established results, the correct procedure is to update or retire the encoding under the TU charters, not to reinterpret those results.
 
+### Versioning and non-mutation policy
+
+* This file is a versioned specification within the WFGY / Tension Universe research program.
+* Definitions and symbols in this file are frozen for this version.
+* Revisions, if needed, must be published as a new versioned file or accompanied by an explicit changelog entry and must not silently alter prior definitions.
+* All changes to encoding classes, reference libraries, weight ranges or tolerance models that affect multiple problems should be made at the charter level, not by local edits to this file.
+
 ### Program note
 
-* This page is an experimental specification within the ongoing **WFGY / Tension Universe** research program.
+* This page is an experimental specification within the ongoing **WFGY / Tension Universe** program.
 * All structures and parameter choices are provisional and may be revised in future versions, subject to the constraints above.
