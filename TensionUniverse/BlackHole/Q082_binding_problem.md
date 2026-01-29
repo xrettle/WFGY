@@ -15,8 +15,28 @@ Status: Open
 Semantics: hybrid
 E_level: E1
 N_level: N2
-Last_updated: 2026-01-25
+Last_updated: 2026-01-29
 ```
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this file are made strictly at the effective layer of the Tension Universe (TU) framework.
+
+Within this document we only:
+
+* specify observables, fields, mismatch functionals and tension scores,
+* describe counterfactual “worlds” in terms of patterns over those observables,
+* outline admissible encoding classes and falsifiable experimental protocols.
+
+We explicitly do not:
+
+* introduce any new axiom system or core generative rules for TU,
+* give an explicit mapping from raw experimental data (for example spikes or imaging signals) to internal TU fields,
+* claim to solve the canonical binding problem or to settle any metaphysical questions about objects, perception or consciousness.
+
+Whenever this file talks about “World T_bind” or “World F_bind”, it should be read as describing counterfactual patterns of effective-layer observables and tension values under specified encodings, not as asserting which type of world the universe actually instantiates.
 
 ---
 
@@ -59,11 +79,13 @@ However, there is still no general and widely accepted theory that:
 
 The binding problem is therefore treated here as an S rank open problem in neuroscience and cognitive science.
 
+In this document we do not attempt to solve the canonical binding problem. We only specify an effective-layer encoding that treats it as a structured cognitive_tension problem between distributed neural features, object-level tokens and reports.
+
 ### 1.3 Role in the BlackHole project
 
 Within the BlackHole S problem collection, Q082 plays several roles.
 
-1. It is the central node for **cognitive_tension** between:
+1. It is the central node for cognitive_tension between:
 
    * distributed neural feature codes, and
    * unified object and scene representations.
@@ -154,7 +176,7 @@ All content in this block is at the effective layer. We only describe:
 * singular sets and domain restrictions,
 * admissible encoding classes and fairness constraints.
 
-We do not describe any hidden generative rules, nor any stepwise mapping from raw spikes or imaging data to Tension Universe fields.
+We do not describe any hidden generative rules, nor any stepwise mapping from raw spikes or imaging data to Tension Universe fields. We only assume that TU compatible encodings exist that make the observables below well defined for appropriate summaries of experimental or model data.
 
 ### 3.1 State space
 
@@ -304,7 +326,7 @@ B_bind_max(r_level) =
 
 where the supremum is taken over a predefined finite catalogue of experimental conditions that count as normal, not over arbitrary states. This avoids dependence on uncontrolled extreme states while still providing a clear band for acceptable binding tension.
 
-For practical use at the effective layer, `B_bind_max` is represented by a finite upper bound derived from empirical ranges or model ranges.
+For practical use at the effective layer, `B_bind_max` is represented by a finite upper bound derived from empirical ranges or model ranges, and any derived thresholds are chosen according to the TU Tension Scale Charter.
 
 ### 3.5 Singular set and domain restrictions
 
@@ -331,7 +353,7 @@ We restrict the analysis of Q082 at the effective layer to the regular set:
 M_reg_bind = M_bind \ S_sing_bind
 ```
 
-In experiments and model evaluations, any state that falls in `S_sing_bind` is treated as out of domain. It does not provide evidence about the truth or falsity of any general statement, only about the limits of the chosen encoding.
+In experiments and model evaluations, any state that falls in `S_sing_bind` is treated as out of domain. Such states are reported separately as limitations of the chosen encoding and do not count as evidence for or against any claim about low tension or high tension binding regimes.
 
 ### 3.6 Admissible encoding classes and fairness constraints
 
@@ -348,12 +370,16 @@ At the effective layer these names stand for fixed rules that determine:
 * which resolution indices `r_level` are available,
 * the allowed range for `w_struct` and `w_report`.
 
+Each encoding `e` in `E_bind` is intended to be fully specified, documented and open to external audit. Its libraries of feature descriptors, token formats, coherence measures, conflict criteria, resolution grids and weight ranges must be defined in advance of any test and kept stable within that test.
+
 Fairness and stability constraints:
 
 1. For any study or model evaluation, one encoding `e` in `E_bind` is selected using only task and data type information, not outcome information.
 2. Once `e` is selected, its internal rules and the pair `(w_struct, w_report)` are fixed for that study and are not changed after seeing results.
 3. All experiments that compare conditions or models within that study must use the same encoding and weight pair.
 4. When cross checking across encodings, each encoding is first fixed, and comparisons are made at the level of patterns and robustness, not by tuning encodings to match desired outcomes.
+5. Post hoc adjustment of encodings or weights to reduce tension on a particular test set is allowed only for exploratory analysis and must not be used to support any claim about low tension vs high tension binding regimes.
+6. Choice of thresholds, bands and tension scales derived from `DeltaS_bind` must follow the TU Tension Scale Charter, including pre specification from calibration data or independent datasets whenever claims about World T_bind or World F_bind are made.
 
 ---
 
@@ -372,10 +398,12 @@ Tension_bind(m; r_level) = DeltaS_bind(m; r_level)
 Using the definition in Block 3, we have:
 
 * `Tension_bind(m; r_level) >= 0`,
+
 * `Tension_bind(m; r_level)` is small when:
 
   * local feature structure and object tokens are in good agreement, and
   * internal binding structure and reports are consistent,
+
 * `Tension_bind(m; r_level)` is large when either structural binding or report alignment is poor.
 
 We can also define for a finite set of resolutions:
@@ -401,6 +429,8 @@ For most regular states m and all r_level :
 ```
 
 where `epsilon_bind(e, r_level)` is a small threshold that depends on the encoding and resolution but does not grow without bound as the quality of data and analysis increases.
+
+Thresholds `epsilon_bind(e, r_level)` are chosen or calibrated in advance, according to the TU Tension Scale Charter, and are not tuned on the same test data used to evaluate World T_bind vs World F_bind style claims.
 
 ### 4.3 High tension binding regimes
 
@@ -505,6 +535,8 @@ with `delta_bind(e, r_level)` strictly positive, and this cannot be removed with
 
 These counterfactual worlds do not decide which world we inhabit. They only spell out how patterns of effective layer observables and tension values would differ if binding was fundamentally robust or fundamentally fragile under the constraints captured by `E_bind` and the chosen observables.
 
+Any World T_bind vs World F_bind classification is always made at the level of encodings and effective-layer patterns, not at the level of ultimate metaphysical truth about perception or consciousness.
+
 ---
 
 ## 6. Falsifiability and discriminating experiments
@@ -517,6 +549,8 @@ This block specifies experiments and protocols that can:
 
 They do not solve the binding problem but can rule out ineffective or inconsistent encodings at the effective layer.
 
+In all experiments below, episodes that fall into `S_sing_bind` are treated as out-of-domain. They are excluded from tension estimation and reported separately as indications that the chosen encoding or experimental protocol does not cover those cases.
+
 ### Experiment 1: Behavioral binding stress test with illusory conjunctions
 
 *Goal:*
@@ -525,30 +559,42 @@ Test whether the chosen `DeltaS_bind` and `Tension_bind` track behavioral bindin
 *Setup:*
 
 * Use visual search or matching tasks that involve color, shape and location features.
+
 * Construct conditions with:
 
   * low load: few objects, simple features, ample time,
   * medium load: more objects or features,
   * high load: many objects, similar features and short display time.
+
 * Collect:
 
   * error rates for feature conjunctions,
   * reaction times,
   * basic report patterns.
 
+* Before data collection or analysis:
+
+  * choose one encoding `e` in `E_bind`,
+  * fix the resolution set `{r_1, ..., r_K}`,
+  * fix `w_struct`, `w_report` and low/high tension thresholds according to the TU Tension Scale Charter,
+  * record these choices in a pre registered analysis plan.
+
 *Protocol:*
 
-1. For each trial and condition, define a state `m` in `M_bind` that encodes local feature activity, candidate object tokens and reports.
-2. For each state and a fixed resolution index `r_level`:
+1. For each trial and condition, define a state `m` in `M_bind` that encodes local feature activity, candidate object tokens and reports, and discard episodes that fall in `S_sing_bind`.
+
+2. For each regular state and a fixed resolution index `r_level`:
 
    * compute `DeltaS_struct(m; r_level)`,
    * compute `DeltaS_report(m; r_level)`,
    * compute `Tension_bind(m; r_level)`.
+
 3. Group states by condition (low, medium, high load) and compute:
 
    * mean tension `I_bind_mean` for each group,
    * empirical relation between tension and error rate.
-4. Repeat for several encodings in `E_bind` that are fixed in advance.
+
+4. Optionally repeat the entire experiment for several encodings in `E_bind`, each with its own pre registered parameters, and compare patterns qualitatively rather than tuning encodings to fit any desired outcome.
 
 *Metrics:*
 
@@ -558,19 +604,19 @@ Test whether the chosen `DeltaS_bind` and `Tension_bind` track behavioral bindin
 
 *Falsification conditions:*
 
-* If for a given encoding class:
+* For a given encoding class `e`, if:
 
   * binding error rates rise sharply with load, but
-  * `Tension_bind` stays flat or even decreases,
-    then the combination of observables and weights in `DeltaS_bind` is considered misaligned and rejected.
-* If different encodings in `E_bind` produce arbitrarily different tension patterns for the same behavioral data without a principled reason, the encoding library definition is considered incoherent and must be revised.
+  * `Tension_bind` stays flat or even decreases across the same conditions,
+
+  then the combination of observables and weights in `DeltaS_bind` is considered misaligned and rejected for Q082.
+
+* If different encodings in `E_bind` produce arbitrarily different qualitative tension patterns for the same behavioral data without a principled explanation, the current definition of `E_bind` or of the observables may be judged incoherent and in need of revision.
 
 *Semantics implementation note:*
-
-The experiment assumes the hybrid regime indicated in the metadata, implemented as continuous valued feature fields and coherence measures, together with discrete token and report variables. All computations of `DeltaS_bind` are performed on these effective summaries, not on raw spike trains.
+The experiment assumes the hybrid regime indicated in the metadata, implemented as continuous valued feature fields and coherence measures together with discrete token and report variables. All computations of `DeltaS_bind` are performed on these effective summaries, not on raw spike trains.
 
 *Boundary note:*
-
 Falsifying TU encoding != solving canonical statement. This experiment can rule out specific ways of encoding binding tension but does not solve the binding problem itself.
 
 ---
@@ -578,7 +624,6 @@ Falsifying TU encoding != solving canonical statement. This experiment can rule 
 ### Experiment 2: Multi region neural coherence and conflict mapping
 
 *Goal:*
-
 Assess whether the observables `C_coherence` and `E_conflict` and the resulting `Tension_bind` can distinguish correct binding from induced misbinding using multi region neural recordings.
 
 *Setup:*
@@ -587,21 +632,26 @@ Assess whether the observables `C_coherence` and `E_conflict` and the resulting 
 
   * correct binding of features to objects, and
   * controlled misbinding, such as spatial swaps or rivalrous displays.
+
 * Record neural activity from multiple cortical areas (for example early visual, higher visual and parietal regions) using a method that supports reasonable temporal and spatial resolution.
-* Define a fixed encoding `e` in `E_bind` before data analysis.
+
+* Before analysis, define a fixed encoding `e` in `E_bind` together with its libraries, resolution grid and weight ranges, and document these as part of the experimental protocol.
 
 *Protocol:*
 
-1. For each trial, form a state `m` in `M_bind` that includes activity summaries, candidate tokens and reports.
-2. For each state and resolution index:
+1. For each trial, form a state `m` in `M_bind` that includes activity summaries, candidate tokens and reports, and discard any episodes in `S_sing_bind`.
+
+2. For each regular state and resolution index:
 
    * compute `C_coherence(m; k)` for each token,
    * compute `E_conflict(m)`,
    * compute `Tension_bind(m; r_level)`.
+
 3. Group trials into:
 
    * correct binding group, where reports match the intended object feature assignments,
    * misbinding group, where reports show feature swaps or conjunction errors.
+
 4. Compare distributions of `Tension_bind` across these groups under encoding `e`.
 
 *Metrics:*
@@ -612,15 +662,14 @@ Assess whether the observables `C_coherence` and `E_conflict` and the resulting 
 
 *Falsification conditions:*
 
-* If for encoding `e` the `Tension_bind` distributions for correct and misbinding groups are nearly identical, and this pattern persists across subjects and tasks, this encoding is considered ineffective for Q082.
+* If for encoding `e` the `Tension_bind` distributions for correct and misbinding groups are nearly identical, and this pattern persists across subjects and tasks, this encoding is considered ineffective for Q082 under the stated observables.
 * If `Tension_bind` is systematically lower in misbinding conditions than in correct binding conditions for most subjects, the combination of observables and weights is considered inverted and rejected.
+* If encodings in `E_bind` disagree qualitatively about which conditions are high vs low tension in ways that cannot be reconciled with known physiological or behavioral constraints, either the observable set or the encoding library needs revision.
 
 *Semantics implementation note:*
-
 All continuous measures such as `C_coherence` are computed from neural data treated as continuous fields or averaged signals, while object tokens and reports remain discrete. This respects the hybrid semantics indicated in the metadata.
 
 *Boundary note:*
-
 Falsifying TU encoding != solving canonical statement. Even a well performing encoding in this experiment does not by itself explain how binding works in all contexts.
 
 ---
@@ -628,6 +677,8 @@ Falsifying TU encoding != solving canonical statement. Even a well performing en
 ## 7. AI and WFGY engineering spec
 
 This block describes how Q082 can be used as an engineering module for AI systems within the WFGY framework, at the effective layer.
+
+Q082 style modules treat binding structures as engineering abstractions. They do not assume that any model endowed with such modules is conscious or that its internal states have special metaphysical status. They only enforce structural constraints on how distributed internal features are bound into unified tokens and outputs.
 
 ### 7.1 Training signals
 
@@ -669,7 +720,7 @@ We outline module patterns that reuse Q082 structures.
 
 3. `TU_BindingObserver`
 
-   * Role: generic observer that reads internal states and computes Q082 style observables such as `E_conflict`, `C_coherence` and `PerceptUnityScore` like metrics.
+   * Role: generic observer that reads internal states and computes Q082 style observables such as `E_conflict`, `C_coherence` and PerceptUnityScore like metrics.
    * Interface: read only, with no need to expose how the base model computes its hidden states.
 
 ### 7.3 Evaluation harness
@@ -698,6 +749,8 @@ A basic evaluation harness for AI systems using Q082 components can proceed as f
    * Compare both external performance and internal tension statistics between baseline and TU modes.
    * Inspect whether improvements (if any) align with lower binding tension and better unity of internal representations.
 
+All internal observables used by Q082 style modules are treated in the hybrid sense specified in the metadata: continuous valued summaries for features and coherence, together with discrete object tokens and report-like labels.
+
 ### 7.4 60 second reproduction protocol
 
 A minimal user facing protocol for experiencing Q082 effects:
@@ -714,6 +767,7 @@ A minimal user facing protocol for experiencing Q082 effects:
     * form explicit object tokens,
     * minimize an internal binding tension score,
     * report when binding is uncertain or unstable.
+
   * Observation: compare the rate of misbinding and the clarity of explanations about which features belong to which objects.
 
 * Comparison metric
@@ -725,23 +779,25 @@ A minimal user facing protocol for experiencing Q082 effects:
 * What to log
 
   * Prompts, responses, and tension estimates for each scenario.
-  * This allows later inspection without revealing any deep generative rules of Tension Universe.
+  * This allows later inspection without revealing any deeper generative rules of Tension Universe.
 
 ---
 
 ## 8. Cross problem transfer template
 
-This block lists reusable components produced by Q082 and how they transfer to other problems.
+This block lists reusable components produced by Q082 and how they transfer to other problems. All components are defined at the effective layer. Reusing them in other problems does not require or expose any deeper TU core rules.
 
 ### 8.1 Reusable components produced by this problem
 
 1. ComponentName: `BindingGraphDescriptor`
 
    * Type: field
+
    * Minimal interface:
 
      * Inputs: internal feature and token representations for a given state.
      * Output: a graph representation with nodes for features and tokens and edges for candidate bindings.
+
    * Preconditions:
 
      * The model must expose enough structure to identify feature like units and token like entities.
@@ -749,10 +805,12 @@ This block lists reusable components produced by Q082 and how they transfer to o
 2. ComponentName: `PerceptUnityScore`
 
    * Type: functional
+
    * Minimal interface:
 
      * Inputs: `BindingGraphDescriptor`, `R_report` style summary.
      * Output: scalar in `[0, 1]` measuring how unified the percept is, where higher values indicate fewer conflicts and more coherent binding.
+
    * Preconditions:
 
      * The report format must specify which objects and features are being claimed.
@@ -760,10 +818,12 @@ This block lists reusable components produced by Q082 and how they transfer to o
 3. ComponentName: `FeatureAssignmentConflictIndex`
 
    * Type: functional
+
    * Minimal interface:
 
      * Inputs: `O_token` descriptors and local feature summaries.
      * Output: nonnegative scalar equal or proportional to `E_conflict`.
+
    * Preconditions:
 
      * Tokens and features must be defined on compatible domains so that conflicts can be detected.
@@ -811,6 +871,7 @@ This block explains how Q082 is positioned on the Tension Universe verification 
     * mismatch quantities `DeltaS_struct`, `DeltaS_report`, `DeltaS_bind`,
     * singular set `S_sing_bind` and domain restrictions,
     * admissible encoding library `E_bind` and fairness constraints.
+
   * At least one concrete experiment has clear falsification conditions.
 
 * N_level: N2
@@ -821,6 +882,7 @@ This block explains how Q082 is positioned on the Tension Universe verification 
     * object and scene level tokens,
     * experimental reports,
     * and the binding tension functional.
+
   * Counterfactual worlds have been described in a way that can be instantiated in both biological and artificial model studies.
 
 ### 9.2 Next measurable step toward E2
@@ -831,7 +893,7 @@ To move from E1 to E2 for Q082, at least one of the following should be implemen
 2. A model comparison study where several neural or AI architectures perform multi object tasks and Q082 style observables and tension scores are computed, with results published as open data.
 3. A multi region neural recording study that tests Experiment 2 in Block 6 with pre registered encoding choice and analysis plan.
 
-Each of these steps would provide concrete evidence that the encoding is not only internally coherent but also practically applicable and falsifiable.
+Each of these steps would provide concrete evidence that the encoding is not only internally coherent but also practically applicable and falsifiable, while remaining strictly at the effective layer and not claiming any direct solution to the canonical binding problem.
 
 ### 9.3 Long term role in the TU program
 
@@ -843,12 +905,16 @@ In the long term Q082 is expected to serve as:
   * conscious experience,
   * cognitive architecture,
   * and AI implementation.
+
 * A template for how to express cognitive binding questions as tension problems with:
 
   * explicit observables,
   * well defined mismatch functionals,
   * falsifiable experimental protocols.
+
 * A bridge between philosophical and engineering views on how many things can become “one world” for a system.
+
+Advancing Q082 to higher E and N levels strengthens the empirical and engineering footing of its effective-layer encoding. It does not by itself provide a proof or disproof of any canonical statement about binding.
 
 ---
 
@@ -867,6 +933,7 @@ In the Tension Universe view we do not try to guess the true internal mechanism 
   * what features are active in different parts of the brain,
   * which “object tokens” the system seems to be treating as separate things,
   * what the person actually reports seeing?
+
 * Can we define a number, the binding tension, that is:
 
   * small when features and tokens match the reports well,
@@ -888,3 +955,36 @@ Q082 does not say which world our brains belong to, and it does not solve the bi
 * and sketch experiments and AI modules that can test whether a proposed way of encoding binding makes sense.
 
 It is a prototype for how to treat complex cognitive questions as tension problems that can be studied, compared and falsified without exposing any deeper generative rules of Tension Universe.
+
+---
+
+## Tension Universe effective-layer footer
+
+This page is part of the **WFGY / Tension Universe** S-problem collection.
+
+### Scope of claims
+
+* The goal of this document is to specify an **effective-layer encoding** of the named problem.
+* It does not claim to prove or disprove the canonical statement in Section 1.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the corresponding open problem has been solved.
+
+### Effective-layer boundary
+
+* All objects used here (state spaces `M`, observables, invariants, tension scores, counterfactual "worlds") live at the effective layer only.
+* No claims are made about the uniqueness or completeness of any TU-compatible model that might realize these structures.
+* No explicit mapping is given from raw experimental data to TU fields; only the existence of TU-compatible encodings is assumed.
+
+### Encoding, fairness, and falsifiability
+
+* Encoding classes, parameter ranges, and tension thresholds are intended to be fully documented and open to external audit.
+* Fairness constraints forbid post-hoc tuning of encodings based on test outcomes when making claims about low-tension vs high-tension regimes.
+* Falsification criteria are always stated at the level of encodings and observables, not at the level of metaphysical claims about the world.
+
+### Relation to charters
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
