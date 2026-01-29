@@ -16,7 +16,18 @@ Semantics: continuous
 E_level: E1
 N_level: N1
 Last_updated: 2026-01-24
-````
+```
+
+---
+
+## 0. Effective-layer disclaimer
+
+All statements in this entry are made strictly at the effective layer of the Tension Universe program.
+
+* We only define encodings, observables, mismatch functionals, counterfactual worlds, and experiments that sit on top of existing cosmological modelling practice.
+* We do not propose or select any deep Tension Universe axiom system or generating rules, and we do not claim to derive standard cosmology from such rules.
+* We do not prove or disprove the canonical dark energy problem in any logical sense. We only describe how a specific family of effective encodings can be stress tested and possibly falsified.
+* Whenever this page speaks about “worlds” or “universes”, it refers to effective descriptions that can be replaced or upgraded in future Tension Universe versions without changing the canonical problem in Section 1.
 
 ---
 
@@ -168,7 +179,7 @@ All content in this block is strictly at the effective layer. We describe only:
 * mismatch quantities and tension scores
 * singular sets and domain restrictions
 
-We do not describe any deep TU generative rules, and we do not describe any explicit mapping from raw observational data to internal TU fields.
+We do not describe any deep Tension Universe generative rules, and we do not describe any explicit mapping from raw observational data to internal Tension Universe fields.
 
 ### 3.1 State space
 
@@ -295,6 +306,8 @@ w_back + w_growth + w_budget = 1
 
 The weights are part of the encoding choice and must be fixed before evaluating `Tension_DE(m)` on any data set.
 
+The semantics label `continuous` in the metadata indicates that all these mismatch functionals are treated as continuous functions of the underlying summary vectors at the chosen bin resolution, rather than as discrete category switches.
+
 ### 3.4 Admissible encoding class and fairness constraints
 
 We specify an admissible class of encodings at the effective layer.
@@ -338,7 +351,7 @@ To prevent parameter tuning from hiding tension:
 * the norm choices used in `DeltaS_background`, `DeltaS_growth`, and `DeltaS_budget` must be specified once per study and cannot be changed after seeing the resulting tension distributions
 * the benchmark parameter choices used in reference profiles cannot be adjusted in response to tension outcomes on the same data sets
 
-These constraints ensure that `Tension_DE` is not retrofitted to make any given world look artificially low tension.
+These constraints ensure that `Tension_DE` is not retrofitted to make any given world look artificially low tension. In particular, any change to the model library, reference profiles, norms, or weights after inspecting `Tension_DE` outputs is treated as a new encoding that must be logged as a separate version.
 
 ### 3.5 Singular set and domain restrictions
 
@@ -365,11 +378,25 @@ M_DE_reg = M_DE \ S_sing_DE
 
 All mismatch observables and `Tension_DE(m)` are defined only on `M_DE_reg`. When an experiment attempts to evaluate `Tension_DE(m)` for `m` in `S_sing_DE`, the outcome is classified as “out of domain” and not taken as evidence for or against any dark energy scenario.
 
+### 3.6 Effective tension tensor
+
+For bookkeeping inside the Tension Universe program, we group the local sensitivities of `Tension_DE` with respect to background, growth, and budget directions into a symbolic dark energy tension tensor
+
+```txt
+T_ij_DE(m)
+```
+
+* The indices `i` and `j` label coarse directions in the combined space of expansion, growth, and budget descriptors.
+* Entries of `T_ij_DE(m)` are understood as second order responses of `Tension_DE` to small, internally consistent perturbations of those descriptors at fixed admissible encoding.
+* `T_ij_DE(m)` is used only as an internal diagnostic object when comparing different encodings or experiments at the effective layer. It is not a physical stress energy tensor and it does not introduce any new field beyond the observables already listed.
+
+We do not specify any explicit formula for `T_ij_DE(m)` in this document. Any such formula belongs to a deeper Tension Universe implementation layer and can be changed without altering the claims made here about Q042.
+
 ---
 
 ## 4. Tension principle for this problem
 
-This block states how Q042 is characterised as a tension problem in TU, at the effective layer.
+This block states how Q042 is characterised as a tension problem in the Tension Universe framework, at the effective layer.
 
 ### 4.1 Core tension principle
 
@@ -383,6 +410,8 @@ For each `k` we consider:
 
 * a fixed set of observational inputs for that resolution
 * a state `m_k` in `M_DE_reg` that encodes summaries of those inputs under a chosen dark energy model from the admissible library
+
+This principle is an effective layer rule. It does not assert that any particular dark energy model is the true microphysical description of the universe.
 
 ### 4.2 Low tension dark energy worlds
 
@@ -485,13 +514,15 @@ World noDE functions as a reference for high tension scenarios relative to the c
 
 ### 5.4 Interpretive note
 
-These worlds do not claim to explicitly construct internal TU fields from data, nor to decide which world is physically realised. They instead describe the qualitative behaviour of mismatch observables and `Tension_DE` in representative classes of scenarios that are distinguishable at the effective layer.
+These worlds do not claim to explicitly construct internal Tension Universe fields from data, nor to decide which world is physically realised. They instead describe the qualitative behaviour of mismatch observables and `Tension_DE` in representative classes of scenarios that are distinguishable at the effective layer.
 
 ---
 
 ## 6. Falsifiability and discriminating experiments
 
 This block specifies experiments and protocols that can test the quality of the Q042 encoding and discriminate between tension patterns in different worlds. Each experiment operates at the effective layer and cannot by itself prove or disprove the canonical dark energy problem. It can only falsify or support specific encodings.
+
+Throughout this block, all experiments are assumed to respect the admissible class and fairness constraints in Section 3.4. Any change to those constraints is treated as a new encoding.
 
 ### Experiment 1: Joint real data dark energy tension map
 
@@ -517,6 +548,7 @@ Test whether the defined `Tension_DE` functional, together with the admissible e
   * fixed weights `(w_back, w_growth, w_budget)` satisfying the constraints in Block 3
   * fixed norms for computing `DeltaS_background`, `DeltaS_growth`, and `DeltaS_budget`
   * declared tolerance levels for energy budget closure and basic consistency checks
+  * all these choices are made before inspecting any `Tension_DE` distribution on the target data
 
 *Protocol:*
 
@@ -526,7 +558,7 @@ Test whether the defined `Tension_DE` functional, together with the admissible e
    * growth summaries from large scale structure data
    * density parameters and channel summaries
 
-   The construction procedure is not described within TU; only its existence and coherence are assumed.
+   The construction procedure is not described within the Tension Universe framework; only its existence and coherence are assumed.
 
 2. Compute the mismatch observables `DeltaS_background(m_data,model)`, `DeltaS_growth(m_data,model)`, and `DeltaS_budget(m_data,model)` for each state.
 
@@ -563,7 +595,7 @@ This experiment is carried out in a continuous field sense consistent with the m
 
 *Boundary note:*
 
-Falsifying TU encoding != solving canonical statement. This experiment can reject specific choices of encoding, model library, and tension functional, but it does not by itself decide whether any deeper or alternative description of dark energy or modified gravity can solve the canonical problem.
+Falsifying a Tension Universe encoding is not the same as solving the canonical statement. This experiment can reject specific choices of encoding, model library, and tension functional, but it does not by itself decide whether any deeper or alternative description of dark energy or modified gravity can solve the canonical problem.
 
 ---
 
@@ -587,7 +619,7 @@ Assess whether the Q042 encoding can reliably distinguish low tension dark energ
 
 * Encoding parameters:
 
-  * the same admissible model library and `Tension_DE` definition as in Experiment 1, fixed in advance.
+  * the same admissible model library and `Tension_DE` definition as in Experiment 1, fixed in advance and not tuned after inspecting mock `Tension_DE` values.
 
 *Protocol:*
 
@@ -631,7 +663,7 @@ Synthetic universes are encoded in the same continuous field framework as real d
 
 *Boundary note:*
 
-Falsifying TU encoding != solving canonical statement. This experiment only tests whether the Q042 tension encoding can separate known synthetic scenarios; it does not directly determine which type of world our real universe belongs to.
+Falsifying a Tension Universe encoding is not the same as solving the canonical statement. This experiment only tests whether the Q042 tension encoding can separate known synthetic scenarios; it does not directly determine which type of world our real universe belongs to.
 
 ---
 
@@ -718,7 +750,7 @@ We propose an evaluation harness for AI models enhanced with Q042 modules.
      * consistency across related questions
      * clarity of stated assumptions about dark energy
 
-3. TU enhanced condition
+3. Tension Universe enhanced condition
 
    * model uses `CosmoTensionHead_DE`, `ExpansionHistoryObserver_DE`, and `EvidenceChannelAggregator_DE` to compute `Tension_DE` like signals during generation.
    * signals are used internally to nudge generations toward lower tension under declared assumptions.
@@ -735,10 +767,10 @@ A minimal protocol for external users to experience Q042 style encoding.
 
 * Baseline setup:
 
-  * Prompt: ask the model to “explain how we know the universe’s expansion is accelerating and what role dark energy plays” without mentioning tension or TU.
+  * Prompt: ask the model to “explain how we know the universe’s expansion is accelerating and what role dark energy plays” without mentioning tension or the Tension Universe framework.
   * Observation: record the explanation, focusing on whether it clearly links different observational channels and notes the assumptions involved.
 
-* TU encoded setup:
+* Tension Universe encoded setup:
 
   * Prompt: repeat the question but add instructions to “organise the answer around three ideas: expansion history, growth of structure, and the energy budget, and make clear what would break if dark energy were removed”.
   * Observation: record whether the answer now includes explicit discussion of background expansion, growth, and budget and whether potential inconsistencies are acknowledged.
@@ -753,7 +785,7 @@ A minimal protocol for external users to experience Q042 style encoding.
 
 * What to log:
 
-  * prompts, responses, and any internal tension scores (if available) generated by the Q042 modules, without exposing any deep TU rules.
+  * prompts, responses, and any internal tension scores (if available) generated by the Q042 modules, without exposing any deep Tension Universe rules.
 
 ---
 
@@ -855,9 +887,9 @@ This block lists reusable components produced by Q042 and their direct reuse tar
 
 ---
 
-## 9. TU roadmap and verification levels
+## 9. Tension Universe roadmap and verification levels
 
-This block explains the current verification levels for Q042 within TU and outlines next steps.
+This block explains the current verification levels for Q042 within the Tension Universe program and outlines next steps.
 
 ### 9.1 Current levels
 
@@ -871,8 +903,9 @@ This block explains the current verification levels for Q042 within TU and outli
     * combined tension functional `Tension_DE`
     * admissible encoding class and fairness constraints
     * singular set `S_sing_DE` and regular domain `M_DE_reg`
+    * symbolic tension tensor `T_ij_DE(m)` for internal diagnostics
 
-  * At least two experiments have been defined with explicit falsification conditions and boundary notes.
+  * At least two experiments have been defined with explicit falsification conditions and boundary notes. These experiments test only the encoding, not the canonical dark energy problem itself.
 
 * N_level: N1
 
@@ -902,7 +935,7 @@ To upgrade Q042 from E1 to E2, at least one of the following should be implement
 
 Any of these steps would move Q042 closer to a tested engineering specification rather than a purely theoretical encoding.
 
-### 9.3 Long term role in the TU program
+### 9.3 Long term role in the Tension Universe program
 
 In the longer term, Q042 is intended to serve as:
 
@@ -970,3 +1003,36 @@ Instead, it provides:
 * components that can be plugged into other problems where hidden sectors and multi channel evidence must be analysed carefully
 
 In this sense, Q042 is a reference frame for talking about dark energy as a structured consistency problem, rather than as an undefined placeholder in the equations of the universe.
+
+---
+
+## Tension Universe effective-layer footer
+
+This page is part of the **WFGY / Tension Universe** S problem collection.
+
+### Scope of claims
+
+* The goal of this document is to specify an effective layer encoding of the named problem.
+* It does not claim to prove or disprove the canonical statement in Section 1.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the corresponding open problem has been solved.
+
+### Effective-layer boundary
+
+* All objects used here (state spaces `M`, observables, invariants, tension scores, counterfactual "worlds") live entirely at the effective layer of the Tension Universe program.
+* No assumption is made about which, if any, effective encoding corresponds to the true microphysical description of the universe.
+* Any effective encoding described here may be replaced by a later Tension Universe version, as long as it respects the same canonical problem and falsifiability constraints.
+
+### Falsifiability and versioning
+
+* Each encoding is designed to be testable and, in principle, falsifiable by experiments of the type described in Section 6.
+* Rejecting an encoding under those experiments does not invalidate the canonical problem or standard cosmology. It only shows that the specific Tension Universe encoding needs revision.
+* Updates to this page should be tracked with clear `Last_updated` metadata and with references to the experiments and data that motivated the change.
+
+### Program-level references
+
+For the full Tension Universe effective layer rules and fairness constraints, see the Tension Universe charters:
+
+* TU Effective Layer Charter: `../Charters/TU_EFFECTIVE_LAYER_CHARTER.md`
+* TU Encoding and Fairness Charter: `../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md`
+* TU Tension Scale Charter: `../Charters/TU_TENSION_SCALE_CHARTER.md`
