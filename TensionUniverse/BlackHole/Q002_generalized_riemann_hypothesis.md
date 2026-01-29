@@ -15,8 +15,18 @@ Status: Open
 Semantics: continuous
 E_level: E2
 N_level: N2
-Last_updated: 2026-01-28
-````
+Last_updated: 2026-01-29
+```
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the effective layer of the Tension Universe (TU) framework:
+
+* We only specify observables, tension indicators, functionals, extremality patterns, and testable predictions.
+* We do not specify any underlying axiom system, generating rules, or constructive derivations of TU itself.
+* We do not provide any explicit mapping from raw arithmetic or spectral data to internal TU fields; we only assume the existence of TU compatible models that reproduce the listed observables.
 
 ---
 
@@ -32,7 +42,7 @@ L(s, chi) = sum_{n=1 to infinity} chi(n) / n^s
 
 and it extends to a meromorphic function on the complex plane with at most a simple pole at `s = 1` in the principal character case.
 
-The **Generalized Riemann Hypothesis (GRH)**, in its standard Dirichlet form, states that:
+The Generalized Riemann Hypothesis (GRH), in its standard Dirichlet form, states that:
 
 > For every primitive Dirichlet character `chi`, all nontrivial zeros of `L(s, chi)` lie on the critical line `Re(s) = 1/2`.
 
@@ -65,7 +75,7 @@ GRH is widely regarded as one of the central open problems in analytic number th
 
 Within the BlackHole S-problem collection, Q002 has three main roles.
 
-1. It extends Q001 from a single zeta function to **families of L-functions**, so it becomes the prototype of a **family-level spectral_tension** problem.
+1. It extends Q001 from a single zeta function to families of L-functions, so it becomes the prototype of a family-level spectral_tension problem.
 
 2. It supplies the family-level spectral_tension structure that downstream problems reuse, including:
 
@@ -74,7 +84,7 @@ Within the BlackHole S-problem collection, Q002 has three main roles.
    * Q018 (fine statistics of zero correlations).
    * Q123 (family-level interpretability templates for AI models).
 
-3. It tests whether the Tension Universe framework can encode a **family of coupled spectra and arithmetic patterns** in a way that:
+3. It tests whether the Tension Universe framework can encode a family of coupled spectra and arithmetic patterns in a way that:
 
    * remains purely at the effective layer,
    * obeys fairness constraints on encodings and weights,
@@ -97,14 +107,11 @@ This block records how Q002 sits inside the BlackHole graph for Q001–Q125. Eac
 
 These problems provide prerequisites and structural tools that Q002 relies on at the effective layer.
 
-* **Q001 (BH_MATH_NUM_L3_001, Riemann Hypothesis)**
+* **Q001 (BH_MATH_NUM_L2_001, Riemann Hypothesis)**
   Reason: supplies the base spectral_tension encoding for a single L-function that Q002 generalizes to families.
 
 * **Q016 (BH_MATH_ZFC_CH_L3_016, continuum and foundational structure)**
   Reason: provides foundational perspective on real number models and analytic_field structure underlying the continuous encoding used for L-functions.
-
-* **Q018 (BH_MATH_RANDOM_MATRIX_ZEROS_L3_018, pair correlation of zeros)**
-  Reason: supplies random-matrix-style reference statistics that define admissible spectral reference profiles for L-function families.
 
 * **Q019 (BH_MATH_DIOPH_DENSITY_L3_019, distribution of rational points)**
   Reason: encodes density and distribution tools that mirror how GRH consequences control primes in arithmetic progressions and more general arithmetic densities.
@@ -129,11 +136,8 @@ These problems reuse Q002 components directly or depend on the GRH family tensio
 
 Parallel nodes share similar tension types but do not depend on Q002 components.
 
-* **Q001 (BH_MATH_NUM_L3_001, Riemann Hypothesis)**
+* **Q001 (BH_MATH_NUM_L2_001, Riemann Hypothesis)**
   Reason: both Q001 and Q002 are spectral_tension problems where hidden spectral structure must match arithmetic observables through a tension functional.
-
-* **Q018 (BH_MATH_RANDOM_MATRIX_ZEROS_L3_018)**
-  Reason: both treat zero statistics and spectral data as primary carriers of tension, with random-matrix baselines.
 
 * **Q036 (BH_PHYS_HIGH_TC_MECH_L3_036, high temperature superconductivity mechanism)**
   Reason: both study complex spectra which control macroscopic behavior through constraints expressible as low spectral_tension principles.
@@ -195,7 +199,7 @@ All observables defined below are only required to be well defined on a regular 
 M_GRH_reg ⊆ M_GRH
 ```
 
-introduced in Section 3.6.
+introduced in Section 3.9.
 
 ### 3.2 Encoding classes and freeze lock
 
@@ -212,7 +216,7 @@ For each `k`, the class `E_GRH(k)` includes:
 * for each pair `(q, chi)`, a finite collection of bounded regions `R` in the critical strip for `L(s, chi)`,
 * for each pair `(q, chi)`, a finite collection of intervals `I` for arithmetic observables.
 
-The **E_GRH(k) freeze lock** is:
+The E_GRH(k) freeze lock is:
 
 1. The definition of `E_GRH(k)` (including `Q_max(k)`, the selection rule for characters, and the families of regions `R` and intervals `I`) must be fixed before inspecting any problem-specific spectral or arithmetic data for the functions included in `E_GRH(k)`.
 
@@ -222,6 +226,7 @@ The **E_GRH(k) freeze lock** is:
 
      * the list of moduli `q` and number of primitive characters per modulus,
      * which characters are primitive or induced,
+
    * public metadata such as:
 
      * whether tables exist up to a given height,
@@ -278,35 +283,35 @@ These observables are defined for all `m` in `M_GRH_reg` and for all `R, I, chi`
 
 ### 3.4 Metric lock and normalization
 
-All mismatch terms are treated as **dimensionless, normalized quantities**.
+All mismatch terms are treated as dimensionless, normalized quantities.
 
-The **metric lock** for Q002 is:
+The metric lock for Q002 is:
 
 1. For each `(R, chi)` we construct a normalized feature vector
 
-```txt
-v_spec(m; R, chi)
-```
+   ```txt
+   v_spec(m; R, chi)
+   ```
 
-summarizing the local zero statistics (for example via a fixed binning and normalization rule).
+   summarizing the local zero statistics, for example via a fixed binning and normalization rule.
 
 2. For each `(I, chi)` we construct a normalized feature vector
 
-```txt
-v_arith(m; I, chi)
-```
+   ```txt
+   v_arith(m; I, chi)
+   ```
 
-summarizing prime or character-sum deviations in that interval.
+   summarizing prime or character-sum deviations in that interval.
 
 3. We choose a fixed Euclidean (L2) metric on these feature spaces and define:
 
-```txt
-DeltaS_spec_chi(m; R, chi) = || v_spec(m; R, chi) - v_spec_ref(R, chi) ||_2
+   ```txt
+   DeltaS_spec_chi(m; R, chi) = || v_spec(m; R, chi) - v_spec_ref(R, chi) ||_2
 
-DeltaS_arith_chi(m; I, chi) = || v_arith(m; I, chi) - v_arith_ref(I, chi) ||_2
-```
+   DeltaS_arith_chi(m; I, chi) = || v_arith(m; I, chi) - v_arith_ref(I, chi) ||_2
+   ```
 
-where `v_spec_ref` and `v_arith_ref` are fixed reference vectors drawn from the reference libraries defined in Section 3.5.
+   where `v_spec_ref` and `v_arith_ref` are fixed reference vectors drawn from the reference libraries defined in Section 3.5.
 
 4. All normalization rules used to build `v_spec` and `v_arith` (binning, scaling, weighting across bins) are fixed at the charter level, not tuned per problem.
 
@@ -326,7 +331,7 @@ Each element comes with an identifier and version tag, and is derived from:
 * analytically motivated baselines such as Riemann–von Mangoldt density formulas and random-matrix predictions,
 * published bounds and error envelopes for primes in arithmetic progressions and related objects.
 
-The **reference library lock** is:
+The reference library lock is:
 
 1. For each admissible `(R, chi)` we choose `v_spec_ref(R, chi)` by selecting one element from `Ref_spec_library_GRH` and applying a fixed, rule-based transformation that may depend on `(q, chi, R)` only through public structural parameters (such as level, conductor, height range), never through observed deviations.
 
@@ -334,12 +339,12 @@ The **reference library lock** is:
 
 3. The choice maps
 
-```txt
-(R, chi) ↦ v_spec_ref(R, chi)
-(I, chi) ↦ v_arith_ref(I, chi)
-```
+   ```txt
+   (R, chi) ↦ v_spec_ref(R, chi)
+   (I, chi) ↦ v_arith_ref(I, chi)
+   ```
 
-are specified at the charter level and are independent of the observed data and of the unknown truth value of GRH.
+   are specified at the charter level and are independent of the observed data and of the unknown truth value of GRH.
 
 Changing the reference libraries or these maps corresponds to defining a new version of the Q002 encoding and must go through the TU charters, not through local edits of this file.
 
@@ -360,7 +365,7 @@ DeltaS_GRH_arith_mean(m; k) =
   (1 / |F_arith(k)|) * sum_{(I, chi, q) in F_arith(k)} DeltaS_arith_chi(m; I, chi)
 ```
 
-To avoid dilution of small families of high-tension outliers, we also define top-M statistics. Fix once and for all an integer
+To avoid dilution of small families of high-tension outliers, we also define top M statistics. Fix once and for all an integer
 
 ```txt
 M_top_GRH = 5
@@ -396,7 +401,7 @@ DeltaS_GRH_arith(m; k) =
   + gamma_GRH   * DeltaS_GRH_arith_top(m; k)
 ```
 
-The **aggregator lock** is: the values of `M_top_GRH` and `gamma_GRH`, and the decision to use this `mean + top-M` structure, are frozen at the charter level and do not depend on data. Any different aggregator defines a different encoding version.
+The aggregator lock is: the values of `M_top_GRH` and `gamma_GRH`, and the decision to use this mean plus top M structure, are frozen at the charter level and do not depend on data. Any different aggregator defines a different encoding version.
 
 ### 3.7 Effective tension tensor
 
@@ -410,21 +415,24 @@ T_ij_GRH(m; k) =
 where:
 
 * `S_i(m; k)` is a source factor for the ith semantic source component, capturing how strongly that component depends on GRH-compatible structure at level `k`.
+
 * `C_j(m; k)` is a receptivity factor for the jth downstream component, measuring its sensitivity to GRH-related mismatches.
+
 * `DeltaS_GRH(m; k)` is the combined family-level mismatch defined by:
 
-```txt
-DeltaS_GRH(m; k) =
-  w_spec * DeltaS_GRH_spec(m; k) +
-  w_arith * DeltaS_GRH_arith(m; k)
-```
+  ```txt
+  DeltaS_GRH(m; k) =
+    w_spec * DeltaS_GRH_spec(m; k) +
+    w_arith * DeltaS_GRH_arith(m; k)
+  ```
 
-with `(w_spec, w_arith)` fixed positive weights satisfying `w_spec + w_arith = 1`.
+  with `(w_spec, w_arith)` fixed positive weights satisfying `w_spec + w_arith = 1`.
 
 * `lambda(m; k)` is the convergence-state factor from the TU core.
+
 * `kappa_GRH` is a coupling constant for Q002 that sets the overall scale of GRH spectral_tension.
 
-The weights `(w_spec, w_arith)` and `kappa_GRH` are part of the encoding and do not depend on the state `m` or on observed data.
+The weights `(w_spec, w_arith)` and `kappa_GRH` are part of the encoding and do not depend on the state `m` or on observed data. All of `S_i`, `C_j`, `lambda` and `kappa_GRH` are treated as effective observables or control fields at this level. This file does not expose any underlying TU generative rule or axiom that might produce them.
 
 ### 3.8 Family-level invariants and constraints
 
@@ -495,11 +503,11 @@ More concretely:
 * There exist constants `epsilon_GRH(k)` that remain bounded or shrink as `k` grows.
 * There exist world-representing states `m_true(k)` such that:
 
-```txt
-Tension_GRH(m_true(k); k) ≤ epsilon_GRH(k)
-```
+  ```txt
+  Tension_GRH(m_true(k); k) ≤ epsilon_GRH(k)
+  ```
 
-for all sufficiently large `k`, with `epsilon_GRH(k)` not growing without bound.
+  for all sufficiently large `k`, with `epsilon_GRH(k)` not growing without bound.
 
 The values `epsilon_GRH(k)` are interpreted relative to the TU Tension Scale Charter and are not tuned post hoc to fit particular datasets.
 
@@ -508,16 +516,16 @@ The values `epsilon_GRH(k)` are interpreted relative to the TU Tension Scale Cha
 If GRH is false, then for any encoding scheme that:
 
 * remains faithful to actual spectral and arithmetic data,
-* respects the E_GRH(k) freeze lock,
+* respects the `E_GRH(k)` freeze lock,
 * uses reference profiles from the admissible libraries,
 
 we expect the following pattern.
 
 * There exists a positive threshold `delta_GRH > 0` and an index `k_0` such that for all `k ≥ k_0` and for all world-representing states `m_false(k)` that faithfully encode the actual data we have:
 
-```txt
-Tension_GRH(m_false(k); k) ≥ delta_GRH
-```
+  ```txt
+  Tension_GRH(m_false(k); k) ≥ delta_GRH
+  ```
 
 The threshold `delta_GRH` is not an arbitrary choice that can be tuned to zero; it reflects structural mismatch between spectra and arithmetic expectations that cannot be hidden by modifying admissible reference profiles or weights within the constraints.
 
@@ -535,7 +543,7 @@ In that case:
 * `DeltaS_GRH_arith` reduces to the `DeltaS_arith` defined in Q001,
 * `Tension_GRH` reduces to `Tension_RH`.
 
-The **compatibility test lock** is:
+The compatibility test lock is:
 
 1. For any encoding version of Q001 and Q002, there must exist a test configuration in which:
 
@@ -544,11 +552,11 @@ The **compatibility test lock** is:
 
 2. The encoding is only accepted if there exists a fixed, charter-level tolerance `eta_Q001_Q002` such that:
 
-```txt
-| Tension_GRH(zeta_data; k) - Tension_RH(zeta_data) | ≤ eta_Q001_Q002
-```
+   ```txt
+   | Tension_GRH(zeta_data; k) - Tension_RH(zeta_data) | ≤ eta_Q001_Q002
+   ```
 
-for all admissible zeta data summaries and all relevant `k`.
+   for all admissible zeta data summaries and all relevant `k`.
 
 3. If this condition fails, the joint Q001/Q002 encoding is rejected at the effective layer and must not be used in the BlackHole graph.
 
@@ -558,88 +566,88 @@ for all admissible zeta data summaries and all relevant `k`.
 
 We now describe two counterfactual worlds strictly in terms of observables and tension patterns.
 
-* World T_GRH: GRH is true for the L-function families under consideration.
-* World F_GRH: GRH is false in at least one substantial part of those families.
+* World `T_GRH`: GRH is true for the L-function families under consideration.
+* World `F_GRH`: GRH is false in at least one substantial part of those families.
 
 These worlds do not specify how internal TU fields are generated. They only describe what the observable tension patterns would look like under each case.
 
 ### 5.1 World T_GRH (GRH true, low family spectral tension)
 
-In World T_GRH:
+In World `T_GRH`:
 
-1. **Family spectral behavior**
+1. Family spectral behavior
 
    * For each encoding class `E_GRH(k)` there exist states `m_T(k)` in `M_GRH_reg` representing the actual world such that:
 
-   ```txt
-   DeltaS_GRH_spec(m_T(k); k) is small and stable
-   ```
+     ```txt
+     DeltaS_GRH_spec(m_T(k); k) is small and stable
+     ```
 
-   as `k` increases and the library expands in a controlled way.
+     as `k` increases and the library expands in a controlled way.
 
-2. **Family arithmetic behavior**
+2. Family arithmetic behavior
 
    * The aggregated arithmetic mismatch satisfies:
 
-   ```txt
-   DeltaS_GRH_arith(m_T(k); k)
-   ```
+     ```txt
+     DeltaS_GRH_arith(m_T(k); k)
+     ```
 
-   staying within bands that match known or conjectured GRH-based bounds for primes in arithmetic progressions and related quantities.
+     staying within bands that match known or conjectured GRH-based bounds for primes in arithmetic progressions and related quantities.
 
-3. **Combined family tension**
+3. Combined family tension
 
    * The total tension satisfies:
 
-   ```txt
-   Tension_GRH(m_T(k); k) ≤ epsilon_GRH(k)
-   ```
+     ```txt
+     Tension_GRH(m_T(k); k) ≤ epsilon_GRH(k)
+     ```
 
-   for some sequence `epsilon_GRH(k)` that does not blow up as the encoding resolution grows.
+     for some sequence `epsilon_GRH(k)` that does not blow up as the encoding resolution grows.
 
-4. **Stability under refinement**
+4. Stability under refinement
 
    * When `E_GRH(k)` is refined to `E_GRH(k+1)` in a way that increases coverage, the change in tension remains controlled:
 
-   ```txt
-   | Tension_GRH(m_T(k+1); k+1) - Tension_GRH(m_T(k); k) |
-   ```
+     ```txt
+     | Tension_GRH(m_T(k+1); k+1) - Tension_GRH(m_T(k); k) |
+     ```
 
-   remains within a small band compatible with moderate changes in resolution rather than revealing large hidden tension.
+     remains within a small band compatible with moderate changes in resolution rather than revealing large hidden tension.
 
 ### 5.2 World F_GRH (GRH false, persistent family spectral tension)
 
-In World F_GRH:
+In World `F_GRH`:
 
-1. **Spectral anomalies across characters**
+1. Spectral anomalies across characters
 
    * There exist characters and moduli for which the location of zeros forces a minimal mismatch. For any faithful encoding we have:
 
-   ```txt
-   DeltaS_spec_chi(m_F(k); R, chi) ≥ c_spec > 0
-   ```
+     ```txt
+     DeltaS_spec_chi(m_F(k); R, chi) ≥ c_spec > 0
+     ```
 
-   for some characters and for all sufficiently refined regions in some `R`, with `c_spec` independent of finer resolution.
+     for some characters and for all sufficiently refined regions in some `R`, with `c_spec` independent of finer resolution.
 
-2. **Arithmetic distortions**
+2. Arithmetic distortions
 
    * Corresponding arithmetic summaries show sustained deviation:
 
-   ```txt
-   DeltaS_arith_chi(m_F(k); I, chi) ≥ c_arith > 0
-   ```
+     ```txt
+     DeltaS_arith_chi(m_F(k); I, chi) ≥ c_arith > 0
+     ```
 
-   for some intervals and characters, where `c_arith` is independent of finer resolution within the admissible encoding.
+     for some intervals and characters, where `c_arith` is independent of finer resolution within the admissible encoding.
 
-3. **Combined family tension**
+3. Combined family tension
 
    * There exists `delta_GRH > 0` and `k_0` such that for all `k ≥ k_0` and all faithful states `m_F(k)` we have:
 
-   ```txt
-   Tension_GRH(m_F(k); k) ≥ delta_GRH
-   ```
+     ```txt
+     Tension_GRH(m_F(k); k) ≥ delta_GRH
+     ```
 
-4. **Attempts to hide tension fail**
+4. Attempts to hide tension fail
 
    * Any effort to modify admissible reference profiles, weights or aggregators inside the permitted charter class that would artificially reduce `Tension_GRH` either:
 
@@ -677,7 +685,9 @@ Test whether the chosen `Tension_GRH` encoding behaves stably and reasonably whe
     * all primitive characters `chi` modulo these `q`,
     * regions `R` that match the available zero data,
     * intervals `I` that match the available arithmetic data;
+
   * fix admissible spectral and arithmetic reference profiles from the libraries in Section 3.5;
+
   * fix weights `w_spec`, `w_arith`, `alpha_GRH`, `beta_GRH`, `gamma_GRH` and `M_top_GRH` according to the locks in Section 3.
 
 **Protocol**
@@ -710,7 +720,7 @@ Falsifying a TU encoding is not the same as solving the canonical GRH statement.
 
 ---
 
-### Experiment 2: Model family separation for GRH-like and non–GRH-like spectra
+### Experiment 2: Model family separation for GRH like and non GRH like spectra
 
 **Goal**
 
@@ -752,7 +762,7 @@ Check whether the Q002 encoding can reliably separate synthetic L-function famil
 
 **Boundary note**
 
-Falsifying a TU encoding is not the same as solving the canonical GRH statement.
+Falsifying a TU encoding is not the same as solving the canonical statement.
 
 ---
 
@@ -782,7 +792,7 @@ We define several training signals that can be computed from internal states int
 4. `signal_world_switch_clarity_GRH`
 
    * Definition: a penalty assigned when the model fails to clearly separate conclusions drawn under GRH-assumed prompts and under GRH-denied prompts in controlled evaluation tasks.
-   * Purpose: train the model to treat World T_GRH and World F_GRH assumptions as distinct and track them consistently.
+   * Purpose: train the model to treat World `T_GRH` and World `F_GRH` assumptions as distinct and track them consistently.
 
 ### 7.2 Architectural patterns
 
@@ -807,11 +817,11 @@ We outline module patterns that can reuse Q002 structures without exposing any T
 
 An evaluation harness for AI models augmented with Q002 modules can be structured as follows.
 
-1. **Task selection**
+1. Task selection
 
    * Collect a benchmark of analytic number theory problems where GRH plays a known role in strengthening bounds or sharpening statements, especially those about primes in arithmetic progressions and L-function zeros.
 
-2. **Conditions**
+2. Conditions
 
    * Baseline condition:
 
@@ -822,7 +832,7 @@ An evaluation harness for AI models augmented with Q002 modules can be structure
 
      * the model uses `FamilySpectralTensionHead_GRH`, `DirichletArithmeticFilter`, and associated training signals as auxiliary modules.
 
-3. **Metrics**
+3. Metrics
 
    * accuracy on problems that explicitly assume GRH,
    * logical consistency between answers given under GRH-assumed prompts and under GRH-denied prompts,
@@ -832,21 +842,22 @@ An evaluation harness for AI models augmented with Q002 modules can be structure
 
 A minimal protocol external users can run to experience the impact of Q002 encoding, without seeing any internal implementation.
 
-* **Baseline setup**
+* Baseline setup
 
   * Prompt: ask an AI system to explain GRH, its relationship to primes in arithmetic progressions, and some consequences for error terms, with no mention of tension or WFGY.
   * Observation: note whether the explanation is fragmented, misses family aspects, or mixes different variants of GRH without clear structure.
 
-* **TU-encoded setup**
+* TU-encoded setup
 
   * Prompt: ask the same system, but explicitly instruct it to organize the explanation using:
 
     * families of L-functions,
     * family-level spectral_tension between zero distributions and arithmetic patterns,
     * and the idea of a GRH family tension functional.
+
   * Observation: note whether the explanation becomes more clearly structured around families, conditions and consequences.
 
-* **Comparison metric**
+* Comparison metric
 
   * Rate both outputs using a rubric that scores:
 
@@ -854,7 +865,7 @@ A minimal protocol external users can run to experience the impact of Q002 encod
     * explicit links between family spectra and primes in arithmetic progressions,
     * internal consistency about what GRH does and does not claim.
 
-* **What to log**
+* What to log
 
   * The prompts, full responses and any tension scores produced by Q002 modules.
   * This allows later inspection while staying inside the effective layer.
@@ -867,41 +878,48 @@ This block lists the main components produced by Q002 and how they transfer to o
 
 ### 8.1 Reusable components produced by this problem
 
-1. **ComponentName: `FamilySpectralTension_GRH`**
+1. ComponentName: `FamilySpectralTension_GRH`
 
    * Type: functional
+
    * Minimal interface:
 
      * Inputs: `family_zero_summaries`, `family_arithmetic_summaries`, `encoding_index_k`
      * Output: `tension_value` (a nonnegative scalar)
+
    * Preconditions:
 
      * the families of summaries must correspond to a finite encoding class `E_GRH(k)` that satisfies the freeze and library locks,
      * the summaries must be coherent across the family so that mismatches are meaningful.
 
-2. **ComponentName: `DirichletCharacterArithmeticDescriptor`**
+2. ComponentName: `DirichletCharacterArithmeticDescriptor`
 
    * Type: field
+
    * Minimal interface:
 
      * Inputs: `modulus_q`, `character_label_chi`, `interval_I`
      * Output: `descriptor_vector` that encodes key arithmetic statistics relevant for GRH tests on that interval.
+
    * Preconditions:
 
      * the modulus and character must belong to some encoding class `E_GRH(k)`,
      * the interval `I` must be within the range where the descriptor has been defined.
 
-3. **ComponentName: `GRH_CounterfactualWorld_Template`**
+3. ComponentName: `GRH_CounterfactualWorld_Template`
 
    * Type: experiment_pattern
+
    * Minimal interface:
 
      * Inputs: `L_function_family_model`, `encoding_class_family`
      * Output: two experiment definitions:
 
-       * one for a GRH-compatible World T_GRH version,
-       * one for a GRH-incompatible World F_GRH version,
-         each with a specific protocol for evaluating `Tension_GRH`.
+       * one for a GRH-compatible World `T_GRH` version,
+       * one for a GRH-incompatible World `F_GRH` version,
+
+       each with a specific protocol for evaluating `Tension_GRH`.
+
    * Preconditions:
 
      * the model must allow generation of spectral and arithmetic-like summaries at the effective layer,
@@ -909,31 +927,31 @@ This block lists the main components produced by Q002 and how they transfer to o
 
 ### 8.2 Direct reuse targets
 
-1. **Q003 (Birch and Swinnerton–Dyer conjecture)**
+1. Q003 (Birch and Swinnerton–Dyer conjecture)
 
    * Reused components: `FamilySpectralTension_GRH`, `GRH_CounterfactualWorld_Template`.
    * Why it transfers: BSD links L-function behavior to ranks of elliptic curves, and many BSD statements are studied under GRH-type assumptions across families.
    * What changes: the family model becomes elliptic-curve L-functions and the arithmetic descriptors encode rank-related data instead of simple prime distributions.
 
-2. **Q015 (uniform rank bounds for elliptic curves)**
+2. Q015 (uniform rank bounds for elliptic curves)
 
    * Reused components: `FamilySpectralTension_GRH`.
    * Why it transfers: when studying uniform rank bounds one often assumes GRH for families of L-functions; the tension functional becomes a tool for measuring how compatible a proposed bound is with family spectra.
    * What changes: the aggregation focuses on families of L-functions attached to elliptic curves rather than Dirichlet characters.
 
-3. **Q018 (pair correlation of zeros)**
+3. Q018 (pair correlation of zeros)
 
    * Reused components: `DirichletCharacterArithmeticDescriptor`.
    * Why it transfers: fine spectral statistics require detailed descriptors of zero configurations and associated arithmetic structure; the descriptor provides that interface.
    * What changes: the emphasis shifts from aggregated mismatch to detailed correlation features and how they scale with modulus and height.
 
-4. **Q036 (high temperature superconductivity mechanism)**
+4. Q036 (high temperature superconductivity mechanism)
 
    * Reused components: `GRH_CounterfactualWorld_Template`.
-   * Why it transfers: the template for testing family spectral_tension under World T and World F carries over to physical Hamiltonian families, even though the operators differ.
+   * Why it transfers: the template for testing family spectral_tension under World `T` and World `F` carries over to physical Hamiltonian families, even though the operators differ.
    * What changes: the spectral data now represent physical energy levels, and arithmetic descriptors are replaced by physical observables.
 
-5. **Q123 (scalable interpretability)**
+5. Q123 (scalable interpretability)
 
    * Reused components: `FamilySpectralTension_GRH`.
    * Why it transfers: internal spectra of large AI models can be treated as an L-function-like family; the GRH tension concept inspires interpretability metrics for how coherent those spectra are.
@@ -947,7 +965,7 @@ This block places Q002 on the TU verification ladder and defines next measurable
 
 ### 9.1 Current levels
 
-* **E_level: E2**
+* E_level: E2
 
   * The effective encoding for GRH families has been specified in a way that:
 
@@ -955,30 +973,31 @@ This block places Q002 on the TU verification ladder and defines next measurable
     * includes explicit metric, reference library, freeze, aggregator and compatibility test locks,
     * provides falsification conditions through concrete experiments.
 
-* **N_level: N2**
+* N_level: N2
 
   * The narrative linking family spectra, arithmetic patterns and tension functionals is explicit and coherent.
-  * Counterfactual worlds World T_GRH and World F_GRH have been described in a way that can be instantiated in synthetic model families.
+  * Counterfactual worlds World `T_GRH` and World `F_GRH` have been described in a way that can be instantiated in synthetic model families.
 
 ### 9.2 Next measurable step toward higher E levels
 
 To move from E2 toward higher E levels, the following measurable actions are proposed.
 
-1. **Numerical prototype**
+1. Numerical prototype
 
    * Implement a prototype that:
 
      * ingests published numerical data for Dirichlet L-functions and primes in arithmetic progressions,
      * constructs states in `M_GRH_reg` for a sequence of encoding classes `E_GRH(k)` satisfying the freeze lock,
      * computes `DeltaS_GRH_spec`, `DeltaS_GRH_arith` and `Tension_GRH` across those classes.
+
    * Publish the resulting family tension profiles, encoding choices and parameter values as open data.
 
-2. **Model-world experiments**
+2. Model-world experiments
 
    * Build explicit model families `T_model` and `F_model` as in Experiment 2 and run the Q002 tension evaluation.
    * Document the separation between tension distributions in a way that independent groups can reproduce.
 
-3. **Cross-node consistency checks**
+3. Cross-node consistency checks
 
    * Verify that the Q002 encoding remains consistent with:
 
@@ -990,7 +1009,7 @@ To move from E2 toward higher E levels, the following measurable actions are pro
 
 Long term, Q002 is expected to serve as:
 
-* the **family spectral_tension reference node** in mathematics,
+* the family spectral_tension reference node in mathematics,
 * a test bed for how TU encodings handle many linked spectra and many linked arithmetic observables without becoming unfalsifiable,
 * a bridge between pure number theory and family-based reasoning in physics and AI, where entire families of models or operators must cohere under a shared tension principle.
 
@@ -1004,7 +1023,7 @@ The usual form of the Generalized Riemann Hypothesis says something like this:
 
 > For many important functions that encode number-theoretic information, called L-functions, all their important zeros in a certain strip of the complex plane should line up exactly on a special vertical line.
 
-The classical RH talks about one function, the zeta function. GRH talks about **families** of such functions at once.
+The classical RH talks about one function, the zeta function. GRH talks about families of such functions at once.
 
 Each L-function in the family carries arithmetic information. For example, Dirichlet L-functions control how primes are distributed in different residue classes. If the zeros behave in a very regular way for the whole family, then primes and related arithmetic objects behave in a more regular way along many arithmetic progressions.
 
@@ -1024,7 +1043,7 @@ For each state and each resolution level we compute two numbers:
 * one number that says how far the family of zero patterns is from what GRH would lead us to expect,
 * one number that says how far the family of arithmetic patterns is from what GRH would lead us to expect.
 
-We normalize these numbers so that they live on a common tension scale, then combine them into a single **family tension**. Low family tension means the whole family looks GRH-like at that scale. High family tension means there are serious mismatches that cannot easily be explained away inside the encoding rules.
+We normalize these numbers so that they live on a common tension scale, then combine them into a single family tension. Low family tension means the whole family looks GRH-like at that scale. High family tension means there are serious mismatches that cannot easily be explained away inside the encoding rules.
 
 Then we consider two kinds of worlds:
 
@@ -1043,11 +1062,17 @@ Q002 is the place where this family-tension approach is set up for the first tim
 
 ## Tension Universe effective-layer footer
 
-This page is part of the **WFGY / Tension Universe** S-problem collection.
+This page is part of the WFGY / Tension Universe S-problem collection.
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
 
 ### Scope of claims
 
-* The goal of this document is to specify an **effective-layer encoding** of the named problem.
+* The goal of this document is to specify an effective-layer encoding of the named problem.
 * It does not claim to prove or disprove the canonical statement in Section 1.
 * It does not introduce any new theorem beyond what is already established in the cited literature.
 * It should not be cited as evidence that the corresponding open problem has been solved.
@@ -1055,7 +1080,7 @@ This page is part of the **WFGY / Tension Universe** S-problem collection.
 ### Effective-layer boundary
 
 * All objects used here (state spaces `M`, observables, invariants, tension scores, counterfactual "worlds") live at the effective layer.
-* No step in this file gives a constructive mapping from raw experimental or simulation data into internal TU fields.
+* No step in this file gives a constructive mapping from raw experimental, numerical or simulation data into internal TU fields.
 * No step exposes any deep TU generative rule or any first-principle axiom system.
 
 ### Encoding and fairness
@@ -1074,15 +1099,15 @@ This page is part of the **WFGY / Tension Universe** S-problem collection.
 
 ### Tension scale and thresholds
 
-* All mismatch terms `DeltaS_*` and tension functionals in this file are treated as **dimensionless or normalized quantities**, defined up to a fixed monotone rescaling specified in the TU Tension Scale Charter.
+* All mismatch terms `DeltaS_*` and tension functionals in this file are treated as dimensionless or normalized quantities, defined up to a fixed monotone rescaling specified in the TU Tension Scale Charter.
 * Thresholds such as `epsilon_*`, `delta_*` and experiment cutoffs are always interpreted relative to that fixed scale.
 * Changing the tension scale requires an explicit update of the TU Tension Scale Charter, not an edit of individual problem files.
 
 ### Falsifiability and experiments
 
-* Experiments described in this document are **tests of TU encodings**, not tests of the underlying canonical problem itself.
+* Experiments described in this document are tests of TU encodings, not tests of the underlying canonical problem itself.
 * The rule “falsifying a TU encoding is not the same as solving the canonical statement” is understood to apply globally, even where it is not restated.
-* When required observables cannot be reliably estimated in practice, the outcome of the corresponding experiment is recorded as “inconclusive”, not as confirmation.
+* When required observables cannot be reliably estimated in practice, the outcome of the corresponding experiment is recorded as inconclusive, not as confirmation.
 
 ### Interaction with established results
 
@@ -1091,5 +1116,5 @@ This page is part of the **WFGY / Tension Universe** S-problem collection.
 
 ### Program note
 
-* This page is an experimental specification within the ongoing **WFGY / Tension Universe** research program.
+* This page is an experimental specification within the ongoing WFGY / Tension Universe research program.
 * All structures and parameter choices are provisional and may be revised in future versions, subject to the constraints above.
