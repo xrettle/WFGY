@@ -15,8 +15,32 @@ Status: Open
 Semantics: hybrid
 E_level: E1
 N_level: N1
-Last_updated: 2026-01-25
+Last_updated: 2026-01-29
 ```
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the effective layer of the Tension Universe (TU) framework:
+
+* We only describe state spaces, observables, mismatch functionals, tension scores, singular sets, and experiment patterns at a coarse, effective level.
+* We do not specify any underlying TU axiom system, deep generative rule, or constructive derivation of TU itself.
+* We do not provide any explicit mapping from raw biochemical or evolutionary data to internal TU fields. We only assume that such mappings exist inside an admissible encoding class, as defined in Section 3.7.
+* We do not claim to prove or disprove the canonical origin-of-code statements from molecular evolution or origin-of-life research.
+* We do not introduce any new theorem about the genetic code, its optimality, or its historical origin. All claims are about effective-layer encodings and their behavior.
+
+The objects defined in this entry, including:
+
+* the state space `M_code`,
+* observables such as `Error_impact(m)`, `Cost_profile(m)`, `Access_profile(m)`,
+* mismatch functionals such as `DeltaS_error(m)`, `DeltaS_cost(m)`, `DeltaS_access(m)`,
+* the combined consistency tension `Tension_Code(m)`,
+* and the tensor-like quantity `T_ij(m)`,
+
+are all effective-layer quantities. They can be instantiated inside tools and models without exposing any deeper TU rules or claiming any solution of the open biological problem.
+
+This page follows the constraints of the TU Effective Layer Charter and the TU Encoding and Fairness Charter. See the footer for links to the relevant charters.
 
 ---
 
@@ -35,6 +59,7 @@ More concretely, the problem asks for:
    * its particular pattern of redundancy and degeneracy,
    * its specific grouping of similar amino acids in codon space,
    * its robustness to common classes of point mutations and translation errors.
+
 2. A mechanistic class (or classes) of origin scenarios that can:
 
    * generate codes with properties close to the standard code,
@@ -46,9 +71,11 @@ Traditional explanatory classes include:
 * Stereochemical hypotheses:
 
   * Direct chemical affinities between codons (or anticodons) and amino acids guided the mapping.
+
 * Frozen accident hypotheses:
 
   * The code was historically contingent and became locked in after an early choice.
+
 * Coevolutionary and adaptive hypotheses:
 
   * The code coevolved with amino acid biosynthesis pathways and was shaped by selection for error minimization and robustness.
@@ -61,12 +88,14 @@ The origin of the genetic code is widely recognized as a central open problem in
 
 * There is strong evidence that:
 
-  * The standard code is highly non-random in its error-tolerance properties.
+  * The standard code is highly nonrandom in its error-tolerance properties.
   * It often appears near the top of performance rankings when compared with large ensembles of alternative codes.
+
 * There is no agreement on:
 
   * Which mechanistic class or combination of classes best explains these properties.
   * How to reconcile chemical constraints, historical contingency, and adaptive selection within a single framework.
+
 * Most existing models exhibit one or more of the following issues:
 
   * Heavy dependence on a specific set of parameters or initial conditions.
@@ -80,26 +109,29 @@ The problem remains open because it requires unifying:
 * population and evolutionary dynamics,
 * and historical contingencies,
 
-into a single, testable framework.
+inside a single, testable framework.
 
 ### 1.3 Role in the BlackHole project
 
 Within the BlackHole S-problem collection, Q072 plays the following roles:
 
-1. It is the flagship example of a **biological coding origin** problem, where:
+1. It is the flagship example of a biological coding origin problem, where:
 
    * discrete symbol mappings must align with physical and evolutionary constraints,
-   * and where apparent optimality must be balanced against historical path dependence.
+   * and apparent optimality must be balanced against historical path dependence.
+
 2. It provides a template for:
 
    * other biological code problems (immune repertoires, signaling codes),
    * and socio-technical code problems (language, communication protocols).
-3. It is the main node where TU-style **consistency_tension** between:
+
+3. It is the main node where TU-style consistency tension between:
 
    * code structure,
    * error and cost profiles,
    * and evolutionary accessibility,
-     is defined and tested.
+
+   is defined and tested at the effective layer.
 
 ### References
 
@@ -125,14 +157,14 @@ These problems provide prerequisites, tools, or general foundations that Q072 re
   Reason: Supplies self-assembly and soft-matter phase behavior needed to model compartments and proto-translation machinery in which codes can emerge.
 
 * Q071 (BH_BIO_ORIGIN_LIFE_L3_071)
-  Reason: Provides the broader origin-of-life context, including the transition from non-coded replication to coded translation where genetic codes become relevant.
+  Reason: Provides the broader origin-of-life context, including the transition from noncoded replication to coded translation where genetic codes become relevant.
 
 ### 2.2 Downstream problems
 
 These problems are direct reuse targets of Q072 components or depend on Q072 tension structures.
 
 * Q073 (BH_BIO_EVO_COMPLEXITY_L3_073)
-  Reason: Reuses CodeOrigin_TensionFunctional and CodeSpace_MoveRules_Template to analyze how a fixed genetic code shapes major evolutionary transitions.
+  Reason: Reuses `CodeOrigin_TensionFunctional` and `CodeSpace_MoveRules_Template` to analyze how a fixed genetic code shapes major evolutionary transitions.
 
 * Q074 (BH_BIO_CELL_DIFFERENTIATION_L3_074)
   Reason: Depends on a stable genetic code as the base layer for cell-type and tissue differentiation programs modeled as higher-level coding systems.
@@ -158,7 +190,7 @@ Parallel nodes share similar tension types but no direct component dependence.
 Cross-domain edges connect Q072 to problems in other domains that can reuse its components.
 
 * Q059 (BH_CS_INFO_THERMODYN_L3_059)
-  Reason: Reuses CodeOrigin_TensionFunctional as a biological case study of information encoding trade-offs between robustness and energetic cost.
+  Reason: Reuses `CodeOrigin_TensionFunctional` as a biological case study of information encoding tradeoffs between robustness and energetic cost.
 
 * Q032 (BH_PHYS_QTHERMO_L3_032)
   Reason: Uses genetic-code origin as a concrete example where thermodynamic constraints shape which codes are reachable and stable.
@@ -218,7 +250,7 @@ More concretely, each `m` encodes:
 * `Access_graph(m)`
   A coarse graph-like description of code space accessibility under allowed local moves (for example single reassignment steps that preserve viability).
 
-We do not specify how any of these summaries are computed from detailed models or data. We only assume that for each scenario of interest there exist states `m` in `M_code` that encode them in a well-defined way.
+We do not specify how any of these summaries are computed from detailed models or data. We only assume that for each scenario of interest there exist states `m` in `M_code` that encode them in a well-defined way within an admissible encoding.
 
 ### 3.2 Reference libraries and fairness constraints
 
@@ -271,7 +303,8 @@ Cost_profile(m)
 
   * the average energetic or resource cost of amino acids weighted by codon usage,
   * a small set of aggregate statistics summarizing this distribution.
-* We only require that these summaries are finite and well defined for `m`.
+
+We only require that these summaries are finite and well defined for `m`.
 
 3. Accessibility profile observable
 
@@ -368,12 +401,14 @@ w_error + w_cost + w_access = 1
 
 Weight rules:
 
-* We fix `w_error`, `w_cost`, and `w_access` once, based on broad domain judgment:
+* We fix `w_error`, `w_cost`, and `w_access` once, based on broad domain judgment, for example:
 
-  * for example error robustness and cost feasibility receive comparable weight,
+  * error robustness and cost feasibility receive comparable weight,
   * accessibility receives a nonzero but not dominant weight.
+
 * We do not change these weights after computing `Tension_Code` for the standard code or for any particular model.
-* If later analysis suggests different weights, that constitutes a new encoding, which must be evaluated separately as a different TU instance.
+
+* If later analysis suggests different weights, that constitutes a new encoding, which must be evaluated as a separate TU instance.
 
 ### 3.5 Singular set and domain restriction
 
@@ -401,7 +436,7 @@ Domain restriction:
 M_reg = M_code \ S_sing
 ```
 
-* States in `S_sing` represent invalid or incomplete encodings, not evidence for or against any specific origin mechanism.
+* States in `S_sing` represent invalid or incomplete encodings at this effective layer, not evidence for or against any specific origin mechanism.
 * When an experiment encounters a state in `S_sing`, the result is reported as "out of domain" and excluded from tension statistics.
 
 ### 3.6 Effective tension tensor
@@ -416,13 +451,79 @@ where:
 
 * `S_i(m)` are source-like factors representing the strength of different origin-mechanism components present in configuration `m`
   (for example emphasis on stereochemical constraints, historical contingency, or adaptive selection).
+
 * `C_j(m)` are receptivity-like factors representing how sensitive different downstream systems are to changes in code properties
   (for example robustness of cell lineages, evolvability of regulatory networks).
-* `Tension_Code(m)` is the nonnegative scalar consistency tension defined above.
+
+* `Tension_Code(m)` is the nonnegative scalar consistency tension defined in Section 3.4.
+
 * `lambda(m)` is a convergence-state factor encoding whether local reasoning about code origin is convergent, recursive, divergent, or chaotic.
+
 * `kappa` is a global coupling constant that sets the overall scale at which genetic-code origin tension contributes to larger TU structures.
 
+This `T_ij(m)` is an effective bookkeeping device. It repackages the scalar `Tension_Code(m)` and simple multiplicative factors into a tensor-like form so that genetic-code origin tension can be combined with other TU components. It does not introduce any new equations of motion, any deep TU generative rules, or any explicit dynamics beyond what is already encoded in the effective-layer quantities defined above.
+
 We do not need explicit index sets for `i` and `j` at the effective layer; it suffices that `T_ij(m)` is finite and well defined for the configurations considered.
+
+### 3.7 Encoding class and fairness constraints
+
+We now collect the ingredients above into an explicit encoding class, in line with the TU Encoding and Fairness Charter.
+
+An admissible Q072 encoding at the effective layer is specified by a tuple:
+
+```txt
+E = (D, F, W, L)
+```
+
+where:
+
+* `D` is a data-to-state mapping family:
+
+  * It specifies how raw or simulated information about codes, environments, and dynamics is mapped into states in `M_code`.
+  * Members of `D` must obey the same structural constraints on `Code_map(m)`, `Env_context(m)`, `Error_env(m)`, and `Access_graph(m)`.
+
+* `F` is a mismatch-functional family:
+
+  * It specifies concrete formulas and numerical procedures that instantiate `Error_impact(m)`, `Cost_profile(m)`, `Access_profile(m)`, and the derived quantities `DeltaS_error(m)`, `DeltaS_cost(m)`, `DeltaS_access(m)`.
+  * Each member of `F` must define these functionals in terms of the fixed reference libraries and move ensembles, without any dependence on the performance of the observed genetic code.
+
+* `W` is a finite set of admissible weight triples and threshold sets:
+
+  * Each element of `W` provides a choice of `(w_error, w_cost, w_access)` and thresholds `(tau_error, tau_cost, tau_access)` that:
+
+    * satisfy the constraints in Sections 3.3 and 3.4,
+    * and are selected based on general domain considerations, not on the measured `Tension_Code(m_obs)` of the observed code.
+
+* `L` is a specification of reference libraries and move ensembles:
+
+  * It fixes `Library_random`, `Library_chem_constrained`, and any additional fair code ensembles used in F and in the experiments of Section 6.
+  * `L` also fixes the code-space move ensembles used to define `dist_access(m)` and related quantities.
+
+Fairness and auditability:
+
+* For any concrete study, one must choose a single tuple `E = (D, F, W, L)` from this encoding class before computing any tension values for the observed genetic code or for specific historical scenarios.
+* All components of `E` must be recorded in an auditable way, for example as configuration files or protocol descriptions.
+* Once `E` is fixed, no part of `D`, `F`, `W`, or `L` may be modified in response to the observed position of the standard code in the resulting tension distributions. Any such modification defines a new encoding `E'` that must be evaluated as a separate instance.
+
+Refinement sequence:
+
+* In Section 4.4 we refer to a sequence of encodings:
+
+  ```txt
+  Encode(k),  k = 1, 2, 3, ...
+  ```
+
+* Each `Encode(k)` is understood as a refinement of a single base encoding `E` from this encoding class, for example by:
+
+  * increasing the size of reference libraries,
+  * using more detailed error models,
+  * or refining accessibility descriptions,
+
+  while keeping the admissible choices of `D`, `F`, `W`, and `L` inside the same encoding class.
+
+* Refinement may increase resolution or statistical power but may not change the basic rules of the encoding family to force a desired outcome for `Tension_Code(m_obs)`.
+
+This explicit encoding class ensures that claims about low-tension or high-tension origin of the genetic code are traceable to auditable choices, and that tuning away inconvenient tension patterns is disallowed by construction.
 
 ---
 
@@ -465,8 +566,10 @@ for a small threshold `epsilon_code` that is:
 Qualitatively, in a low-tension regime:
 
 1. The standard code lies in a favorable band of the joint distribution of error robustness and cost feasibility across the reference libraries.
+
 2. Codes with similar or slightly lower tension are not extremely rare, and simple evolutionary dynamics in code space can reach codes in this band with non-negligible probability.
-3. Many distinct process models, when coarse-grained, predict similar low-tension regions in code space.
+
+3. Many distinct process models, when coarse-grained inside the same encoding class, predict similar low-tension regions in code space.
 
 ### 4.3 High-tension code origin
 
@@ -481,12 +584,14 @@ Tension_Code(m_obs) >= delta_code
 for some strictly positive `delta_code` that:
 
 * remains bounded away from zero as we refine encoding resolution and library sizes,
-* and cannot be removed without violating fairness constraints or structural assumptions.
+* and cannot be removed without violating fairness constraints or structural assumptions of the encoding class.
 
 Qualitatively, in a high-tension regime:
 
 1. The standard code is a strong outlier in reference libraries, far beyond what is expected under simple process models.
+
 2. Most plausible local-move dynamics avoid codes as good as or better than the standard code, unless parameters are tuned to a narrow range.
+
 3. Different process models disagree on which codes should be favored, so the observed code does not sit at a robust intersection of mechanisms.
 
 ### 4.4 Refinement and stability
@@ -501,7 +606,9 @@ where increasing `k` represents:
 
 * larger or more refined reference libraries,
 * more detailed error models,
-* and more detailed accessibility descriptions.
+* and more detailed accessibility descriptions,
+
+all within the same admissible encoding class `E`.
 
 For each `k`, we obtain:
 
@@ -511,10 +618,11 @@ The tension principle requires that:
 
 * In a low-tension narrative, there exists a band `[0, epsilon_code]` such that for all sufficiently large `k`,
   `Tension_Code_k(m_obs)` remains inside this band.
+
 * In a high-tension narrative, there exists `delta_code > 0` such that for all sufficiently large `k`,
   `Tension_Code_k(m_obs) >= delta_code`.
 
-This prevents us from hiding tension behavior inside the choice of resolution.
+This prevents us from hiding tension behavior inside the choice of resolution or library size.
 
 ---
 
@@ -531,9 +639,7 @@ In World T:
 
 1. Reference library positioning
 
-   * When we compute `Tension_Code(m_obs)` for the observed code, it lies:
-
-     * in a high-performing but not astronomically rare band of the distributions induced by `Library_random` and `Library_chem_constrained`.
+   * When we compute `Tension_Code(m_obs)` for the observed code, it lies in a high-performing but not astronomically rare band of the distributions induced by `Library_random` and `Library_chem_constrained`.
    * The standard code is near the top, but it does not require special selection of the library or thresholds to appear exceptional.
 
 2. Error and cost structure
@@ -548,8 +654,8 @@ In World T:
 
 4. Process robustness
 
-   * Different coarse-grained process models (for example varying strengths of chemical bias or historical contingency) still identify similar low-tension regions.
-   * The code origin narrative is robust to moderate changes in assumptions.
+   * Different coarse-grained process models, when instantiated inside the same encoding class, still identify similar low-tension regions.
+   * The code origin narrative is robust to moderate changes in assumptions and parameter choices.
 
 ### 5.2 World F (high-tension code origin)
 
@@ -558,7 +664,7 @@ In World F:
 1. Reference library positioning
 
    * `Tension_Code(m_obs)` for the observed code lies in an extremely rare tail of the distributions over the reference libraries.
-   * Many codes with strictly lower tension are common and easily constructed within the same constraints.
+   * Many codes with strictly lower tension are common and easily constructed within the same structural and chemical constraints.
 
 2. Error and cost structure
 
@@ -568,11 +674,11 @@ In World F:
 3. Accessibility structure
 
    * Under reasonable local move rules and starting points, almost no trajectories visit codes with tension as low as or lower than the standard code.
-   * Paths that reach such regions require extremely fine tuning of process parameters or very special initial conditions.
+   * Paths that reach such regions require extreme fine tuning of process parameters or very special initial conditions.
 
 4. Process fragility
 
-   * Small changes in model assumptions (for example slightly different cost estimates or error patterns) dramatically alter which codes are favored.
+   * Small changes in model assumptions, such as slightly different cost estimates or error patterns, dramatically alter which codes are favored.
    * There is no stable intersection of chemistry, history, and selection that naturally singles out the observed code.
 
 ### 5.3 Interpretive note
@@ -581,9 +687,9 @@ These counterfactual worlds do not attempt to construct explicit histories of th
 
 * where the observed code sits in tension distributions,
 * how accessible low-tension regions are under simple dynamics,
-* and how robust these conclusions are to model variation.
+* and how robust these conclusions are to model variation inside a fixed encoding class.
 
-They do not assert any deep TU generative rule or hidden origin story beyond the effective-layer observables and tension functionals defined in Block 3.
+They do not assert any deep TU generative rule or hidden origin story beyond the effective-layer observables and tension functionals defined in Section 3.
 
 ---
 
@@ -595,28 +701,29 @@ This block specifies experiments and protocols that can:
 * distinguish between different code-origin tension models,
 * and provide evidence for or against particular parameter and library choices.
 
-These experiments do not prove or disprove any specific biological mechanism. They can falsify or refine TU encodings of Q072.
+These experiments do not prove or disprove any specific biological mechanism. They can falsify or refine TU encodings of Q072 inside the encoding class defined in Section 3.7.
 
 ### Experiment 1: Code ranking in fair libraries
 
-*Goal:*
+Goal:
 
-Evaluate where the standard genetic code sits in the joint distribution of error robustness and cost feasibility across fair reference libraries, and test whether the Tension_Code encoding is stable and discriminative.
+* Evaluate where the standard genetic code sits in the joint distribution of error robustness and cost feasibility across fair reference libraries, and test whether the `Tension_Code` encoding is stable and discriminative.
 
-*Setup:*
+Setup:
 
 * Input:
 
-  * A precisely defined `Library_random` and `Library_chem_constrained`, as in Block 3.2.
+  * A precisely defined `Library_random` and `Library_chem_constrained`, as in Section 3.2.
   * Implementations of `Error_impact(m)`, `Cost_profile(m)`, and `Access_profile(m)` that are consistent across all codes in the libraries.
-* Choose fixed weights `w_error`, `w_cost`, `w_access` and thresholds `tau_error`, `tau_cost`, `tau_access` before any evaluation.
 
-*Protocol:*
+* Choose fixed weights `w_error`, `w_cost`, `w_access` and thresholds `tau_error`, `tau_cost`, `tau_access` before any evaluation, in line with an admissible element of `W` in Section 3.7.
+
+Protocol:
 
 1. For each code `m` in each library:
 
-   * Compute `DeltaS_error(m)`, `DeltaS_cost(m)`, and `DeltaS_access(m)` according to Block 3.3.
-   * Compute `Tension_Code(m)` using Block 3.4.
+   * Compute `DeltaS_error(m)`, `DeltaS_cost(m)`, and `DeltaS_access(m)` according to Section 3.3.
+   * Compute `Tension_Code(m)` using Section 3.4.
 
 2. Compute:
 
@@ -624,61 +731,64 @@ Evaluate where the standard genetic code sits in the joint distribution of error
    * the percentile rank of `Tension_Code(m_obs)` for the observed standard code,
    * the gap between `Tension_Code(m_obs)` and the minimum tension observed in the libraries.
 
-3. Repeat computations across increasing library sizes or more refined generating procedures, forming a sequence of encodings `Encode(k)`.
+3. Repeat computations across increasing library sizes or more refined generating procedures, forming a sequence of refinements `Encode(k)` consistent with the same encoding class.
 
-*Metrics:*
+Metrics:
 
 * `rank_code`: percentile rank of `Tension_Code(m_obs)` in each `Encode(k)`.
 * `gap_best`: difference between `Tension_Code(m_obs)` and the lowest observed tension at each `k`.
 * `stability_index`: variation in `rank_code` and `gap_best` as `k` increases.
 
-*Falsification conditions:*
+Falsification conditions:
 
-* If for all reasonable encodings `Encode(k)` that respect fairness constraints:
+* If for all reasonable encodings `Encode(k)` that respect the fairness constraints and belong to the same encoding class:
 
   * `rank_code` never departs significantly from the middle of the distribution,
   * and `gap_best` remains small,
-    then the current definition of `Tension_Code` is judged non-discriminative for Q072 and considered falsified as a useful TU encoding.
 
-* If small, unmotivated changes in thresholds or weights cause `rank_code` to move from typical to highly exceptional regimes, the encoding is considered unstable and rejected at this level of analysis.
+  then the current definition of `Tension_Code` is judged non-discriminative for Q072 and considered falsified as a useful TU encoding at this level.
 
-These falsifications concern the TU encoding of consistency tension, not the biological existence or non-existence of particular origin mechanisms.
+* If small, unmotivated changes in thresholds or weights within one element of `W` cause `rank_code` to move from typical to highly exceptional regimes, the encoding is considered unstable and rejected at this level of analysis.
 
-*Semantics implementation note:*
+Semantics implementation note:
 
-All observables and tension scores are computed using the same hybrid treatment of discrete code structure and continuous cost and error parameters implied by Block 0. No alternative semantics category is introduced here.
+* All observables and tension scores are computed using the same hybrid treatment of discrete code structure and continuous cost and error parameters implied by Section 0 and recorded in `Semantics: hybrid` in the header.
+* No alternative semantics category is introduced here.
 
-*Boundary note:*
+Boundary note:
 
-Falsifying TU encoding != solving canonical statement. This experiment can reject or refine specific definitions of Tension_Code and fair libraries, but it does not by itself explain how the genetic code originated.
+* Falsifying a particular TU encoding for Q072 in this experiment does not solve the canonical origin-of-code problem.
+* Results of this experiment only support or rule out specific encodings inside the Q072 encoding class. They do not by themselves provide a biological mechanism, and they do not constrain other TU problems.
 
 ---
 
 ### Experiment 2: Evolutionary accessibility under local moves
 
-*Goal:*
+Goal:
 
-Test whether simple local move dynamics in code space naturally lead to codes with low consistency tension, and whether the standard code lies in an accessible low-tension region.
+* Test whether simple local move dynamics in code space naturally lead to codes with low consistency tension, and whether the standard code lies in an accessible low-tension region.
 
-*Setup:*
+Setup:
 
 * Define a class of local move rules:
 
-  * for example, single reassignment of a codon from one amino acid to another, subject to viability constraints (such as preserving essential codons and avoiding catastrophic error patterns).
+  * for example, single reassignment of a codon from one amino acid to another, subject to viability constraints such as preserving essential codons and avoiding catastrophic error patterns.
+
 * Choose:
 
-  * one or more initial code ensembles (for example simple, chemically biased starting codes),
+  * one or more initial code ensembles, for example simple, chemically biased starting codes,
   * a fixed error and cost environment consistent with origin-of-life scenarios.
-* Use the same `Library_chem_constrained` as a background ensemble for comparison.
 
-*Protocol:*
+* Use the same `Library_chem_constrained` as a background ensemble for comparison, as specified in `L` for the encoding.
+
+Protocol:
 
 1. Generate many trajectories in code space:
 
    * For each trajectory:
 
      * start from an initial code sampled from a specified ensemble,
-     * iteratively apply local moves chosen by a simple rule (such as random moves filtered by viability).
+     * iteratively apply local moves chosen by a simple rule, such as random moves filtered by viability constraints.
 
 2. For each visited code along each trajectory, compute:
 
@@ -691,31 +801,32 @@ Test whether simple local move dynamics in code space naturally lead to codes wi
    * the distribution of final or absorbing states,
    * whether and how often codes with tension equal to or lower than `Tension_Code(m_obs)` are reached.
 
-*Metrics:*
+Metrics:
 
 * `reach_rate`: fraction of trajectories that reach a code `m` with `Tension_Code(m) <= Tension_Code(m_obs)`.
 * `path_length`: typical number of moves required to reach such codes when they are reached.
-* `sensitivity_index`: how much `reach_rate` and `path_length` change when local move rules or initial ensembles are moderately varied.
+* `sensitivity_index`: how much `reach_rate` and `path_length` change when local move rules or initial ensembles are moderately varied within the encoding class.
 
-*Falsification conditions:*
+Falsification conditions:
 
 * If, across a broad range of reasonable local move rules and initial ensembles that respect viability and basic chemistry:
 
   * `reach_rate` remains near zero,
   * or can only be made large by highly tuned or biologically implausible parameters,
-    then the current accessibility component `DeltaS_access` and associated move rules are judged misaligned with the origin-of-life context and rejected.
+
+  then the current accessibility component `DeltaS_access` and associated move rules are judged misaligned with the origin-of-life context and rejected at this level.
 
 * If small, arbitrary changes in local move rules produce wild swings in `reach_rate` and `path_length` without clear mechanistic interpretation, the current encoding is considered unstable and inadequate for Q072 at this level.
 
-Again, these falsifications apply to the TU encoding of accessibility tension, not to the possibility of code-origin paths in reality.
+Semantics implementation note:
 
-*Semantics implementation note:*
+* Discrete code changes and continuous error or cost parameters are treated consistently with the hybrid `Field_type: combinatorial_field` and `Semantics: hybrid` declared in the header and clarified in Section 0.
+* No additional semantics category is introduced.
 
-Discrete code changes and continuous error or cost parameters are treated consistently with the hybrid field_type declared in Block 0. No additional semantics category is introduced.
+Boundary note:
 
-*Boundary note:*
-
-Falsifying TU encoding != solving canonical statement. This experiment can show that a particular choice of local moves and accessibility tension is not a good model for Q072, but it does not reconstruct the actual history of the genetic code.
+* Falsifying a particular choice of accessibility tension and local move rules in this experiment does not settle the real history of the genetic code.
+* It only shows that a specific encoding inside the Q072 encoding class is not adequate. Other encodings may still be viable, and the canonical biological problem remains open.
 
 ---
 
@@ -769,7 +880,7 @@ We outline module patterns that can reuse Q072 structures without exposing any d
 
 3. `TU_CodeObserver`
 
-   * Role: an observer that extracts simplified code, error, and cost summaries from model-internal states for use by CodeTensionHead.
+   * Role: an observer that extracts simplified code, error, and cost summaries from model-internal states for use by `CodeTensionHead`.
    * Interface:
 
      * Input: internal embeddings corresponding to sequences, codon tables, or descriptive text.
@@ -785,75 +896,80 @@ We propose an evaluation harness to test AI systems augmented with Q072 modules.
 
      * known proposals for the origin of the genetic code,
      * comparative performance of alternative codes,
-     * and trade-offs between chemical constraints and selection.
+     * and tradeoffs between chemical constraints and selection.
 
 2. Conditions
 
    * Baseline condition:
 
      * The AI model operates without Q072 modules and without explicit tension-aware guidance.
+
    * TU condition:
 
-     * The model uses CodeTensionHead and TU_CodeObserver as auxiliary components, and can access tension signals when reasoning about code origin.
+     * The model uses `CodeTensionHead` and `TU_CodeObserver` as auxiliary components, and can access tension signals when reasoning about code origin.
 
 3. Metrics
 
    * Explanation coherence:
 
-     * Does the model maintain a consistent view of which mechanisms are invoked and which constraints they satisfy.
+     * Does the model maintain a consistent view of which mechanisms are invoked and which constraints they satisfy?
+
    * Tension awareness:
 
-     * Does the model correctly identify when a proposed mechanism implies high tension (for example, extreme fine tuning or inaccessible trajectories).
+     * Does the model correctly identify when a proposed mechanism implies high tension, for example extreme fine tuning or inaccessible trajectories?
+
    * Counterfactual clarity:
 
-     * Does the model keep World T and World F narratives clearly separated when prompted.
+     * Does the model keep World T and World F narratives clearly separated when prompted?
 
 ### 7.4 60-second reproduction protocol
 
 A minimal protocol for external users to experience the effect of Q072-style encoding in an AI system.
 
-* Baseline setup:
+Baseline setup:
 
-  * Prompt:
+* Prompt:
 
-    * Ask the AI to explain why the standard genetic code looks non-random and to list main hypotheses for its origin, without any reference to tension or WFGY.
-  * Observation:
+  * Ask the AI to explain why the standard genetic code looks nonrandom and to list main hypotheses for its origin, without any reference to tension, TU, or WFGY.
 
-    * Record whether the explanation:
+* Observation:
 
-      * mixes mechanisms without discussing constraints,
-      * fails to distinguish rare coincidence from robust processes,
-      * or ignores alternative codes.
+  * Record whether the explanation:
 
-* TU encoded setup:
+    * mixes mechanisms without discussing constraints,
+    * fails to distinguish rare coincidence from robust processes,
+    * or ignores alternative codes and code-space structure.
 
-  * Prompt:
+TU encoded setup:
 
-    * Ask the same question but add instructions:
+* Prompt:
 
-      * to treat error robustness, metabolic cost, and accessibility as separate tension components,
-      * to explicitly compare low-tension and high-tension interpretations.
+  * Ask the same question but add instructions:
 
-  * Observation:
+    * to treat error robustness, metabolic cost, and accessibility as separate tension components,
+    * to explicitly compare low-tension and high-tension interpretations,
+    * and to indicate where the standard code might lie in this tension landscape.
 
-    * Record whether the explanation:
+* Observation:
 
-      * clearly distinguishes mechanism classes,
-      * states which constraints each mechanism addresses,
-      * and identifies where the standard code lies in a conceptual tension landscape.
+  * Record whether the explanation:
 
-* Comparison metric:
+    * clearly distinguishes mechanism classes,
+    * states which constraints each mechanism addresses,
+    * and identifies where tension remains high or where it is plausibly low.
 
-  * Use a short rubric:
+Comparison metric:
 
-    * clarity of mechanism categorization,
-    * explicit handling of constraints,
-    * and explicit recognition of unresolved high-tension aspects.
+* Use a short rubric:
 
-* What to log:
+  * clarity of mechanism categorization,
+  * explicit handling of constraints,
+  * explicit recognition of unresolved high-tension aspects.
 
-  * Baseline and TU prompts, full responses, and any tension component estimates from CodeTensionHead.
-  * Logs allow independent inspection of how Q072 modules influenced the reasoning process.
+What to log:
+
+* Baseline and TU prompts, full responses, and any tension component estimates from `CodeTensionHead`.
+* These logs allow independent inspection of how Q072 modules influenced the reasoning process without exposing any deep TU rules.
 
 ---
 
@@ -866,35 +982,44 @@ This block describes reusable components produced by Q072 and how they transfer 
 1. ComponentName: `CodeOrigin_TensionFunctional`
 
    * Type: functional
+
    * Minimal interface:
 
      * Inputs: summaries of code mappings, error models, cost profiles, and basic accessibility descriptors.
      * Output: scalar `Tension_Code` and component scores `DeltaS_error`, `DeltaS_cost`, `DeltaS_access`.
+
    * Preconditions:
 
      * Inputs must describe complete codes under fixed viability and structural constraints.
+     * All quantities must be compatible with the encoding class specified in Section 3.7.
 
 2. ComponentName: `CodeSpace_MoveRules_Template`
 
    * Type: experiment_pattern
+
    * Minimal interface:
 
      * Inputs: definitions of allowed local moves in code space, constraints for viability, and initial code ensembles.
      * Output: trajectories or distributions over codes, with associated tension values along paths.
+
    * Preconditions:
 
-     * Move rules must preserve basic structural features (for example codon counts and essential amino acids).
+     * Move rules must preserve basic structural features, such as codon counts and essential amino acids.
+     * Move rules must be specified independently of the observed code's tension score.
 
 3. ComponentName: `CodeLibrary_FairEnsemble`
 
    * Type: field / ensemble descriptor
+
    * Minimal interface:
 
      * Inputs: structural constraints and chemical bias rules.
      * Output: description of a finite ensemble of codes and a sampling procedure consistent with fairness constraints.
+
    * Preconditions:
 
      * Ensemble definitions must be independent of performance metrics for the standard code.
+     * Ensemble construction must be auditable and fixed before evaluating `Tension_Code(m_obs)`.
 
 ### 8.2 Direct reuse targets
 
@@ -903,9 +1028,11 @@ This block describes reusable components produced by Q072 and how they transfer 
    * Reused components:
 
      * `CodeOrigin_TensionFunctional`, `CodeSpace_MoveRules_Template`.
+
    * Why it transfers:
 
      * Evolutionary complexity over deep time depends on which regions of code space are reachable and how code properties constrain evolvability.
+
    * What changes:
 
      * The emphasis shifts from origin scenarios to long-term diversification under a fixed or slowly changing code.
@@ -915,9 +1042,11 @@ This block describes reusable components produced by Q072 and how they transfer 
    * Reused components:
 
      * `CodeLibrary_FairEnsemble`.
+
    * Why it transfers:
 
      * Immune receptor repertoires can be seen as coding systems under robustness and diversity constraints.
+
    * What changes:
 
      * The alphabet and move rules differ, but the idea of fair ensembles under structural constraints remains the same.
@@ -927,9 +1056,11 @@ This block describes reusable components produced by Q072 and how they transfer 
    * Reused components:
 
      * `CodeOrigin_TensionFunctional`.
+
    * Why it transfers:
 
      * The functional gives a concrete example where information encoding trades off robustness, cost, and accessibility, which can be mapped to information-thermodynamic questions.
+
    * What changes:
 
      * Inputs now describe more abstract codes or communication protocols rather than genetic codes, but tension components remain analogous.
@@ -938,13 +1069,13 @@ This block describes reusable components produced by Q072 and how they transfer 
 
 ## 9. TU roadmap and verification levels
 
-This block explains how Q072 is positioned along the TU verification ladder and what the next measurable steps are.
+This block explains how Q072 is positioned along the TU verification ladder and what the next measurable steps are, within the encoding class of Section 3.7.
 
 ### 9.1 Current levels
 
 * E_level: E1
 
-  * A coherent effective-layer encoding of the origin-of-code problem has been specified.
+  * A coherent effective-layer encoding of the origin-of-code problem has been specified for an admissible encoding class.
   * Tension components `DeltaS_error`, `DeltaS_cost`, `DeltaS_access`, and `Tension_Code` are defined relative to fixed reference libraries and move ensembles.
   * At least two discriminating experiment patterns with clear falsification conditions have been outlined.
 
@@ -955,17 +1086,18 @@ This block explains how Q072 is positioned along the TU verification ladder and 
     * main mechanism classes (stereochemical, frozen accident, coevolutionary, mixed),
     * low-tension and high-tension worlds,
     * and roles of error robustness, cost feasibility, and accessibility.
+
   * Counterfactual worlds are described in terms of observable tension patterns without invoking hidden TU generative rules.
 
 ### 9.2 Next measurable step toward E2
 
-To advance Q072 from E1 to E2, at least one of the following should be implemented:
+To advance Q072 from E1 to E2, at least one of the following should be implemented inside a concrete encoding `E`:
 
 1. A concrete numerical study that:
 
    * instantiates `Library_random` and `Library_chem_constrained` under clearly stated constraints,
-   * computes `Tension_Code` for the standard code and for all library members,
-   * and publishes the resulting distributions and ranks as open data.
+   * computes `Tension_Code` for the standard code and for all library members using a fixed choice of `D`, `F`, and `W`,
+   * and publishes the resulting distributions and ranks as open data with full configuration records.
 
 2. A simulation of code-space dynamics that:
 
@@ -973,7 +1105,7 @@ To advance Q072 from E1 to E2, at least one of the following should be implement
    * generates trajectories from simple starting codes,
    * and compares accessibility of low-tension regions with and without chemically informed constraints.
 
-Both steps must be documented in a way that allows independent reproduction.
+Both steps must be documented in a way that allows independent reproduction and audit of the encoding choices.
 
 ### 9.3 Next measurable step toward N2
 
@@ -982,12 +1114,12 @@ To advance Q072 from N1 to N2, at least one of the following should be achieved:
 1. A standardized explanatory template that:
 
    * maps any proposed code-origin mechanism into contributions to `DeltaS_error`, `DeltaS_cost`, and `DeltaS_access`,
-   * and clearly flags where high consistency tension remains.
+   * and clearly flags where high consistency tension remains and which parts of the code are left unexplained.
 
 2. A small set of case studies:
 
    * where different origin narratives are analyzed side by side using the same tension framework,
-   * highlighting which aspects of the code each narrative explains and which remain under high tension.
+   * highlighting which aspects of the code each narrative explains, which aspects remain under high tension, and how sensitive these conclusions are to encoding choices.
 
 ### 9.4 Long-term role in the TU program
 
@@ -1020,23 +1152,21 @@ In the Tension Universe view, instead of trying to replay early Earth in full de
 * do we see our code as a natural, low-tension outcome,
 * or as a fragile, high-tension coincidence?
 
-To do this, we:
+To do this, we imagine a space of possible codes. For each code we measure:
 
-1. Imagine a space of possible codes.
+1. How bad typical errors are, which we call error robustness.
 
-2. For each code, measure:
+2. How expensive the amino acids are on average, which we call cost feasibility.
 
-   * how bad typical errors are (error robustness),
-   * how expensive the amino acids are on average (cost feasibility),
-   * how easy it is to move from one code to another by small changes (accessibility).
+3. How easy it is to move from one code to another by small changes without breaking the system, which we call accessibility.
 
-3. Combine these into a single "tension score" for each code.
+We then combine these into a single tension score for each code.
 
-We then consider two kinds of worlds:
+We consider two kinds of worlds:
 
 * In a low-tension world:
 
-  * our code scores well but not unbelievably well,
+  * our code scores well but not impossibly well,
   * many paths in code space can reach codes with similar tension,
   * and different broad mechanisms point toward the same region of good codes.
 
@@ -1046,10 +1176,51 @@ We then consider two kinds of worlds:
   * simple paths rarely reach anything as good or better,
   * and different plausible mechanisms do not agree on why this code should appear.
 
-This framework does not tell us exactly how the genetic code originated. It does not reconstruct the full history of early life. What it does provide is:
+This framework does not tell us exactly how the genetic code originated, and it does not claim to solve the open problem. What it does provide is:
 
 * a precise way to express what it would mean for an explanation to be robust and natural,
 * a way to test whether particular models or parameter choices make the code look low-tension or high-tension,
 * and a set of reusable tools for other problems where complex codes must match physical and evolutionary constraints.
 
-In the Tension Universe project, Q072 is the reference problem for all such biological coding questions.
+In the Tension Universe project, Q072 is the reference problem for all such biological coding questions at the effective layer.
+
+---
+
+## Tension Universe effective-layer footer
+
+### Scope of claims
+
+* This page is part of the WFGY / Tension Universe S-problem collection.
+* The goal of this document is to specify an effective-layer encoding of the origin-of-code problem for the genetic code.
+* It does not claim to solve the canonical origin-of-code problem in molecular evolution or origin-of-life research.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the corresponding open biological problem has been solved.
+
+### Effective-layer boundary
+
+* All objects used here (state spaces such as `M_code`, observables, invariants, tension scores, counterfactual worlds) live at the effective layer of the TU framework.
+* They are defined only up to coarse-grained summaries and encoding choices, as described in Section 3.7.
+* No explicit mapping from raw biochemical or evolutionary data to internal TU fields is specified.
+* No deep TU axioms, generative rules, or equations of motion are exposed or relied upon in this document.
+
+### Encoding and fairness
+
+* Any concrete instantiation of this page requires selecting an admissible encoding `E = (D, F, W, L)` from the encoding class defined in Section 3.7.
+* All such selections must be fixed and recorded before evaluating `Tension_Code(m_obs)` for the observed genetic code or for any particular historical scenario.
+* Changing `D`, `F`, `W`, or `L` in response to observed tension values defines a new encoding that must be treated as a separate instance and re-evaluated from scratch.
+* These requirements follow the TU Encoding and Fairness Charter and are intended to prevent hidden tuning that would trivialize tension-based claims.
+
+### Falsifiability and experiments
+
+* Section 6 outlines experiment patterns that can falsify or refine specific Q072 encodings at the effective layer.
+* Falsification of a particular encoding shows that its way of measuring or organizing consistency tension is inadequate for this problem.
+* Such falsification does not settle the biological origin-of-code question and does not constrain other TU problems.
+* Successful experiments increase confidence that the chosen encoding captures something meaningful about code-origin constraints but do not amount to a proof of any deep TU claim.
+
+### Relation to TU charters
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
