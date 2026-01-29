@@ -15,8 +15,24 @@ Status: Open
 Semantics: hybrid
 E_level: E1
 N_level: N1
-Last_updated: 2026-01-25
-````
+Last_updated: 2026-01-29
+```
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the effective layer of the Tension Universe (TU) framework:
+
+* We only specify state spaces, observables, mismatch fields, tension scores, and counterfactual worlds at a coarse semantic level.
+* We do not introduce any new axiom system, bottom layer generating rules, or constructive procedures for TU itself.
+* We do not provide any explicit mapping from raw biological data or microphysical states to internal TU fields. We only assume that TU compatible world models exist that can realize the patterns described here.
+* We do not claim to solve the canonical scientific problem of aging, nor to identify a unique microscopic mechanism. All claims are about the structure and behavior of an effective encoding of aging related tension.
+* All experiments and falsification criteria in this document apply to concrete encoding instances
+  `E* = (D*, F*, W*, L*)` as defined in Section 3.6. Rejecting such an instance does not falsify TU as a whole, nor any canonical biological theory of aging.
+* All fairness and stability conditions are to be interpreted at the level of encoding design. They constrain how `Tension_age` and related quantities may be used, not the underlying biology itself.
+
+Readers should treat this page as an effective layer specification of how TU represents aging tension, not as a claim about the ultimate microscopic truth of why organisms age.
 
 ---
 
@@ -214,7 +230,7 @@ We do not specify:
 * how fine grained the underlying physical system is,
 * how the TU core constructs `M`.
 
-We only assume that for each system and time window of interest, there exist states in `M` that encode the relevant summaries.
+We only assume that for each system and time window of interest, there exist states in `M` that encode the relevant summaries in a way that can be applied consistently.
 
 ### 3.2 Core observables
 
@@ -268,7 +284,8 @@ Mortality_hazard(m) >= 0
 These observables can be instantiated differently for different systems. The effective layer only requires that:
 
 * they are defined and finite for states in the regular domain,
-* they can be compared across states of the same system.
+* they can be compared across states of the same system,
+* they respect the hybrid semantic type declared in the metadata.
 
 ### 3.3 Mismatch fields
 
@@ -315,6 +332,8 @@ Each mismatch is defined with respect to a reference class of low tension trajec
 * the reference bands are defined independently of the specific state `m` being evaluated,
 * they are fixed once for a given study or encoding and not tuned afterwards to fit outcomes.
 
+The observable `Inflammation_noise(m)` is treated as an input that can influence `DeltaS_damage(m)` and `DeltaS_risk_tail(m)` inside a concrete encoding instance `E*`. In the base specification for Q075 it does not introduce a separate top level mismatch term, but encodings are allowed to document how chronic inflammation contributes to damage and tail risk bands.
+
 ### 3.4 Combined aging mismatch and tension tensor
 
 We define a combined aging mismatch:
@@ -340,7 +359,7 @@ These weights are part of the encoding design and must be:
 
 * chosen before running experiments for a given application,
 * justified based on domain knowledge or explicit modeling goals,
-* kept fixed across the comparison of different states or interventions.
+* kept fixed across the comparison of different states or interventions within the same encoding instance.
 
 We then embed `DeltaS_age(m)` into an effective tension tensor:
 
@@ -359,6 +378,8 @@ We do not specify the detailed form or origin of `S_i`, `C_j`, `lambda`, or `kap
 
 * for each `m` in the regular domain, `T_ij(m)` is well defined and finite for the indices considered,
 * `DeltaS_age(m)` enters as a multiplicative factor, so that high mismatch translates into high tension in any sensitive direction.
+
+In the header metadata this structure is summarized as a `risk_tail_tension` instance, emphasizing that late life hazard tails are treated as a primary target of the encoding.
 
 ### 3.5 Singular set and domain restrictions
 
@@ -383,7 +404,54 @@ We restrict aging tension analysis to the regular domain:
 M_reg = M \ S_sing
 ```
 
-Any attempt to interpret `DeltaS_age(m)` for `m` in `S_sing` is treated as “out of domain” and not as evidence about aging mechanisms. Experiments and protocols in later blocks will explicitly state that they operate only on `M_reg`.
+Any attempt to interpret `DeltaS_age(m)` for `m` in `S_sing` is treated as “out of domain” and not as evidence about aging mechanisms. Experiments and protocols in later blocks explicitly state that they operate only on `M_reg`.
+
+### 3.6 Encoding class and fairness constraints
+
+To separate TU structure from particular implementations, we define an encoding class for Q075:
+
+```txt
+E = (D, F, W, L)
+```
+
+where:
+
+* `D` is a data to state mapping that turns raw measurements (for example biomarkers, functional tests, survival data, model outputs) into states `m` in `M_reg` along an age, cycle, or usage axis.
+
+* `F` is a family of functionals that map observables to mismatch quantities and tension scores: `DeltaS_damage`, `DeltaS_repair`, `DeltaS_reserve`, `DeltaS_risk_tail`, and `DeltaS_age`, together with any auxiliary quantities needed to evaluate them.
+
+* `W` is the collection of weights, bands, and thresholds used by the encoding, including:
+
+  * the weights `w_damage`, `w_repair`, `w_reserve`, `w_tail`,
+  * lower and upper bounds for safe damage, repair, and reserve bands,
+  * reference hazard and tail risk bands that define low tension aging.
+
+* `L` specifies the allowed system and data types for which the encoding is declared valid, such as:
+
+  * specific species or model organisms,
+  * classes of engineered systems,
+  * particular cohorts or datasets.
+
+A concrete encoding instance is written as:
+
+```txt
+E* = (D*, F*, W*, L*)
+```
+
+In any experiment or analysis in this document, the following fairness constraints apply:
+
+* For a fixed study, `E*` must be chosen and documented before inspecting the comparative results that will be used for falsification.
+
+* Within a given application of Q075, the same `E*` must be used across all groups, species, or interventions that are being compared. It is not permitted to adjust weights or reference bands separately for different arms in order to improve apparent performance.
+
+* Refinements of an encoding, such as adding more biomarkers or slightly increasing resolution, must either:
+
+  * be justified as part of a controlled refinement of `E*`, or
+  * be recorded as a new encoding instance `E'` that is then evaluated separately.
+
+* Cross species or cross system comparisons are only meaningful when all systems lie inside the same `L*` domain, or when explicit mapping rules between domains are specified as part of `D*` and `F*`.
+
+Throughout Sections 4–8 we assume that all states `m` and all tension values are computed under a fixed admissible encoding instance `E*` unless stated otherwise.
 
 ---
 
@@ -405,7 +473,7 @@ with the properties:
 * `Tension_age(m) = 0` only in idealized low tension states,
 * `Tension_age(m)` increases when damage accumulates, repair capacity fails to keep up, reserve shrinks, or tail risks grow.
 
-This is a normalized scalar that summarizes how far a state is from a chosen low tension aging reference band.
+This is a normalized scalar that summarizes how far a state is from a chosen low tension aging reference band. In the header metadata this is recorded as a `risk_tail_tension` instance, since changes in late life tail risks are treated as a primary aging signature.
 
 ### 4.2 Low tension aging principle
 
@@ -466,27 +534,27 @@ Characteristics:
 
 1. Damage and repair balance
 
-* For world representing states `m_T(age)` across a long age interval, `DeltaS_damage(m_T)` remains small and is matched by `DeltaS_repair(m_T)` staying near zero.
-* Repair capacity does not drift far below the levels needed to keep damage in safe bands.
+   * For world representing states `m_T(age)` across a long age interval, `DeltaS_damage(m_T)` remains small and is matched by `DeltaS_repair(m_T)` staying near zero.
+   * Repair capacity does not drift far below the levels needed to keep damage in safe bands.
 
 2. Functional reserve
 
-* `DeltaS_reserve(m_T)` remains small, indicating that functional reserves stay comfortably above critical thresholds.
+   * `DeltaS_reserve(m_T)` remains small, indicating that functional reserves stay comfortably above critical thresholds.
 
 3. Tail risks
 
-* `DeltaS_risk_tail(m_T)` is low and does not grow sharply with age in the early and mid segments of the lifespan.
-* Mortality hazard curves are flat or only slowly increasing for a long interval.
+   * `DeltaS_risk_tail(m_T)` is low and does not grow sharply with age in the early and mid segments of the lifespan.
+   * Mortality hazard curves are flat or only slowly increasing for a long interval.
 
 4. Global tension
 
-* The combined tension satisfies
+   * The combined tension satisfies
 
-  ```txt
-  Tension_age(m_T(age)) <= epsilon_age
-  ```
+     ```txt
+     Tension_age(m_T(age)) <= epsilon_age
+     ```
 
-  for ages within the negligible senescence zone, with `epsilon_age` small and not growing with simple refinements of data.
+     for ages within the negligible senescence zone, with `epsilon_age` small and not growing with simple refinements of data.
 
 ### 5.2 World F: conventional aging world
 
@@ -496,28 +564,28 @@ Characteristics:
 
 1. Damage and repair imbalance
 
-* `DeltaS_damage(m_F(age))` grows with age as damage accumulates in multiple subsystems.
-* `DeltaS_repair(m_F(age))` grows because repair capacity declines, becomes mis regulated, or cannot keep up with accumulated damage.
+   * `DeltaS_damage(m_F(age))` grows with age as damage accumulates in multiple subsystems.
+   * `DeltaS_repair(m_F(age))` grows because repair capacity declines, becomes mis regulated, or cannot keep up with accumulated damage.
 
 2. Functional reserve erosion
 
-* `DeltaS_reserve(m_F(age))` increases as reserves for critical functions (for example cardiac, cognitive, immune) shrink.
-* There is a progressive approach to thresholds beyond which small perturbations cause failures.
+   * `DeltaS_reserve(m_F(age))` increases as reserves for critical functions (for example cardiac, cognitive, immune) shrink.
+   * There is a progressive approach to thresholds beyond which small perturbations cause failures.
 
 3. Tail risk amplification
 
-* `DeltaS_risk_tail(m_F(age))` rises, indicating growing mass of hazard in high risk regimes.
-* Mortality hazard curves steepen in late life, producing a heavy tail of catastrophic events.
+   * `DeltaS_risk_tail(m_F(age))` rises, indicating growing mass of hazard in high risk regimes.
+   * Mortality hazard curves steepen in late life, producing a heavy tail of catastrophic events.
 
 4. Global tension
 
-* For some age range, we have
+   * For some age range, we have
 
-  ```txt
-  Tension_age(m_F(age)) >= delta_age
-  ```
+     ```txt
+     Tension_age(m_F(age)) >= delta_age
+     ```
 
-  with `delta_age > 0` that cannot be eliminated without altering architecture or constraints, not just surface level parameters.
+     with `delta_age > 0` that cannot be eliminated without altering architecture or constraints, not just surface level parameters.
 
 ### 5.3 Optional worlds: premature and delayed aging
 
@@ -555,15 +623,23 @@ This block specifies experiments and protocols that test the coherence and usefu
 * validate or falsify specific aging tension encodings,
 * check whether `Tension_age` behaves in a stable and interpretable way.
 
+In each experiment we assume a fixed admissible encoding instance:
+
+```txt
+E* = (D*, F*, W*, L*)
+```
+
+as defined in Section 3.6. All states `m` and all tension scores are computed under this fixed instance, unless explicitly stated otherwise.
+
 ### Experiment 1: Longitudinal aging tension profiling in a cohort
 
-*Goal:*
+**Goal**
 
 Test whether `Tension_age(m)` tracks health span and survival in a longitudinal cohort and whether the encoding is stable under reasonable refinements.
 
-*Setup:*
+**Setup**
 
-* Take a human or animal cohort with repeated measures over time.
+* Take a human or animal cohort with repeated measures over time that fall inside the domain `L*` of the chosen encoding instance `E*`.
 
 * For each time point, compute derived summaries for:
 
@@ -572,12 +648,12 @@ Test whether `Tension_age(m)` tracks health span and survival in a longitudinal 
   * functional reserves (for example grip strength, cognitive scores, organ function tests),
   * current mortality hazard estimates or risk scores.
 
-* Define an encoding that maps these summaries into states `m(t)` in `M_reg`.
+* Use `D*` to map these summaries into states `m(t)` in `M_reg`.
 
-*Protocol:*
+**Protocol**
 
-1. For each individual and time point, build `m(t)` using fixed encoding rules specified before analysis.
-2. Compute `DeltaS_damage(m(t))`, `DeltaS_repair(m(t))`, `DeltaS_reserve(m(t))`, `DeltaS_risk_tail(m(t))`, and `Tension_age(m(t))`.
+1. For each individual and time point, build `m(t)` using the fixed data mapping `D*`.
+2. Use `F*` and `W*` to compute `DeltaS_damage(m(t))`, `DeltaS_repair(m(t))`, `DeltaS_reserve(m(t))`, `DeltaS_risk_tail(m(t))`, and `Tension_age(m(t))`.
 3. Track trajectories of `Tension_age` over time for each individual.
 4. Compare `Tension_age` trajectories against:
 
@@ -585,109 +661,109 @@ Test whether `Tension_age(m)` tracks health span and survival in a longitudinal 
    * functional decline events,
    * survival or major adverse events.
 
-*Metrics:*
+**Metrics**
 
 * Correlation between `Tension_age` levels and risk of near term events.
 * Separation of high and low risk groups based on `Tension_age` at given ages.
-* Stability of results under reasonable refinements of encoding (for example adding more biomarkers but keeping the same structure).
+* Stability of results under reasonable refinements of `E*` that keep its structure but slightly increase resolution, such as adding more biomarkers.
 
-*Falsification conditions:*
+**Falsification conditions**
 
-* If `Tension_age` fails to correlate with health span and survival in a robust way across multiple cohorts and encoding refinements, then the current Q075 encoding is rejected at the effective layer.
-* If small, justified changes in the encoding rules completely invert which trajectories are high or low tension without corresponding biological justification, the encoding is considered unstable and is rejected.
+* If `Tension_age` fails to correlate with health span and survival in a robust way across multiple cohorts and encoding refinements that stay within the same encoding class, then the particular instance `E*` is rejected at the effective layer.
+* If small, justified changes in `D*` or `F*` completely invert which trajectories are high or low tension without corresponding biological justification, `E*` is considered unstable and is rejected or must be replaced by a differently documented instance.
 
-*Semantics implementation note:*
+**Semantics implementation note**
 
-The state space is treated as hybrid: continuous fields for biomarker levels and functional reserves, with discrete indicators for events (for example disease onset, step changes in treatment). The encoding must map these into a coherent hybrid structure without changing the definition of `DeltaS_age`.
+The state space is treated as hybrid: continuous fields for biomarker levels and functional reserves, with discrete indicators for events (for example disease onset, step changes in treatment). The encoding must map these into a coherent hybrid structure consistent with the semantic type declared in the header metadata.
 
-*Boundary note:*
+**Boundary note**
 
-Falsifying TU encoding != solving canonical statement. This experiment can reject a given aging tension encoding but does not by itself identify the unique fundamental mechanisms of aging.
+Falsifying a specific `E*` for Q075 does not solve the canonical statement about aging and does not falsify TU as a whole. It only shows that this instance is not an adequate effective encoding of aging tension for the systems and data considered.
 
 ---
 
 ### Experiment 2: Intervention response and tension shift
 
-*Goal:*
+**Goal**
 
-Test whether interventions known to extend health span or lifespan produce consistent and interpretable shifts in `Tension_age`.
+Test whether interventions known to extend health span or lifespan produce consistent and interpretable shifts in `Tension_age` under a fixed encoding instance `E*`.
 
-*Setup:*
+**Setup**
 
-* Select interventions with evidence of health span or lifespan extension in model organisms or human observational data (for example caloric restriction in animals, certain drugs in trials).
+* Select interventions with evidence of health span or lifespan extension in model organisms or human observational data (for example caloric restriction in animals, certain drugs in trials) that are compatible with the domain `L*`.
 * For each intervention and control group, obtain pre and post intervention measures similar to those in Experiment 1.
 
-*Protocol:*
+**Protocol**
 
-1. Build states `m_pre` and `m_post` for individuals or groups using the same encoding as in Experiment 1.
-2. Compute `Tension_age(m_pre)` and `Tension_age(m_post)` for all subjects.
+1. Use the same `D*` as in Experiment 1 to build states `m_pre` and `m_post` for individuals or groups.
+2. Use `F*` and `W*` to compute `Tension_age(m_pre)` and `Tension_age(m_post)` for all subjects.
 3. Compare distributions of `Tension_age` changes between intervention and control groups.
-4. Stratify by baseline `Tension_age` to see if high tension individuals respond differently.
+4. Stratify by baseline `Tension_age` to see if high tension individuals respond differently from low tension ones.
 
-*Metrics:*
+**Metrics**
 
 * Average change in `Tension_age` for intervention versus control.
 * Fraction of individuals with tension reduction above a meaningful threshold.
 * Consistency of tension shifts with observed changes in health span markers.
 
-*Falsification conditions:*
+**Falsification conditions**
 
-* If interventions consistently shown to extend health span or lifespan fail to produce any reduction in `Tension_age` under reasonable parameters, the encoding is misaligned and must be revised.
-* If harmful or clearly pro aging exposures are assigned large reductions in `Tension_age`, the encoding is strongly misaligned and is rejected.
+* If interventions consistently shown to extend health span or lifespan fail to produce any reduction in `Tension_age` under reasonable parameters of `E*`, the encoding instance is misaligned with aging phenomenology and must be revised or replaced.
+* If harmful or clearly pro aging exposures are assigned large reductions in `Tension_age` by `F*` and `W*`, the encoding is strongly misaligned and is rejected.
 
-*Semantics implementation note:*
+**Semantics implementation note**
 
-The hybrid nature of states is preserved: continuous changes in metrics and discrete intervention events are encoded in a way that does not alter the structural meaning of `DeltaS_age`.
+The hybrid nature of states is preserved: continuous changes in metrics and discrete intervention events are encoded in a way that does not alter the structural meaning of `DeltaS_age`. The same semantic conventions as in the header metadata must be respected.
 
-*Boundary note:*
+**Boundary note**
 
-Falsifying TU encoding != solving canonical statement. Success or failure in mapping interventions to tension shifts only evaluates the encoding, not the full truth about aging mechanisms.
+Falsifying TU encoding instance `E*` in this sense does not solve the canonical statement. Success or failure in mapping interventions to tension shifts only evaluates the chosen encoding, not the full truth about aging mechanisms.
 
 ---
 
 ### Experiment 3: Cross species and model organism comparison
 
-*Goal:*
+**Goal**
 
-Check whether a common Q075 encoding can distinguish between species and strains with different lifespans and aging patterns.
+Check whether a common Q075 encoding instance `E*` can distinguish between species and strains with different lifespans and aging patterns.
 
-*Setup:*
+**Setup**
 
 * Select several species with different lifespans (for example short lived rodents, longer lived mammals) and strains with altered aging (for example long lived mutants, progeroid models).
-* Obtain comparable summaries of damage, repair, reserve, and hazard for each.
+* Obtain comparable summaries of damage, repair, reserve, and hazard for each species and strain that lie inside the domain `L*` of `E*`.
 
-*Protocol:*
+**Protocol**
 
-1. Define a common encoding that maps measures from each species into states `m_species(age)` in `M_reg`.
-2. Compute `Tension_age(m_species(age))` across the lifespan for each species and strain.
+1. Define a common data mapping `D*` that maps measures from each species into states `m_species(age)` in `M_reg`. Any species specific adjustments must be documented as part of `D*` rather than as implicit changes to `F*` or `W*`.
+2. Use `F*` and `W*` to compute `Tension_age(m_species(age))` across the lifespan for each species and strain.
 3. Compare trajectory shapes:
 
    * levels and slopes of `Tension_age`,
    * onset of high tension regimes.
 
-*Metrics:*
+**Metrics**
 
 * Degree to which known long lived species or strains exhibit delayed or reduced `Tension_age` compared to short lived ones.
 * Alignment of `Tension_age` patterns with observed survival and health span data.
 
-*Falsification conditions:*
+**Falsification conditions**
 
-* If known long lived species or strains consistently show higher `Tension_age` than short lived controls across age ranges, under reasonable encodings, the current encoding is rejected.
-* If encoding must be tuned separately for each species in a way that destroys cross species comparability, Q075’s claim of a shared aging tension structure is weakened and may be rejected for that encoding.
+* If known long lived species or strains consistently show higher `Tension_age` than short lived controls across age ranges, under reasonable choices of `E*` that respect fairness constraints, the current encoding instance is rejected as a candidate for cross species universality.
+* If encoding must be tuned separately for each species by changing `W*` in ways that destroy cross species comparability, Q075’s claim of a shared aging tension structure for that `E*` is weakened and may be rejected for that application.
 
-*Semantics implementation note:*
+**Semantics implementation note**
 
-The hybrid structure is used to accommodate species specific discrete events (for example reproductive transition) while keeping continuous trends for damage, repair, and reserve.
+The hybrid structure is used to accommodate species specific discrete events (for example reproductive transition) while keeping continuous trends for damage, repair, and reserve. The semantics remain hybrid as declared in the header metadata.
 
-*Boundary note:*
+**Boundary note**
 
-Falsifying TU encoding != solving canonical statement. This experiment tests the universality of a particular aging tension encoding, not the absolute truth of any one mechanism.
+Falsifying a particular cross species encoding instance of Q075 tests the universality of that aging tension encoding. It does not settle the canonical aging problem or the broader TU framework.
 
 ---
 
 ## 7. AI and WFGY engineering spec
 
-This block describes how Q075 can be used as an engineering module in AI systems under WFGY, at the effective layer.
+This block describes how Q075 can be used as an engineering module in AI systems under WFGY, at the effective layer. All references to tension values and mismatches assume a fixed encoding instance `E*` when evaluated on concrete data.
 
 ### 7.1 Training signals
 
@@ -696,22 +772,24 @@ We define several training signals derived from Q075 observables.
 1. `signal_damage_repair_balance`
 
    * Definition: proportional to `DeltaS_damage(m) + DeltaS_repair(m)` in contexts where aging and maintenance trade offs are discussed.
-   * Purpose: penalize internal states that imply worsening damage with insufficient repair without acknowledging increased risk.
+   * Purpose: penalize internal states that imply worsening damage with insufficient repair without acknowledging increased risk or reduced resilience.
 
 2. `signal_reserve_vs_risk`
 
-   * Definition: proportional to `DeltaS_reserve(m) + DeltaS_risk_tail(m)` when models claim high functional reserve but also high tail risks, or vice versa.
+   * Definition: proportional to `DeltaS_reserve(m) + DeltaS_risk_tail(m)` when models claim high functional reserve but also high tail risks, or when claims of low risk are paired with obviously thin reserves.
    * Purpose: encourage consistency between statements about resilience and implied risk of failure.
 
 3. `signal_lifespan_trajectory_consistency`
 
    * Definition: measures inconsistency between an implied lifespan or health span trajectory and the sequence of `Tension_age` scores along that trajectory.
-   * Purpose: discourage narratives where claimed outcomes do not match the implied tension evolution.
+   * Purpose: discourage narratives where claimed outcomes do not match the implied evolution of aging tension.
 
 4. `signal_intervention_realism`
 
-   * Definition: evaluates whether proposed interventions produce plausible changes in `DeltaS_damage`, `DeltaS_repair`, `DeltaS_reserve`, and `DeltaS_risk_tail`.
+   * Definition: evaluates whether proposed interventions produce plausible changes in `DeltaS_damage`, `DeltaS_repair`, `DeltaS_reserve`, and `DeltaS_risk_tail` under a fixed `E*`.
    * Purpose: downweight speculative answers that promise large lifespan increases without corresponding tension shifts.
+
+All training signals must be derived from the same encoding instance `E*` when used inside a given model or evaluation run. Mixing signals from different encodings without explicit bridging rules is not permitted.
 
 ### 7.2 Architectural patterns
 
@@ -739,7 +817,7 @@ We outline module patterns that reuse Q075 components.
    * Interface:
 
      * Input: desired constraints, context about system and resources.
-     * Output: ranked classes of interventions and maintenance strategies, with associated tension implications.
+     * Output: ranked classes of interventions and maintenance strategies, with associated qualitative or quantitative tension implications.
 
 ### 7.3 Evaluation harness
 
@@ -759,19 +837,22 @@ We propose an evaluation harness to test AI models augmented with Q075 modules.
    * Baseline condition:
 
      * model answers questions without explicit use of Q075 modules.
+
    * TU condition:
 
-     * model uses `AgingTensionHead` and related signals as auxiliary guidance.
+     * model uses `AgingTensionHead` and related signals as auxiliary guidance, with a fixed encoding instance `E*`.
 
 3. Metrics
 
    * Factual accuracy on established mechanisms and data.
+
    * Internal consistency:
 
      * across age ranges,
      * across different interventions,
      * between predicted biomarkers and predicted outcomes.
-   * Ability to avoid “miracle cure” narratives that have unrealistic tension profiles.
+
+   * Ability to avoid “miracle cure” narratives that have unrealistic tension profiles under `E*`.
 
 ### 7.4 60 second reproduction protocol
 
@@ -786,7 +867,8 @@ A simple protocol to expose Q075’s impact to users.
 
   * Prompt the AI with the same question but add:
 
-    * “Organize your explanation using an aging tension perspective based on damage, repair, functional reserve, and tail risks.”
+    * “Organize your explanation using an aging tension perspective based on damage, repair, functional reserve, and tail risks. Assume a fixed internal aging tension encoding.”
+
   * Optionally allow the AI to output a qualitative `Tension_age` trajectory.
 
 * Comparison metric:
@@ -801,24 +883,26 @@ A simple protocol to expose Q075’s impact to users.
 * What to log:
 
   * prompts and responses,
-  * any `Tension_age` and component scores produced by Q075 related modules,
+  * any `Tension_age` and component scores produced by Q075 related modules for the fixed `E*`,
   * enabling later inspection without revealing TU core rules.
 
 ---
 
 ## 8. Cross problem transfer template
 
-This block describes reusable components produced by Q075 and how they transfer to other BlackHole problems.
+This block describes reusable components produced by Q075 and how they transfer to other BlackHole problems. All transfers are at the effective layer and do not introduce additional TU bottom layer assumptions.
 
 ### 8.1 Reusable components produced by this problem
 
 1. ComponentName: `DamageRepairBalanceIndex`
 
    * Type: functional
+
    * Minimal interface:
 
      * Inputs: aggregated `Damage_load` and `Repair_capacity` summaries across subsystems.
      * Output: scalar index indicating whether repair can keep up with damage within chosen bands.
+
    * Preconditions:
 
      * damage and repair summaries must be computed consistently for the system and state class being compared.
@@ -826,10 +910,12 @@ This block describes reusable components produced by Q075 and how they transfer 
 2. ComponentName: `LongevityTailRiskFunctional`
 
    * Type: functional
+
    * Minimal interface:
 
      * Inputs: multi point `Mortality_hazard` estimates and related risk measures over time.
      * Output: scalar or low dimensional vector capturing heaviness and shape of late life tail risks.
+
    * Preconditions:
 
      * hazard profiles must be estimated over comparable time scales and contexts.
@@ -837,10 +923,12 @@ This block describes reusable components produced by Q075 and how they transfer 
 3. ComponentName: `AgingTrajectoryDescriptor`
 
    * Type: field
+
    * Minimal interface:
 
      * Inputs: ordered sequence of states `m(age)` or `m(cycle)`.
      * Output: compressed description of `Tension_age` evolution (for example early low plateau, mid life rise, late life saturation).
+
    * Preconditions:
 
      * states must be ordered along a meaningful age, cycle, or usage axis.
@@ -850,9 +938,11 @@ This block describes reusable components produced by Q075 and how they transfer 
 1. Q076 (Principles of regeneration and repair)
 
    * Reused components: `DamageRepairBalanceIndex`, `AgingTrajectoryDescriptor`.
+
    * Why it transfers:
 
      * Q076 compares regenerative episodes with chronic aging trajectories. Both need a clear measure of how repair balances damage and how trajectories change.
+
    * What changes:
 
      * input states emphasize acute repair episodes and local tissue level regeneration rather than whole organism aging.
@@ -860,9 +950,11 @@ This block describes reusable components produced by Q075 and how they transfer 
 2. Q079 (Life extension and human enhancement)
 
    * Reused components: `LongevityTailRiskFunctional`, `AgingTrajectoryDescriptor`.
+
    * Why it transfers:
 
      * Q079 studies interventions that alter lifespan and health span, so it needs explicit descriptors of how tail risks and tension trajectories respond.
+
    * What changes:
 
      * interventions are more speculative, and the focus shifts to scenario comparison under constraints and trade offs.
@@ -870,12 +962,16 @@ This block describes reusable components produced by Q075 and how they transfer 
 3. Q080 (Population longevity and tail risk control)
 
    * Reused components: `LongevityTailRiskFunctional`, `DamageRepairBalanceIndex`.
+
    * Why it transfers:
 
      * Q080 lifts Q075’s concepts to population and policy scales, where tail risk management and average repair resources become central.
+
    * What changes:
 
      * hazard and damage repair summaries become population level statistics rather than individual level quantities.
+
+All reuse is constrained to the effective layer and must reference a documented encoding instance when numerical values of tension or indices are involved.
 
 ---
 
@@ -893,7 +989,8 @@ This block situates Q075 along the TU verification ladder and defines next measu
     * observables for damage, repair, reserve, noise, and hazard,
     * mismatch fields and combined `Tension_age`,
     * singular set and domain restrictions,
-    * at least one detailed experiment with falsification conditions.
+    * an explicit encoding class `E = (D, F, W, L)` and the notion of fixed instances `E*`,
+    * at least one detailed experiment with falsification conditions for such instances.
 
 * N_level: N1
 
@@ -911,21 +1008,22 @@ To move Q075 from E1 to E2, we require concrete implementations:
 
    * Implement a tool that:
 
-     * ingests real or synthetic aging datasets,
-     * constructs states `m_data` under a fixed encoding,
+     * ingests real or synthetic aging datasets that fall inside a chosen `L*`,
+     * constructs states `m_data` under a fixed encoding instance `E*`,
      * computes `Tension_age(m_data)` and component mismatches,
      * publishes resulting tension trajectories and basic analyses.
 
 2. Application to at least two distinct contexts
 
-   * Apply the same encoding to:
+   * Apply the same encoding instance to:
 
      * a human or large animal cohort,
      * a short lived model organism with intervention data.
+
    * Demonstrate that:
 
-     * long lived or treated groups show delayed or reduced `Tension_age`,
-     * results are stable under reasonable refinements.
+     * long lived or treated groups show delayed or reduced `Tension_age` relative to appropriate controls,
+     * results are stable under reasonable refinements of `E*` that do not change its structural class.
 
 Both steps operate solely on observable summaries and do not expose any deep TU generative rules.
 
@@ -982,8 +1080,45 @@ Q075 then imagines different kinds of worlds:
 
 Finally, Q075 says:
 
-* We can test whether this way of organizing aging makes sense by checking if `Tension_age` really tracks health, survival, and the effects of interventions in real data.
-* If it does not, we change the way we measure damage, repair, reserve, and tail risks.
+* We can test whether this way of organizing aging makes sense by checking if `Tension_age` really tracks health, survival, and the effects of interventions in real data, under a clearly defined encoding.
+* If it does not, we change the way we measure damage, repair, reserve, and tail risks and record a new encoding instance.
 * If it does, we can reuse the same ideas to think about aging in machines, organizations, and AI systems.
 
-Q075 does not assert that it has found the final cause of aging. It offers a precise way to talk about aging as a pattern of growing tension in complex systems, in a way that can be checked, compared, and reused across many other BlackHole problems.
+Q075 does not assert that it has found the final cause of aging. It offers a precise way to talk about aging as a pattern of growing tension in complex systems, in a way that can be checked, compared, and reused across many other BlackHole problems, while staying strictly within the effective layer.
+
+---
+
+## Tension Universe effective-layer footer
+
+This page is part of the WFGY / Tension Universe S-problem collection.
+
+### Scope of claims
+
+* The goal of this document is to specify an effective layer encoding of the aging problem Q075 in terms of state spaces, observables, mismatch fields, and tension scores.
+* It does not claim to prove or disprove any canonical aging theory in biology, thermodynamics, or information theory.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the corresponding open problem in biology has been solved.
+
+### Effective-layer boundary
+
+* All objects used here (state spaces `M`, observables, invariants, tension scores, counterfactual “worlds”) live at the effective layer of the TU framework.
+* No bottom layer axiom system or generating rule for TU is specified or assumed beyond what is already documented in the TU charters.
+* No explicit mapping from raw biological or physical data to TU internal fields is provided. Only the structure that such mappings must respect is described.
+
+### Encoding and fairness
+
+* Any numerical use of this page (for example computing `Tension_age`) must pick and document a concrete encoding instance `E* = (D*, F*, W*, L*)` within the class defined in Section 3.6.
+* Comparisons across groups, species, or interventions must use a single fixed `E*` unless a change of encoding is explicitly recorded and justified.
+* Reference bands, weights, and thresholds must not be tuned separately for different arms in the same analysis to improve apparent results. Such tuning counts as a change of encoding, not as evidence for or against aging mechanisms.
+
+### Falsifiability and future work
+
+* Experiments in Section 6 specify falsification conditions for particular encoding instances `E*`. Rejection of an instance is normal scientific progress and does not count against TU as a whole.
+* Moving Q075 from E1 to higher verification levels requires concrete tools, public tension profiles, and stable cross context behavior, as outlined in Section 9.
+* Users are encouraged to treat this page as a structured hypothesis about how to encode aging tension, subject to revision under new data.
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
