@@ -1,4 +1,4 @@
-<!-- QUESTION_ID: TU-Q129-->
+<!-- QUESTION_ID: TU-Q129 -->
 # Q129 · Ultimate energy efficiency and non dissipative computing
 
 ## 0. Header metadata
