@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q033 -->
 # Q033 · String theory vs alternative quantum gravity frameworks (selection tension)
 
 ## 0. Header metadata
