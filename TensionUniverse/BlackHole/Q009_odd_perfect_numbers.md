@@ -15,8 +15,37 @@ Status: Open
 Semantics: discrete
 E_level: E1
 N_level: N1
+Encoding_class: encoding_class_BH_MATH_ODDPERF_E1_v1
+Spec_version: 1
 Last_updated: 2026-01-28
 ```
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the **effective layer** of the Tension Universe (TU) framework, for the encoding class:
+
+```txt
+encoding_class_BH_MATH_ODDPERF_E1_v1
+```
+
+In particular:
+
+* This file only specifies:
+
+  * a problem specific state space `M_009`,
+  * observables, mismatch terms and tension scores,
+  * counterfactual worlds and experiment templates,
+  * and engineering roles for AI systems inside WFGY / TU.
+
+* It does **not** define or modify any TU level axiom system, generative rule, or background measure.
+
+* It does **not** provide any constructive mapping from raw arithmetic data into internal TU fields. All such mappings are treated as implementation choices outside the scope of this document.
+
+* It does **not** claim to prove or disprove the canonical odd perfect number problem stated in Section 1, and it does not introduce any new theorem in number theory.
+
+Any reference to “World T” or “World F” later in this file is a **counterfactual effective layer narrative only**. No field, label, parameter, or index defined here is allowed to silently encode the canonical truth value of Q009.
 
 ---
 
@@ -79,13 +108,13 @@ Despite significant progress on these necessary conditions and large computation
 
 Within the BlackHole S-problem collection, Q009 plays several roles:
 
-1. It is the canonical example of a **consistency_tension** problem in discrete multiplicative number theory, where many local constraints must jointly fit a global equality `sigma(n) = 2 * n`.
+1. It is a canonical example of a **consistency_tension** problem in discrete multiplicative number theory, where many local constraints must jointly fit a global equality `sigma(n) = 2 * n`.
 
 2. It provides a test bed for Tension Universe encodings of:
 
    * discrete state spaces of factorization data,
    * divisor sum observables,
-   * consistency-based tension functionals.
+   * consistency based tension functionals.
 
 3. It generates reusable components for other problems where:
 
@@ -103,7 +132,7 @@ Within the BlackHole S-problem collection, Q009 plays several roles:
 
 ## 2. Position in the BlackHole graph
 
-This block records how Q009 sits inside the BlackHole graph. Each edge is listed with a one-line reason pointing to a concrete component or tension concept.
+This block records how Q009 sits inside the BlackHole graph. Each edge is listed with a one line reason pointing to a concrete component or tension concept.
 
 ### 2.1 Upstream problems
 
@@ -123,7 +152,7 @@ These provide prerequisites, tools, or general frameworks that Q009 relies on at
 These problems directly reuse components of Q009.
 
 * Q020 (BH_MATH_MULT_FUNC_STRUCT_L3_020 · structure of multiplicative functions)
-  Reason: reuses `DivisorProfileDescriptor` to study more general multiplicative functions and their divisor-like behavior.
+  Reason: reuses `DivisorProfileDescriptor` to study more general multiplicative functions and their divisor like behavior.
 
 * Q021 (BH_MATH_EXTREME_DIVISOR_L3_021 · extreme values of divisor sums)
   Reason: reuses `OddPerfectTensionFunctional` as a special case of extreme divisor sum consistency tension.
@@ -141,15 +170,15 @@ Parallel nodes share similar tension types but no direct component reuse.
 * Q006 (BH_MATH_GOLDBACH_L3_006 · Goldbach type problems)
   Reason: both problems sit in the space of “combinatorially plausible, globally unproven” structures where known constraints and current data are in tension but do not yet resolve the question.
 
-### 2.4 Cross-domain edges
+### 2.4 Cross domain edges
 
-Cross-domain edges connect Q009 to problems in other domains that can reuse its components.
+Cross domain edges connect Q009 to problems in other domains that can reuse its components.
 
 * Q059 (BH_CS_INFO_THERMODYN_L3_059 · information thermodynamics)
   Reason: can reuse the idea of `ConstraintSaturationWorld_OPN` to model how extreme configurations in discrete state spaces may or may not be realized in physical or informational systems.
 
 * Q123 (BH_AI_INTERP_L3_123 · AI interpretability via discrete structures)
-  Reason: reuses `DivisorProfileDescriptor` as an analogy for describing structured discrete features inside AI models (for example, factorization-like patterns in neuron activations).
+  Reason: reuses `DivisorProfileDescriptor` as an analogy for describing structured discrete features inside AI models (for example, factorization like patterns in neuron activations).
 
 ---
 
@@ -169,12 +198,12 @@ We do **not** describe any hidden generative rules or any mapping from raw compu
 We assume a discrete semantic state space
 
 ```txt
-M
+M_009
 ```
 
 with the following effective interpretation:
 
-* Each `m` in `M` is a finite **odd-integer configuration** up to a search horizon `H(m)` in the positive integers.
+* Each `m` in `M_009` is a finite **odd integer configuration** up to a search horizon `H(m)` in the positive integers.
 
 * For each regular state `m` (see §3.6) and each **odd** integer `n` with
 
@@ -192,13 +221,13 @@ the configuration includes:
 
 We do not specify how factorizations or `sigma(n)` values are computed or stored. We only require that:
 
-* For any finite search bound `B`, there exist states `m` in `M` with `H(m) = B` whose content reflects **all** odd `n` with `1 < n <= B` together with consistent divisor sum and factorization summaries.
+* For any finite search bound `B`, there exist states `m` in `M_009` with `H(m) = B` whose content reflects **all** odd `n` with `1 < n <= B` together with consistent divisor sum and factorization summaries.
 
-Such states are the ones used in horizon-based experiments. States that omit odd integers below their own `H(m)` are treated as singular and excluded from tension analysis.
+Such states are the ones used in horizon based experiments. States that omit odd integers below their own `H(m)` are treated as singular and excluded from tension analysis.
 
 ### 3.2 Effective fields and observables
 
-On `M` we define the following discrete observables. All mismatch terms are treated as **dimensionless** quantities, up to a fixed monotone rescaling specified at the TU charter level.
+On `M_009` we define the following discrete observables. All mismatch terms are treated as **dimensionless** quantities, up to a fixed monotone rescaling specified at the TU charter level.
 
 #### 3.2.1 Normalized distance to perfect
 
@@ -211,9 +240,9 @@ dist_OPN(n) = | sigma(n) - 2 * n | / (2 * n)  >= 0 .
 This is a symmetric, dimensionless measure of how far `n` is from being perfect:
 
 * `dist_OPN(n) = 0` if and only if `n` is perfect,
-* both “deficient” (`sigma(n) < 2n`) and “abundant” (`sigma(n) > 2n`) odd integers contribute strictly positive distance.
+* both “deficient” (`sigma(n) < 2n`) and “abundant` (`sigma(n) > 2n`) odd integers contribute strictly positive distance.
 
-For a state `m` in `M`, define the minimal normalized distance
+For a state `m` in `M_009`, define the minimal normalized distance
 
 ```txt
 Delta_sigma_min(m) = min { dist_OPN(n) : n odd, 1 < n <= H(m) } .
@@ -251,7 +280,7 @@ sat_frac(n) = sat_count(n) / K      in [0, 1] .
 
 #### 3.2.3 Structural gap observable
 
-For each state `m` in `M`, define the structural compatibility observable
+For each state `m` in `M_009`, define the structural compatibility observable
 
 ```txt
 f_struct(m) = max { sat_frac(n) : n odd, 1 < n <= H(m) } .
@@ -314,13 +343,13 @@ T_ij(m) = S_i(m) * C_j(m) * DeltaS_OPN(m) * lambda(m) * kappa_OPN
 
 where:
 
-* `S_i(m)` is a source-like factor describing the influence of the ith structural component (for example, contribution from divisor sums versus factorization patterns).
-* `C_j(m)` is a receptivity-like factor describing how sensitive the jth downstream object is to violations of odd perfect consistency.
+* `S_i(m)` is a source like factor describing the influence of the ith structural component (for example, contribution from divisor sums versus factorization patterns).
+* `C_j(m)` is a receptivity like factor describing how sensitive the jth downstream object is to violations of odd perfect consistency.
 * `DeltaS_OPN(m)` is the combined mismatch defined above.
-* `lambda(m)` is a convergence-state factor from the TU core, taking values in a fixed bounded interval that encodes whether local reasoning around `m` is stable or unstable.
-* `kappa_OPN` is a fixed coupling constant that sets the overall scale of odd-perfect-number tension in this encoding.
+* `lambda(m)` is a convergence state factor from the TU core, taking values in a fixed bounded interval that encodes whether local reasoning around `m` is stable or unstable.
+* `kappa_OPN` is a fixed coupling constant that sets the overall scale of odd perfect number tension in this encoding.
 
-We do not specify the detailed index sets for `i` and `j`. It is enough that for each regular `m` in `M_reg` (see §3.6), `T_ij(m)` is well defined and finite.
+We do not specify the detailed index sets for `i` and `j`. It is enough that for each regular `m` in the regular domain (defined in §3.6), `T_ij(m)` is well defined and finite.
 
 ### 3.5 Invariants and effective constraints
 
@@ -334,7 +363,7 @@ I_horizon(m) = H(m) ,
 
 interpreted as the maximum odd integer for which the configuration `m` includes divisor and factorization data.
 
-For regular states used in horizon-based experiments we require:
+For regular states used in horizon based experiments we require:
 
 ```txt
 content(m) = { n : 1 < n <= H(m), n odd } .
@@ -372,24 +401,24 @@ Some configurations might be incomplete or inconsistent. Examples include:
 
 * missing factorization or divisor sums for some odd `n` with `1 < n <= H(m)`,
 * contradictory annotation about whether a constraint `C_k` holds for a given `n`,
-* undefined or non-finite values for `Delta_sigma_min(m)` or `Delta_struct(m)`.
+* undefined or non finite values for `Delta_sigma_min(m)` or `Delta_struct(m)`.
 
 We define the singular set:
 
 ```txt
-S_sing = { m in M :
-           Delta_sigma_min(m) is undefined or not finite
-           or Delta_struct(m) is undefined or not finite
-           or content(m) omits some odd n with 1 < n <= H(m) } .
+S_sing_009 = { m in M_009 :
+               Delta_sigma_min(m) is undefined or not finite
+               or Delta_struct(m) is undefined or not finite
+               or content(m) omits some odd n with 1 < n <= H(m) } .
 ```
 
 All Q009 tension analysis is restricted to the regular domain
 
 ```txt
-M_reg = M \ S_sing .
+M_009_reg = M_009 \ S_sing_009 .
 ```
 
-Whenever an experiment would require evaluating `DeltaS_OPN(m)` for `m` in `S_sing`, that case is treated as **out of domain** and does not count as evidence about the truth of the odd perfect number problem itself.
+Whenever an experiment would require evaluating `DeltaS_OPN(m)` for `m` in `S_sing_009`, that case is treated as **out of domain** and does not count as evidence about the truth of the odd perfect number problem itself.
 
 ---
 
@@ -411,15 +440,15 @@ with `(w_sigma, w_struct)` taken from the fixed finite admissible set `W_OPN` (s
 
 The functional satisfies:
 
-* `Tension_OPN(m) >= 0` for all `m` in `M_reg`,
+* `Tension_OPN(m) >= 0` for all `m` in `M_009_reg`,
 * `Tension_OPN(m)` is small when both the minimal normalized distance and structural gap are small,
 * `Tension_OPN(m)` is large when either the normalized distance stays large or many structural conditions are jointly violated.
 
-### 4.2 Odd perfect numbers as a low-tension principle
+### 4.2 Odd perfect numbers as a low tension principle
 
 At the effective layer, the “odd perfect numbers exist” scenario can be rephrased as:
 
-> There exist sequences of regular states `m_k` in `M_reg` with strictly increasing horizons
+> There exist sequences of regular states `m_k` in `M_009_reg` with strictly increasing horizons
 >
 > ```txt
 > H(m_1) < H(m_2) < ...,
@@ -433,27 +462,27 @@ More concretely, in a world where odd perfect numbers exist:
 
   * at some horizons, there are odd `n` with very small `dist_OPN(n)`,
   * at some horizons, there are odd `n` that satisfy most or all constraints in `L_OPN`,
-  * along a subsequence of horizons, both effects co-occur often enough that
+  * along a subsequence of horizons, both effects co occur often enough that
 
     ```txt
     Tension_OPN(m_k) <= epsilon_OPN
     ```
 
-    for some small, pre-chosen threshold `epsilon_OPN` that does not depend on the particular search data.
+    for some small, pre chosen threshold `epsilon_OPN` that does not depend on the particular search data.
 
-The tension principle does not assert that such a sequence exists; it only describes what low-tension behavior would look like if odd perfect numbers were realized and not prohibitively sparse.
+The tension principle does not assert that such a sequence exists; it only describes what low tension behavior would look like if odd perfect numbers were realized and not prohibitively sparse.
 
 ### 4.3 Nonexistence as persistent high tension
 
 By contrast, the “no odd perfect numbers exist” scenario can be expressed as:
 
-> For any admissible encoding instance and any sequence of regular states `m_k` in `M_reg` with horizons tending to infinity, there exists a positive lower bound `delta_OPN` such that `Tension_OPN(m_k)` cannot be made arbitrarily small.
+> For any admissible encoding instance and any sequence of regular states `m_k` in `M_009_reg` with horizons tending to infinity, there exists a positive lower bound `delta_OPN` such that `Tension_OPN(m_k)` cannot be made arbitrarily small.
 
 Informally, in a world where odd perfect numbers do not exist:
 
 * minimal normalized distances for odd `n` never approach zero in a stable way,
 * structural constraints cannot be jointly satisfied even as the search horizon grows,
-* the combined tension functional stays bounded away from zero, at least along large-horizon states that faithfully encode the actual integers.
+* the combined tension functional stays bounded away from zero, at least along large horizon states that faithfully encode the actual integers.
 
 The tension principle does not prove either scenario. It only provides a structured way to talk about how discrete search data and theoretical constraints would look in the two worlds.
 
@@ -474,7 +503,7 @@ In World T:
 
 1. Existence of candidates
 
-   * There exist infinitely many horizons `H_k` and associated regular states `m_T_k` in `M_reg` such that:
+   * There exist infinitely many horizons `H_k` and associated regular states `m_T_k` in `M_009_reg` such that:
 
      ```txt
      content(m_T_k) includes at least one odd n
@@ -507,7 +536,7 @@ In World F:
 
 1. No exact solutions
 
-   * In every regular state `m_F` in `M_reg`, and for every odd `n` in `content(m_F)`:
+   * In every regular state `m_F` in `M_009_reg`, and for every odd `n` in `content(m_F)`:
 
      ```txt
      sigma(n) != 2 * n ,
@@ -531,7 +560,7 @@ In World F:
 
 4. Robustness under admissible changes
 
-   * Small admissible changes to the weight pair `(w_sigma, w_struct)` within the predetermined finite set `W_OPN` do not turn a persistently high-tension pattern into an artificial low-tension pattern without a clear mathematical explanation.
+   * Small admissible changes to the weight pair `(w_sigma, w_struct)` within the predetermined finite set `W_OPN` do not turn a persistently high tension pattern into an artificial low tension pattern without a clear mathematical explanation.
 
 ### 5.3 Interpretive note
 
@@ -541,7 +570,7 @@ The two worlds are not constructed inside TU. They are only described in terms o
 * structural gap indices,
 * and tension functionals
 
-would behave if we had faithful large-scale configurations in each scenario.
+would behave if we had faithful large scale configurations in each scenario.
 
 TU encodings are judged by whether they provide stable, interpretable summaries of these patterns, not by whether they decide the canonical problem.
 
@@ -552,7 +581,7 @@ TU encodings are judged by whether they provide stable, interpretable summaries 
 This block describes experiments and protocols that can:
 
 * test the coherence of the Q009 encoding,
-* distinguish between different odd-perfect tension encodings,
+* distinguish between different odd perfect tension encodings,
 * provide evidence for or against particular parameter choices within the admissible set.
 
 They do **not** prove or disprove the existence of odd perfect numbers. They only test the chosen TU encoding.
@@ -574,7 +603,7 @@ Test whether the `Tension_OPN` functional provides a stable and interpretable su
 
   fixed in advance (for example, based on published search milestones).
 
-* For each bound `B_k`, define a regular state `m_Bk` in `M_reg` that:
+* For each bound `B_k`, define a regular state `m_Bk` in `M_009_reg` that:
 
   * has `H(m_Bk) = B_k`,
   * encodes **all** odd `n` with `1 < n <= B_k`,
@@ -609,14 +638,14 @@ Test whether the `Tension_OPN` functional provides a stable and interpretable su
 * If known search data suggest that minimal distances and structural gaps behave in one qualitative way, but **every** admissible weight choice produces an opposite or incoherent pattern, then the encoding is considered misaligned and rejected.
 
 **Semantics implementation note**
-All quantities are treated as discrete and dimensionless, consistent with the effective-layer semantics. No continuous interpolation or gradient structure is assumed in this experiment.
+All quantities are treated as discrete and dimensionless, consistent with the effective layer semantics. No continuous interpolation or gradient structure is assumed in this experiment.
 
 **Boundary note**
 Falsifying a TU encoding is **not** the same as solving the canonical statement. This experiment can reject specific tension encodings, but it does not prove or disprove the existence of odd perfect numbers.
 
 ---
 
-### Experiment 2: Model-world comparison with synthetic multiplicative structures
+### Experiment 2: Model world comparison with synthetic multiplicative structures
 
 **Goal**
 Check whether the Q009 encoding can distinguish between synthetic worlds where “odd perfect like” structures are forced to exist and worlds where they are ruled out by construction.
@@ -625,15 +654,15 @@ Check whether the Q009 encoding can distinguish between synthetic worlds where �
 
 * Construct two families of artificial multiplicative models:
 
-  * **Family T_model**: integer-like objects where the divisor sum function has forced exact solutions `sigma(n) = 2 * n` for some odd-like entities, together with structural properties mimicking odd perfect candidates.
+  * **Family T_model**: integer like objects where the divisor sum function has forced exact solutions `sigma(n) = 2 * n` for some odd like entities, together with structural properties mimicking odd perfect candidates.
 
-  * **Family F_model**: integer-like objects where structural constraints ensure `sigma(n) != 2 * n` for all odd-like entities, while maintaining broadly similar multiplicative behavior otherwise.
+  * **Family F_model**: integer like objects where structural constraints ensure `sigma(n) != 2 * n` for all odd like entities, while maintaining broadly similar multiplicative behavior otherwise.
 
-* For each model, define factorization and divisor sum summaries analogous to those used in Q009, together with evaluations of all constraints in a model-specific analogue of `L_OPN`.
+* For each model, define factorization and divisor sum summaries analogous to those used in Q009, together with evaluations of all constraints in a model specific analogue of `L_OPN`.
 
 **Protocol**
 
-1. For each model in Family T_model, build a regular state `m_Tmodel` in `M_reg` with divisor and constraint data for its “odd” sector; compute `Delta_sigma_min(m_Tmodel)`, `Delta_struct(m_Tmodel)`, and `Tension_OPN(m_Tmodel)`.
+1. For each model in Family T_model, build a regular state `m_Tmodel` in `M_009_reg` with divisor and constraint data for its “odd” sector; compute `Delta_sigma_min(m_Tmodel)`, `Delta_struct(m_Tmodel)`, and `Tension_OPN(m_Tmodel)`.
 
 2. For each model in Family F_model, build a state `m_Fmodel` and compute the same observables.
 
@@ -687,7 +716,7 @@ Module patterns that can reuse Q009 components:
 
 1. `DivisorTensionHead`
 
-   * Role: given an internal representation of a number-theoretic context, estimate a proxy for `Tension_OPN(m)`.
+   * Role: given an internal representation of a number theoretic context, estimate a proxy for `Tension_OPN(m)`.
    * Interface:
 
      ```txt
@@ -716,7 +745,7 @@ Module patterns that can reuse Q009 components:
 
      ```txt
      Input:  latent states relevant to divisor sums and factorization
-     Output: compact discrete summary to be treated as a state m in M_reg
+     Output: compact discrete summary to be treated as a state m in M_009_reg
      ```
 
 ### 7.3 Evaluation harness
@@ -733,7 +762,7 @@ An evaluation harness for AI systems augmented with Q009 modules:
 
 2. **Conditions**
 
-   * Baseline condition: model operates without Q009-specific modules.
+   * Baseline condition: model operates without Q009 specific modules.
    * TU condition: model uses `DivisorTensionHead` and `ConstraintSaturationChecker_OPN` as auxiliary guidance.
 
 3. **Metrics**
@@ -742,7 +771,7 @@ An evaluation harness for AI systems augmented with Q009 modules:
    * Internal consistency: how often the model contradicts itself about known necessary conditions.
    * Clarity in separating what is proved, what is conjectured, and what is purely hypothetical.
 
-### 7.4 60-second reproduction protocol
+### 7.4 60 second reproduction protocol
 
 A minimal protocol to let external users experience the impact of Q009 encoding, without exposing any deep TU mechanisms.
 
@@ -835,7 +864,7 @@ This block describes reusable components produced by Q009 and their direct reuse
    * Preconditions:
 
      * The constraint library is finite and can be applied consistently to all odd integers in the search range.
-     * The horizon protocol is monotone and data-independent (e.g., based on published search milestones).
+     * The horizon protocol is monotone and data independent (for example, based on published search milestones).
 
 ### 8.2 Direct reuse targets
 
@@ -855,7 +884,7 @@ This block describes reusable components produced by Q009 and their direct reuse
 
    * Reused component: `ConstraintSaturationWorld_OPN`.
    * Why it transfers: many special sets (for example, certain smooth numbers or special factorization classes) can be modeled using finite constraint libraries and tension between “search data” and “structural possibility”.
-   * What changes: the constraint library and notion of “special” are adapted to the target set, but the horizon-based experiment pattern remains.
+   * What changes: the constraint library and notion of “special” are adapted to the target set, but the horizon based experiment pattern remains.
 
 ---
 
@@ -867,7 +896,7 @@ This block describes the current verification level of Q009 and possible next st
 
 * **E_level: E1**
 
-  * A coherent effective-layer encoding for odd perfect numbers as a consistency_tension problem in a discrete state space has been specified.
+  * A coherent effective layer encoding for odd perfect numbers as a consistency_tension problem in a discrete state space has been specified.
   * Normalized distance observables, structural gap observables, and a combined tension functional have been defined.
   * Horizon semantics and completeness requirements for regular states are explicitly stated.
 
@@ -883,25 +912,25 @@ This block describes the current verification level of Q009 and possible next st
 
 To move from E1 to E2, at least one of the following should be implemented in practice:
 
-1. Build a concrete prototype that, given published search data up to a horizon `B`, constructs states `m_B` and computes `Delta_sigma_min(m_B)`, `Delta_struct(m_B)`, and `Tension_OPN(m_B)`, publishing the tension profiles as open data, together with a fully specified choice of `(w_sigma, w_struct)` from `W_OPN`.
+1. Build a concrete prototype that, given published search data up to a horizon `B`, constructs states `m_B` in `M_009_reg` and computes `Delta_sigma_min(m_B)`, `Delta_struct(m_B)`, and `Tension_OPN(m_B)`, publishing the tension profiles as open data, together with a fully specified choice of `(w_sigma, w_struct)` from `W_OPN`.
 
 2. Implement synthetic model families as in Experiment 2 and provide reproducible results showing how well Q009’s encoding distinguishes “forced existence” and “forced nonexistence” model worlds, again with fully specified encoding parameters.
 
 Both steps operate only on observable summaries (factorization and divisor sums) and do not require revealing any deep TU generative rule.
 
-### 9.3 Long-term role in the TU program
+### 9.3 Long term role in the TU program
 
 In the long term, Q009 is expected to serve as:
 
 * the canonical discrete consistency_tension problem in multiplicative number theory,
 * a standard module for reasoning about whether highly constrained structures should exist at all,
-* a bridge between number-theoretic search experiments and formalized tension-based narratives in AI systems.
+* a bridge between number theoretic search experiments and formalized tension based narratives in AI systems.
 
 ---
 
 ## 10. Elementary but precise explanation
 
-This block gives a nontechnical explanation aligned with the effective-layer description.
+This block gives a nontechnical explanation aligned with the effective layer description.
 
 Classically, perfect numbers are integers `n` such that the sum of all their positive divisors equals `2 * n`. Examples are `6` and `28`, both even. All known perfect numbers are even and follow a very specific pattern tied to Mersenne primes.
 
@@ -942,6 +971,12 @@ Q009 is therefore the prototype for discrete consistency_tension problems in Ten
 
 This page is part of the **WFGY / Tension Universe** S-problem collection.
 
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
+
 ### Scope of claims
 
 * The goal of this document is to specify an **effective-layer encoding** of the named problem.
@@ -951,21 +986,18 @@ This page is part of the **WFGY / Tension Universe** S-problem collection.
 
 ### Effective-layer boundary
 
-* All objects used here (state spaces `M`, observables, invariants, tension scores, counterfactual “worlds”) live at the effective layer.
+* All objects used here (state spaces `M_009`, observables, invariants, tension scores, counterfactual “worlds”) live at the effective layer.
 * No step in this file gives a constructive mapping from raw experimental or simulation data into internal TU fields.
 * No step exposes any deep TU generative rule or any first-principle axiom system.
+* No field, label, constant or parameter defined in this file is allowed to silently encode the canonical truth value of Q009 as an uninterpreted bit.
 
 ### Encoding and fairness
 
-* Admissible encoding classes, reference profiles, weight families and horizon protocols used in this page are constrained by shared Tension Universe charters:
-
-  * [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
-  * [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
-  * [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
+* Admissible encoding classes, reference profiles, weight families and horizon protocols used in this page are constrained by the shared Tension Universe charters listed above.
 
 * For every encoding family referenced here:
 
-  * its definition, parameter ranges, admissible weight sets and reference families are fixed at the charter level before any problem-specific evaluation;
+  * its definition, parameter ranges, admissible weight sets and reference families are fixed at the charter level before any problem specific evaluation;
   * these choices may depend on general physical or mathematical considerations and on public benchmark selections, but **not** on the unknown truth value of this specific problem;
   * no encoding is allowed to hide the canonical answer as an uninterpreted field, label or parameter.
 
@@ -973,8 +1005,32 @@ This page is part of the **WFGY / Tension Universe** S-problem collection.
 
   * the choice of weights, thresholds, horizon sequence and model library is fixed **before** running the experiment;
   * once such an instance has been used on real data, its parameters are considered frozen;
-  * changing those parameters defines a **new** encoding instance, which must be versioned and evaluated as a separate object.
-  * post-hoc parameter tuning to make a specific benchmark or historical dataset look low-tension is explicitly disallowed and counted as leaving the admissible class.
+  * changing those parameters defines a **new** encoding instance, which must be versioned and evaluated as a separate object;
+  * post-hoc parameter tuning to make a specific benchmark or historical dataset look low tension is explicitly disallowed and counted as leaving the admissible class.
+
+### Versioning and non-mutation policy
+
+* This file defines the encoding class
+
+  ```txt
+  encoding_class_BH_MATH_ODDPERF_E1_v1
+  ```
+
+  with `Spec_version: 1` as recorded in the header metadata.
+
+* The following changes are considered **semantic** and require a new spec version and, in general, a new encoding class name:
+
+  * modifying the definition of `M_009`, `L_OPN`, `Delta_sigma_min`, `Delta_struct`, `DeltaS_OPN`, or `Tension_OPN`;
+  * changing admissible weight sets such as `W_OPN`, or altering horizon protocols used in the experiments;
+  * altering falsification conditions in a way that can change the outcome of previously valid experiments.
+
+* The following changes are considered **non-semantic** and may be done without changing `Spec_version`, as long as they do not affect any computed tension value or experimental decision:
+
+  * clarifying wording, fixing typos, improving examples while keeping all definitions exactly the same;
+  * adding cross-references or citations that do not alter the scope of the claims;
+  * tightening explanations in the elementary section without changing the underlying formal structure.
+
+* Upgrades to the encoding (including run1 → run2 revisions) are interpreted as **versioned iterations** on the effective layer. They do not change any deep TU axioms and do not retroactively modify the behavior of past experiments that were executed under earlier spec versions.
 
 ### Tension scale and thresholds
 
@@ -998,4 +1054,4 @@ This page is part of the **WFGY / Tension Universe** S-problem collection.
 
 * This page is an experimental specification within the ongoing **WFGY / Tension Universe** research program.
 * All structures and parameter choices are provisional and may be revised in future versions, subject to the constraints above.
-* Upgrades to the encoding (including run1 → run2 revisions) are interpreted as **versioned iterations** on the effective layer. They do not change any deep TU axioms and do not retroactively modify the behavior of past experiments.
+* Upgrades to the encoding (including run1 → run2 revisions) are interpreted as versioned iterations on the effective layer. They do not change any deep TU axioms and do not retroactively modify the behavior of past experiments.
