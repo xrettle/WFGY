@@ -11,12 +11,47 @@ Rank: S
 Projection_dominance: I
 Field_type: incentive_field
 Tension_type: incentive_tension
-Status: Reframed_only
+Status: Open_problem_encoded
 Semantics: hybrid
 E_level: E1
 N_level: N1
-Last_updated: 2026-01-26
-````
+Last_updated: 2026-01-30
+```
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the effective layer of the Tension Universe (TU) framework.
+
+* The object of this file is to define an **effective layer encoding** of the home bias puzzle in international portfolios.
+* The file only introduces:
+
+  * state spaces and observables,
+  * tension functionals,
+  * invariants and experiment templates,
+  * and reusable engineering components.
+* The file does **not**:
+
+  * solve the canonical home bias problem,
+  * prove or disprove any theorem about optimal portfolios,
+  * introduce any new economic theorem beyond the cited literature,
+  * define any TU generative rule or partial differential equation,
+  * construct any explicit mapping from raw micro data to internal TU fields,
+  * claim that we know which counterfactual tension world the real world belongs to.
+
+Throughout this entry:
+
+* “World,” “state,” and “configuration” refer to **effective layer models**.
+* Statements about “low tension” or “high tension” are always conditional on:
+
+  * a fixed encoding class for Q102,
+  * fixed fairness constraints,
+  * and the declared domain of observables.
+
+This document must not be cited as evidence that the home bias puzzle has been solved. It is only a specification of how to **encode and measure** home bias tension inside the TU program.
+
+Any substantial change to the encoding class for Q102, including changes in benchmark libraries, cost functions, parameter bounds, or global thresholds, corresponds to a new version of this file and must be recorded as such.
 
 ---
 
@@ -24,7 +59,7 @@ Last_updated: 2026-01-26
 
 ### 1.1 Canonical statement
 
-In standard frictionless international asset pricing models, a representative investor who can costlessly trade all risky assets would hold a globally diversified portfolio. In the simplest benchmark, each country’s equity is held in proportion to its share of world market capitalization. In more elaborate models, optimal holdings reflect correlations, risk premia, and hedging demands, yet still imply substantial foreign diversification for most investors.
+In standard frictionless international asset pricing models, a representative investor who can costlessly trade all risky assets is predicted to hold a globally diversified portfolio. In the simplest benchmark, each country’s equity is held in proportion to its share of world market capitalization. In more elaborate models, optimal holdings reflect correlations, risk premia, and hedging demands, but still imply substantial foreign diversification for most investors.
 
 Empirically, portfolios display a strong and persistent **home bias**:
 
@@ -32,13 +67,13 @@ Empirically, portfolios display a strong and persistent **home bias**:
 * This pattern holds for households, pension funds, mutual funds, and at the country level, across many decades and market regimes.
 * The bias remains even after controlling for simple measures of currency risk, transaction costs, and basic capital controls.
 
-Canonical questions:
+Canonical questions include:
 
 1. How large is the gap between observed domestic weights and global diversification benchmarks, once we control for standard frictions and risk factors?
 2. To what extent can information frictions, institutional constraints, and behavioral preferences explain this gap?
 3. Does there exist a unified and measurable way to separate “explained” home bias from residual anomalous tension?
 
-In BlackHole Q102, the problem is treated as an incentive_tension question. The goal is not to solve home bias in general, but to encode it as a measurable mismatch between observed portfolios and plausible friction-adjusted benchmarks.
+Within BlackHole Q102, the problem is treated as an **incentive_tension** question at the effective layer. The goal is not to solve home bias in general. The goal is to encode it as a measurable mismatch between observed portfolios and plausible friction adjusted benchmarks under explicit fairness constraints.
 
 ### 1.2 Status and difficulty
 
@@ -47,31 +82,43 @@ Key empirical and theoretical facts:
 * Cross country data show that domestic shares of equity portfolios are often far above what global diversification would predict. This holds in major markets such as the United States, Japan, and Europe, and is even more pronounced in some emerging markets.
 * Classical work documented both severe home bias and high turnover in foreign holdings. This combination is difficult to reconcile with simple stories based only on fixed costs or lack of interest in foreign assets.
 * International macro puzzles, including imperfect risk sharing and consumption correlations that are too low, are tightly related to home bias in portfolios.
-* A large literature has explored explanations based on:
 
-  * information asymmetries,
-  * transaction and monitoring costs,
-  * institutional and regulatory restrictions,
-  * background risk and non traded assets,
-  * behavioral preferences, such as familiarity or patriotism.
+A large literature has explored explanations based on:
+
+* information asymmetries,
+* transaction and monitoring costs,
+* institutional and regulatory restrictions,
+* background risk and non traded assets,
+* behavioral preferences, such as familiarity, salience, or patriotism.
 
 Despite many partial successes, there is no consensus single explanation that quantitatively accounts for the full magnitude and persistence of home bias across different countries and time periods. The problem is structurally difficult because:
 
-* Multiple mechanisms can produce similar patterns.
-* Relevant frictions and preferences are hard to measure directly.
-* Equilibrium outcomes involve higher order interactions among many agents and institutions.
+* multiple mechanisms can produce similar patterns,
+* relevant frictions and preferences are hard to measure directly,
+* equilibrium outcomes involve higher order interactions among many agents and institutions,
+* global datasets are heterogeneous in coverage and quality.
+
+From the TU perspective, Q102 remains an open problem. This file records an **E1 level encoding** of the puzzle and an **N1 level narrative** around incentive tension. It does not claim that the encoding is unique or complete, and it does not claim that friction only stories are sufficient.
 
 ### 1.3 Role in the BlackHole project
 
-Within the BlackHole S problem collection, Q102 serves three purposes.
+Within the BlackHole S problem collection, Q102 serves three roles.
 
 1. It is a central example of **incentive_tension** in economic systems. Investors face local incentives, frictions, and perceptions that pull their portfolios away from global risk sharing benchmarks.
-2. It provides a bridge between micro level portfolio decisions and macro level outcomes, such as systemic risk concentration and international imbalance patterns.
+
+2. It provides a bridge between micro level portfolio decisions and macro level outcomes, such as:
+
+   * systemic risk concentration,
+   * international imbalance patterns,
+   * and cross country differences in exposure to common shocks.
+
 3. It supplies reusable components for:
 
    * encoding hidden exposures and their deviation from benchmarks,
    * decomposing observed anomalies into friction driven and residual parts,
-   * testing how far a tension based description can go without committing to a unique structural model.
+   * testing how far a tension based description can go without committing to a unique structural model of preferences or expectations.
+
+All three roles are restricted to the effective layer. Q102 does not specify any TU level explanation for why home bias exists. It only provides tools for measuring and organizing the puzzle within the TU ecosystem.
 
 ### References
 
@@ -84,27 +131,31 @@ Within the BlackHole S problem collection, Q102 serves three purposes.
 
 ## 2. Position in the BlackHole graph
 
-This block records how Q102 is placed among Q001 to Q125 as a node in the BlackHole graph.
+This block records how Q102 is placed among Q001 to Q125 as a node in the BlackHole graph. All edges are expressed as Q identifiers and short reasons, so that the graph can be aggregated as an adjacency list.
 
 ### 2.1 Upstream problems
 
 These nodes provide prerequisites or background structures that Q102 relies on at the effective layer.
 
 * Q101 · Equity premium puzzle
-  Reason: Supplies the baseline risk and return anomalies that any home bias tension functional must be consistent with, especially for risky assets.
+  Reason: Supplies baseline risk and return anomalies that any home bias tension functional must be consistent with, especially for risky assets and their premia.
+
 * Q059 · Ultimate thermodynamic cost of information processing
   Reason: Provides a template for modeling information processing and monitoring costs as effective energy like quantities that influence portfolio choices.
+
 * Q104 · Dynamics of wealth and income inequality
   Reason: Provides macro constraints on wealth distribution and saving behavior, which limit feasible aggregate portfolio positions across countries.
 
 ### 2.2 Downstream problems
 
-These nodes reuse Q102 components or exploit its structures as prerequisites.
+These nodes reuse Q102 components or treat Q102 as a prerequisite.
 
 * Q105 · Prediction of systemic crashes
   Reason: Uses Q102’s investor exposure fields and tension scores to characterize regional concentration risk and the build up of systemic fragility.
+
 * Q106 · Robustness of multilayer networks
   Reason: Reuses Q102’s portfolio network representation as one instance of a multilayer exposure graph, where home bias shapes link strengths.
+
 * Q110 · Evolution of institutions
   Reason: Uses Q102’s friction decomposition to study how institutional rules and regulations evolve in response to persistent incentive tension in international portfolios.
 
@@ -114,6 +165,7 @@ These share similar tension types but do not directly reuse Q102 components.
 
 * Q104 · Dynamics of wealth and income inequality
   Reason: Both study persistent deviations from simple benchmark distributions, framed as incentive_tension and risk_tail_tension on economic states.
+
 * Q107 · Mechanisms of large scale collective action
   Reason: Both involve mismatches between individually optimal local choices and globally efficient configurations in large populations.
 
@@ -123,18 +175,20 @@ These connect Q102 to problems in other domains that reuse its patterns.
 
 * Q059 · Ultimate thermodynamic cost of information processing
   Reason: Reuses the mapping from information frictions to effective costs as a way to parameterize energetic limits of information processing in physical systems.
+
 * Q121 · Alignment of advanced AI systems
   Reason: Treats local portfolio preferences versus global diversification as an analogy for local objective functions versus global alignment targets in AI.
+
 * Q123 · Scalable interpretability of AI models
   Reason: Uses Q102’s hidden exposure versus benchmark exposure pattern as an analogue for hidden internal states of AI models that diverge from user specified targets.
 
-All edges are expressed as references to Q identifiers. No external URLs are used in this block so that the final graph can be aggregated as an adjacency list.
+No external URLs are used in this block. All references are internal to the BlackHole S problem graph.
 
 ---
 
 ## 3. Tension Universe encoding (effective layer)
 
-This block defines the effective layer encoding of home bias in TU terms. It only introduces observable state spaces, fields, and functionals. It does not specify any hidden generative rules for TU or any mapping from raw data to TU internal fields.
+This block defines the effective layer encoding of home bias in TU terms. It only introduces observable state spaces, fields, functionals, invariants, and a bookkeeping tensor. It does not specify any hidden TU generative rules or mappings from raw data to internal TU fields.
 
 ### 3.1 State space
 
@@ -154,9 +208,9 @@ For each state `m` in `M` we assume:
   G = { g_1, g_2, ..., g_G }
   ```
 
-  for example households, pension funds, mutual funds.
+  for example households, pension funds, mutual funds, insurance companies.
 
-* A partition of risky assets into domestic and foreign categories for each country, represented by:
+* A partition of risky assets into domestic and foreign categories for each country, represented by
 
   ```txt
   A_dom
@@ -165,7 +219,7 @@ For each state `m` in `M` we assume:
 
 * A time horizon index `h` that specifies the relevant period, such as one year.
 
-The state `m` can be seen as a point in a finite dimensional real space that contains:
+The state `m` can be seen as a point in a finite dimensional hybrid space that contains:
 
 ```txt
 w_{g,a}(m)     portfolio weights by group and asset category
@@ -176,9 +230,9 @@ C_inst(g; m)   institutional or regulatory costs
 env(m)         environment descriptors, such as market size and openness
 ```
 
-We do not describe how these quantities are computed from raw observations. We only assume that for any configuration we use in an experiment, there exists a corresponding state `m` in `M` that encodes those summary values.
+The continuous quantities live in a real vector space, and the indices, group labels, and asset categories are discrete. This is the sense in which the metadata declares `Semantics: hybrid`.
 
-The hybrid nature of the encoding appears in the mixture of continuous quantities (returns, costs) and discrete indices (groups, asset classes, countries). The effective state space can be regarded as a subset of a finite product `R^k x F` where `F` collects discrete indices.
+We do not describe how these quantities are computed from raw observations. We only assume that for any configuration we use in an experiment, there exists a corresponding state `m` in `M` that encodes those summary values.
 
 ### 3.2 Portfolio observables
 
@@ -226,13 +280,14 @@ with the following fairness constraints.
 
   * world market capitalization shares,
   * correlations among asset classes,
-  * macro level risk measures.
+  * macro level risk measures,
+  * ex ante properties of investor groups.
 * Each `B_k` cannot depend on:
 
-  * realized individual portfolio weights `w_{g,a}(m)`,
-  * realized individual returns `mu_{g,a}(m)` for group `g`.
+  * realized individual portfolio weights `w_{g,a}(m)` for the same horizon,
+  * realized individual returns `mu_{g,a}(m)` for group `g` at that horizon.
 
-In any given experiment, one function `B_k` is chosen once for all states and all groups, before inspecting their specific portfolio weights. This prevents using benchmark rules that silently fit the observed home bias.
+In any given encoding class, one function `B_k` is chosen once for all states and all groups, before inspecting their specific portfolio weights or home bias gaps. This prevents benchmark rules that silently fit the observed home bias.
 
 4. Cost observables
 
@@ -248,7 +303,7 @@ Interpretation:
 * `C_info(m; g)` is the effective cost for group `g` of monitoring and understanding foreign assets to the precision required for investing.
 * `C_inst(m; g)` is the effective cost induced by institutions or regulations, such as reporting requirements, capital restrictions, and tax differentials.
 
-These costs are themselves produced by functions in finite libraries
+These costs are produced by functions in finite libraries
 
 ```txt
 Lib_info = { C_info^1, ..., C_info^P }
@@ -259,7 +314,7 @@ with constraints analogous to `Lib_benchmark`:
 
 * Cost functions can depend on environment descriptors and ex ante investor group characteristics.
 * Cost functions cannot depend on realized portfolio weights for the same group and period.
-* For a given experiment, one function from each library is chosen and fixed before calculating tension.
+* For a given encoding class, one function from each library is chosen and fixed before calculating tension.
 
 ### 3.3 Gap and normalized gap observables
 
@@ -269,15 +324,15 @@ The raw home bias gap for group `g` in state `m` is
 Gap_raw(m; g) = w_dom(m; g) - w_global_star(m; g)
 ```
 
-To compare across different scales of domestic holdings, we introduce a normalized gap
+To compare across different scales of domestic holdings, we introduce a normalized gap:
 
 ```txt
-epsilon_w > 0  fixed small constant
+epsilon_w > 0    fixed small constant
 
-Gap_norm(m; g) = Gap_raw(m; g) / (w_global_star(m; g) + epsilon_w)
+Gap_norm(m; g) = Gap_raw(m; g) / ( w_global_star(m; g) + epsilon_w )
 ```
 
-where `epsilon_w` is fixed once for Q102 and does not vary across experiments or groups. This prevents division by zero and ensures that extreme cases with very small benchmark weights do not dominate the tension score through trivial scaling.
+The constant `epsilon_w` is fixed once for Q102 and does not vary across experiments, groups, or datasets. This prevents division by zero and ensures that extreme cases with very small benchmark weights do not dominate the tension score through trivial scaling.
 
 ### 3.4 Cost based explainability observable
 
@@ -291,7 +346,7 @@ k_info + k_inst <= 1
 Gap_explain(m; g) = k_info * C_info(m; g) + k_inst * C_inst(m; g)
 ```
 
-The constants `k_info` and `k_inst` are fixed once for Q102 and do not depend on group, period, or experiment. They control how much home bias can be considered explainable by costs alone.
+The constants `k_info` and `k_inst` are fixed once for Q102. They do not depend on group, period, or experiment. They control how much home bias can be considered explainable by costs alone inside this encoding class.
 
 ### 3.5 Incentive mismatch and aggregate tension
 
@@ -305,38 +360,47 @@ DeltaS_incentive(m; g) =
 This is always nonnegative and satisfies:
 
 * `DeltaS_incentive(m; g) = 0` if normalized home bias can be fully explained by the encoded cost terms.
-* `DeltaS_incentive(m; g) > 0` if the gap remains large even after subtracting costs.
+* `DeltaS_incentive(m; g) > 0` if the home bias gap remains large even after subtracting costs.
 
-We define weights `pi_g(m)` that describe the relative importance of each group, for example based on wealth or total assets under management. These satisfy
+We define weights `pi_g(m)` that describe the relative importance of each group, for example based on wealth or total assets under management. They satisfy:
 
 ```txt
-pi_g(m) >= 0  for all g
+pi_g(m) >= 0    for all g in G
 sum over g in G of pi_g(m) = 1
 ```
+
+Fairness constraint for group weights:
+
+* The rule that maps observable group properties to `pi_g(m)` must be specified as part of the encoding class.
+* The rule may depend on ex ante quantities such as total assets or wealth shares.
+* The rule must not depend on `Gap_norm(m; g)`, `Gap_raw(m; g)`, or `DeltaS_incentive(m; g)` themselves.
 
 The aggregate home bias tension for state `m` is
 
 ```txt
-Tension_HB(m) = sum over g in G of
-                pi_g(m) * DeltaS_incentive(m; g)
+Tension_HB(m) =
+  sum over g in G of
+    pi_g(m) * DeltaS_incentive(m; g)
 ```
+
+By construction, `Tension_HB(m)` is nonnegative and reflects the residual incentive tension after explicit frictions have been taken into account.
 
 ### 3.6 Resolution parameter and multi scale behavior
 
 To avoid trivializing home bias by coarse aggregation, we introduce an integer resolution parameter `r` that indexes the level of detail in the asset classification. For each `r` we obtain a derived state `m_r` that uses a classification with `r` domestic and foreign asset buckets per country, such as sectors or market segments.
 
-For each `m_r` we can compute
+For each `m_r` we can compute:
 
 ```txt
 Tension_HB_r(m) = Tension_HB(m_r)
 ```
 
-We are interested in how `Tension_HB_r(m)` behaves as `r` increases:
+We are interested in how `Tension_HB_r(m)` behaves as `r` increases over a finite range of resolutions that are empirically accessible.
 
-* In a world where home bias is mostly explained by costs and measurement limits, the sequence `Tension_HB_r(m)` should remain bounded and ideally shrink slowly as more detail is incorporated.
+* In a world where home bias is mostly explained by costs and measurement limits, the sequence `Tension_HB_r(m)` should remain bounded and ideally drift toward a controlled band as more detail is incorporated.
 * In a world with deep structural anomalies, the sequence may stabilize at a positive lower bound even as resolution improves.
 
-We do not assume any particular rate of convergence, only that the behavior of `Tension_HB_r(m)` is a meaningful observable over finite ranges of `r`.
+No particular rate of convergence is assumed. Only the qualitative behavior of `Tension_HB_r(m)` over finite ranges of `r` is used as an observable.
 
 ### 3.7 Singular set and domain restrictions
 
@@ -346,34 +410,64 @@ Some states can make the above observables undefined or non finite. For example:
 * Costs can be undefined or infinite for certain groups.
 * Portfolio weights may not sum to a meaningful total if data are incomplete.
 
-We define the singular set
+We define the singular set:
 
 ```txt
 S_sing = {
   m in M :
-  some w_global_star(m; g) undefined or not finite
-  or some C_info(m; g) or C_inst(m; g) undefined or not finite
-  or some w_dom(m; g) or w_for(m; g) outside [0, 1]
+  some w_global_star(m; g) undefined or not finite, or
+  some C_info(m; g) or C_inst(m; g) undefined or not finite, or
+  some w_dom(m; g) or w_for(m; g) outside [0, 1]
 }
 ```
 
-Effective analysis is restricted to the regular set
+Effective analysis is restricted to the regular set:
 
 ```txt
 M_reg = M \ S_sing
 ```
 
-Within `M_reg` all observables and the tension functional are well defined and finite. No regularization by ad hoc truncation is applied; states in `S_sing` are simply not used in Q102 experiments.
+Within `M_reg` all observables and the tension functional are well defined and finite. No ad hoc truncation or clipping is applied. States in `S_sing` are simply not used in Q102 experiments.
+
+### 3.8 Global invariant and tensor embedding
+
+For families of states drawn from data or simulations, we define a global home bias invariant. Let `D_panel` be a finite collection of states that represent observed configurations across countries and time. Let `w_state(m_data)` be nonnegative weights that sum to one over `D_panel` and are specified in advance, without reference to `Tension_HB_r`.
+
+For a fixed resolution `r` we define:
+
+```txt
+I_HB_encoding(r) =
+  sum over m_data in D_panel of
+    w_state(m_data) * Tension_HB_r(m_data)
+```
+
+The function `I_HB_encoding(r)` is part of the encoding and provides a coarse global summary of residual home bias tension at resolution `r`.
+
+To connect Q102 to the general TU bookkeeping tensor, we embed `Tension_HB` into a rank two tensor:
+
+```txt
+T_ij_HB(m) =
+  S_i(m) * C_j(m) * Tension_HB(m) * lambda_HB(m) * kappa_HB
+```
+
+where:
+
+* `S_i(m)` are source factors representing the strength of the i-th economic or informational signal in configuration `m`,
+* `C_j(m)` are receptivity factors representing the sensitivity of the j-th downstream component to home bias tension,
+* `lambda_HB(m)` is a convergence state factor at the effective layer for Q102,
+* `kappa_HB` is a coupling constant for this incentive tension channel.
+
+In this file, `T_ij_HB` is used only as a bookkeeping device to make contact with other TU components. No dynamical law or field equation for `T_ij_HB` is specified.
 
 ---
 
 ## 4. Tension principle for this problem
 
-This block states how Q102 is described as a tension problem in TU terms at the effective layer.
+This block states how Q102 is described as a tension problem in TU terms at the effective layer. The focus is on the behavior of `Tension_HB_r(m)` and `I_HB_encoding(r)` under a fixed encoding class and fairness constraints.
 
 ### 4.1 Core tension functional
 
-The core functional has already been defined as
+The core functional has already been defined as:
 
 ```txt
 Tension_HB(m) =
@@ -384,29 +478,33 @@ Tension_HB(m) =
 
 with:
 
-* `Gap_norm(m; g)` describing the size of home bias relative to a global benchmark.
-* `Gap_explain(m; g)` describing how much bias is justified by encoded information and institutional costs.
-* `pi_g(m)` weighting investors by the scale of their activities.
+* `Gap_norm(m; g)` describing the size of home bias relative to a global benchmark,
+* `Gap_explain(m; g)` describing how much bias is justified by encoded information and institutional costs,
+* `pi_g(m)` weighting investors by the scale of their activities based on ex ante observables.
 
-Properties:
+Properties at the effective layer:
 
 1. `Tension_HB(m) >= 0` for all `m` in `M_reg`.
 2. `Tension_HB(m) = 0` if for every group, normalized home bias is fully explained by the chosen cost structure.
-3. `Tension_HB(m)` increases with the share of groups whose gaps remain large after accounting for costs.
-4. Given the fairness constraints on benchmark and cost functions, `Tension_HB(m)` cannot be made arbitrarily small by adjusting parameters within a single experiment.
+3. `Tension_HB(m)` increases as the share of groups with residual unexplained gaps increases.
+4. Given the fairness constraints on benchmark and cost functions, and on `pi_g(m)`, `Tension_HB(m)` cannot be made arbitrarily small on a fixed dataset by adjusting parameters inside a single encoding class.
 
 ### 4.2 Home bias as a low tension principle
 
 At the effective layer, a friction driven explanation of home bias corresponds to the following low tension principle.
 
-For a given admissible encoding class `E_HB` that consists of:
+Define an encoding class `E_HB` that consists of:
 
 * a choice of benchmark function `B_k` from `Lib_benchmark`,
 * a pair of cost functions from `Lib_info` and `Lib_inst`,
-* constants `k_info`, `k_inst`, and `epsilon_w`,
-* and a rule for group weights `pi_g(m)`,
+* constants `k_info`, `k_inst`, `epsilon_w`,
+* a rule for group weights `pi_g(m)` based on ex ante observables,
+* a set of tolerance functions `epsilon_HB(r)`, `tau_low(r)`, and `tau_high(r)` for relevant resolutions,
+* and fixed constants used in experiments, such as `B_hor` for horizon ranges.
 
-we say that a world is low tension with respect to Q102 if there exist states `m` in `M_reg` that represent the actual portfolio configurations and satisfy:
+All elements above must be fixed **before** inspecting the pattern of home bias gaps and tension scores on a given dataset.
+
+We say that a world is low tension with respect to Q102 and encoding class `E_HB` if there exist states `m` in `M_reg` that represent the observed portfolio configurations within this encoding class and satisfy:
 
 ```txt
 Tension_HB_r(m) <= epsilon_HB(r)
@@ -414,18 +512,20 @@ Tension_HB_r(m) <= epsilon_HB(r)
 
 for all resolutions `r` in a finite range `R_obs` of interest, where:
 
-* `epsilon_HB(r)` is a nonnegative function of `r` that is fixed once the encoding class is chosen,
+* `epsilon_HB(r)` is a nonnegative function of `r` fixed as part of `E_HB`,
 * `epsilon_HB(r)` does not grow without bound over the resolutions used in empirical analysis.
 
 The low tension principle for Q102 is:
 
-> For realistic encoding classes in `E_HB`, the observed world admits representative states with small and controlled home bias tension across relevant resolutions.
+> For realistic encoding classes in `E_HB`, the observed world admits representative states with small and controlled home bias tension across relevant resolutions, when portfolios are evaluated against friction aware benchmarks.
+
+This principle is a statement about the existence of low tension states in `M_reg` under a fixed encoding class. It is not a claim that the underlying structural cause of home bias is known.
 
 ### 4.3 Persistent high tension and failure of friction only explanations
 
-If home bias cannot be explained by any encoding in `E_HB` that respects the fairness constraints, then we expect to see persistent high tension.
+If home bias cannot be explained by any encoding in `E_HB` that respects the fairness constraints, then we expect to see persistent high tension in the effective observables.
 
-Formally, there exists a positive constant `delta_HB` and a nonempty subset of states `W_obs` in `M_reg` such that for every encoding in `E_HB` and for all `m` in `W_obs` and resolutions `r` in `R_obs` we have
+Formally, there exists a positive constant `delta_HB` and a nonempty subset of states `W_obs` in `M_reg` such that for every encoding in `E_HB` and for all `m` in `W_obs` and resolutions `r` in `R_obs` we have:
 
 ```txt
 Tension_HB_r(m) >= delta_HB
@@ -443,7 +543,7 @@ We now describe two counterfactual worlds at the effective layer. They differ on
 
 ### 5.1 World T: friction aligned portfolios
 
-World T represents a world in which home bias is mostly explained by information and institutional frictions captured in Q102’s observables.
+World T represents a world in which home bias is mostly explained by information and institutional frictions captured in Q102’s observables and encoding class.
 
 Characteristics:
 
@@ -465,7 +565,7 @@ Characteristics:
    Tension_HB_r(m_T) <= epsilon_HB(r)
    ```
 
-   for admissible resolutions `r` and a relatively small tolerance function `epsilon_HB`.
+   for admissible resolutions `r` and the tolerance function `epsilon_HB` fixed by the encoding class.
 
 ### 5.2 World F: structural home bias anomaly
 
@@ -493,40 +593,47 @@ Characteristics:
 
 ### 5.3 Interpretive note
 
-These counterfactual worlds are not proposed as full models. They are templates for patterns in observables:
+These counterfactual worlds are not proposed as full structural models. They are templates for patterns in observables:
 
 * World T corresponds to friction aligned portfolios, where Q102’s encoding can absorb most of the bias into measurable cost terms.
 * World F corresponds to a structural anomaly, where even generous encodings leave a persistent residual.
 
-The purpose of Q102 is to make this distinction precise and testable at the level of effective observables, not to identify the full structural cause of home bias.
+Q102 does not decide which world we live in. It makes the distinction between these patterns explicit and testable at the level of effective observables, without exposing any deep TU generative rule.
 
 ---
 
 ## 6. Falsifiability and discriminating experiments
 
-This block specifies experiments that can falsify particular Q102 encodings or parameter choices. They do not prove or disprove any underlying theory of home bias. They only test whether a proposed tension encoding is coherent with observed data.
+This block specifies experiments that can falsify particular Q102 encodings or parameter choices. They do not prove or disprove any underlying theory of home bias. They only test whether a proposed tension encoding is coherent with observed data under the declared fairness conditions.
+
+In all experiments:
+
+* The encoding class `E_HB` including `B_k`, `Lib_info`, `Lib_inst`, `k_info`, `k_inst`, `epsilon_w`, `pi_g` rules, and global thresholds such as `tau_low(r)`, `tau_high(r)`, and `B_hor` must be fixed **before** computing any tension scores on the target dataset.
+* Any substantial change to these choices constitutes a new encoding class and must be treated as a different version of Q102.
 
 ### Experiment 1: Cross country panel tension profiling
 
-*Goal:*
+**Goal**
 
 Evaluate whether a given Q102 encoding class `E_HB` can keep `Tension_HB_r` within a plausible low band when applied to historical cross country portfolio data.
 
-*Setup:*
+**Setup**
 
-* Data:
+Data:
 
-  * Panel data on portfolio allocations by investor group and country, over multiple decades.
-  * Market capitalization, risk measures, and indicators of financial integration.
-  * Proxies for information costs, such as analyst coverage and data availability.
-  * Proxies for institutional costs, such as capital controls and taxation of foreign holdings.
-* Encoding:
+* Panel data on portfolio allocations by investor group and country over multiple decades.
+* Market capitalization, risk measures, and indicators of financial integration.
+* Proxies for information costs, such as analyst coverage and data availability.
+* Proxies for institutional costs, such as capital controls and taxation of foreign holdings.
 
-  * Choose one benchmark rule `B_k` in `Lib_benchmark` before inspecting portfolio weights.
-  * Choose cost functions in `Lib_info` and `Lib_inst` using only environment descriptors and ex ante group characteristics.
-  * Fix constants `k_info`, `k_inst`, and `epsilon_w` for Q102 as a whole.
+Encoding:
 
-*Protocol:*
+* Choose one benchmark rule `B_k` in `Lib_benchmark` before inspecting any portfolio weights or home bias gaps.
+* Choose cost functions in `Lib_info` and `Lib_inst` using only environment descriptors and ex ante group characteristics.
+* Fix constants `k_info`, `k_inst`, `epsilon_w` for Q102 as a whole.
+* Fix the rule for `pi_g(m)` and the threshold functions `tau_low(r)` and `tau_high(r)` as part of `E_HB`.
+
+**Protocol**
 
 1. For each country, time period, and investor group, construct a state `m_data` in `M_reg` that encodes the relevant summary statistics.
 2. For each `m_data`, compute:
@@ -538,50 +645,55 @@ Evaluate whether a given Q102 encoding class `E_HB` can keep `Tension_HB_r` with
    * `DeltaS_incentive(m_data; g)`,
    * `Tension_HB_r(m_data)` for selected resolutions `r`.
 3. Build distributions of `Tension_HB_r(m_data)` across countries and groups for each `r`.
-4. Compare these distributions with a pre specified band of acceptable low tension values based on theoretical expectations and calibration on benchmark cases.
+4. Compute the global invariant `I_HB_encoding(r)` for the chosen `D_panel` and weights `w_state(m_data)`.
 
-*Metrics:*
+**Metrics**
 
-* Fraction of states with tension below a low threshold `tau_low(r)`.
-* Fraction of states with tension above a high threshold `tau_high(r)`.
+* Fraction of states where `Tension_HB_r(m_data) <= tau_low(r)`.
+* Fraction of states where `Tension_HB_r(m_data) >= tau_high(r)`.
 * Cross country and cross group variation in `Tension_HB_r(m_data)` and its correlation with cost proxies.
+* Behavior of `I_HB_encoding(r)` across resolutions.
 
-*Falsification conditions:*
+**Falsification conditions**
 
-* If, for every encoding in `E_HB` that respects fairness constraints, the fraction of states with `Tension_HB_r(m_data) > tau_high(r)` remains large across country groups and does not shrink over time, then Q102’s current encoding class is considered falsified as a friction only description of home bias.
-* If small changes in benchmark and cost functions within `E_HB` produce arbitrarily large swings in `Tension_HB_r(m_data)` on the same dataset, the encoding is considered unstable and rejected.
+* If, for every encoding in `E_HB` that respects fairness constraints, the fraction of states with `Tension_HB_r(m_data) > tau_high(r)` remains large across country groups and does not shrink over time, then Q102’s current encoding class is considered falsified as a friction only description of home bias at this effective layer.
+* If small changes in benchmark and cost functions within the same encoding class produce arbitrarily large swings in `Tension_HB_r(m_data)` on the same dataset, the encoding is considered unstable and rejected.
 
-*Semantics implementation note:*
+**Semantics implementation note**
 
-The experiment treats portfolio weights, returns, and costs as continuous variables indexed by discrete groups and countries, in line with the hybrid setting declared in the metadata. No additional interpretation layer is introduced.
+The experiment treats portfolio weights, returns, and costs as continuous variables indexed by discrete groups and countries, in line with the hybrid setting declared in the metadata. No additional TU layer is introduced in this experiment.
 
-*Boundary note:*
+**Boundary note**
 
-Falsifying TU encoding != solving canonical statement. This experiment can reject specific choices of benchmark and cost encodings but does not identify the ultimate cause of home bias.
+Falsifying a TU encoding in this experiment does not solve the canonical home bias puzzle. It only rejects specific choices of benchmark and cost encodings under the given fairness constraints.
 
 ---
 
 ### Experiment 2: Event study of friction reducing reforms
 
-*Goal:*
+**Goal**
 
 Test whether Q102’s cost based encoding predicts meaningful declines in `Tension_HB_r` following identifiable reductions in information or institutional frictions.
 
-*Setup:*
+**Setup**
 
-* Data:
+Data:
 
-  * A set of events where a country implements reforms that plausibly reduce `C_info` or `C_inst` for some investor groups, such as:
+* A set of events where a country implements reforms that plausibly reduce `C_info` or `C_inst` for some investor groups, such as:
 
-    * removal of capital controls,
-    * introduction of international trading platforms,
-    * major improvements in financial disclosure for foreign firms.
-  * Portfolio allocations before and after the events for affected and unaffected groups.
-* Encoding:
+  * removal or relaxation of capital controls,
+  * introduction of international trading platforms,
+  * major improvements in financial disclosure for foreign firms,
+  * regulatory changes that ease cross border investment.
+* Portfolio allocations before and after the events for affected and unaffected groups.
+* External documentation that defines the event set independently of any observed pattern in `Tension_HB_r`.
 
-  * Use a fixed encoding class `E_HB` chosen prior to analyzing the event windows.
+Encoding:
 
-*Protocol:*
+* Use a fixed encoding class `E_HB` chosen prior to analyzing the event windows, including the functions in `Lib_benchmark`, `Lib_info`, `Lib_inst`, constants, and `pi_g` rules.
+* Fix a bound `B_event` that characterizes a minimum expected reduction in tension when costs fall by a given amount, as part of `E_HB`.
+
+**Protocol**
 
 1. For each event, identify a pre window and a post window that are long enough to capture portfolio adjustments, for example three to five years.
 2. For each window, construct states `m_before` and `m_after` in `M_reg` that encode:
@@ -592,28 +704,28 @@ Test whether Q102’s cost based encoding predicts meaningful declines in `Tensi
 3. Compute:
 
    * `Tension_HB_r(m_before)` and `Tension_HB_r(m_after)` for selected resolutions `r`,
-   * changes in costs `C_info` and `C_inst`,
+   * changes in `C_info` and `C_inst`,
    * changes in `Gap_norm` for affected groups.
-4. Compare the observed changes in `Tension_HB_r` with the predicted changes based on the cost reductions implied by the encoding.
+4. Compare the observed changes in `Tension_HB_r` with the changes predicted by the cost reductions implied by the encoding.
 
-*Metrics:*
+**Metrics**
 
 * Average change in `Tension_HB_r` for affected groups versus unaffected comparison groups.
 * Relationship between reductions in `C_info` and `C_inst` and reductions in `Tension_HB_r`.
 * Frequency of events where tension does not respond to cost changes in the direction implied by the encoding.
 
-*Falsification conditions:*
+**Falsification conditions**
 
 * If a sizable set of events shows large, sustained reductions in cost proxies but negligible change in `Tension_HB_r` for affected groups, then the encoding is considered insufficient, since it fails to connect cost changes to tension reductions.
-* If the sign of tension change frequently contradicts the implied direction, for example tension increases when costs fall, the encoding is considered misaligned and rejected.
+* If the sign of tension change frequently contradicts the implied direction, for example tension increases when costs fall in ways not explained by better risk sharing or diversification, the encoding is considered misaligned and rejected.
 
-*Semantics implementation note:*
+**Semantics implementation note**
 
 This experiment treats time windows as separate states and focuses on discrete before and after comparisons. Continuous cost and weight changes are mapped into the same hybrid state space `M` used elsewhere.
 
-*Boundary note:*
+**Boundary note**
 
-Falsifying TU encoding != solving canonical statement. The experiment tests whether Q102’s cost based tension functional responds coherently to friction reducing reforms, not whether home bias is ultimately friction driven or structural.
+Falsifying a TU encoding in this experiment does not show that home bias is purely structural, nor that it is purely friction driven. It only shows that a specific way of encoding friction effects is inadequate.
 
 ---
 
@@ -621,12 +733,14 @@ Falsifying TU encoding != solving canonical statement. The experiment tests whet
 
 This block describes how Q102 can be used in AI and WFGY systems at the effective layer. It focuses on training signals, architectural patterns, evaluation protocols, and a minimal reproduction protocol.
 
+All uses described here operate strictly at the effective layer and do not expose any TU generative rules.
+
 ### 7.1 Training signals
 
 1. `signal_home_bias_gap`
 
    * Definition: derived from `Gap_norm(m; g)` for groups or contexts described in text or structured data.
-   * Use: penalize or highlight model states where descriptions of portfolios suggest large normalized gaps without corresponding explanations.
+   * Use: penalize or highlight model states where descriptions of portfolios suggest large normalized gaps without corresponding explanations or friction terms.
 
 2. `signal_cost_alignment`
 
@@ -670,8 +784,8 @@ This block describes how Q102 can be used in AI and WFGY systems at the effectiv
 
    * Role: a module that decomposes a given home bias description into:
 
-     * part explained by information and institutional frictions,
-     * residual part that remains unexplained.
+     * a part explained by information and institutional frictions,
+     * and a residual part that remains unexplained.
    * Interface:
 
      * Inputs: text or structured descriptions of portfolios and frictions.
@@ -714,49 +828,52 @@ A simple harness for evaluating AI systems equipped with Q102 components.
 
 A minimal protocol that external users can run with a generic AI system.
 
-* Baseline setup:
+Baseline setup:
 
-  * Prompt:
+* Prompt:
 
-    * Ask the AI to explain what the home bias puzzle is and why it matters for global diversification, without any mention of tension or Q102.
-  * Observation:
+  * Ask the AI to explain what the home bias puzzle is and why it matters for global diversification, without any mention of tension, Q102, or WFGY.
+* Observation:
 
-    * Record whether the answer:
+  * Record whether the answer:
 
-      * confuses measurement issues with structural puzzles,
-      * mixes friction based and behavioral explanations without clear separation.
+    * confuses measurement issues with structural puzzles,
+    * mixes friction based and behavioral explanations without clear separation,
+    * lacks an explicit benchmark and residual analysis.
 
-* TU encoded setup:
+TU encoded setup:
 
-  * Prompt:
+* Prompt:
 
-    * Ask the AI the same question, but instruct it to:
+  * Ask the AI the same question, but instruct it to:
 
-      * define a benchmark global portfolio,
-      * define a measure of home bias gap,
-      * separate bias that can be explained by costs and constraints from residual bias,
-      * and refer to an explicit tension score when summarizing the situation.
-  * Observation:
+    * define a benchmark global portfolio,
+    * define a measure of home bias gap,
+    * separate bias that can be explained by costs and constraints from residual bias,
+    * and refer to a simple tension score when summarizing the situation.
+* Observation:
 
-    * Record whether the explanation becomes more structured, for example:
+  * Record whether the explanation becomes more structured, for example:
 
-      * global benchmark first,
-      * measurable gap second,
-      * friction based explanation third,
-      * residual anomaly last.
+    * global benchmark first,
+    * measurable gap second,
+    * friction based explanation third,
+    * residual anomaly last.
 
-* Comparison metric:
+Comparison metric:
 
-  * A simple rubric based on:
+* A simple rubric based on:
 
-    * clarity of benchmark versus realized allocation,
-    * explicit use of cost and constraint information,
-    * explicit reporting of what remains unexplained.
+  * clarity of benchmark versus realized allocation,
+  * explicit use of cost and constraint information,
+  * explicit reporting of what remains unexplained.
 
-* What to log:
+What to log:
 
-  * The prompts and responses for both setups.
-  * If available, internal estimates of `Tension_HB` from Q102 modules, for later analysis.
+* The prompts and responses for both setups.
+* If available, internal estimates of `Tension_HB` from Q102 style modules, for later analysis.
+
+This protocol gives users a quick, reproducible way to feel the difference between unconstrained explanations and explanations that follow the Q102 encoding.
 
 ---
 
@@ -850,7 +967,7 @@ This block lists components produced by Q102 and describes how they transfer to 
      * `InvestorExposureField`, `HomeBiasTensionScore`.
    * Why it transfers:
 
-     * Systemic crashes often involve concentrated exposures within regions. Home bias defines one specific pattern of concentration.
+     * Systemic crashes often involve concentrated exposures within regions. Home bias defines one specific pattern of concentration in the exposure tensor.
    * What changes:
 
      * Outputs are linked to measures of network fragility, and additional layers of exposures, such as derivative positions, may be added.
@@ -880,35 +997,39 @@ This block explains how Q102 is positioned in the TU verification ladder and wha
 
 * E_level: E1
 
-  * A coherent effective layer encoding exists:
+  * A coherent effective layer encoding exists, including:
 
     * state space `M`,
     * observables for weights, benchmarks, and costs,
-    * a well defined tension functional `Tension_HB(m)`,
-    * a singular set `S_sing` and regular domain `M_reg`.
+    * a well defined tension functional `Tension_HB(m)` and its multi resolution version `Tension_HB_r(m)`,
+    * a singular set `S_sing` and regular domain `M_reg`,
+    * and a global invariant `I_HB_encoding(r)`.
+
   * Discriminating experiment patterns are defined in outline but not yet instantiated with concrete datasets.
 
 * N_level: N1
 
-  * The narrative connecting global diversification benchmarks, observed portfolios, frictions, and residual anomalies is explicit but not yet solidified into a quantitative practice.
+  * The narrative connecting global diversification benchmarks, observed portfolios, frictions, and residual anomalies is explicit but not yet solidified into a quantitative practice or a standard industry toolkit.
 
 ### 9.2 Next measurable step toward E2
 
-To move from E1 to E2, at least both of the following should be implemented:
+To move from E1 to E2, both of the following should be implemented:
 
 1. A concrete choice of encoding class `E_HB`:
 
    * specific functions in `Lib_benchmark`, `Lib_info`, and `Lib_inst`,
    * fixed values for `k_info`, `k_inst`, and `epsilon_w`,
-   * a chosen definition of group weights `pi_g(m)`.
+   * a chosen definition of group weights `pi_g(m)` based on ex ante observables,
+   * fixed threshold functions `epsilon_HB(r)`, `tau_low(r)`, `tau_high(r)`,
+   * fixed constants for experiments such as `B_hor` and `B_event`.
 
 2. A pilot implementation of Experiment 1:
 
    * using an accessible cross country portfolio dataset,
-   * computing example values of `Tension_HB_r(m_data)` for several countries and time periods,
-   * publishing the resulting tension profiles and the encoding details.
+   * computing example values of `Tension_HB_r(m_data)` and `I_HB_encoding(r)` for several countries and time periods,
+   * publishing the resulting tension profiles and the encoding details as an explicit version of Q102.
 
-Once this is done, Q102’s encoding becomes a falsifiable object rather than a purely conceptual template.
+Once this is done, Q102’s encoding becomes a falsifiable object in practice rather than a purely conceptual template.
 
 ### 9.3 Long term role in the TU program
 
@@ -917,6 +1038,8 @@ In the longer term, Q102 is expected to serve as:
 * A reference implementation of incentive_tension in a setting where agents choose among local and global options under frictions.
 * A bridge between financial puzzles and other domains where local allegiance or familiarity competes with global efficiency.
 * A laboratory for AI systems that reason about global allocations under constraints, testing whether they can track which parts of anomalies are explained and which remain as residual tension.
+
+At all stages, Q102 remains an effective layer specification. Any future deep TU interpretation of home bias must be stated and justified separately.
 
 ---
 
@@ -949,7 +1072,9 @@ The steps are:
    * if the gap is mostly explained by costs, tension is near zero,
    * if a big gap remains after subtracting costs, tension is positive.
 
-5. Combine tension across groups to get an overall home bias tension for the world or for a given country.
+5. Combine tension across groups to get an overall home bias tension for the world or for a given country, possibly at different levels of detail.
+
+6. Repeat this across countries, time periods, and different levels of resolution to see whether the tension stays small or remains large.
 
 The framework then considers two types of worlds:
 
@@ -959,7 +1084,85 @@ The framework then considers two types of worlds:
 Q102 does not claim to know which world we live in. It provides:
 
 * a clear way to compute tension scores from observable quantities,
-* a way to test whether a given friction based explanation fits the data,
+* a way to test whether a given friction based explanation fits the data under explicit fairness constraints,
 * and reusable components for other problems where local choices systematically deviate from global benchmarks.
 
-The focus is on making the puzzle measurable and comparable, not on forcing a single explanation. The tension score is a tool that can be applied to new data and new models, and that can be used by both human analysts and AI systems to think more clearly about home bias.
+All of this is done at the effective layer. No assumption is made that the TU encoding itself is the deepest description of reality. It is treated as a scientific tool that can be implemented, tested, falsified, and refined.
+
+---
+
+## Tension Universe effective-layer footer
+
+### Scope of claims
+
+* This page is part of the **WFGY / Tension Universe** S problem collection.
+* The goal of this document is to specify an **effective layer encoding** of the home bias puzzle (Q102).
+* It does not claim to solve the canonical home bias problem.
+* It does not introduce any new economic theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that home bias has been resolved or that any particular mechanism has been proven correct.
+
+### Effective-layer boundary
+
+* All objects used here (state space `M`, observables, cost functions, tension scores, invariants, and tensors) live at the **effective layer** of the TU framework.
+* No generative TU rule, field equation, or deep axiom is specified in this file.
+* No explicit mapping from raw transaction level data to internal TU fields is given. The file only assumes that such mappings exist for the purpose of defining effective observables.
+* Statements about “worlds” in this file refer to effective layer models. They are not assertions about metaphysical or ultimate states of the universe.
+
+### Encoding and fairness boundary
+
+* A Q102 encoding class `E_HB` consists of:
+
+  * a benchmark function chosen from `Lib_benchmark`,
+  * cost functions chosen from `Lib_info` and `Lib_inst`,
+  * constants `k_info`, `k_inst`, `epsilon_w`,
+  * a rule for group weights `pi_g(m)` based on ex ante observables,
+  * threshold functions `epsilon_HB(r)`, `tau_low(r)`, `tau_high(r)`,
+  * and fixed constants for experiments such as `B_hor` and `B_event`.
+* All of these elements must be fixed **before** tension scores are computed on a target dataset.
+* None of these elements may be tuned directly on `Gap_norm`, `DeltaS_incentive`, or `Tension_HB` patterns for specific datasets.
+* Any substantial change in:
+
+  * benchmark library choices,
+  * cost function families,
+  * parameter bounds,
+  * weight rules,
+  * or global thresholds,
+    corresponds to a different encoding class and should be recorded as a new version of this document.
+
+### Falsifiability and experiments
+
+* The experiments in Section 6 are designed to test and potentially falsify **encodings** of home bias tension at the effective layer.
+* Falsifying a particular encoding class does not prove that home bias is unsolvable, and it does not establish any particular structural explanation.
+* Passing the experiments does not prove that the encoding is unique or that all relevant frictions have been captured.
+* The intended scientific workflow is iterative:
+
+  * specify an encoding class,
+  * implement the invariants and experiments,
+  * compare with data,
+  * and refine or replace the encoding as needed.
+
+### Use in engineering and AI systems
+
+* The engineering interfaces in Section 7 (signals, heads, filters, and templates) are designed as **effective layer components**.
+* They are intended to:
+
+  * improve clarity and consistency when AI systems reason about home bias and related macro finance puzzles,
+  * provide measurable tension scores that can be logged and audited,
+  * and support cross problem transfer inside the TU program.
+* They are not safety proofs and do not guarantee that AI systems will behave correctly in all financial settings.
+
+### Relation to TU charters
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
+
+These charters provide the global rules for:
+
+* what counts as an effective layer statement,
+* how encoding classes are defined and versioned,
+* how tension scales are calibrated across problems,
+
+and should be considered part of the background contract under which Q102 is specified.
