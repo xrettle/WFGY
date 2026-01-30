@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q122-->
 # Q122 · AI control problem
 
 ## 0. Header metadata
