@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q020 -->
 # Q020 · Global classification of high dimensional manifolds under curvature constraints
 
 ## 0. Header metadata
