@@ -15,7 +15,7 @@ Status: Open
 Semantics: hybrid
 E_level: E1
 N_level: N1
-Last_updated: 2026-01-29
+Last_updated: 2026-01-30
 ```
 
 ---
