@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q103 -->
 # Q103 · Long run productivity slowdown
 
 ## 0. Header metadata
