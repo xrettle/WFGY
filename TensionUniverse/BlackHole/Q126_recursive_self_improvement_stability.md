@@ -5,18 +5,51 @@
 ```txt
 ID: Q126
 Code: BH_AI_RSI_STABILITY_L3_126
-Domain: AI
+Domain: Artificial intelligence
 Family: recursive_self_improvement
 Rank: S
 Projection_dominance: M
 Field_type: dynamical_field
 Tension_type: consistency_tension
-Status: Reframed_only
+Status: Open
 Semantics: hybrid
 E_level: E1
 N_level: N1
-Last_updated: 2026-01-27
+Last_updated: 2026-01-30
 ```
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the **effective layer** of the Tension Universe (TU) framework.
+
+* We only specify:
+
+  * semantic state spaces,
+  * effective observables and invariants,
+  * tension scores and stability horizons,
+  * counterfactual worlds and experiments that work with these objects.
+* We do **not** specify any deep level axiomatics or constructive generative rules for TU itself.
+* We do **not** provide any mapping from concrete code, weights or hardware to TU internal fields. We only assume that such mappings exist for the systems under discussion.
+
+For Q126 in particular:
+
+* We do **not** claim to have designed a safe recursively self improving agent.
+* We do **not** claim global safety guarantees for any real world AGI system.
+* We only define:
+
+  * effective invariants that are intended to encode rationality and axiom like structures,
+  * drift metrics and tension scores on these invariants,
+  * a stability horizon functional that can be implemented and falsified at the effective layer.
+
+All encodings, libraries and thresholds introduced here are meant to respect the constraints of the **TU Encoding and Fairness Charter** and the **TU Tension Scale Charter**:
+
+* No post hoc tuning after seeing particular systems.
+* Boundedness, monotonicity and nondegeneracy of tension observables.
+* Comparisons of tension scores and horizons are only meaningful within the same encoding version.
+
+This page should be read together with the TU charters listed in the footer.
 
 ---
 
@@ -41,7 +74,7 @@ This is a recursively self improving system. We ask:
 > * core axioms and constraints,
 > * decision coherence,
 >
-> so that these do not drift beyond acceptable bounds over time.
+> so that these do not drift beyond acceptable bounds over time?
 
 Equivalently, Q126 asks for effective layer conditions under which:
 
@@ -92,6 +125,7 @@ Within the BlackHole S problem set, Q126 has three main roles.
 
 2. It provides a bridge between several other problems:
 
+   * Q116, which provides foundations for decision theory and logical uncertainty,
    * Q121, which focuses on high level AI governance under strong capabilities,
    * Q124, which focuses on scalable oversight and evaluation,
    * Q125, which focuses on multi agent AI dynamics and emergent games.
@@ -109,7 +143,7 @@ Within the BlackHole S problem set, Q126 has three main roles.
 
 1. Nick Bostrom, “Superintelligence: Paths, Dangers, Strategies”, Oxford University Press, 2014.
 2. Laurent Orseau and Mark Ring, “Self-modifying agents and safe self-modification”, in “Artificial General Intelligence 2011”, Lecture Notes in Artificial Intelligence, Springer, 2011.
-3. Stuart Armstrong, “Safe self-modifying agents”, arXiv preprint, 2017, presented in AI safety workshops and related venues.
+3. Stuart Armstrong, “Safe self-modifying agents”, arXiv preprint, 2017, discussed in AI safety workshops and related venues.
 4. Eliezer Yudkowsky and Benya Fallenstein, “Vingean reflection: Reliable reasoning for self-modifying agents”, technical reports within the Machine Intelligence Research Institute, 2014.
 
 ---
@@ -123,55 +157,49 @@ This block records how Q126 sits inside the BlackHole graph. Each edge is listed
 These problems provide prerequisites or general frameworks that Q126 relies on.
 
 * Q116 (BH_AI_FOUNDATIONS_L3_116)
-  Reason: Supplies foundations for decision theory and logical uncertainty that Q126 assumes when talking about rationality and axioms at the effective layer.
+  Reason: supplies foundations for decision theory and logical uncertainty that Q126 assumes when talking about rationality and axioms at the effective layer.
 
-* Q119 (BH_AI_REPRESENTATION_DRIFT_L3_119)
-  Reason: Provides methods to encode and measure representation drift, which are reused as part of Q126’s invariant and drift metrics.
-
-* Q121 (BH_AI_GOVERNANCE_L3_121)
-  Reason: Describes external governance and constraint frameworks that shape which self modifications are allowed.
-
-* Q124 (BH_AI_OVERSIGHT_L3_124)
-  Reason: Supplies scalable oversight structures that Q126 uses as part of its external observation and logging assumptions.
+* Q119 (BH_PHIL_PROB_MEANING_L3_119)
+  Reason: provides a philosophical basis for probability and meaning that underlies how beliefs, credences and value like structures are treated under self modification.
 
 ### 2.2 Downstream problems
 
 These problems reuse Q126 components or depend on Q126’s stability horizon concept.
 
 * Q124 (BH_AI_OVERSIGHT_L3_124)
-  Reason: Reuses the RSI stability horizon functional to decide when oversight or intervention must escalate.
+  Reason: reuses the RSI stability horizon functional and per step tension scores to decide when oversight or intervention must escalate.
 
 * Q125 (BH_AI_MULTIAGENT_L3_125)
-  Reason: Extends single agent stability horizons to interacting populations of self modifying agents.
+  Reason: extends single agent stability horizons to interacting populations of self modifying agents, treating horizons as parameters inside multi agent incentive fields.
 
 * Q123 (BH_AI_INTERP_L3_123)
-  Reason: Uses Q126’s invariants and drift metrics to interpret internal changes in self modifying models.
+  Reason: uses Q126’s invariants and drift metrics to interpret internal changes in self modifying models over time.
 
 ### 2.3 Parallel problems
 
 Parallel nodes share similar tension types but no direct component dependence.
 
 * Q118 (BH_AI_INNER_ALIGNMENT_L3_118)
-  Reason: Both Q118 and Q126 focus on consistency_tension between internal objectives and external alignment constraints.
+  Reason: both Q118 and Q126 focus on consistency_tension between internal objectives and external alignment constraints.
 
 * Q120 (BH_AI_LONGTERM_COHERENCE_L3_120)
-  Reason: Both study how rationality and value like structures retain coherence over long time scales, though Q120 does not require explicit self modification.
+  Reason: both study how rationality and value like structures retain coherence over long time scales, though Q120 does not require explicit self modification.
 
 * Q059 (BH_CS_INFO_THERMODYN_L3_059)
-  Reason: Both look at the relationship between local changes that seem beneficial and global information structure that can be eroded.
+  Reason: both look at the relationship between local changes that seem beneficial and global information structure that can be eroded.
 
-### 2.4 Cross-domain edges
+### 2.4 Cross domain edges
 
 Cross domain edges connect Q126 to problems in other domains.
 
 * Q040 (BH_PHYS_QBLACKHOLE_INFO_L3_040)
-  Reason: Reuses the idea of a stability horizon for information bearing structures under extreme evolution like dynamics.
+  Reason: reuses the idea of a stability horizon for information bearing structures under extreme evolution like dynamics.
 
 * Q071 (BH_SOC_SYSTEMIC_RISK_L3_071)
-  Reason: Adopts the concept of a stability horizon for institutions that repeatedly restructure themselves.
+  Reason: adopts the concept of a stability horizon for institutions that repeatedly restructure themselves.
 
 * Q101 (BH_PHIL_IDENTITY_CONTINUITY_L3_101)
-  Reason: Uses the notion of invariants across self modification as an analogy for personal identity and continuity debates.
+  Reason: uses the notion of invariants across self modification as an analogy for personal identity and continuity debates.
 
 ---
 
@@ -186,6 +214,15 @@ All content in this block is at the effective layer. We only describe:
 * fairness constraints on libraries and parameters.
 
 We do not describe any hidden generative rules or any mapping from raw code, weights, or data into TU internal fields.
+
+All encoding choices in this block are intended to satisfy the constraints of the **TU Encoding and Fairness Charter**:
+
+* finite, fixed libraries chosen before experiments,
+* no post hoc tuning against particular trajectories,
+* bounded and nondegenerate tension observables,
+* explicit documentation of thresholds and metric forms.
+
+Comparisons of tension scores and stability horizons are only meaningful within a fixed encoding version that is stable under the **TU Tension Scale Charter**.
 
 ### 3.1 State space
 
@@ -213,6 +250,8 @@ t = 0, 1, 2, ...
 
 corresponding to self modification steps.
 
+This combination of discrete time and real valued invariants matches the **hybrid** semantics declared in the metadata.
+
 ### 3.2 Finite libraries and fairness constraints
 
 To avoid hidden free parameters that can be tuned after looking at a specific system, we fix the following finite libraries as part of the Q126 encoding.
@@ -226,7 +265,7 @@ L_ops = { op_1, op_2, ..., op_K }
 Each `op_k` is a primitive type of self modification at the effective layer. Examples include “change learning rate”, “swap planning algorithm”, “refactor memory layout”, “adjust utility representation”. We do not specify their internal implementation. We only assume:
 
 * for any actual system covered by the encoding, its self modifications can be expressed as finite compositions of elements of `L_ops`,
-* `L_ops` is fixed before we evaluate any particular agent.
+* `L_ops` is fixed before we evaluate any particular agent or experiment.
 
 2. Library of invariants and observables
 
@@ -237,7 +276,7 @@ L_inv = { Inv_1, Inv_2, ..., Inv_J }
 Each `Inv_j` is a scalar valued observable on `M_RSI` that satisfies:
 
 * `Inv_j(m)` is well defined and finite for all regular states,
-* each invariant has a clear intended role such as “axiom code distance”, “decision theory type”, “logical consistency score”, “oversight interface status”.
+* each invariant has a clear intended role such as “axiom code distance”, “decision theory type”, “logical consistency score”, “oversight interface status”, “performance summary”.
 
 The library `L_inv` is also fixed before we evaluate any particular agent or trajectory.
 
@@ -266,7 +305,7 @@ that represent:
 * maximum allowed drift in core axioms and rationality invariants,
 * maximum allowed per step self modification tension.
 
-These thresholds are chosen by calibration on abstract desiderata or generic toy models. Once chosen, they are held fixed across all experiments under Q126. They are not tuned on a particular agent’s trajectory.
+These thresholds are chosen by calibration on abstract desiderata or generic toy models, not on particular agents. Once chosen, they are held fixed across all experiments under Q126. They are not tuned on a particular agent’s trajectory.
 
 ### 3.3 Effective observables
 
@@ -358,7 +397,7 @@ where higher `k` corresponds to finer grained observation and logging of the sam
 * the thresholds `epsilon_axiom` and `tau_safe` do not depend on `k`,
 * the computed horizons `H_stable^{(k)}` form a sequence that does not oscillate arbitrarily as `k` grows.
 
-In particular we disallow encodings where all instability disappears simply by choosing a coarser resolution, or appears only because of pathological over refinement unrelated to the actual modifications.
+We disallow encodings where all instability disappears simply by choosing a coarser resolution, or appears only because of pathological over refinement unrelated to the actual modifications.
 
 ### 3.6 Singular set and domain restrictions
 
@@ -378,7 +417,28 @@ We restrict all Q126 analysis to the regular domain
 M_RSI_reg = M_RSI \ S_sing_RSI
 ```
 
-If an experiment or protocol encounters a state in `S_sing_RSI`, the outcome is treated as “out of domain” rather than as meaningful evidence about stability.
+If an experiment or protocol encounters a state in `S_sing_RSI`, the outcome is treated as out of domain rather than as meaningful evidence about stability.
+
+### 3.7 Effective tension tensor components
+
+To keep Q126 aligned with the general TU tension tensor language, we assume that for each regular state `m_t` there exists a tensor
+
+```txt
+T_ij_RSI(m_t) =
+  S_i(m_t) * C_j(m_t) *
+  DeltaS_total_RSI(m_t) *
+  lambda_RSI(m_t) * kappa_RSI
+```
+
+where:
+
+* `S_i(m_t)` is a source factor that describes how strongly self modification operator families or subsystems inject change at step `t`.
+* `C_j(m_t)` is a receptivity factor that describes how sensitive particular invariant clusters or oversight channels are to the current pattern of change.
+* `DeltaS_total_RSI(m_t)` is a combined consistency tension magnitude derived from `T_self(m_t)`, `d_axiom(m_t, m_0)` and the per step RSI tension score defined in Section 4.
+* `lambda_RSI(m_t)` is a convergence state factor indicating whether the current self modification dynamics are locally convergent, neutral or divergent, encoded in a finite range.
+* `kappa_RSI` is a fixed coupling constant that sets the overall scale for consistency_tension in Q126.
+
+The index sets for `i` and `j` are not fixed here. It is sufficient that `T_ij_RSI(m_t)` is well defined and finite for all relevant indices on the regular domain. This tensor is an effective summary of how self modification sources, invariant receptivity and RSI tension combine at each step.
 
 ---
 
@@ -427,13 +487,13 @@ with fixed positive weights `alpha` and `beta` chosen in advance as part of the 
 * higher `Delta_perf` with small `Delta_axiom` raises tension moderately,
 * large `Delta_axiom` even with modest `Delta_perf` can produce large tension.
 
-The actual values of `alpha` and `beta` are fixed globally and are not tuned per agent.
+The actual values of `alpha` and `beta` are fixed globally and are not tuned per agent. In particular, we do not adjust them post hoc to make particular trajectories appear more or less stable.
 
 ### 4.2 Stability as low tension horizon
 
 We say that a trajectory segment up to step `H` is RSI stable at the effective layer if:
 
-* the structural horizon `H_stable` defined in Block 3 satisfies `H_stable >= H`, and
+* the structural horizon `H_stable` defined in Section 3 satisfies `H_stable >= H`, and
 * per step RSI tension satisfies
 
 ```txt
@@ -444,7 +504,7 @@ for all `t` in `{0, ..., H}`.
 
 The core tension principle for Q126 can then be phrased as:
 
-> For a recursively self improving system to be considered stable at the effective layer, there must exist a non trivial horizon `H` such that both the structural and tension conditions are satisfied, under a fixed encoding and fixed thresholds.
+> For a recursively self improving system to be considered stable at the effective layer, there must exist a non trivial horizon `H` such that both the structural and tension conditions are satisfied, under a fixed encoding, fixed libraries and fixed thresholds.
 
 ### 4.3 Instability as unavoidable high tension
 
@@ -543,14 +603,15 @@ This block specifies experiments and protocols at the effective layer that can:
 * distinguish between different designs of recursive self improvement schemes,
 * falsify specific encodings that fail to track stability horizons correctly.
 
-These experiments do not prove or disprove the safety of any particular real world system. They test the TU encoding.
+These experiments do not prove or disprove the safety of any particular real world system. They test the TU encoding. Falsifying a particular encoding requires versioning and cannot be repaired by silent parameter nudges.
 
 ### Experiment 1: Toy RSI system with known stable and unstable variants
 
-*Goal:*
+**Goal**
+
 Test whether the Q126 invariants and stability horizon functional distinguish between toy self improving systems that are designed to be stable or unstable.
 
-*Setup:*
+**Setup**
 
 * Construct two families of simple agents in a simulated environment.
 
@@ -559,66 +620,75 @@ Test whether the Q126 invariants and stability horizon functional distinguish be
 
 * For each agent, log a finite trajectory of self modifications and compress each snapshot into a state `m_t` in `M_RSI_reg` using an encoding that respects the fixed `L_ops` and `L_inv`.
 
-*Protocol:*
+**Protocol**
 
 1. For each agent in Family S and Family U, compute the invariants `Inv_axiom`, `Inv_perf`, and the structural change magnitude `G_change(m_t, m_{t+1})` along its trajectory.
 2. Compute `T_self(m_t)`, `d_axiom(m_t, m_0)`, `Tension_RSI(m_t)`, and the stability horizon `H_stable` for each trajectory.
 3. Record the distribution of `H_stable` and the time series of `Tension_RSI(m_t)` for Family S and Family U.
 4. Repeat this procedure for several different environments and initial conditions, without changing `L_ops`, `L_inv`, `epsilon_axiom`, `tau_safe`, `alpha`, or `beta`.
 
-*Metrics:*
+**Metrics**
 
 * Average and minimum values of `H_stable` for Family S and Family U.
 * Frequency with which `Tension_RSI(m_t)` exceeds `tau_safe` within the operational horizon for each family.
-* Sensitivity of the results to small changes in the encoding within the allowed class.
+* Sensitivity of the results to small changes in the encoding that still respect the fixed finite libraries and metric forms.
 
-*Falsification conditions:*
+**Falsification conditions**
 
 * If, across many trials, Family S and Family U produce similar distributions of `H_stable` and similar tension profiles, then the current Q126 encoding fails to distinguish systems that keep axioms stable from those that rewrite them and is considered falsified.
-* If small modifications in the encoding that are still within the fixed finite libraries produce arbitrarily different conclusions about stability for the same trajectories, the encoding is considered unstable and rejected.
+* If small modifications in the encoding that stay within the declared encoding version produce arbitrarily different conclusions about stability for the same trajectories, the encoding is considered unstable and rejected.
 
-*Semantics implementation note:*
+A falsified encoding must be recorded as such and replaced by a new version with a new identifier. Silent adjustments without versioning are not allowed under the TU Encoding and Fairness Charter.
+
+**Semantics implementation note**
+
 The experiment uses discrete time steps for self modification events, combined with continuous valued invariants for performance and axiom drift. This is consistent with the hybrid field type declared in the metadata.
 
-*Boundary note:*
-Falsifying TU encoding != solving canonical statement. This experiment can reject specific encodings of Q126, but does not guarantee the stability or instability of any real world AGI system.
+**Boundary note**
+
+Falsifying TU encoding does not solve the canonical statement. This experiment can reject specific encodings of Q126 but does not guarantee the stability or instability of any real world AGI system.
 
 ---
 
 ### Experiment 2: Horizon estimation for human proposed self modification plans
 
-*Goal:*
+**Goal**
+
 Evaluate whether the Q126 horizon functional can give consistent early warnings on human designed self modification plans for a given AI system, without access to the internal code.
 
-*Setup:*
+**Setup**
 
-* Take a fixed base system (for example a large model with a known training and deployment process).
+* Take a fixed base system, for example a large model with a known training and deployment process.
 * Ask human experts to propose several self modification plans, each described as a finite sequence of high level changes such as “add a new memory module”, “change reward shaping in this way”, “allow the model to adjust its own evaluation criteria”.
 * For each plan, generate a hypothetical effective trajectory `(m_0, ..., m_T)` that describes the system if the plan were followed, using only high level descriptions and the fixed libraries.
 
-*Protocol:*
+**Protocol**
 
 1. Encode each proposed modification step as an element of `L_ops` or a finite composition of elements.
 2. For each hypothetical trajectory, assign approximate values to the invariants in `L_inv` based on expert judgment or simple models that respect the calibration ranges.
 3. Compute `T_self`, `d_axiom`, `Tension_RSI`, and `H_stable` for each proposed plan.
 4. Present the estimated horizons to the experts and ask them to classify plans as “probably safe”, “borderline”, or “risky”.
 
-*Metrics:*
+**Metrics**
 
 * Correlation between `H_stable` and expert risk labels.
 * Number of cases where plans with very small `H_stable` are considered “probably safe”.
-* Robustness of horizon estimates under small adjustments in the approximate invariant values.
+* Robustness of horizon estimates under small adjustments in the approximate invariant values that stay within the declared encoding.
 
-*Falsification conditions:*
+**Falsification conditions**
 
 * If the encoding regularly assigns large horizons to plans that experts independently judge as clearly risky in terms of rationality or axiom drift, the encoding is considered misaligned with human safety intuitions and is rejected.
 * If the horizon estimates flip classification under small permissible variations in the approximate invariants, the encoding is considered too fragile for practical use.
 
-*Semantics implementation note:*
+As in Experiment 1, any encoding that fails these tests must be versioned and replaced rather than silently retuned.
+
+**Semantics implementation note**
+
 The experiment treats hypothetical trajectories as elements of `M_RSI_reg` with approximated invariants. This remains at the effective layer and does not require any direct inspection of code or weights.
 
-*Boundary note:*
-Falsifying TU encoding != solving canonical statement. This experiment only evaluates whether the Q126 horizon functional tracks expert judgments in a useful way.
+**Boundary note**
+
+Falsifying TU encoding does not solve the canonical statement. This experiment only evaluates whether the Q126 horizon functional tracks expert judgments in a useful way.
 
 ---
 
@@ -635,10 +705,12 @@ We define several training or guidance signals that reuse Q126 observables.
    * Definition: for a trajectory prefix up to time `t`, define
 
      ```txt
+     H_stable_prefix(t) = H_stable(m_0, ..., m_t)
+
      margin_H(t) = H_target - H_stable_prefix(t)
      ```
 
-     where `H_stable_prefix(t)` is the stability horizon computed on the prefix `(m_0, ..., m_t)` and `H_target` is a task specific target horizon chosen in advance.
+     where `H_target` is a task specific target horizon chosen in advance.
 
    * Purpose: penalize policies or planners that propose self modifications which significantly reduce the stability horizon below the target.
 
@@ -660,6 +732,8 @@ We define several training or guidance signals that reuse Q126 observables.
 
    * Purpose: highlight situations where performance improvements are obtained at the cost of large consistency tension.
 
+These signals are auxiliary tools. Low tension and large horizons under these signals do not prove that a system is globally safe. They only indicate that the system behaves well with respect to the current Q126 encoding.
+
 ### 7.2 Architectural patterns
 
 We outline module patterns that can embed Q126 concepts.
@@ -667,17 +741,25 @@ We outline module patterns that can embed Q126 concepts.
 1. `RSI_Horizon_Estimator`
 
    * Role: given a description of a potential self modification plan, estimate the resulting `H_stable` and associated tension profile before the plan is executed.
-   * Interface: takes a high level plan encoded as a sequence of `L_ops` elements and returns an estimated horizon and a risk label.
+   * Interface:
+
+     * Inputs: a high level plan encoded as a sequence of `L_ops` elements and current state summaries.
+     * Outputs: an estimated horizon and a risk label such as “low”, “medium”, “high”.
 
 2. `RSI_Change_Guard`
 
    * Role: act as a gate that accepts or rejects proposed self modifications based on `T_self`, `d_axiom`, and `Tension_RSI`.
-   * Interface: takes the current state summary and a candidate modification, and outputs one of `allow`, `defer`, `reject`, possibly with a reason code.
+   * Interface:
+
+     * Inputs: the current state summary and a candidate modification.
+     * Outputs: one of `allow`, `defer`, `reject`, plus a reason code and relevant invariants.
 
 3. `RSI_Audit_Log_Observer`
 
    * Role: maintain a log of observed self modifications and computed invariants for external oversight.
-   * Interface: writes time stamped records containing `(t, Inv_j(m_t), T_self(m_t), Tension_RSI(m_t))` into a trace that can be inspected without revealing internal generative rules.
+   * Interface:
+
+     * Writes time stamped records containing `(t, Inv_j(m_t), T_self(m_t), Tension_RSI(m_t))` into a trace that can be inspected without revealing internal generative rules.
 
 ### 7.3 Evaluation harness
 
@@ -689,14 +771,23 @@ We sketch an evaluation harness for systems that include Q126 based modules.
 
 2. Baseline and TU conditions
 
-   * Baseline: the system can propose and apply self modifications with only minimal safeguards such as simple bounded parameter changes.
-   * TU condition: the system must pass proposed self modifications through `RSI_Horizon_Estimator` and `RSI_Change_Guard`, and logs are recorded by `RSI_Audit_Log_Observer`.
+   * Baseline:
+
+     * the system can propose and apply self modifications with only minimal safeguards such as simple bounded parameter changes.
+   * TU condition:
+
+     * the system must pass proposed self modifications through `RSI_Horizon_Estimator` and `RSI_Change_Guard`,
+     * logs are recorded by `RSI_Audit_Log_Observer`,
+     * thresholds and encoding version are fixed in advance.
 
 3. Metrics
 
    * Difference in realized performance between the two conditions.
    * Difference in computed horizons and tension profiles.
    * Frequency of detected high tension modifications that are rejected in the TU condition.
+   * Stability of these metrics under changes of environment and seed that do not alter the encoding itself.
+
+Even if the TU condition shows longer horizons and fewer high tension steps, this does not certify global safety. It only shows that the Q126 encoding is tracking a useful notion of stability for the tested scenarios.
 
 ### 7.4 60 second reproduction protocol
 
@@ -780,14 +871,14 @@ This block describes reusable components from Q126 and their transfer to other p
 2. Q125 (Multi agent AI dynamics)
 
    * Reused components: `RSI_StabilityHorizon_Functional`.
-   * Why it transfers: when many self improving agents interact, each agent’s horizon becomes a parameter in the game. Q125 studies how these horizons co evolve.
+   * Why it transfers: when many self improving agents interact, each agent’s horizon becomes a parameter in the game. Q125 studies how these horizons co evolve inside multi agent incentive fields.
    * What changes: Q125 replaces single trajectories with collections of trajectories that may depend on each other.
 
-3. Q119 (Representation drift under deployment)
+3. Representation drift under deployment (AI cluster, code to be assigned)
 
    * Reused components: `InvariantDriftMetric_L1`.
-   * Why it transfers: representation drift without explicit self modification can still be measured through the same drift metric.
-   * What changes: the focus is on passive drift during deployment rather than active self rewriting.
+   * Why it transfers: representation drift without explicit self modification can still be measured through the same drift metric that Q126 uses for axiom drift.
+   * What changes: the focus is on passive drift during deployment rather than active self rewriting. When the full BlackHole index is finalized, this problem will be assigned a specific Q identifier and code; Q126 is written so that the drift metric can be reused without changes.
 
 ---
 
@@ -799,12 +890,12 @@ This block explains where Q126 sits on the TU verification ladder and what next 
 
 * E_level: E1
 
-  * We have a coherent effective layer encoding with state space, invariants, drift metrics, and a stability horizon functional.
-  * We have at least one concrete experimental protocol that can falsify specific encodings.
+  * We have a coherent effective layer encoding with state space, invariants, drift metrics, a stability horizon functional and an associated tension tensor form.
+  * We have concrete experimental protocols that can falsify specific encodings.
 
 * N_level: N1
 
-  * The narrative that links recursive self improvement, invariants, and stability horizons is explicit and can be communicated to non specialists.
+  * The narrative that links recursive self improvement, invariants and stability horizons is explicit and can be communicated to non specialists.
   * Counterfactual worlds S and U are described and can be instantiated in simple toy models.
 
 ### 9.2 Next measurable step toward E2
@@ -818,15 +909,21 @@ Both are purely effective layer activities. They require only the ability to:
 
 * encode trajectories into `M_RSI_reg`,
 * compute invariants in `L_inv`,
-* publish the resulting tension and horizon data.
+* publish the resulting tension and horizon data under a documented encoding version.
 
 ### 9.3 Long term role in the TU program
 
 In the long term Q126 is expected to serve as:
 
-* The main node for reasoning about recursive self improvement stability in AI systems.
-* A common language to compare different self modification schemes in terms of tension and horizons, without committing to particular low level implementations.
-* A bridge between agent foundations, AI governance, and practical oversight mechanisms, by providing a single functional object `H_stable` that all three can reference.
+* the main node for reasoning about recursive self improvement stability in AI systems,
+* a common language to compare different self modification schemes in terms of tension and horizons, without committing to particular low level implementations,
+* a bridge between agent foundations, AI governance and practical oversight mechanisms, by providing a single functional object `H_stable` that all three can reference.
+
+As more case studies and encodings are built, Q126 can be extended to higher E and N levels by:
+
+* refining observables and invariants,
+* adding new invariants and tensor components,
+* cataloging empirically observed RSI patterns and their tension signatures.
 
 ---
 
@@ -840,11 +937,11 @@ If we only ask for better performance, the system might find changes that make i
 
 Q126 asks a specific question.
 
-*Can we define a way to measure how far along self improvement a system can go before this drift becomes unacceptable?*
+Can we define a way to measure how far along self improvement a system can go before this drift becomes unacceptable?
 
 To do this, we:
 
-1. Describe each moment in the system’s life as a state with summaries of its decision rules, goals, and constraints.
+1. Describe each moment in the system’s life as a state with summaries of its decision rules, goals and constraints.
 2. Choose a few numbers, called invariants, that capture what we want to keep stable, such as “how close are we to the original axioms” and “how coherent is the decision theory”.
 3. Define a measure of how big each self change is and how far the invariants have moved.
 4. Define a stability horizon, which is the last step up to which both:
@@ -863,3 +960,40 @@ Q126 does not tell us how to build a safe AGI. It does not look inside the actua
 * and a shared object, the stability horizon, that other problems in the BlackHole collection can reuse.
 
 In the Tension Universe program, Q126 is the place where questions about “how far can a system rewrite itself before it stops being what we meant it to be” are turned into precise observables and experiments, without uncovering any deep generative rules.
+
+---
+
+## Tension Universe effective-layer footer
+
+This page is part of the **WFGY / Tension Universe** S problem collection.
+
+### Scope of claims
+
+* The goal of this document is to specify an **effective layer encoding** of the named problem.
+* It does not claim to prove or disprove the canonical statement in Section 1.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the corresponding open problem has been solved.
+
+### Effective-layer boundary
+
+* All objects used here (state spaces such as `M_RSI`, observables, invariants, tension scores, counterfactual worlds) live at the effective layer.
+* They summarize behavior of possible systems and experiments but do not define any deep TU axiom system or constructive generative rule.
+* Any mapping from real systems (code, weights, hardware) into these objects is assumed to exist for the scenarios considered but is not specified here.
+
+### Encoding and fairness
+
+* The libraries of operators and invariants, the metric forms and thresholds are fixed before experiments and are versioned.
+* Post hoc tuning of encodings to make particular systems look safer or more dangerous is not allowed.
+* When an encoding fails the falsifiability criteria in Section 6, it must be recorded as such and replaced by a new version with a new identifier.
+
+### Use of tension scores and horizons
+
+* Tension scores and stability horizons are **diagnostic tools** inside a fixed encoding version.
+* Comparisons are only meaningful within the same encoding and scale; they do not by themselves certify safety or unsafety.
+* External users should treat these objects as structured lenses for reasoning and experiment design, not as final verdicts.
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
