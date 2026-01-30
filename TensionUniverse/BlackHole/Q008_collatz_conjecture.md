@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q008 -->
 # Q008 · Collatz conjecture
 
 ## 0. Header metadata
