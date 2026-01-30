@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q052 -->
 # Q052 · P vs BQP / role of quantum computers
 
 ---
