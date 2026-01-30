@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q060 -->
 # Q060 · Lower bounds for dynamic data structures
 
 ## 0. Header metadata
