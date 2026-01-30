@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q121-->
 # Q121 · AI alignment problem
 
 ## 0. Header metadata
