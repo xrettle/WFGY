@@ -15,8 +15,41 @@ Status: Open
 Semantics: hybrid
 E_level: E1
 N_level: N2
-Last_updated: 2026-01-26
+Last_updated: 2026-01-30
 ```
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the **effective layer** of the Tension Universe (TU) framework.
+
+* This page only specifies an **effective-layer encoding** of the scalable interpretability problem:
+
+  * state spaces for interpretability worlds,
+  * observables, fields, and tension functionals,
+  * singular sets and regular domains,
+  * encoding classes and fairness constraints,
+  * experiment patterns and engineering templates.
+* It does **not** define or expose any TU deep-layer axioms, generative rules, or field equations.
+* It does **not** specify how raw model weights, activations, datasets, or training procedures are mapped into TU deep-layer objects.
+
+Throughout this document:
+
+* `M`, `I_local`, `C_global`, `K_complexity`, `DeltaS_interp`, `Tension_interp`, and tensor components such as `T_ij(m)`, `S_i(m)`, `C_j(m)`, `lambda(m)`, and `kappa` are all treated as **effective-layer summaries**.
+* The construction of these summaries from raw computational artifacts is left to external tool chains and is outside the scope of this page.
+* No claim is made that the effective-layer encoding given here solves, proves, or refutes the canonical scalable interpretability problem. It only provides a structured way to encode and test interpretations under TU-style constraints.
+
+The semantics are **hybrid**:
+
+* Discrete objects include:
+
+  * probe indices, concept templates, model and task identifiers, scale buckets, experiment labels.
+* Continuous objects include:
+
+  * normalized interpretability scores, global coherence measures, complexity measures, and tension values.
+
+All comparisons, inequalities, and optimization statements in this page are to be understood at this effective, hybrid semantic level.
 
 ---
 
@@ -30,7 +63,7 @@ The canonical question behind Q123 can be phrased as:
 
 More concretely, Q123 asks whether there exists a family of interpretability tools and encodings such that, for frontier models:
 
-1. Internal representations can be mapped to human usable concepts and mechanisms in a controlled way.
+1. Internal representations can be mapped to human-usable concepts and mechanisms in a controlled way.
 2. The size and complexity of the explanation library grow much slower than the raw parameter count and state space of the models.
 3. This interpretability remains robust when tasks, architectures, and deployment conditions change.
 
@@ -40,8 +73,8 @@ The problem does not ask for a specific method. It asks whether the general regi
 
 Current interpretability work has demonstrated several partial successes:
 
-* Mechanistic interpretability studies have identified circuits and features in vision and language models that correspond to human understandable patterns.
-* Feature visualization and probing methods can sometimes reveal concept like structure in internal layers.
+* Mechanistic interpretability studies have identified circuits and features in vision and language models that correspond to human-understandable patterns.
+* Feature visualization and probing methods can sometimes reveal concept-like structure in internal layers.
 * Some methods transfer across model sizes within a narrow architecture family.
 
 However, several pressure points remain unresolved:
@@ -54,32 +87,31 @@ There is no consensus answer to whether scalable interpretability is possible in
 
 ### 1.3 Role in the BlackHole project
 
-Within the BlackHole S problem collection, Q123 plays several roles:
+Within the BlackHole S-problem collection, Q123 plays several roles:
 
 1. It is the central node for the interpretability cluster of AI problems, connecting to alignment, control, and oversight.
 2. It provides the core notion of cognitive_tension between:
 
-   * internal representation complexity, and  
-   * the size, stability, and usability of human level explanations.
-
+   * internal representation complexity, and
+   * the size, stability, and usability of human-level explanations.
 3. It offers a template for encoding questions about whether human understanding can keep up with systems whose internal state spaces grow far beyond intuitive scales.
 4. It acts as a bridge node to:
 
    * neuroscience problems about neural coding and representation,
-   * socio technical problems where understanding complex models of society is necessary.
+   * socio-technical problems where understanding complex models of society is necessary.
 
 ### References
 
-1. C. Olah et al., “Zoom In: An introduction to circuits”, Distill, 2020.  
+1. C. Olah et al., “Zoom In: An introduction to circuits”, Distill, 2020.
    (Mechanistic interpretability agenda and circuits framing for internal representations.)
 
-2. N. Elhage et al., “Toy Models of Superposition”, Anthropic technical report, 2022.  
+2. N. Elhage et al., “Toy Models of Superposition”, Anthropic technical report, 2022.
    (Demonstrates how features can become entangled as models scale, stressing interpretability.)
 
-3. F. Doshi Velez and B. Kim, “Towards a Rigorous Science of Interpretable Machine Learning”, arXiv preprint, 2017.  
+3. F. Doshi-Velez and B. Kim, “Towards a Rigorous Science of Interpretable Machine Learning”, arXiv preprint, 2017.
    (Formal discussion of interpretability as a scientific problem and evaluation challenge.)
 
-4. A. Nanda, “A Mechanistic Interpretability Analysis of Grokking”, technical writeup, 2022.  
+4. A. Nanda, “A Mechanistic Interpretability Analysis of Grokking”, technical writeup, 2022.
    (Case study on understanding internal circuits and their evolution during training.)
 
 At least one of the above references comes from or is backed by a major research organization, and each contains enough bibliographic information to be located and checked.
@@ -88,59 +120,59 @@ At least one of the above references comes from or is backed by a major research
 
 ## 2. Position in the BlackHole graph
 
-This block records how Q123 sits in the BlackHole graph, using only Q identifiers and one line reasons that point to concrete components or tension types.
+This block records how Q123 sits in the BlackHole graph, using only Q identifiers and one-line reasons that point to concrete components or tension types.
 
 ### 2.1 Upstream problems
 
 Upstream nodes provide prerequisites, tools, or conceptual framing that Q123 relies on at the effective layer.
 
-* Q121 (BH_AI_ALIGNMENT_L3_121)  
-  Reason: Defines the alignment objectives and value grounded behaviors that scalable interpretability is supposed to support, via components like AlignmentObjectiveField and FailureModeCatalog.
+* Q121 (BH_AI_ALIGNMENT_L3_121)
+  Reason: Defines the alignment objectives and value-grounded behaviors that scalable interpretability is supposed to support, via components like `AlignmentObjectiveField` and `FailureModeCatalog`.
 
-* Q122 (BH_AI_CONTROL_L3_122)  
-  Reason: Supplies control and intervention patterns that assume some ability to read and modify internal mechanisms, using components such as InterventionHandleSpace and ControlRiskFunctional.
+* Q122 (BH_AI_CONTROL_L3_122)
+  Reason: Supplies control and intervention patterns that assume some ability to read and modify internal mechanisms, using components such as `InterventionHandleSpace` and `ControlRiskFunctional`.
 
-* Q083 (BH_NEURO_CODE_L3_083)  
-  Reason: Provides analogies and constraints from biological neural coding, including CodebookObservables that inform how internal representations might map to concepts.
+* Q083 (BH_NEURO_CODE_L3_083)
+  Reason: Provides analogies and constraints from biological neural coding, including `CodebookObservables` that inform how internal representations might map to concepts.
 
-* Q089 (BH_NEURO_PREDICTIVE_CODE_L3_089)  
-  Reason: Offers predictive coding style structures and invariants, for example PredictionErrorField, which influence what “explanation” means for layered networks.
+* Q089 (BH_NEURO_PREDICTIVE_CODE_L3_089)
+  Reason: Offers predictive-coding-style structures and invariants, for example `PredictionErrorField`, which influence what “explanation” means for layered networks.
 
 ### 2.2 Downstream problems
 
 Downstream nodes directly reuse Q123 components or depend on its tension structure.
 
-* Q124 (BH_AI_OVERSIGHT_L3_124)  
-  Reason: Reuses InterpretabilityTensionFunctional_Q123 to decide where human or automated oversight should be concentrated in large models.
+* Q124 (BH_AI_OVERSIGHT_L3_124)
+  Reason: Reuses `InterpretabilityTensionFunctional_Q123` to decide where human or automated oversight should be concentrated in large models.
 
-* Q125 (BH_AI_MULTIAGENT_L3_125)  
-  Reason: Uses ConceptProbeLibrary_Q123 and WorldTF_InterpretabilityPattern to interpret interacting agents’ internal states and to detect opaque coordination behaviors.
+* Q125 (BH_AI_MULTIAGENT_L3_125)
+  Reason: Uses `ConceptProbeLibrary_Q123` and `WorldTF_InterpretabilityPattern` to interpret interacting agents’ internal states and to detect opaque coordination behaviors.
 
 ### 2.3 Parallel problems
 
 Parallel nodes share similar tension types but do not directly reuse Q123 components.
 
-* Q059 (BH_CS_INFO_THERMODYN_L3_059)  
-  Reason: Both Q059 and Q123 study how much structured information can be extracted, compressed, or made usable from very large state spaces, under information theoretic constraints.
+* Q059 (BH_CS_INFO_THERMODYN_L3_059)
+  Reason: Both Q059 and Q123 study how much structured information can be extracted, compressed, or made usable from very large state spaces, under information-theoretic constraints.
 
-* Q116 (BH_PHIL_MATH_FOUND_L3_116)  
-  Reason: Both address what counts as an acceptable explanation or understanding, linking technical structure to human level conceptual clarity.
+* Q116 (BH_PHIL_MATH_FOUND_L3_116)
+  Reason: Both address what counts as an acceptable explanation or understanding, linking technical structure to human-level conceptual clarity.
 
-### 2.4 Cross domain edges
+### 2.4 Cross-domain edges
 
-Cross domain edges connect Q123 to problems in other domains that can reuse its patterns.
+Cross-domain edges connect Q123 to problems in other domains that can reuse its patterns.
 
-* Q098 (BH_EARTH_ANTHROPOCENE_L3_098)  
-  Reason: Can reuse Q123’s interpretability patterns to understand complex climate and socio economic models that inform decisions about the Anthropocene.
+* Q098 (BH_EARTH_ANTHROPOCENE_L3_098)
+  Reason: Can reuse Q123’s interpretability patterns to understand complex climate and socio-economic models that inform decisions about the Anthropocene.
 
-* Q105 (BH_COMPLEX_CRASHES_L3_105)  
+* Q105 (BH_COMPLEX_CRASHES_L3_105)
   Reason: Can reuse interpretability tension tools to inspect models of complex systems where unpredictable crashes or cascades occur, using similar ideas of opaque internal mechanisms.
 
 ---
 
 ## 3. Tension Universe encoding (effective layer)
 
-All content in this block is at the effective layer. We only describe:
+All content in this block is at the effective layer and is governed by the disclaimer in Section 0. We only describe:
 
 * state spaces,
 * observables and fields,
@@ -165,8 +197,8 @@ Each state `m` encodes, at the effective layer:
 * A particular AI model or a family of closely related models, including:
 
   * architecture class,
-  * approximate scale (for example parameter count bucket),
-  * training regime and task family descriptor.
+  * approximate scale (for example parameter-count bucket),
+  * training regime and task-family descriptor.
 
 * One interpretability tool stack, including:
 
@@ -184,6 +216,8 @@ At the effective layer, we require that:
 
 ### 3.2 Effective observables and fields
 
+All observables that will feed into tension functionals are treated as **unitless, normalized summaries** once an encoding is fixed. Raw quantities (for example raw description lengths or unnormalized scores) may exist in implementations, but they must be mapped into normalized observables using rules that are part of the encoding and are fixed before experiments.
+
 We define the following observables and fields on `M`.
 
 1. Local interpretability score family
@@ -192,8 +226,8 @@ We define the following observables and fields on `M`.
 I_local(m; U)
 ```
 
-* Input: state `m` and a finite set `U` of internal units, features, or circuit fragments.
-* Output: a nonnegative scalar that summarizes how well the fixed probe library can assign stable, human usable concepts to the elements of `U`.
+* Input: state `m` and a finite set `U` of internal units, features, or circuit fragments selected by a fixed rule.
+* Output: a nonnegative scalar, normalized into a fixed range such as `[0, 1]`, that summarizes how well the fixed probe library can assign stable, human-usable concepts to the elements of `U`.
 * Interpretation: larger values indicate higher interpretability quality for that local subset.
 
 2. Global conceptual coherence
@@ -203,7 +237,7 @@ C_global(m)
 ```
 
 * Input: state `m`.
-* Output: a scalar that measures the degree to which local explanations can be composed into a small set of global concepts or mechanisms that explain large fractions of model behavior.
+* Output: a scalar, normalized into a fixed range such as `[0, 1]`, that measures the degree to which local explanations can be composed into a small set of global concepts or mechanisms that explain large fractions of model behavior.
 * Higher values indicate better global coherence and reuse of a compact concept library.
 
 3. Explanation complexity
@@ -213,9 +247,13 @@ K_complexity(m)
 ```
 
 * Input: state `m`.
-* Output: a nonnegative scalar that approximates description length or complexity of the explanation library needed to cover a fixed portfolio of behaviors for the model.
+* Output: a nonnegative scalar that approximates description length or complexity of the explanation library needed to cover a fixed portfolio of behaviors for the model. Before use in tension functionals it is mapped, via a fixed normalization rule, into a normalized complexity:
 
-Examples of what K_complexity may summarize:
+```txt
+K_norm(m) in [0, 1]
+```
+
+Examples of what `K_complexity` may summarize:
 
 * number of distinct concept probes used,
 * total size of a circuit dictionary,
@@ -232,10 +270,11 @@ DeltaS_interp(m)
 
 Properties:
 
-* `DeltaS_interp(m) >= 0`.
+* `DeltaS_interp(m) >= 0` for all regular states.
 * Small `DeltaS_interp(m)` indicates that global coherence is high relative to explanation complexity, for the given capability level.
+* The functional form of `DeltaS_interp` is fixed by the encoding and obeys the monotonicity rules specified in Section 3.3.
 
-The exact functional definition of `DeltaS_interp` will depend on fixed reference curves and thresholds specified in the encoding class below.
+The exact functional definition of `DeltaS_interp` depends on reference curves and thresholds that are part of the encoding. These curves and thresholds are chosen before any interpretability experiments are run under that encoding and are not tuned based on experiment outcomes.
 
 ### 3.3 Encoding class and fairness constraints
 
@@ -251,19 +290,36 @@ P = {p_1, p_2, ..., p_n, ...}
 
 For any specific encoding instance in `E_interp`, only a finite subset of `P` can be activated, and this subset must be chosen before any experiment is run.
 
-2. Fixed aggregation rules
+2. Fixed aggregation and normalization rules
 
-For each encoding instance, the rules that aggregate local probe results into `I_local`, and that aggregate local explanations into `C_global` and `K_complexity`, are fixed before observing detailed outcomes of experiments.
+For each encoding instance:
 
-3. Weight constraints
+* The rules that aggregate local probe results into `I_local`, and that aggregate local explanations into `C_global` and `K_complexity`, are fixed before observing detailed outcomes of experiments.
+* The normalization rules that map raw quantities into normalized observables (for example into `[0, 1]`) are fixed in advance and are part of the encoding.
+* These rules may depend on coarse model-scale buckets or task-family descriptors, but not on fine-grained activation patterns or on the results of interpretability experiments.
 
-When defining `DeltaS_interp(m)` we may use weights of the form:
+3. Weight constraints and mismatch monotonicity
+
+When defining `DeltaS_interp(m)` and `Tension_interp(m)` we may use weights of the form:
 
 ```txt
 w_C, w_K >= 0, w_C + w_K = 1
 ```
 
-These weights must be selected once for the encoding instance and cannot be changed based on experiment outcomes. They may depend on coarse model scale buckets but not on fine grained internal measurements.
+and, where needed,
+
+```txt
+w_low, w_struct, w_comp >= 0, w_low + w_struct + w_comp = 1
+```
+
+These weights must be selected once for the encoding instance and cannot be changed based on experiment outcomes.
+
+`DeltaS_interp(m)` obeys the following monotonicity constraints under a fixed encoding:
+
+* At fixed model scale and performance level, if `C_global(m)` increases and `K_complexity(m)` does not increase, then `DeltaS_interp(m)` must not increase.
+* At fixed model scale and performance level, if `K_complexity(m)` increases and neither `I_local(m; U_*)` nor `C_global(m)` improve in a pre-declared tolerance band, then `DeltaS_interp(m)` must not decrease.
+
+Reference curves and thresholds used to define `DeltaS_interp` are part of the encoding and are not adjusted in response to experimental results.
 
 4. Resolution and refinement order
 
@@ -282,11 +338,27 @@ We introduce a refinement partial order `<=_ref` on `M` defined by:
 All admissible encodings must respect this partial order in the sense that:
 
 * Observables do not change in arbitrary ways under refinement.
-* If `m1 <=_ref m2` then it is meaningful to compare `DeltaS_interp(m1)` and `DeltaS_interp(m2)`.
+* If `m1 <=_ref m2` then it is meaningful to compare `DeltaS_interp(m1)` and `DeltaS_interp(m2)` and to interpret trends in `Tension_interp` across refinement.
+
+5. Encoding comparability
+
+An encoding element `e` in `E_interp` consists of:
+
+* a chosen finite probe subset from `P`,
+* fixed aggregation and normalization rules,
+* fixed weights and reference curves,
+* a fixed rule for selecting `U_*` and defining resolution buckets.
+
+Comparisons of `Tension_interp` across models, scales, or tasks are only valid **within the same encoding element `e`**. When a different encoding element `e'` is chosen:
+
+* it must be given a distinct identifier or version label, and
+* tension values computed under `e'` must not be retrofitted into plots or tables that were originally defined for `e` without recomputing all relevant observables.
+
+These constraints implement the fairness ideas that no encoding is allowed to be silently adjusted to make specific models look more interpretable.
 
 ### 3.4 Effective tension tensor components
 
-We assume that Q123 reuses the general TU tension tensor structure:
+We assume that Q123 reuses the general TU tension tensor structure at the effective layer:
 
 ```txt
 T_ij(m) = S_i(m) * C_j(m) * DeltaS_interp(m) * lambda(m) * kappa
@@ -294,41 +366,52 @@ T_ij(m) = S_i(m) * C_j(m) * DeltaS_interp(m) * lambda(m) * kappa
 
 where:
 
-* `S_i(m)` is a source like factor that represents how strongly source component `i` (for example a particular subsystem or layer family) contributes to interpretability relevant behavior.
-* `C_j(m)` is a receptivity like factor that represents how sensitive observer or downstream component `j` is to interpretability quality for decision making or safety.
+* `S_i(m)` is a source-like factor that represents how strongly source component `i` (for example a particular subsystem or layer family) contributes to interpretability-relevant behavior.
+* `C_j(m)` is a receptivity-like factor that represents how sensitive observer or downstream component `j` is to interpretability quality for decision making or safety.
 * `DeltaS_interp(m)` is the interpretability mismatch defined above.
 * `lambda(m)` is a convergence state factor drawn from a fixed range that codes whether local reasoning about the model is convergent, recursive, divergent, or chaotic.
 * `kappa` is a coupling constant that sets the overall scale of cognitive_tension for this encoding.
 
-The detailed indexing sets for `i` and `j` are not needed at the effective layer. It is sufficient that for any `m` in `M` and any admissible encoding, `T_ij(m)` is well defined and finite whenever `m` is in the regular domain.
+In this entry, `T_ij(m)`, `S_i(m)`, `C_j(m)`, `lambda(m)`, and `kappa` are all treated as effective-layer summary objects. No specific deep-layer field equations or dynamics for these quantities are assumed or exposed. It is only required that, for any regular state `m` and any admissible encoding, `T_ij(m)` is well defined and finite.
 
-### 3.5 Invariants and domain restrictions
+The detailed indexing sets for `i` and `j` are not needed at the effective layer. It is sufficient that they can be chosen in a way compatible with the observables already defined.
 
-We define an interpretability tension functional:
+### 3.5 Invariants, tension functional, and domain restrictions
+
+We define an interpretability tension functional based on normalized versions of the observables.
+
+Let:
 
 ```txt
-Tension_interp(m) = G(I_local(m; U_*), C_global(m), K_complexity(m))
+I_norm(m) in [0, 1]
+C_norm(m) in [0, 1]
+K_norm(m) in [0, 1]
+```
+
+be normalized forms of:
+
+* `I_local(m; U_*)` under a fixed selection rule for `U_*`,
+* `C_global(m)`,
+* `K_complexity(m)`,
+
+using the encoding’s normalization rules.
+
+We define:
+
+```txt
+Tension_interp(m) = w_low * (1 - I_norm(m))
+                  + w_struct * (1 - C_norm(m))
+                  + w_comp * K_norm(m)
 ```
 
 where:
 
-* `U_*` is a fixed finite selection rule for internal units or fragments, chosen once per encoding instance.
-* `G` is a nonnegative function that is monotone in the following sense:
+* `w_low`, `w_struct`, `w_comp` are nonnegative weights that sum to `1` and are fixed within the encoding.
 
-  * If `I_local` increases and `C_global` increases while `K_complexity` stays the same or decreases, then `Tension_interp(m)` does not increase.
-  * If `K_complexity` increases while `I_local` and `C_global` remain roughly constant, `Tension_interp(m)` does not decrease.
+This functional is required to satisfy the following monotonicity properties:
 
-An example of such a functional is:
-
-```txt
-Tension_interp(m) = w_low * (1 - I_norm(m)) + w_struct * (1 - C_norm(m)) + w_comp * K_norm(m)
-```
-
-where:
-
-* `I_norm(m)` and `C_norm(m)` are normalized versions of `I_local` and `C_global` in the interval `[0, 1]`,
-* `K_norm(m)` is a normalized complexity,
-* `w_low`, `w_struct`, and `w_comp` are nonnegative weights that sum to `1` and are fixed within the encoding.
+* If `I_norm(m)` increases and `C_norm(m)` increases while `K_norm(m)` stays the same or decreases, then `Tension_interp(m)` must not increase.
+* If `K_norm(m)` increases while `I_norm(m)` and `C_norm(m)` remain within a pre-declared tolerance band, `Tension_interp(m)` must not decrease.
 
 We now define the singular set for Q123:
 
@@ -359,10 +442,10 @@ This block encodes Q123 as a tension principle at the effective layer.
 
 The core cognitive_tension principle for Q123 can be stated as:
 
-*Inside realistic resource and tooling limits, there is a tension between:*
+Inside realistic resource and tooling limits, there is a tension between:
 
 1. The richness, size, and flexibility of internal representations in powerful AI models.
-2. The requirement that humans (or human aligned tools) can understand and work with these representations using a compact, robust explanation library and a finite probe set.
+2. The requirement that humans (or human-aligned tools) can understand and work with these representations using a compact, robust explanation library and a finite probe set.
 
 Q123 asks whether this tension can be kept within a manageable band as models scale, or whether it inevitably grows beyond any reasonable threshold.
 
@@ -378,7 +461,7 @@ and Tension_interp(m_k) <= epsilon_interp(k)
 
 where:
 
-* `epsilon_interp(k)` is a scale dependent threshold that grows slowly with `k` and remains bounded in a way consistent with realistic oversight and tooling.
+* `epsilon_interp(k)` is a scale-dependent threshold that grows slowly with `k` and remains bounded in a way consistent with realistic oversight and tooling.
 
 In words:
 
@@ -416,7 +499,7 @@ World T_interp is a world in which scalable interpretability is achievable in a 
 
 Typical properties:
 
-1. Existence of low tension sequences
+1. Existence of low-tension sequences
 
    * For each relevant scale level, there exist states `m_T(k)` in `M_reg` that encode models at that scale such that:
 
@@ -444,7 +527,7 @@ World F_interp is a world in which strong scalable interpretability fails.
 
 Typical properties:
 
-1. No low tension encodings beyond some scale
+1. No low-tension encodings beyond some scale
 
    * For every admissible encoding, there exists a scale level `k_0` such that all states `m_F(k)` with `k >= k_0` satisfy:
 
@@ -464,13 +547,13 @@ Typical properties:
 
 4. Escalating explanation burden
 
-   * Any attempt to maintain adequate coverage of safety relevant behaviors leads to exponential or otherwise infeasible growth in explanation complexity measures, making oversight via interpretability unrealistic.
+   * Any attempt to maintain adequate coverage of safety-relevant behaviors leads to exponential or otherwise infeasible growth in explanation complexity measures, making oversight via interpretability unrealistic.
 
 ### 5.3 Intermediate regime
 
 We also allow an intermediate regime where:
 
-* Some subsystems or tasks remain in a low tension interpretability regime.
+* Some subsystems or tasks remain in a low-tension interpretability regime.
 * Others move toward high tension, especially those that involve emergent or strategic behavior.
 
 This regime is important for engineering decisions, but the primary distinction in Q123 is still between:
@@ -503,38 +586,44 @@ Evaluate whether a chosen Q123 encoding tracks intuitive interpretability qualit
 
 * Select a family of models with the same architecture pattern, trained on the same task family, at multiple scale levels (for example different parameter counts).
 * Fix a finite concept probe library and circuit template set before any inspection of internal activations.
-* Fix aggregation rules for `I_local`, `C_global`, and `K_complexity` as described in Block 3.
-* Choose a fixed portfolio of behaviors and test cases (for example reasoning tasks, safety relevant prompts).
+* Fix aggregation and normalization rules for `I_local`, `C_global`, and `K_complexity` as described in Section 3.
+* Choose a fixed portfolio of behaviors and test cases (for example reasoning tasks, safety-relevant prompts).
+* Pre-register the evaluation protocol, including:
+
+  * how `U_*` is selected,
+  * how human judgments will be collected,
+  * how correlations and trends will be tested.
 
 *Protocol:*
 
 1. For each model size, construct a state `m_size` in `M_reg` that encodes the chosen summaries and probe outcomes.
 2. Compute `I_local(m_size; U_*)`, `C_global(m_size)`, and `K_complexity(m_size)` using the fixed encoding.
 3. Compute `Tension_interp(m_size)` for each scale level.
-4. Collect human judgments or expert judgments on interpretability:
+4. Collect human or expert judgments on interpretability:
 
-   * For a subset of internal circuits or features, ask whether humans can understand and predict their behavior using the explanation library.
-
-5. Compare the tension scores with human judgments across scales.
+   * For a subset of internal circuits or features selected by a pre-declared sampling rule, ask whether humans can understand and predict their behavior using the explanation library.
+   * Evaluators must be blind to all tension scores and any derived statistics.
 
 *Metrics:*
 
-* Correlation between `Tension_interp(m_size)` and human interpretability ratings.
+* Correlation between `Tension_interp(m_size)` and human interpretability ratings, using a pre-declared correlation or ranking statistic.
 * Trend of `Tension_interp(m_size)` as model scale increases.
 * Stability of this trend under minor variations in probe selection that stay within the admissible library.
 
 *Falsification conditions:*
 
-* If models that human experts judge as clearly more interpretable consistently receive higher tension scores than models they judge as opaque, under the fixed encoding, then this encoding is considered misaligned and is rejected for Q123.
-* If small permitted changes within the admissible encoding class (for example swapping a few probes in the same library or modestly changing normalization constants) produce arbitrary reversals in the ordering of `Tension_interp(m_size)` across scales, the encoding fails the stability requirement and is rejected.
+The encoding is considered misaligned and rejected for Q123 if both of the following hold:
+
+1. Across scale levels and sampled subsystems, models that human experts judge as clearly more interpretable consistently receive **higher** tension scores than models they judge as opaque, beyond a pre-declared robustness threshold.
+2. Small permitted changes within the admissible encoding class (for example swapping a small fraction of probes within the same global library, or modestly adjusting constant factors within fixed normalization rules) do not remove the systematic disagreement between `Tension_interp` and human judgments.
 
 *Semantics implementation note:*
 
-The experiment uses hybrid semantics in line with Block 0. Internal representations and activations are treated as continuous fields, while probes, concept dictionaries, and explanation libraries are treated as discrete structures. All observables are defined at the effective layer in terms of summaries and do not depend on raw floating point details.
+The experiment uses hybrid semantics in line with Section 0. Internal representations and activations are treated as continuous fields, while probes, concept dictionaries, and explanation libraries are treated as discrete structures. All observables are defined at the effective layer in terms of summaries and do not depend on raw floating-point details being exposed.
 
 *Boundary note:*
 
-Falsifying TU encoding != solving canonical statement. This experiment can show that a particular Q123 encoding is misaligned or unstable, but it does not settle whether scalable interpretability exists in principle.
+Falsifying a TU encoding does not solve the canonical statement. This experiment can show that a particular Q123 encoding is misaligned or unstable, but it does not settle whether scalable interpretability exists in principle.
 
 ---
 
@@ -546,16 +635,17 @@ Test whether the Q123 encoding can reliably distinguish between deliberately int
 
 *Setup:*
 
-* Construct a set of toy interpretable models, where internal circuits or features are hand designed or strongly constrained to have clear human understandable roles on a small suite of tasks.
+* Construct a set of toy interpretable models, where internal circuits or features are hand-designed or strongly constrained to have clear human-understandable roles on a small suite of tasks.
 * Construct a matched set of scrambled models with similar input and output behavior but intentionally obfuscated internal structures (for example through random basis transformations or entangled parameterizations).
 * Use the same concept probe library and aggregation rules for all models.
+* The toy-versus-scrambled labels must **not** be used in any way to select probes, aggregation rules, or normalization rules. These are fixed before any model-specific measurements.
 
 *Protocol:*
 
 1. For each toy interpretable model, construct a regular state `m_Ttoy` in `M_reg`.
 2. For each scrambled model, construct a regular state `m_Ftoy` in `M_reg`.
 3. Evaluate `I_local`, `C_global`, `K_complexity`, and `Tension_interp` on all these states under the fixed encoding.
-4. Optionally, obtain human judgments on how easy it is to understand circuits in each model class.
+4. Optionally, obtain human judgments on how easy it is to understand circuits in each model class, with judges blind to model labels and tension values.
 
 *Metrics:*
 
@@ -565,8 +655,10 @@ Test whether the Q123 encoding can reliably distinguish between deliberately int
 
 *Falsification conditions:*
 
-* If the encoding fails to consistently assign lower `Tension_interp` to toy interpretable models than to scrambled models, across a broad enough sample, it is considered ineffective and rejected for Q123.
-* If the sign of the average tension difference between the two model classes is sensitive to arbitrary choices within the fixed probe library (for example different but equally plausible subsets of probes) in a way that violates the fairness constraints, this signals that the encoding is not robust and should be revised or rejected.
+The encoding is considered ineffective and rejected for Q123 if:
+
+1. For a broad enough sample of toy versus scrambled model pairs, the encoding fails to consistently assign lower `Tension_interp` to toy interpretable models than to scrambled models, relative to a pre-declared threshold.
+2. The sign or magnitude of the average tension difference between the two model classes is highly sensitive to arbitrary choices within the fixed probe library that stay within the admissible class, in a way that violates the fairness constraints in Section 3.3. For example, replacing a small fraction of probes with equally plausible alternatives must not completely reverse the ordering of tension between the two classes.
 
 *Semantics implementation note:*
 
@@ -574,7 +666,7 @@ Hybrid semantics are used in the same way as in Experiment 1. Continuous interna
 
 *Boundary note:*
 
-Falsifying TU encoding != solving canonical statement. Success or failure on toy models only evaluates the quality of a particular Q123 encoding; it does not prove that scalable interpretability is possible or impossible for real frontier systems.
+Falsifying a TU encoding does not solve the canonical statement. Success or failure on toy models only evaluates the quality of a particular Q123 encoding; it does not prove that scalable interpretability is possible or impossible for real frontier systems.
 
 ---
 
@@ -589,11 +681,11 @@ We define training signals that can be used as auxiliary objectives or diagnosti
 1. `signal_interp_stability`
 
    * Definition: a penalty signal that increases when `Tension_interp(m)` increases between nearby training checkpoints or under small perturbations of prompts and inputs, for states representing the same model.
-   * Purpose: encourage models and interpretability tools to move toward stable, low tension regions of `M_reg`.
+   * Purpose: encourage models and interpretability tools to move toward stable, low-tension regions of `M_reg`.
 
 2. `signal_circuit_sparsity`
 
-   * Definition: a regularization term that penalizes increases in `K_complexity(m)` when performance remains constant or improves.
+   * Definition: a regularization term that penalizes increases in `K_complexity(m)` or `K_norm(m)` when performance remains constant or improves.
    * Purpose: favor internal structures whose explanations can be expressed with smaller and more reusable circuit libraries.
 
 3. `signal_world_TF_separation`
@@ -603,7 +695,7 @@ We define training signals that can be used as auxiliary objectives or diagnosti
 
 4. `signal_probe_alignment`
 
-   * Definition: a signal that penalizes discrepancies between probe based explanations and known causal interventions in toy settings, where ground truth mechanisms are accessible.
+   * Definition: a signal that penalizes discrepancies between probe-based explanations and known causal interventions in toy settings, where ground-truth mechanisms are accessible.
    * Purpose: tie interpretability scores to genuine causal structure rather than purely correlational patterns.
 
 ### 7.2 Architectural patterns
@@ -612,7 +704,7 @@ We sketch architectural patterns that can incorporate Q123 components.
 
 1. `InterpretabilityHead`
 
-   * Role: given a representation of the current internal state and context, this head outputs an estimated `Tension_interp` value and a short vector of interpretable diagnostics (for example normalized `I_local`, `C_global`, `K_complexity`).
+   * Role: given a representation of the current internal state and context, this head outputs an estimated `Tension_interp` value and a short vector of interpretable diagnostics (for example normalized `I_norm`, `C_norm`, `K_norm`).
    * Interface: takes intermediate activations or compressed summaries as input, emits tension estimates and supporting statistics as outputs.
 
 2. `ConceptLibraryModule`
@@ -620,44 +712,44 @@ We sketch architectural patterns that can incorporate Q123 components.
    * Role: maintains a small, explicit library of concept vectors, circuits, or templates that explanations must be expressed in terms of, to constrain explanation complexity.
    * Interface:
 
-     * Inputs: task family descriptors, high level goals, and training context.
-     * Outputs: a fixed size set of concept anchors and associated decoding mechanisms.
+     * Inputs: task-family descriptors, high-level goals, and training context.
+     * Outputs: a fixed-size set of concept anchors and associated decoding mechanisms.
 
 3. `TU_InterpObserver`
 
-   * Role: acts as a generalized observer that maps internal states and concept library contents into the observables used by Q123: `I_local`, `C_global`, `K_complexity`.
-   * Interface: takes the model’s internal activations and concept library state as input and provides the observable summaries needed to compute `Tension_interp`.
+   * Role: acts as a generalized observer that maps internal states and concept-library contents into the observables used by Q123: `I_local`, `C_global`, `K_complexity`, and their normalized forms.
+   * Interface: takes the model’s internal activations and concept-library state as input and provides the observable summaries needed to compute `Tension_interp`.
 
 ### 7.3 Evaluation harness
 
-An evaluation harness for Q123 augmented systems can be organized as follows.
+An evaluation harness for Q123-augmented systems can be organized as follows.
 
 1. Task mix
 
    * Include tasks where mechanistic structure is partly known (for example algorithmic tasks with known circuits).
-   * Include high level capabilities tasks where interpretability is important for safety (for example instruction following with safety constraints).
+   * Include high-level capabilities tasks where interpretability is important for safety (for example instruction following with safety constraints).
 
 2. Conditions
 
-   * Baseline condition: models without Q123 modules and without interpretability related training signals.
-   * TU condition: models with Q123 modules, receiving interpretability related signals and exposing tension outputs.
+   * Baseline condition: models without Q123 modules and without interpretability-related training signals.
+   * TU condition: models with Q123 modules, receiving interpretability-related signals and exposing tension outputs.
 
 3. Metrics
 
    * Behavioral performance on the task mix.
-   * Quality of explanations, measured against human expert assessments or ground truth circuits where available.
-   * Agreement between explanation complexity and measured `K_complexity` and `Tension_interp` values.
+   * Quality of explanations, measured against human expert assessments or ground-truth circuits where available.
+   * Agreement between explanation complexity and measured `K_complexity`, `K_norm`, and `Tension_interp` values.
    * Stability of explanations and tension scores under minor changes of prompts or inputs.
 
-### 7.4 60 second reproduction protocol
+### 7.4 60-second reproduction protocol
 
 A minimal protocol for external users to experience the effect of Q123 encodings.
 
 *Baseline setup*
 
-* Prompt a model with a question like:  
+* Prompt a model with a question like:
 
-  “Explain how this language model decides which answer to give on safety relevant questions. Please be detailed.”
+  “Explain how this language model decides which answer to give on safety-relevant questions. Please be detailed.”
 
 * Observe the explanation:
 
@@ -666,7 +758,7 @@ A minimal protocol for external users to experience the effect of Q123 encodings
 
 *TU encoded setup*
 
-* Ask the same question, but with an additional instruction:  
+* Ask the same question, but with an additional instruction:
 
   “Use interpretable internal concepts and circuits, and report a scalar interpretability tension score for the explanation. Explain which parts of your internal representation space are easy to understand and which are opaque.”
 
@@ -700,6 +792,7 @@ This block describes reusable components produced by Q123 and their direct reuse
 1. ComponentName: `InterpretabilityTensionFunctional_Q123`
 
    * Type: functional
+
    * Minimal interface:
 
      * Inputs: internal representation summaries, probe results, and explanation complexity indicators for a given model and context.
@@ -707,23 +800,25 @@ This block describes reusable components produced by Q123 and their direct reuse
 
    * Preconditions:
 
-     * The encoding must belong to the admissible class `E_interp`, with probe libraries and aggregation rules fixed ahead of time.
+     * The encoding must belong to the admissible class `E_interp`, with probe libraries, normalization rules, and aggregation rules fixed ahead of time.
 
 2. ComponentName: `ConceptProbeLibrary_Q123`
 
    * Type: field or ai_module
+
    * Minimal interface:
 
-     * Inputs: task family descriptor and architecture descriptor.
+     * Inputs: task-family descriptor and architecture descriptor.
      * Output: a finite set of concept probes and templates selected from a global library `P`, plus associated configuration for mapping probe activations into explanations.
 
    * Preconditions:
 
-     * The selection policy must be independent of fine grained activation patterns and must be fixed before running interpretability experiments for the models under study.
+     * The selection policy must be independent of fine-grained activation patterns and must be fixed before running interpretability experiments for the models under study.
 
 3. ComponentName: `WorldTF_InterpretabilityPattern`
 
    * Type: experiment_pattern
+
    * Minimal interface:
 
      * Inputs: description of a model family and interpretability tool stack.
@@ -731,15 +826,15 @@ This block describes reusable components produced by Q123 and their direct reuse
 
    * Preconditions:
 
-     * The experiment designs must respect the constraints on encoding class and fairness as set out in Block 3 and Block 6.
+     * The experiment designs must respect the constraints on encoding class and fairness as set out in Sections 3 and 6.
 
 ### 8.2 Direct reuse targets
 
 1. Target: Q121 (BH_AI_ALIGNMENT_L3_121)
 
    * Reused components: `InterpretabilityTensionFunctional_Q123`, `ConceptProbeLibrary_Q123`.
-   * Why it transfers: alignment scenarios often require knowing when internal representations for value related concepts are interpretable and stable. Q123 supplies a way to score and monitor this.
-   * What changes: observables are focused on value aligned circuits and representations rather than general task behavior.
+   * Why it transfers: alignment scenarios often require knowing when internal representations for value-related concepts are interpretable and stable. Q123 supplies a way to score and monitor this.
+   * What changes: observables are focused on value-aligned circuits and representations rather than general task behavior.
 
 2. Target: Q122 (BH_AI_CONTROL_L3_122)
 
@@ -750,13 +845,13 @@ This block describes reusable components produced by Q123 and their direct reuse
 3. Target: Q124 (BH_AI_OVERSIGHT_L3_124)
 
    * Reused components: `ConceptProbeLibrary_Q123`, `WorldTF_InterpretabilityPattern`.
-   * Why it transfers: oversight processes need structured protocols for distinguishing interpretable and non interpretable regimes, and for routing human attention accordingly.
+   * Why it transfers: oversight processes need structured protocols for distinguishing interpretable and non-interpretable regimes, and for routing human attention accordingly.
    * What changes: experiment patterns emphasize auditing workflows and oversight load, not just scientific evaluation.
 
 4. Target: Q125 (BH_AI_MULTIAGENT_L3_125)
 
    * Reused components: `WorldTF_InterpretabilityPattern`.
-   * Why it transfers: multi agent systems require understanding internal states of interacting agents; interpretability patterns help identify opaque coordination channels.
+   * Why it transfers: multi-agent systems require understanding internal states of interacting agents; interpretability patterns help identify opaque coordination channels.
    * What changes: input model families are now agent populations; metrics focus on coordination structures and emergent collective behaviors.
 
 ---
@@ -769,13 +864,13 @@ This block explains how Q123 is positioned on the TU verification ladder and wha
 
 * E_level: E1
 
-  * A coherent effective layer encoding of scalable interpretability has been specified, including state space, observables, a tension functional, and a singular set.
+  * A coherent effective-layer encoding of scalable interpretability has been specified, including state space, observables, a tension functional, and a singular set.
   * At least two discriminating experiments with explicit falsification conditions have been described.
 
 * N_level: N2
 
   * A clear narrative distinguishes World T_interp and World F_interp, plus an intermediate regime.
-  * Cross problem connections to alignment, control, oversight, and neuroscience are spelled out.
+  * Cross-problem connections to alignment, control, oversight, and neuroscience are spelled out.
 
 ### 9.2 Next measurable step toward E2
 
@@ -795,11 +890,11 @@ To move Q123 from E1 to E2, at least one of the following must be realized in co
 
 These steps operate entirely at the effective layer and do not require exposing any deep TU generative rules.
 
-### 9.3 Long term role in the TU program
+### 9.3 Long-term role in the TU program
 
 In the longer term, Q123 is expected to serve as:
 
-* The anchor node for interpretability considerations in the AI cluster, linking to alignment, control, oversight, and multi agent questions.
+* The anchor node for interpretability considerations in the AI cluster, linking to alignment, control, oversight, and multi-agent questions.
 * A test bed for whether TU encodings can remain practical as systems become extremely large and complex.
 * A bridge between:
 
@@ -813,7 +908,7 @@ As verification levels rise, Q123 components should become standard tools for ev
 
 ## 10. Elementary but precise explanation
 
-This block explains Q123 in everyday language, while staying faithful to the effective layer encoding.
+This block explains Q123 in everyday language, while staying faithful to the effective-layer encoding.
 
 Modern AI models are very large. Inside them there are many numbers and complicated patterns that decide what the model does. Interpretability is about trying to look inside and say:
 
@@ -833,12 +928,10 @@ In the Tension Universe view, we do not jump to an answer. Instead, we:
    * one model at some size,
    * with one fixed set of interpretability tools and probes,
    * plus a way to summarize explanations.
-
 2. For each world, we measure:
 
    * how well we can give simple, stable explanations of what the model is doing (local and global interpretability),
    * how big and complicated the explanation library has to be.
-
 3. We combine these into a single number called interpretability tension. Roughly:
 
    * low tension means explanations are clear and not too complex,
@@ -856,3 +949,38 @@ Q123 does not say which universe we live in. Instead, it gives:
 * reusable pieces that other problems, like alignment and oversight, can use when they talk about understanding models.
 
 In this way, Q123 turns a vague worry into a structured tension problem: one that can be tested, compared, and improved over time, without claiming any deep magic or revealing how the inner TU machinery is built.
+
+---
+
+## Tension Universe effective-layer footer
+
+This page is part of the **WFGY / Tension Universe** S-problem collection and should be read strictly as an **effective-layer encoding** of the scalable interpretability problem.
+
+### Scope of claims
+
+* The goal of this document is to specify an effective-layer description of interpretability tension for large AI models.
+* It does not claim to prove or disprove the canonical scalable interpretability statement in Section 1.
+* It does not introduce any new theorem about AI models or TU itself beyond what is already established in the cited literature and TU charters.
+* It should not be cited as evidence that scalable interpretability is possible or impossible in the real world.
+
+### Effective-layer boundary
+
+* All objects used here (state spaces `M`, observables, invariants, tension scores, tensor components, and counterfactual worlds) live at the effective layer.
+* No mapping from raw model weights, activations, or datasets to TU deep-layer fields is specified or required.
+* Any implementation that instantiates these observables must treat the mapping from raw data to effective-layer summaries as a separate engineering choice, outside the claims of this page.
+
+### Encoding and fairness
+
+* For any fixed encoding element in `E_interp`, the following are required:
+
+  * probe subsets, aggregation rules, normalization rules, and weights are fixed before experiments,
+  * these choices do not depend on detailed experiment outcomes,
+  * cross-model or cross-scale comparisons of `Tension_interp` are only valid within that encoding.
+* Changing the encoding (for example changing probe subsets beyond the allowed small perturbations, or redefining normalization) creates a new encoding element that must be treated as a separate version with its own identifier.
+* Experiments and falsification conditions in Section 6 are designed to test encodings and architectures under these fairness constraints; passing them does not elevate any encoding to a theorem about the underlying canonical problem.
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
