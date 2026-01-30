@@ -17,7 +17,7 @@ Semantics: hybrid
 E_level: E2
 N_level: N2
 Last_updated: 2026-01-30
-```
+````
 
 ## 0. Effective layer disclaimer
 
@@ -468,17 +468,17 @@ Any architecture that implicitly assumes unbounded work extraction from informat
 To align with TU core conventions, we define an effective tension tensor:
 
 ```txt
-T_ij(m) = S_i(m) * C_j(m) * Tension_FE(m) * lambda(m) * kappa
+T_ij(m) = S_i(m) * C_j(m) * Tension_FE(m) * lambda_regime(m) * kappa
 ```
 
 where:
 
 * `S_i(m)` are source-like factors encoding how strongly the `i`th part of the configuration can drive transformations,
 * `C_j(m)` are receptivity-like factors encoding how sensitive the `j`th degree of freedom is to free energy tension,
-* `lambda(m)` encodes the local reasoning or control regime, for example convergent or divergent control,
+* `lambda_regime(m)` encodes the local reasoning or control regime, for example convergent or divergent control,
 * `kappa` is a constant setting the scale for this family of problems.
 
-We do not specify the index sets for `i` and `j` or the detailed dependence of `S_i`, `C_j`, and `lambda` on `m`.
+We do not specify the index sets for `i` and `j` or the detailed dependence of `S_i`, `C_j`, and `lambda_regime` on `m`.
 We require only that:
 
 ```txt
@@ -519,13 +519,13 @@ within modeling tolerance.
 We define total entropy production over the process:
 
 ```txt
-Delta_S_total = S_total(m_T) - S_total(m_0)
+DeltaS_total = S_total(m_T) - S_total(m_0)
 ```
 
 and require:
 
 ```txt
-Delta_S_total >= 0
+DeltaS_total >= 0
 ```
 
 for physically realistic processes.
@@ -622,7 +622,7 @@ An encoding instance `E` in `Enc_Q131` must satisfy the following fairness and s
    * If a high quality experiment or device analysis, performed with a fixed encoding instance `E` in `Enc_Q131`, robustly produces:
 
      * `I_E_balance` far from zero,
-     * or `Delta_S_total < 0` for a closed description,
+     * or `DeltaS_total < 0` for a closed description,
      * or `I_FE_bound > 0` without an external structured resource,
        then `E` is considered falsified for Q131.
    * It is permitted to propose a new encoding instance `E'` in `Enc_Q131`, but `E'` must:
@@ -698,7 +698,7 @@ From the TU perspective, a "free energy" design is classified as invalid at the 
 3. Its claimed performance would produce
 
    ```txt
-   Delta_S_total < 0
+   DeltaS_total < 0
    ```
 
    in a closed description.
@@ -739,7 +739,7 @@ In World TFE:
 
    ```txt
    I_E_balance = 0
-   Delta_S_total >= 0
+   DeltaS_total >= 0
    I_FE_bound <= 0
    ```
 
@@ -774,7 +774,7 @@ In World PPM:
 3. Entropy accounting, if performed over a closed description, would imply:
 
    ```txt
-   Delta_S_total < 0
+   DeltaS_total < 0
    ```
 
    in contradiction with the second law.
@@ -827,7 +827,7 @@ Test whether a chosen `Tension_FE` and associated invariants reproduce standard 
 
   * a form of `F_free^E`,
   * a form of `Tension_FE^E`,
-  * and ledger tolerances for `I_E_balance`, `Delta_S_total`, and `I_FE_bound`,
+  * and ledger tolerances for `I_E_balance`, `DeltaS_total`, and `I_FE_bound`,
     before inspecting the detailed results of this experiment.
 * System: a working medium coupled to:
 
@@ -851,19 +851,19 @@ Test whether a chosen `Tension_FE` and associated invariants reproduce standard 
 3. Integrate these quantities over one cycle to obtain:
 
    * `W_out_total`,
-   * `Delta_S_total`,
+   * `DeltaS_total`,
    * and any changes in `F_free^E`.
 
 4. Evaluate the invariants:
 
    * `I_E_balance`,
-   * `Delta_S_total`,
+   * `DeltaS_total`,
    * `I_FE_bound`.
 
 *Metrics*
 
 * Magnitude of `I_E_balance` relative to numerical tolerances.
-* Sign and magnitude of `Delta_S_total`.
+* Sign and magnitude of `DeltaS_total`.
 * Sign and magnitude of `I_FE_bound`.
 
 *Falsification conditions*
@@ -871,7 +871,7 @@ Test whether a chosen `Tension_FE` and associated invariants reproduce standard 
 If, for physically reasonable parameter choices and sufficiently accurate numerical methods, the encoding instance `E` produces:
 
 * `I_E_balance` significantly different from zero, or
-* `Delta_S_total < 0` for a closed description, or
+* `DeltaS_total < 0` for a closed description, or
 * `I_FE_bound > 0` in a regime where standard thermodynamics predicts `W_out_total` is bounded by free energy decrease,
 
 then the current definition of `F_free^E(m)` or `Tension_FE^E(m)` is considered falsified for Q131.
@@ -921,20 +921,20 @@ Provide a systematic procedure for testing whether a proposed "free energy" devi
 3. Aggregate over a full cycle to obtain:
 
    * `E_total(m_T) - E_total(m_0)`,
-   * `Delta_S_total`,
+   * `DeltaS_total`,
    * `W_out_total`,
    * `F_free^E(m_0) - F_free^E(m_T)`.
 
 4. Evaluate invariants:
 
    * `I_E_balance`,
-   * `Delta_S_total`,
+   * `DeltaS_total`,
    * `I_FE_bound`.
 
 *Metrics*
 
 * Whether a mapping into `M_reg(E)` is possible.
-* Sign of `Delta_S_total`.
+* Sign of `DeltaS_total`.
 * Sign of `I_FE_bound`.
 * Existence of unmodeled reservoirs or implicit energy sources.
 
@@ -951,7 +951,7 @@ Provide a systematic procedure for testing whether a proposed "free energy" devi
 * If the mapping yields
 
   ```txt
-  Delta_S_total < 0
+  DeltaS_total < 0
   ```
 
   for a closed description, the device is classified as violating the second law inside the Q131 encoding.
@@ -990,7 +990,7 @@ We define several training signals that encode Q131-style constraints.
 
 2. `signal_entropy_production_sign`
 
-   * Definition: A penalty applied whenever a described closed process implies `Delta_S_total < 0` within the effective encoding.
+   * Definition: A penalty applied whenever a described closed process implies `DeltaS_total < 0` within the effective encoding.
    * Purpose: Train the model to avoid narratives that violate the second law in closed systems.
 
 3. `signal_free_energy_bound_respect`
@@ -1013,7 +1013,7 @@ We outline three reusable architectural modules.
    * Interface:
 
      * Input: scenario embedding plus optional structured metadata.
-     * Output: scalar estimate of tension, plus estimated `I_E_balance`, `Delta_S_total`, and `I_FE_bound`.
+     * Output: scalar estimate of tension, plus estimated `I_E_balance`, `DeltaS_total`, and `I_FE_bound`.
 
 2. `EnergyEntropyLedger`
 
@@ -1091,7 +1091,7 @@ A minimal public-facing protocol to demonstrate the impact of Q131 encoding.
   * Observe:
 
     * whether the model identifies missing reservoirs,
-    * whether it computes or at least qualitatively tracks `I_E_balance`, `Delta_S_total`, and `I_FE_bound`.
+    * whether it computes or at least qualitatively tracks `I_E_balance`, `DeltaS_total`, and `I_FE_bound`.
 
 * Comparison metric
 
@@ -1146,7 +1146,7 @@ They can be reused by other BlackHole problems without exposing any deeper TU ge
      * Output:
 
        * cumulative estimates of `E_total`, `S_total`, `W_out_total`,
-       * and the invariants `I_E_balance`, `Delta_S_total`, `I_FE_bound`.
+       * and the invariants `I_E_balance`, `DeltaS_total`, `I_FE_bound`.
    * Preconditions:
 
      * Each step must specify how energy and entropy are exchanged between subsystems.
@@ -1268,7 +1268,7 @@ To move from E2 to E3, at least one of the following should be implemented.
 
    * `Tension_FE(m_t)`,
    * `I_E_balance`,
-   * `Delta_S_total`,
+   * `DeltaS_total`,
    * `I_FE_bound`.
 
 2. A diagnostic toolkit that takes as input:
