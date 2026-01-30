@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q032 -->
 # Q032 · Quantum foundations of thermodynamics
 
 ## 0. Header metadata
