@@ -1,4 +1,4 @@
-<!-- QUESTION_ID: TU-Q131-->
+<!-- QUESTION_ID: TU-Q131 -->
 # Q131 · Tension mediated free energy in open physical systems
 
 ## 0. Header metadata
