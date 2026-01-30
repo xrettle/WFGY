@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q055 -->
 # Q055 · Graph isomorphism exact complexity
 
 ## 0. Header metadata
