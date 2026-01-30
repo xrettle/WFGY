@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q040 -->
 # Q040 · Black hole information problem
 
 ## 0. Header metadata
