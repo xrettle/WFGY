@@ -14,8 +14,8 @@ Status: Partial
 Semantics: hybrid
 E_level: E1
 N_level: N2
-Last_updated: 2026-01-29
-```
+Last_updated: 2026-01-30
+````
 
 ---
 
@@ -459,6 +459,8 @@ For each admissible encoding, and for each refinement level `r` in a specified r
   * no arbitrary dependence on irrelevant detail as `r` increases.
 
 A candidate encoding that violates these regularity conditions is rejected as part of `Enc_Q031`.
+
+For Q031, any encoding instance that violates these regularity conditions is declared invalid for evaluation and must not be used to assign tension values.
 
 ### 3.6 Singular set and domain restrictions
 
@@ -1223,10 +1225,6 @@ This page is part of the **WFGY / Tension Universe** effective-layer S-problem c
 * No deep TU fields, axiom systems, or generative rules are specified in this file.
 * Any mapping from raw experimental or design data into the effective-layer quantities is part of the encoding and can be audited and falsified.
 
-For the general effective-layer contract, see:
-
-* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
-
 ### Encoding and fairness
 
 * The encoding choices described here (libraries, weights, frontier functions, refinement schemes) are intended to be **precommitted** and **non adaptive** with respect to specific datasets used for evaluation.
@@ -1236,10 +1234,6 @@ For the general effective-layer contract, see:
   * not “ultimate limits in the real world have been proven or disproven”.
 * Different admissible encodings within `Enc_Q031` may give different tension values, but they must satisfy the fairness and stability constraints stated in this file and in the global encoding charter.
 
-For the global encoding and fairness rules, see:
-
-* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
-
 ### Tension scale and interpretation
 
 * Tension values such as `Tension_Qinfo(m)` are **dimensionless indicators** of how strongly a scenario strains the encoding, not direct physical observables.
@@ -1247,6 +1241,8 @@ For the global encoding and fairness rules, see:
 * High tension indicates that a scenario is at or beyond the edge of what the encoding can reconcile with current physical models.
 * Crossing a tension threshold does not automatically certify physical impossibility. It marks a region where new evidence or new physics would be required to sustain the claim.
 
-For the global definition of tension scales and thresholds, see:
+This page should be read together with the following charters:
 
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
 * [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
