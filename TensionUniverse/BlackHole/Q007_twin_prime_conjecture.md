@@ -1,4 +1,4 @@
-# Q007 · Twin prime conjecture (run 2 · effective-layer spec)
+# Q007 · Twin prime conjecture
 
 ## 0. Header metadata
 
