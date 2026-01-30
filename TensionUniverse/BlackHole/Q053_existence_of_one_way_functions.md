@@ -8,15 +8,53 @@ Code: BH_CS_ONEWAYFUNC_L3_053
 Domain: Computer science
 Family: Complexity and cryptography
 Rank: S
-Projection_dominance: I
+Projection: I (information) as primary; P / M / C as coupled projections
 Field_type: combinatorial_field
 Tension_type: computational_tension
-Status: Open
+Status: Open (canonical problem), reframed_only at TU effective layer
 Semantics: discrete
 E_level: E1
 N_level: N1
-Last_updated: 2026-01-24
-```
+Last_updated: 2026-01-30
+````
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the **effective layer** of the Tension Universe (TU) framework.
+
+More precisely:
+
+* We only define:
+
+  * state spaces,
+  * observables and fields,
+  * tension functionals,
+  * singular sets and regular domains,
+  * falsifiable experiment patterns,
+  * engineering style modules for AI systems.
+
+* We **do not**:
+
+  * prove or disprove the canonical existence of one way functions,
+  * introduce any new theorem beyond what is already established in the cryptography and complexity theory literature,
+  * claim that any specific candidate construction is secure or insecure in the real world.
+
+* All encodings and experiment patterns in this page are governed by:
+
+  * the **TU Effective Layer Charter**,
+  * the **TU Encoding and Fairness Charter**,
+  * the **TU Tension Scale Charter**,
+
+  and are meant to be auditable against these charters.
+
+* Any violation of these charters, or of the admissible encoding rules specified in Section 3.4, results in the corresponding encoding being **retired** for Q053. Retiring an encoding means that:
+
+  * its tension values must not be used as evidence about the canonical problem,
+  * it may remain as historical record but not as part of the active TU evidence set.
+
+Nothing in this page should be cited as evidence that the canonical existence question for one way functions has been solved.
 
 ---
 
@@ -34,8 +72,8 @@ f_n: {0,1}^n -> {0,1}^n, for n = 1,2,3,...
 
 is called a candidate one way function family if:
 
-1. There is a deterministic algorithm that, on input a bitstring x of length n, computes f_n(x) in time bounded by some polynomial in n.
-2. For every probabilistic polynomial time algorithm A and every polynomial p, there exists an n_0 such that for all n >= n_0, when x is drawn uniformly from {0,1}^n, the probability that A(f_n(x)) outputs a preimage x_prime with f_n(x_prime) = f_n(x) is at most 1 / p(n).
+1. There is a deterministic algorithm that, on input a bitstring `x` of length `n`, computes `f_n(x)` in time bounded by some polynomial in `n`.
+2. For every probabilistic polynomial time algorithm `A` and every polynomial `p`, there exists an `n_0` such that for all `n >= n_0`, when `x` is drawn uniformly from `{0,1}^n`, the probability that `A(f_n(x))` outputs a preimage `x_prime` with `f_n(x_prime) = f_n(x)` is at most `1 / p(n)`.
 
 The canonical open problem is:
 
@@ -60,13 +98,13 @@ Despite decades of work in complexity theory, circuit lower bounds, and average 
 Within the BlackHole S problem collection, Q053 serves as:
 
 1. The root node for computational_tension problems involving asymmetry between forward and inverse tasks.
-2. The anchor for a cluster of cryptographic and complexity problems that depend on the existence (or nonexistence) of average case hardness.
+2. The anchor for a cluster of cryptographic and complexity problems that depend on the existence or nonexistence of average case hardness.
 3. A template for encoding “hardness worlds” in the Tension Universe framework, where forward tasks are resource efficient but inverse tasks remain hard under admissible attack models.
 
 ### References
 
 1. Oded Goldreich, “Foundations of Cryptography, Volume 1: Basic Tools”, Cambridge University Press, 2001.
-2. Oded Goldreich, “On the Foundations of Cryptography”, SIAM, survey and monograph level sources on complexity based cryptography.
+2. Oded Goldreich, survey and monograph level sources on complexity based cryptography.
 3. Michael Sipser, “Introduction to the Theory of Computation”, 3rd edition, Cengage Learning, 2013.
 4. Russell Impagliazzo, “A personal view of average case complexity”, in Proceedings of the 10th Annual Structure in Complexity Theory Conference, 1995.
 5. Standard encyclopedia entries on “One way function (computing)” and “Unsolved problems in computer science”, for placement of the existence question among major open problems.
@@ -238,9 +276,9 @@ M_reg = M \ S_sing
 
 Any attempt to evaluate Q053 observables for states in `S_sing` is treated as “out of domain” and not as evidence for or against the canonical problem.
 
-### 3.4 Admissible encoding class
+### 3.4 Admissible encoding class `Enc_Q053`
 
-To prevent hidden parameter tuning and post hoc choices, we restrict attention to an admissible encoding class defined by:
+To prevent hidden parameter tuning and post hoc choices, we restrict attention to an admissible encoding class `Enc_Q053` defined by:
 
 1. Candidate families
 
@@ -250,7 +288,7 @@ To prevent hidden parameter tuning and post hoc choices, we restrict attention t
 2. Attack libraries
 
    * For each state `m`, the attack library `A_lib` is a finite collection of algorithm descriptions selected from a larger, fixed universe of allowable algorithm templates.
-   * The selection rule for `A_lib` may depend on public design choices (for example, “include all known attacks published up to a certain date”) but may not depend on the specific behavior of `F` on secret instances.
+   * The selection rule for `A_lib` may depend on public design choices, for example “include all known attacks published up to a certain date”, but may not depend on the specific behavior of `F` on hidden instances.
 
 3. Resource scales
 
@@ -263,7 +301,12 @@ To prevent hidden parameter tuning and post hoc choices, we restrict attention t
    * All observables `Forward_cost`, `Inv_success`, `Inv_cost`, and `Gap_inv` depend only on the triple `(F, A_lib, scale_parameters)` as encoded in `m`.
    * No observable is allowed to depend on hidden post hoc adjustments of `F`, `A_lib`, or the scale parameters.
 
-This admissible encoding class may later be refined at higher E levels, but even at E1 it excludes trivial encodings that could force any family to look one way or not one way by tuning after seeing outcomes.
+The encoding class `Enc_Q053` is intended to be compatible with the **TU Encoding and Fairness Charter**. Encodings that violate either the charter or the rules above are considered **invalid** for Q053 and must be retired. Retired encodings:
+
+* may be kept as log entries,
+* must not be used when aggregating tension values or drawing narrative conclusions about Q053.
+
+This admissible encoding class may later be refined at higher E levels. Even at E1 it excludes trivial encodings that could force any family to look one way or not one way by tuning after seeing outcomes.
 
 ---
 
@@ -306,13 +349,13 @@ This aggregated value can be used when we need a single number to describe the o
 
 At the effective layer, the existence of one way functions corresponds to the following tension principle:
 
-> There exists at least one family `F` such that, for world representing states `m` and for all sufficiently large scales `k`, the one way tension `Tension_OWF(m; F, A_lib, k)` stays in a high asymmetry band, robust under admissible changes in attack libraries and precise parameter choices.
+> There exists at least one family `F` such that, for world representing states `m` in `M_reg` and for all sufficiently large scales `k`, the one way tension `Tension_OWF(m; F, A_lib, k)` stays in a high asymmetry band, robust under admissible changes in attack libraries and precise parameter choices.
 
 More concretely, the one way world requires that there exist:
 
 * a candidate family `F`,
-* a sequence of states `m_real` in `M_reg` that represent improved knowledge about this family and its attacks,
-* a family of attack libraries `A_lib_real` within the admissible class,
+* a sequence of world representing states `m_real` in `M_reg` that represent improved knowledge about this family and its attacks,
+* a family of attack libraries `A_lib_real` within `Enc_Q053`,
 
 such that there exists a positive constant `delta_OWF` and a finite index `k_0` with:
 
@@ -329,7 +372,7 @@ Conversely, in a world where one way functions do not exist, any attempt to real
 
 1. Forward failure
 
-   * For every candidate family `F` and every world representing sequence of states `m_trial`, either `Forward_cost(m_trial; F, k)` fails to remain within the “easy” band at large scales or the family collapses into trivial behavior.
+   * For every candidate family `F` and every world representing sequence of states `m_trial` in `M_reg`, either `Forward_cost(m_trial; F, k)` fails to remain within the “easy” band at large scales or the family collapses into trivial behavior.
 
 2. Inversion collapse
 
@@ -345,7 +388,7 @@ At the effective layer, Q053 encodes the gap between these two types of worlds a
 
 ## 5. Counterfactual tension worlds
 
-We now describe two counterfactual worlds in terms of observable patterns, not deep generative rules.
+We now describe two counterfactual worlds in terms of observable patterns, not deep generative rules. All world representing states mentioned in this section are taken in the regular domain `M_reg`.
 
 ### 5.1 World T (one way functions exist)
 
@@ -353,13 +396,13 @@ In World T:
 
 1. Existence of a stable one way family
 
-   * There exists a family `F_star` and world representing states `m_T` such that forward computation of `F_star` stays inside a stable “easy” cost band for all large scales.
-   * For these states and any admissible attack library `A_lib` that reflects current algorithmic knowledge, `Gap_inv(m_T; F_star, A_lib, k)` remains large for all sufficiently large `k`.
+   * There exists a family `F_star` and world representing states `m_T` in `M_reg` such that forward computation of `F_star` stays inside a stable “easy” cost band for all large scales.
+   * For these states and any admissible attack library `A_lib` in `Enc_Q053` that reflects current algorithmic knowledge, `Gap_inv(m_T; F_star, A_lib, k)` remains large for all sufficiently large `k`.
 
 2. Robustness under attack progress
 
    * When `A_lib` is extended to include newly discovered attacks, `Tension_OWF(m_T; F_star, A_lib, k)` may fluctuate but does not collapse to near zero across all large scales.
-   * Some attacks may reduce the asymmetry at specific scales, but the overall asymmetry band survives.
+   * Some attacks may reduce the asymmetry at specific scales, but the overall asymmetry band survives under admissible encoding changes.
 
 3. Cryptographic world structure
 
@@ -371,8 +414,8 @@ In World F:
 
 1. Universal inversion by admissible attacks
 
-   * For every candidate family `F` and any world representing states `m_F`, there exists a sequence of admissible attack library extensions and scale increases that eventually yields small `Gap_inv` and high `Inv_success`.
-   * The corresponding `Tension_OWF(m_F; F, A_lib, k)` values get driven into a low asymmetry band.
+   * For every candidate family `F` and any world representing states `m_F` in `M_reg`, there exists a sequence of admissible attack library extensions and scale increases that eventually yields small `Gap_inv` and high `Inv_success`.
+   * The corresponding `Tension_OWF(m_F; F, A_lib, k)` values get driven into a low asymmetry band at large scales.
 
 2. Cryptography from structure, not complexity
 
@@ -384,7 +427,9 @@ In World F:
 
 ### 5.3 Interpretive note
 
-These two worlds do not claim to describe real computation at the machine code level. They only specify how observable hardness patterns and tension scores would behave if the universe were organized according to each scenario. They provide a structured way to express what it would mean, at the effective layer, for one way functions to exist or not exist.
+These two worlds do not claim to describe real computation at the machine code level. They are not claims about which world we actually live in.
+
+They only specify how observable hardness patterns and tension scores would behave if the universe were organized according to each scenario. They provide a structured way to express what it would mean, at the effective layer, for one way functions to exist or not exist.
 
 ---
 
@@ -394,25 +439,27 @@ This block specifies experiments and protocols that can:
 
 * test the coherence of the Q053 encoding,
 * distinguish different hardness world models,
-* provide evidence for or against specific parameter choices.
+* provide evidence for or against specific parameter choices inside `Enc_Q053`.
 
-They do not prove or refute the existence of one way functions.
+They do not prove or refute the existence of one way functions. All experiments explicitly restrict attention to states in `M_reg`. Any state that falls in `S_sing` is logged as out of domain and excluded from tension statistics.
 
 ### Experiment 1: Synthetic hardness vs easy families
 
-*Goal:*
+**Goal**
 Test whether the one way tension functional can reliably separate artificial families that are constructed to be “easy to invert” from families constructed to mimic one way like behavior.
 
-*Setup:*
+**Setup**
 
 * Construct or select several synthetic function families:
 
   * Family E (easy): functions where both forward and inverse algorithms are known and have similar resource profiles.
   * Family H (hard like): functions where forward computation is efficient, but known inversion algorithms are intentionally restricted or made to be much more expensive at the effective layer.
-* For each family, design admissible encodings `m_E` and `m_H` with matched resource scales and attack library constraints.
+
+* For each family, design admissible encodings `m_E` and `m_H` in `M_reg` with matched resource scales and attack library constraints in `Enc_Q053`.
+
 * Fix encoding parameters, including `alpha`, `beta`, and how `Forward_ease` and `Inversion_hardness` are computed, before observing any outcomes.
 
-*Protocol:*
+**Protocol**
 
 1. For each family and each scale index `k` in a chosen finite set `K`, evaluate:
 
@@ -420,74 +467,87 @@ Test whether the one way tension functional can reliably separate artificial fam
    * `Inv_cost(m; F, A_lib, k)`,
    * `Inv_success(m; F, A_lib, k)`,
    * `Gap_inv(m; F, A_lib, k)`,
-   * `Tension_OWF(m; F, A_lib, k)`.
-2. Compute aggregated tension values `Tension_OWF_total` for each family over `K`.
-3. Compare the distributions of tension values between Family E and Family H.
-4. Repeat under modest variations of `A_lib` (for example adding simple attacks that do not change the intended hardness pattern) to check robustness.
+   * `Tension_OWF(m; F, A_lib, k)`,
 
-*Metrics:*
+   for states `m` restricted to `M_reg`.
+
+2. Compute aggregated tension values `Tension_OWF_total` for each family over `K`.
+
+3. Compare the distributions of tension values between Family E and Family H.
+
+4. Repeat under modest variations of `A_lib` in `Enc_Q053` (for example adding simple attacks that do not change the intended hardness pattern) to check robustness.
+
+**Metrics**
 
 * Mean and variance of `Tension_OWF_total` for Family E and Family H.
 * Separation between the distributions, measured by a simple distance or overlap metric.
 * Stability of the separation under admissible variations of encoding and attack libraries.
 
-*Falsification conditions:*
+**Falsification conditions**
 
-* If, under fixed admissible encodings, the encoding fails to produce consistently lower tension values for Family E than for Family H, the Q053 tension functional is considered falsified for this setup.
-* If small admissible modifications of `A_lib` or resource scales eliminate any consistent separation, the encoding is considered too fragile and rejected.
+* If, under fixed admissible encodings in `Enc_Q053`, the encoding fails to produce consistently lower tension values for Family E than for Family H, the Q053 tension functional is considered falsified for this setup.
+* If small admissible modifications of `A_lib` or resource scales eliminate any consistent separation, the encoding is considered too fragile and rejected for Q053.
 
-*Semantics implementation note:*
+These falsification conditions apply only to the effective layer encoding and do not constitute a proof or refutation of the canonical open problem about one way functions.
+
+**Semantics implementation note**
 All objects in this experiment are treated as discrete combinatorial structures, with states and observables defined over bitstrings and discrete resource parameters, matching the metadata choice.
 
-*Boundary note:*
-Falsifying TU encoding != solving canonical statement. This experiment can reject or refine particular encodings of computational_tension, but it does not settle whether genuine one way functions exist in the sense of the canonical problem.
+**Boundary note**
+Falsifying a TU encoding for Q053 does not solve the canonical problem. This experiment can reject or refine particular encodings of computational_tension, but it does not settle whether genuine one way functions exist.
 
 ---
 
 ### Experiment 2: Real candidate families under evolving attacks
 
-*Goal:*
+**Goal**
 Assess whether the Q053 encoding can track changes in effective hardness as new attacks are discovered against real candidate families.
 
-*Setup:*
+**Setup**
 
-* Select a small set of widely studied candidate function families used in practice (for example families based on factoring, discrete logarithms, or lattice problems).
-* For each family, define a sequence of attack libraries:
+* Select a small set of widely studied candidate function families used in practice, for example families based on factoring, discrete logarithms, or lattice problems.
 
-  * `A_lib^{(0)}`: attacks representing early known methods.
-  * `A_lib^{(1)}`: attacks including later improvements.
-  * `A_lib^{(2)}`, and so on, up to a recent stage.
+* For each family, define a sequence of attack libraries inside `Enc_Q053`:
+
+  * `A_lib(0)`: attacks representing early known methods.
+  * `A_lib(1)`: attacks including later improvements.
+  * `A_lib(2)`, and so on, up to a recent stage.
+
 * Define resource scales that roughly correspond to realistic time bounds and success thresholds for each historical period.
 
-*Protocol:*
+**Protocol**
 
-1. For each candidate family `F_cand` and each stage `j` of the attack library, encode a state `m_j` that summarizes the known attacks and their performance at that time.
-2. For a set of scales appropriate to each stage, compute the observables and `Tension_OWF(m_j; F_cand, A_lib^{(j)}, k)`.
-3. Plot or tabulate how `Tension_OWF_total` changes as `j` increases.
+1. For each candidate family `F_cand` and each stage `j` of the attack library, encode a state `m_j` in `M_reg` that summarizes the known attacks and their performance at that time.
+2. For a set of scales appropriate to each stage, compute the observables and `Tension_OWF(m_j; F_cand, A_lib(j), k)` for `k` in the chosen set.
+3. Aggregate to `Tension_OWF_total(m_j; F_cand, A_lib(j), K)` and record how it changes as `j` increases.
 4. Compare the pattern of changes across different candidate families.
 
-*Metrics:*
+**Metrics**
 
 * Direction and magnitude of changes in `Tension_OWF_total` as attacks improve.
-* Consistency with known cryptanalytic history (for example, tension should drop after major breakthroughs).
+* Consistency with known cryptanalytic history, for example tension should drop after major breakthroughs.
 * Differences in sensitivity among candidate families.
 
-*Falsification conditions:*
+**Falsification conditions**
 
-* If the encoding fails to show any appreciable change in tension after major known attacks that significantly reduce practical security, the encoding is considered misaligned with effective hardness and rejected.
-* If the encoding suggests dramatic tension collapse for families that are still considered strong under current knowledge, the encoding is considered unfaithful and rejected.
+* If the encoding fails to show any appreciable change in tension after major known attacks that significantly reduce practical security, the encoding is considered misaligned with effective hardness and rejected for Q053.
+* If the encoding suggests dramatic tension collapse for families that are still considered strong under current knowledge, the encoding is considered unfaithful and rejected or revised.
 
-*Semantics implementation note:*
-The encoding abstracts real algorithms and attacks into discrete summaries of cost and success, preserving their combinatorial nature. No continuous approximations are introduced at this level.
+These falsification conditions apply only to the effective layer encoding and do not prove or disprove the existence of one way functions in the canonical sense.
 
-*Boundary note:*
-Falsifying TU encoding != solving canonical statement. Even a well aligned encoding that tracks known history cannot by itself prove or disprove the canonical existence of one way functions.
+**Semantics implementation note**
+The experiment abstracts cryptanalytic history into coarse grained summaries of cost and success probabilities. It does not claim to re evaluate or certify the real world security of any scheme.
+
+**Boundary note**
+Even a well aligned encoding that tracks known history cannot by itself prove or disprove the canonical existence of one way functions.
 
 ---
 
 ## 7. AI and WFGY engineering spec
 
 This block describes how Q053 can be used as a module for AI systems within the WFGY framework, at the effective layer.
+
+All signals and modules described here are auxiliary, effective layer constructs. They are intended for training, diagnostics, or analysis and must not be interpreted as evidence that genuine one way functions exist or do not exist.
 
 ### 7.1 Training signals
 
@@ -520,7 +580,7 @@ We suggest module patterns that reuse Q053 structures.
 1. `OneWayTensionHead`
 
    * Role: given an internal representation of a computational or cryptographic scenario, output an estimate of `Tension_OWF` and its components.
-   * Interface: input is a context embedding and a candidate family descriptor; output is a scalar tension estimate and a small vector of decomposed scores (forward ease, inversion hardness).
+   * Interface: input is a context embedding and a candidate family descriptor, output is a scalar tension estimate and a small vector of decomposed scores such as forward ease and inversion hardness.
 
 2. `HardnessProfileObserver`
 
@@ -541,7 +601,7 @@ An evaluation harness for models augmented with Q053 modules:
    * A set of questions and scenarios about:
 
      * explaining one way functions,
-     * analyzing security of candidate constructions,
+     * analyzing security of candidate constructions at a conceptual level,
      * reasoning under hypothetical hardness and no hardness worlds.
 
 2. Conditions
@@ -552,12 +612,14 @@ An evaluation harness for models augmented with Q053 modules:
 3. Metrics
 
    * Conceptual correctness: whether the model keeps the definitions and relationships of one way functions consistent with standard references.
-   * World separation: whether the model maintains clear distinctions between World T and World F assumptions.
+   * World separation: whether the model maintains clear distinctions between World T and World F assumptions when asked.
    * Attack awareness: whether the model correctly acknowledges known attacks when they are relevant.
 
 ### 7.4 60 second reproduction protocol
 
 A minimal protocol for external users to experience the impact of Q053 encoding in an AI system.
+
+This protocol is a qualitative demonstration and is not an experiment in the sense of Section 6.
 
 * Baseline setup
 
@@ -576,6 +638,7 @@ A minimal protocol for external users to experience the impact of Q053 encoding 
     * clarity of the forward vs inverse asymmetry,
     * correctness of the complexity relationships mentioned,
     * explicit treatment of counterfactual worlds.
+
   * Optionally, ask independent evaluators to choose which explanation better matches standard references.
 
 * What to log
@@ -607,7 +670,7 @@ This block details reusable components from Q053 and how they transfer to other 
 
    * Preconditions:
 
-     * The function family and attack library descriptors must be compatible with the admissible encoding class.
+     * The function family and attack library descriptors must be compatible with `Enc_Q053` and the TU Encoding and Fairness Charter.
      * The resource scales must be a finite subset of the globally defined scales.
 
 2. ComponentName: `InversionGap_Observable`
@@ -641,14 +704,14 @@ This block details reusable components from Q053 and how they transfer to other 
    * Preconditions:
 
      * The candidate set must support definitions of forward and inverse tasks.
-     * The encoding constraints must specify admissible attack classes and resource scales.
+     * The encoding constraints must specify admissible attack classes and resource scales, consistent with `Enc_Q053`.
 
 ### 8.2 Direct reuse targets
 
 1. Q051 (P versus NP)
 
    * Reused component: `InversionGap_Observable`.
-   * Why it transfers: P vs NP concerns the gap between efficient verification and efficient search; inversion gap patterns can be used to frame certain NP search problems in hardness world terms.
+   * Why it transfers: P vs NP concerns the gap between efficient verification and efficient search. Inversion gap patterns can be used to frame certain NP search problems in hardness world terms.
    * What changes: the function families represent search problems rather than cryptographic primitives, and the attacks represent general NP solvers.
 
 2. Q052 (P vs BQP and quantum advantage)
@@ -673,20 +736,20 @@ This block details reusable components from Q053 and how they transfer to other 
 
 ## 9. TU roadmap and verification levels
 
-This block describes the current verification level of Q053 and the next measurable steps.
+This block describes the current verification level of Q053 and the next measurable steps, in alignment with the TU Effective Layer Charter.
 
 ### 9.1 Current levels
 
 * E_level: E1
 
-  * A coherent effective layer encoding of the one way function existence question has been specified.
+  * A coherent effective layer encoding of the one way function existence question has been specified for states in `M_reg`.
   * State space, observables, tension functionals, singular sets, and admissible encoding constraints are defined at a skeleton level.
-  * At least one experiment has been specified with clear falsification conditions.
+  * At least one experiment has been specified with clear falsification conditions that apply to encodings in `Enc_Q053`.
 
 * N_level: N1
 
   * The narrative linking candidate one way functions, computational_tension, and hardness worlds is explicit and self consistent at a basic level.
-  * Counterfactual worlds are described in a way that can be instantiated in synthetic scenarios.
+  * Counterfactual worlds are described in a way that can be instantiated in synthetic scenarios, while remaining agnostic about the actual truth of the canonical statement.
 
 ### 9.2 Next measurable step toward E2
 
@@ -695,14 +758,14 @@ To move Q053 from E1 to E2, the following measurable extensions are suggested:
 1. Finite library and refine(k) implementation
 
    * Specify explicit finite attack libraries and resource scale functions that can be instantiated in software for a collection of synthetic and real candidate families.
-   * Document how the refine(k) process operates, including how new attacks and resource levels are added in controlled steps.
+   * Document how a refine procedure on scale indices operates, including how new attacks and resource levels are added in controlled steps within `Enc_Q053`.
 
 2. Public hardness world experiments
 
-   * Implement the synthetic and historical experiments described in Block 6.
+   * Implement the synthetic and historical experiments described in Section 6.
    * Publish the resulting tension profiles and encodings as open data, allowing independent groups to test the robustness of the Q053 encoding.
 
-These steps remain within the effective layer, since they work with observable summaries of algorithms and attacks and do not require revealing any deep TU generative rules.
+These steps remain within the effective layer, since they work with observable summaries of algorithms and attacks and do not require revealing any deep TU generative rules or claiming progress on the canonical problem.
 
 ### 9.3 Long term role in the TU program
 
@@ -712,6 +775,8 @@ In the long term, Q053 is expected to:
 * Provide a reusable template for modeling hardness worlds in cryptography, complexity theory, and oversight tasks in AI.
 * Act as a calibration test for how far TU style encodings can structure reasoning about open complexity problems without claiming proofs or introducing hidden assumptions.
 
+Raising the E_level or N_level for Q053 refines the encoding and the narrative. It does not, by itself, change the canonical problem statement or claim that the existence of one way functions has been resolved.
+
 ---
 
 ## 10. Elementary but precise explanation
@@ -720,10 +785,10 @@ This block gives an explanation suitable for non specialists while remaining ali
 
 A one way function is supposed to be a function where:
 
-* given an input, it is easy to compute the output;
+* given an input, it is easy to compute the output,
 * given an output, it is very hard to find any input that maps to it.
 
-Such functions are at the heart of modern cryptography. If they exist, then many cryptographic tools can be built from them. If they do not exist, then a large part of complexity based cryptography would have no real foundation.
+Such functions are at the heart of modern cryptography. If they exist, then many cryptographic tools can be built from them. If they do not exist, then a large part of complexity based cryptography would have no solid foundation.
 
 In the Tension Universe view, we do not try to prove whether one way functions exist. Instead, we organize the problem around a simple idea:
 
@@ -747,13 +812,51 @@ We combine these into a tension score. High tension means “forward is easy, in
 
 Then we imagine two kinds of worlds:
 
-* In a one way world, there is at least one function family whose tension score stays high, even as we allow more and more powerful attacks and more generous resources.
-* In a no one way world, every candidate family that seems hard at first eventually loses its asymmetry when better attacks or more realistic scales are considered.
+* In a one way world, there is at least one function family whose tension score stays high, even as we allow more and more powerful attacks and more generous resources, under admissible encodings.
+* In a no one way world, every candidate family that seems hard at first eventually loses its asymmetry when better attacks or more realistic scales are considered inside the same encoding class.
 
-This viewpoint does not decide which world we live in. It does not replace complexity theory. What it does is:
+This viewpoint does not decide which world we live in. It does not replace complexity theory, and it does not provide a proof that one way functions exist or do not exist.
+
+What it does is:
 
 * give us a clean way to talk about the existence question in terms of observable hardness patterns,
 * provide explicit experiments for testing whether a proposed encoding of “one way tension” behaves sensibly,
 * produce reusable tools for other problems where forward and inverse tasks might have very different difficulty.
 
 Q053 is the node where this structure is set up for one of the most important open questions in computer science, in a way that is precise enough for external audit but still agnostic about the ultimate truth of the canonical problem.
+
+---
+
+## Tension Universe effective-layer footer
+
+This page is part of the **WFGY / Tension Universe** S-problem collection.
+
+### Scope of claims
+
+* The goal of this document is to specify an **effective layer encoding** of the existence question for one way functions.
+* It does not claim to prove or disprove the canonical statement in Section 1.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the corresponding open problem has been solved.
+
+### Effective-layer boundary
+
+* All objects used here (state spaces `M`, observables, tension functionals, counterfactual worlds) live at the TU effective layer.
+* No deep TU generative rules, axiom systems, or hidden field constructions are specified in this file.
+* Any reference to “worlds” or “states” is shorthand for effective layer configurations, not claims about the actual universe.
+
+### Encoding and fairness
+
+* The encoding class `Enc_Q053` is constrained by the **TU Encoding and Fairness Charter**.
+* Encodings that violate the charter or the rules in Section 3.4 are retired and must not be used as evidence for Q053.
+* Falsification events in Section 6 apply only to encodings inside `Enc_Q053`. They do not prove or refute the canonical problem.
+
+### Tension scale and narrative levels
+
+* E_level and N_level are defined in the **TU Tension Scale Charter** and track the maturity of the encoding and narrative, not progress on the canonical open problem.
+* Upgrading these levels refines the effective layer description. It does not change the underlying mathematical question.
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
