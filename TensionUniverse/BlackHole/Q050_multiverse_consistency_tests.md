@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q050 -->
 # Q050 · Multiverse consistency tests via cosmic inventory tension
 
 ## 0. Header metadata
