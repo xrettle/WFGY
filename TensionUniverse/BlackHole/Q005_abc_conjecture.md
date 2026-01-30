@@ -1,3 +1,4 @@
+<!-- QUESTION_ID: TU-Q005 -->
 # Q005 · abc conjecture
 
 ## 0. Header metadata
