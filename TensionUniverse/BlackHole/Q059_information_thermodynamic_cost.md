@@ -15,8 +15,31 @@ Status: Open
 Semantics: hybrid
 E_level: E1
 N_level: N1
-Last_updated: 2026-01-25
-```
+Last_updated: 2026-01-30
+````
+
+---
+
+## 0. Effective layer disclaimer
+
+All statements in this entry are made strictly at the **effective layer** of the Tension Universe (TU) program.
+
+* The goal of this page is to specify an effective-layer encoding of Q059 as a thermodynamic_tension problem, in terms of state spaces, observables, mismatch functionals, tension scores, and counterfactual world patterns.
+* It does **not** claim to prove or disprove any canonical statement about ultimate thermodynamic limits of computation, nor any specific formulation of Landauer’s principle beyond the cited literature.
+* It does **not** introduce any new theorem or physical law beyond what is already established in standard thermodynamics and information theory.
+* Nothing in this page should be cited as evidence that the corresponding open problem has been solved, or that one of the counterfactual world patterns in Section 5 is the true description of our universe.
+
+All objects that appear here
+
+* state spaces `M`,
+* observables such as `Q_info`, `Q_heat`, `T_env`,
+* mismatch fields such as `DeltaS_Landauer` and `DeltaS_device`,
+* tension functionals such as `Tension_InfoThermo`,
+* counterfactual worlds “World T” and “World F”,
+
+live strictly at the effective layer. No claims are made about deep generative rules, microscopic mechanisms, or ontological commitments behind these objects.
+
+Every concrete choice of observables, weights, and functional forms described below defines an **encoding version** governed by the TU Effective Layer Charter, the TU Encoding and Fairness Charter, and the TU Tension Scale Charter. An encoding version can be **falsified** by experiments that satisfy the conditions in Section 6. When that happens, the version must be retired in project logs rather than silently modified; any successor must receive a new identifier and be re-tested on the same or stricter experiments.
 
 ---
 
@@ -181,6 +204,8 @@ where each state `m` in `M` represents a coarse-grained configuration of an info
 
 We do not specify how `m` is constructed from detailed physical trajectories. We only assume that for the class of processes under consideration, such states exist and that the observables defined below are well defined on a regular subset of `M`.
 
+This realizes the **hybrid** semantics declared in the metadata by coupling discrete logical quantities (for example bit counts and logical irreversibility) to continuous thermodynamic observables (for example heat and temperature) inside a single effective-layer state space.
+
 ### 3.2 Observables and mismatch fields
 
 We introduce the following observables and fields on `M`.
@@ -212,13 +237,15 @@ Q_env(m) = (T_env(m), other_env_params(m))
 
 4. Landauer mismatch observable
 
-We define the logically irreversible part as contributing `Q_irrev(m)` bits of effectively erased information. We do not specify how `Q_irrev(m)` is computed; we only assume that it is encoded in `m`.
+We define the logically irreversible part as contributing `Q_irrev(m)` bits of effectively erased information. We do not specify how `Q_irrev(m)` is computed; we only assume that it is encoded in `m` within the chosen encoding class.
 
 We then define:
 
 ```txt
-DeltaS_Landauer(m) = max( 0,
-    Q_heat(m) - k_B * T_env(m) * ln(2) * Q_irrev(m) )
+DeltaS_Landauer(m) = max(
+  0,
+  Q_heat(m) - k_B * T_env(m) * ln(2) * Q_irrev(m)
+)
 ```
 
 Properties:
@@ -242,15 +269,18 @@ For fixed positive weights `w_L` and `w_D` chosen once per encoding class, we de
 
 ```txt
 DeltaS_info_thermo(m) =
-    w_L * DeltaS_Landauer(m) + w_D * DeltaS_device(m)
+  w_L * DeltaS_Landauer(m) + w_D * DeltaS_device(m)
 ```
+
+These weights are part of the encoding choice and must obey the fairness constraints in Section 3.4 and the TU Encoding and Fairness Charter.
 
 ### 3.3 Effective tension tensor
 
 We assume that Q059 participates in the general TU tension tensor pattern
 
 ```txt
-T_ij(m) = S_i(m) * C_j(m) * DeltaS_info_thermo(m) * lambda(m) * kappa
+T_ij(m) =
+  S_i(m) * C_j(m) * DeltaS_info_thermo(m) * lambda(m) * kappa
 ```
 
 where:
@@ -274,14 +304,22 @@ Because observed tension can in principle be changed by re-encoding the same phy
 2. No retroactive tuning:
 
    * For a given encoding class in `E_adm`, the rules and weights may not be modified after observing experimental or simulated data in order to reduce `DeltaS_info_thermo(m)` or `Tension_InfoThermo(m)` for those cases.
-   * Any change to the rules or weights defines a new encoding class that must be evaluated from scratch.
+   * Any change to the rules or weights defines a new encoding class that must be evaluated from scratch and logged as a new encoding version.
 
 3. Resolution parameter and refinement:
 
    * Each encoding class includes a resolution parameter `r` that controls how finely processes are coarse-grained in time, space, and logical units.
    * For increasing `r`, encodings must form a refinement sequence: higher `r` can resolve more structure, but must be compatible with summaries at lower `r`.
 
-These constraints ensure that low or high tension conclusions cannot be obtained by arbitrary post hoc parameter tuning and that refinement behavior is meaningful.
+These constraints are governed by the **TU Encoding and Fairness Charter**. They ensure that low or high tension conclusions cannot be obtained by arbitrary post hoc parameter tuning and that refinement behavior is meaningful.
+
+Within this page, an **encoding version** means a concrete member of `E_adm` together with specific choices of:
+
+* mapping rules from raw data to effective observables,
+* numeric values for `w_L`, `w_D`, and any parameters inside `F` in Section 4.1,
+* an allowed range for the resolution parameter `r`.
+
+An encoding version can be falsified by experiments in Section 6. When falsified, it must be retired in project logs and must **not** be silently edited in place. Any successor encoding must receive a new version identifier and be re-evaluated on the same or stricter experiment suite, in line with the TU Effective Layer Charter and TU Tension Scale Charter.
 
 ### 3.5 Singular set and domain restrictions
 
@@ -314,7 +352,7 @@ We define an effective tension functional:
 
 ```txt
 Tension_InfoThermo(m) =
-    F( DeltaS_Landauer(m), DeltaS_device(m) )
+  F(DeltaS_Landauer(m), DeltaS_device(m))
 ```
 
 for `m` in `M_reg`, where `F` is any nonnegative function satisfying:
@@ -327,10 +365,12 @@ A simple and sufficient choice is:
 
 ```txt
 Tension_InfoThermo(m) =
-    alpha * DeltaS_Landauer(m) + beta * DeltaS_device(m)
+  alpha * DeltaS_Landauer(m) + beta * DeltaS_device(m)
 ```
 
-with `alpha > 0` and `beta > 0`. The specific values of `alpha` and `beta` are fixed once per admissible encoding class and must obey the fairness constraints in Section 3.4.
+with `alpha > 0` and `beta > 0`.
+
+In any given encoding version, `alpha` and `beta` are fixed positive constants chosen **in advance** and remain fixed for all experiments evaluated under that version. Changing `alpha` or `beta` after inspecting experimental outcomes defines a **new** encoding version that must be logged and re-tested, rather than an update of the old one. This follows directly from the TU Encoding and Fairness Charter.
 
 ### 4.2 Low-tension principle: near-ideal information processing
 
@@ -490,11 +530,17 @@ Test whether a given `Tension_InfoThermo` encoding correctly classifies experime
 * If protocols independently known to be far from the Landauer regime consistently yield very low `Tension_InfoThermo(m_data)` values, the encoding fails to distinguish low and high dissipation regimes and is rejected.
 * If small, theoretically irrelevant changes in resolution parameter `r` within the same encoding class cause large, qualitative changes in the classification of protocols as low-tension versus high-tension, the encoding is considered unstable and rejected.
 
+When any of these falsification conditions are met under an admissible encoding class that respects Section 3.4, the corresponding **Q059 encoding version** is considered falsified in the sense of the TU Encoding and Fairness Charter. It must not be modified in place to “save” the version. Any replacement encoding must:
+
+* receive a new version identifier in project logs,
+* document which mapping rules or parameter ranges were changed,
+* be re-evaluated on this experiment and any stricter successors.
+
 *Semantics implementation note:*
 All observables and tension values in this experiment are computed using the hybrid interpretation declared in the metadata, where discrete logical quantities (bits, operations) are coupled to continuous thermodynamic quantities (energy, temperature) through the definitions in Block 3.
 
 *Boundary note:*
-Falsifying TU encoding != solving canonical statement. This experiment can reject specific Q059 encodings but does not decide whether the universe ultimately behaves as in World T or World F.
+Falsifying a TU encoding version is not the same as solving the canonical statement. This experiment can reject specific Q059 encodings but does not decide whether the universe ultimately behaves as in World T or World F.
 
 ---
 
@@ -528,20 +574,26 @@ Assess whether `Tension_InfoThermo` reflects meaningful trends as both algorithm
 
 *Metrics:*
 
-* Whether newer device generations for the same algorithm and comparable reliability show decreasing `Tension_InfoThermo` values, consistent with engineering improvements.
+* Whether newer device generations for the same algorithm and comparable reliability show decreasing `Tension_InfoThermo(m_algo)` values, consistent with engineering improvements.
 * Whether higher-complexity algorithms, at fixed hardware and error tolerance, tend to incur higher minimal tension, reflecting larger energy demands.
 * Stability of these trends when small changes in encoding parameters within the same admissible class are introduced.
 
 *Falsification conditions:*
 
 * If `Tension_InfoThermo(m_algo)` shows no systematic relation to known energy efficiency improvements across device generations, despite accurate `Q_heat` and `Q_info` measurements, then the encoding fails to capture real thermodynamic cost and is rejected.
-* If qualitatively different trends (for example apparent improvements vs apparent regressions) can be produced by tiny changes in encoding parameters within the same admissible class, the encoding is considered too fragile to be meaningful.
+* If qualitatively different trends (for example apparent improvements versus apparent regressions) can be produced by tiny changes in encoding parameters within the same admissible class, the encoding is considered too fragile to be meaningful.
+
+If these falsification conditions are satisfied under honest application of the rules and parameter bounds fixed in advance, the corresponding **encoding version of Q059** is again considered falsified. As in Experiment 1, this triggers:
+
+* retirement of that encoding version in logs,
+* prohibition on silent in-place modification,
+* requirement that any successor encoding be given a new version identifier and be re-tested on this scaling experiment.
 
 *Semantics implementation note:*
 The hybrid interpretation binds discrete counts of logical operations and bits to continuous energy measurements, as encoded in `Q_info(m_algo)`, `Q_heat(m_algo)`, and `T_env(m_algo)`, following the rules of the chosen encoding class.
 
 *Boundary note:*
-Falsifying TU encoding != solving canonical statement. This experiment probes the usefulness of Q059 encodings for large-scale computation but does not directly determine ultimate thermodynamic limits.
+Falsifying a TU encoding version is not the same as solving the canonical statement. This experiment probes the usefulness of Q059 encodings for large-scale computation but does not directly determine ultimate thermodynamic limits.
 
 ---
 
@@ -605,7 +657,7 @@ An evaluation harness for AI systems augmented with Q059-related modules can pro
 2. Conditions
 
    * Baseline condition: AI model without Q059-based modules, reasoning only at a functional or complexity level.
-   * TU-augmented condition: model with InfoThermo_TensionHead and related signals active during reasoning.
+   * TU-augmented condition: model with `InfoThermo_TensionHead` and related signals active during reasoning.
 
 3. Metrics
 
@@ -638,7 +690,7 @@ A minimal protocol for external users to observe the impact of Q059-based reason
 * What to log
 
   * Prompts and responses for both conditions.
-  * Any intermediate tension estimates from InfoThermo_TensionHead, where available, for later audit.
+  * Any intermediate tension estimates from `InfoThermo_TensionHead`, where available, for later audit.
 
 ---
 
@@ -679,7 +731,7 @@ This block lists reusable components produced by Q059 and their direct reuse tar
    * Preconditions:
 
      * Device and protocol operate in a regime where Landauer-like reasoning is applicable (for example not deep into uncontrolled chaotic dynamics).
-     * expected_cost_band is understood as an approximate range of energy per irreversibly erased bit.
+     * `expected_cost_band` is understood as an approximate range of energy per irreversibly erased bit.
 
 3. ComponentName: `InfoThermo_WorldTemplate`
 
@@ -733,7 +785,7 @@ This block summarizes where Q059 currently stands in the TU verification ladder 
 * E_level: E1
 
   * A coherent effective encoding has been specified, including `M`, `Q_info`, `Q_heat`, `T_env`, `DeltaS_Landauer`, `DeltaS_device`, and `Tension_InfoThermo`.
-  * An admissible encoding class with fairness constraints has been described.
+  * An admissible encoding class with fairness constraints has been described, consistent with the TU Encoding and Fairness Charter.
   * Two experiments with explicit falsification conditions have been outlined.
 
 * N_level: N1
@@ -802,7 +854,7 @@ We combine these numbers into a single “information-thermodynamic tension” s
 Then we imagine two kinds of worlds:
 
 * In a low-tension world, clever engineers can make this tension score very small for some useful tasks by using better devices and running them more gently.
-* In a high-tension world, no matter how clever we are, there is always a nonzero gap: real computation always has to waste a certain amount of energy per bit, beyond the ideal textbook limit.
+* In a high-tension world, no matter how clever we are, there is always a nonzero gap. Real computation always has to waste a certain amount of energy per bit, beyond the ideal textbook limit.
 
 Q059 does not say which world we live in. It instead provides:
 
@@ -810,4 +862,41 @@ Q059 does not say which world we live in. It instead provides:
 * experiments and data analyses that can falsify bad ways of measuring this cost,
 * building blocks that other problems in the BlackHole project can reuse when they talk about energy, information, and computation together.
 
-This keeps the discussion at the effective layer: we work with observable quantities and testable patterns, without claiming any hidden mechanism or ultimate proof about the thermodynamic limits of computation.
+This keeps the discussion at the effective layer. We work with observable quantities and testable patterns, without claiming any hidden mechanism or ultimate proof about the thermodynamic limits of computation.
+
+---
+
+## Tension Universe effective-layer footer
+
+This page is part of the **WFGY / Tension Universe** S-problem collection.
+
+### Scope of claims
+
+* The goal of this document is to specify an **effective-layer encoding** of the named problem.
+* It does not claim to prove or disprove the canonical statement in Section 1.
+* It does not introduce any new theorem beyond what is already established in the cited literature.
+* It should not be cited as evidence that the corresponding open problem has been solved.
+
+### Effective-layer boundary
+
+* All objects that appear here (state spaces `M`, observables, invariants, tension scores, counterfactual "worlds") live strictly at the **effective layer** of the Tension Universe program.
+* No assumptions are made or needed about any deep generative rules, ontological commitments, or microscopic mechanisms behind these objects.
+* Any future deep-layer model that is claimed to "realize" this page must reproduce the same effective observables and falsification behavior, or clearly explain any controlled deviation.
+
+### Encodings, versions, and falsifiability
+
+* Every concrete choice of observables, mismatch functionals, and tension scales defines an **encoding version** within the admissible classes described in the TU Encoding and Fairness Charter.
+* An encoding version is considered **falsified** if it fails any of the discriminating experiments or falsification conditions stated in this page, under honest application of the rules and parameter bounds fixed in advance.
+* When an encoding version is falsified, it must not be silently modified in place. A successor encoding must:
+
+  * receive a new version identifier in the project logs,
+  * document which definitions or parameter ranges were changed,
+  * be re-evaluated on the same or stricter experiment suite.
+
+### Relation to TU charters
+
+This page should be read together with the following charters:
+
+* [TU Effective Layer Charter](../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
+* [TU Encoding and Fairness Charter](../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+* [TU Tension Scale Charter](../Charters/TU_TENSION_SCALE_CHARTER.md)
