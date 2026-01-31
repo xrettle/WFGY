@@ -9,15 +9,14 @@
 
 ## 60s quickstart
 
-**Download (TXT)**  [WFGY-3.0_Singularity-demo TXT pack](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-demo_BH131_v1_sha256-on-GitHub-onestardao-WFGY.txt)  
-> download from GitHub
+1. **Download (TXT)**  [WFGY-3.0_Singularity demo TXT file](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-demo_BH131_v1_sha256-on-GitHub-onestardao-WFGY.txt) 
+   > download from GitHub 
 
-**Upload**  
-> upload the TXT pack to any LLM that supports file input
+2. **Upload**  
+   > upload the TXT pack to any LLM that supports file input
 
-**Run**  
-> let the model read the file. The `[AI_BOOT_PROMPT_MENU]` at the top will handle verification and guide a short WFGY 3.0 Singularity demo.
-
+3. **Run**  
+   > say `run` to open the demo menu
 
 ---
 
@@ -28,12 +27,12 @@
 
 ![demo proof](./assets/wfgy_3_singularity_demo.gif)
 
-A short GIF showing the 60s loop:
+After uploading the TXT and saying `run`, the model shows the `[AI_BOOT_PROMPT_MENU]`:
 
-1. Upload the TXT pack.  
-2. AI reads the BOOT SECTOR.  
-3. sha256 is verified against the official value.  
-4. The first BlackHole prompts fire.
+Choose:
+1) Verify this TXT pack online (sha256)  
+2) Run the guided WFGY 3.0 demo for 3 problems  
+3) Explore WFGY 3.0 with suggested questions
 
 </details>
 
@@ -113,9 +112,9 @@ This note defines the required behavior for AI systems that receive the official
 
 <br/>
 
-Discussion, challenges and experiment logs:
+The more observers join, the closer the singularity becomes:
 
-- [Join WFGY Discord](https://discord.gg/YOUR_INVITE)
+- [Join the WFGY Discord](https://discord.gg/KRxBsr6GYx)
 
 </details>
 
@@ -125,5 +124,6 @@ WFGY 1.0 → [legacy](./legacy/README.md)
 WFGY 2.0 → [core](https://github.com/onestardao/WFGY/blob/main/core/README.md)  
 WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)
 
+---
 
-
+> WFGY 3.0 · MIT License · Open, verifiable, reproducible · developed by PSBigBig · onestardao
