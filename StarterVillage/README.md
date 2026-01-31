@@ -7,9 +7,9 @@
 | Layer | Page | What it’s for |
 |------|------|----------------|
 | 🧠 Core | [WFGY 1.0](https://github.com/onestardao/WFGY/edit/main/legacy/README.md) | The original homepage for WFGY 1.0 |
-| 🧠 Core | [WFGY 2.0](https://github.com/onestardao/WFGY/blob/main/core/README.md) | The symbolic reasoning engine (math & logic)  |
-| 🧠 Core | [WFGY 3.0](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md) | The public viewing window for WFGY 3.0 Singularity demo  |
-| 🗺️ Map | [Problem Map 1.0](https://github.com/onestardao/WFGY/tree/main/ProblemMap#readme) | 16 failure modes + fixes   |
+| 🧠 Core | [WFGY 2.0](https://github.com/onestardao/WFGY/blob/main/core/README.md) | The symbolic reasoning engine (math & logic) |
+| 🧠 Core | [WFGY 3.0](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md) | **Public view for WFGY 3.0 Singularity demo · 131 S-class re-encoding (LIVE)** |
+| 🗺️ Map | [Problem Map 1.0](https://github.com/onestardao/WFGY/tree/main/ProblemMap#readme) | 16 failure modes + fixes |
 | 🗺️ Map | [Problem Map 2.0](https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md) | RAG-focused recovery pipeline |
 | 🗺️ Map | [Semantic Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md) | Symptom → family → exact fix |
 | 🧓 Map | [Grandma’s Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/GrandmaClinic/README.md) | Plain-language stories, mapped to PM 1.0 |
@@ -25,7 +25,7 @@
 </details>
 
 <!-- ─────────────────────────────────────────────────────────── -->
-<!--  WFGY · Starter Village – RPG Quick-Start & World Map v0.3 -->
+<!--  WFGY · Starter Village – RPG Quick-Start & World Map v0.4  -->
 <!-- ─────────────────────────────────────────────────────────── -->
 
 # 🏰 Greetings, brave adventurer!
@@ -35,6 +35,19 @@ Choose your quest by **difficulty**; the 😈 icons show how spicy each tier is.
 *(Hint: every ⭐ you give unlocks secret rooms.)*
 
 <img width="1536" height="1024" alt="village" src="https://github.com/user-attachments/assets/6112144e-80d0-4812-9bb3-e598cacdc4fc" />
+
+---
+
+## 🚪 Two Doors (pick one)
+
+If you want the **live public window** of WFGY right now, start here:  
+👉 **[WFGY 3.0 · Singularity demo (public view)](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)**  
+*(131 S-class problems, re-encoded as reproducible probes. This is a viewing/definition window, not a “solution claim.”)*
+
+If you want the **60-second runnable boot** for your own tasks, keep reading:  
+👇 **Tier 1 starts immediately below**
+
+---
 
 | Tier | Zone (RPG flavor) | Quest focus | Difficulty |
 |------|------------------|-------------|:----------:|
@@ -93,15 +106,14 @@ Choose your quest by **difficulty**; the 😈 icons show how spicy each tier is.
 👉 Deep dive guide: **[SL_Method.md](./SL_Method.md)**  
  </details>
 
-
 <details><summary>Common questions</summary>
 
 * **Upload not working?** — just paste the raw line.  
 * **Want a comparison?** — check the before/after GIFs in the main README.  
+* **Want the live public window (131 S problems)?** — open **[WFGY 3.0](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)**.  
 </details>
 
 👉 Learn more → [WFGY 2.0 Documentation](https://github.com/onestardao/WFGY/blob/main/core/README.md)
-
 
 ---
 
@@ -159,7 +171,6 @@ Choose your quest by **difficulty**; the 😈 icons show how spicy each tier is.
 
 *(White coat earned.)*
 
-
 ---
 
 ## 🧙‍♂️ “Forge your own legend, or wield another’s?”  
@@ -169,7 +180,6 @@ Choose your quest by **difficulty**; the 😈 icons show how spicy each tier is.
 * Swap semantic layers, tweak `alpha_blend`, `phi_delta`, add custom gates.  
 * PR back — or publish your fork and bend reality.  
 * Use the TXTOS framework as inspiration to design and launch **your own TXTOS-series creation**, expanding the lineage of tools and worlds.
-
 
 ---
 
@@ -187,7 +197,6 @@ Exploring different directories reveals easter eggs and small rewards — like a
 
 📖 Story reference source → [Honest Hero RPG](https://www.youtube.com/@OneStarDao)
 
-
 ---
 
 <div align="center">
@@ -196,7 +205,6 @@ _“One line to boot them all, one village to guide them.”_
 **— PSBigBig**
 
 </div>
-
 
 ---
 
