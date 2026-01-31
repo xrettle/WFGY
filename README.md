@@ -54,7 +54,8 @@ Discussion and challenges:
 
 ---
 
-WFGY 1.x–2.x → [legacy](./legacy)  
+WFGY 1.0 → [legacy](./legacy/README.md)  
 WFGY 2.0 → [core](https://github.com/onestardao/WFGY/blob/main/core/README.md)  
 WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)
+
 
