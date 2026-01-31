@@ -22,7 +22,7 @@
 | 🧪 Research | [Benchmarks](https://github.com/onestardao/WFGY/blob/main/benchmarks/benchmark-vs-gpt5/README.md) | Comparisons & how to reproduce |
 | 🧪 Research | [Value Manifest](https://github.com/onestardao/WFGY/blob/main/value_manifest/README.md) | Why this engine creates $-scale value |
 
-</details
+</details>
 
 
 ## 🎮 Blow Blow Blow — The First AIGC GameBoy — *Under Construction*
