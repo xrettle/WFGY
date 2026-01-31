@@ -1,4 +1,4 @@
-<!-- QUESTION_ID: TU-Q006 -->
+<img width="2880" height="1824" alt="image" src="https://github.com/user-attachments/assets/587b968c-b3db-43b2-b0f9-c8590f98a7c1" /><!-- QUESTION_ID: TU-Q006 -->
 # Q006 · Goldbach conjecture
 
 ## 0. Header metadata
@@ -16,7 +16,7 @@ Status: Open
 Semantics: discrete
 E_level: E2
 N_level: N2
-Last_updated: 2026-01-30
+Last_updated: 2026-01-31
 ```
 
 ## 0. Effective layer disclaimer
@@ -1272,3 +1272,15 @@ For every encoding class referenced here:
 * This page is an experimental specification within the ongoing **WFGY / Tension Universe** research program.
 * All structures and parameter choices are provisional and may be revised in future versions, subject to the constraints above.
 * Substantial changes to windows, models, or weights should be recorded as new encoding versions with explicit version tags and hashes, to preserve reproducibility and cross problem consistency.
+
+---
+
+**Index:**  
+[`← Back to Event Horizon`](../EventHorizon/README.md)  
+[`← Back to WFGY Home`](https://github.com/onestardao/WFGY)
+
+**Consistency note:**  
+This entry has passed the internal formal-consistency and symbol-audit checks under the current WFGY 3.0 specification.  
+The structural layer is already self-consistent; any remaining issues are limited to notation or presentation refinement.  
+If you find a place where clarity can improve, feel free to open a PR or ping the community.  
+WFGY evolves through disciplined iteration, not ad-hoc patching.
