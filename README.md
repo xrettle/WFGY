@@ -10,7 +10,7 @@
    > upload the TXT pack to any LLM that supports file input
 
 3. **Run**  
-   > say `run` to trigger the demo (say `hello world` to boot)
+   > upload the TXT to auto boot the demo (say `run` to re enter)
 
 ---
 
@@ -121,6 +121,7 @@ WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/mai
 ---
 
 > WFGY 3.0 · MIT License · Open, verifiable, reproducible · developed by PSBigBig · onestardao
+
 
 
 
