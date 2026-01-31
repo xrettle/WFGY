@@ -1,4 +1,7 @@
 # WFGY 3.0 Singularity demo  
+
+![W3](https://github.com/user-attachments/assets/460b1fca-c1b2-4814-adde-60433fcbaa40)
+
 ## Tension Universe · BlackHole S problem collection
 
 This folder is the public viewing window for **WFGY 3.0 Singularity demo**.  
