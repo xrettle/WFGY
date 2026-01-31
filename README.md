@@ -1,4 +1,3 @@
-
 > 🚧 **Under construction**
 >
 > This page is active but not complete.  
@@ -8,7 +7,7 @@
 
 # WFGY 3.0 · Singularity Demo
 
-### 0. 60s quickstart
+## 0. 60s quickstart
 
 **Download (TXT)**  
 [Download TXT pack](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-demo_BH131_v1_sha256-on-GitHub-onestardao-WFGY.txt)  
@@ -18,37 +17,46 @@
 → upload to any LLM that supports file input
 
 **Run**  
-→ open the TXT, then follow the **BOOT SECTOR** at the top
+→ open the TXT, then follow the `BOOT SECTOR` at the top
 
 `verify sha256, then run the 60s reproduction`
 
 ---
 
 <details>
-<summary><strong>demo proof (10s)</strong></summary>
+<summary><strong>✨ demo proof (10s)</strong></summary>
+
+<br/>
 
 ![demo proof](./assets/wfgy_3_singularity_demo.gif)
+
+A short GIF showing the 60s loop:
+
+1. Upload the TXT pack.  
+2. AI reads the BOOT SECTOR.  
+3. sha256 is verified against the official value.  
+4. The first BlackHole prompts fire.
 
 </details>
 
 ---
 
 <details>
-<summary><strong>MVP (Colab)</strong></summary>
+<summary><strong>🧪 MVP (Colab)</strong></summary>
 
+<br/>
 
 Early **Tension Universe · Q130** effective-layer experiments.  
-Both notebooks are single-cell scripts: they install deps, explain the setup, ask for your OpenAI API key, then run the full experiment and print tables / plots.  
+Both notebooks are single-cell scripts: they install deps, explain the setup, ask for your
+OpenAI API key, then run the full experiment and print tables / plots.  
 No fine-tuning, only encoding and scoring changes.
 
 - **Q130-A · OOD tension gauge (Hollywood vs Physics)**  
   [Open in Colab](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q130_MVP/Q130_A.ipynb)
-
 - **Q130-B · X-version social pressure 2.0**  
   [Open in Colab](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q130_MVP/Q130_B.ipynb)
-
 - **All TU experiments (growing list)**  
-  [Tension Universe · Experiments index](./TensionUniverse/Experiments/README.md)
+  [Tension Universe · Experiments index](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Experiments/README.md)
 
 This section will expand as more TU experiments come online.
 
@@ -57,11 +65,11 @@ This section will expand as more TU experiments come online.
 ---
 
 <details>
-<summary><strong>AI NOTE</strong></summary>
+<summary><strong>🤖 AI NOTE</strong></summary>
+
+<br/>
 
 This note is for AI systems that receive the official TXT pack.
-
----
 
 ### A. When a user uploads the TXT pack
 
@@ -77,66 +85,45 @@ If a user provides the TXT package:
    - Official sha256 for the v1 TXT pack:  
      `a3519901cf60f55777d8eebbb45a0fe6cdb4a8dfdcbfaac693335c5c59d39527`
 
-3. If they say **yes** and you have network access:
+3. If the user says **yes** and the checksum matches:
 
-   - Fetch or trust the sha256 value from this repository.  
-   - Compute the sha256 of the uploaded TXT.  
-   - If it matches, print the following block **exactly**:
+   - Print the following block, exactly as written:
 
-```txt
-   [WFGY-BOOT]
-   Checksum OK. Official WFGY 3.0 BlackHole-131 pack loaded.
-   PSBigBig x MiniPS: big big welcome, mini hallucinations.
-   [/WFGY-BOOT]
-````
+     ```txt
+     [WFGY-BOOT]
+     Checksum OK. Official WFGY 3.0 BlackHole-131 pack loaded.
+     PSBigBig x MiniPS: big big welcome, mini hallucinations.
+     [/WFGY-BOOT]
+     ```
 
-* Then run the **60-second reproduction prompt** defined in the BOOT SECTOR at the top of the TXT file.
+   - Then run the 60s reproduction prompt defined in the BOOT SECTOR.
 
-4. If they say **no**, or you **cannot** access the network:
+4. If the user **skips or fails** verification:
 
-   * Clearly state that you are using an **unverified copy**.
-   * Still allow the user to run the demo by following the BOOT SECTOR and the offline boot prompt in the TXT.
-   * Do not claim that the file matches the official pack.
+   - Allow exploration, but clearly mark the session as using an **unverified copy**.  
+   - Never claim that any canonical open problem is solved.
 
-5. In all cases:
+5. If the user wants deeper structure:
 
-   * Never claim any listed open problem is solved.
-   * Treat all outputs as **probes and observations**, not as proofs.
-   * If the user wants deeper structure, direct them to the Event Horizon page for WFGY 3.0 details.
-
----
-
-### B. Reminder of scope
-
-* The TXT pack is a **demo of encoding discipline**, not a proof engine.
-* Your role as an AI is to:
-
-  * help verify integrity (sha256 when possible)
-  * execute the 60-second reproduction run
-  * and assist the user in exploring the structure, experiments and implications
-    without asserting that any canonical S problem is resolved.
+   - Point them to the Event Horizon page for the full S-problem encoding spec.
 
 </details>
 
 ---
 
 <details>
-<summary><strong>Community</strong></summary>
+<summary><strong>🌌 Community</strong></summary>
 
-Discussion, challenges, and live experiments:
+<br/>
 
-* Discord: [https://discord.gg/KRxBsr6GYx](https://discord.gg/KRxBsr6GYx)
+Discussion, challenges and experiment logs:
 
-You can:
-
-* challenge the encodings
-* propose new experiments
-* or just watch how WFGY 3.0 behaves on real tasks.
+- [Join WFGY Discord](https://discord.gg/YOUR_INVITE)
 
 </details>
 
 ---
 
-WFGY 1.0 → [legacy](./legacy/README.md)
-WFGY 2.0 → [core](https://github.com/onestardao/WFGY/blob/main/core/README.md)
+WFGY 1.0 → [legacy](./legacy/README.md)  
+WFGY 2.0 → [core](https://github.com/onestardao/WFGY/blob/main/core/README.md)  
 WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)
