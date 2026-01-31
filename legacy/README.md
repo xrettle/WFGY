@@ -1,6 +1,6 @@
 <details>
 <summary><strong>🧭 Lost or curious? Open the WFGY Compass </strong></summary>
-  
+ 
 ### WFGY System Map
 *(One place to see everything; links open the relevant section.)*
 
