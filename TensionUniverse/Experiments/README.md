@@ -70,7 +70,7 @@ This list will grow over time as more MVPs are added.
 
 | Folder | Status | Short note |
 | ------ | ------ | ---------- |
-| [`Q130/`](./Q130/README.md) | MVP ready | First BlackHole aligned experiment folder. All explanations, metrics, and interpretation live inside `Q130/README.md`. |
+| [`Q130/`](./Q130_MVP/README.md) | MVP ready | First BlackHole aligned experiment folder. All explanations, metrics, and interpretation live inside `Q130/README.md`. |
 | (more coming) | planned | Future folders will cover other BlackHole questions and tension axes in physics, AI behavior, retrieval, governance, and beyond. |
 
 Each folder owns its own story.  
