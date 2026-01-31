@@ -16,7 +16,7 @@ Status: Open
 Semantics: continuous
 E_level: E1
 N_level: N1
-Last_updated: 2026-01-30
+Last_updated: 2026-01-31
 ```
 
 ---
@@ -379,7 +379,7 @@ If later refinements split `DeltaS_density` into multiple components, the tensio
 Tension_Dio(m) = sum over i of w_i * DeltaS_i(m),
 ```
 
-where the weights satisfy the locking constraints in Section 3.4.
+where `DeltaS_i(m)` denotes the ith normalized density mismatch component at the effective layer, and the weights satisfy the locking constraints in Section 3.4.
 
 ### 4.2 Low tension world principle
 
