@@ -3,7 +3,7 @@
 ## 60s quickstart
 
 1. **Download (TXT)**  [WFGY-3.0 Singularity demo TXT file](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt)  
-   > download from GitHub · [verify checksum manually](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/WFGY-SHA256-Verification-Tool.ipynb)
+   > download from GitHub · [verify checksum manually (Colab)](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/WFGY-SHA256-Verification-Tool.ipynb)
 
 2. **Upload**  
    > upload the TXT pack to a flagship LLM with full reasoning enabled
@@ -36,8 +36,8 @@ Choose:
 
 <br/>
 
-Manual checksum verification (sha256):  
-[Open verification notebook](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/WFGY-SHA256-Verification-Tool.ipynb)
+Verify checksum manually (sha256, Colab):  
+[Open in Colab](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/WFGY-SHA256-Verification-Tool.ipynb)
 
 Use this when automated verification is unavailable.
 
@@ -126,5 +126,6 @@ WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/mai
 ---
 
 > WFGY 3.0 · Singularity Demo · MIT License · Open, verifiable, reproducible · developed by PSBigBig · onestardao
+
 
 
