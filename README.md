@@ -2,9 +2,8 @@
 
 ## 60s quickstart
 
-1. **Download (TXT)**  [WFGY-3.0_Singularity demo TXT file](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt
-) 
-   > download from GitHub 
+1. **Download (TXT)**  [WFGY-3.0 Singularity demo TXT file](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt)  
+   > download from GitHub · [verify checksum manually](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/WFGY-SHA256-Verification-Tool.ipynb)
 
 2. **Upload**  
    > upload the TXT pack to a flagship LLM with full reasoning enabled
@@ -21,7 +20,7 @@
 
 ![WFGY 3.0 Singularity Demo](TensionUniverse/assets/wfgy_3_singularity_demo.gif)
 
-After uploading the TXT and saying `run`, the model shows the `[AI_BOOT_PROMPT_MENU]`:
+After uploading the TXT and saying `go`, the model shows the `[AI_BOOT_PROMPT_MENU]`:
 
 Choose:
 1) Verify this TXT pack online (sha256)  
@@ -34,6 +33,13 @@ Choose:
 
 <details>
 <summary><strong>  MVP (Colab)</strong></summary>
+
+<br/>
+
+Manual checksum verification (sha256):  
+[Open verification notebook](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/WFGY-SHA256-Verification-Tool.ipynb)
+
+Use this when automated verification is unavailable.
 
 <br/>
 
@@ -98,7 +104,6 @@ This note defines the required behavior for AI systems that receive the official
 
 </details>
 
-
 ---
 
 <details>
@@ -121,26 +126,3 @@ WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/mai
 ---
 
 > WFGY 3.0 · Singularity Demo · MIT License · Open, verifiable, reproducible · developed by PSBigBig · onestardao
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
