@@ -118,15 +118,17 @@ The more observers join, the closer the singularity becomes:
 
 ---
 
-WFGY 1.0 → [Legacy](./legacy/README.md)  
-WFGY 2.0 → [Core](https://github.com/onestardao/WFGY/blob/main/core/README.md) · [16 Problem Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)  
-WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)
+WFGY 1.0 (Beginner) → [Legacy](./legacy/README.md)  
+WFGY 2.0 (Intermediate) → [Core](https://github.com/onestardao/WFGY/blob/main/core/README.md) · [16 Problem Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)  
+WFGY 3.0 (Advanced) → [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)
+
 
 
 
 ---
 
 > WFGY 3.0 · Singularity Demo · MIT License · Verifiable · Reproducible · developed by PSBigBig · onestardao
+
 
 
 
