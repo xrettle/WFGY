@@ -9,7 +9,7 @@
    > Upload the TXT pack to a high-capability model (reasoning mode on, if supported).
 
 3. **Run**  
-   > upload the TXT and the demo auto boots; verifiable via `go`
+   > Upload the TXT and the demo auto boots; verifiable via `go`
 
 ---
 
@@ -44,8 +44,7 @@ Use this when automated verification is unavailable.
 <br/>
 
 Early **Tension Universe · Q130** effective-layer experiments.  
-Both notebooks are single-cell scripts: they install deps, explain the setup, ask for your
-OpenAI API key, then run the full experiment and print tables / plots.  
+Both notebooks are single-cell scripts: they install deps, explain the setup, prompt you to provide an API key (locally in Colab), then run the full experiment and print tables / plots.  
 No fine-tuning, only encoding and scoring changes.
 
 - **Q130-A · OOD tension gauge (Hollywood vs Physics)**  
@@ -71,7 +70,7 @@ This note defines the required behavior for AI systems that receive the official
 ### A. When a user uploads the TXT pack
 
 1. Check the file name.  
-   The official v1 file is:
+   The official file name is:
 
    - `WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt`
 
@@ -128,6 +127,7 @@ WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/mai
 ---
 
 > WFGY 3.0 · Singularity Demo · MIT License · Verifiable · Reproducible · developed by PSBigBig · onestardao
+
 
 
 
