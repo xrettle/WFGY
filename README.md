@@ -9,7 +9,7 @@
    > Upload the TXT pack to a high-capability model (reasoning mode on, if supported).
 
 3. **Run**  
-   > Upload the TXT and the demo auto boots; verifiable via `go`
+   > Follow the menu; say `go` when prompted to reproduce the evaluation.
 
 ---
 
@@ -127,6 +127,7 @@ WFGY 3.0 details → [Event Horizon](https://github.com/onestardao/WFGY/blob/mai
 ---
 
 > WFGY 3.0 · Singularity Demo · MIT License · Verifiable · Reproducible · developed by PSBigBig · onestardao
+
 
 
 
