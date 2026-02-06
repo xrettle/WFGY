@@ -1,3 +1,5 @@
+<a id="top"></a>
+
 <details>
 <summary><strong>🧭 Lost or curious? Open the WFGY Compass </strong></summary>
  
@@ -6,27 +8,36 @@
 
 | Layer | Page | What it’s for |
 |------|------|----------------|
-| 🧠 Core | [WFGY 1.0](https://github.com/onestardao/WFGY/edit/main/legacy/README.md) | The original homepage for WFGY 1.0 |
-| 🧠 Core | [WFGY 2.0](https://github.com/onestardao/WFGY/blob/main/core/README.md) | The symbolic reasoning engine (math & logic)  |
-| 🧠 Core | [WFGY 3.0](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md) | The public viewing window for WFGY 3.0 Singularity demo  — **🔴 YOU ARE HERE 🔴** |
-| 🗺️ Map | [Problem Map 1.0](https://github.com/onestardao/WFGY/tree/main/ProblemMap#readme) | 16 failure modes + fixes |
-| 🗺️ Map | [Problem Map 2.0](https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md) | RAG-focused recovery pipeline |
+| 🧠 Core | [WFGY 1.0](https://github.com/onestardao/WFGY/blob/main/legacy/README.md) | The original homepage for WFGY 1.0 |
+| 🧠 Core | [WFGY 2.0](https://github.com/onestardao/WFGY/blob/main/core/README.md) | The symbolic reasoning engine (math and logic) |
+| 🧠 Core | [WFGY 3.0](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md) | The public viewing window for WFGY 3.0 Singularity demo. **🔴 YOU ARE HERE 🔴** |
+| 🗺️ Map | [Problem Map 1.0](https://github.com/onestardao/WFGY/tree/main/ProblemMap#readme) | 16 failure modes plus fixes |
+| 🗺️ Map | [Problem Map 2.0](https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md) | RAG focused recovery pipeline |
 | 🗺️ Map | [Semantic Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md) | Symptom → family → exact fix |
-| 🧓 Map | [Grandma’s Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/GrandmaClinic/README.md) | Plain-language stories, mapped to PM 1.0 |
+| 🧓 Map | [Grandma’s Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/GrandmaClinic/README.md) | Plain language stories mapped to PM 1.0 |
 | 🏡 Onboarding | [Starter Village](https://github.com/onestardao/WFGY/blob/main/StarterVillage/README.md) | Guided tour for newcomers |
-| 🧰 App | [TXT OS](https://github.com/onestardao/WFGY/tree/main/OS#readme) | .txt semantic OS — 60-second boot |
-| 🧰 App | [Blah Blah Blah](https://github.com/onestardao/WFGY/blob/main/OS/BlahBlahBlah/README.md) | Abstract/paradox Q&A (built on TXT OS) |
-| 🧰 App | [Blur Blur Blur](https://github.com/onestardao/WFGY/blob/main/OS/BlurBlurBlur/README.md) | Text-to-image with semantic control |
-| 🧰 App | [Blow Blow Blow](https://github.com/onestardao/WFGY/blob/main/OS/BlowBlowBlow/README.md) | Reasoning game engine & memory demo |
-| 🧪 Research | [Semantic Blueprint](https://github.com/onestardao/WFGY/blob/main/SemanticBlueprint/README.md) | Modular layer structures (future) |
-| 🧪 Research | [Benchmarks](https://github.com/onestardao/WFGY/blob/main/benchmarks/benchmark-vs-gpt5/README.md) | Comparisons & how to reproduce |
-| 🧪 Research | [Value Manifest](https://github.com/onestardao/WFGY/blob/main/value_manifest/README.md) | Why this engine creates $-scale value |
+| 🧰 App | [TXT OS](https://github.com/onestardao/WFGY/tree/main/OS#readme) | .txt semantic OS, 60 second boot |
+| 🧰 App | [Blah Blah Blah](https://github.com/onestardao/WFGY/blob/main/OS/BlahBlahBlah/README.md) | Abstract and paradox Q and A built on TXT OS |
+| 🧰 App | [Blur Blur Blur](https://github.com/onestardao/WFGY/blob/main/OS/BlurBlurBlur/README.md) | Text to image with semantic control |
+| 🧰 App | [Blow Blow Blow](https://github.com/onestardao/WFGY/blob/main/OS/BlowBlowBlow/README.md) | Reasoning game engine and memory demo |
+| 🧪 Research | [Semantic Blueprint](https://github.com/onestardao/WFGY/blob/main/SemanticBlueprint/README.md) | Modular layer structures for future work |
+| 🧪 Research | [Benchmarks](https://github.com/onestardao/WFGY/blob/main/benchmarks/benchmark-vs-gpt5/README.md) | Comparisons and how to reproduce |
+| 🧪 Research | [Value Manifest](https://github.com/onestardao/WFGY/blob/main/value_manifest/README.md) | Why this engine creates value at scale |
+| 🕳️ BlackHole | [131 S-Problem Index](https://github.com/onestardao/WFGY-131-S-Problem-Index) | Text only navigation for all 131 BlackHole problems |
 
 </details>
 
-## WFGY 3.0 · Singularity Demo
+## 💥 WFGY 3.0 · Singularity Demo 💥
 
 ![W3](https://github.com/user-attachments/assets/460b1fca-c1b2-4814-adde-60433fcbaa40)
+
+### Where to go from here
+
+If you only have a short amount of time, choose one of these paths:
+
+- **Run the demo** → start with [120s quickstart](#120s-quickstart)  
+- **Understand the idea** → read [Tension Universe in everyday language](#tension-universe-in-everyday-language)  
+- **Browse all 131 S problems** → jump to [Navigation index for the 131 S problems](#navigation-index-for-the-131-s-problems)  
 
 Before you start:
 
@@ -34,19 +45,19 @@ Before you start:
 
 ## 120s quickstart
 
-1. **Download (TXT)**  [WFGY-3.0 Singularity demo TXT file](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt)  
-   > download from GitHub · [verify checksum manually (Colab)](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/WFGY-SHA256-Verification-Tool.ipynb)
+1. **Download (TXT)**  [WFGY 3.0 Singularity demo TXT file](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt)  
+   > Download from GitHub. Optional: [verify checksum manually (Colab)](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/WFGY-SHA256-Verification-Tool.ipynb)
 
 2. **Upload**  
-   > Upload the TXT pack to a high-capability model (reasoning mode on, if supported).
+   > Upload the TXT pack to a high capability model. Enable reasoning mode if the platform supports it.
 
 3. **Run**  
-   > Type run to see the menu, then say go when prompted.
+   > Type `run` to see the menu, then say `go` when prompted.
 
 ---
 
 <details>
-<summary><strong>  demo trace (10s)</strong></summary>
+<summary><strong>🔬 demo preview (10s GIF)</strong></summary>
 
 <br/>
 
@@ -55,16 +66,17 @@ Before you start:
 After uploading the TXT and saying `go`, the model shows the `[AI_BOOT_PROMPT_MENU]`:
 
 Choose:
-1) Verify this TXT pack online (sha256)  
-2) Run the guided WFGY 3.0 · Singularity Demo for 3 problems  
-3) Explore WFGY 3.0 · Singularity Demo with suggested questions
+
+1. Verify this TXT pack online (sha256)  
+2. Run the guided WFGY 3.0 · Singularity Demo for 3 problems  
+3. Explore WFGY 3.0 · Singularity Demo with suggested questions  
 
 </details>
 
 ---
 
 <details>
-<summary><strong>  MVP (Colab)</strong></summary>
+<summary><strong>🔬 Colab tools (checksum and Q130 experiments)</strong></summary>
 
 <br/>
 
@@ -75,15 +87,15 @@ Use this when automated verification is unavailable.
 
 <br/>
 
-Early **Tension Universe · Q130** effective-layer experiments.  
-Both notebooks are single-cell scripts: they install deps, explain the setup, prompt you to provide an API key (locally in Colab), then run the full experiment and print tables / plots.  
-No fine-tuning, only encoding and scoring changes.
+Early **Tension Universe · Q130** effective layer experiments.  
+Both notebooks are single cell scripts. They install dependencies, explain the setup, prompt you to provide an API key locally in Colab, then run the full experiment and print tables and plots.  
+No fine tuning. Only encoding and scoring changes.
 
-- **Q130-A · OOD tension gauge (Hollywood vs Physics)**  
+- **Q130 A · OOD tension gauge, Hollywood versus physics**  
   [Open in Colab](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q130_MVP/Q130_A.ipynb)
-- **Q130-B · X-version social pressure 2.0**  
+- **Q130 B · Cross version social pressure 2.0**  
   [Open in Colab](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q130_MVP/Q130_B.ipynb)
-- **All TU experiments (growing list)**  
+- **All TU experiments, growing list**  
   [Tension Universe · Experiments index](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Experiments/README.md)
 
 This section will expand as more TU experiments come online.
@@ -95,57 +107,30 @@ This section will expand as more TU experiments come online.
 ## Tension Universe · BlackHole S problem collection
 
 This folder is the public viewing window for **WFGY 3.0 Singularity demo**.  
-It is not a loose set of notes. It is a frozen, versioned **effective layer specification** of how the **Tension Universe** framework encodes 131 cross-domain S-class problems.
+It is not a loose set of notes. It is a frozen, versioned **effective layer specification** of how the **Tension Universe** framework encodes 131 cross domain S class problems.
 
-- **Public online date**: 2026-01-31  
+- **Public online date**: 2026 01 31  
 - **Problems covered**: Q001 to Q131  
-- **Intent**: demonstrate that one tension-based encoding language can survive across many hard problems without changing definitions, adding hidden parameters, or doing post hoc tuning
+- **Intent**: show that one tension based encoding language can survive across many hard problems without changing definitions, adding hidden parameters, or doing post hoc tuning
 
 What you just ran in the quickstart is a reproducible entry point into this specification.
 
 ---
 
-If you want to discuss, attack, audit, or extend this work, you are invited to join the community:
-
-> **Discord**: https://discord.gg/KRxBsr6GYx
-
----
-
-## Scope and licensing boundaries
-
-Read this once. It prevents future misunderstandings.
-
-### What is open source here
-
-- This **Singularity demo** folder content is public and released under the repository license.
-- This includes the BlackHole problem pages, the charters, and the effective layer encoding structure.
-- This demo is meant to be audited, reused, attacked, and extended as documents and engineering contracts.
-
-### What is NOT open source here
-
-- **WFGY 3.0 production engine** is not published here.
-- **Tension Universe AI** as a product-level system is not promised to be open sourced.
-- Any hosted service, paid offering, private runtime, private model control logic, or commercial deployment version is out of scope of this repository.
-
-This repository is a demo window and a specification.  
-It is not a commitment to open source the commercial engine.
-
-
----
+<a id="quick-navigation"></a>
 
 ## Quick navigation
 
-- [Tension Universe in everyday language](#tension-universe-in-everyday-language)
-- [What is the Singularity demo](#what-is-the-singularity-demo)
-- [Why this is only a demo](#why-this-is-only-a-demo)
-- [Repository layout](#repository-layout)
-- [Scientific position and disclaimers](#scientific-position-and-disclaimers)
-- [Versioning and non mutation policy](#versioning-and-non-mutation-policy)
-- [How to start](#how-to-start)
-- [MVP Colab demos](#mvp-colab-demos)
-- [How to read a single S problem page](#how-to-read-a-single-s-problem-page)
-- [FAQ and participation](#faq-and-participation)
-- [Navigation index for the 131 S problems](#navigation-index-for-the-131-s-problems)
+- [Tension Universe in everyday language](#tension-universe-in-everyday-language)  
+- [What is the Singularity demo](#what-is-the-singularity-demo)  
+- [Why this is only a demo](#why-this-is-only-a-demo)  
+- [Repository layout](#repository-layout)  
+- [Scientific position and disclaimers](#scientific-position-and-disclaimers)  
+- [Versioning and non mutation policy](#versioning-and-non-mutation-policy)  
+- [How to start](#how-to-start)  
+- [How to read a single S problem page](#how-to-read-a-single-s-problem-page)  
+- [FAQ and participation](#faq-and-participation)  
+- [Navigation index for the 131 S problems](#navigation-index-for-the-131-s-problems)  
 
 ---
 
@@ -179,7 +164,7 @@ The 131 S problems in this folder are the first large scale stress test:
 
 - each file takes a famous problem  
 - rewrites it in tension language at the effective layer  
-- attaches concrete experimental patterns that an AI system or a research lab could in principle run
+- attaches concrete experimental patterns that an AI system or a research lab could in principle run  
 
 ---
 
@@ -201,18 +186,18 @@ This folder is the spec and the contract that those systems must obey.
 
 ## Why this is only a demo?
 
-Tension Universe is designed as a full AI system:
+Tension Universe is designed as a full AI system.
 
-- it has its own notion of state spaces, observables, invariants, and tension fields
-- it is meant to drive agents, training signals, and evaluation pipelines
+- It has its own notion of state spaces, observables, invariants, and tension fields.
+- It is meant to drive agents, training signals, and evaluation pipelines.
 
 This repository does not expose that whole machinery. That is intentional.
 
-This demo focuses on one question:
+This demo focuses on a single question.
 
-> if we lock ourselves to a single tension language, can we still write down 131 hard problems without breaking our own rules?
+> If we lock ourselves to one tension language, can we still write down 131 hard problems without breaking our own rules?
 
-So this is a demo of encoding discipline, not a claim of solving anything.
+So this is a demo of encoding discipline. It is not a claim of solving anything.
 
 ---
 
@@ -239,10 +224,10 @@ Examples:
 
 - `Q001_riemann_hypothesis.md`  
 - `Q002_generalized_riemann_hypothesis.md`  
-- ...  
+- …  
 - `Q131_tension_free_energy.md`
 
-They are grouped by domain. Full navigation index is below.
+They are grouped by domain. The full navigation index is below.
 
 ### TXT “book” edition and frozen snapshots
 
@@ -251,9 +236,9 @@ It is meant to be a textual snapshot of BlackHole v1 and kept in sync with that 
 
 Versioning rule:
 
-- BlackHole v1 is frozen once tagged.
-- BlackHole v2 is at most one followup round for clarity, bug fixes, and consistency.
-- no silent patching of definitions or parameters after the fact.
+- BlackHole v1 is frozen once tagged.  
+- BlackHole v2 is at most one follow up round for clarity, bug fixes, and consistency.  
+- No silent patching of definitions or parameters after the fact.  
 
 ---
 
@@ -261,25 +246,25 @@ Versioning rule:
 
 ### What this project does not claim
 
-- it does not claim to prove or disprove any canonical problem
-- it does not hide any answer as a secret field, label, or parameter
-- it does not declare any new theorem beyond standard cited literature
+- It does not claim to prove or disprove any canonical problem.  
+- It does not hide any answer as a secret field, label, or parameter.  
+- It does not declare any new theorem beyond standard cited literature.  
 
-Every page is an effective layer encoding:
+Every page is an effective layer encoding.
 
-- it specifies observables, invariants, and tension functionals
-- it defines falsifiable experiments and calibration rules
-- it describes how an AI system may use those objects as evaluation or training contracts
+- It specifies observables, invariants, and tension functionals.  
+- It defines falsifiable experiments and calibration rules.  
+- It describes how an AI system may use those objects as evaluation or training contracts.  
 
 It is a language for working with problems, not a proof that they are solved.
 
 ### No post hoc parameter tuning
 
-The TU charters enforce anti cheat rules:
+The TU charters enforce anti cheat rules.
 
-- encoding classes and menus live in the charters, not in individual files
-- specs are meant to be published and hashed before evaluation
-- changing an encoding after seeing results is recorded as a failed encoding, not a success
+- Encoding classes and menus live in the charters, not in individual files.  
+- Specs are meant to be published and hashed before evaluation.  
+- Changing an encoding after seeing results is recorded as a failed encoding, not a success.  
 
 ---
 
@@ -287,10 +272,10 @@ The TU charters enforce anti cheat rules:
 
 To keep the history auditable:
 
-1. problem files are versioned and declare `Last_updated`
-2. BlackHole v1 is frozen after tagging
-3. at most one structural update wave for v2 with explicit changelogs
-4. changes that alter meaning must become a new version or be mediated through charters
+1. Problem files are versioned and declare `Last_updated`.  
+2. BlackHole v1 is frozen after tagging.  
+3. At most one structural update wave for v2 with explicit changelogs.  
+4. Changes that alter meaning must become a new version or be mediated through charters.  
 
 ---
 
@@ -298,25 +283,11 @@ To keep the history auditable:
 
 If you only do three things:
 
-1. read the everyday explanation of tension above  
-2. open one problem from a domain you know and one you do not  
-3. check whether the same structure survives both without definition drift  
+1. Read the everyday explanation of tension above.  
+2. Open one problem from a domain you know and one you do not.  
+3. Check whether the same structure survives both without definition drift.  
 
 If that feels coherent, you are already the intended audience.
-
----
-
-## MVP Colab demos
-
-This demo is not only static text.
-
-There will be Colab notebooks that let you:
-
-- load one or more S problems as effective layer specs  
-- plug them into a WFGY based pipeline  
-- compare baseline behavior vs constrained behavior under the same declared rules
-
-Links will be added here once finalized.
 
 ---
 
@@ -326,15 +297,15 @@ Each `Qxxx_*.md` file follows a shared template.
 
 Typical blocks:
 
-1. header metadata  
-2. effective layer disclaimer  
-3. canonical problem statement and status  
-4. position in the BlackHole graph  
-5. TU encoding, state spaces, observables, invariants  
-6. counterfactual worlds and experiments  
-7. AI and engineering spec usage notes  
-8. roadmap and elementary explanation  
-9. TU effective layer footer with charter links and guardrails
+1. Header metadata.  
+2. Effective layer disclaimer.  
+3. Canonical problem statement and status.  
+4. Position in the BlackHole graph.  
+5. TU encoding, state spaces, observables, invariants.  
+6. Counterfactual worlds and experiments.  
+7. AI and engineering spec usage notes.  
+8. Roadmap and elementary explanation.  
+9. TU effective layer footer with charter links and guardrails.  
 
 ---
 
@@ -358,17 +329,32 @@ An internal label for hard and foundational problems that can be encoded with ob
 This folder is the public spec that can be used to test and audit reasoning behavior. The production TU AI system and WFGY 3.0 commercial runtime are out of scope here.
 
 **Q4. why should I trust definitions will not be changed quietly?**  
-You do not need personal trust. The rules are structural. v1 is frozen once tagged and any v2 changes require explicit versioning.
+You do not need personal trust. The rules are structural. Version 1 is frozen once tagged and any version 2 changes require explicit versioning.
 
 **Q5. does the framework assume answers in advance?**  
 It is designed to forbid baking in an answer bit. If you find any implicit assumption, report it.
 
 ---
 
+<a id="navigation-index-for-the-131-s-problems"></a>
+
 ## Navigation index for the 131 S problems
 
 All files live in [`../BlackHole`](../BlackHole).
 
+Quick domain jumps:
+
+- [Mathematics and foundations](#s-math-foundations)  
+- [Fundamental physics and quantum matter](#s-physics)  
+- [Cosmology and computation](#s-cosmology)  
+- [Chemistry, materials and origins of life](#s-chem-life)  
+- [Neuroscience and Earth system](#s-neuro-earth)  
+- [Economics, social systems and philosophy](#s-econ-soc-philo)  
+- [AI alignment, safety and advanced systems](#s-ai-alignment)  
+
+Use these links if you want to focus on a specific domain.
+
+<a id="s-math-foundations"></a>
 ### Q001 to Q020 · Mathematics and foundations
 
 - [Q001 · Riemann Hypothesis](../BlackHole/Q001_riemann_hypothesis.md)  
@@ -392,6 +378,9 @@ All files live in [`../BlackHole`](../BlackHole).
 - [Q019 · Rational Points on Varieties](../BlackHole/Q019_rational_points_on_varieties.md)  
 - [Q020 · High Dimensional Manifolds and Curvature](../BlackHole/Q020_high_dimensional_manifolds_curvature.md)  
 
+[Back to S problem index](#navigation-index-for-the-131-s-problems)
+
+<a id="s-physics"></a>
 ### Q021 to Q040 · Fundamental physics and quantum matter
 
 - [Q021 · Quantum Gravity Unification](../BlackHole/Q021_quantum_gravity_unification.md)  
@@ -415,6 +404,9 @@ All files live in [`../BlackHole`](../BlackHole).
 - [Q039 · Quantum Turbulence](../BlackHole/Q039_quantum_turbulence.md)  
 - [Q040 · Black Hole Information Problem](../BlackHole/Q040_black_hole_information_problem.md)  
 
+[Back to S problem index](#navigation-index-for-the-131-s-problems)
+
+<a id="s-cosmology"></a>
 ### Q041 to Q060 · Cosmology and computation
 
 - [Q041 · Nature of Dark Matter](../BlackHole/Q041_nature_of_dark_matter.md)  
@@ -428,7 +420,7 @@ All files live in [`../BlackHole`](../BlackHole).
 - [Q049 · Missing Baryons Problem](../BlackHole/Q049_missing_baryons_problem.md)  
 - [Q050 · Multiverse Consistency Tests](../BlackHole/Q050_multiverse_consistency_tests.md)  
 - [Q051 · P versus NP](../BlackHole/Q051_p_versus_np.md)  
-- [Q052 · P vs BQP and the Role of Quantum Computers](../BlackHole/Q052_p_vs_bqp_role_of_quantum_computers.md)  
+- [Q052 · P versus BQP and the Role of Quantum Computers](../BlackHole/Q052_p_vs_bqp_role_of_quantum_computers.md)  
 - [Q053 · Existence of One Way Functions](../BlackHole/Q053_existence_of_one_way_functions.md)  
 - [Q054 · Unique Games Conjecture](../BlackHole/Q054_unique_games_conjecture.md)  
 - [Q055 · Graph Isomorphism Exact Complexity](../BlackHole/Q055_graph_isomorphism_exact_complexity.md)  
@@ -438,6 +430,9 @@ All files live in [`../BlackHole`](../BlackHole).
 - [Q059 · Information Thermodynamic Cost](../BlackHole/Q059_information_thermodynamic_cost.md)  
 - [Q060 · Dynamic Data Structure Lower Bounds](../BlackHole/Q060_dynamic_data_structure_lower_bounds.md)  
 
+[Back to S problem index](#navigation-index-for-the-131-s-problems)
+
+<a id="s-chem-life"></a>
 ### Q061 to Q080 · Chemistry, materials and origins of life
 
 - [Q061 · Ultimate Chemical Bond in Strongly Correlated Systems](../BlackHole/Q061_ultimate_chemical_bond_strongly_correlated.md)  
@@ -461,6 +456,9 @@ All files live in [`../BlackHole`](../BlackHole).
 - [Q079 · Origin of Eukaryotes](../BlackHole/Q079_origin_of_eukaryotes.md)  
 - [Q080 · Limits of Biosphere Adaptability](../BlackHole/Q080_limits_of_biosphere_adaptability.md)  
 
+[Back to S problem index](#navigation-index-for-the-131-s-problems)
+
+<a id="s-neuro-earth"></a>
 ### Q081 to Q100 · Neuroscience and Earth system
 
 - [Q081 · Hard Problem of Consciousness](../BlackHole/Q081_hard_problem_of_consciousness.md)  
@@ -484,6 +482,9 @@ All files live in [`../BlackHole`](../BlackHole).
 - [Q099 · Global Freshwater Dynamics](../BlackHole/Q099_global_freshwater_dynamics.md)  
 - [Q100 · Environmental Pandemic Risk](../BlackHole/Q100_environmental_pandemic_risk.md)  
 
+[Back to S problem index](#navigation-index-for-the-131-s-problems)
+
+<a id="s-econ-soc-philo"></a>
 ### Q101 to Q120 · Economics, social systems and philosophy
 
 - [Q101 · Equity Premium Puzzle](../BlackHole/Q101_equity_premium_puzzle.md)  
@@ -502,11 +503,14 @@ All files live in [`../BlackHole`](../BlackHole).
 - [Q114 · Moral Realism](../BlackHole/Q114_moral_realism.md)  
 - [Q115 · Problem of Induction](../BlackHole/Q115_problem_of_induction.md)  
 - [Q116 · Foundations of Mathematics](../BlackHole/Q116_foundations_of_mathematics.md)  
-- [Q117 · Scientific Realism vs Anti Realism](../BlackHole/Q117_scientific_realism_vs_anti_realism.md)  
+- [Q117 · Scientific Realism versus Anti Realism](../BlackHole/Q117_scientific_realism_vs_anti_realism.md)  
 - [Q118 · Limits of Classical Logic](../BlackHole/Q118_limits_of_classical_logic.md)  
 - [Q119 · Meaning of Probability](../BlackHole/Q119_meaning_of_probability.md)  
 - [Q120 · Value of Information and Knowledge](../BlackHole/Q120_value_of_information_and_knowledge.md)  
 
+[Back to S problem index](#navigation-index-for-the-131-s-problems)
+
+<a id="s-ai-alignment"></a>
 ### Q121 to Q131 · AI alignment, safety and advanced systems
 
 - [Q121 · AI Alignment Problem](../BlackHole/Q121_ai_alignment_problem.md)  
@@ -521,65 +525,78 @@ All files live in [`../BlackHole`](../BlackHole).
 - [Q130 · OOD Grounding and Common Sense](../BlackHole/Q130_ood_grounding_and_common_sense.md)  
 - [Q131 · Tension Free Energy](../BlackHole/Q131_tension_free_energy.md)  
 
+[Back to S problem index](#navigation-index-for-the-131-s-problems)
+
 ---
 
 ## More WFGY pages
 
+If you only need the main WFGY entry pages and do not need the full Compass:
+
 - WFGY 1.x to 2.x legacy: [legacy](https://github.com/onestardao/WFGY/tree/main/legacy)  
 - WFGY 2.0 core: [core](https://github.com/onestardao/WFGY/blob/main/core/README.md)  
-- WFGY 3.0 details: [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)
+- WFGY 3.0 details: [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)  
+
+---
 
 ## Road to WFGY 3.0 (Conceptual Evolution)
 
-WFGY has evolved through multiple iterations, each addressing concrete limitations observed in the previous stage. Rather than replacing earlier ideas, each version refines and generalizes the same core intuition: making semantic deviation explicit, measurable, and controllable.
+WFGY has evolved through multiple iterations, each addressing concrete limitations observed in the previous stage.  
+Rather than replacing earlier ideas, each version refines and generalizes the same core intuition. The goal is to make semantic deviation explicit, measurable, and controllable.
 
-### WFGY 1.x — Residual-based semantic deviation
+### WFGY 1.x · Residual based semantic deviation
 
 The early WFGY 1.x series focused on identifying *semantic residue* between an internal state and a reference or target.  
-Deviation was modeled as an explicit residual term (e.g. difference vectors or their norms), which enabled basic stability control and boundary detection.
+Deviation was modeled as an explicit residual term, for example difference vectors or their norms. This enabled basic stability control and boundary detection.
 
-At this stage, the emphasis was on **detectability**:
-- Can we tell when a system is drifting away from an intended semantic target?
-- Can this deviation be quantified in a way that supports feedback and correction?
+At this stage, the emphasis was on **detectability**.
+
+- Can we tell when a system is drifting away from an intended semantic target?  
+- Can this deviation be quantified in a way that supports feedback and correction?  
 
 This version established the foundational idea that semantic failure should be treated as a *measurable signal*, not a subjective judgment.
 
 ---
 
-### WFGY 2.0 — Normalized tension and unified scales
+### WFGY 2.0 · Normalized tension and unified scales
 
-WFGY 2.0 generalized the residual concept into a normalized scalar form (`delta_s`), typically bounded to `[0,1]`.  
+WFGY 2.0 generalized the residual concept into a normalized scalar form, often written as `delta_s` and bounded to `[0,1]`.  
 This made it possible to compare semantic deviation across tasks, prompts, and contexts using a shared scale.
 
 Key advances in this stage include:
-- Normalization of deviation into a consistent range
-- Introduction of zones (safe / transit / risk / danger)
-- Coupling deviation dynamics with control logic (hysteresis, progression guards)
 
-The goal of WFGY 2.0 was **operational consistency**:
-- Different tasks could be analyzed under the same tension language
-- Stability decisions no longer depended on ad-hoc heuristics
+- Normalization of deviation into a consistent range.  
+- Introduction of zones such as safe, transit, risk, and danger.  
+- Coupling deviation dynamics with control logic, for example hysteresis and progression guards.  
+
+The goal of WFGY 2.0 was **operational consistency**.
+
+- Different tasks could be analyzed under the same tension language.  
+- Stability decisions no longer depended on ad hoc heuristics.  
 
 ---
 
-### WFGY 3.0 — Multi-observable tension and auditability
+### WFGY 3.0 · Multi observable tension and auditability
 
-WFGY 3.0 extends the previous scalar approach into a structured *family of observable deviations* (`DeltaS_*`).  
-Instead of forcing all semantic risk into a single number, each task defines explicit, named observables (e.g. reference grounding, outcome stability, constraint adherence), which are then aggregated under fixed, pre-declared rules.
+WFGY 3.0 extends the previous scalar approach into a structured *family of observable deviations* written as `DeltaS_*`.  
+Instead of forcing all semantic risk into a single number, each task defines explicit, named observables. Examples include reference grounding, outcome stability, and constraint adherence. These are then aggregated under fixed, pre declared rules.
 
-This version emphasizes **auditability and robustness**:
-- Each `DeltaS_*` must be explicitly defined, normalized, and locked
-- Aggregation rules cannot be altered per model or per experiment
-- Guardrails prevent post-hoc adjustment or hidden tuning
+This version emphasizes **auditability and robustness**.
 
-In WFGY 3.0, tension is no longer just a control signal; it becomes a **verifiable interface** between reasoning behavior and system constraints.
+- Each `DeltaS_*` must be explicitly defined, normalized, and locked.  
+- Aggregation rules cannot be altered per model or per experiment.  
+- Guardrails prevent post hoc adjustment or hidden tuning.  
+
+In WFGY 3.0, tension is no longer just a control signal. It becomes a **verifiable interface** between reasoning behavior and system constraints.
 
 ---
 
 ### Summary
 
-Across all versions, the core idea remains unchanged:
-> Semantic failure should be observable, quantifiable, and constrained — not corrected implicitly through weight updates or opaque rewards.
+Across all versions, the core idea remains unchanged.
 
-WFGY 3.0 represents a maturation of this idea into a form suitable for reproducible experiments, comparative evaluation, and cross-model analysis, while remaining conceptually continuous with earlier versions.
+> Semantic failure should be observable, quantifiable, and constrained. It should not be corrected only through weight updates or opaque rewards.
 
+WFGY 3.0 represents a maturation of this idea into a form suitable for reproducible experiments, comparative evaluation, and cross model analysis, while remaining conceptually continuous with earlier versions.
+
+[Back to top](#top)
