@@ -23,7 +23,6 @@
 | 🧪 Research | [Semantic Blueprint](https://github.com/onestardao/WFGY/blob/main/SemanticBlueprint/README.md) | Modular layer structures for future work |
 | 🧪 Research | [Benchmarks](https://github.com/onestardao/WFGY/blob/main/benchmarks/benchmark-vs-gpt5/README.md) | Comparisons and how to reproduce |
 | 🧪 Research | [Value Manifest](https://github.com/onestardao/WFGY/blob/main/value_manifest/README.md) | Why this engine creates value at scale |
-| 🕳️ BlackHole | [131 S-Problem Index](https://github.com/onestardao/WFGY-131-S-Problem-Index) | Text only navigation for all 131 BlackHole problems |
 
 </details>
 
