@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: "WFGY: A Reasoning Stress Test Framework for Large Language Models"
+authors:
+  - name: "PSBigBig"
+version: "3.0"
+date-released: "2026-02-09"
+url: "https://github.com/onestardao/WFGY"
+license: "MIT"
+keywords:
+  - "LLM"
+  - "reasoning"
+  - "evaluation"
+  - "stress test"
