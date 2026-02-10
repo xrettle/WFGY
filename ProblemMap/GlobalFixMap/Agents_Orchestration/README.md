@@ -1,3 +1,13 @@
+<!--
+Search Anchor:
+agent orchestration bugs
+multi-agent workflow failures
+llm agent loop bugs
+tool calling orchestration issues
+agent role drift and coordination errors
+-->
+
+
 # Agents & Orchestration — Global Fix Map
 
 <details>
@@ -15,10 +25,9 @@
   > If you want full consultation and prescriptions, go back to the Emergency Room lobby.
 </details>
 
+Agent and orchestration bugs are structural failures in multi-agent or tool-augmented systems, where coordination, role boundaries, execution order, or control flow break down even when the underlying model behaves correctly.
 
-
-A practical hub to stabilize **multi-agent and tool-augmented workflows**.  
-Most “agent bugs” are not model issues. They come from role mixups, tool schema drift, uncontrolled loops, and cold-boot ordering. This page routes symptoms to structural fixes with measurable targets.
+Most agent failures are not caused by model quality. They arise from role mixups, tool schema drift, uncontrolled loops, shared-state collisions, and cold-boot ordering errors. This page maps observable symptoms to structural fixes with measurable acceptance targets.
 
 ---
 
