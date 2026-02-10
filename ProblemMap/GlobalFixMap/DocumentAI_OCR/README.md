@@ -1,3 +1,132 @@
+<!--
+Search Anchor:
+document ai ocr global fix map
+ocr pipeline bugs
+pdf ocr failures
+scanned pdf processing
+two column pdf ocr
+multi column layout broken
+tables lost after ocr
+table structure lost
+column alignment lost
+semantic grouping broken
+paragraphs split wrong
+lines merged across columns
+forms invoices receipts ocr
+handwritten notes ocr
+layout aware model drift
+doc ai layout models
+ocr plus rag pipeline
+ocr plus embeddings
+ocr json schema mismatch
+ocr json fields change
+bbox page_id confidence text
+page coordinate traceability
+citations do not match scanned page
+scanned region mismatch
+image to text but meaning wrong
+high similarity wrong snippet
+delta s question extracted text
+lambda observe ocr stability
+coverage target page section
+coverage >= 0.70 on gold page
+e_resonance flat long document
+
+providers and tools:
+tesseract
+tesseract js
+google document ai
+google docai
+aws textract
+azure ocr
+abbyy
+paddleocr
+open source ocr engines
+cloud ocr apis
+vision plus ocr models
+ocr evaluation
+
+pipelines and formats:
+pdf scans
+fax like images
+rotated scans
+sideways pages
+deskew and derotate
+multi page pdf
+forms invoices receipts
+two pass ocr
+dual provider comparison
+json lines output
+bbox normalization
+page segmentation
+region detection
+table detection
+header footer detection
+
+contracts and guardrails:
+traceability contract
+snippet_id section_id source_url offsets tokens
+ocr traceability fields
+page_id bbox text confidence
+stable ids for pages and blocks
+boot ordering for ocr version
+pre deploy collapse ocr version drift
+cold start fences for ocr engines
+cite then explain from scanned page
+ocr plus retrieval traceability
+rag on top of scanned corpus
+
+common incidents:
+ocr text looks fine but rag answers wrong
+citations go to wrong pdf page
+multi column layout breaks retrieval
+ocr version changed after deploy
+provider returns different json fields
+ocr plus vision hybrid worse than single
+different answers for paraphrased question
+two ocr runs disagree strongly
+
+use with:
+delta s <= 0.45
+coverage >= 0.70
+lambda stable across 3 paraphrases 2 seeds
+e_resonance flat across pages
+-->
+
+<!--
+Primary pages in this folder:
+ProblemMap/GlobalFixMap/DocumentAI_and_OCR/tesseract.md
+ProblemMap/GlobalFixMap/DocumentAI_and_OCR/google_docai.md
+ProblemMap/GlobalFixMap/DocumentAI_and_OCR/aws_textract.md
+ProblemMap/GlobalFixMap/DocumentAI_and_OCR/azure_ocr.md
+ProblemMap/GlobalFixMap/DocumentAI_and_OCR/abbyy.md
+ProblemMap/GlobalFixMap/DocumentAI_and_OCR/paddleocr.md
+-->
+
+<!--
+Related routing pages:
+ProblemMap/embedding-vs-semantic.md
+ProblemMap/retrieval-traceability.md
+ProblemMap/data-contracts.md
+ProblemMap/GlobalFixMap/Chunking/pdf_layouts_and_ocr.md
+ProblemMap/GlobalFixMap/Chunking/chunking-checklist.md
+ProblemMap/bootstrap-ordering.md
+ProblemMap/predeploy-collapse.md
+ProblemMap/patterns/pattern_query_parsing_split.md
+ProblemMap/retrieval-playbook.md
+ProblemMap/context-drift.md
+-->
+
+<!--
+Cross folder jumps:
+ProblemMap/GlobalFixMap/Chunking/README.md
+ProblemMap/GlobalFixMap/Retrieval/README.md
+ProblemMap/GlobalFixMap/Embeddings/README.md
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/README.md
+ProblemMap/SemanticClinicIndex.md
+-->
+
+
 # Document AI & OCR — Global Fix Map
 
 <details>
