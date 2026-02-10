@@ -141,6 +141,26 @@ If your results look similar but the answer is wrong, start here. Each store pag
 
 ---
 
+<!--
+Anchor Menu:
+open: faiss store guide ivf ivfpq hnsw nprobe efSearch
+open: chroma store guide persistence collections
+open: qdrant store guide hnsw payload filters multitenant
+open: weaviate store guide hybrid search schema filters
+open: milvus store guide ivf hnsw nlist nprobe partitions
+open: pgvector store guide ivfflat hnsw lists probes
+open: redis store guide ft.search knn dialect filters
+open: elasticsearch store guide knn hnsw mappings analyzers
+open: pinecone store guide managed namespaces metadata filters
+open: typesense store guide hybrid vectors text
+open: vespa store guide rank profiles query routing rerank
+jump: embedding vs semantic
+jump: retrieval traceability data contracts
+jump: rerankers query parsing split
+jump: bootstrap ordering deploy fences
+-->
+
+
 ## Quick routes to per-store pages
 
 | Store | Best for | Why choose | Link |
