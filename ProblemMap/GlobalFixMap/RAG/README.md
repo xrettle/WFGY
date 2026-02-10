@@ -1,3 +1,89 @@
+
+<!--
+Search Anchor:
+rag global fix map
+retrieval augmented generation failures
+rag retrieval drift
+rag hallucination with citations
+citation break rag
+cite then explain schema
+hybrid retriever failure
+bm25 ann reranker disagreement
+index skew stale index
+index healthy recall low
+context drift rag
+prompt header reorder rag
+entropy collapse long chain rag
+eval drift rag deterministic
+rag eval variance replay
+rag acceptance targets
+delta s question retrieved
+coverage target section
+lambda observe convergent
+three paraphrases two seeds
+eval variance 5 replays
+
+Core pages in this folder:
+retrieval_drift -> GlobalFixMap/RAG/retrieval_drift.md
+hallucination_rag -> GlobalFixMap/RAG/hallucination_rag.md
+citation_break -> GlobalFixMap/RAG/citation_break.md
+hybrid_failure -> GlobalFixMap/RAG/hybrid_failure.md
+index_skew -> GlobalFixMap/RAG/index_skew.md
+context_drift -> GlobalFixMap/RAG/context_drift.md
+entropy_collapse -> GlobalFixMap/RAG/entropy_collapse.md
+eval_drift -> GlobalFixMap/RAG/eval_drift.md
+
+Symptom routing:
+correct facts exist but not retrieved -> retrieval_drift + citation_break
+citations unstable missing wrong snippet -> citation_break + ProblemMap/retrieval-traceability.md + ProblemMap/data-contracts.md
+citations look right but answer invents -> hallucination_rag + prompt-injection defenses
+hybrid worse than single -> hybrid_failure + query parsing split + reranker weights
+high similarity wrong meaning -> embedding vs semantic + vectorstore fragmentation + metric mismatch
+answers flip between runs -> context_drift + lambda variance clamp
+chain grows never lands -> entropy_collapse + logic collapse guards
+index healthy but recall low -> index_skew + build order + analyzer mismatch
+eval scores noisy across replays -> eval_drift + deterministic eval path
+
+Jump pages outside this folder:
+ProblemMap/embedding-vs-semantic.md
+ProblemMap/patterns/pattern_vectorstore_fragmentation.md
+ProblemMap/retrieval-traceability.md
+ProblemMap/data-contracts.md
+ProblemMap/context-drift.md
+ProblemMap/entropy-collapse.md
+ProblemMap/retrieval-playbook.md
+GlobalFixMap/VectorDBs_and_Stores/README.md
+GlobalFixMap/VectorDBs_and_Stores/faiss.md
+GlobalFixMap/VectorDBs_and_Stores/chroma.md
+GlobalFixMap/VectorDBs_and_Stores/qdrant.md
+GlobalFixMap/VectorDBs_and_Stores/weaviate.md
+GlobalFixMap/VectorDBs_and_Stores/milvus.md
+GlobalFixMap/VectorDBs_and_Stores/pgvector.md
+GlobalFixMap/VectorDBs_and_Stores/redis.md
+GlobalFixMap/VectorDBs_and_Stores/elasticsearch.md
+GlobalFixMap/VectorDBs_and_Stores/pinecone.md
+GlobalFixMap/VectorDBs_and_Stores/typesense.md
+GlobalFixMap/VectorDBs_and_Stores/vespa.md
+
+Incident keywords:
+rag incident
+retrieval incident
+reranker incident
+hybrid incident
+citation incident
+hallucination incident
+index rebuild incident
+analyzer mismatch
+metric mismatch cosine ip l2
+top k recall low
+coverage below threshold
+delta s above 0.60
+lambda flips across paraphrases
+deterministic replay
+gold set regression
+-->
+
+
 # RAG — Global Fix Map
 
 <details>
