@@ -24,6 +24,9 @@ LLM embedding mismatch root cause
   > If you need the full triage and all prescriptions, return to the Emergency Room lobby.
 </details>
 
+Embedding metric mismatch is a structural error where the similarity metric used at retrieval time does not match the assumptions of the embedding model.  
+
+Symptoms: top-k neighbors look plausible, but answers cite wrong sections or fail silently after switching distance metrics.
 
 A focused fix when nearest neighbors look similar in cosine distance but your store runs L2 or dot, or the reverse. Use this page to localize the failure and rebuild the index with the right metric and normalization rules. No infra change needed.
 
