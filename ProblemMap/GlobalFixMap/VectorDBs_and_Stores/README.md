@@ -1,3 +1,124 @@
+<!--
+Search Anchor:
+vector dbs and stores global fix map
+vector database retrieval guardrails
+vector store hub routing page
+store specific fixes faiss chroma qdrant weaviate milvus pgvector redis elasticsearch pinecone typesense vespa
+results look similar but answer wrong
+high similarity wrong meaning
+retrieval wrong neighbors
+citations do not match retrieved section
+snippet mismatch unverifiable citations
+hybrid retrieval worse than single retriever
+bm25 ann hybrid collapse
+post deploy mismatch metric analyzer casing
+index looks healthy but coverage low
+recall low despite healthy index
+store drift after deploy
+semantic boundary failure not infra failure
+acceptance targets any store
+delta s question retrieved <= 0.45
+coverage >= 0.70
+lambda observe convergent three paraphrases
+e resonance flat long windows
+log delta s and lambda retrieve rerank reason
+alert delta s >= 0.60
+regression gate coverage and delta s
+
+quick routes per store:
+faiss local dev labs
+chroma notebooks demo
+qdrant production multitenant persistence
+weaviate hybrid search schema filters
+milvus enterprise ann scale
+pgvector postgres teams simple ops
+redis search vector low latency cache hybrid
+elasticsearch knn text plus vector analyzers
+pinecone managed saas zero ops
+typesense full text plus vectors good defaults
+vespa large scale search ranking recsys
+
+common failure classes:
+metric mismatch cosine l2 dot
+distance function mismatch store default
+cosine vs l2 vs dot product confusion
+normalize embeddings l2 norm write and query
+embedding norm dominates similarity
+tokenization casing mismatch ingestion query
+analyzer mismatch write read
+index version skew runtime loads wrong index
+cold start deploy fences index hash analyzer model version
+stale index update skew old vectors remain
+duplicate near duplicate collapse top k clones
+poisoning contamination adversarial vectors
+fragmentation sharding partial recall scattered chunks
+dimension mismatch embedding dimension index dimension
+silent truncation silent drop vectors
+hybrid query split two meanings
+reranker blind spots mis weighted hybrid
+candidate overlap low bm25 vs ann
+rerank deterministic
+
+store tuning keywords:
+faiss ivf ivfpq pq opq flat hnsw nlist nprobe efSearch efConstruction M recall tradeoff
+qdrant hnsw ef_search ef_construct m on_disk payload index filtering
+weaviate hybrid alpha bm25 vector filters schema modules
+milvus index type hnsw ivf_flat ivf_pq nlist nprobe metric_type consistency level partition
+pgvector ivfflat hnsw lists probes ef_search ef_construction analyze vacuum
+redis vector similarity cosine l2 ip index schema ft.search knn dialect filters
+elasticsearch knn hnsw ef_search ef_construction similarity cosine dot l2 analyzer mapping
+pinecone pods serverless namespace metric dimension metadata filters
+typesense vector search hybrid text ranking typo tolerance filters
+vespa rank profiles nearestNeighbor hnsw query routing reranking
+
+structural fix routing:
+embedding vs semantic
+retrieval traceability cite then explain schema
+data contracts snippet contract required fields
+bootstrap ordering predeploy collapse deployment fences
+pattern query parsing split
+rerankers deterministic reranking
+-->
+
+<!--
+Primary pages in this folder:
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/faiss.md
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/chroma.md
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/qdrant.md
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/weaviate.md
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/milvus.md
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/pgvector.md
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/redis.md
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/elasticsearch.md
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/pinecone.md
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/typesense.md
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/vespa.md
+-->
+
+<!--
+Related routing pages:
+ProblemMap/embedding-vs-semantic.md
+ProblemMap/retrieval-traceability.md
+ProblemMap/data-contracts.md
+ProblemMap/bootstrap-ordering.md
+ProblemMap/predeploy-collapse.md
+ProblemMap/patterns/pattern_query_parsing_split.md
+ProblemMap/rerankers.md
+
+Common incidents:
+high similarity wrong meaning
+citation mismatch cannot verify
+hybrid worse than single
+post deploy analyzer mismatch
+metric mismatch store default
+index healthy recall low
+stale vectors after update
+duplicate collapse top k
+poisoned vectors retrieved
+query split reranker blind
+-->
+
+
 # Vector DBs & Stores — Global Fix Map
 
 <details>
