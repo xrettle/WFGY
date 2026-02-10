@@ -1,4 +1,4 @@
-# How to Cite WFGY
+# How to Cite WFGY 
 
 WFGY is an open-source reasoning and debugging framework for LLM systems.
 
