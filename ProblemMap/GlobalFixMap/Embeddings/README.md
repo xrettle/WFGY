@@ -1,3 +1,106 @@
+<!--
+Search Anchor:
+embeddings global fix map
+embedding layer guardrails
+embedding stability before retrieval
+embedding drift causes retrieval drift
+vectors look fine but retrieval wrong
+coverage low despite healthy index
+store queries fail silently
+silent failure vector db
+high similarity wrong neighbors
+nearest neighbors wrong meaning
+metric mismatch cosine l2 dot
+distance metric mismatch embedding model assumption
+faiss l2 default cosine expected
+pinecone cosine redis dot
+normalization scaling embeddings
+l2 normalize on write and query
+embedding norms dominate results
+magnitude drift unstable retrieval
+tokenization mismatch embedding
+tokenizer mismatch ingestion query
+casing drift apple vs Apple embeddings differ
+lowercase mismatch
+chunking to embedding contract
+chunk alignment semantic window
+snippets cut mid thought anchors lost
+mid sentence split citations incoherent
+vectorstore fragmentation
+index fragmented recall low even high k
+sharded store drift
+missing anchors scattered sections
+dimension mismatch embedding dimension index dimension
+projection mismatch truncation silent
+runtime errors or silent drop vectors
+update and index skew
+stale vectors remain in index
+old embeddings show up after updates
+rebuild index correct dimension
+hybrid retriever weights bm25 ann unbalanced
+hybrid worse than single retriever
+weights mis tuned reranker overlap low
+duplication near duplicate collapse
+top k filled with near identical chunks
+same doc retrieved repeatedly lack diversity
+poisoning contamination adversarial vectors
+noisy vectors randomized retrieval
+malicious doc biases retrieval
+quarantine poisoned embeddings
+embedding version drift
+embedding model family mismatch per field
+analyzer mismatch read write
+observability embeddings
+delta s question retrieved
+lambda observe convergent paraphrases seeds
+e resonance flat long windows
+acceptance targets embeddings
+delta s <= 0.45
+coverage >= 0.70
+lambda convergent 3 paraphrases 2 seeds
+no index skew between write read
+
+Primary pages in this folder:
+ProblemMap/GlobalFixMap/Embeddings/metric_mismatch.md
+ProblemMap/GlobalFixMap/Embeddings/normalization_and_scaling.md
+ProblemMap/GlobalFixMap/Embeddings/tokenization_and_casing.md
+ProblemMap/GlobalFixMap/Embeddings/chunking_to_embedding_contract.md
+ProblemMap/GlobalFixMap/Embeddings/vectorstore_fragmentation.md
+ProblemMap/GlobalFixMap/Embeddings/dimension_mismatch_and_projection.md
+ProblemMap/GlobalFixMap/Embeddings/update_and_index_skew.md
+ProblemMap/GlobalFixMap/Embeddings/hybrid_retriever_weights.md
+ProblemMap/GlobalFixMap/Embeddings/duplication_and_near_duplicate_collapse.md
+ProblemMap/GlobalFixMap/Embeddings/poisoning_and_contamination.md
+
+Related routing pages:
+ProblemMap/GlobalFixMap/Retrieval/README.md
+ProblemMap/retrieval-traceability.md
+ProblemMap/data-contracts.md
+ProblemMap/embedding-vs-semantic.md
+ProblemMap/chunking-checklist.md
+ProblemMap/patterns/pattern_vectorstore_fragmentation.md
+ProblemMap/rerankers.md
+ProblemMap/bootstrap-ordering.md
+ProblemMap/rag-architecture-and-recovery.md
+
+Vector DB store jump index:
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/README.md
+faiss chroma qdrant weaviate milvus pgvector redis elasticsearch pinecone typesense vespa
+
+Common incidents:
+embedding recall collapse
+embedding mismatch after deploy
+embedding normalization missing
+tokenizer version drift
+casing mismatch ingestion query
+dimension mismatch silent truncation
+index skew stale results
+duplicate chunks fill top k
+poisoned vectors retrieval unsafe
+hybrid retrieval collapse noise
+-->
+
+
 # Embeddings — Global Fix Map
 
 <details>
