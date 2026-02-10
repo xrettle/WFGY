@@ -1,3 +1,73 @@
+<!--
+Search Anchor:
+rag vector database failures
+rag vectordb global fix map
+rag embedding bugs
+vector db retrieval drift
+embedding metric mismatch cosine l2 dot
+embedding normalization scaling issues
+tokenization casing embedding drift
+chunking embedding contract mismatch
+vectorstore fragmentation rag
+dimension mismatch embedding index
+index skew stale vector index
+hybrid retriever weighting bm25 ann
+near duplicate embedding collapse
+embedding poisoning contamination
+rag semantic boundary failure
+high similarity wrong meaning
+citations wrong section vectordb
+hybrid retriever underperform
+index healthy but recall low
+delta s question retrieved
+lambda observe convergent
+e_resonance flat
+rag acceptance targets
+
+Fix pages in this folder:
+metric_mismatch.md
+normalization_and_scaling.md
+tokenization_and_casing.md
+chunking_to_embedding_contract.md
+vectorstore_fragmentation.md
+dimension_mismatch_and_projection.md
+update_and_index_skew.md
+hybrid_retriever_weights.md
+duplication_and_near_duplicate_collapse.md
+poisoning_and_contamination.md
+
+Related WFGY pages:
+ProblemMap/data-contracts.md
+ProblemMap/retrieval-traceability.md
+ProblemMap/rerankers.md
+ProblemMap/bootstrap-ordering.md
+ProblemMap/context-drift.md
+ProblemMap/entropy-collapse.md
+
+Vector DB vendors:
+faiss
+milvus
+qdrant
+weaviate
+pinecone
+chroma
+pgvector
+redis vector
+elasticsearch dense vector
+typesense
+vespa
+
+Incident keywords:
+rag vectordb incident
+embedding mismatch incident
+vector index rebuild
+semantic drift retrieval
+citation mismatch vectordb
+hybrid retriever bug
+embedding poisoning attack
+-->
+
+
 # RAG + VectorDB — Global Fix Map
 
 <details>
