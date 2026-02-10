@@ -1,3 +1,65 @@
+<!--
+Search Anchor:
+enterprise knowledge governance global fix map
+rag knowledge governance policy layer
+llm enterprise access control and pii
+audit and traceability for rag
+compliance and retention policy llm
+data residency and regional shards
+data sensitivity tagging and redaction
+knowledge expiry and stale sop control
+retention policy ttl queues and purge proof
+enterprise policy eval for agents
+
+When to use this folder:
+mixed sensitivity corpora must prevent leakage
+regional data residency is a hard requirement
+stale sops and revoked policies show up in answers
+legal retention and developer convenience drift
+regulators want auditable access trails
+need exports that show who saw which pii
+residency and sensitivity tags not enforced at retrieval
+policy only lives in docs not in code
+rag stack must be policy true across tenants and regions
+agents must not cross tenant or region fences
+
+Core pages in this folder:
+ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/README.md
+ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/access_control.md
+ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/audit_and_traceability.md
+ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/compliance.md
+ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/compliance_audit.md
+ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/data_residency.md
+ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/data_sensitivity.md
+ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/knowledge_expiry.md
+ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/retention_policy.md
+
+Related structural fixes:
+ProblemMap/retrieval-traceability.md
+ProblemMap/data-contracts.md
+ProblemMap/chunking-checklist.md
+ProblemMap/ocr-parsing-checklist.md
+ProblemMap/prompt-injection.md
+ProblemMap/ops/live_monitoring_rag.md
+ProblemMap/ops/debug_playbook.md
+ProblemMap/GlobalFixMap/EvalObservability/README.md
+ProblemMap/GlobalFixMap/EvaluationGuardrails/README.md
+ProblemMap/GlobalFixMap/OpsDeploy/README.md
+
+Governance scenarios:
+tenant and role based access control for rag
+region pinned retrieval and embeddings
+policy aware prompt and tool layer
+pii and secret redaction before indexing
+knowledge expiry workflow for sops and policies
+retention queues and deletion attestations
+audit trail for who asked and what was cited
+policy eval attached to each answer
+weekly or quarterly compliance exports
+governance gate before shipping a new stack
+-->
+
+
 # Enterprise Knowledge Governance — Global Fix Map
 
 <details>
@@ -38,6 +100,33 @@ Use this folder to define the policy layer and route symptoms to the exact repai
 ---
 
 ## Orientation: pages and what they solve
+
+<!--
+Anchor Menu:
+open: enterprise knowledge governance readme ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/README.md
+open: access control page ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/access_control.md
+open: audit and traceability page ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/audit_and_traceability.md
+open: compliance overview page ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/compliance.md
+open: compliance audit checklist page ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/compliance_audit.md
+open: data residency page ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/data_residency.md
+open: data sensitivity model page ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/data_sensitivity.md
+open: knowledge expiry page ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/knowledge_expiry.md
+open: retention policy page ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/retention_policy.md
+
+jump: retrieval traceability schema ProblemMap/retrieval-traceability.md
+jump: data contracts and snippet schema ProblemMap/data-contracts.md
+jump: chunking checklist page ProblemMap/chunking-checklist.md
+jump: ocr parsing checklist page ProblemMap/ocr-parsing-checklist.md
+jump: prompt injection page ProblemMap/prompt-injection.md
+
+jump: live monitoring for rag page ProblemMap/ops/live_monitoring_rag.md
+jump: debug playbook page ProblemMap/ops/debug_playbook.md
+
+jump: eval observability readme ProblemMap/GlobalFixMap/EvalObservability/README.md
+jump: evaluation and guardrails readme ProblemMap/GlobalFixMap/EvaluationGuardrails/README.md
+jump: ops and deploy readme ProblemMap/GlobalFixMap/OpsDeploy/README.md
+-->
+
 
 | Page | What it solves | Typical symptom |
 |------|----------------|-----------------|
