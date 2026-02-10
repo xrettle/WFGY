@@ -1,3 +1,11 @@
+<!--
+Search Anchor:
+embedding metric mismatch
+embedding cosine vs dot product mismatch
+vector similarity metric mismatch
+LLM embedding mismatch root cause
+-->
+
 # Metric Mismatch — Guardrails and Fix Pattern
 
 <details>
