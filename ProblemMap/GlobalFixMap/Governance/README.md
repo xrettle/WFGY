@@ -1,3 +1,80 @@
+<!--
+Search Anchor:
+ai governance global fix map
+governance for rag and llm pipelines
+policy baseline for prompts models eval
+rbac abac roles and access control
+data lineage and provenance for rag
+pii handling and minimization guardrails
+license and dataset rights governance
+prompt policy and change control
+model governance model cards releases
+eval governance gates and signoff
+audit logs and traceability for ai
+risk register and waivers for llm systems
+ethics and bias mitigation for models
+regulatory alignment for ai products
+transparency and explainability controls
+incident response and postmortems ai
+
+When to use this folder:
+policies exist but are unclear or unenforced
+prompts or models change without signoff
+data provenance lost between docs chunks embeddings answers
+cannot prove pii minimization or redaction
+dataset or output rights are ambiguous
+incident response is ad hoc or missing
+bias or ethics complaints have no playbook
+regulatory questions block release readiness
+access is too broad or untracked
+waivers accumulate without owner or expiry
+
+Core pages in this folder:
+ProblemMap/GlobalFixMap/Governance/README.md
+ProblemMap/GlobalFixMap/Governance/policy_baseline.md
+ProblemMap/GlobalFixMap/Governance/roles_and_access_rbac_abac.md
+ProblemMap/GlobalFixMap/Governance/data_lineage_and_provenance.md
+ProblemMap/GlobalFixMap/Governance/pii_handling_and_minimization.md
+ProblemMap/GlobalFixMap/Governance/license_and_dataset_rights.md
+ProblemMap/GlobalFixMap/Governance/prompt_policy_and_change_control.md
+ProblemMap/GlobalFixMap/Governance/model_governance_model_cards_and_releases.md
+ProblemMap/GlobalFixMap/Governance/eval_governance_gates_and_signoff.md
+ProblemMap/GlobalFixMap/Governance/audit_and_logging.md
+ProblemMap/GlobalFixMap/Governance/audit_logs_and_traceability.md
+ProblemMap/GlobalFixMap/Governance/escalation_and_governance.md
+ProblemMap/GlobalFixMap/Governance/ethics_and_bias_mitigation.md
+ProblemMap/GlobalFixMap/Governance/regulatory_alignment.md
+ProblemMap/GlobalFixMap/Governance/transparency_and_explainability.md
+ProblemMap/GlobalFixMap/Governance/incident_response_and_postmortems.md
+ProblemMap/GlobalFixMap/Governance/risk_register_and_waivers.md
+
+Related structural fixes:
+ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/README.md
+ProblemMap/GlobalFixMap/EvalObservability/README.md
+ProblemMap/GlobalFixMap/EvaluationGuardrails/README.md
+ProblemMap/GlobalFixMap/OpsDeploy/README.md
+ProblemMap/retrieval-traceability.md
+ProblemMap/data-contracts.md
+ProblemMap/chunking-checklist.md
+ProblemMap/ocr-parsing-checklist.md
+ProblemMap/prompt-injection.md
+ProblemMap/ops/live_monitoring_rag.md
+ProblemMap/ops/debug_playbook.md
+
+Governance scenarios:
+governance gate before shipping new prompts or models
+change control and approvals for prompt templates
+model release process with model cards and risk notes
+eval gate with deltaS coverage lambda targets
+lineage log that joins questions snippets models policies
+pii minimization and redaction proven in logs
+license registry for datasets and generated outputs
+risk register with waivers owner expiry review link
+incident response workflow and postmortems tied to gates
+executive dashboard for governance metrics
+-->
+
+
 # Governance — Global Fix Map
 
 <details>
@@ -44,6 +121,39 @@ Every page links to a structural WFGY fix and carries measurable acceptance targ
 ---
 
 ## Quick index — per governance page
+
+<!--
+Anchor Menu:
+open: governance readme ProblemMap/GlobalFixMap/Governance/README.md
+open: policy baseline page ProblemMap/GlobalFixMap/Governance/policy_baseline.md
+open: roles and access rbac abac page ProblemMap/GlobalFixMap/Governance/roles_and_access_rbac_abac.md
+open: data lineage and provenance page ProblemMap/GlobalFixMap/Governance/data_lineage_and_provenance.md
+open: pii handling and minimization page ProblemMap/GlobalFixMap/Governance/pii_handling_and_minimization.md
+open: license and dataset rights page ProblemMap/GlobalFixMap/Governance/license_and_dataset_rights.md
+open: prompt policy and change control page ProblemMap/GlobalFixMap/Governance/prompt_policy_and_change_control.md
+open: model governance model cards and releases page ProblemMap/GlobalFixMap/Governance/model_governance_model_cards_and_releases.md
+open: eval governance gates and signoff page ProblemMap/GlobalFixMap/Governance/eval_governance_gates_and_signoff.md
+open: audit and logging page ProblemMap/GlobalFixMap/Governance/audit_and_logging.md
+open: audit logs and traceability page ProblemMap/GlobalFixMap/Governance/audit_logs_and_traceability.md
+open: escalation and governance page ProblemMap/GlobalFixMap/Governance/escalation_and_governance.md
+open: ethics and bias mitigation page ProblemMap/GlobalFixMap/Governance/ethics_and_bias_mitigation.md
+open: regulatory alignment page ProblemMap/GlobalFixMap/Governance/regulatory_alignment.md
+open: transparency and explainability page ProblemMap/GlobalFixMap/Governance/transparency_and_explainability.md
+open: incident response and postmortems page ProblemMap/GlobalFixMap/Governance/incident_response_and_postmortems.md
+open: risk register and waivers page ProblemMap/GlobalFixMap/Governance/risk_register_and_waivers.md
+
+jump: enterprise knowledge governance readme ProblemMap/GlobalFixMap/Enterprise_Knowledge_Gov/README.md
+jump: eval observability readme ProblemMap/GlobalFixMap/EvalObservability/README.md
+jump: evaluation and guardrails readme ProblemMap/GlobalFixMap/EvaluationGuardrails/README.md
+jump: ops and deploy readme ProblemMap/GlobalFixMap/OpsDeploy/README.md
+
+jump: retrieval traceability schema ProblemMap/retrieval-traceability.md
+jump: data contracts schema ProblemMap/data-contracts.md
+jump: prompt injection page ProblemMap/prompt-injection.md
+jump: live monitoring for rag page ProblemMap/ops/live_monitoring_rag.md
+jump: debug playbook page ProblemMap/ops/debug_playbook.md
+-->
+
 
 | Area | Page |
 |---|---|
