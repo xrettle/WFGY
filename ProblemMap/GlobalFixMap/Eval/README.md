@@ -1,3 +1,85 @@
+<!--
+Search Anchor:
+evaluation and guardrails global fix map
+rag evaluation precision recall
+latency vs accuracy llm pipelines
+cross agent consistency checks
+semantic stability eval for rag
+delta s lambda observe acceptance gates
+double hallucination guardrails
+hybrid retriever regression tests
+trace table for citations and snippets
+wfg y evaluation checklist for rag
+ci cd regression gates for llm systems
+
+When to use this folder:
+you shipped a fix but cannot show measurable improvement
+answers look plausible but citations or snippets do not match
+performance flips between seeds sessions or agent mixes
+latency tuning silently changes accuracy without notice
+team disagrees on whether change is actually better for users
+hybrid retrieval looks better on paper but feels worse in use
+benchmarks ignore ocr noise or multilingual edge cases
+you have no stable way to prove that hallucination dropped
+there is no trace table to show which snippet was used
+eval results are not reproducible across runs or environments
+
+Key metrics and targets:
+delta s question context median <= 0.45
+lambda observe convergent across 3 paraphrases and 2 seeds
+token overlap with gold snippet >= 0.70
+no unexplained rank flips on hybrid retrievers
+ci blocks merges when acceptance targets fail
+trace table logged for every eval item
+latency vs accuracy chart stored with run id
+cross agent agreement measured for key tasks
+
+Core pages in this folder:
+ProblemMap/GlobalFixMap/EvaluationGuardrails/eval_rag_precision_recall.md
+ProblemMap/GlobalFixMap/EvaluationGuardrails/eval_latency_vs_accuracy.md
+ProblemMap/GlobalFixMap/EvaluationGuardrails/eval_cross_agent_consistency.md
+ProblemMap/GlobalFixMap/EvaluationGuardrails/eval_semantic_stability.md
+ProblemMap/retrieval-traceability.md
+ProblemMap/data-contracts.md
+
+Related structural fixes:
+ProblemMap/rag-architecture-and-recovery.md
+ProblemMap/retrieval-playbook.md
+ProblemMap/embedding-vs-semantic.md
+ProblemMap/context-drift.md
+ProblemMap/entropy-collapse.md
+ProblemMap/rerankers.md
+ProblemMap/hallucination.md
+ProblemMap/GlobalFixMap/PromptAssembly/README.md
+ProblemMap/GlobalFixMap/Reasoning/README.md
+ProblemMap/GlobalFixMap/MemoryLongContext/README.md
+ProblemMap/GlobalFixMap/SafetyPromptIntegrity/README.md
+
+Evaluation scenarios:
+retrieval metric looks fine but answers still wrong
+bleu rouge or other text metrics pass while snippet is wrong
+system passes tests only on a single random seed
+hybrid retriever looks unstable across runs
+latency optimization changes retrieval depth or k silently
+agents disagree on critical answers with same context
+eval set misses ocr documents or long transcripts
+no log of which snippet ids were used in final answer
+no way to replay an eval item from logs alone
+cannot show before after comparison for a pull request
+
+Signals to check:
+delta s high between question and retrieved context
+coverage below 0.70 for intended gold snippet
+lambda observe flips when queries are paraphrased
+rank order of top k changes between runs without code change
+cross agent disagreement on truth value or citation
+trace table missing snippet spans or ids
+latency measurements recorded without accuracy numbers
+eval suite not versioned or tied to code commit
+no smoke test subset for fast regression checks
+-->
+
+
 # Evaluation & Guardrails — Global Fix Map
 
 <details>
@@ -36,6 +118,32 @@ The goal is to prevent “double hallucination,” enforce acceptance gates, and
 - Your team disagrees on whether a fix is “actually better”  
 
 ---
+
+<!--
+Anchor Menu:
+open: eval rag precision recall guide ProblemMap/GlobalFixMap/EvaluationGuardrails/eval_rag_precision_recall.md
+open: eval latency vs accuracy guide ProblemMap/GlobalFixMap/EvaluationGuardrails/eval_latency_vs_accuracy.md
+open: eval cross agent consistency guide ProblemMap/GlobalFixMap/EvaluationGuardrails/eval_cross_agent_consistency.md
+open: eval semantic stability guide ProblemMap/GlobalFixMap/EvaluationGuardrails/eval_semantic_stability.md
+open: retrieval traceability schema ProblemMap/retrieval-traceability.md
+open: data contracts snippet schema ProblemMap/data-contracts.md
+
+jump: evaluation and guardrails readme ProblemMap/GlobalFixMap/EvaluationGuardrails/README.md
+jump: rag architecture and recovery ProblemMap/rag-architecture-and-recovery.md
+jump: retrieval playbook ProblemMap/retrieval-playbook.md
+jump: embedding vs semantic mismatch page ProblemMap/embedding-vs-semantic.md
+jump: context drift page ProblemMap/context-drift.md
+jump: entropy collapse page ProblemMap/entropy-collapse.md
+jump: rerankers page ProblemMap/rerankers.md
+jump: hallucination page ProblemMap/hallucination.md
+jump: prompt assembly readme ProblemMap/GlobalFixMap/PromptAssembly/README.md
+jump: reasoning global fix map ProblemMap/GlobalFixMap/Reasoning/README.md
+jump: memory and long context global fix map ProblemMap/GlobalFixMap/MemoryLongContext/README.md
+jump: safety and prompt integrity global fix map ProblemMap/GlobalFixMap/SafetyPromptIntegrity/README.md
+jump: multimodal long context global fix map ProblemMap/GlobalFixMap/MultimodalLongContext/README.md
+jump: semantic clinic index ProblemMap/SemanticClinicIndex.md
+-->
+
 
 ## Open these first
 - RAG precision/recall spec → [eval_rag_precision_recall.md](./eval_rag_precision_recall.md)  
