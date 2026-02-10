@@ -1,3 +1,86 @@
+<!--
+Search Anchor:
+ops and deploy global fix map
+rag ops deployment playbook
+llm rollout readiness gate
+blue green switchover guardrails
+vector index build and swap safety
+cache warmup and invalidation rag
+rate limit backpressure llm api
+feature flags safe launch guardrails
+idempotency and retry storms
+rollback and fast recovery plan
+release calendar and change freeze
+incident comms and statuspage
+shadow traffic mirroring rag
+read only mode and maintenance window
+db migration guardrails for rag
+
+When to use this folder:
+first calls after deploy crash or return stale content
+delta s and citations looked fine yesterday but flip today
+rate limits cascade queues spike and latency climbs
+canary looks fine then full rollout breaks retrieval
+index swap succeeds but answers cite old snippets
+retries cause duplicate side effects or extra charges
+feature flags bleed traffic into unfinished paths
+maintenance windows corrupt embeddings or anchors
+p95 latency leaves budget during rollout
+model id or prompt rev changes silently
+vector index and cache disagree on which corpus is live
+
+Core pages in this folder:
+ProblemMap/GlobalFixMap/OpsDeploy/README.md
+ProblemMap/GlobalFixMap/OpsDeploy/rollout_readiness_gate.md
+ProblemMap/GlobalFixMap/OpsDeploy/staged_rollout_canary.md
+ProblemMap/GlobalFixMap/OpsDeploy/blue_green_switchovers.md
+ProblemMap/GlobalFixMap/OpsDeploy/version_pinning_and_model_lock.md
+ProblemMap/GlobalFixMap/OpsDeploy/vector_index_build_and_swap.md
+ProblemMap/GlobalFixMap/OpsDeploy/cache_warmup_invalidation.md
+ProblemMap/GlobalFixMap/OpsDeploy/rate_limit_backpressure.md
+ProblemMap/GlobalFixMap/OpsDeploy/feature_flags_safe_launch.md
+ProblemMap/GlobalFixMap/OpsDeploy/idempotency_dedupe.md
+ProblemMap/GlobalFixMap/OpsDeploy/retry_backoff.md
+ProblemMap/GlobalFixMap/OpsDeploy/rollback_and_fast_recovery.md
+ProblemMap/GlobalFixMap/OpsDeploy/postmortem_and_regression_tests.md
+ProblemMap/GlobalFixMap/OpsDeploy/release_calendar_and_change_freeze.md
+ProblemMap/GlobalFixMap/OpsDeploy/incident_comms_and_statuspage.md
+ProblemMap/GlobalFixMap/OpsDeploy/shadow_traffic_mirroring.md
+ProblemMap/GlobalFixMap/OpsDeploy/read_only_mode_and_maintenance_window.md
+ProblemMap/GlobalFixMap/OpsDeploy/db_migration_guardrails.md
+
+Related structural fixes:
+ProblemMap/rag-architecture-and-recovery.md
+ProblemMap/retrieval-playbook.md
+ProblemMap/retrieval-traceability.md
+ProblemMap/data-contracts.md
+ProblemMap/bootstrap-ordering.md
+ProblemMap/deployment-deadlock.md
+ProblemMap/predeploy-collapse.md
+ProblemMap/ops/live_monitoring_rag.md
+ProblemMap/ops/debug_playbook.md
+ProblemMap/GlobalFixMap/EvalObservability/README.md
+ProblemMap/GlobalFixMap/EvaluationGuardrails/README.md
+
+Deployment scenarios:
+rollout readiness for new rag pipeline
+blue green cutover for retrievers or models
+vector index swap with zero stale answers
+cache warmup and invalidation at cutover
+rate limit and backpressure under traffic spikes
+feature flags and partial rollouts
+idempotent write or billing paths under retry storms
+retry backoff design to avoid thundering herd
+fast rollback and recovery when metrics break
+postmortem and regression tests after incidents
+change freeze around launch windows
+incident comms and statuspage updates
+shadow traffic mirroring before going live
+read only mode during maintenance windows
+db migrations without breaking anchors
+-->
+
+
 # Ops & Deploy — Global Fix Map
 
 <details>
@@ -19,6 +102,8 @@ A compact hub to **ship safely and keep RAG/LLM systems stable after release**.
 Use this folder to pick the right guardrail, verify with measurable targets, and recover fast when things wobble. No infra change required.
 
 ---
+
+
 
 ## Open these first
 - Visual recovery map → [RAG Architecture & Recovery](../../rag-architecture-and-recovery.md)  
@@ -50,6 +135,42 @@ Use this folder to pick the right guardrail, verify with measurable targets, and
 - **P95 latency stays in budget** with backpressure active.  
 
 ---
+
+<!--
+Anchor Menu:
+open: ops and deploy readme ProblemMap/GlobalFixMap/OpsDeploy/README.md
+open: rollout readiness gate page ProblemMap/GlobalFixMap/OpsDeploy/rollout_readiness_gate.md
+open: staged rollout canary page ProblemMap/GlobalFixMap/OpsDeploy/staged_rollout_canary.md
+open: blue green switchovers page ProblemMap/GlobalFixMap/OpsDeploy/blue_green_switchovers.md
+open: version pinning and model lock page ProblemMap/GlobalFixMap/OpsDeploy/version_pinning_and_model_lock.md
+open: vector index build and swap page ProblemMap/GlobalFixMap/OpsDeploy/vector_index_build_and_swap.md
+open: cache warmup and invalidation page ProblemMap/GlobalFixMap/OpsDeploy/cache_warmup_invalidation.md
+open: rate limit backpressure page ProblemMap/GlobalFixMap/OpsDeploy/rate_limit_backpressure.md
+open: feature flags safe launch page ProblemMap/GlobalFixMap/OpsDeploy/feature_flags_safe_launch.md
+open: idempotency and dedupe page ProblemMap/GlobalFixMap/OpsDeploy/idempotency_dedupe.md
+open: retry backoff page ProblemMap/GlobalFixMap/OpsDeploy/retry_backoff.md
+open: rollback and fast recovery page ProblemMap/GlobalFixMap/OpsDeploy/rollback_and_fast_recovery.md
+open: postmortem and regression tests page ProblemMap/GlobalFixMap/OpsDeploy/postmortem_and_regression_tests.md
+open: release calendar and change freeze page ProblemMap/GlobalFixMap/OpsDeploy/release_calendar_and_change_freeze.md
+open: incident comms and statuspage page ProblemMap/GlobalFixMap/OpsDeploy/incident_comms_and_statuspage.md
+open: shadow traffic mirroring page ProblemMap/GlobalFixMap/OpsDeploy/shadow_traffic_mirroring.md
+open: read only mode and maintenance window page ProblemMap/GlobalFixMap/OpsDeploy/read_only_mode_and_maintenance_window.md
+open: db migration guardrails page ProblemMap/GlobalFixMap/OpsDeploy/db_migration_guardrails.md
+
+jump: rag architecture and recovery ProblemMap/rag-architecture-and-recovery.md
+jump: retrieval playbook ProblemMap/retrieval-playbook.md
+jump: retrieval traceability schema ProblemMap/retrieval-traceability.md
+jump: data contracts snippet schema ProblemMap/data-contracts.md
+jump: bootstrap ordering page ProblemMap/bootstrap-ordering.md
+jump: deployment deadlock page ProblemMap/deployment-deadlock.md
+jump: pre deploy collapse page ProblemMap/predeploy-collapse.md
+jump: live monitoring for rag page ProblemMap/ops/live_monitoring_rag.md
+jump: debug playbook page ProblemMap/ops/debug_playbook.md
+
+jump: eval observability readme ProblemMap/GlobalFixMap/EvalObservability/README.md
+jump: evaluation and guardrails readme ProblemMap/GlobalFixMap/EvaluationGuardrails/README.md
+-->
+
 
 ## Quick routes — per-page guides
 
