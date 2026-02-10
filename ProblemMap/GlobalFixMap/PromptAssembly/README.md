@@ -1,3 +1,100 @@
+<!--
+Search Anchor:
+prompt assembly global fix map
+llm prompt template failures
+system vs user role order
+json mode and tool calls broken
+citation first contract for prompts
+memory fences and state keys
+tool selection and timeouts
+template library for agents
+eval prompts and safety checks
+wfg y prompt design checklist
+bbmc bbpf bbcr bbam prompt modules
+delta s lambda observe e_resonance targets
+
+When to use this folder:
+citations disappear or point to wrong snippet after template change
+json mode outputs invalid objects or extra free text
+tool calls loop or stall instead of finishing
+answers flip when you reorder headers or sections
+role text bleeds into user content
+agents overwrite each others memory without fences
+hybrid retrieval worse than single retriever
+long chains smear topics when you tweak template
+eval runs say looks better but no stable metric to prove it
+small prompt edits cause big behavior shifts across providers
+
+Key metrics and targets:
+delta s question retrieved <= 0.45
+coverage of target section >= 0.70
+lambda observe convergent across 3 paraphrases and 2 seeds
+e_resonance flat on long windows
+stable header order with no lambda flips
+json responses well formed in >= 99 percent of tool calls
+tool selection deterministic for same input
+prompt behavior stable across providers for same schema
+
+Core pages in this folder:
+ProblemMap/GlobalFixMap/PromptAssembly/system_user_role_order.md
+ProblemMap/GlobalFixMap/PromptAssembly/json_mode_and_tool_calls.md
+ProblemMap/GlobalFixMap/PromptAssembly/citation_first.md
+ProblemMap/GlobalFixMap/PromptAssembly/anti_prompt_injection_recipes.md
+ProblemMap/GlobalFixMap/PromptAssembly/memory_fences_and_state_keys.md
+ProblemMap/GlobalFixMap/PromptAssembly/tool_selection_and_timeouts.md
+ProblemMap/GlobalFixMap/PromptAssembly/template_library_min.md
+ProblemMap/GlobalFixMap/PromptAssembly/eval_prompts_and_checks.md
+
+Related structural fixes:
+ProblemMap/embedding-vs-semantic.md
+ProblemMap/retrieval-traceability.md
+ProblemMap/data-contracts.md
+ProblemMap/context-drift.md
+ProblemMap/entropy-collapse.md
+ProblemMap/rerankers.md
+ProblemMap/hallucination.md
+ProblemMap/GlobalFixMap/Reasoning/README.md
+ProblemMap/GlobalFixMap/MemoryLongContext/README.md
+ProblemMap/GlobalFixMap/SafetyPromptIntegrity/README.md
+
+Prompt assembly scenarios:
+you add a new section to system prompt and answers suddenly change
+moving retrieval instructions from system to user breaks behavior
+switching model provider changes how templates are interpreted
+adding one more example to prompt shifts output style
+tools start returning natural language instead of json
+eval harness passes on one template version but fails on another
+different agents use similar but not identical wording
+citations work in one flow but disappear in another
+long context answers drift after you reorder headings
+same question and snippets but different final answer
+
+Signals to check:
+delta s high between question and retrieved snippet
+coverage below 0.70 for intended anchor section
+lambda observe flips when changing header order
+e_resonance spikes when you add more examples
+json responses not parseable by strict parser
+tool arguments missing required fields or include unknown ones
+role order system user assistant inconsistent across calls
+templates not versioned or logged
+no link between eval prompts and production templates
+no explicit snippet schema in prompt
+
+Normalization and contracts:
+define explicit system user assistant role order and keep it fixed
+use versioned template ids in logs for every request
+enforce citation first pattern in answer templates
+require strict json only mode for tool responses
+validate tool arguments against schema before execution
+record retrieval trace fields snippet id doc id source for each cite
+log model name and provider with each run
+tie prompt changes to eval prompts and checks
+treat external content as data unless explicitly whitelisted
+use small template library instead of ad hoc strings
+-->
+
+
 # Prompt Assembly — Global Fix Map
 
 <details>
