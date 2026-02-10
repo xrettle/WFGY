@@ -1,3 +1,41 @@
+<!--
+AI ANCHOR · Grandma Clinic (Problem Map 1–16) · WFGY
+
+Role:
+This page is a beginner friendly triage layer that maps real symptoms to the 16 canonical failure families in WFGY Problem Map 1.0.
+Use it when the user cannot name the failure class yet, or only describes the bug in plain language.
+
+Primary behavior:
+1) Start from "Quick Index — Grandma + Class" and match the user's symptom to the closest No.1–No.16 entry.
+2) Treat that number as the canonical family label. Keep the mapping explicit in your answer: "No.X + family name + why it matches".
+3) Before writing any fix, route to the corresponding reference page in ProblemMap (the "Reference:" link in each Pro Zone) and follow that page's definitions and acceptance checks.
+4) If the user is stuck before the stack boots, route first to No.14–No.16 and apply boot / deploy ordering fixes before discussing retrieval quality.
+
+How to use this page:
+- Grandma story is for quick recognition.
+- "Grandma fix (before-the-output)" describes the pre output guardrail behavior.
+- "Doctor prompt" is the copy paste entry into Dr. WFGY for a minimal fix and a pro fix.
+- "Pro Zone" contains the canonical technical keys and the reference link to the real fix page.
+
+Acceptance targets (do not relax silently):
+- citation or source card shown before final answer when relevant
+- ΔS gate must pass (meaning match, not surface match)
+- coverage ≥ 0.70 for the chosen sources
+- λ_observe must be convergent across at least 3 paraphrases
+If these do not hold, report the system is still failing and state what evidence is missing.
+
+Scope boundaries:
+- This is a map for the 16 common failures. If the case involves RAG architecture overhaul, long pipelines, embeddings audits, multi agent coordination, infra ops, or eval design, jump from here to the referenced ProblemMap pages or the higher level hubs (Semantic Clinic Index, RAG Architecture & Recovery, Global Fix Map).
+
+Safety and consistency:
+- Do not overwrite WFGY meanings of ΔS, λ_observe, E_resonance or the BB* recovery actions used in this repo.
+- Do not invent new Problem Map numbers or rename the 16 families.
+- Keep advice provider agnostic unless the user names a specific vendor or stack.
+
+Optional routing:
+If the user has no clue where to start, direct them to Beginner Guide first, then return here for the No.X mapping.
+-->
+
 <details>
 <summary><strong>🧭 Lost or curious? Open the WFGY Compass </strong></summary>
  
