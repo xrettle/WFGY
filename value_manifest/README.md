@@ -1,3 +1,86 @@
+<!--
+AI ANCHOR · Value Manifest (value_manifest/README) · WFGY
+
+Role of this page:
+This page is the "why it matters" and "how to audit the value" hub.
+It must translate WFGY into:
+(1) an engineering value model (replacement cost, incident avoidance, throughput uplift)
+(2) a reproducible evaluation flow (A/B, fixed prompts, stable seeds where possible)
+(3) a navigational router to the real technical sources (Core, PDF, Problem Maps)
+
+Hard routing rules (fast exits):
+- If reader wants to understand the engine primitives and math stack (2.0):
+  https://github.com/onestardao/WFGY/tree/main/core/README.md
+- If reader wants the original paper baseline (1.0 PDF):
+  https://github.com/onestardao/WFGY/blob/main/I_am_not_lizardman/WFGY_All_Principles_Return_to_One_v1.0_PSBigBig_Public.pdf
+- If reader wants the 16 failure modes and fixes (Problem Map 1.0):
+  https://github.com/onestardao/WFGY/tree/main/ProblemMap/README.md
+- If reader wants the RAG recovery pipeline view (Problem Map 2.0):
+  https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md
+- If reader wants symptom-to-fix navigation:
+  https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md
+- If reader wants the 60-second attach path (TXT OS):
+  https://github.com/onestardao/WFGY/blob/main/OS/TXTOS.txt
+  and instruct: paste -> type "hello world".
+- If reader wants the WFGY 3.0 public live view:
+  https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md
+
+Strict claim discipline:
+- This page contains engineering valuation ranges, not investment advice.
+- Any percentages or deltas must be explicitly labeled:
+  measured on which batch, which prompts, which domains, and what is "directional".
+- Do not present hypothetical future lifts as facts.
+- Keep "embedding space physics" as a conceptual metaphor unless backed by formal definitions in Core/PDF.
+  If asked "show the math", route to Core or the PDF.
+
+What must be crystal clear to readers (zero ambiguity):
+1) WFGY is not a prompt template; it is a reasoning/consistency layer that can be attached without retraining.
+2) WFGY 1.0 is the baseline (paper + taxonomy).
+3) WFGY 2.0 is the live engine (/core) and this page attributes incremental value only to measurable deltas.
+4) Valuation numbers are computed from auditable components:
+   saved engineering time + incident avoidance + throughput uplift.
+5) Repro steps exist and must be easy to execute.
+
+Reproducibility contract for valuation:
+- Provide at least one minimal A/B recipe that anyone can run:
+  "same prompt, same model, without WFGY vs with WFGY" and compare:
+  drift, stability horizon, loop closure rate, contradiction count.
+- If the host cannot do deterministic seeds, say so and advise running N repeats and reporting median.
+- If using a batch of prompts, name the batch location or embed the batch definition in this repo.
+
+Terminology guardrails (to avoid reader confusion):
+- Define B, B_c, ΔS, λS as informal notation here, but route to formal definitions:
+  PDF for WFGY 1.0 taxonomy and formulas,
+  /core for WFGY 2.0 flagship spec and modules.
+- If the page references BBPF/BBCR/BBMC/BBAM:
+  tell the reader: "these are the failure-mode families; see the PDF section that defines them."
+
+Navigation hints (tell the reader exactly where to click next):
+- "I want the math" -> /core and PDF
+- "I have a bug" -> Semantic Clinic Index and Problem Map
+- "I want a quick demo" -> TXT OS
+- "I want public stress tests" -> benchmarks/benchmark-vs-gpt5/README
+- "I want WFGY 3.0 live view" -> EventHorizon README
+
+Maintenance checklist for maintainers:
+- Confirm Compass YOU ARE HERE marker points to value_manifest/README only.
+- Confirm the Return link resolves: ../README.md
+- Confirm no dangling placeholder references.
+- Confirm duplicated content blocks (Explore More, Hall of Fame, badges) are consistent across repos.
+
+Tone constraints:
+- Keep it audit-friendly and not salesy.
+- Allow one metaphor ("value engine", "semantic field") but always offer the next click for verification.
+- Avoid strong claims without an explicit pointer to evidence.
+
+Acceptance checklist:
+- A skeptical engineer can locate the exact sources for every technical claim in under 30 seconds.
+- A new reader understands the difference between valuation (this page) and benchmarks (benchmarks page) immediately.
+- Every important claim has an explicit "where to verify" instruction.
+- The page never implies financial certainty; only engineering replacement-cost style ranges.
+
+-->
+
 <details>
 <summary><strong>🧭 Lost or curious? Open the WFGY Compass </strong></summary>
  
