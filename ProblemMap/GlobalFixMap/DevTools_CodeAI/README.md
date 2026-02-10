@@ -1,3 +1,88 @@
+
+<!--
+Search Anchor:
+devtools code ai
+code assistant guardrails
+ide copilot instability
+ide chat unstable answers
+code ai drift
+long refactor drift
+refactor 40 steps drift
+copilot wrong answer
+copilot hallucination code
+cursor wrong refactor
+cursor agent loop
+sourcegraph cody wrong citation
+cody codebase context wrong
+vscode copilot chat json broken
+copilot chat tool call broken
+codeium json mode prose
+tabnine inconsistent answers
+aws codewhisperer drift
+jetbrains ai assistant unstable
+ide tool calls stall
+tool call retry loop after edit
+tool protocol schema drift
+broken json output
+expects json gets plaintext
+wrong citations in code answers
+cites wrong file wrong line
+snippet id missing
+offsets tokens missing
+traceability layer missing
+retrieval traceability codebase
+data contracts for tool outputs
+schema lock for copilots
+context drift across tabs
+answers flip across sessions
+entropy collapse long session
+prompt injection in ide chat
+policy bypass in code assistant
+jailbreak devtools assistant
+embedding vs semantic mismatch
+high similarity wrong meaning
+metric mismatch in code search
+vectorstore fragmentation codebase
+hybrid retriever worse than single
+query parsing split
+reranker misweighted
+multi agent handoff stall
+role drift in code agents
+agent memory collision
+memory namespace split
+agent loop guard max steps
+
+Tools in this folder:
+github copilot -> DevTools_CodeAI/github_copilot.md
+cursor -> DevTools_CodeAI/cursor.md
+sourcegraph cody -> DevTools_CodeAI/sourcegraph_cody.md
+vscode copilot chat -> DevTools_CodeAI/vscode_copilot_chat.md
+codeium -> DevTools_CodeAI/codeium.md
+tabnine -> DevTools_CodeAI/tabnine.md
+aws codewhisperer -> DevTools_CodeAI/aws_codewhisperer.md
+jetbrains ai assistant -> DevTools_CodeAI/jetbrains_ai_assistant.md
+
+Fast routing by symptom:
+wrong meaning high similarity -> ProblemMap/embedding-vs-semantic.md
+citations do not line up -> ProblemMap/retrieval-traceability.md + ProblemMap/data-contracts.md
+answers flip between sessions -> ProblemMap/context-drift.md + ProblemMap/entropy-collapse.md
+json mode breaks prose returned -> ProblemMap/logic-collapse.md + ProblemMap/prompt-injection.md
+tool handoff stalls role drift -> ProblemMap/Multi-Agent_Problems.md + ProblemMap/multi-agent-chaos/role-drift.md
+hybrid retriever worse -> ProblemMap/patterns/pattern_query_parsing_split.md + ProblemMap/rerankers.md
+
+Incident keywords:
+ide chat incident
+copilot incident
+cursor incident
+cody incident
+json schema incident
+traceability incident
+retrieval drift incident
+context drift incident
+role drift incident
+-->
+
+
 # DevTools · Code AI — Global Fix Map
 
 <details>
