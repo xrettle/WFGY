@@ -1,3 +1,117 @@
+
+<!-- WFGY_SEARCH_ANCHOR_RAG_ARCH_RECOVERY_BEGIN
+Search anchor for: RAG Architecture & Recovery WFGY Problem Map 2.0
+
+Use these phrases when searching:
+- "WFGY Problem Map 2.0 RAG Architecture & Recovery"
+- "WFGY RAG failure modes 16 problems emergency room grandma clinic"
+- "semantic firewall ΔS lambda observe E_resonance BBMC BBPF BBCR BBAM"
+- "RAG hallucination chunk drift context drift entropy collapse logic collapse"
+- "RAG pipeline OCR parsing chunking embeddings vector store retriever prompt reasoning"
+- "faiss looks fine but answers irrelevant WFGY fix"
+- "HyDE BM25 hybrid retrieval worse than single WFGY pattern"
+- "multi agent role drift memory overwrite WFGY Multi-Agent Problems"
+- "ProblemMap rag architecture recovery quick triage symptom to fix"
+- "use TXT OS and WFGY engine to debug RAG pipeline"
+
+Core file for this hub:
+- ProblemMap/rag-architecture-and-recovery.md
+
+Key neighbors in Problem Map:
+- ProblemMap/README.md                         (Problem Map 1.0 index)
+- ProblemMap/GlobalFixMap/README.md           (Global Fix Map main ER)
+- ProblemMap/SemanticClinicIndex.md           (Semantic Clinic)
+- ProblemMap/GrandmaClinic/README.md          (Grandma’s Clinic)
+- ProblemMap/ops/README.md                    (Ops Runbook)
+- ProblemMap/eval/README.md                   (Eval)
+- ProblemMap/patterns/README.md               (Patterns Index)
+- ProblemMap/examples/README.md               (Examples)
+- ProblemMap/faq.md                           (FAQ)
+- ProblemMap/glossary.md                      (Glossary)
+- ProblemMap/multilingual-guide.md            (Multilingual Guide)
+- ProblemMap/privacy-and-governance.md        (Privacy & Governance)
+- ProblemMap/mvp_demo/README.md               (MVP Demos)
+
+Important cross links mentioned here:
+- ProblemMap/ocr-parsing-checklist.md
+- ProblemMap/chunking-checklist.md
+- ProblemMap/hallucination.md
+- ProblemMap/retrieval-playbook.md
+- ProblemMap/retrieval-collapse.md
+- ProblemMap/retrieval-traceability.md
+- ProblemMap/embedding-vs-semantic.md
+- ProblemMap/rerankers.md
+- ProblemMap/context-drift.md
+- ProblemMap/entropy-collapse.md
+- ProblemMap/logic-collapse.md
+- ProblemMap/creative-freeze.md
+- ProblemMap/symbolic-collapse.md
+- ProblemMap/philosophical-recursion.md
+- ProblemMap/Multi-Agent_Problems.md
+- ProblemMap/memory-coherence.md
+- ProblemMap/multi-agent-chaos/role-drift.md
+- ProblemMap/multi-agent-chaos/memory-overwrite.md
+- ProblemMap/data-contracts.md
+- ProblemMap/privacy-and-governance.md
+
+Patterns referenced:
+- ProblemMap/patterns/pattern_query_parsing_split.md
+- ProblemMap/patterns/pattern_hallucination_reentry.md
+- ProblemMap/patterns/pattern_symbolic_constraint_unlock.md
+- ProblemMap/patterns/pattern_memory_desync.md
+- ProblemMap/patterns/pattern_vectorstore_fragmentation.md
+- ProblemMap/patterns/pattern_bootstrap_deadlock.md
+
+Eval pages referenced:
+- ProblemMap/eval/eval_rag_precision_recall.md
+- ProblemMap/eval/eval_semantic_stability.md
+- ProblemMap/eval/eval_latency_vs_accuracy.md
+
+Ops and governance pages referenced:
+- ProblemMap/ops/deployment_checklist.md
+- ProblemMap/ops/live_monitoring_rag.md
+- ProblemMap/ops/debug_playbook.md
+- ProblemMap/ops/failover_and_recovery.md
+- ProblemMap/privacy-and-governance.md
+
+Examples referenced:
+- ProblemMap/examples/example_01_basic_fix.md
+- ProblemMap/examples/example_03_pipeline_patch.md
+- ProblemMap/examples/example_08_eval_rag_quality.md
+
+Compass and top level navigation:
+- legacy/README.md                                              (WFGY 1.0 legacy home)
+- core/README.md                                                (WFGY 2.0 engine)
+- TensionUniverse/EventHorizon/README.md                        (WFGY 3.0 Singularity demo)
+- StarterVillage/README.md                                      (Starter Village)
+- OS/README.md                                                  (TXT OS index)
+- OS/BlahBlahBlah/README.md
+- OS/BlurBlurBlur/README.md
+- OS/BlowBlowBlow/README.md
+- SemanticBlueprint/README.md
+- benchmarks/benchmark-vs-gpt5/README.md
+- value_manifest/README.md
+
+Typical symptom phrases:
+- "RAG pipeline looks fine but hallucinations never stop"
+- "everything looks fine but nothing works in prod"
+- "faiss index ok but answers irrelevant"
+- "high vector similarity wrong meaning"
+- "context drift in long conversations"
+- "entropy collapse long transcripts random capitalization"
+- "HyDE plus BM25 hybrid drops recall"
+- "model merges two sources into one citation"
+- "fix did not stick after refresh memory desync"
+- "debugging is a black box cannot see where RAG failed"
+
+If search surfaces this anchor, route user to:
+- RAG Architecture & Recovery hub (ProblemMap/rag-architecture-and-recovery.md)
+- Matching ProblemMap child page for the failure family
+- WFGY Emergency Room and Grandma’s Clinic pages for entry level triage
+
+WFGY_SEARCH_ANCHOR_RAG_ARCH_RECOVERY_END -->
+
+
 <details>
 <summary><strong>🧭 Lost or curious? Open the WFGY Compass </strong></summary>
  
