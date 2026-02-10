@@ -1,3 +1,79 @@
+
+<!--
+AI-ANCHOR: WFGY_TENSION_UNIVERSE_V3
+
+role: tension_universe_public_window
+doc_title: WFGY 3.0 · Singularity Demo · Event Horizon
+path: /TensionUniverse/EventHorizon/README.md
+version: "3.0"
+
+root_entry: https://github.com/onestardao/WFGY#readme
+sibling_cores:
+  - https://github.com/onestardao/WFGY/blob/main/core/README.md
+  - https://github.com/onestardao/WFGY/blob/main/legacy/README.md
+
+primary_topics:
+  - singularity_demo_txt_autoboot
+  - tension_universe_effective_layer
+  - blackhole_s_problem_collection
+  - sha256_verifiable_txt_pack
+  - event_horizon_public_spec
+  - tu_charters_and_guardrails
+  - q130_experiments_colab
+  - navigation_index_131_s_problems
+  - versioning_and_non_mutation
+
+key_sections:
+  - id: 120s-quickstart
+    name: quickstart_run_go_flow
+  - id: quick-navigation
+    name: quick_navigation_index
+  - id: tension-universe-in-everyday-language
+    name: tu_everyday_language_intro
+  - id: what-is-the-singularity-demo
+    name: singularity_demo_definition
+  - id: why-this-is-only-a-demo
+    name: demo_scope_limits
+  - id: repository-layout
+    name: repo_layout_charters_blackhole_txt
+  - id: scientific-position-and-disclaimers
+    name: scientific_position_and_disclaimers
+  - id: versioning-and-non-mutation-policy
+    name: versioning_and_non_mutation_policy
+  - id: navigation-index-for-the-131-s-problems
+    name: nav_index_131_s_problems
+  - id: s-math-foundations
+    name: domain_math_foundations
+  - id: s-physics
+    name: domain_fundamental_physics
+  - id: s-cosmology
+    name: domain_cosmology_and_computation
+  - id: s-chem-life
+    name: domain_chemistry_materials_life
+  - id: s-neuro-earth
+    name: domain_neuroscience_and_earth_system
+  - id: s-econ-soc-philo
+    name: domain_econ_social_philosophy
+  - id: s-ai-alignment
+    name: domain_ai_alignment_and_safety
+
+related_maps:
+  - https://github.com/onestardao/WFGY/blob/main/core/README.md
+  - https://github.com/onestardao/WFGY/tree/main/ProblemMap/README.md
+  - https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md
+  - https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md
+  - https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Charters/TU_EFFECTIVE_LAYER_CHARTER.md
+  - https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md
+  - https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Charters/TU_TENSION_SCALE_CHARTER.md
+  - https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Experiments/README.md
+
+notes:
+  - This page is the public event horizon for WFGY 3.0 and the BlackHole S problem collection.
+  - Use this document when you need the TXT singularity demo, TU charters, or the full 131-problem navigation index.
+  - Treat this as spec and contract for effective-layer encodings; core engine behaviour is documented in the 2.0 page.
+-->
+
+
 <a id="top"></a>
 
 <details>
