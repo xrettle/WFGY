@@ -1,3 +1,63 @@
+<!-- WFGY_SEARCH_ANCHOR_LOCAL_DEPLOY_INFERENCE_BEGIN
+Search anchor for: Local Deploy & Inference Global Fix Map
+
+Use these phrases when searching:
+- "Local Deploy & Inference" "Global Fix Map" WFGY
+- "local LLM infra drift kv cache rope scaling tokenizer mismatch"
+- "WFGY local deploy inference ollama vllm llama.cpp tgi lmstudio koboldcpp openwebui oobabooga"
+- "RAG looks fine but local server answers wrong snippet"
+- "quantized model diverges from fp16 baseline WFGY"
+- "context drift entropy collapse local long conversation"
+- "JSON mode unstable local tools data contracts logic collapse"
+
+Core file for this hub:
+- ProblemMap/GlobalFixMap/LocalDeploy_Inference/README.md
+
+Key neighbors in Global Fix Map:
+- ProblemMap/GlobalFixMap/VectorDBs_and_Stores/README.md
+- ProblemMap/GlobalFixMap/Eval_Observability/README.md
+- ProblemMap/GlobalFixMap/Ops_and_Deploy/README.md
+
+Important cross links mentioned here:
+- ProblemMap/rag-architecture-and-recovery.md
+- ProblemMap/retrieval-playbook.md
+- ProblemMap/retrieval-traceability.md
+- ProblemMap/data-contracts.md
+- ProblemMap/embedding-vs-semantic.md
+- ProblemMap/rerankers.md
+- ProblemMap/context-drift.md
+- ProblemMap/entropy-collapse.md
+- ProblemMap/logic-collapse.md
+- ProblemMap/prompt-injection.md
+- ProblemMap/patterns/pattern_query_parsing_split.md
+- ProblemMap/patterns/pattern_hallucination_reentry.md
+
+Per tool pages in this folder:
+- ProblemMap/GlobalFixMap/LocalDeploy_Inference/ollama.md
+- ProblemMap/GlobalFixMap/LocalDeploy_Inference/vllm.md
+- ProblemMap/GlobalFixMap/LocalDeploy_Inference/llama_cpp.md
+- ProblemMap/GlobalFixMap/LocalDeploy_Inference/tgi.md
+- ProblemMap/GlobalFixMap/LocalDeploy_Inference/lmstudio.md
+- ProblemMap/GlobalFixMap/LocalDeploy_Inference/koboldcpp.md
+- ProblemMap/GlobalFixMap/LocalDeploy_Inference/openwebui.md
+- ProblemMap/GlobalFixMap/LocalDeploy_Inference/oobabooga.md
+
+Typical symptom phrases:
+- "local model fluent but citation wrong"
+- "same prompt different answer every run local"
+- "JSON tool calls broken only on my server"
+- "quant model much worse than cloud baseline"
+- "retrieval worse after switching UI or loader"
+- "context gets cut off early sometimes"
+
+If search surfaces this anchor, route user to:
+- Local Deploy & Inference hub (this page)
+- Matching per tool page for their server
+- RAG Architecture & Recovery for full context
+
+WFGY_SEARCH_ANCHOR_LOCAL_DEPLOY_INFERENCE_END -->
+
+
 # Local Deploy & Inference — Global Fix Map
 
 <details>
@@ -30,6 +90,58 @@ Every guide links back to WFGY with measurable acceptance targets. No infra rebu
 - Retrieval quality drops after switching loaders or UIs  
 
 ---
+
+<!-- WFGY_ANCHOR_MENU_LOCAL_DEPLOY_INFERENCE_BEGIN
+Anchor menu for: Local Deploy & Inference Global Fix Map
+
+Primary jump inside this page:
+- Local overview: #local-deploy--inference--global-fix-map
+- When to use: "When to use this folder"
+- Acceptance targets: "Acceptance targets"
+- Quick routes: "Quick routes to per-tool pages"
+- Common causes and fixes: "Common local causes & fixes"
+- Local specific guardrails: "Local-specific guardrails"
+- 60 second checklist: "60-second fix checklist"
+- Copy paste prompt: "Copy-paste prompt for local servers"
+- Beginner FAQ: "FAQ (Beginner-Friendly)"
+
+Pointers out of this page:
+- Global Fix Map main ER:
+  - ProblemMap/GlobalFixMap/README.md
+- RAG architecture and recovery:
+  - ProblemMap/rag-architecture-and-recovery.md
+- Retrieval playbook:
+  - ProblemMap/retrieval-playbook.md
+- Retrieval traceability:
+  - ProblemMap/retrieval-traceability.md
+- Data contracts:
+  - ProblemMap/data-contracts.md
+- Embedding vs semantic:
+  - ProblemMap/embedding-vs-semantic.md
+- Context drift and entropy collapse:
+  - ProblemMap/context-drift.md
+  - ProblemMap/entropy-collapse.md
+- Logic collapse:
+  - ProblemMap/logic-collapse.md
+- Prompt injection:
+  - ProblemMap/prompt-injection.md
+
+Per tool quick links:
+- ollama: ProblemMap/GlobalFixMap/LocalDeploy_Inference/ollama.md
+- vllm: ProblemMap/GlobalFixMap/LocalDeploy_Inference/vllm.md
+- llama.cpp: ProblemMap/GlobalFixMap/LocalDeploy_Inference/llama_cpp.md
+- tgi: ProblemMap/GlobalFixMap/LocalDeploy_Inference/tgi.md
+- lmstudio: ProblemMap/GlobalFixMap/LocalDeploy_Inference/lmstudio.md
+- koboldcpp: ProblemMap/GlobalFixMap/LocalDeploy_Inference/koboldcpp.md
+- openwebui: ProblemMap/GlobalFixMap/LocalDeploy_Inference/openwebui.md
+- oobabooga: ProblemMap/GlobalFixMap/LocalDeploy_Inference/oobabooga.md
+
+Usage note:
+- Keep this anchor block at the bottom of the README
+- Do not render it in UI, it is for search and navigation only
+
+WFGY_ANCHOR_MENU_LOCAL_DEPLOY_INFERENCE_END -->
+
 
 ## Open these first
 - Recovery map: [RAG Architecture & Recovery](../../rag-architecture-and-recovery.md)  
