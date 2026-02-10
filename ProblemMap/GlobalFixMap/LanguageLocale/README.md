@@ -1,3 +1,184 @@
+<!--
+Search Anchor:
+language and locale global fix map
+language locale global fix map
+locale aware retrieval
+locale specific rag bugs
+multilingual rag locale issues
+cjk indic rtl emoji locale variants
+fullwidth halfwidth normalization
+unicode normalization nfkc nfd nfc
+diacritics accent folding
+digits width punctuation variants
+bidi rtl control characters
+arabic hebrew bidi problems
+cjk segmentation word break
+thai word break indic word break
+tokenization variance across locales
+locale drift between environments
+locale specific analyzers
+zh tw zh cn locale drift
+en us en gb locale mismatch
+number formatting and sorting
+date time format mismatch
+timezone and dst bugs
+ime keyboard input issues
+input language switching bug
+emoji zwj grapheme cluster issues
+mixed locale metadata fields
+logs with mixed locales
+time zone aware reasoning
+
+Typical language locale bugs:
+cjk or indic corpus but recall very low
+mixed english plus chinese query returns unstable top k
+accented latin letters not matching unaccented forms
+fullwidth numbers not matching halfwidth numbers
+identical looking characters not equal after indexing
+arabic or hebrew text appears reversed in snippets
+punctuation or quote marks flipped by rtl controls
+token counts change after deploy with same data
+locale change causes different analyzer behavior
+zh hans vs zh hant treated as unrelated
+thai sentence segmentation breaks retrieval
+japanese word break splits important entities
+numbers sorted lexicographically instead of numerically
+dates sorted as strings instead of calendar order
+day month confusion in logs and citations
+time zones cause off by one day answers
+dst switch changes reasoning about time intervals
+emoji sequences broken by incorrect grapheme handling
+emoji search fails because of zwj splitting
+metadata fields store different locales in same column
+
+When to use this folder:
+multilingual faq or help center with local formats
+global product docs with localized ui strings
+logs or telemetry with many locales at once
+cjk or indic manual plus english index
+arabic or hebrew rtl knowledge base
+european languages with heavy diacritics
+data warehouse that stores timestamps in many zones
+support tickets where users paste screenshots and local times
+applications that show both local and utc times
+search or rag over invoices forms receipts with local formats
+chatbot that must respect user locale for dates and numbers
+
+Languages and locales covered (examples):
+english en en_US en_GB
+simplified chinese zh_CN zh_Hans
+traditional chinese zh_TW zh_HK zh_Hant
+japanese ja_JP
+korean ko_KR
+thai th_TH
+vietnamese vi_VN
+hindi hi_IN
+bengali bn_IN bn_BD
+arabic ar_SA ar_EG
+hebrew he_IL
+russian ru_RU
+turkish tr_TR
+spanish es_ES es_MX
+portuguese pt_PT pt_BR
+french fr_FR
+german de_DE
+italian it_IT
+polish pl_PL
+indonesian id_ID
+malay ms_MY
+tagalog tl_PH
+
+Locale objects and fields:
+language code
+country or region code
+script code
+collation rules
+number formatting rules
+currency formatting rules
+date and time formats
+first day of week
+time zone and dst rules
+calendar system
+decimal and thousands separators
+
+Key metrics and targets:
+delta s question retrieved <= 0.45 on three paraphrases
+coverage of intended section >= 0.70
+lambda observe convergent across two seeds
+tokenization variance for same query <= 12 percent across environments
+normalization pass rate nfkc plus width plus diacritics >= 0.98
+no missing headers or captions due to locale parsing
+no drift in offsets after rtl or width normalization
+stable sort keys across locales for same logical order
+
+Core pages in this folder:
+ProblemMap/GlobalFixMap/Language_Locale/tokenizer_mismatch.md
+ProblemMap/GlobalFixMap/Language_Locale/script_mixing.md
+ProblemMap/GlobalFixMap/Language_Locale/locale_drift.md
+ProblemMap/GlobalFixMap/Language_Locale/unicode_normalization.md
+ProblemMap/GlobalFixMap/Language_Locale/cjk_segmentation_wordbreak.md
+ProblemMap/GlobalFixMap/Language_Locale/digits_width_punctuation.md
+ProblemMap/GlobalFixMap/Language_Locale/diacritics_and_folding.md
+ProblemMap/GlobalFixMap/Language_Locale/rtl_bidi_control.md
+ProblemMap/GlobalFixMap/Language_Locale/transliteration_and_romanization.md
+ProblemMap/GlobalFixMap/Language_Locale/locale_collation_and_sorting.md
+ProblemMap/GlobalFixMap/Language_Locale/numbering_and_sort_orders.md
+ProblemMap/GlobalFixMap/Language_Locale/date_time_format_variants.md
+ProblemMap/GlobalFixMap/Language_Locale/timezones_and_dst.md
+ProblemMap/GlobalFixMap/Language_Locale/keyboard_input_methods.md
+ProblemMap/GlobalFixMap/Language_Locale/input_language_switching.md
+ProblemMap/GlobalFixMap/Language_Locale/emoji_zwj_grapheme_clusters.md
+ProblemMap/GlobalFixMap/Language_Locale/mixed_locale_metadata.md
+-->
+
+<!--
+Related structural fixes:
+ProblemMap/rag-architecture-and-recovery.md
+ProblemMap/retrieval-playbook.md
+ProblemMap/retrieval-traceability.md
+ProblemMap/data-contracts.md
+ProblemMap/embedding-vs-semantic.md
+ProblemMap/Embeddings/metric_mismatch.md
+ProblemMap/Embeddings/normalization_and_scaling.md
+ProblemMap/OCR_Parsing/README.md
+ProblemMap/GlobalFixMap/Language/README.md
+ProblemMap/GlobalFixMap/Retrieval/README.md
+ProblemMap/GlobalFixMap/Embeddings/README.md
+ProblemMap/GlobalFixMap/Chunking/README.md
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/README.md
+-->
+
+<!--
+Language and locale scenarios:
+query: english question chinese document with local dates
+query: chinese question english document with utc timestamps
+query: japanese logs with mixed fullwidth digits
+query: arabic faq with rtl punctuation and numbers
+query: european user with comma decimal separator
+query: user pastes local time and country and asks for utc
+query: logs contain iso dates and local dates in same index
+pattern: answers correct in one locale and wrong in another
+pattern: citations drift after changing server locale
+pattern: sorting breaks when data moves to new region
+pattern: emoji heavy chats fail retrieval
+pattern: search for emoji sequence returns nothing
+pattern: keyboard ime composition inserts hidden characters
+pattern: user switches input language mid query
+pattern: new deployment changes token counts without code change
+-->
+
+<!--
+Cross folder jumps:
+ProblemMap/GlobalFixMap/Language_Locale/README.md
+ProblemMap/GlobalFixMap/Language/README.md
+ProblemMap/GlobalFixMap/Retrieval/README.md
+ProblemMap/GlobalFixMap/Embeddings/README.md
+ProblemMap/GlobalFixMap/Chunking/README.md
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/README.md
+ProblemMap/SemanticClinicIndex.md
+-->
+
+
 # Language & Locale · Global Fix Map
 
 <details>
