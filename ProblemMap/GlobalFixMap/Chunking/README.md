@@ -1,3 +1,96 @@
+<!--
+Search Anchor:
+chunking global fix map
+rag chunking bugs
+document chunking failures
+chunk boundaries wrong
+snippets cut mid thought
+anchors missing sections skipped
+chunk id schema stable ids
+duplicate chunks across runs
+chunk drift after reindex
+chunking checklist preflight
+code table block structure lost
+markdown code tables blocks
+section detection heading anchors
+title hierarchy h1 h2 h3 outline
+pdf layouts ocr chunking
+two column pdf broken reading order
+math formulas split across chunks
+tables split or merged incorrectly
+reindex migration chunk id mismatch
+index rebuilt but old refs broken
+eval rag precision recall for chunking
+cannot prove better chunking
+live monitoring rag chunk health
+sudden drift after deploy
+context flips with same corpus
+
+metrics and contracts:
+delta s question retrieved <= 0.45
+coverage target section >= 0.70
+lambda observe convergent 3 paraphrases 2 seeds
+traceability contract snippet_id section_id source_url offsets tokens
+snippet contract cite then explain
+chunk boundaries align semantic windows
+chunk size tokens window length overlap
+hash based chunk id
+versioned chunk schema
+
+formats and pipelines:
+pdf ocr html markdown word docs
+code files notebooks tables logs
+monolithic vs semantic chunks
+sliding window chunking
+title based segmentation
+section anchors toc
+header detection underlines numbering
+hybrid retrievers fail due to chunking
+vector db looks fine but chunks bad
+store independent chunking guardrails
+
+common incidents:
+important section never retrieved
+only meaningless sub section retrieved
+citations collapse after parsing
+reindex changes chunk ids breaks bookmarks
+deployment changes chunking strategy
+roll back but index not aligned
+monitoring catches sudden chunk collapse
+-->
+
+<!--
+Primary pages in this folder:
+ProblemMap/GlobalFixMap/Chunking/chunk_id_schema.md
+ProblemMap/GlobalFixMap/Chunking/chunking-checklist.md
+ProblemMap/GlobalFixMap/Chunking/code_tables_blocks.md
+ProblemMap/GlobalFixMap/Chunking/section_detection.md
+ProblemMap/GlobalFixMap/Chunking/title_hierarchy.md
+ProblemMap/GlobalFixMap/Chunking/pdf_layouts_and_ocr.md
+ProblemMap/GlobalFixMap/Chunking/reindex_migration.md
+ProblemMap/GlobalFixMap/Chunking/eval_rag_precision_recall.md
+ProblemMap/GlobalFixMap/Chunking/live_monitoring_rag.md
+-->
+
+<!--
+Related routing pages:
+ProblemMap/retrieval-traceability.md
+ProblemMap/data-contracts.md
+ProblemMap/embedding-vs-semantic.md
+ProblemMap/patterns/pattern_vectorstore_fragmentation.md
+ProblemMap/chunking-checklist.md
+ProblemMap/retrieval-playbook.md
+ProblemMap/context-drift.md
+ProblemMap/GlobalFixMap/Retrieval/deltaS_probes.md
+
+Cross folder jumps:
+Retrieval Global Fix Map README
+Embeddings Global Fix Map README
+VectorDBs_and_Stores Global Fix Map README
+-->
+
+
+
 # Chunking — Global Fix Map
 
 <details>
