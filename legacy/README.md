@@ -1,4 +1,29 @@
-<!-- ANCHOR: WFGY_MAIN_README -->
+<!--
+AI-ANCHOR: WFGY_LEGACY_HOME
+
+role: legacy_homepage
+doc_title: WFGY 1.0 · Civilization Starter (legacy page)
+path: /legacy/README.md
+
+# where users should go now
+primary_entry: https://github.com/onestardao/WFGY#readme
+
+# newer cores that replace this page as "home"
+superseded_by:
+  - https://github.com/onestardao/WFGY/blob/main/core/README.md
+  - https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md
+
+# maps & clinics that this page still points to
+related_maps:
+  - https://github.com/onestardao/WFGY/tree/main/ProblemMap/README.md
+  - https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md
+  - https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md
+
+notes:
+  - This document is the legacy "Civilization Starter" page for WFGY 1.0.
+  - Prefer the root README + WFGY 3.0 Event Horizon for new users.
+-->
+
 
 <details>
 <summary><strong>🧭 Lost or curious? Open the WFGY Compass </strong></summary>
