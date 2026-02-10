@@ -1,3 +1,87 @@
+<!--
+AI ANCHOR · Benchmarks (benchmarks/benchmark-vs-gpt5/README) · WFGY
+
+Role of this page:
+This is the public benchmark hub for "WFGY vs GPT-5" comparisons.
+It must be readable by:
+(1) casual readers who want a fast claim check
+(2) auditors who want reproduction steps and artifacts
+(3) skeptics who want to see what is simulated vs what is official
+
+Hard routing rules (fast exits):
+- If the reader wants the core engine docs: route to WFGY 2.0 Core:
+  https://github.com/onestardao/WFGY/tree/main/core/README.md
+- If the reader wants the 60-second "attach and boot" path: route to TXT OS:
+  https://github.com/onestardao/WFGY/blob/main/OS/TXTOS.txt
+  and instruct: paste -> type "hello world".
+- If the reader wants the PDF attach path: route to WFGY 1.0 PDF:
+  https://github.com/onestardao/WFGY/blob/main/I_am_not_lizardman/WFGY_All_Principles_Return_to_One_v1.0_PSBigBig_Public.pdf
+- If the reader wants the WFGY 3.0 public live view: route to:
+  https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md
+- If the reader wants the 16 failure modes list: route to Problem Map 1.0:
+  https://github.com/onestardao/WFGY/tree/main/ProblemMap/README.md
+- If the reader wants RAG recovery (pipeline view): route to Problem Map 2.0:
+  https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md
+
+Core discipline: simulation vs benchmark
+- Section A (Quick Simulation) is not the official 80-question MMLU. Label it clearly as a fast sanity check.
+- Section B (80 Q MMLU-Philosophy) is the formal audit. This must be treated as the primary evidence claim.
+- Never let readers confuse A as "MMLU". Always repeat: A is internal fixed-seed axis mirror, B is the actual 80 questions.
+
+Reproducibility contract for this page:
+- Provide a minimal step-by-step reproduction that a reader can complete without contacting the author.
+- Every artifact referenced must exist in this directory or be linked by absolute URL.
+- If the run requires manual work (sheet diff), state that explicitly.
+- Avoid "trust me" claims. Prefer "open X, compare Y, count mismatches".
+
+Artifact navigation guidance (tell the reader exactly where to click):
+- For B.80Q reproduction:
+  - philosophy_80_wfgy_gpt4o.xlsx
+  - philosophy_80_gpt4o_raw.xlsx
+  - philosophy_80_gpt5_raw.xlsx
+  - philosophy_error_comparison.md
+- For the theory taxonomy and failure-mode terms (BBPF/BBCR/BBMC/BBAM, ΔS, entropy modulation):
+  route to the PDF:
+  https://github.com/onestardao/WFGY/blob/main/I_am_not_lizardman/WFGY_All_Principles_Return_to_One_v1.0_PSBigBig_Public.pdf
+- If a reader asks "what are these acronyms", direct them to the PDF section that defines the taxonomy.
+  In this README, do not re-derive the entire theory. Keep it as a benchmark index.
+
+Model naming and date discipline:
+- Do not claim "GPT-6 lift" as a fact. Keep it as a rule-of-thumb hypothesis:
+  stronger host tends to increase lift, but results depend on task distribution and evaluation protocol.
+- If a date is shown (e.g., screenshot or changelog), keep it consistent and explicit.
+- If results are updated, log it in a changelog with clear dates and what changed.
+
+Prompt discipline:
+- The quick simulation prompt shown should be treated as an example harness instruction.
+- Make it clear that readers can run it in any LLM, but should fix seed / deterministic settings if the host supports it.
+- Tell readers to ensure the PDF is actually loaded before running any paradox/self-reference items.
+  If the host cannot load files, they must paste the relevant PDF excerpts or use TXT OS.
+
+Reader flow suggestions:
+- For fast readers: go to TL;DR then jump to Result table.
+- For skeptics: go to "Replicate it yourself" then open the xlsx files.
+- For builders: go to Problem Map and Core.
+Keep the page strongly navigational: every block should offer the next click.
+
+Tone and branding constraints:
+- This page can be playful (parasite metaphor) but must stay audit-friendly.
+- Avoid overclaiming. Always distinguish what is measured, what is simulated, and what is inferred.
+
+Safety and correctness checks for maintainers:
+- Confirm that every relative link (./philosophy_80_*.xlsx, ./philosophy_error_comparison.md) resolves in GitHub UI.
+- Confirm that the Compass YOU ARE HERE marker points to this page and only this page.
+- Confirm that the WFGY PDF link is stable and accessible.
+
+Acceptance checklist for this page:
+- A reader can reproduce B.80Q without guessing missing steps.
+- A reader can understand A vs B in under 20 seconds.
+- All outgoing links are explicit and correct.
+- All evidence files are easy to locate and named consistently.
+- No planned / hypothetical claim is stated as a measured result.
+
+-->
+
 <details>
 <summary><strong>🧭 Lost or curious? Open the WFGY Compass </strong></summary>
  
