@@ -1,3 +1,40 @@
+<!--
+Search Anchor:
+chatbot cx bugs
+customer support bot failures
+dialog management bugs
+intent recognition regression
+slot filling failures
+entity extraction drift
+context reset unexpectedly
+handoff to human agent broken
+omnichannel connector desync
+webhook timeout chatbot
+cold start latency chatbot
+p95 latency spike bot
+pii leakage in logs chatbot
+policy bypass chatbot
+prompt injection chatbot
+vendor migration chatbot broken
+conversation state missing
+kb retrieval drift chatbot
+
+Vendors / Pages:
+Dialogflow CX -> dialogflow_cx.md
+Rasa -> rasa.md
+Amazon Lex -> amazon_lex.md
+Azure Bot Service -> azure_bot_service.md
+Microsoft Copilot Studio -> microsoft_copilot_studio.md
+Intercom -> intercom.md
+Zendesk -> zendesk.md
+Twilio Studio -> twilio_studio.md
+Salesforce Einstein Bots -> salesforce_einstein_bots.md
+Watsonx Assistant -> watsonx_assistant.md
+Freshchat -> freshchat.md
+Freshdesk -> freshdesk.md
+-->
+
+
 # Chatbots & CX — Global Fix Map
 
 <details>
@@ -15,9 +52,9 @@
   > If you want full consultation and prescriptions, go back to the Emergency Room lobby.
 </details>
 
-A compact hub to stabilize **chatbot frameworks and customer experience stacks**.  
-Targets Dialogflow CX, Rasa, Intercom, Twilio Studio, Zendesk, Amazon Lex, Azure Bot Service, Salesforce Einstein Bots, Freshdesk, Watsonx Assistant, Microsoft Copilot Studio, and more.  
-Each page provides measurable acceptance targets and reproducible fixes.
+Chatbot and CX bugs are structural failures in dialog systems, where intent routing, slot/entity state, conversation memory, connector metadata, or knowledge retrieval breaks even when the underlying LLM is fine.
+
+Most incidents come from environment drift, schema mismatches, cold-start latency, connector desync, and weak policy fences. This folder maps symptoms to vendor pages and WFGY structural fixes with measurable acceptance targets.
 
 ---
 
