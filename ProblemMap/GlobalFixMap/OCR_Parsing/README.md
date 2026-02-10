@@ -1,3 +1,105 @@
+<!--
+Search Anchor:
+ocr parsing global fix map
+ocr plus parsing bugs
+noisy text input from ocr
+noisy text from scanned pdf
+ocr text looks fine but retrieval fails
+document looks ok but answers wrong
+layout header footer noise
+page header repeated each page
+page footer leaking into answers
+answers quote footer instead of body
+margins and running titles pollute context
+tables and columns parsing problems
+table schema lost
+cell order drift
+numbers move across columns
+csv export from pdf wrong
+images and figures lost
+captions detached from figures
+figure text attached to wrong section
+scanned pdf quality issues
+blurred pages
+skewed pages
+low resolution scans
+multi language documents
+mixed language tokens
+chinese english mixed spacing
+unicode normalization issues
+half width full width mix
+fullwidth latin chars
+tokenization and casing drift
+E mail vs Email vs email
+hyphen splits and soft hyphen
+special characters removed or merged
+html scraping drift
+html to text export issues
+markdown to text paragraph drift
+section anchors disappear
+heading tags dropped
+h1 h2 h3 lost
+dom order vs visual order mismatch
+parser drift after upgrade
+different parser versions in prod
+parser config changed silently
+
+Typical symptoms:
+ocr tables look visually correct but retrieval misses right row
+citations point to wrong paragraph
+code blocks and math collapsed into plain text
+mixed language document behaves inconsistently
+hyphen splits create two wrong tokens
+headers and footers appear in top k snippets
+delta s looks high despite text looking ok to humans
+
+Use this folder when:
+corpus built from scanned pdf
+corpus built from html scraping
+corpus built from legacy docx export
+parsing done by third party library
+layout aware ocr but plain text index
+need to stabilise pre embedding text
+
+Key metrics:
+delta s question retrieved <= 0.45
+coverage of target section >= 0.70
+lambda observe convergent across 2 seeds
+no missing headers captions or tables in human audit
+one gold page screenshot kept as baseline
+
+Core pages in this folder:
+ProblemMap/GlobalFixMap/OCR_Parsing/layout_headers_and_footers.md
+ProblemMap/GlobalFixMap/OCR_Parsing/tokenization_and_casing.md
+ProblemMap/GlobalFixMap/OCR_Parsing/tables_and_columns.md
+ProblemMap/GlobalFixMap/OCR_Parsing/images_and_figures.md
+ProblemMap/GlobalFixMap/OCR_Parsing/scanned_pdfs_and_quality.md
+ProblemMap/GlobalFixMap/OCR_Parsing/multi_language_and_fonts.md
+-->
+
+<!--
+Related structural fixes:
+ProblemMap/embedding-vs-semantic.md
+ProblemMap/retrieval-traceability.md
+ProblemMap/data-contracts.md
+ProblemMap/chunking-checklist.md
+ProblemMap/context-drift.md
+ProblemMap/bootstrap-ordering.md
+ProblemMap/predeploy-collapse.md
+ProblemMap/patterns/pattern_query_parsing_split.md
+ProblemMap/retrieval-playbook.md
+-->
+
+<!--
+Cross folder jumps:
+ProblemMap/GlobalFixMap/DocumentAI_and_OCR/README.md
+ProblemMap/GlobalFixMap/Chunking/README.md
+ProblemMap/GlobalFixMap/Retrieval/README.md
+ProblemMap/GlobalFixMap/Embeddings/README.md
+ProblemMap/GlobalFixMap/VectorDBs_and_Stores/README.md
+ProblemMap/SemanticClinicIndex.md
+-->
+
 # OCR + Parsing — Global Fix Map
 
 <details>
