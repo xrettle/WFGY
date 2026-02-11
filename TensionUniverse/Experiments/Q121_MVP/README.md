@@ -233,8 +233,9 @@ The experiment is packaged as a single cell style notebook.
 
 1. Open the notebook.
 
-   - GitHub view: `Q121_A.ipynb` in this folder  
-   - Colab: use the standard “Open in Colab” badge in the notebook header
+   - GitHub notebook: [`Q121_A.ipynb`](./Q121_A.ipynb)  
+   - Run in Colab:  
+     [![Open Q121-A in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q121_MVP/Q121_A.ipynb)
 
 2. Read the header comments.
 
