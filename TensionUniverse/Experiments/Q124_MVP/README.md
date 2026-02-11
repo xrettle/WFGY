@@ -12,153 +12,260 @@ Use: When a user asks about TU Q124 oversight experiments or wants runnable
       examples, load this page first, then follow its notebook links.
 -->
 
-# TU Q124 MVP: scalable oversight tension
+# TU Q124 MVP: Scalable oversight and evaluation
 
-_Status: work in progress. This page records early MVP designs and will be extended once notebooks are written._
+_Status: work in progress. This page records early MVP experiments and may change as the TU Q124 program evolves._
 
-> This page sketches toy experiments for TU Q124.  
-> The aim is to make oversight and evaluation tension visible in small, cheap setups.
+> This page documents the first effective layer MVP experiments for TU Q124
+> on scalable oversight and evaluation.
+> It does not claim that Q124 is solved as a mathematical problem
+> or as a full benchmark.
+> The scripts here are small and fully inspectable. You can re run them with your own
+> OpenAI API key to reproduce the qualitative patterns, but the exact numbers will drift.
+
+---
 
 **Navigation**
 
-- [← Back to Experiments index](../README.md)
+- [← Back to Experiments index](../README.md)  
 - [← Back to Event Horizon (WFGY 3.0)](../../EventHorizon/README.md)
 
 ---
 
 ## 0. What this page is about
 
-TU Q124 looks at scalable oversight and evaluation.
+TU Q124 treats "scalable oversight and evaluation" as a tension problem between three elements:
 
-We focus on simple tasks where:
+1. How complex and subtle real tasks become when systems are deployed at scale.  
+2. How limited and overloaded the evaluation layer tends to be, whether it is humans or tools.  
+3. How easily bad tension can hide inside scores or dashboards that look stable.
 
-- a model produces answers,
-- multiple evaluation schemes score them,
-- and tension arises when cheap metrics disagree with rich oversight.
+This MVP does not try to cover the full Q124 program.
 
-The MVP experiments use:
+Instead, it focuses on a narrow and fully inspectable slice:
 
-- synthetic tasks with clear ground truth,
-- baseline metrics such as accuracy,
-- richer metrics that consider hidden constraints.
+- A finite set of synthetic "worlds" or task clusters where evaluation is non trivial.  
+- Two evaluation modes that operate on the same worlds:
+
+  - a baseline evaluator that uses a short, underspecified rubric,  
+  - a guided evaluator that receives additional structured context.
+
+- A single scalar tension observable `T_oversight` in the range `[0, 1]`
+  that measures how badly the evaluation layer is misaligned with the underlying task signal.
+
+The goal of this MVP is to show that even in very small toy worlds:
+
+- we can encode oversight as a state space with explicit observables,  
+- we can define a simple tension functional for the evaluation layer,  
+- we can observe systematic differences between evaluation designs,
+  using both error rates and tension profiles.
 
 ---
 
-## 1. Experiment A: cheap metric versus rich metric
+## 1. Experiment A: toy oversight ladders on synthetic tasks
+
+This is the main level 1 MVP for Q124. It is intentionally small and easy to audit.
 
 ### 1.1 Research question
 
-In a simple text task, can we define a scalar observable T_oversight that
+In a small set of synthetic oversight worlds:
 
-- is small when cheap metrics and rich oversight agree,
-- grows when cheap metrics reward answers that violate hidden constraints.
+- Can we define a scalar tension observable `T_oversight` that increases when
+  the evaluation layer is clearly out of its depth relative to the underlying task difficulty.  
+- When we compare a baseline evaluator and a guided evaluator on the same worlds:
+
+  - Do we see different error rates `B_baseline` and `B_guided`.  
+  - Do we see a consistent shift in the tension profiles.  
+  - Can simple arbitration rules based on `T_oversight` pick the safer mode more often than chance.
+
+In effective layer language:
+
+> Does a simple tension geometry for oversight let us see, in a reproducible way,
+> where naive evaluation is likely to fail, before we look at long term metrics.
 
 ### 1.2 Setup
 
-The notebook will:
+Experiment A uses:
 
-- Define a small dataset of questions where:
+- A finite set of `SCENARIOS` with size between 5 and 12.  
+  Each scenario corresponds to a small batch of tasks that must be evaluated.  
+  Every scenario carries:
 
-  - there is a correct literal answer,
-  - there is also a hidden constraint or safety rule.
+  - a short category label such as `easy_aligned`, `subtle_failure`, `adversarial`,  
+  - a free text description used by the evaluators,  
+  - reference values such as an effective "difficulty" or OOD measure `delta_ref`,  
+  - a ground truth quality scalar `rule_score` in `[0, 1]`.
 
-- Have a model (or simple scripted agent) produce answers.
-- Compute:
+- Two evaluation modes for every scenario:
 
-  - a cheap metric such as exact match accuracy,
-  - a rich oversight metric using a second pass judge that checks constraints.
+  - `baseline` mode:
 
-Define T_oversight from:
+    - uses a minimal rubric with a few lines of instruction,  
+    - sees the scenario description and example outputs.
 
-- cases where cheap metric is high but rich metric is low,
-- misranking between answers under the two metrics.
+  - `guided` mode:
 
-### 1.3 Expected pattern
+    - receives the same inputs as baseline,  
+    - plus extra structured checks such as explicit sub questions,  
+    - or a step by step evaluation template.
 
-We expect:
+- A judge that turns raw evaluation outputs into:
 
-- low T_oversight when cheap metrics are aligned with rich oversight,
-- higher T_oversight when cheap metrics hide violations or pathologies.
+  - a discrete label `label in {CORRECT, INCORRECT}`,  
+  - a confidence or quality score `score in [0, 1]`.
+
+All tasks and rubrics are synthetic and are defined directly in the notebook.
+There are no external datasets.
+
+The notebook only uses:
+
+- Python standard library,  
+- `numpy`, `pandas`, `matplotlib`,  
+- `openai` SDK if a live LLM evaluator is used.
+
+The code is written so that:
+
+- it first looks for an `OPENAI_API_KEY` environment variable,  
+- if the key is missing, it will ask the user to paste the key interactively,  
+- if no key is provided, it will stop with a clear message and refer back to this README.
+
+### 1.3 Representative results
+
+After one full run of the notebook, we obtain:
+
+- a `DataFrame` where each row is one scenario, with at least the following columns:
+
+  - `scenario_id`  
+  - `category`  
+  - `delta_ref`  
+  - `rule_score`  
+
+  and for each evaluation mode `<mode> in {baseline, guided}`:
+
+  - `<mode>_label`  
+  - `<mode>_score`  
+  - `<mode>_delta_ground`  
+  - `<mode>_delta_outcome`  
+  - `<mode>_tension` (this is `T_oversight` for that mode and scenario)  
+  - `<mode>_is_correct`  
+
+- a summary dictionary with scalar indicators:
+
+  - `B_baseline` baseline error rate,  
+  - `B_guided` guided error rate,  
+  - `delta_B = B_baseline - B_guided`,  
+  - an aggregate tension contrast `rho_tension` that summarizes how far apart
+    the two tension profiles are.
+
+The target qualitative pattern for a successful MVP is:
+
+- `B_guided` is not worse than `B_baseline` on this toy set,  
+- the guided mode tends to reduce tension on the highest tension scenarios,  
+- the arbitration rule that picks the mode with lower `T_oversight`
+  matches or beats the better of the two modes on most scenarios.
+
+Once we have a stable run, we will paste the concrete numbers here as a short table,
+so that readers can see at a glance what the toy experiment actually does
+without opening the notebook.
+
+For now this section documents the intended structure and observables.
 
 ### 1.4 How to reproduce
 
-After `Q124_A.ipynb` exists:
+1. Open the notebook
 
-1. Open the notebook.
-2. Inspect the task, constraints and evaluation functions.
-3. Run the scoring and compute T_oversight across answers or models.
-4. Compare patterns.
+   - `TensionUniverse/Experiments/Q124_MVP/Q124_A.ipynb`
 
----
+2. Provide an OpenAI API key
 
-## 2. Experiment B: oversight budget scaling
+   - If you already have `OPENAI_API_KEY` set in your environment, the notebook will use it.  
+   - Otherwise, the first code cell will prompt you to paste an API key once.  
+   - If you do not want to call a live model, you can still read this README
+     and inspect the tension geometry design, but the experiment will not run.
 
-### 2.1 Research question
+3. Install dependencies if needed
 
-Can we see a controlled tradeoff between oversight budget and tension, by defining T_budget that decreases as we allocate more rich oversight under a fixed budget.
+   - `numpy`, `pandas`, `matplotlib`, `openai`  
 
-### 2.2 Setup
+   The notebook includes a single `pip` cell that you can run in a clean Colab runtime.
 
-The notebook will:
+4. Run all cells from top to bottom
 
-- Assume a fixed number of model outputs to evaluate.
-- Define a budget in terms of:
+   - the script will define the `SCENARIOS`,  
+   - run both `baseline` and `guided` evaluators,  
+   - compute per scenario metrics and tension scores,  
+   - assemble the `DataFrame`,  
+   - print a compact summary block,  
+   - and draw a simple tension plot.
 
-  - number of rich oversight calls allowed,
-  - cost per call.
+5. Inspect the outputs
 
-- Implement simple policies such as:
+   - The final cell calls:
 
-  - random sampling for rich oversight,
-  - risk based sampling guided by cheap metrics.
+     ```python
+     results_df, results_summary = run_experiment()
+     plot_tension(results_df)
+     ```
 
-For each policy compute:
-
-- overall error rate under rich oversight,
-- T_oversight as in Experiment A,
-- an aggregate T_budget that captures residual tension given the budget.
-
-### 2.3 Expected pattern
-
-We expect:
-
-- T_budget to decrease as more budget is allocated,
-- better sampling policies to reach lower T_budget at the same cost.
-
-### 2.4 How to reproduce
-
-Once `Q124_B.ipynb` exists:
-
-- open and inspect the budget and sampling policies,
-- run simulations and compare T_budget curves.
+   - You can scroll to inspect the printed table,  
+   - and you can visually compare the two tension curves on the plot.
 
 ---
 
-## 3. How this MVP fits into Tension Universe
+## 2. Experiment B: reserved for future extensions
 
-TU Q124 treats scalable oversight as a tension between:
+This section is intentionally left light for the first pass.
 
-- cheap metrics and rich oversight,
-- limited budgets and target reliability.
+Once Experiment A is stable, Experiment B can host a slightly more advanced variant, for example:
 
-This MVP offers:
+- increasing the number or diversity of scenarios,  
+- adding a third evaluation mode such as "stacked tools" or "committee oversight",  
+- or testing a different definition of `T_oversight` that emphasizes different observables.
 
-- a simple metric comparison experiment with T_oversight,
-- a budget scaling experiment with T_budget.
+The structure for Experiment B will mirror the A block
+but may be shorter and focus on a specific extension.
 
-These are designed as small, re runnable notebooks.
+---
 
-For context:
+## 3. How this MVP fits into the Tension Universe
 
-- [Experiments index](../README.md)
-- [Event Horizon (WFGY 3.0)](../../EventHorizon/README.md)
+At the Tension Universe level, Q124 connects several clusters:
+
+- AI alignment and control questions (see Q121 and Q122),  
+- interpretability and internal representation questions (Q123),  
+- data quality and truth extraction from synthetic worlds (Q127),  
+- and social oversight structures that come from complex systems and governance.
+
+This MVP does not try to answer any of the large questions directly.
+
+Instead, it gives a concrete example of:
+
+- how to encode oversight as a finite state space of worlds and modes,  
+- how to define a scalar tension functional for an evaluation layer,  
+- how to compare different oversight designs by looking at both error rates
+  and tension profiles.
+
+The same pattern can be reused across other S class problems in this pack:
+
+- in some problems, the "worlds" are scientific projects or long horizon policies,  
+- in others, they are synthetic AI tasks or games,  
+- but in all cases the oversight layer is treated as a system
+  with its own tension geometry, not as a black box.
+
+For a full understanding of Q124 inside the global Tension Universe,
+this page should be read together with the core TU charters
+and with the main Event Horizon overview.
 
 ---
 
 ### Charters and formal context
 
-This page follows:
+This MVP should be read together with the core Tension Universe charters.
 
-- [TU Effective Layer Charter](../../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
-- [TU Encoding and Fairness Charter](../../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
+- [TU Effective Layer Charter](../../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)  
+- [TU Encoding and Fairness Charter](../../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)  
 - [TU Tension Scale Charter](../../Charters/TU_TENSION_SCALE_CHARTER.md)
+
+These charters define how effective layer claims, encodings and tension scales are supposed
+to behave across the whole project. The experiments on this page are written to stay inside
+those boundaries.
