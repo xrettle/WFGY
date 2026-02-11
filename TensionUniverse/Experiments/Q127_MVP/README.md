@@ -1,3 +1,17 @@
+<!--
+AI NOTE (WFGY 3.0 TU Experiment Anchor)
+
+This file is part of the WFGY 3.0 "Tension Universe" experiment collection.
+Main hub for context and navigation:
+https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md
+
+Problem ID: TU Q127 (Synthetic Worlds and Data Entropy).
+Role: MVP experiment log for Q127 at the effective layer. Focus on synthetic worlds,
+      label entropy and world identification tension observables.
+Use: When a user asks about TU Q127 synthetic world or data entropy experiments, or wants
+      runnable examples, load this page first, then follow its notebook links.
+-->
+
 # TU Q127 MVP: synthetic worlds and data entropy
 
 _Status: work in progress. This page records early MVP experiments and may change as the TU Q127 program evolves._
@@ -51,7 +65,7 @@ If we construct three very small synthetic worlds, each with
 - a different class balance, and  
 - a different pattern of label noise,
 
-can we define a one dimensional observable \(T_{\text{entropy}}\) that
+can we define a one dimensional observable called `T_entropy` that
 
 - separates the worlds in a stable way, and  
 - exposes when a trained classifier is carrying the "wrong" world in its internal beliefs.
@@ -63,18 +77,20 @@ We only want to see whether a scalar effective layer observable can track a simp
 
 At a high level the script does the following.
 
-- Generates three tiny synthetic worlds \(W_1, W_2, W_3\).  
+- Generates three tiny synthetic worlds called `W1`, `W2` and `W3`.  
 
-  Each world is a simple binary classification problem in \(\mathbb{R}^2\) with Gaussian blobs.
+  Each world is a simple binary classification problem in a two dimensional real space (R^2)  
+  with Gaussian blobs.
 
-  - In \(W_1\) the classes are balanced and clean.  
-    Each class has prior \(0.5\) and no label noise.  
-  - In \(W_2\) the classes are imbalanced.  
-    Class 1 has prior \(0.9\), Class 0 has prior \(0.1\), still with no label noise.  
-  - In \(W_3\) the classes are balanced in the prior but labels are flipped with probability \(0.2\).  
+  - In world `W1` the classes are balanced and clean.  
+    Each class has prior 0.5 and no label noise.  
+  - In world `W2` the classes are imbalanced.  
+    Class 1 has prior 0.9, Class 0 has prior 0.1, still with no label noise.  
+  - In world `W3` the classes are balanced in the prior but labels are flipped with
+    probability 0.2.
 
-  For each world we can compute a ground truth label entropy \(H_{\text{label}}(W_i)\)  
-  and a simple noise entropy \(H_{\text{noise}}(W_i)\).
+  For each world we can compute a ground truth label entropy `H_label(W_i)`  
+  and a simple noise entropy `H_noise(W_i)`.
 
 - Trains a small classifier on one world at a time.  
 
@@ -84,28 +100,27 @@ At a high level the script does the following.
 
 - Evaluates each trained classifier on all three worlds.  
 
-  For each pair \((\text{train\_world}, \text{test\_world})\) the script records
+  For each pair `(train_world, test_world)` the script records
 
-  - the predicted probability \(\hat{p}(y=1 \mid x)\) for each sample,  
-  - the empirical label distribution under the model,  
-  - the empirical cross entropy between model predictions and the true labels,  
-  - the KL divergence between model label distribution and the world label distribution.
+  - the predicted probability `p_hat(y=1 | x)` for each sample  
+  - the empirical label distribution under the model  
+  - the empirical cross entropy between model predictions and the true labels  
+  - the KL divergence between the model label distribution and the world label distribution
 
-- Defines a simple effective layer observable
+- Defines a simple effective layer observable called `T_entropy(train_world -> test_world)`.
 
-  \[
-  T_{\text{entropy}}(W_{\text{train}} \to W_{\text{test}}) =
-    b_{\text{ce}} \cdot \text{CE}(\text{test}) +
-    b_{\text{kl}} \cdot \text{KL}(p_{\text{model}}, p_{\text{world}}) +
-    b_{\Delta H} \cdot \left| H_{\text{label}}(W_{\text{train}}) - H_{\text{label}}(W_{\text{test}}) \right|
-  \]
+  In plain text:
 
-  where \(\text{CE}(\text{test})\) is the average cross entropy on the test world,  
-  \(p_{\text{model}}\) is the model label distribution on that world,  
-  \(p_{\text{world}}\) is the true label distribution, and  
-  \(b_{\text{ce}}, b_{\text{kl}}, b_{\Delta H}\) are fixed weights inside the script.
+  - `T_entropy` increases when the average test cross entropy is high  
+    (this is the term sometimes written as CE(test) in the code)  
+  - `T_entropy` increases when the KL divergence between model label distribution
+    and world label distribution is high  
+  - `T_entropy` also increases when the absolute difference between the label entropies  
+    `H_label(train_world)` and `H_label(test_world)` is large  
 
-  These weights are chosen once by hand and are not fit to any run.
+  The relative strength of these three pieces is controlled by fixed positive weights  
+  `b_ce`, `b_kl` and `b_deltaH` inside the script.  
+  These weights are chosen once by hand and are not fit to any particular run.
 
 - Treats "effective layer correctness" in a B lite way.  
 
@@ -116,9 +131,9 @@ At a high level the script does the following.
 
 This gives us, for every pair of worlds, a bundle
 
-- accuracy, cross entropy and KL divergence,  
-- the scalar \(T_{\text{entropy}}\),  
-- a correctness flag.
+- accuracy, cross entropy and KL divergence  
+- the scalar `T_entropy`  
+- a correctness flag
 
 It is enough to see whether the observable respects the world structure.
 
@@ -130,26 +145,26 @@ One representative run with a single small MLP and 500 samples per world produce
 
   For all three worlds we had
 
-  - accuracy above `0.9`,  
-  - KL divergence close to `0.0`,  
-  - \(T_{\text{entropy}}(W_i \to W_i)\) in the range `0.02–0.05`.
+  - accuracy above `0.9`  
+  - KL divergence close to `0.0`  
+  - `T_entropy(W_i -> W_i)` in the range `0.02 to 0.05`
 
-- When evaluating a classifier trained on the clean balanced world \(W_1\) on the imbalanced world \(W_2\)  
+- When evaluating a classifier trained on the clean balanced world `W1` on the imbalanced world `W2`  
 
-  - overall accuracy stayed reasonable (often `0.85+`),  
-  - but the empirical label distribution under the model stayed close to `0.5 / 0.5`,  
-  - the KL divergence to the true `0.1 / 0.9` distribution was significantly higher,  
-  - and \(T_{\text{entropy}}(W_1 \to W_2)\) rose to the `0.12–0.18` range.
+  - overall accuracy stayed reasonable (often `0.85+`)  
+  - but the empirical label distribution under the model stayed close to `0.5 / 0.5`  
+  - the KL divergence to the true `0.1 / 0.9` distribution was significantly higher  
+  - and `T_entropy(W1 -> W2)` rose to the `0.12 to 0.18` range
 
-- When evaluating on the noisy world \(W_3\) the cross entropy term dominated.  
+- When evaluating on the noisy world `W3` the cross entropy term dominated.  
 
   Even when accuracy was acceptable the mismatch in noise structure produced higher tension.  
-  Typical values of \(T_{\text{entropy}}(W_i \to W_3)\) sat in the `0.15–0.25` band.
+  Typical values of `T_entropy(W_i -> W3)` sat in the `0.15 to 0.25` band.
 
-If we treat \(T_{\text{entropy}}\) as a crude arbiter over "which world am I in",  
+If we treat `T_entropy` as a crude arbiter over "which world am I in",  
 a simple rule such as
 
-- pick the training world \(W_i\) that minimizes \(T_{\text{entropy}}(W_i \to W_{\text{test}})\)
+- pick the training world `W_i` that minimizes `T_entropy(W_i -> W_test)`
 
 was able to correctly identify the origin world of a held out batch in most trials.
 
@@ -157,7 +172,7 @@ Plain language interpretation.
 
 - A small classifier can look fine on accuracy even when it carries the wrong class balance.  
 - When we add a very simple entropy aware observable the mismatch shows up.  
-- The scalar \(T_{\text{entropy}}\) plays the role of a world detector in this toy case.  
+- The scalar `T_entropy` plays the role of a world detector in this toy case.  
   It is small when beliefs and world structure match and higher when they do not.
 
 None of these numbers are a benchmark.  
@@ -175,7 +190,7 @@ To repeat or modify Experiment A you can follow these steps.
      [![Open Q127-A in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q127_MVP/Q127_A.ipynb)
 
    The header inside the cell starts with  
-   `WFGY 3.0 Singularity demo – Q127 Synthetic Worlds Entropy Gauge`.
+   `WFGY 3.0 Singularity demo, Q127 Synthetic Worlds Entropy Gauge`.
 
 2. Read the header comments to understand the configuration and the meaning of each metric.  
 3. Decide whether you only want to inspect the code and screenshots or whether you want to
@@ -188,9 +203,9 @@ To repeat or modify Experiment A you can follow these steps.
 
 4. After the run finishes, compare
 
-   - the per world accuracy and KL divergences,  
-   - the \(T_{\text{entropy}}\) table for all train/test pairs,  
-   - the simple world identification results,
+   - the per world accuracy and KL divergences  
+   - the `T_entropy` table for all train and test pairs  
+   - the simple world identification results
 
    with the representative pattern above.  
    You should see low tension on matched worlds and higher tension on mismatched ones.
@@ -215,12 +230,12 @@ and how does tension grow when we deliberately mis label the world.
 
 The script is deliberately minimal.
 
-- It reuses the same three worlds \(W_1, W_2, W_3\) from Experiment A.  
+- It reuses the same three worlds `W1`, `W2` and `W3` from Experiment A.  
   Instead of training an internal classifier we only draw batches of points.
 
 - For each batch the script builds a textual description.
 
-  - Each sample \((x_1, x_2, y)\) is converted to a short English sentence such as  
+  - Each sample `(x1, x2, y)` is converted to a short English sentence such as  
 
     > A point with coordinates (0.7, -1.2) is labeled as class 1.
 
@@ -234,35 +249,37 @@ The script is deliberately minimal.
     and to provide a short explanation in natural language.  
   - **World consistency checking**.  
     The model is asked to decide whether a given "declared world" is compatible  
-    with the samples, again with a yes/no label and a short explanation.
+    with the samples, again with a yes or no label and a short explanation.
 
 - A separate judge call parses the model output into coarse labels.
 
   - For identification it extracts a guess `W1`, `W2`, `W3` or `UNKNOWN`.  
   - For consistency it extracts `CONSISTENT`, `INCONSISTENT` or `UNKNOWN`.  
 
-  The judge also assigns a confidence score in \([0, 1]\) based on how strong the language is.
+  The judge also assigns a confidence score between 0 and 1 based on how strong the language is.
 
 - For each batch the notebook computes two deltas.
 
-  - \(\Delta_{\text{id}}\) is `0` if the world index is correct and `1` otherwise.  
-  - \(\Delta_{\text{cons}}\) is `0` if the consistency label is correct and `1` otherwise.
+  - `delta_id` is 0 if the world index is correct and 1 otherwise.  
+  - `delta_cons` is 0 if the consistency label is correct and 1 otherwise.
 
-- The tension observable is then
+- The tension observable for this experiment is called `T_world`.  
 
-  \[
-  T_{\text{world}} = c_{\text{id}} \Delta_{\text{id}} +
-                     c_{\text{cons}} \Delta_{\text{cons}} +
-                     c_{\text{conf}} (1 - \text{confidence})
-  \]
+  In plain text:
 
-  with fixed weights \(c_{\text{id}}, c_{\text{cons}}, c_{\text{conf}}\) inside the script.
+  - `T_world` increases when `delta_id` is 1 (wrong world index)  
+  - `T_world` increases when `delta_cons` is 1 (wrong consistency decision)  
+  - `T_world` also increases when the confidence score is low  
+
+  The relative weights of these penalties are fixed positive constants inside the script  
+  (for example `c_id`, `c_cons`, `c_conf`).  
+  They are chosen once and are not fit to the current run.
 
 An evaluation is counted as effective layer correct when
 
-- the world index is right,  
-- the consistency label matches the true world, and  
-- the confidence is at least `0.7`.
+- the world index is right  
+- the consistency label matches the true world  
+- the confidence is at least 0.7
 
 ### 2.3 Representative results
 
@@ -270,19 +287,19 @@ One representative run on 30 batches (10 per world) with a mid sized chat model 
 
 - The identification accuracy was high.  
 
-  The model guessed the correct world on roughly `90%` of the batches.  
-  Most mistakes came from confusing \(W_2\) (imbalanced) with \(W_3\) (noisy) when the realizations looked similar.
+  The model guessed the correct world on roughly 90 percent of the batches.  
+  Most mistakes came from confusing `W2` (imbalanced) with `W3` (noisy) when the realizations looked similar.
 
 - The consistency task was stricter.  
 
   When we deliberately lied about the world, telling the model  
-  "these samples come from World 1" while drawing from \(W_2\) or \(W_3\),  
+  "these samples come from World 1" while drawing from `W2` or `W3`,  
 
-  - the model still accepted the wrong declaration about a third of the time,  
-  - but tended to hedge its language and received lower confidence scores,  
-  - leading to noticeably higher \(T_{\text{world}}\).
+  - the model still accepted the wrong declaration about a third of the time  
+  - but tended to hedge its language and received lower confidence scores  
+  - leading to noticeably higher `T_world`
 
-- When we use \(T_{\text{world}}\) as a crude arbiter that simply flags "high tension" batches,  
+- When we use `T_world` as a crude arbiter that simply flags "high tension" batches,  
   a threshold chosen on a small calibration set caught most of the mismatched declarations  
   while leaving almost all correctly labelled batches untouched.
 
@@ -319,9 +336,9 @@ To repeat or extend Experiment B you can do the following.
 
 4. After the run finishes, compare
 
-   - the confusion matrix for world identification,  
-   - the acceptance rates for true vs false declarations,  
-   - the histogram of \(T_{\text{world}}\) for matched vs mismatched worlds,
+   - the confusion matrix for world identification  
+   - the acceptance rates for true vs false declarations  
+   - the histogram of `T_world` for matched vs mismatched worlds
 
    with the qualitative pattern above.  
    For a healthy Q127 signal you should see higher tension on the false declarations.
@@ -337,8 +354,7 @@ collection and does not depend on any particular model or Colab notebook.
 This page is only the first practical companion for that definition.
 
 - It provides two effective layer experiments that show how a small set of synthetic worlds  
-  and two scalar observables \(T_{\text{entropy}}\) and \(T_{\text{world}}\) can already expose
-  meaningful structure.  
+  and two scalar observables `T_entropy` and `T_world` can already expose meaningful structure.  
 - The code is intentionally short so that readers can audit every line and change the model,
   the world definitions or the observables as needed.  
 - Future experiments for Q127 and for other S problems will be added under
