@@ -28,7 +28,7 @@ _Status: MVP A implemented (offline, single-cell notebook). MVP B is design-only
 
 **Colab**
 
-- [Q098_A · one-cell Anthropocene trajectories notebook](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q098_MVP/Q098_A.ipynb)  
+ [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q098_MVP/Q098_A.ipynb)
   (one click to open; no API key needed, fully offline)
 
 ---
@@ -71,7 +71,7 @@ and define a scalar observable `T_anthro` that is:
 The reference implementation lives in:
 
 - Notebook: `Q098_A.ipynb`  
-- Colab: [Q098_A · one-cell Anthropocene trajectories notebook](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q098_MVP/Q098_A.ipynb)
+ [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q098_MVP/Q098_A.ipynb)
 
 This MVP is fully offline. No API key is required.  
 You can read this page and the screenshots to understand the experiment.  
@@ -196,7 +196,7 @@ You do not need any key to understand or reproduce this experiment.
 To rerun the reference simulation:
 
 1. Open `Q098_A.ipynb` locally or use
-   [Q098_A · one-cell Anthropocene trajectories notebook](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q098_MVP/Q098_A.ipynb) in Colab.
+ [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q098_MVP/Q098_A.ipynb)
 2. Run the single code cell. The notebook:
 
    * prints the explanation header for the state variables, update rules, and safe region;
