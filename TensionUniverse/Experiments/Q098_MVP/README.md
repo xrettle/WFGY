@@ -136,7 +136,7 @@ In the reference run we simulate all three scenarios for 60 steps and track the 
 
 The figure below shows the result in the safe operating plane:
 
-![TU Q098_A · trajectories in (E, C) space](./Q098A_trajectories_E_C.png)
+![TU Q098_A · trajectories in (E, C) space](./Q098A.png)
 
 - All three scenarios start near the safe operating rectangle.
 - The balanced trajectory stays closer to the rectangle and overshoots less in `E`.
@@ -177,7 +177,7 @@ For the current reference run the summary table is:
 
 The bar chart `Q098A_T_anthro_bar.png` visualises the final column:
 
-![TU Q098\_A · T\_anthro per scenario](./Q098A_T_anthro_bar.png)
+![TU Q098\_A · T\_anthro per scenario](./Q098A2.png)
 
 The ordering matches the intended narratives:
 
