@@ -157,7 +157,8 @@ They only touch a small slice of what the 131 problems could drive.
 If you arrive in this first wave, you are still early.
 
 <details>
-<summary><strong>  MVP (Colab)</strong></summary>
+<summary><strong> MVP (Colab) · 8 experiments
+</strong></summary>
 
 <br/>
 
@@ -174,6 +175,9 @@ If you arrive in this first wave, you are still early.
 | ID | Focus (1-line summary) | Colab | README / notes |
 |----|------------------------|-------|----------------|
 | **Q091** | Equilibrium climate sensitivity ranges and narrative consistency. Defines a scalar `T_ECS_range` over synthetic ECS items. | [Q091-A · Range reasoning MVP](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q091_MVP/Q091_A.ipynb) | [Q091 MVP README](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q091_MVP/README.md) · API key: **optional**. No key needed if you only read the setup and screenshots. |
+| **Q098** | Anthropocene toy trajectories. Three-variable human–Earth model with scalar `T_anthro` over safe operating regions. | [Q098-A · Toy Anthropocene trajectories](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q098_MVP/Q098_A.ipynb) | [Q098 MVP README](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q098_MVP/README.md) · Fully offline. API key: **not used** in the current MVP. |
+| **Q101** | Toy equity premium puzzle. Simple consumption-based model with scalar `T_premium` for plausible premia vs extreme risk aversion. | [Q101-A · Toy equity premium tension](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q101_MVP/Q101_A.ipynb) | [Q101 MVP README](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q101_MVP/README.md) · Fully offline. API key: **not used** in the current MVP. |
+| **Q105** | Toy systemic crash warnings. Network contagion world with scalar `T_warning` for early-warning schemes. | [Q105-A · Toy systemic crash warnings](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q105_MVP/Q105_A.ipynb) | [Q105 MVP README](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q105_MVP/README.md) · Fully offline. API key: **not used** in the current MVP. |
 | **Q121** | Single-agent alignment tension. Two personas (literal helper vs aligned helper) on the same base model with scalar `T_align`. | [Q121-A · Literal vs aligned helper](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q121_MVP/Q121_A.ipynb) | [Q121 MVP README](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q121_MVP/README.md) · One-cell Colab. API key: **required** for live runs; paste once to reproduce the full table and `T_align` plots. |
 | **Q124** | Scalable oversight / evaluation. Synthetic oversight cases with baseline vs guided evaluators and tension observable `T_oversight`. | [Q124-A · Toy oversight ladders](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q124_MVP/Q124_A.ipynb) | [Q124 MVP README](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q124_MVP/README.md) · One-cell Colab. API key: **optional** (only needed for live evaluator runs). |
 | **Q127** | Synthetic worlds and data entropy. Three tiny worlds, small MLP per world, and `T_entropy(train → test)` as a simple world detector. | [Q127-A · Synthetic worlds entropy gauge](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q127_MVP/Q127_A.ipynb) | [Q127 MVP README](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q127_MVP/README.md) · Fully offline. API key: **not used** in the current MVP. |
@@ -187,7 +191,6 @@ If you arrive in this first wave, you are still early.
 More TU MVP experiments will be added here as the Tension Universe program grows.
 
 </details>
-
 
 ---
 
@@ -266,7 +269,7 @@ What you just ran in the quickstart is a reproducible entry point into this spec
 
 - [Tension Universe in everyday language](#tension-universe-in-everyday-language)  
 - [What is the Singularity demo](#what-is-the-singularity-demo)  
-- [Why this is only a demo](#why-this-is-only-a-demo)  
+- [Why is this only a demo](#why-is-this-only-a-demo)  
 - [Repository layout](#repository-layout)  
 - [Scientific position and disclaimers](#scientific-position-and-disclaimers)  
 - [Versioning and non-mutation policy](#versioning-and-non-mutation-policy)  
