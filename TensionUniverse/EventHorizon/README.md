@@ -103,7 +103,7 @@ notes:
 
 ## 💥 WFGY 3.0 · Singularity Demo 💥
 
-> The TXT is only structure. The real engine, and the real limit, is whatever your imagination does with the 131 problems.  
+> The TXT is only structure. The real engine, and the only real limit, is whatever your imagination does with the 131 problems.
 
 ![W3](https://github.com/user-attachments/assets/460b1fca-c1b2-4814-adde-60433fcbaa40)
 
