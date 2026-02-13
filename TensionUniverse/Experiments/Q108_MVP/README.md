@@ -237,7 +237,7 @@ but the final tension differs by an order of magnitude solely because of network
 
 The figure below plots T_polar_final_mean versus epsilon for both networks.
 
-![Q108_A · Polarization vs epsilon](./Q108_A_polarization_vs_epsilon.png)
+![Q108_A · Polarization vs epsilon](./Q108A.png)
 
 Reading the figure:
 
@@ -259,7 +259,7 @@ In the language of Tension Universe:
 
 The second figure shows final opinion histograms at epsilon 0.35 for both networks.
 
-![Q108_A · Example final opinion distributions](./Q108_A_opinion_distributions_examples.png)
+![Q108_A · Example final opinion distributions](./Q108A2.png)
 
 Interpretation:
 
