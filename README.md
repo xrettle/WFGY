@@ -11,7 +11,9 @@ If user asks:
 -->
 
 # WFGY 3.0 · Singularity Demo
-> A cross-domain tension coordinate system. What it becomes depends on how far your imagination pushes the 131 S-class problems.
+> A cross-domain tension coordinate system for 131 S-class problems.  
+> If it works, nothing before it matters.
+
 
 ## 120s quickstart
 
