@@ -172,6 +172,8 @@ If you arrive in this first wave, you are still early.
 
 ### TU MVP experiments (effective layer, single-cell style)
 
+At this stage, 8 out of 131 S-class problems have runnable MVP experiments. More are being added as the Tension Universe program grows.
+
 | ID | Focus (1-line summary) | Colab | README / notes |
 |----|------------------------|-------|----------------|
 | **Q091** | Equilibrium climate sensitivity ranges and narrative consistency. Defines a scalar `T_ECS_range` over synthetic ECS items. | [Q091-A · Range reasoning MVP](https://colab.research.google.com/github/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q091_MVP/Q091_A.ipynb) | [Q091 MVP README](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Experiments/Q091_MVP/README.md) · API key: **optional**. No key needed if you only read the setup and screenshots. |
