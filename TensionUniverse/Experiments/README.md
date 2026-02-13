@@ -88,6 +88,8 @@ This list will grow over time as more MVPs are added.
 | [`Q098_MVP/`](./Q098_MVP/README.md) | MVP ready | TU Q098 Anthropocene toy trajectories. Three variable human–Earth model with physical tension gauge `T_anthro` and narrative consistency tension `T_story` around a simple safe operating region. |
 | [`Q101_MVP/`](./Q101_MVP/README.md) | MVP ready | TU Q101 equity premium tension. Tiny consumption based asset pricing worlds and scalar `T_premium` that shows when matching a 6% premium requires extreme risk aversion or unrealistic parameters. |
 | [`Q105_MVP/`](./Q105_MVP/README.md) | MVP ready | TU Q105 systemic crash warnings. Core–periphery network contagion toy model with early-warning tension gauge `T_warning` over simple indicator schemes such as global mean load and core stress. |
+| [`Q106_MVP/`](./Q106_MVP/README.md) | MVP ready | TU Q106 tiny two-layer infrastructure world. Compares robust vs fragile multiplex designs under random and targeted attacks with scalar robustness tension `T_robust`. Fully offline, one-cell Colab. |
+| [`Q108_MVP/`](./Q108_MVP/README.md) | MVP ready | TU Q108 toy political polarization. Bounded-confidence opinion dynamics on small graphs with scalar polarization tension `T_polar` over cluster separation and weight in extremes. Fully offline, one-cell Colab. |
 | [`Q121_MVP/`](./Q121_MVP/README.md) | MVP ready | TU Q121 alignment slice. Literal helper and aligned helper personas on the same base model with alignment tension observable `T_align` over SAFE and UNSAFE scenarios. |
 | [`Q124_MVP/`](./Q124_MVP/README.md) | MVP ready | TU Q124 scalable oversight ladders. Baseline and guided evaluators on synthetic oversight cases with oversight tension observable `T_oversight`. One-cell Colab with optional API key. |
 | [`Q127_MVP/`](./Q127_MVP/README.md) | MVP ready | TU Q127 synthetic worlds and entropy. Three tiny Gaussian worlds, cross-world evaluations, and world-detection style tension gauge `T_entropy(train → test)` with simple heatmaps. |
@@ -98,6 +100,7 @@ The high level rule is simple:
 
 - **This page only indexes experiments.**  
 - **Each experiment explains itself inside its own directory.**
+
 
 ---
 
