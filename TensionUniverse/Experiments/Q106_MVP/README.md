@@ -64,7 +64,7 @@ In a toy multiplex network, can we define a scalar robustness tension `T_robust`
 
 The goal is a one-button experiment where this contrast is obvious from:
 
-- a single table of summary numbers, and
+- a single aggregated summary table printed in the notebook output, and
 - two figures that anyone can regenerate.
 
 ---
@@ -89,9 +89,8 @@ The notebook is written as a **single cell**:
    - run random and targeted attack scenarios at three damage levels,
    - propagate cross-layer cascades until they stabilize,
    - compute all observables and aggregate statistics,
-   - save a CSV of raw results,
-   - save two PNG figures in this directory,
-   - print a short robustness summary including `T_robust` for each design.
+   - print an aggregated summary table plus the design-level `T_robust`,
+   - save two PNG figures in this directory.
 
 No API keys are required. Everything is self-contained.
 
@@ -231,7 +230,7 @@ The notebook aggregates these into mean and standard deviation.
 
 ### 1.6 Observables and robustness tension T_robust
 
-For each run we record:
+For each run we track:
 
 - `S_power_final`  
   fraction of nodes in the giant component of the power layer after cascades.
@@ -253,6 +252,9 @@ For each run we record:
 We then aggregate by `(design, attack_type, attack_fraction)` to obtain:
 
 - means and standard deviations for all the above quantities.
+
+The aggregated summary table printed in the notebook output is exactly this
+per-design, per-scenario view.
 
 #### Declared robustness standard
 
@@ -284,22 +286,14 @@ Interpretation:
 - Larger `T_robust` values indicate designs that regularly fail to deliver
   the level of service they claim.
 
-The notebook prints a small table with `T_robust` for each design at the end
-of the run.
+The notebook prints this small `T_robust` table at the end of the run.
 
 ---
 
 ### 1.7 Files and figures produced by Experiment A
 
-When you run the notebook, Experiment A creates the following artifacts in
+When you run the notebook, Experiment A currently produces two files in
 this folder:
-
-- `Q106_A_results.csv`  
-  Raw per-run results (one row per trial).  
-  Columns include:
-  `design`, `attack_type`, `attack_fraction`, `run_id`,
-  `S_power_final`, `S_comm_final`, `S_multi_final`,
-  `initial_removed_fraction`, `cascade_removed_fraction`.
 
 - `Q106A.png`  
   Summary plot for service vs attack.  
@@ -326,8 +320,11 @@ These are the canonical “proof of life” for TU Q106_A.
 
 You should be able to run the cell once and then immediately see:
 
-- `Q106_A_results.csv` appear in the file browser,
-- `Q106A.png` and `Q106A2.png` appear and match the descriptions above.
+- the aggregated summary table and `T_robust` values in the notebook output,
+- `Q106A.png` and `Q106A2.png` appear in the file browser and match the
+  descriptions above.
+
+The figures are embedded here for quick inspection:
 
 ![Q106A · service vs attack](./Q106A.png)
 
@@ -382,7 +379,7 @@ In `Q106A2.png`, this appears as:
 
 #### Robustness tension numbers
 
-From the aggregated table we obtain:
+From the printed `T_robust` table we obtain:
 
 * Design R has `T_robust ≈ 0.0`
   (no scenario violates the declared robustness standard).
@@ -412,11 +409,10 @@ So:
 
 4. After execution finishes, verify:
 
-   * `Q106_A_results.csv` exists in the same directory.
+   * the aggregated summary table is printed in the output.
+   * the `T_robust` table shows Design R ≈ 0 and Design F ≈ 0.3.
    * `Q106A.png` and `Q106A2.png` are present, and match the descriptions in
      Section 1.7.
-   * The printed summary at the bottom includes design-level `T_robust`
-     values where Design R ≈ 0 and Design F ≈ 0.3.
 
 5. (Optional) Experiment:
 
@@ -494,7 +490,7 @@ Experiment A already provides:
 * a concrete two-layer multiplex model,
 * a scalar robustness tension `T_robust`,
 * reproducible artifacts
-  (`Q106_A_results.csv`, `Q106A.png`, `Q106A2.png`)
+  (`Q106A.png`, `Q106A2.png` plus the printed tables)
   that anyone can regenerate by running a single cell.
 
 Experiment B will extend this to narrative claims once implemented.
@@ -517,4 +513,3 @@ This page is written under:
 * [TU Effective Layer Charter](../../Charters/TU_EFFECTIVE_LAYER_CHARTER.md)
 * [TU Encoding and Fairness Charter](../../Charters/TU_ENCODING_AND_FAIRNESS_CHARTER.md)
 * [TU Tension Scale Charter](../../Charters/TU_TENSION_SCALE_CHARTER.md)
-
