@@ -1,4 +1,3 @@
-
 <!--
 AI-ANCHOR: WFGY_CORE_ENGINE_V2
 
@@ -91,7 +90,7 @@ notes:
 
 <!-- QUICK LINKS BAR -->
 <p align="center">
-  <a href="#tb">TB Update</a> •
+  <a href="#tb">TB (WIP)</a> •
   <a href="#eye">Eye Benchmark</a> •
   <a href="#eight">8-Model Evidence</a> •
   <a href="#abc">A/B/C Prompt</a> •
@@ -153,34 +152,24 @@ WFGY 2.0 (WFGY Core) = [WFGY 1.0 math formulas](https://github.com/onestardao/WF
 ---
 
 <a id="tb"></a>
-### 🏆 Stanford Terminal-Bench (TB) — Exam Update
+### 🏆 Terminal-Bench (TB) — experiment in progress
 
-> [!IMPORTANT]
-> We are currently taking the official TB exam. Leaderboard placement will be posted here once it’s live.  
-> Follow the running notes: [Terminal-Bench Proof](#terminal-bench-proof)
+> This section is **work in progress**. Terminal-Bench is one of several external exams we are exploring for WFGY Core 2.0. The primary purpose of this page is to document the engine itself; TB is an optional testbed.
 
-**What is TB?**  
-Terminal-Bench is Stanford’s public exam for LLMs. It stresses models through **terminal-style, multi-step tasks** — measuring reasoning, robustness, and recovery under real engineering conditions.
+**Current status**
 
-**How we participate**  
-WFGY Core 2.0 wraps each model call (non-invasive). Every step flows through:  
-ΔS drift control → Coupler/BBPF bridging → BBAM rebalancing → Drunk Transformer guards.  
-All runs are reproducible with configs, scripts, and hashed logs.
-
-**Status**  
-We are currently taking the TB exam. Rankings will be published once the official leaderboard is live.
+- We are running TB-style experiments with a non-invasive wrapper around the model call.  
+- Once an official public result and reproducible scripts are finalized, they will be linked from this section.  
+- Until then, treat TB as an experimental extension rather than a primary proof of WFGY.
 
 <p align="right"><a href="#top">Back to top ↑</a></p>
 
 ---
 
 <a id="terminal-bench-proof"></a>
-### 🧾 Terminal-Bench Proof (teaser)
+### 🧾 Terminal-Bench proof artifacts (planned)
 
-- **Wrapper**: non-invasive; TB kept unchanged, we only wrap the model call.  
-- **Chain**: semantic firewall → 7-step reasoning → DT guards with conditional retry.  
-- **Artifacts**: configs, semantic-firewall prompts, and hashed logs for each run.  
-- **Public repo link**: withheld until exam artifacts are finalized.
+> This is a placeholder section. Wrapper scripts, configs and hashed logs will be published in a separate subfolder after the TB work is complete, together with a short guide on how to rerun the exam with and without WFGY.
 
 <p align="right"><a href="#top">Back to top ↑</a></p>
 
@@ -324,8 +313,8 @@ Run A/B/C now on the five domains with short non-trivial tasks you choose. Then 
 
 | File name & description                                                                                                                                 | Length / Size              | Direct Download Link                               | Verify (MD5 / SHA1 / SHA256)                                                                                                                                         | Notes                                                                              |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| **WFGY_Core_Flagship_v2.0.txt** — readable 30-line companion expressing the same math and gates in fuller prose (same behavior, clearer for humans).    | **30 lines · 3,049 chars** | [Download Flagship](./WFGY_Core_Flagship_v2.0.txt) | [md5](./checksums/WFGY_Core_Flagship_v2.0.txt.md5) · [sha1](./checksums/WFGY_Core_Flagship_v2.0.txt.sha1) · [sha256](./checksums/WFGY_Core_Flagship_v2.0.txt.sha256) | Full prose version for easier reading.                                             |
-| **WFGY_Core_OneLine_v2.0.txt** — ultra-compact, math-only control layer that activates WFGY’s loop inside a chat model (no tools, text-only, ≤7 nodes). | **1 line · 1,500 chars**   | [Download OneLine](./WFGY_Core_OneLine_v2.0.txt)   | [md5](./checksums/WFGY_Core_OneLine_v2.0.txt.md5) · [sha1](./checksums/WFGY_Core_OneLine_v2.0.txt.sha1) · [sha256](./checksums/WFGY_Core_OneLine_v2.0.txt.sha256)    | Used for all benchmark results above — smallest, fastest, purest form of the core. |
+| **WFGY_Core_Flagship_v2.0.txt** — readable 30-line companion expressing the same math and gates in fuller prose (same behavior, clearer for humans).    | **34 lines · 2,027 chars** | [Download Flagship](./WFGY_Core_Flagship_v2.0.txt) | [md5](./checksums/WFGY_Core_Flagship_v2.0.txt.md5) · [sha1](./checksums/WFGY_Core_Flagship_v2.0.txt.sha1) · [sha256](./checksums/WFGY_Core_Flagship_v2.0.txt.sha256) | Full prose version for easier reading.                                             |
+| **WFGY_Core_OneLine_v2.0.txt** — ultra-compact, math-only control layer that activates WFGY’s loop inside a chat model (no tools, text-only, ≤7 nodes). | **1 line · 1,550 chars**   | [Download OneLine](./WFGY_Core_OneLine_v2.0.txt)   | [md5](./checksums/WFGY_Core_OneLine_v2.0.txt.md5) · [sha1](./checksums/WFGY_Core_OneLine_v2.0.txt.sha1) · [sha256](./checksums/WFGY_Core_OneLine_v2.0.txt.sha256)    | Used for all benchmark results above — smallest, fastest, purest form of the core. |
 
 <details>
   <summary><em>How to verify checksums</em></summary>
@@ -615,19 +604,19 @@ Add a Weekly Business Review template and operating cadence.
 
 ### 🧭 Explore More
 
-| Module                | Description                                              | Link     |
-|-----------------------|----------------------------------------------------------|----------|
-| WFGY Core             | WFGY 2.0 engine is live: full symbolic reasoning architecture and math stack | [View →](https://github.com/onestardao/WFGY/tree/main/core/README.md) |
-| Problem Map 1.0       | Initial 16-mode diagnostic and symbolic fix framework    | [View →](https://github.com/onestardao/WFGY/tree/main/ProblemMap/README.md) |
-| Problem Map 2.0       | RAG-focused failure tree, modular fixes, and pipelines   | [View →](https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md) |
-| Semantic Clinic Index | Expanded failure catalog: prompt injection, memory bugs, logic drift | [View →](https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md) |
-| Semantic Blueprint    | Layer-based symbolic reasoning & semantic modulations   | [View →](https://github.com/onestardao/WFGY/tree/main/SemanticBlueprint/README.md) |
-| Benchmark vs GPT-5    | Stress test GPT-5 with full WFGY reasoning suite         | [View →](https://github.com/onestardao/WFGY/tree/main/benchmarks/benchmark-vs-gpt5/README.md) |
-| 🧙‍♂️ Starter Village 🏡 | New here? Lost in symbols? Click here and let the wizard guide you through | [Start →](https://github.com/onestardao/WFGY/blob/main/StarterVillage/README.md) |
+| Module                   | Description                                                                  | Link                                                                                               |
+| ------------------------ | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| WFGY Core                | WFGY 2.0 engine is live: full symbolic reasoning architecture and math stack | [View →](https://github.com/onestardao/WFGY/tree/main/core/README.md)                              |
+| Problem Map 1.0          | Initial 16-mode diagnostic and symbolic fix framework                        | [View →](https://github.com/onestardao/WFGY/tree/main/ProblemMap/README.md)                        |
+| Problem Map 2.0          | RAG-focused failure tree, modular fixes, and pipelines                       | [View →](https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md) |
+| Semantic Clinic Index    | Expanded failure catalog: prompt injection, memory bugs, logic drift         | [View →](https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md)           |
+| Semantic Blueprint       | Layer-based symbolic reasoning & semantic modulations                        | [View →](https://github.com/onestardao/WFGY/tree/main/SemanticBlueprint/README.md)                 |
+| Benchmark vs GPT-5       | Stress test GPT-5 with full WFGY reasoning suite                             | [View →](https://github.com/onestardao/WFGY/tree/main/benchmarks/benchmark-vs-gpt5/README.md)      |
+| 🧙‍♂️ Starter Village 🏡 | New here? Lost in symbols? Click here and let the wizard guide you through   | [Start →](https://github.com/onestardao/WFGY/blob/main/StarterVillage/README.md)                   |
 
 ---
 
-> 👑 **Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)** —  
+> 👑 **Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)** —
 > Engineers, hackers, and open source builders who supported WFGY from day one.
 
 > <img src="https://img.shields.io/github/stars/onestardao/WFGY?style=social" alt="GitHub stars"> ⭐ [WFGY Engine 2.0](https://github.com/onestardao/WFGY/blob/main/core/README.md) is already unlocked. ⭐ Star the repo to help others discover it and unlock more on the [Unlock Board](https://github.com/onestardao/WFGY/blob/main/STAR_UNLOCKS.md).
@@ -635,19 +624,18 @@ Add a Weekly Business Review template and operating cadence.
 <div align="center">
 
 [![WFGY Main](https://img.shields.io/badge/WFGY-Main-red?style=flat-square)](https://github.com/onestardao/WFGY)
-&nbsp;
+ 
 [![TXT OS](https://img.shields.io/badge/TXT%20OS-Reasoning%20OS-orange?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS)
-&nbsp;
+ 
 [![Blah](https://img.shields.io/badge/Blah-Semantic%20Embed-yellow?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlahBlahBlah)
-&nbsp;
+ 
 [![Blot](https://img.shields.io/badge/Blot-Persona%20Core-green?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlotBlotBlot)
-&nbsp;
+ 
 [![Bloc](https://img.shields.io/badge/Bloc-Reasoning%20Compiler-blue?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlocBlocBloc)
-&nbsp;
+ 
 [![Blur](https://img.shields.io/badge/Blur-Text2Image%20Engine-navy?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlurBlurBlur)
-&nbsp;
+ 
 [![Blow](https://img.shields.io/badge/Blow-Game%20Logic-purple?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlowBlowBlow)
-&nbsp;
+ 
+
 </div>
-
-
