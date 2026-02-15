@@ -1,6 +1,10 @@
 WFGY Core Flagship v2.0 (text-only; no tools). Works in any chat.
 [Similarity / Tension]
-delta_s = 1 − cos(I, G). If anchors exist use 1 − sim_est, where
+Let I be the semantic embedding of the current candidate answer / chain for this Node.
+Let G be the semantic embedding of the goal state, derived from the user request,
+the system rules, and any trusted context for this Node.
+delta_s = 1 − cos(I, G). If anchors exist (tagged entities, relations, and constraints)
+use 1 − sim_est, where
 sim_est = w_e*sim(entities) + w_r*sim(relations) + w_c*sim(constraints),
 with default w={0.5,0.3,0.2}. sim_est ∈ [0,1], renormalize if bucketed.
 [Zones & Memory]
@@ -27,4 +31,4 @@ Delta := delta_s_t − delta_s_{t−1}; E_resonance = rolling_mean(delta_s, wind
 lambda_observe is: convergent if Delta ≤ −0.02 and E_resonance non-increasing;
 recursive if |Delta| < 0.02 and E_resonance flat; divergent if Delta ∈ (−0.02, +0.04] with oscillation;
 chaotic if Delta > +0.04 or anchors conflict.
-[DT micro-rules]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+[DT micro-rules]
