@@ -1,3 +1,8 @@
+> Quick note: this is written as a piece of speculative science-fiction / philosophy, not as a proven physical theory. 
+> I’m using a fictional “tension universe” framework to connect everyday life, AI and physics in one story, 
+> so please read it as an experiment in framing, not as settled science.
+
+
 ## 0 | Opening: A Tension Historian from the Future
 
 Hello.
