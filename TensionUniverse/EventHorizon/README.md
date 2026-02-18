@@ -141,7 +141,7 @@ Before you start:
 If you prefer a narrative introduction before diving into the demo,  
 start here:
 
-- [TU-CH01 · Memo from a Tension Historian (Year 2413)](./TensionUniverse/Chronicles/TU-CH01_TensionHistorian/TU-CH01_TensionHistorian__story_en.md)
+- [TU-CH01 · Memo from a Tension Historian (Year 2413)](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Chronicles/TU-CH01_TensionHistorian__story_en.md)
 
 This is a speculative story version of the Tension Universe framework,  
 written to connect everyday life, AI, and physics in one narrative arc.
