@@ -1,10 +1,10 @@
+# TU-CH02 · Human Tension  
+*Story · English · TensionUniverse Chronicles*
 > This is speculative science fiction, not a proven physical theory.  
 > “Tension Universe” is a fictional framing device.  All stories are MIT licensed — remix and build freely.
 
-# TU-CH02 · Human Tension  
-*Story · English · TensionUniverse Chronicles*
+<img width="1536" height="1024" alt="TU002 (1)" src="https://github.com/user-attachments/assets/9f971660-6aa7-42ef-b693-334944fa1ca6" />
 
----
 
 ## 1 | Why a Tension Historian starts with crushes, not black holes
 
