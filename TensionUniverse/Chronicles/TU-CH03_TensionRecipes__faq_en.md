@@ -249,18 +249,6 @@ Inside the fiction of the Tension Universe, we tell stories where everything fro
 
 The recipes in TU-CH03 are best understood as a shared language that lets those domains talk to each other without pretending that one model already rules them all. If you want hard evidence and formal guarantees, you should always go back to the specific technical documents, experiments, and mathematical work in the rest of WFGY.
 
----
-
-## 5 | Further reading inside WFGY
-
-If TU-CH03 resonates with you, the following parts of the repository offer deeper or more technical views of similar ideas:
-
-- [TensionUniverse/EventHorizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md) for the high level map of WFGY 3.0 Singularity Demo.  
-- [TensionUniverse/BlackHole](https://github.com/onestardao/WFGY/tree/main/TensionUniverse/BlackHole) for the 131 S class questions that apply tension patterns to physics, climate, finance, AI, and more.  
-- [TensionUniverse/Experiments](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Experiments/README.md) for reproducible runs and observable tension patterns.  
-- WFGY ProblemMap for a more engineering focused view of how tension and semantic failure modes appear in AI pipelines.
-
-You can also explore the community discussions at r/TensionUniverse, where these concepts are used in everyday stories, questions, and experiments.
 
 ---
 
@@ -269,7 +257,9 @@ You can also explore the community discussions at r/TensionUniverse, where these
 | Section | Description |
 |----------|-------------|
 | [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md) | Official entry point of Tension Universe (WFGY 3.0 Singularity Demo) |
+| [Chronicles](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Chronicles/README.md) | Long-form story arcs and parallel views (story / science / FAQ) |
 | [BlackHole Archive](https://github.com/onestardao/WFGY/tree/main/TensionUniverse/BlackHole) | 131 S-class problems (Q001–Q131) encoded in Effective Layer language |
 | [Experiments](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Experiments/README.md) | Reproducible MVP runs and observable tension patterns |
 | [Charters](https://github.com/onestardao/WFGY/tree/main/TensionUniverse/Charters) | Scope, guardrails, encoding limits and constraints |
 | [r/TensionUniverse](https://www.reddit.com/r/TensionUniverse/) | Community discussion and ongoing story threads |
+
