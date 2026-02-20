@@ -644,6 +644,7 @@ AI 對齊、控制問題、可解釋性、代理交互；
 | Section | Description |
 |----------|-------------|
 | [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md) | Tension Universe（WFGY 3.0 Singularity Demo）的官方入口頁 |
+| [Chronicles](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Chronicles/README.md) |長篇內容連載入口 (故事 / 科學 / FAQ) |
 | [BlackHole Archive](https://github.com/onestardao/WFGY/tree/main/TensionUniverse/BlackHole) | 以 Effective Layer 語言重新編碼的 131 題 S-class 問題（Q001–Q131） |
 | [Experiments](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Experiments/README.md) | 可重現的 MVP 實驗與可觀察的張力模式 |
 | [Charters](https://github.com/onestardao/WFGY/tree/main/TensionUniverse/Charters) | 範圍界定、守則、語言限制與系統約束說明 |
