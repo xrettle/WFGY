@@ -1,3 +1,5 @@
+# run_all_wfgy_modules.py 
+# Individual module smoke tests with human-readable comments
 from setuptools import setup, find_packages
 
 setup(
@@ -23,4 +25,5 @@ setup(
         ]
     },
 )
+
 
