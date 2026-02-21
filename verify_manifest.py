@@ -1,4 +1,4 @@
-# verify_manifest.py
+# verify_manifest.py 
 
 import os, sys
 
@@ -13,4 +13,5 @@ if missing:
     sys.exit(1)
 
 print("All files are present.")
+
 
