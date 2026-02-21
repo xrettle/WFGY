@@ -6,6 +6,8 @@
 
 This FAQ sits behind **TU-CH04_CosmicBedsheet__story_en.md** and **TU-CH04_CosmicBedsheet__science_en.md**. It is written for readers who like to argue, nitpick, or stress-test the metaphor before they decide whether it is useful.
 
+<img width="1536" height="1024" alt="TU_CosmicBedsheet_ (3)" src="https://github.com/user-attachments/assets/47fdf87c-949c-46ee-98eb-4dd64d1e1cb5" />
+
 ---
 
 ## 1 | About the metaphor itself
