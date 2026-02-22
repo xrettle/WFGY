@@ -102,12 +102,11 @@ notes:
 
 ---
 
-## 💥 WFGY 3.0 · Singularity Demo 💥
+# 💥 WFGY 3.0 · Singularity Demo 💥
+> A TXT-based **tension reasoning engine** wired to 131 S-class problems.  
+> Upload once, then ask it your hardest questions.  If it works, nothing before it matters.
 
 ![W3](https://github.com/user-attachments/assets/65b02ae5-4fc0-41f4-aae7-33add3f9949b)
-
-> One TXT file that turns any strong LLM into a **tension reasoning engine**.  
-> You ask the hardest questions you care about. It answers in a structured way, on top of a 131 problem world map.
 
 WFGY 3.0 is not a single clever prompt and not a new model.
 
@@ -133,10 +132,6 @@ If you only have a short amount of time, choose one of these paths:
 - **Understand the idea** → read [Tension Universe in everyday language](#tension-universe-in-everyday-language)  
 - **Build on it** → explore the [MVP experiments](#mvp-colab-10-experiments) and [Charters](#repository-layout)  
 - **Audit the backbone** → browse [Navigation index for the 131 S problems](#navigation-index-for-the-131-s-problems)  
-
-Before you start:
-
-> If it works for your own questions, nothing before it matters.
 
 ---
 
