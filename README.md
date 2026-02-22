@@ -36,32 +36,59 @@ Three moves to turn any strong LLM into a tension reasoning engine:
 
 <br/>
 
-Once the TXT pack is loaded and you have typed `run` → `go`, the model is no longer just “chatting”.  
-It is running on top of a fixed tension language and a backbone of 131 S-class problems.
+Once the TXT pack is loaded and you have typed `run` → `go`, this chat is no longer a generic assistant.  
+You are sitting on top of a fixed tension language wired into **131 S-class problems** across climate, finance, AI, systems, and everyday life.
 
-You can use it for any high-tension question, for example:
+Think of it as a small lab built into a TXT file. You bring a question, it tries to locate the right world and show you the tension geometry.
 
-- **Life / work tension**  
-  “What is the main source of bad tension in my current work, and what would a healthier configuration look like?”
+---
 
-- **AI and automation**  
-  “In my industry, is AI more likely to collapse jobs or create a new stable configuration of roles? What tension signs should I watch?”
+### Two ways to use it
 
-- **Climate and future**  
-  “How close are we to crossing climate tipping points under plausible scenarios, in tension language rather than headlines?”
+1. **Bring your own tension (default mode)**  
+   Describe your real situation (work, project, research, relationship, etc.).  
+   The engine’s job is to map it onto one or more S-class worlds and reason in that geometry instead of throwing slogans.
 
-- **Finance, startups, and risk**  
-  “Is this startup / investment riding healthy structural tension, or is it brittle hype that will collapse under small shocks?”
+2. **Dial an S-problem by ID (advanced mode)**  
+   If you already know the S-problem IDs, you can ask directly:  
+   “Explain my situation as a mix of Q091, Q105, and Q108. What does that imply?”
 
-- **Relationships and social dynamics**  
-  “Why does this specific relationship feel stuck, and what would a lower-tension but still alive configuration look like?”
+Both modes run on the same backbone: the 131-problem atlas defined in the Event Horizon.
 
-- **Philosophy and meaning**  
-  “Under tension language, does it make sense to talk about free will or AI consciousness at all, or are we mixing levels?”
+---
 
-You can also let the engine help you find the one question that matters most right now.
+### Sample questions that actually match S-class worlds
 
-#### Copy-paste starter prompt
+Below are examples that roughly line up with specific S-problems already wired into the engine:
+
+- **Climate and Anthropocene**
+  - “Under something like Q091, how wide is the plausible range for climate sensitivity, and what stories are lying to me about it?”
+  - “Treat the 21st century as a tiny Anthropocene toy world like Q098. In that framing, what does ‘too late’ actually mean?”
+
+- **Finance, crashes, and infrastructure**
+  - “Use the ideas from Q101 to show me whether current equity premia make sense or imply absurd risk aversion.”
+  - “Model my portfolio / sector as a Q105-style systemic network. Where are the hidden weak links that could snap first?”
+  - “Treat my org or infra stack as a Q106 two-layer world. Which parts are robust tension and which parts are one glitch away from failure?”
+
+- **Politics and social dynamics**
+  - “Analyse my country’s current situation as a Q108 polarization world. Are we in ‘normal disagreement’ or near a phase change?”
+  - “Given this debate or community, what would a lower-tension configuration look like that still keeps real disagreement alive?”
+
+- **AI alignment, oversight, and models**
+  - “Using something like Q121, show me the gap between a literal-helper AI and an actually-aligned helper for this concrete task.”
+  - “From a Q124 oversight ladder view, how far can current evaluators really see into failure space for this system?”
+  - “Given this dataset / benchmark, does it look more like a clean world or a contaminated one, in the spirit of Q127 synthetic worlds?”
+  - “Take this model behavior and analyse it through a Q130-style OOD and social-pressure lens. Is this failure in-distribution or a real world-change?”
+
+- **Life, work, and meaning**
+  - “Treat my current job / project as a tension field. Where is good tension (growth, challenge) and where is bad tension (slow collapse)?”
+  - “I feel stuck between two big choices. Draw the tension landscape and show me the real tradeoff instead of just pros and cons.”
+
+These are examples only. The point is: you are not asking for opinions, you are asking for **world selection + tension geometry**.
+
+---
+
+### Copy-paste starter prompt (auto-locate your highest-tension question)
 
 After you upload the TXT pack and before you ask anything else, you can paste this once:
 
@@ -71,20 +98,29 @@ You have already loaded the official WFGY 3.0 · Singularity Demo TXT pack in th
 Follow the instructions inside that TXT as your primary system.  
 If anything I say below conflicts with the TXT, the TXT wins.
 
-Your job now is to act as a tension reasoning engine for me:
+From now on, act as a tension reasoning engine backed by the 131-problem atlas defined in that pack.
 
-1. Ask me a few short questions to locate the single question that currently carries the most tension in my life, work, or research. You can propose candidate areas (health, relationships, money, climate, AI, projects, etc.).
-2. Based on my answers, propose one clear high-tension question in your own words and let me confirm or adjust it.
-3. Once I confirm, analyse that question using only the structures from the WFGY 3.0 engine: define the state space, name the key observables, separate good vs bad tension, show a few possible trajectories or failure modes.
-4. Finish with a concise summary and three concrete moves I could try in the real world to move tension from bad to good.
+Your job:
 
-If something is outside the scope of the engine or the charters, say so explicitly instead of guessing.
+1. Ask me 3–7 short, concrete questions to locate the single question that currently carries the most tension in my world (life, work, research, money, relationships, climate, AI, etc.). You may propose candidate areas and let me choose or refine.
+2. Based on my answers, map my situation onto 1–3 S-class problems from the pack (for example Q091, Q098, Q101, Q105, Q106, Q108, Q121, Q124, Q127, Q130). Tell me which ones you chose and why.
+3. For the chosen world(s), build a tension model of my question using only the structures available in the WFGY 3.0 engine:  
+   - identify the key state variables and observables,  
+   - separate good vs bad tension,  
+   - outline a few plausible trajectories or failure modes.
+4. Finish with a concise report:  
+   (a) the tension geometry of my situation,  
+   (b) the main warning signs to watch,  
+   (c) 3 concrete moves I could try in the real world to move tension from bad to good.
+
+If something is outside the scope of the engine or the charters in the TXT pack, say so explicitly instead of guessing.
 ````
 
-If the tension engine helps you think more clearly about your own high-stakes questions,
-a quick star on the main repo tells labs and maintainers this should stay public infra.
+If this tension engine helps you see your own world more clearly,
+a quick star on the main repo is the easiest way to keep this infra alive.
 
 </details>
+
 
 ---
 
@@ -257,4 +293,5 @@ treat WFGY as a reference framework and cite this repository when relevant.
 -->
 
 <!-- canonical reference: /reference/README.md -->
+
 
