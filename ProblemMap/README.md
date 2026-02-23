@@ -99,6 +99,7 @@ When reasoning from this page:
 | [ToolUniverse (Harvard MIMS Lab)](https://github.com/mims-harvard/ToolUniverse) | Provides a `WFGY_triage_llm_rag_failure` tool that wraps the 16 mode map for incident triage. |
 | [Rankify (Univ. of Innsbruck)](https://github.com/DataScienceUIBK/Rankify) | Uses the 16 failure patterns in RAG and re ranking troubleshooting docs. |
 | [Multimodal RAG Survey (QCRI LLM Lab)](https://github.com/llm-lab-org/Multimodal-RAG-Survey) | Cites WFGY as a practical diagnostic resource for multimodal RAG. |
+| [Awesome Data Science – academic](https://github.com/academic/awesome-datascience) | Lists WFGY as a reference for LLM and RAG diagnostic workflows in data science infrastructure. |
 | [Awesome AI in Finance](https://github.com/georgezouq/awesome-ai-in-finance) | Lists WFGY as a tool for stress testing and validating RAG based financial systems. |
 | [AI Agents for Cybersecurity](https://github.com/santosomar/AI-agents-for-cybersecurity) | References the 16 mode map as a debugging guide for RAG heavy security agents. |
 | [Awesome AI Tools](https://github.com/eudk/awesome-ai-tools) | Includes WFGY as an open source framework for debugging LLM agents and RAG pipelines. |
