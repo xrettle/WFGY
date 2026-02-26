@@ -16,6 +16,11 @@
   > If you need the full triage and all prescriptions, return to the Emergency Room lobby.
 </details>
 
+> **Evaluation disclaimer (cost reporting)**  
+> Any cost and efficiency numbers on this page come from specific runs with specific models and hardware.  
+> They are for comparison inside that context only and are not economic guarantees or universal prices.
+
+---
 
 This page defines how to measure and report **cost per correct answer** in retrieval-augmented and reasoning pipelines. Latency and accuracy alone are insufficient. Without cost analysis, systems regress into wasteful configurations.
 
