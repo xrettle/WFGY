@@ -8,6 +8,14 @@
 # 📊 Evaluation Playbook  
 *Ship metrics, not vibes — catch regressions before users do.*
 
+> **Evaluation disclaimer (WFGY)**  
+> This playbook describes practical recipes for evaluating and debugging AI pipelines.  
+> Any scores, rankings or labels produced by these methods are context dependent signals, not formal scientific proof.  
+> Results depend on the specific models, prompts, datasets and parameters used in each run.  
+> You should re run the experiments, vary the configuration and treat the numbers as guidance for engineering and operations, not as guarantees of real world safety or general model quality.
+
+---
+
 > **Who is this for?**  
 > – RAG owners tired of “looks fine on my prompt.”  
 > – Agent builders chasing flakey benchmark wins.  
