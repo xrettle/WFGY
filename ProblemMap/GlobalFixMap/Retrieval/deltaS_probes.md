@@ -16,6 +16,11 @@
   > If you need the full triage and all prescriptions, return to the Emergency Room lobby.
 </details>
 
+> **Evaluation disclaimer (ΔS probes)**  
+> ΔS based probes are WFGY diagnostic tools for tension in retrieval behavior.  
+> They highlight suspicious regions but do not by themselves prove that a system is correct or incorrect.
+
+---
 
 A compact playbook to measure semantic distance and catch failure modes before they surface in answers. Run these probes store-agnostic and model-agnostic. Use the readings to route fixes to the right WFGY pages.
 
