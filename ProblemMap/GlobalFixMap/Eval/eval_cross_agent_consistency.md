@@ -16,6 +16,11 @@
   > If you need the full triage and all prescriptions, return to the Emergency Room lobby.
 </details>
 
+> **Evaluation disclaimer (cross agent consistency)**  
+> Agreement between agents is measured with chosen prompts and roles and can still be wrong in absolute terms.  
+> Consistency scores are diagnostic tools, not proof that the agreed answer is true or safe.
+
+---
 
 **Goal**  
 Measure and enforce agreement between two independent validators: a **Scholar** (claims/citations checker) and an **Auditor** (policy/provenance/constraints gate). Produce (1) quantitative agreement (Percent Agreement & Cohen’s κ) and (2) a deterministic **conflict-resolution policy** for ship/no-ship.
