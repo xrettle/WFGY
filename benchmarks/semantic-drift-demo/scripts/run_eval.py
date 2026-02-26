@@ -6,6 +6,10 @@ Usage
 python scripts/run_eval.py --threshold 0.4
 """
 
+# Evaluation disclaimer (semantic drift demo):
+# The metrics and scores produced by this script are heuristic signals for one test setup.
+# They are not scientific proof and do not guarantee behavior outside the conditions used here.
+
 import json, argparse, os, pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
