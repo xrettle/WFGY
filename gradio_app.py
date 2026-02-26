@@ -1,3 +1,7 @@
+# Evaluation disclaimer (Gradio demo):
+# Scores and labels shown in this app come from specific prompts, models and datasets.
+# They are debugging aids, not scientific proof or product level guarantees.
+
 import wfgy_sdk as w, numpy as np, gradio as gr
 from wfgy_sdk.evaluator import compare_logits, pretty_print
 
