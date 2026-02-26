@@ -16,6 +16,11 @@
   > If you need the full triage and all prescriptions, return to the Emergency Room lobby.
 </details>
 
+> **Evaluation disclaimer (code switching)**  
+> All scores in this page come from chosen prompts and language mixes.  
+> They are diagnostics for one setup and should not be read as global rankings of multilingual ability.
+
+---
 
 A compact harness to verify **retrieval and reasoning under code-switching** and multilingual inputs. Use this to measure ΔS and λ across three variants of each question: source language, target language, and mixed script or code-switched.
 
