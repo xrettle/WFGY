@@ -1,5 +1,11 @@
 # Example 08 — Evaluate RAG Quality (Precision, Refusal, Citations)
 
+> **Evaluation disclaimer (example RAG quality)**  
+> The scores in this example come from one concrete RAG setup and prompt design.  
+> They are meant to show how to run an evaluation, not to claim that any model or stack is globally better.
+
+---
+
 **Goal**  
 Measure RAG quality with **deterministic, SDK-free** metrics so you stop guessing. We score **answer precision**, **refusal behavior** (over/under-refusal), and **citation hit rate** from traces you already generate in Examples 01–03.
 
