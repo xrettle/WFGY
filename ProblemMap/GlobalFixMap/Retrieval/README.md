@@ -99,6 +99,12 @@ chunk boundary mismatch
   > If you want full consultation and prescriptions, go back to the Emergency Room lobby.
 </details>
 
+> **Evaluation disclaimer (retrieval)**  
+> All retrieval scores and examples in this section come from controlled setups with chosen corpora and prompts.  
+> They help you compare retrieval strategies locally but are not universal rankings of models or vector stores.
+
+---
+
 A compact hub to stabilize retrieval quality across stacks, models, and stores.  
 Use this page to route symptoms to the exact structural fix and verify with measurable targets. No infra change required.
 
