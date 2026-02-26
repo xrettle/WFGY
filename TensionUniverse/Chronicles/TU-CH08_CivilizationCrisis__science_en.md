@@ -4,6 +4,9 @@
 > This is a speculative modeling sketch, not a finished theory of history or physics.  
 > It extends the ideas in the WFGY 3.0 Singularity Demo into a civilization scale toy model.
 
+<img width="1536" height="1024" alt="CivilizationCrisis (2)" src="https://github.com/user-attachments/assets/4f3625b5-2e6f-4131-87a7-eb7e07bebe92" />
+
+
 ---
 
 ## 1 ▹ Purpose and scope
