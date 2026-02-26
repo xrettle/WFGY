@@ -1,4 +1,9 @@
 # cli.py
+
+# Evaluation disclaimer (WFGY CLI):
+# Any evaluation commands in this CLI produce heuristic diagnostics for your local stack.
+# They should not be treated as formal benchmarks or guarantees of model safety or quality.
+
 import argparse, wfgy_sdk as w
 from wfgy_sdk.evaluator import compare_logits, pretty_print
 import numpy as np
@@ -19,4 +24,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
