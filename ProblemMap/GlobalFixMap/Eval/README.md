@@ -97,6 +97,14 @@ no smoke test subset for fast regression checks
   > If you want full consultation and prescriptions, go back to the Emergency Room lobby.
 </details>
 
+> **Evaluation disclaimer (GlobalFixMap · Eval)**  
+> The Eval section describes patterns and tools for building evaluation loops around AI systems.  
+> All example scores, thresholds and labels are illustrative and depend on the local environment in which they were produced.  
+> They should be read as diagnostic hints and design patterns rather than as evidence that any specific model or system has been scientifically validated.  
+> If you adopt these ideas, please re run the evaluations in your own stack, check sensitivity to configuration changes and document the limits of what your numbers actually support.
+
+---
+
 A hub to **prove fixes actually work and won’t regress**.  
 Use this folder when you want to validate that your RAG / LLM pipeline changes are stable, measurable, and reproducible.  
 The goal is to prevent “double hallucination,” enforce acceptance gates, and keep evaluation pipelines auditable.
