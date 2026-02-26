@@ -16,6 +16,11 @@
   > If you need the full triage and all prescriptions, return to the Emergency Room lobby.
 </details>
 
+> **Evaluation disclaimer (retrieval recipes)**  
+> These recipes show how to probe and score retrieval quality under specific assumptions.  
+> The resulting numbers are scenario bound heuristics and should not be presented as general proof of system quality.
+
+---
 
 A practical kit to score retrieval quality with small but reliable datasets. Use these recipes to detect metric mismatch, ordering variance, hybrid regressions, and chunk misalignment before they leak into answers.
 
