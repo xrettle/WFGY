@@ -16,6 +16,11 @@
   > If you need the full triage and all prescriptions, return to the Emergency Room lobby.
 </details>
 
+> **Evaluation disclaimer (RAG precision and recall)**  
+> Precision and recall here are computed in a controlled RAG scenario with specific data and judgement rules.  
+> They should be used to debug retrieval behavior, not as general claims about model intelligence.
+
+---
 
 This page defines how to measure **precision and recall** in RAG pipelines under the WFGY framework. It sets acceptance thresholds, common pitfalls, and structural fixes to keep evaluations meaningful and reproducible.
 
