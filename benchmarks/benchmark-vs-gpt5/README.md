@@ -110,6 +110,12 @@ Acceptance checklist for this page:
 
 # 📌 WFGY vs GPT-5 — The Logic Duel Begins
 
+> **Evaluation disclaimer (benchmark vs GPT-5)**  
+> This benchmark concept is an experimental WFGY design, not an official leaderboard or claim about any real GPT-5 system.  
+> Any future scores from this folder will depend on the concrete models, prompts and datasets used and must not be read as scientific proof of superiority.
+
+---
+
 > **WFGY Family 🪱 is the parasite pack for LLMs.** It latches onto any model and grows as the host grows.  
 > Your LLM gets stronger, we get stronger. No retraining, no settings, no updates.  
 > Every release in the family works the same way — the WFGY PDF is just one of them.
