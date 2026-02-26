@@ -16,6 +16,11 @@
   > If you need the full triage and all prescriptions, return to the Emergency Room lobby.
 </details>
 
+> **Evaluation disclaimer (governance gates)**  
+> Governance checks and scores here are example patterns for one org and threat model.  
+> They support decision making but are not legal guarantees or formal safety certifications.
+
+---
 
 A governance control page for **evaluation pipelines, approval gates, and release sign-off**.  
 Use this page when models are shipped without evaluation, when sign-offs are missing, or when evaluation metrics drift without detection.
