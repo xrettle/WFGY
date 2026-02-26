@@ -17,10 +17,9 @@
 </details>
 
 > **Evaluation disclaimer (benchmarking)**  
-> This document talks about benchmarking strategies for AI systems and RAG pipelines.  
-> The examples, scores and comparison plots are scenario specific and depend on the exact models, prompts, datasets and hardware that were used.  
-> They are intended as engineering guidance for local decision making, not as an official leaderboard or proof that one model is better in every setting.  
-> When you publish results based on these ideas, you should clearly state the scope and limitations of your benchmark and avoid over claiming what the numbers say.
+> All scores and examples on this page are scenario specific debug signals.  
+> They are not an official leaderboard or scientific proof and do not show that one model is always better.  
+> Use them as local guidance for your own stack and re run the setup when you change models, data or prompts.
 
 ---
 
