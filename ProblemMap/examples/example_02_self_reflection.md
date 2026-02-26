@@ -1,5 +1,11 @@
 # Example 02 — Self-Reflection Trace and Triage (No.1 Hallucination & No.2 Query Parsing)
 
+> **Evaluation disclaimer (self reflection)**  
+> This example shows how a model can reflect on its own answers under a specific prompt and setup.  
+> The reflections and scores are illustrative and do not prove that the model is generally self aware or reliable.
+
+---
+
 **Goal**  
 Turn raw traces into a **decision report** that tells you where the failure started: retrieval or generation.  
 No SDKs, no extra dependencies. Works with the trace produced in Example 01.
