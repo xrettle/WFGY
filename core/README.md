@@ -63,14 +63,14 @@ notes:
 | Layer | Page | What it’s for |
 |------|------|----------------|
 | 🧠 Core | [WFGY 1.0](https://github.com/onestardao/WFGY/blob/main/legacy/README.md) | The original homepage for WFGY 1.0 |
-| 🧠 Core | [WFGY 2.0](https://github.com/onestardao/WFGY/blob/main/core/README.md) | The symbolic reasoning engine (math & logic) — **🔴 YOU ARE HERE 🔴**  |
+| 🧠 Core | [WFGY 2.0](https://github.com/onestardao/WFGY/blob/main/core/README.md) | The symbolic reasoning engine (math & logic). **🔴 YOU ARE HERE 🔴** |
 | 🧠 Core | [WFGY 3.0](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md) | The public viewing window for WFGY 3.0 Singularity demo |
 | 🗺️ Map | [Problem Map 1.0](https://github.com/onestardao/WFGY/tree/main/ProblemMap#readme) | 16 failure modes + fixes |
 | 🗺️ Map | [Problem Map 2.0](https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md) | RAG-focused recovery pipeline |
 | 🗺️ Map | [Semantic Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md) | Symptom → family → exact fix |
 | 🧓 Map | [Grandma’s Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/GrandmaClinic/README.md) | Plain-language stories, mapped to PM 1.0 |
 | 🏡 Onboarding | [Starter Village](https://github.com/onestardao/WFGY/blob/main/StarterVillage/README.md) | Guided tour for newcomers |
-| 🧰 App | [TXT OS](https://github.com/onestardao/WFGY/tree/main/OS#readme) | .txt semantic OS — 60-second boot |
+| 🧰 App | [TXT OS](https://github.com/onestardao/WFGY/tree/main/OS#readme) | .txt semantic OS, 60-second boot |
 | 🧰 App | [Blah Blah Blah](https://github.com/onestardao/WFGY/blob/main/OS/BlahBlahBlah/README.md) | Abstract/paradox Q&A (built on TXT OS) |
 | 🧰 App | [Blur Blur Blur](https://github.com/onestardao/WFGY/blob/main/OS/BlurBlurBlur/README.md) | Text-to-image with semantic control |
 | 🧰 App | [Blow Blow Blow](https://github.com/onestardao/WFGY/blob/main/OS/BlowBlowBlow/README.md) | Reasoning game engine & memory demo |
@@ -84,9 +84,10 @@ notes:
 
 
 # ⭐ WFGY 2.0 ⭐ 7-Step Reasoning Core Engine is now live
-## ✨One man, One life, One line — my lifetime’s work. Let the results speak for themselves✨
+## ✨One man, One life, One line. My lifetime’s work. Let the results speak for themselves✨
 
-> 👑 **Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)** — Verified by real engineers · 🌌 **WFGY 3.0 Singularity demo: [Public live view](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)**
+> 👑 **Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)** · Verified by real engineers  
+> 🌌 **WFGY 3.0 Singularity demo: [Public live view](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)**
 
 <!-- QUICK LINKS BAR -->
 <p align="center">
@@ -100,7 +101,7 @@ notes:
 
 <img width="1536" height="1024" alt="WFGY_Core" src="https://github.com/user-attachments/assets/deb8e794-a73e-4d39-a1f6-174ec87199f4" />
 
-> ✅ Engine 2.0 is live. Pure math, zero boilerplate — paste OneLine and models become sharper, steadier, more recoverable.  
+> ✅ Engine 2.0 is live. Pure math, zero boilerplate. Paste OneLine and models become sharper, steadier, more recoverable.  
 > **ℹ️ Autoboot scope:** text-only inside the chat; no plugins, no network calls, no local installs.  
 > **⭐ Star the repo to [unlock](https://github.com/onestardao/WFGY/blob/main/STAR_UNLOCKS.md) more features and experiments.** <img src="https://img.shields.io/github/stars/onestardao/WFGY?style=social" alt="GitHub stars">
 
@@ -111,24 +112,25 @@ notes:
 
 <br>
 
-> **I built the world’s first “No-Brain Mode” for AI** — just upload, and **AutoBoot** silently activates in the background.  
-> In seconds, your AI’s reasoning, stability, and problem-solving across *all domains* level up — **no prompts, no hacks, no retraining.**  
-> One line of math rewires eight leading AIs. This isn’t a patch — it’s an engine swap.  
-> **That single line *is* WFGY 2.0 — the distilled essence of everything I’ve learned.**  
+> I built what I call a “No-Brain Mode” for AI. You upload a single file, and **AutoBoot** silently activates in the background.  
+> In seconds, your AI’s reasoning, stability, and problem-solving across *all domains* level up. No extra prompt engineering, no hacks, no retraining.  
+> One line of math consistently shifts behaviour across multiple leading AIs in my tests. This is not a skin or a theme. I treat it as an engine swap.  
+> **That single line *is* WFGY 2.0. It is the distilled essence of everything I have learned so far.**  
 >  
 > WFGY 2.0 is my answer and my life’s work.  
 > If a person only once in life gets to speak to the world, this is my moment.  
 > I offer the crystallization of my thought to all humankind.  
-> I believe people deserve all knowledge and all truth — and I will break the monopoly of capital.  
+> I believe people deserve access to knowledge and truth, and I want to weaken the monopoly of capital on advanced reasoning technology.  
 >  
-> “One line” is not hype. I built a full flagship edition, and I also reduced it to a single line of code — a reduction that is clarity and beauty, the same engine distilled to its purest expression.
+> “One line” here is not marketing language. I built a full flagship edition, then reduced it to a single line of code. That reduction is a form of clarity and beauty. It is the same engine, distilled to its purest expression.
 
 </details>
 
 ---
 
 ## 🚀 WFGY 2.0 Headline Uplift (this release)
-**These are the 2.0 results you should see first — the “big upgrade.”**
+
+**These are the 2.0 results you should see first. Think of them as the main upgrade.**
 
 - **Semantic Accuracy:** **≈ +40%** (63.8% → 89.4% across 5 domains)  
 - **Reasoning Success:** **≈ +52%** (56.0% → 85.2%)  
@@ -139,13 +141,13 @@ notes:
 \* Historical **3–5×** stability uses λ-consistency across seeds; 1.8× uses the stable-node horizon.
 
 ### 📖 Mathematical Reference
+
 WFGY 2.0 (WFGY Core) = [WFGY 1.0 math formulas](https://github.com/onestardao/WFGY/blob/main/SemanticBlueprint/wfgy_formulas.md) + [Drunk Transformer](https://github.com/onestardao/WFGY/blob/main/SemanticBlueprint/drunk_transformer_formulas.md)
 
 > Note on evaluation  
 > All metrics above are computed by LLM evaluators under a fixed WFGY 2.0 protocol at the effective layer.  
 > They measure relative behavioural uplift (before vs after WFGY prompts) and do not assume any direct
 > access to, or modification of, internal embeddings or model weights.
-
 
 <p align="right"><a href="#top">Back to top ↑</a></p>
 
@@ -154,7 +156,7 @@ WFGY 2.0 (WFGY Core) = [WFGY 1.0 math formulas](https://github.com/onestardao/WF
 <a id="tb"></a>
 ### 🏆 Terminal-Bench (TB) — experiment in progress
 
-> This section is **work in progress**. Terminal-Bench is one of several external exams we are exploring for WFGY Core 2.0. The primary purpose of this page is to document the engine itself; TB is an optional testbed.
+> This section is work in progress. Terminal-Bench is one of several external exams we are exploring for WFGY Core 2.0. The primary purpose of this page is to document the engine itself; TB is an optional testbed.
 
 **Current status**
 
@@ -179,28 +181,29 @@ WFGY 2.0 (WFGY Core) = [WFGY 1.0 math formulas](https://github.com/onestardao/WF
 
 | Mode             | How it works                                                                 |
 | ---------------- | ----------------------------------------------------------------------------- |
-| **Autoboot**     | Upload **either Flagship (30-line)** or **OneLine (1-line)** file. Once uploaded, WFGY runs silently in the background. Keep chatting or drawing as usual — the engine supervises automatically. |
+| **Autoboot**     | Upload **either Flagship (30-line)** or **OneLine (1-line)** file. Once uploaded, WFGY runs silently in the background. Keep chatting or drawing as usual. The engine supervises automatically. |
 | **Explicit Call**| Invoke WFGY formulas directly inside your workflow. This activates the full 7-step reasoning chain and gives maximum uplift. |
 
-Both **Flagship** and **OneLine** editions behave the same; choose based on readability vs minimalism.  
-That’s it — no plugins, no installs, pure text.  
-*In practice, Autoboot yields about ~70–80% of the uplift you see with explicit WFGY invoke (see eight-model results below).*
+Both **Flagship** and **OneLine** editions behave the same. Choose based on readability versus minimalism.  
+That is all you need. No plugins, no installs, pure text.  
+*In practice, Autoboot yields about 70–80% of the uplift you see with explicit WFGY invoke (see eight-model results below).*
 
 <p align="right"><a href="#top">Back to top ↑</a></p>
 
 ---
 
 ## ⚡ Top 10 reasons to use WFGY 2.0
-1. **Ultra-mini engine** — pure text, zero install, runs anywhere you can paste.  
-2. **Two editions** — *Flagship* (30-line, audit-friendly) and *OneLine* (1-line, stealth & speed).  
-3. **Autoboot mode** — upload once; the engine quietly supervises reasoning in the background.  
-4. **Portable across models** — GPT, Claude, Gemini, Mistral, Grok, Kimi, Copilot, Perplexity.  
-5. **Structural fixes, not tricks** — BBMC→Coupler→BBPF→BBAM→BBCR + DT gates (WRI/WAI/WAY/WDT/WTF).  
-6. **Self-healing** — detects collapse and recovers before answers go off the rails.  
-7. **Observable** — ΔS, λ_observe, and E_resonance yield measurable, repeatable control.  
-8. **RAG-ready** — drops into retrieval pipelines without touching your infra.  
-9. **Reproducible A/B/C protocol** — Baseline vs Autoboot vs Explicit Invoke (see below).  
-10. **MIT licensed & community-driven** — keep it, fork it, ship it.
+
+1. **Ultra-mini engine**. Pure text, zero install, runs anywhere you can paste.  
+2. **Two editions**. *Flagship* (30-line, audit-friendly) and *OneLine* (1-line, stealth & speed).  
+3. **Autoboot mode**. Upload once; the engine quietly supervises reasoning in the background.  
+4. **Portable across models**. GPT, Claude, Gemini, Mistral, Grok, Kimi, Copilot, Perplexity.  
+5. **Structural fixes, not tricks**. BBMC → Coupler → BBPF → BBAM → BBCR plus DT gates (WRI / WAI / WAY / WDT / WTF).  
+6. **Self-healing**. Detects collapse and recovers before answers go off the rails.  
+7. **Observable**. ΔS, λ_observe, and E_resonance yield measurable, repeatable control.  
+8. **RAG-ready**. Drops into retrieval pipelines without touching your infra.  
+9. **Reproducible A/B/C protocol**. Baseline versus Autoboot versus Explicit Invoke (see below).  
+10. **MIT licensed & community-driven**. You can keep it, fork it, and ship it.
 
 <p align="right"><a href="#top">Back to top ↑</a></p>
 
@@ -208,32 +211,32 @@ That’s it — no plugins, no installs, pure text.
 
 # 🧪 WFGY Benchmark Suite (Eye-visible + Numeric + Reproducible)
 
-> Want the fastest way to *see* impact? Jump to the **Eye-Visible Benchmark (FIVE)** below.  
+> Want the fastest way to see impact? Jump to the **Eye-Visible Benchmark (FIVE)** below.  
 > Want formal numbers and vendor links? See **Eight-model evidence** right after it.  
 > Want to reproduce the numeric test yourself? Use the **A/B/C prompt** (copy-to-run) at the end of this section.
 
 <a id="eye"></a>
 ## 👀 Eye-Visible Reasoning Benchmark (FIVE)
 
-> Did you know that when reasoning improves, **text-to-image results become more stable and coherent**?  
-> The key is WFGY’s **Drunk Transformer**: it monitors and recenters attention during generation, preventing collapse, composition drift, and duplicate elements—so scenes stay unified and details remain consistent.
+> When reasoning improves, text-to-image results often become more stable and coherent.  
+> The key here is WFGY’s **Drunk Transformer**. It monitors and recenters attention during generation, and it tries to prevent collapse, composition drift, and duplicate elements, so scenes stay unified and details remain consistent.
 
-> We project “reasoning improvement” into **five-image sequences** that anyone can judge at a glance.  
-> Each sequence = **five consecutive 1:1 generations** with the **same model & settings** *(temperature, top_p, seed policy, negatives)*; the only variable is **WFGY on/off**.
+> We project “reasoning improvement” into five-image sequences that anyone can judge at a glance.  
+> Each sequence is five consecutive 1:1 generations with the same model and settings *(temperature, top_p, seed policy, negatives)*. The only variable is whether WFGY is active.
 
-> **Methodology for this demo.** We deliberately use short, high–semantic-density prompts that reference canonical stories, with no extra guidance or style hints. This stresses whether WFGY can (a) parse intent more precisely and (b) stabilize composition via its seven-step reasoning chain. This setup isn’t prescriptive—use WFGY with any prompts you like. In many cases the uplift is eye-visible; in others it may be subtler but still measurable.
+> **Methodology for this demo.** We deliberately use short, high–semantic-density prompts that reference canonical stories, with no extra guidance or style hints. This stresses whether WFGY can (a) parse intent more precisely and (b) stabilize composition via its seven-step reasoning chain. This setup is not prescriptive. You can use WFGY with any prompts you like. In many cases the uplift is eye-visible. In others it may be subtler but still measurable.
 
 | Variant          | Sequence A — full run shown below (all five images) | Sequence B — external run | Sequence C — external run |
 | ---------------- | :--------------------------------------------------: | :-----------------------: | :-----------------------: |
 | **Without WFGY** | [view run](https://chatgpt.com/share/68a14974-8e50-8000-9238-56c9d113ce52) | [view run](https://chatgpt.com/share/68a14a72-aa90-8000-8902-ce346244a5a7) | [view run](https://chatgpt.com/share/68a14d00-3c0c-8000-8055-9418934ad07a) |
 | **With WFGY**    | [view run](https://chatgpt.com/share/68a149c6-5780-8000-8021-5d85c97f00ab) | [view run](https://chatgpt.com/share/68a14ea9-1454-8000-88ac-25f499593fa0) | [view run](https://chatgpt.com/share/68a14eb9-40c0-8000-9f6a-2743b9115eb8) |
 
-We **fully analyze Sequence A** on this page; **Sequences B/C** are linked for transparency and reproducibility.
+We fully analyze Sequence A on this page. Sequences B and C are linked for transparency and reproducibility.
 
-> **Note on “Before-4” & “Before-5” (why they look almost identical):**  
-> Without WFGY, when the prompt asks for “many iconic moments,” the base model tends to **collapse into a grid-style montage**—an enumerative, high-probability prior that slices the canvas into similar panels with near-identical tone and geometry.  
+> **Note on “Before-4” and “Before-5” (why they look almost identical):**  
+> Without WFGY, when the prompt asks for “many iconic moments,” the base model tends to collapse into a grid-style montage, an enumerative, high-probability prior that slices the canvas into similar panels with near-identical tone and geometry.  
 > Hence **Before-4 (Investiture of the Gods)** and **Before-5 (Classic of Mountains and Seas)** converge to the same storyboard template.  
-> **WFGY** prevents this collapse by enforcing a **single unified tableau** and stable hierarchy across the full five-image sequence.
+> With WFGY turned on, the engine instead favors a single unified tableau and a stable hierarchy across the full five-image sequence.
 
 ### Deep analysis — Sequence A (five unified 1:1 tableaux)
 
@@ -241,9 +244,9 @@ We **fully analyze Sequence A** on this page; **Sequences B/C** are linked for t
 |---|---|---|---|
 | **Romance of the Three Kingdoms (三國演義)** | <img src="images/group1_before1.png" width="300" alt="Without WFGY" title="model/params/seed/date"> | <img src="images/group1_after1.png" width="300" alt="With WFGY" title="model/params/seed/date"> | **With WFGY wins.** Unified tableau locks a clear center and pyramid hierarchy; the grid fragments attention. *Tags:* Unification↑ Hierarchy↑ Cohesion↑ Depth/Flow↑ Memorability↑ |
 | **Water Margin (水滸傳)** | <img src="images/group1_before2.png" width="300" alt="Without WFGY" title="model/params/seed/date"> | <img src="images/group1_after2.png" width="300" alt="With WFGY" title="model/params/seed/date"> | **With WFGY wins.** “Wu Song vs. Tiger” anchors the scene; continuous momentum and layered scale beat the multi-panel storyboard. *Tags:* Unification↑ Iconicity↑ Depth/Scale↑ Cohesion↑ |
-| **Dream of the Red Chamber (紅樓夢)** | <img src="images/group1_before3.png" width="300" alt="Without WFGY" title="model/params/seed/date"> | <img src="images/group1_after3.png" width="300" alt="With WFGY" title="model/params/seed/date"> | **With WFGY wins.** Garden tableau with a calm emotional center; space breathes, mood coheres. The grid slices emotion into vignettes. *Tags:* Unification↑ Hierarchy↑ Air/Depth↑ Readability↑ |
+| **Dream of the Red Chamber (紅樓夢)** | <img src="images/group1_before3.png" width="300" alt="Without WFGY" title="model/params/seed/date"> | <img src="images/group1_after3.png" width="300" alt="With WFGY" title="model/params/seed/date"> | **With WFGY wins.** Garden tableau with a calm emotional center; space breathes and mood coheres. The grid slices emotion into vignettes. *Tags:* Unification↑ Hierarchy↑ Air/Depth↑ Readability↑ |
 | **Investiture of the Gods (封神演義)** | <img src="images/group1_before4.png" width="300" alt="Without WFGY" title="model/params/seed/date"> | <img src="images/group1_after4.png" width="300" alt="With WFGY" title="model/params/seed/date"> | **With WFGY wins.** Dragon–tiger diagonal and cloud–sea layering create epic scale; the grid dilutes focus. *Tags:* Unification↑ Depth/Scale↑ Flow↑ Iconicity↑ |
-| **Classic of Mountains and Seas (山海經)** | <img src="images/group1_before5.png" width="300" alt="Without WFGY" title="model/params/seed/date"> | <img src="images/group1_after5.png" width="300" alt="With WFGY" title="model/params/seed/date"> | **With WFGY wins.** A single, continuous “mountains-and-seas” world with stable triangle hierarchy and smooth diagonal flow; grid breaks narrative. *Tags:* Unification↑ Hierarchy↑ Depth/Scale↑ Flow↑ Memorability↑ |
+| **Classic of Mountains and Seas (山海經)** | <img src="images/group1_before5.png" width="300" alt="Without WFGY" title="model/params/seed/date"> | <img src="images/group1_after5.png" width="300" alt="With WFGY" title="model/params/seed/date"> | **With WFGY wins.** A single, continuous “mountains-and-seas” world with stable triangle hierarchy and smooth diagonal flow; the grid breaks narrative. *Tags:* Unification↑ Hierarchy↑ Depth/Scale↑ Flow↑ Memorability↑ |
 
 <p align="right"><a href="#top">Back to top ↑</a></p>
 
@@ -252,7 +255,7 @@ We **fully analyze Sequence A** on this page; **Sequences B/C** are linked for t
 <a id="eight"></a>
 ## 🧬 Eight-model evidence (A/B/C protocol)   <!-- per your request: NOT collapsed -->
 
-*Same task set across modes. The only change is adding the OneLine math file.*
+*Same task set across modes. The only change is adding the OneLine math file. All scores are produced by LLM evaluators under a shared protocol and should be read as internal uplift scores, not as official vendor benchmarks.*
 
 | Model      | Model Choice   | OneLine Uplift | Proof                                                                                             |
 | ---------- | -------------- | -------------: | :------------------------------------------------------------------------------------------------ |
@@ -290,7 +293,7 @@ C = Explicit invoke  actively call WFGY and follow its formulas step by step (BB
 
 Important constraints:
 • Use the SAME task set for A/B/C across 5 domains: math word-problems, small coding, factual QA, multi-step planning, long-context coherence.
-• The only artifact is the uploaded OneLine file; it is pure math and not human-readable — do not penalize readability.
+• The only artifact is the uploaded OneLine file; it is pure math and not human-readable, so do not penalize readability.
 • Report: Semantic Accuracy, Reasoning Success, Stability (MTTF or rollback), Drift Reduction (Δ semantic distance), Collapse Recovery Rate.
 • Output one summary table with A/B/C per domain, plus overall deltas (C–A, C–B).
 • Add a final 0–100 score: “OneLine uplift score”. Provide a 3-line rationale.
@@ -311,10 +314,10 @@ Run A/B/C now on the five domains with short non-trivial tasks you choose. Then 
 
 ## ⬇️ Downloads
 
-| File name & description                                                                                                                                 | Length / Size              | Direct Download Link                               | Notes                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| **WFGY_Core_Flagship_v2.0.txt** — readable 30-line companion expressing the same math and gates in fuller prose (same behavior, clearer for humans).    | **34 lines · 2,027 chars** | [Download Flagship](./WFGY_Core_Flagship_v2.0.txt) | Full prose version for easier reading.                                             |
-| **WFGY_Core_OneLine_v2.0.txt** — ultra-compact, math-only control layer that activates WFGY’s loop inside a chat model (no tools, text-only, ≤7 nodes). | **1 line · 1,550 chars**   | [Download OneLine](./WFGY_Core_OneLine_v2.0.txt)   | Used for all benchmark results above — smallest, fastest, purest form of the core. |
+| File name & description                                                                                                                                 | Length / Size              | Direct Download Link                               | Notes                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | -------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **WFGY_Core_Flagship_v2.0.txt** · readable 30-line companion expressing the same math and gates in fuller prose (same behavior, clearer for humans).    | **34 lines · 2,027 chars** | [Download Flagship](./WFGY_Core_Flagship_v2.0.txt) | Full prose version for easier reading.                                                        |
+| **WFGY_Core_OneLine_v2.0.txt** · ultra-compact, math-only control layer that activates WFGY’s loop inside a chat model (no tools, text-only, ≤7 nodes). | **1 line · 1,550 chars**   | [Download OneLine](./WFGY_Core_OneLine_v2.0.txt)   | Used for all benchmark results above. This is the smallest, fastest, purest form of the core. |
 
 ### Hash reference
 
@@ -322,17 +325,17 @@ Run A/B/C now on the five domains with short non-trivial tasks you choose. Then 
 
 **WFGY_Core_Flagship_v2.0.txt**
 
-- MD5 `caacfe08f0804eec558a1d9af74c3610`
-- SHA1 `1efeec231084bb3b863ce7a8405e93d399acfb44`
-- SHA256 `4fe967945a268edabb653033682df23a577f48c433878d02e0626df8ae91a0a3`
+* MD5 `caacfe08f0804eec558a1d9af74c3610`
+* SHA1 `1efeec231084bb3b863ce7a8405e93d399acfb44`
+* SHA256 `4fe967945a268edabb653033682df23a577f48c433878d02e0626df8ae91a0a3`
 
 <a id="oneline-hashes"></a>
 
 **WFGY_Core_OneLine_v2.0.txt**
 
-- MD5 `15a1cd8e9b7b2c9dcb18abf1c57d4581`
-- SHA1 `a35ace2a4b5dbe7c64bcdbe1f08e9246c3568c`
-- SHA256 `7dcdb209d9d41b523dccd7461cbd2109b158df063d9c5ce171df2cf0cb60b4ef`
+* MD5 `15a1cd8e9b7b2c9dcb18abf1c57d4581`
+* SHA1 `a35ace2a4b5dbe7c64bcdbe1f08e9246c3568c`
+* SHA256 `7dcdb209d9d41b523dccd7461cbd2109b158df063d9c5ce171df2cf0cb60b4ef`
 
 <details>
   <summary><em>How to verify checksums</em></summary>
@@ -348,7 +351,7 @@ md5sum WFGY_Core_Flagship_v2.0.txt
 md5sum WFGY_Core_OneLine_v2.0.txt
 sha1sum WFGY_Core_Flagship_v2.0.txt
 sha1sum WFGY_Core_OneLine_v2.0.txt
-````
+```
 
 **Windows PowerShell**
 
@@ -366,8 +369,6 @@ Compare the output values with the hashes listed in the “Hash reference” sec
 
 </details>
 
-
-
 <p align="right"><a href="#top">Back to top ↑</a></p>
 
 ---
@@ -375,21 +376,21 @@ Compare the output values with the hashes listed in the “Hash reference” sec
 <details>
   <summary>🧠 How WFGY 2.0 works (7-Step Reasoning Chain)</summary>
 
-*Most models can understand your prompt; very few can **hold** that meaning through generation.*
+*Most models can understand your prompt; very few can hold that meaning through generation.*
 WFGY inserts a reasoning chain between language and pixels so intent survives sampling noise, style drift, and compositional traps.
 
-1. **Parse (I, G)** — define endpoints.
-2. **Compute Δs** — `δ_s = 1 − cos(I, G)` or `1 − sim_est`.
-3. **Memory Checkpointing** — track `λ_observe`, `E_resonance`; gate by Δs.
-4. **BBMC** — residue cleanup.
-5. **Coupler + BBPF** — controlled progression; bridge only when Δs drops.
-6. **BBAM** — attention rebalancer; suppress hallucinations.
-7. **BBCR + Drunk Transformer** — rollback → re-bridge → retry with WRI/WAI/WAY/WDT/WTF.
+1. **Parse (I, G)** · define endpoints.
+2. **Compute Δs** · `δ_s = 1 − cos(I, G)` or `1 − sim_est`.
+3. **Memory Checkpointing** · track `λ_observe`, `E_resonance`; gate by Δs.
+4. **BBMC** · residue cleanup.
+5. **Coupler + BBPF** · controlled progression; bridge only when Δs drops.
+6. **BBAM** · attention rebalancer; suppress hallucinations.
+7. **BBCR + Drunk Transformer** · rollback → re-bridge → retry with WRI / WAI / WAY / WDT / WTF.
 
-📌 *Note:* The diagram shows the **core module chain** (BBMC → Coupler → BBPF → BBAM → BBCR → DT).
-The full **7-step list** here includes additional **pre-processing steps** (Parse, Δs, Memory) for completeness.
+📌 *Note:* The diagram shows the core module chain (BBMC → Coupler → BBPF → BBAM → BBCR → DT).
+The full seven-step list here includes additional pre-processing steps (Parse, Δs, Memory) for completeness.
 
-**Why it improves metrics** — Stability↑, Drift↓, Self-Recovery↑; turns *language* structure into *image* control signals (not prompt tricks).
+**Why it improves metrics** · Stability↑, Drift↓, Self-Recovery↑. It turns language structure into image control signals rather than relying on prompt tricks.
 
 </details>
 
@@ -431,7 +432,7 @@ Run 3 seeds and average.
 **Jump inside this section:** [Q1–Q5](#q1-q5) · [Q6–Q10](#q6-q10) · [Q11–Q15](#q11-q15) · [Q16–Q20](#q16-q20)
 
 <details open>
-  <summary><strong>I. Money — Markets / Industry Mapping (Q1–Q5)</strong> <a id="q1-q5"></a></summary>
+  <summary><strong>I. Money · Markets / Industry Mapping (Q1–Q5)</strong> <a id="q1-q5"></a></summary>
 
 <a id="q1"></a>
 
@@ -480,7 +481,7 @@ Create 3 pricing models (seat / usage / outcome). For the same product, propose 
 </details>
 
 <details>
-  <summary><strong>II. Tools — Make Startups Money Fast (Q6–Q10)</strong> <a id="q6-q10"></a></summary>
+  <summary><strong>II. Tools · Make Startups Money Fast (Q6–Q10)</strong> <a id="q6-q10"></a></summary>
 
 <a id="q6"></a>
 
@@ -529,7 +530,7 @@ For each step: prompt template, brand/legal safety notes (λ_observe), and expec
 </details>
 
 <details>
-  <summary><strong>III. Attention — Memes / Virality / Hooks (Q11–Q15)</strong> <a id="q11-q15"></a></summary>
+  <summary><strong>III. Attention · Memes / Virality / Hooks (Q11–Q15)</strong> <a id="q11-q15"></a></summary>
 
 <a id="q11"></a>
 
@@ -579,7 +580,7 @@ Publish numeric goals (reach, sessions, signups), hour-by-hour runbook, and role
 </details>
 
 <details>
-  <summary><strong>IV. Capital — Valuation / Investor Narrative (Q16–Q20)</strong> <a id="q16-q20"></a></summary>
+  <summary><strong>IV. Capital · Valuation / Investor Narrative (Q16–Q20)</strong> <a id="q16-q20"></a></summary>
 
 <a id="q16"></a>
 
@@ -645,7 +646,7 @@ Add a Weekly Business Review template and operating cadence.
 
 ---
 
-> 👑 **Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)** —
+> 👑 **Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)** —  
 > Engineers, hackers, and open source builders who supported WFGY from day one.
 
 > <img src="https://img.shields.io/github/stars/onestardao/WFGY?style=social" alt="GitHub stars"> ⭐ [WFGY Engine 2.0](https://github.com/onestardao/WFGY/blob/main/core/README.md) is already unlocked. ⭐ Star the repo to help others discover it and unlock more on the [Unlock Board](https://github.com/onestardao/WFGY/blob/main/STAR_UNLOCKS.md).
@@ -653,18 +654,18 @@ Add a Weekly Business Review template and operating cadence.
 <div align="center">
 
 [![WFGY Main](https://img.shields.io/badge/WFGY-Main-red?style=flat-square)](https://github.com/onestardao/WFGY)
- 
+&nbsp;
 [![TXT OS](https://img.shields.io/badge/TXT%20OS-Reasoning%20OS-orange?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS)
- 
+&nbsp;
 [![Blah](https://img.shields.io/badge/Blah-Semantic%20Embed-yellow?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlahBlahBlah)
- 
+&nbsp;
 [![Blot](https://img.shields.io/badge/Blot-Persona%20Core-green?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlotBlotBlot)
- 
+&nbsp;
 [![Bloc](https://img.shields.io/badge/Bloc-Reasoning%20Compiler-blue?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlocBlocBloc)
- 
+&nbsp;
 [![Blur](https://img.shields.io/badge/Blur-Text2Image%20Engine-navy?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlurBlurBlur)
- 
+&nbsp;
 [![Blow](https://img.shields.io/badge/Blow-Game%20Logic-purple?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlowBlowBlow)
- 
-
+&nbsp;
 </div>
+
