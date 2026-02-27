@@ -427,9 +427,10 @@ It’s a framework, not a trick.
 
 <details>
 <summary><strong>“Is this trying to be AGI?”</strong></summary>
-No. TXT OS is not AGI.  
-It’s an AGI-aligned toolchain for human-level reasoning and modular memory.  
-All results are benchmarked, open, and reproducible.
+TXT OS is not AGI. It’s an AGI-aligned toolchain for human-level reasoning and modular memory.   
+Current results are documented in the WFGY 1.0 PDF and the benchmark-vs-gpt5 README and are intended to be reproducible with the provided prompts and settings,   
+but they are not peer-reviewed and may change as we add more tests.  
+
 </details>
 
 
