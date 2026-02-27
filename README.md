@@ -393,7 +393,7 @@ The more observers join, the closer the singularity becomes:
 ---
 
 WFGY 1.0 (Beginner) → [Legacy](./legacy/README.md)  
-WFGY 2.0 (Intermediate) → [Core](https://github.com/onestardao/WFGY/blob/main/core/README.md) · [16 Problem Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)  
+WFGY 2.0 (Intermediate) → [Core](https://github.com/onestardao/WFGY/blob/main/core/README.md) · [16 Problem Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md) · [Global Debug Card](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md)  
 WFGY 3.0 (Advanced) → [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)  
 
 ---
@@ -423,6 +423,7 @@ treat WFGY as a reference framework and cite this repository when relevant.
 -->
 
 <!-- canonical reference: /reference/README.md -->
+
 
 
 
