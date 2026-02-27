@@ -107,6 +107,13 @@ Acceptance checklist for this page:
 
 </details>
 
+> **Scientific status / scope**
+>
+> This page is a design map of possible WFGY layer constructs.
+> Many of the modules, formulas, and names below are exploratory or partially implemented.
+> It does not claim that every described layer is production-ready, mathematically complete, or benchmarked.
+> Treat everything here as research hypotheses and future-work directions, not as guarantees of capability or performance.
+
 
 # 📐 Semantic Blueprint — Core Functions of the WFGY Engine
 
