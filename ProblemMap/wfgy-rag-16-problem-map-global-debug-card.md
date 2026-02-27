@@ -10,7 +10,7 @@ No external framework required.
 
 ---
 
-![WFGY RAG 16 Problem Map Global Debug Card](./WFGY_RAG_16_Problem_Map_Global_Debug_Card_4K.png)
+![WFGY RAG 16 Problem Map Global Debug Card](./WFGY_RAG_16_Problem_Map_Global_Debug_Card.jpeg)
 
 ---
 
