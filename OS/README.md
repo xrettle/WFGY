@@ -99,7 +99,7 @@ Canonical files and artifacts:
 <summary>📋 What problems does TXT OS (with WFGY Engine) actually solve?</summary>
 <br>
 
-> TXT OS, built on the WFGY Engine, solves the reasoning failures most LLM pipelines can’t handle.  
+> TXT OS, built on the WFGY Engine, is designed to help with several reasoning failures that many LLM pipelines struggle with.  
 
 | Problem | Description |
 |--------|-------------|
@@ -142,11 +142,11 @@ Canonical files and artifacts:
 ---
 
 
-One line of TXT upgrades any LLM into an AGI-level reasoning engine
+One line of TXT adds a structured reasoning core on top of a strong LLM.  
+In one internal experiment (GPT-4, GSM8K + Truthful-QA, temp 0.2), this setup showed **+22.4% semantic accuracy · +42.1% reasoning success · ×3.6 stability** compared to a plain baseline. These numbers come from the WFGY 1.0 paper and should be treated as illustrative results, not as a universal guarantee across all models or tasks.  
 
-🧠 **+22.4% semantic accuracy · +42.1% reasoning success · ×3.6 stability** (GSM8K + Truthful-QA, temp 0.2)  
-🌲 **Semantic Tree Memory** — Long-term logic, no forgetting, fully exportable  
-🛡️ **Knowledge Boundary Shield** — Detects hallucinations before they happen  
+**Semantic Tree Memory** — Long-term logic, designed to reduce forgetting and keep reasoning traces exportable  
+️**Knowledge Boundary Shield** — Tries to detect hallucination risk before it surfaces  
 
 [🔽 Download **TXTOS.txt**](https://github.com/onestardao/WFGY/blob/main/OS/TXTOS.txt)
 <br>
@@ -301,7 +301,8 @@ Bookmark now, or risk missing a truth so weird it breaks your cat.
 ### TXT-Blur Blur Blur  
 *(Image Generation)*  
 > ⭐ **Lite: released** · 💥 **Pro: _TBD_**  
-> Next-gen text-to-image. No prompt skills needed, almost no hallucinations.  
+> Planned module for semantic-stable text-to-image, compatible with major open-source image models.   
+> The goal is to reduce prompt sensitivity and hallucinations; actual performance will depend on the model and setup.   
 [🔓 Unlock this module](./BlurBlurBlur/README.md) <sub><em>Beta page online</em></sub>
 
 ---
