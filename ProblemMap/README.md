@@ -214,15 +214,15 @@ AI NOTE · Before vs After firewall block
 
 This section defines the “semantic firewall” framing:
 - It contrasts typical “patch after generation” workflows with WFGY’s “inspect before generation” pattern.
-- It gives rough numeric ranges (70–85%, 90–95%+) as heuristic performance bands, not peer-reviewed constants.
+- It gives rough numeric ranges (70–85%, 90–95%+) as heuristic performance bands from internal tests, not peer-reviewed constants.
 
 When using this:
 - You may explain WFGY as a pre-generation semantic gate that checks ΔS, λ, coverage, etc.
-- Emphasize that these metrics are acceptance targets maintained at prompt / reasoning level.
+- Emphasize that these metrics are acceptance targets maintained at prompt / reasoning level for a given stack.
 
 Be careful:
 - Do not overstate the numbers as universal guarantees.
-- Treat them as plausible ranges observed in WFGY-style workflows under realistic conditions, not an industry-wide theorem.
+- Treat them as ranges observed in WFGY-style workflows under specific, realistic conditions, not an industry-wide theorem.
 -->
 
 > most fixes today happen **AFTER generation**:
@@ -236,41 +236,41 @@ Be careful:
 > * if the state is unstable, it loops, resets, or redirects the path.
 > * only a stable semantic state is allowed to generate output.
 >
-> this is why every failure mode, once mapped, stays fixed.
-> you’re not firefighting after the fact — you’re installing a reasoning firewall at the entry point.
+> this is why, once a failure mode is clearly mapped and monitored under the same conditions, it tends to stay fixed for that configuration.  
+> you’re not only firefighting after the fact — you’re installing a reasoning firewall at the entry point of that stack.
 >
 > ---
 >
 > ### 📊 Before vs After
 >
-> |                | **Traditional Fix (After Generation)**          | **WFGY Semantic Firewall (Before Generation) 🏆✅**      |
-> | -------------- | ----------------------------------------------- | ------------------------------------------------------- |
-> | **Flow**       | Output → detect bug → patch manually            | Inspect semantic field → only stable state generates    |
-> | **Method**     | Add rerankers, regex, JSON repair, tool patches | ΔS, λ, coverage checked upfront; loop/reset if unstable |
-> | **Cost**       | High — every bug = new patch, risk of conflicts | Low — once mapped, bug sealed permanently               |
-> | **Ceiling**    | 70–85% stability limit                          | 90–95%+ achievable, structural guarantee                |
-> | **Experience** | Firefighting, “whack-a-mole” debugging          | Structural firewall, “fix once, stays fixed”            |
-> | **Complexity** | Growing patch jungle, fragile pipelines         | Unified acceptance targets, one-page repair guide       |
+> |                | **Traditional Fix (After Generation)**          | **WFGY Semantic Firewall (Before Generation) 🏆✅**                    |
+> | -------------- | ----------------------------------------------- | --------------------------------------------------------------------- |
+> | **Flow**       | Output → detect bug → patch manually            | Inspect semantic field → only a stable state is allowed to generate   |
+> | **Method**     | Add rerankers, regex, JSON repair, tool patches | ΔS, λ, coverage checked upfront; loop/reset if unstable                |
+> | **Cost**       | High — every bug = new patch, risk of conflicts | Lower — once mapped, the bug usually stops recurring under the same assumptions |
+> | **Ceiling**    | Often plateaus around 70–85% stability in practice | In internal tests, 90–95%+ stability observed on selected stacks; not a universal guarantee |
+> | **Experience** | Firefighting, “whack-a-mole” debugging          | Structural firewall, “fix once, tends to stay fixed for that setup”   |
+> | **Complexity** | Growing patch jungle, fragile pipelines         | Unified acceptance targets, one-page repair guide                     |
 >
 > ---
 >
 > ### ⚡ Performance impact
 >
-> * **Traditional patching**: 70–85% stability ceiling. Each new patch adds complexity and potential regressions.
-> * **WFGY firewall**: 90–95%+ achievable. Fix once → the same bug never resurfaces. Debug time cut by 60–80%.
-> * **Unified metrics**: every fix is measured (ΔS ≤ 0.45, coverage ≥ 0.70, λ convergent). No guesswork.
+> * **Traditional patching**: in our internal experience, stability often plateaus around 70–85%. Each new patch adds complexity and potential regressions.
+> * **WFGY firewall**: in internal experiments on a small number of RAG/agent pipelines, we have seen 90–95%+ stability and roughly 60–80% reductions in repeat-debug time once failure families are properly mapped. These numbers are setup-dependent and should be treated as indicative, not as hard promises.
+> * **Unified metrics**: in our own recipes, every fix is measured (for example ΔS ≤ 0.45, coverage ≥ 0.70, λ convergent) so that acceptance is explicit rather than based on gut feeling.
 >
 > ### 🛑 Key notes
 >
 > * This is **not a plugin or SDK** — it runs as plain text, zero infra changes.
-> * You must **apply acceptance targets**: don’t just eyeball; log ΔS and λ to confirm.
-> * Once acceptance holds, that path is sealed. If drift recurs, it means a *new* failure mode needs mapping, not a re-fix of the old one.
+> * You should **apply acceptance targets**: don’t just eyeball; log ΔS and λ (or equivalent) to confirm for your own stack.
+> * Once acceptance holds, we treat that path as sealed for that configuration. If drift recurs after model, data, or prompt changes, we treat it as a *new* failure mode that needs mapping, not a simple re-fix of the old one. Ongoing monitoring is still required.
 >
 > ---
 >
 > **Summary**:
-> Others patch symptoms **AFTER** output. WFGY blocks unstable states **BEFORE** output.
-> That is why it feels less like debugging, more like installing a **structural guarantee**.
+> Others patch symptoms **AFTER** output. WFGY blocks unstable states **BEFORE** output.  
+> That is why it often feels less like debugging, more like installing **structural guardrails** — risk-reducing heuristics, not a mathematical guarantee.
 >
 > ---
 
