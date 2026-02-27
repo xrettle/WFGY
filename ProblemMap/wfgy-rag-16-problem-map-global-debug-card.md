@@ -14,4 +14,4 @@ No external framework required.
 
 ---
 
-📥 Download the original full-resolution 4K version directly from this repository.
+📥 Download the original full-resolution version directly from this repository.
