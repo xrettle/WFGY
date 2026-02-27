@@ -107,6 +107,13 @@ Acceptance checklist:
 
 </details>
 
+> **Value / revenue disclaimer**
+>
+> All dollar amounts, value tiers, and “$-scale” language in this page are scenario-style illustrations, not promises, forecasts, or financial advice.
+> They describe how WFGY could create value if third-party teams integrate it into real products and workflows.
+> Actual results will depend on many external factors (market, execution quality, model choice, infrastructure, data, regulation) and may end up much higher or much lower in practice.
+> Nothing in this document should be treated as a guarantee of returns or as a basis for investment decisions.
+
 # The Hidden Value Engine Behind WFGY: A New Physics for Embedding Space
 
 WFGY is **not** a prompt framework. It is a semantic-field architecture that runs **inside the embedding space** to upgrade a model’s reasoning core. The system defines energy-like regularities on the vector manifold so models can perform structural reasoning and **converge from within**.
