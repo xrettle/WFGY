@@ -1,28 +1,44 @@
-# 🚀 WFGY 3.0 · RAG 16 Problem Map  
-## 🌐 Global Debug Card
+# 🚀 WFGY 3.0 · RAG 16 Problem Map — Global Debug Card  
+### 🖼️ Image as a Structured Debug Prompt for RAG / Agent Pipelines
 
-The full RAG failure system compressed into one portable image.
+A production-first failure map for RAG / agent pipelines, compressed into one portable image.  
+The poster defines objects, metrics, ΔS zones, failure types, and mode patterns in a single unified view.
 
-Feed a failing run (Q, E, P, A) plus this card to any LLM.  
-The model can classify ΔS zones, detect failure type (R / P / S / I), choose modes (1–16), and propose structural fixes.
+Feed a failing run `(Q, E, P, A)` plus this card to any LLM.  
+It returns `type → mode(s) → fixes → verification tests`.
 
 No external framework required.
 
 ---
 
-## 🌍 Environment Coverage
+<details>
+<summary><b>How to use (60 seconds)</b></summary>
 
-The following environments represent structured applications of the 16-Problem Map in production contexts:
+1) Download the **full-resolution** Debug Card from this repository.  
+2) Upload the image to any strong LLM.  
+3) Paste your failing run context:
+   - `Q` = user question  
+   - `E` = top-k retrieved evidence  
+   - `P` = final prompt sent to the model  
+   - `A` = model output  
+   - plus logs/metrics if available  
+4) Ask the model to diagnose using the **16-Problem Map** and propose fixes with one test per fix.
 
-- **[MLflow](https://github.com/mlflow/mlflow)** — Experiment tracking & RAG debugging · [Medium Article](https://psbigbig.medium.com/the-16-problem-rag-map-how-to-debug-failing-mlflow-runs-with-a-single-screenshot-6563f5bee003?postPublishedType=repub)
-- **[Dask](https://github.com/dask/dask)** — Distributed execution & task orchestration · Medium Article *(coming soon)*
-- **[Kedro](https://github.com/kedro-org/kedro)** — Pipeline structuring & ML workflow management · Medium Article *(coming soon)*
+Expected output:
+- ΔS zones (or best-effort estimate)  
+- failure type: `R / P / S / I`  
+- 1–3 matching modes (1–16)  
+- structural fixes + verification tests
+
+</details>
 
 ---
 
-📥 Download the original high-resolution Debug Card directly from this repository.
+## Environment Coverage
 
-If this helps you, feel free to leave a ⭐ on GitHub.
+- **[MLflow](https://github.com/mlflow/mlflow)** · Experiment tracking & RAG debugging · [Medium Article](https://psbigbig.medium.com/the-16-problem-rag-map-how-to-debug-failing-mlflow-runs-with-a-single-screenshot-6563f5bee003?postPublishedType=repub)
+- **[Dask](https://github.com/dask/dask)** · Distributed execution & task orchestration · Medium Article *(coming soon)*
+- **[Kedro](https://github.com/kedro-org/kedro)** · Pipeline structuring & ML workflow management · Medium Article *(coming soon)*
 
 ---
 
@@ -31,7 +47,6 @@ If this helps you, feel free to leave a ⭐ on GitHub.
 ---
 
 📥 Download the original full-resolution image directly from this repository.
-
 If this helps you, feel free to leave a ⭐ on GitHub.
 
 <!--
