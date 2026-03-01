@@ -1,4 +1,3 @@
-
 <details>
 <summary><strong>🧭 Not sure where to start ? Open the WFGY Engine Compass</strong></summary>
 
@@ -42,11 +41,11 @@ Important:
 | ⚙️ Engine     | [WFGY 3.0](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)             | TXT-based Singularity tension engine (131 S-class set)  |
 | 🗺️ Map       | [Problem Map 1.0](https://github.com/onestardao/WFGY/tree/main/ProblemMap#readme)                           | Flagship 16-problem RAG failure checklist and fix map       |
 | 🗺️ Map       | [Problem Map 2.0](https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md) | RAG-focused recovery pipeline                           |
-| 🗺️ Map       | [Problem Map 3.0](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md) | Global Debug Card — image as a debug protocol layer  — **🔴 YOU ARE HERE 🔴**    |
+| 🗺️ Map       | [Problem Map 3.0](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md) | Global Debug Card - image as a debug protocol layer - **🔴 YOU ARE HERE 🔴**    |
 | 🗺️ Map       | [Semantic Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md)           | Symptom → family → exact fix                            |
 | 🧓 Map        | [Grandma’s Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/GrandmaClinic/README.md)         | Plain-language stories, mapped to PM 1.0                |
 | 🏡 Onboarding | [Starter Village](https://github.com/onestardao/WFGY/blob/main/StarterVillage/README.md)                    | Guided tour for newcomers                               |
-| 🧰 App        | [TXT OS](https://github.com/onestardao/WFGY/tree/main/OS#readme)                                            | .txt semantic OS — 60-second boot                       |
+| 🧰 App        | [TXT OS](https://github.com/onestardao/WFGY/tree/main/OS#readme)                                            | .txt semantic OS - 60-second boot                       |
 | 🧰 App        | [Blah Blah Blah](https://github.com/onestardao/WFGY/blob/main/OS/BlahBlahBlah/README.md)                    | Abstract/paradox Q&A (built on TXT OS)                  |
 | 🧰 App        | [Blur Blur Blur](https://github.com/onestardao/WFGY/blob/main/OS/BlurBlurBlur/README.md)                    | Text-to-image with semantic control                     |
 | 🧰 App        | [Blow Blow Blow](https://github.com/onestardao/WFGY/blob/main/OS/BlowBlowBlow/README.md)                    | Reasoning game engine & memory demo                     |
@@ -57,7 +56,7 @@ Important:
 ---
 </details>
 
-# 🚀 WFGY 3.0 · RAG 16 Problem Map — Global Debug Card  
+# 🚀 WFGY 3.0 · RAG 16 Problem Map · Global Debug Card  
 ### Image as a Structured Debug Prompt for RAG / Agent Pipelines
 
 <details>
@@ -88,7 +87,6 @@ For the complete 20+ project list (frameworks, benchmarks, curated lists), see t
 ---
 
 </details>
-
 
 A production-first failure map for RAG / agent pipelines, compressed into one portable image.  
 The poster defines objects, metrics, ΔS zones, failure types, and mode patterns in a single unified view.
@@ -123,6 +121,62 @@ Expected output:
 
 ---
 
+![WFGY RAG 16 Problem Map Global Debug Card](./WFGY_RAG_16_Problem_Map_Global_Debug_Card.jpeg)
+
+---
+
+📥 Download the original full-resolution image directly from this repository.  
+If this helps you, feel free to leave a ⭐ on GitHub.
+
+---
+
+<details>
+<summary><b>Colab MVP (Work in Progress)</b></summary>
+
+This section is a placeholder for the first runnable notebook release.
+
+Planned direction:
+- run one failing case from `(Q, E, P, A)`
+- emit a structured debug packet
+- apply one constrained patch
+- re-check verification signals
+
+Expected first-wave scope:
+- No.1 retrieval wrong or off-topic
+- No.5 semantic vs embedding mismatch
+- No.8 missing evidence visibility
+- No.2 interpretation collapse
+
+Status:
+- placeholder only
+- notebook structure and examples coming soon
+
+</details>
+
+---
+
+<details>
+<summary><b>Machine-Readable JSON MVP (Work in Progress)</b></summary>
+
+This section is a placeholder for the machine-readable protocol layer.
+
+Planned spec set:
+- `wfgy_problem_catalog_v1.json`
+- `wfgy_debug_packet_v1.json`
+
+Intended use:
+- make the 16-mode map consumable by tools
+- let agent runners ingest one debug result as a stable packet
+- support reproducible before/after repair loops
+
+Status:
+- placeholder only
+- schema, examples, and integration notes coming soon
+
+</details>
+
+---
+
 ## Environment Coverage
 
 - **[MLflow](https://github.com/mlflow/mlflow)** · Experiment tracking & RAG debugging · [Medium Article](https://psbigbig.medium.com/the-16-problem-rag-map-how-to-debug-failing-mlflow-runs-with-a-single-screenshot-6563f5bee003?postPublishedType=repub)
@@ -131,12 +185,384 @@ Expected output:
 
 ---
 
-![WFGY RAG 16 Problem Map Global Debug Card](./WFGY_RAG_16_Problem_Map_Global_Debug_Card.jpeg)
+<details>
+<summary><b>FAQ MVP</b></summary>
+
+### 1) Do I need all four objects `(Q, E, P, A)` to use the Global Debug Card?
+
+The best results come from having all four objects:
+
+- `Q` = user question
+- `E` = retrieved evidence
+- `P` = final prompt sent to the model
+- `A` = model output
+
+This gives the card the full diagnostic chain from intent to evidence to prompt to answer.
+
+If one object is missing, the card can still be used for partial triage:
+
+- missing `P` usually means rough classification is still possible
+- missing `E` often points to observability or infra-side issues
+- missing both `E` and `P` reduces accuracy, but the card can still help identify likely failure families
+
+In short: all four objects are ideal, but partial inputs can still be useful for first-pass diagnosis.
 
 ---
 
-📥 Download the original full-resolution image directly from this repository.
-If this helps you, feel free to leave a ⭐ on GitHub.
+### 2) Can the Global Debug Card partially automate RAG debugging?
+
+Yes, partially.
+
+The card is well suited for:
+
+- structured triage
+- first-pass failure classification
+- matching likely problem modes
+- proposing repair directions
+- defining one verification test per fix
+
+This means it can help automate the early part of debugging very well.
+
+What it does **not** guarantee is a one-click, fully automatic repair for every RAG failure.  
+Some cases still require human review, domain context, or deeper system changes.
+
+The current design goal is not "magic auto-fix."  
+The goal is to turn messy debugging into a repeatable protocol.
+
+---
+
+### 3) Can tools like OpenClaw use this card to automatically resolve RAG issues?
+
+Yes, for some classes of issues.
+
+A tool like OpenClaw can use the Global Debug Card as a diagnostic layer:
+
+1. collect `(Q, E, P, A)`
+2. run classification
+3. emit a structured debug packet
+4. apply one constrained repair action
+5. re-run a verification check
+
+This is most realistic for problems where the repair loop is narrow and testable.
+
+Best early targets include:
+
+- **No.1** retrieval wrong or off-topic
+- **No.5** semantic vs embedding mismatch
+- **No.8** missing evidence visibility
+- parts of **No.2** interpretation collapse
+
+These are good candidates because they often respond to:
+
+- retrieval parameter changes
+- query rewrite
+- re-ranking
+- logging and observability upgrades
+- constrained prompt repair
+
+Harder cases, such as long-horizon reasoning errors or deep architectural flaws, usually should not be treated as fully automatic fixes in the first wave.
+
+---
+
+### 4) What can the first Colab MVP actually automate?
+
+The first Colab MVP is designed as a **first-pass repair loop**, not a full autonomous debugger.
+
+Its planned job is:
+
+1. accept one failing case from `(Q, E, P, A)`
+2. compute or estimate the diagnostic structure
+3. emit a machine-readable debug packet
+4. apply one constrained patch
+5. re-check one or more verification signals
+
+This makes the first public notebook useful for:
+
+- reproducible triage
+- small repair experiments
+- before/after comparisons
+- documenting how one failure was improved
+
+The first Colab MVP is intended to prove the protocol works in practice.  
+It is not meant to solve every failure mode automatically on day one.
+
+---
+
+### 5) Which problem modes are best suited for automated debugging first?
+
+The best first-wave targets are the modes that are both:
+
+- easy to observe
+- narrow enough to repair with a constrained loop
+
+The strongest early candidates are:
+
+- **No.1** retrieval wrong or off-topic  
+  Good for top-k sweeps, query rewrite, filter tightening, and re-ranking.
+
+- **No.5** semantic vs embedding mismatch  
+  Good for embedding checks, chunking review, normalization review, and retrieval alignment tests.
+
+- **No.8** missing evidence visibility  
+  Good for observability upgrades, evidence logging, and packet completeness checks.
+
+- **No.2** interpretation collapse  
+  Good for constrained prompt repair, evidence-first answer patterns, and citation-before-claim checks.
+
+These modes are ideal for Wave 0 because they can often be improved without rebuilding the entire stack.
+
+---
+
+### 6) What will the machine-readable JSON MVP be used for?
+
+The JSON MVP is the protocol layer for tools.
+
+It is meant to make the card usable by:
+
+- agent runners
+- CI workflows
+- internal debugging tools
+- replay and comparison pipelines
+
+The planned JSON layer has two main roles:
+
+1. **Problem catalog JSON**  
+   A machine-readable version of the 16-mode map, including mode IDs, signals, and default repair directions.
+
+2. **Debug packet JSON**  
+   A stable result format for one diagnosis run, including the detected type, likely modes, fixes, and verification steps.
+
+The JSON layer does not replace the image workflow.  
+It makes the same logic consumable by software.
+
+---
+
+### 7) Can I plug this into my own agent runner, CI, or internal tooling?
+
+Yes, that is one of the intended directions.
+
+If your system can provide a minimal case record such as:
+
+- `Q`
+- `E`
+- `P`
+- `A`
+
+then it can likely be adapted to this protocol.
+
+Additional metadata can improve results, for example:
+
+- retrieval scores
+- model name
+- chunk IDs
+- timing logs
+- prompt template version
+- index configuration
+
+The final goal is simple:
+
+your system emits one case, the protocol emits one debug packet.
+
+That makes the card easier to integrate into real workflows than a free-form debugging conversation.
+
+---
+
+### 8) Is this meant to replace human debugging?
+
+No.
+
+The purpose of the Global Debug Card is to improve the **first stage** of debugging:
+
+- shared vocabulary
+- structured triage
+- clearer diagnosis
+- repeatable verification steps
+
+It is not meant to remove human judgment.
+
+Human review is still important for:
+
+- high-risk changes
+- domain-specific correctness
+- architecture-level redesign
+- policy or safety decisions
+- ambiguous multi-cause failures
+
+A good way to think about it is:
+
+this card reduces debugging chaos, but humans still decide the final repair strategy.
+
+---
+
+### 9) Do I need embeddings to use this page?
+
+No, but embeddings make the protocol stronger.
+
+The full diagnostic model uses structured similarity and boundary reasoning.  
+That works best when a fixed embedding model is available.
+
+However, the card is still useful without embeddings:
+
+- a strong LLM can estimate likely drift patterns from the visible objects
+- the image workflow can still guide manual or semi-structured triage
+- rough type and mode guesses can still be generated from the failure pattern
+
+So there are two valid usage modes:
+
+- **image + reasoning workflow** for fast manual triage
+- **embedding + packet workflow** for stronger, machine-runnable diagnosis
+
+---
+
+### 10) What is the difference between the image workflow and the JSON workflow?
+
+They use the same logic, but they serve different users.
+
+**Image workflow**
+- optimized for humans
+- easy to use immediately
+- works by uploading the card and pasting `(Q, E, P, A)`
+- good for fast triage with any strong LLM
+
+**JSON workflow**
+- optimized for tools
+- intended for automation and integration
+- produces stable, machine-readable outputs
+- good for replay, comparison, and agent orchestration
+
+In short:
+
+- the image workflow is the human entry point
+- the JSON workflow is the machine entry point
+
+Both are two views of the same protocol.
+
+---
+
+### 11) Why not just paste logs into any strong LLM and ask it to debug?
+
+You can do that, and sometimes it helps.  
+But without a shared protocol, the output is often inconsistent.
+
+Raw free-form debugging usually has these problems:
+
+- no shared object model
+- no fixed failure vocabulary
+- no stable mapping from symptoms to modes
+- no required verification step
+- hard to compare two runs consistently
+
+The Global Debug Card adds structure:
+
+- the same four objects
+- the same failure families
+- the same mode vocabulary
+- the same output expectation
+- the same repair-and-test pattern
+
+That makes debugging more reproducible and much easier to turn into automation.
+
+---
+
+### 12) How far can the Global Debug Card be pushed?
+
+The short answer is: much further than a static poster.
+
+At minimum, it is already useful as:
+
+- an image-based triage layer
+- a shared RAG debugging vocabulary
+- a structured prompt for diagnosis
+
+With the next layers added, it can grow into:
+
+- a Colab-based repair loop
+- a machine-readable incident format
+- a replayable before/after comparison tool
+- an agent-facing debug protocol
+- a lightweight regression-check layer for RAG systems
+
+So the long-term direction is not "just a card."
+
+The long-term direction is:
+
+- from image prompt
+- to structured diagnosis
+- to partial automation
+- to reproducible repair loops
+- to a reusable protocol for RAG debugging
+
+---
+
+### 13) Can this help reduce hallucinations without changing the whole stack?
+
+Often, yes.
+
+One of the main strengths of the card is that it works as a **diagnostic layer**, not a full replacement stack.
+
+That means teams can often improve reliability by first identifying:
+
+- whether the problem is retrieval
+- whether the prompt is the main source of drift
+- whether evidence visibility is missing
+- whether the issue is state or infra-related
+
+This allows smaller, more targeted fixes:
+
+- retrieval tuning
+- prompt repair
+- re-ranking
+- observability upgrades
+- packet completeness checks
+
+In many real cases, that is much cheaper than rebuilding the whole system.
+
+---
+
+### 14) Can this support replay, A/B comparison, and before/after repair loops?
+
+Yes, and that is one of the strongest next-step directions.
+
+Once a failure case is captured in a structured form, the same case can be replayed under different settings:
+
+- different top-k values
+- different retrievers
+- different chunking strategies
+- different prompt templates
+- different repair actions
+
+This makes it possible to compare:
+
+- before vs after
+- setup A vs setup B
+- manual fix vs automated fix
+
+That is one reason the Colab MVP and JSON MVP matter.  
+They move the card from "diagnostic poster" toward "replayable debugging protocol."
+
+---
+
+### 15) What should I submit if I want my failing case to become a reproducible example?
+
+The best submission is a minimal but complete failure packet.
+
+Recommended input:
+
+- `Q` = the original user question
+- `E` = retrieved evidence or top-k chunks
+- `P` = the final prompt sent to the model
+- `A` = the model output
+- any relevant logs or metrics
+- optional notes about the expected correct behavior
+
+You should remove private or sensitive data before sharing.
+
+A good reproducible example does not need to be large.  
+It just needs to preserve the failure pattern clearly enough for the protocol to analyze.
+
+That kind of example is ideal for future Colab demos, test cases, and repair-loop comparisons.
+
+</details>
 
 <!--
 RAG ΔS CLINIC · GLOBAL DEBUG CARD
