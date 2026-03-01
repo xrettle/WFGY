@@ -8,18 +8,22 @@ If this project has helped you debug pipelines, design safer reasoning flows, or
 
 # 🚀 Crypto Support (Direct)
 
-If you prefer direct support via crypto, the addresses are listed here.
+If you prefer to support WFGY via crypto, the addresses are listed below.
 
-Please double-check the network before sending.  
+You may send any compatible token on the specified network.  
+All contributions are appreciated and directly support continued development.
+
+Please double-check both the address and the network before sending.  
 Crypto transfers are typically irreversible.
 
 ---
 
 ## 🟠 BTC (Bitcoin)
 
-Network: Bitcoin
+Network: Bitcoin  
 
-**Address:**
+<img width="300" height="300" alt="BTC" src="https://github.com/user-attachments/assets/9fa80511-64db-4d7a-971e-33bb172d3efc" />
+
 ```
 
 1PCuevkrQwQh5HeJuZiVLADmsqh8TADLtP
@@ -32,7 +36,8 @@ Network: Bitcoin
 
 Network: TRON
 
-**Address:**
+<img width="300" height="300" alt="TRON" src="https://github.com/user-attachments/assets/e4923c85-c89b-4d82-9e72-19959a33cf48" />
+
 ```
 
 TJXCN5dkaU9Cx67y3iRxAUyEjfsC4neYJB
@@ -41,31 +46,35 @@ TJXCN5dkaU9Cx67y3iRxAUyEjfsC4neYJB
 
 ---
 
-## 🟢 USDT (EVM Compatible)
+## 🟢 EVM-Compatible Networks
 
-This address supports the following networks:
+Supported networks include (but are not limited to):
 
-- **ERC20 (Ethereum)**
-- **BEP20 (BNB Chain)**
+- ERC20 (Ethereum)
+- BEP20 (BNB Chain)
+- Other EVM-compatible chains
 
-**Address:**
+You may send any supported token on the network you choose.
+
+<img width="300" height="300" alt="EVM" src="https://github.com/user-attachments/assets/6a211ee0-e1fa-45c9-b847-e121122741d1" />
+
 ```
 
 0x29d8574af722a1d9f7db05fc9b88f72f573b8e1e
 
 ```
 
-Make sure your wallet is set to the correct network (Ethereum or BNB Chain) before sending USDT.
+Please ensure your wallet is configured for the correct network before sending.
 
 ---
 
 # 🧾 Fiat Support (In Progress)
 
-GitHub Sponsors / Open Collective are being prepared as long-term structured fiat channels.
+GitHub Sponsors and Open Collective are being prepared as long-term structured fiat channels.
 
-Temporary fiat options may be enabled as needed while the formal setup is completed.
+Additional fiat options may be enabled as the setup is finalized.
 
-For coordination or questions, you may contact:
+For coordination, questions, or confirmation:
 
 📧 **donate@onestardao.com**
 
@@ -73,17 +82,17 @@ For coordination or questions, you may contact:
 
 # 🛠 Why support this project?
 
-Developing and maintaining WFGY requires:
+Developing and maintaining WFGY involves:
 
 - Continuous refinement of the core reasoning architecture  
-- Maintaining documentation and integration examples  
+- Expanding documentation and integration references  
 - Running structured experiments and stress tests  
-- Iterating based on real-world user feedback  
+- Iterating based on real-world feedback  
 - Keeping the framework open and MIT-licensed  
 
 This is long-term engineering work.
 
-A donation is not a purchase of features.
+A contribution is not a feature purchase.  
 It is support for sustained independent development.
 
 ---
@@ -92,7 +101,7 @@ It is support for sustained independent development.
 
 If you would like:
 
-- Confirmation that funds were received  
+- Confirmation of receipt  
 - To be acknowledged as a supporter  
 - To share feedback or suggest focus areas  
 
@@ -103,18 +112,18 @@ Please email:
 You may include:
 
 - Transaction hash  
-- Network used (BTC / TRON / ERC20 / BEP20)  
+- Network used  
 - Optional message  
 
-There is no guaranteed priority or feature exchange, but serious user feedback meaningfully influences project direction.
+There is no guaranteed feature exchange, but thoughtful feedback from supporters meaningfully influences project direction.
 
 ---
 
 # 🤝 Thank you
 
-Open technical systems survive only when they are genuinely useful.
+Open technical systems survive because people find them useful enough to keep them alive.
 
-Whether you donate, share, test, or contribute feedback, your involvement helps ensure that WFGY remains an independent and evolving framework.
+Whether you donate, share, test, or provide feedback, your involvement helps ensure WFGY remains independent and evolving.
 
 Thank you for supporting open structural research.
 
