@@ -504,13 +504,6 @@ If you want to know “what to click next”:
 
 ---
 
-> 👑 **Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)** — Engineers, hackers, and open-source builders who supported WFGY from day one.
-
-> <img src="https://img.shields.io/github/stars/onestardao/WFGY?style=social" alt="GitHub stars"> ⭐ **[WFGY Engine 2.0](https://github.com/onestardao/WFGY/blob/main/core/README.md)** is already unlocked.
-> Star the repo to help others discover it and unlock more on the **[Unlock Board](https://github.com/onestardao/WFGY/blob/main/STAR_UNLOCKS.md)**.
-
----
-
 ### 🧭 Explore More
 
 | Module                   | Description                                                                  | Link                                                                                               |
