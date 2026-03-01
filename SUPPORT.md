@@ -1,108 +1,120 @@
-# Support WFGY
+# 💎 Support WFGY
 
-WFGY is an open, MIT-licensed structural reasoning framework.
-It is built to help engineers debug complex AI systems, run safer experiments, and explore new ways of organizing reasoning itself.
+WFGY is an open, MIT-licensed structural reasoning framework designed for engineers, researchers, and builders working with complex AI systems.
 
-This page exists for a simple reason:
-if WFGY has helped you in any practical way, and you would like to push this work further, here is a stable place to support its development.
+If this project has helped you debug pipelines, design safer reasoning flows, or think more clearly about structural AI problems, you can support continued development below.
 
 ---
 
-## Why support this project?
+# 🚀 Crypto Support (Direct)
 
-Building and maintaining a system like WFGY is not just about writing a single library or a one-off paper.
+If you prefer direct support via crypto, the addresses are listed here.
 
-It requires:
-
-- Designing and refining the core reasoning engine over many iterations  
-- Maintaining example pipelines, demos, and reference integrations  
-- Writing and updating documentation so that new users can actually adopt the ideas  
-- Running experiments, stress tests, and benchmarks on real-world use cases  
-- Reviewing community feedback and adjusting the design so it stays useful, not theoretical  
-
-All of this takes time, focus, and long-term commitment.
-
-If you choose to donate, you are not “buying a feature”.  
-You are helping keep an independent, open, and experimental project moving forward, instead of disappearing when it becomes too expensive to maintain.
+Please double-check the network before sending.  
+Crypto transfers are typically irreversible.
 
 ---
 
-## How to support
+## 🟠 BTC (Bitcoin)
 
-Right now, the simplest way to support WFGY is via crypto donations.
-Fiat options such as GitHub Sponsors / PayPal are being set up and may be added as they become stable.
+Network: Bitcoin
 
-You can also reach out directly if you prefer to coordinate in another way:
+**Address:**
+```
 
-- Email (general donations / questions): **donate@onestardao.com**
+1PCuevkrQwQh5HeJuZiVLADmsqh8TADLtP
 
----
-
-## Crypto donations
-
-If you choose to donate via crypto, please:
-
-- Double-check the **address** and the **network** before sending  
-- Remember that crypto transfers are typically **irreversible**  
-- Only donate what you are fully comfortable parting with  
-
-### BTC
-
-Network: Bitcoin  
-Address:  
-`1PCuevkrQwQh5HeJuZiVLADmsqh8TADLtP`
+```
 
 ---
 
-### TRX (TRON)
+## 🔵 TRX (TRON)
 
-Network: TRON  
-Address:  
-`TJXCN5dkaU9Cx67y3iRxAUyEjfsC4neYJB`
+Network: TRON
 
----
+**Address:**
+```
 
-### USDT (EVM)
+TJXCN5dkaU9Cx67y3iRxAUyEjfsC4neYJB
 
-The following address can be used on EVM-compatible networks that you choose to use:
-
-- **ERC20 (Ethereum)**  
-- **BEP20 (BNB Chain)**  
-
-Address:  
-`0x29d8574af722a1d9f7db05fc9b88f72f573b8e1e`
-
-Please make sure your wallet is set to the correct network (Ethereum, BNB Chain, etc.) before sending USDT.
+```
 
 ---
 
-## After you donate
+## 🟢 USDT (EVM Compatible)
 
-If you make a donation and would like to:
+This address supports the following networks:
 
-- Be acknowledged as a supporter, or  
-- Quietly confirm that the funds arrived correctly, or  
-- Discuss specific areas you want to see WFGY focus on,
+- **ERC20 (Ethereum)**
+- **BEP20 (BNB Chain)**
 
-you can email:
+**Address:**
+```
 
-**donate@onestardao.com**
+0x29d8574af722a1d9f7db05fc9b88f72f573b8e1e
 
-Optionally include:
+```
 
-- The transaction hash  
-- The network used (BTC / TRON / ERC20 / BEP20)  
-- Any note on how you are using WFGY or what you would like to see improved  
-
-There is no guarantee of any special feature or priority, but feedback from real users is extremely valuable and will influence how the project evolves.
+Make sure your wallet is set to the correct network (Ethereum or BNB Chain) before sending USDT.
 
 ---
 
-## Thank you
+# 🧾 Fiat Support (In Progress)
 
-Independent, open projects live or die on whether people actually find them useful enough to keep them alive.
+GitHub Sponsors / Open Collective are being prepared as long-term structured fiat channels.
 
-If you are reading this page, it already means you cared enough to check how to support.
-Whether or not you donate, using WFGY seriously, giving feedback, and sharing it with other engineers are all forms of support.
+Temporary fiat options may be enabled as needed while the formal setup is completed.
 
-Thank you for helping this project continue to exist as a public, MIT-licensed resource.
+For coordination or questions, you may contact:
+
+📧 **donate@onestardao.com**
+
+---
+
+# 🛠 Why support this project?
+
+Developing and maintaining WFGY requires:
+
+- Continuous refinement of the core reasoning architecture  
+- Maintaining documentation and integration examples  
+- Running structured experiments and stress tests  
+- Iterating based on real-world user feedback  
+- Keeping the framework open and MIT-licensed  
+
+This is long-term engineering work.
+
+A donation is not a purchase of features.
+It is support for sustained independent development.
+
+---
+
+# 📩 After you donate
+
+If you would like:
+
+- Confirmation that funds were received  
+- To be acknowledged as a supporter  
+- To share feedback or suggest focus areas  
+
+Please email:
+
+📧 **donate@onestardao.com**
+
+You may include:
+
+- Transaction hash  
+- Network used (BTC / TRON / ERC20 / BEP20)  
+- Optional message  
+
+There is no guaranteed priority or feature exchange, but serious user feedback meaningfully influences project direction.
+
+---
+
+# 🤝 Thank you
+
+Open technical systems survive only when they are genuinely useful.
+
+Whether you donate, share, test, or contribute feedback, your involvement helps ensure that WFGY remains an independent and evolving framework.
+
+Thank you for supporting open structural research.
+
