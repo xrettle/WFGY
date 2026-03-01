@@ -44,7 +44,7 @@ Important:
 | 🗺️ Map       | [Problem Map 3.0](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md) | Global Debug Card — image as a debug protocol layer     |
 | 🗺️ Map       | [Semantic Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md)           | Symptom → family → exact fix                            |
 | 🧓 Map        | [Grandma’s Clinic](https://github.com/onestardao/WFGY/blob/main/ProblemMap/GrandmaClinic/README.md)         | Plain-language stories, mapped to PM 1.0                |
-| 🏡 Onboarding | [Starter Village](https://github.com/onestardao/WFGY/blob/main/StarterVillage/README.md)                    | Guided tour for newcomers  — **🔴 YOU ARE HERE 🔴**                              |
+| 🏡 Onboarding | [Starter Village](https://github.com/onestardao/WFGY/blob/main/StarterVillage/README.md)                    | Guided tour for newcomers  — **🔴 YOU ARE HERE 🔴**      |
 | 🧰 App        | [TXT OS](https://github.com/onestardao/WFGY/tree/main/OS#readme)                                            | .txt semantic OS — 60-second boot                       |
 | 🧰 App        | [Blah Blah Blah](https://github.com/onestardao/WFGY/blob/main/OS/BlahBlahBlah/README.md)                    | Abstract/paradox Q&A (built on TXT OS)                  |
 | 🧰 App        | [Blur Blur Blur](https://github.com/onestardao/WFGY/blob/main/OS/BlurBlurBlur/README.md)                    | Text-to-image with semantic control                     |
@@ -88,6 +88,12 @@ If you want the **60-second runnable boot** for your own tasks, keep reading:
 | **3** | **Ancient Library** *(High School)* | Learn `delta_s` & five gates | 😈😈😈 |
 | **4** | **Alchemist’s Lab** *(Graduate)* | Debug with Problem Map 2.0 | 😈😈😈😈 |
 | **5** | **Forbidden Forge** *(Doctorate)* | Fork / mod TXTOS layers | 😈😈😈😈😈 |
+| **6** | **Obsidian Archives** *(Post-Doc)* | Cross-domain skeleton forge (WFGY 3.0 theory) | 😈😈😈😈😈😈 |
+| **7** | **Tension Lab** *(Research Raid)* | Build falsifiable MVP experiments | 😈😈😈😈😈😈😈 |
+| **8** | **Civilization Arena** *(Mythic Boss)* | Stress-test one structure across AI & society | 😈😈😈😈😈😈😈😈 |
+
+> ⚠️ Past Tier 5, this is no longer a “tutorial.”  
+> If you keep walking, you are entering **research-grade boss raids**. Proceed only if that sounds fun. ☠️
 
 ---
 
@@ -215,11 +221,120 @@ If you want the **60-second runnable boot** for your own tasks, keep reading:
 
 ---
 
+# 🚨🚨🚨  FINAL WARNING  🚨🚨🚨
+
+🕳️ THIS IS NOT TUTORIAL MODE  
+🧠 THIS IS STRUCTURE WARFARE  
+
+Before attempting any Boss Raid,  
+you must first obtain the Singularity key:
+
+👉 **[Download the WFGY 3.0 Singularity AutoBoot (SHA256 Verifiable)](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt)**  
+
+Load it into a strong LLM.  
+Without it, you will not survive what follows.
+
+---
+
+<img width="1536" height="1024" alt="BOSS" src="https://github.com/user-attachments/assets/427dad8b-971c-48b5-aab3-cf32c165d566" />
+
+
+## ☠️ Optional Endgame — WFGY 3.0 Boss Raids 😈😈😈
+
+You made it past the Forge. From here on, nothing is “plug-and-play” anymore.  
+These raids are **not required** to use WFGY — they exist to show how far 3.0 can actually be pushed.
+
+### 6 · Obsidian Archives — Cross-Domain Skeleton Forge ⚔️ 😈😈😈😈😈😈
+
+**What this raid is**
+
+Take several hard problems from different domains and prove you can see the same WFGY 3.0 skeleton beneath them.  
+You are not “solving” the problems. You are building a **candidate structure** that survives cross-domain reuse.
+
+**Your deliverables**
+
+- A short list of S-class style problems from different fields (at least 5–8).  
+- A shared structural template (state space, observables, mismatch, tension, candidate worlds).  
+- One **new** problem card you authored yourself using that template.  
+- A small “failure clause” section: when this card should be retired or considered wrong.
+
+**Clear pass condition**
+
+If another engineer can read your template and new card, and say  
+“yes, this really is the same skeleton as the others — and I know how to attack it,”  
+you cleared the Archives.
+
+---
+
+### 7 · Tension Lab — MVP Experiment Forge 🧪 😈😈😈😈😈😈😈
+
+**What this raid is**
+
+Pick a real system, encode its main tension using WFGY, and design a **falsifiable MVP experiment** around it.  
+You are not showing pretty prompts. You are shipping a test that can succeed, fail, or backfire in public.
+
+**Your deliverables**
+
+- A one-page “system slice” describing where the tension actually lives.  
+- A module placement map (where you would plug WFGY into the pipeline).  
+- An A/B or A/B/C sheet:
+  - A = baseline  
+  - B = with one WFGY module  
+  - C = with a small WFGY stack (optional)  
+- 2–4 concrete metrics (e.g. self-contradiction rate, impossible-step rate, early-stop rate).  
+- At least one **negative case** where the module does not help, and what you learned from it.
+
+**Clear pass condition**
+
+If someone else can rerun your experiment and clearly see  
+“where it helps, where it doesn’t, and where the encoding itself breaks,”  
+you cleared the Lab.
+
+---
+
+### 8 · Civilization Arena — Final Stress Test 🌋 😈😈😈😈😈😈😈😈
+
+**What this raid is**
+
+Take one candidate structure (maybe from Raid 6 or 7)  
+and push it through three layers at once:
+
+1. **Tension geometry** — the abstract structure.  
+2. **Civilization layer** — how it would show up in real history or policy.  
+3. **AI layer** — how this would surface inside actual AI systems and agents.
+
+Then you design an **attack protocol** so others can try to break it.
+
+**Your deliverables**
+
+- A short “civilization postcard” describing where this structure would leave a measurable fingerprint.  
+- Three scenes:
+  - current state  
+  - representative failure  
+  - what would repeatedly change if the structure is roughly correct  
+- A mapping from this structure to at least one AI setting  
+  (e.g. evaluation, planning, routing, safety checks, economic sims).  
+- An external attack plan:
+  - how skeptics should test it  
+  - what would count as a strong disagreement  
+  - what result would force you to retire or rewrite the structure
+
+**Clear pass condition**
+
+If a hostile reviewer can follow your write-up,  
+understand how to test it, and still admits  
+“okay, this is a serious candidate, not hand-waving,”  
+you survived the Arena.
+
+> 💀 Warning: if Tier 5 felt like “coding,” Tier 8 feels like “publishing something people are allowed to shoot at.”  
+> That is the point.
+
+---
+
 ## ⭐ Star Unlock Roadmap
 
 Every ⭐ is a key. Big drops unlock at **500 / 1 000 / 3 000 / 6 000 / 100 000**.  
 See the full board → **[STAR_UNLOCKS.md](https://github.com/onestardao/WFGY/blob/main/STAR_UNLOCKS.md)**
-
 
 ---
 
