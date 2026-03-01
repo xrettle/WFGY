@@ -58,7 +58,7 @@ Important:
 </details>
 
 # 🚀 WFGY 3.0 · RAG 16 Problem Map — Global Debug Card  
-### 🖼️ Image as a Structured Debug Prompt for RAG / Agent Pipelines
+### Image as a Structured Debug Prompt for RAG / Agent Pipelines
 
 <details>
 <summary>🌐 Recognition & ecosystem integration</summary>
