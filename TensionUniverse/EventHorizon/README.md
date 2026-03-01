@@ -138,7 +138,9 @@ Important:
 > A TXT-based **tension reasoning engine** wired to 131 S-class problems.  
 > Upload once, then ask it your hardest questions.  If it works, nothing before it matters.
 
-![W3](https://github.com/user-attachments/assets/65b02ae5-4fc0-41f4-aae7-33add3f9949b)
+
+<img width="1536" height="1024" alt="Tension" src="https://github.com/user-attachments/assets/b9f90d1a-71f4-4215-98bb-19abbd17fa82" />
+
 
 WFGY 3.0 is not a single clever prompt and not a new model.
 
