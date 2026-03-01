@@ -139,7 +139,7 @@ Important:
 > Upload once, then ask it your hardest questions.  If it works, nothing before it matters.
 
 
-<img width="1536" height="1024" alt="Tension" src="https://github.com/user-attachments/assets/b9f90d1a-71f4-4215-98bb-19abbd17fa82" />
+<img width="1536" height="1024" alt="WFGY_Hero" src="https://github.com/user-attachments/assets/f4db5a22-ebd6-4fc9-9388-a10a10f09f6f" />
 
 
 WFGY 3.0 is not a single clever prompt and not a new model.
