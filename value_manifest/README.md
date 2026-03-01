@@ -141,6 +141,12 @@ Important:
 ---
 </details>
 
+# 🚀 WFGY Engine Value Manifest · 1.0 / 2.0 / 3.0
+### 📊 System prompt simulations of engineering value across all three engines
+
+
+<img width="1536" height="1024" alt="WFGY_Engine_series" src="https://github.com/user-attachments/assets/39cd77d6-a7fc-4879-a6d9-0feca676c895" />
+
 > **Value / revenue disclaimer**
 >
 > All dollar amounts, value tiers, and “$-scale” language in this page are scenario-style illustrations, not promises, forecasts, or financial advice.
