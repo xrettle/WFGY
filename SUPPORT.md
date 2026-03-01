@@ -119,11 +119,20 @@ There is no guaranteed feature exchange, but thoughtful feedback from supporters
 
 ---
 
-# 🤝 Thank you
+# 🤝 Thank You
 
 Open technical systems survive because people find them useful enough to keep them alive.
 
-Whether you donate, share, test, or provide feedback, your involvement helps ensure WFGY remains independent and evolving.
+Whether you donate, share, test, or provide feedback, your involvement helps ensure WFGY remains independent, open, and continuously evolving.
 
-Thank you for supporting open structural research.
+Thank you for supporting long-term structural research and open engineering work.
 
+---
+
+## 🌟 Recognition
+
+Supporters may choose to be publicly acknowledged in an annual supporter list.
+
+If you prefer to remain anonymous, that choice is fully respected. 🛡️
+
+Every form of support — visible or quiet — is sincerely appreciated.
