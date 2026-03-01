@@ -220,14 +220,6 @@ If you want the **60-second runnable boot** for your own tasks, keep reading:
 Every ⭐ is a key. Big drops unlock at **500 / 1 000 / 3 000 / 6 000 / 100 000**.  
 See the full board → **[STAR_UNLOCKS.md](https://github.com/onestardao/WFGY/blob/main/STAR_UNLOCKS.md)**
 
----
-
-## 🗝️ Hidden Rooms & Easter Eggs
-
-Inside the GitHub labyrinth, folders hide fragments of an RPG storyline.  
-Exploring different directories reveals easter eggs and small rewards — like a real adventure.
-
-📖 Story reference source → [Honest Hero RPG](https://www.youtube.com/@OneStarDao)
 
 ---
 
