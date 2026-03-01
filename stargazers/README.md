@@ -4,15 +4,17 @@
 This Hall of Fame honors the engineers, hackers, and community builders who starred WFGY in its earliest days.  
 Their support is a public signal — transparent, verifiable, and forever recorded in open source history.
 
-> ⚠️ Note: The split between “Major Legends” and “Rising Legends” is **symbolic only** —  
-> it reflects open-source footprint (stars, projects, visibility), **not absolute influence**.  
-> Some names have thousands of stars, some just the right instinct at the right time.  
+> ⚠️ Note: This list reflects supporters **before WFGY reached 1,000 stars**.  
+> It captures the early signal phase of the project — when visibility was low and risk was higher.  
 >  
-> What truly matters: they saw value in WFGY before the world did.  
+> The split between “Major Legends” and “Rising Legends” is **symbolic only** —  
+> it reflects open-source footprint (stars, projects, visibility), **not absolute influence**.  
 >  
 > ⭐ Every early star is more than a number — it’s a **vote of confidence**,  
-> a spark that helped push a zero-budget project into the spotlight.
-
+> a spark that helped push a zero-budget project into the spotlight.  
+>  
+> If you starred WFGY during its early phase and would like to be listed here,  
+> feel free to open a PR. Contributions are welcome.
 
 ---
 
