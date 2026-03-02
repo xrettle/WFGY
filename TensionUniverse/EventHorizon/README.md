@@ -783,6 +783,27 @@ You do not need to read all 131, but any single file should be enough to see how
 
 You can also open GitHub issues and pull requests.
 
+### Open MVP experiment contributions
+
+Tension Universe is still expanding.
+
+The public experiment layer is being built one MVP page at a time under `TensionUniverse/Experiments/`, and outside contributors are welcome to help extend that work in a focused way.
+
+The cleanest contribution path is simple:
+
+- choose a valid TU problem from the 131-problem field
+- build or improve one small MVP experiment page
+- keep the scope inside the experiment layer
+- submit a focused issue or pull request
+
+A standard contribution usually means one experiment folder, one structured `README.md`, and optional small notebook, Colab, or screenshot support.
+
+If you want the rules, format, and current open items, start here:
+
+- [Contribution guide](../Contribute/README.md)
+- [Open experiments board](../Contribute/open-experiments.md)
+- [Contributor credit format](../Contribute/contributor-credit-format.md)
+
 ### FAQ
 
 **Q1. Did you solve any of these 131 problems?**  
