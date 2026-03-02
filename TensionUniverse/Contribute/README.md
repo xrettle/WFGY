@@ -1,124 +1,297 @@
-# Contribute to Tension Universe
+# Contribute to Tension Universe MVP Experiments
 
-Tension Universe is not a closed document set.
+Tension Universe is being built as an open experimental field.
 
-It is an expanding experimental field built around a growing structure of ideas, tests, and MVP pages. Some parts are already written, some are partially drafted, and many are still open.
+This contribution lane is focused on one specific type of work:
 
-This space is open to AI developers, researchers, builders, and early contributors who want to help turn unfinished ideas into clear, standalone experiment pages.
+adding or improving MVP experiment pages inside the `TensionUniverse/Experiments/` collection.
 
-## Why this exists
+This is not a general rewrite lane for the whole project.
 
-The long term structure currently points toward a 131 experiment field.
+The main purpose of this contribution path is to help expand the experiment layer of Tension Universe in a clean, structured, inspectable way, one page at a time.
 
-Not every experiment is complete yet.
+## Scope of contribution
 
-Instead of waiting until everything is finished internally, this project keeps the field open so that early contributors can help shape it in public, one page at a time.
+The expected contribution scope is narrow by design.
 
-Each experiment is intended to be simple at the MVP level:
+For public contributors, the preferred contribution is:
 
-- one idea
-- one page
-- one minimal structure
-- one readable claim
-- one experiment direction that can be extended later
+- add a new MVP experiment page for an open Tension Universe problem
+- improve an existing MVP experiment page under `TensionUniverse/Experiments/`
+- add small supporting notebook links, Colab links, screenshots, or structured notes that belong to that MVP page
 
-That means contribution does not require writing a full theory from day one. A clear and useful MVP page is enough.
+In most cases, a contribution should focus on MVP experiment content only.
 
-## What you can contribute
+This keeps the core narrative stable while allowing the experiment field to grow in public.
 
-You can contribute by taking one open experiment and turning it into a minimal, standalone markdown page.
+## Where MVP experiments live
 
-A good contribution usually does the following:
+MVP experiment pages belong under:
 
-- defines the experiment clearly
-- explains the core idea in plain language
-- states what the experiment is trying to test, show, or challenge
-- keeps the scope readable and structured
-- stays aligned with the broader Tension Universe direction
+`TensionUniverse/Experiments/`
 
-The goal is not perfection.
+A standard location looks like this:
 
-The goal is to move unfinished ideas into visible, usable, discussable MVP form.
+`TensionUniverse/Experiments/Q091_MVP/README.md`
 
-## Minimum acceptable MVP
+This means:
 
-A contribution can be accepted as an MVP if it meets the following baseline:
+- each experiment gets its own folder
+- each folder contains one main `README.md`
+- optional notebooks, screenshots, or small assets can live next to that README
 
-1. It has a clear title.
-2. It presents one understandable experiment idea.
-3. It includes a minimal claim or purpose.
-4. It is readable as a standalone page.
-5. It stays consistent with the Tension Universe theme and direction.
+Examples of supporting files inside the same folder may include:
 
-You do not need to solve everything in one submission.
+- `Q091_A.ipynb`
+- `Q091_B.ipynb`
+- `Q091A.png`
+- `Q091A2.png`
+- `Q091A3.png`
 
-A strong first version is better than an overbuilt draft that never gets finished.
+This structure keeps each experiment self-contained and easy to review.
+
+## What counts as an MVP experiment
+
+In this project, an MVP experiment does not mean a final proof, a complete benchmark, or a solved scientific claim.
+
+An MVP experiment means:
+
+- a small, inspectable experiment page
+- a narrow and clearly defined question
+- a reproducible or at least reviewable setup
+- a first runnable or design-level protocol
+- a documented relation to one specific Tension Universe problem
+
+Most MVP experiments in the 131-problem field should be possible to build with:
+
+- AI-assisted drafting
+- a small notebook
+- Google Colab
+- text-first synthetic inputs
+- lightweight plots, tables, or screenshots when useful
+
+The intended standard is practical and transparent, not oversized.
+
+## Problem alignment is required
+
+Every MVP experiment page must map to a real Tension Universe problem.
+
+The title, problem id, and direction should align with the canonical 131-problem field and the WFGY 3.0 reference pack.
+
+Primary reference:
+
+[WFGY 3.0 Singularity Demo AutoBoot SHA256 Verifiable TXT](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt)
+
+That reference defines the broader system language and problem field.
+
+Contributors do not need to reproduce the entire system pack, but they should stay aligned with the intended problem identity, naming, and direction.
+
+If a page does not clearly map to a valid Tension Universe problem, it is unlikely to be accepted.
+
+## Standard MVP page format
+
+Contributors should follow the established experiment-page style already used in the project.
+
+A strong MVP page usually includes the following parts.
+
+### 1. Anchor comment block
+
+At the top of the file, include a short HTML comment block that explains:
+
+- this file belongs to the WFGY 3.0 Tension Universe experiment collection
+- the main navigation hub
+- the problem id
+- the role of the page
+- how this page should be used
+
+This helps both human readers and AI systems understand the page context before reading the body.
+
+### 2. Clear title with problem id
+
+The main title should include:
+
+- the TU problem id
+- the fact that this is an MVP page
+- a short descriptive experiment title
+
+For example:
+
+`# TU Q091 MVP: equilibrium climate sensitivity tension slices`
+
+### 3. Honest status line
+
+Near the top, include a status line that clearly states the implementation state.
+
+Examples:
+
+- MVP A implemented with a first reference run
+- design-only at this stage
+- first notebook draft checked in
+- reference screenshots added, notebook pending cleanup
+
+The status line should be factual and not exaggerated.
+
+### 4. Navigation links
+
+Near the top of the page, include navigation back to:
+
+- the Experiments index
+- the Event Horizon main entry
+
+This keeps the experiment layer tied back to the main project structure.
+
+### 5. Notebook and asset references
+
+If the MVP includes runnable notebooks or screenshots, list them clearly near the top.
+
+Google Colab links are strongly encouraged when available.
+
+The ideal pattern is:
+
+- one readable README
+- one small notebook
+- optional screenshots or static outputs
+
+### 6. A narrow “what this page is about” section
+
+Early in the page, explain:
+
+- what the TU problem is
+- what this MVP page is trying to test
+- what this page does not claim to solve
+
+This prevents confusion between a first experiment and a final theoretical claim.
+
+### 7. One or more experiment sections
+
+A standard MVP page may contain:
+
+- Experiment A
+- Experiment B
+- later extensions if needed
+
+Each experiment section should normally include:
+
+- a research question
+- a setup
+- a design intent or expected pattern
+- a simple reproduction path
+- reference-run notes if available
+
+This makes the page useful even before it becomes a polished benchmark.
+
+### 8. Context and charter links
+
+Where relevant, the page should link back to:
+
+- the broader Experiments index
+- Event Horizon
+- any related charter or formal context page
+
+This helps preserve system coherence across the project.
+
+## Recommended writing style for MVP pages
+
+A good MVP experiment page should be:
+
+- narrow in scope
+- explicit about assumptions
+- easy to inspect
+- honest about limitations
+- written as a first serious experiment, not as a final claim
+
+Please avoid:
+
+- pretending an MVP solves the full problem
+- oversized philosophical claims without a usable protocol
+- disconnected content that does not map cleanly to a TU problem id
+- dumping raw notes without structure
+
+A small but well-shaped page is much more valuable than a large vague draft.
+
+## Preferred contribution shape
+
+The cleanest contribution is usually:
+
+1. choose one valid TU problem
+2. create or improve one folder under `TensionUniverse/Experiments/`
+3. write one structured `README.md`
+4. attach a small notebook or design protocol if useful
+5. keep the PR limited to that experiment scope
+
+This project strongly prefers focused PRs over large mixed changes.
 
 ## Submission path
 
-There are two simple ways to contribute:
+There are two preferred ways to contribute.
 
 ### Option 1
 
-Open an issue first, claim an open experiment, and then submit your draft.
+Open an issue first, claim a problem, then submit your MVP page.
 
-This is the cleanest path if you want to avoid overlap with someone else.
+This is the best path when you want to avoid overlap.
 
 ### Option 2
 
-Submit a pull request directly with a new experiment page.
+Submit a focused PR directly for a small experiment-page addition or improvement.
 
-This works well if the scope is small and the draft is already ready.
+This works best when the draft is already prepared and tightly scoped.
 
-In both cases, keeping the contribution minimal, clear, and focused will make review much easier.
+In either case, please keep the contribution limited to the relevant MVP experiment material.
 
 ## Contributor credit
 
-Accepted experiment pages may include a small contributor credit block at the bottom of the page.
+Accepted MVP experiment pages may include a small contributor credit block at the bottom of the page.
 
-This credit is meant to acknowledge meaningful contribution to that specific experiment page.
+This is intended to acknowledge meaningful work on that specific experiment page.
 
-It is not ownership of the whole project, and it does not override the editorial direction of Tension Universe.
+It is not ownership of the whole Tension Universe project, and it does not override the editorial direction of the project.
 
-For consistency, contributor credit follows a fixed format and only accepts GitHub links.
+For consistency, contributor credit uses a fixed format and only accepts GitHub links.
 
 See the format guide here:
 
 [Contributor credit format](./contributor-credit-format.md)
 
-## Open experiments
+## Open experiment board
 
-If you want to start from a currently open task, use the public experiment board below.
-
-That page lists experiments that are already completed, in progress, or still open for contribution.
+To find currently open or planned MVP work, use the public experiment board:
 
 [Open experiments board](./open-experiments.md)
 
-## A note for early contributors
+That board is the simplest place to see which experiments are already complete, in progress, or still open for contribution.
 
-Early contributors often become the first visible names attached to experiments that later grow into larger reference points.
+## A note for early contributors
 
 This page does not promise traffic, status, or outcomes.
 
-But if you believe this direction is worth building, contributing early is one of the clearest ways to leave a visible mark on the structure as it grows.
+But early contributors are often the first visible names attached to experiment pages that later become useful reference points inside a growing system.
 
-## Scope and editorial review
+If you believe the Tension Universe direction is worth building, one of the clearest ways to leave a real mark is to help turn open problems into inspectable MVP experiments.
 
-All contributed content may be edited for clarity, structure, naming consistency, formatting, or alignment with the broader direction of the project.
+## Editorial review
 
-This keeps the overall field readable and coherent as more experiment pages are added over time.
+All contributed content may be edited for:
 
-If your contribution is accepted, your credit can remain attached to the page under the standard contributor format.
+- clarity
+- formatting
+- naming consistency
+- structure
+- alignment with the broader Tension Universe direction
+
+This keeps the experiment layer coherent as more pages are added.
+
+If your contribution is accepted, your contributor credit can remain attached to that page using the standard format.
 
 ## Start here
 
-If you are ready to contribute, the simplest next step is:
+If you want to contribute, the simplest next step is:
 
 1. open the experiment board
-2. pick one open item
-3. draft one MVP page
-4. submit it through an issue or PR
+2. choose one valid TU problem
+3. draft one structured MVP page under `TensionUniverse/Experiments/`
+4. submit a focused issue or PR
 
-This project is being built in public.
+The field is still expanding.
 
-If you want to help expand the field, you are welcome to build with it.
+If you want to help build it, build one experiment page at a time.
