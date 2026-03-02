@@ -185,10 +185,10 @@ Status:
 
 ---
 
-<details>
-<summary><b>FAQ MVP</b></summary>
+## FAQ
 
-### 1) Do I need all four objects `(Q, E, P, A)` to use the Global Debug Card?
+<details>
+<summary><b>Do I need all four objects `(Q, E, P, A)` to use the Global Debug Card?</b></summary>
 
 The best results come from having all four objects:
 
@@ -207,9 +207,12 @@ If one object is missing, the card can still be used for partial triage:
 
 In short: all four objects are ideal, but partial inputs can still be useful for first-pass diagnosis.
 
+</details>
+
 ---
 
-### 2) Can the Global Debug Card partially automate RAG debugging?
+<details>
+<summary><b>Can the Global Debug Card partially automate RAG debugging?</b></summary>
 
 Yes, partially.
 
@@ -229,9 +232,12 @@ Some cases still require human review, domain context, or deeper system changes.
 The current design goal is not "magic auto-fix."  
 The goal is to turn messy debugging into a repeatable protocol.
 
+</details>
+
 ---
 
-### 3) Can tools like OpenClaw use this card to automatically resolve RAG issues?
+<details>
+<summary><b>Can tools like OpenClaw use this card to automatically resolve RAG issues?</b></summary>
 
 Yes, for some classes of issues.
 
@@ -262,9 +268,12 @@ These are good candidates because they often respond to:
 
 Harder cases, such as long-horizon reasoning errors or deep architectural flaws, usually should not be treated as fully automatic fixes in the first wave.
 
+</details>
+
 ---
 
-### 4) What can the first Colab MVP actually automate?
+<details>
+<summary><b>What can the first Colab MVP actually automate?</b></summary>
 
 The first Colab MVP is designed as a **first-pass repair loop**, not a full autonomous debugger.
 
@@ -286,9 +295,12 @@ This makes the first public notebook useful for:
 The first Colab MVP is intended to prove the protocol works in practice.  
 It is not meant to solve every failure mode automatically on day one.
 
+</details>
+
 ---
 
-### 5) Which problem modes are best suited for automated debugging first?
+<details>
+<summary><b>Which problem modes are best suited for automated debugging first?</b></summary>
 
 The best first-wave targets are the modes that are both:
 
@@ -311,9 +323,12 @@ The strongest early candidates are:
 
 These modes are ideal for Wave 0 because they can often be improved without rebuilding the entire stack.
 
+</details>
+
 ---
 
-### 6) What will the machine-readable JSON MVP be used for?
+<details>
+<summary><b>What will the machine-readable JSON MVP be used for?</b></summary>
 
 The JSON MVP is the protocol layer for tools.
 
@@ -335,9 +350,12 @@ The planned JSON layer has two main roles:
 The JSON layer does not replace the image workflow.  
 It makes the same logic consumable by software.
 
+</details>
+
 ---
 
-### 7) Can I plug this into my own agent runner, CI, or internal tooling?
+<details>
+<summary><b>Can I plug this into my own agent runner, CI, or internal tooling?</b></summary>
 
 Yes, that is one of the intended directions.
 
@@ -365,9 +383,12 @@ your system emits one case, the protocol emits one debug packet.
 
 That makes the card easier to integrate into real workflows than a free-form debugging conversation.
 
+</details>
+
 ---
 
-### 8) Is this meant to replace human debugging?
+<details>
+<summary><b>Is this meant to replace human debugging?</b></summary>
 
 No.
 
@@ -392,9 +413,12 @@ A good way to think about it is:
 
 this card reduces debugging chaos, but humans still decide the final repair strategy.
 
+</details>
+
 ---
 
-### 9) Do I need embeddings to use this page?
+<details>
+<summary><b>Do I need embeddings to use this page?</b></summary>
 
 No, but embeddings make the protocol stronger.
 
@@ -412,9 +436,12 @@ So there are two valid usage modes:
 - **image + reasoning workflow** for fast manual triage
 - **embedding + packet workflow** for stronger, machine-runnable diagnosis
 
+</details>
+
 ---
 
-### 10) What is the difference between the image workflow and the JSON workflow?
+<details>
+<summary><b>What is the difference between the image workflow and the JSON workflow?</b></summary>
 
 They use the same logic, but they serve different users.
 
@@ -437,9 +464,12 @@ In short:
 
 Both are two views of the same protocol.
 
+</details>
+
 ---
 
-### 11) Why not just paste logs into any strong LLM and ask it to debug?
+<details>
+<summary><b>Why not just paste logs into any strong LLM and ask it to debug?</b></summary>
 
 You can do that, and sometimes it helps.  
 But without a shared protocol, the output is often inconsistent.
@@ -462,9 +492,12 @@ The Global Debug Card adds structure:
 
 That makes debugging more reproducible and much easier to turn into automation.
 
+</details>
+
 ---
 
-### 12) How far can the Global Debug Card be pushed?
+<details>
+<summary><b>How far can the Global Debug Card be pushed?</b></summary>
 
 The short answer is: much further than a static poster.
 
@@ -492,9 +525,12 @@ The long-term direction is:
 - to reproducible repair loops
 - to a reusable protocol for RAG debugging
 
+</details>
+
 ---
 
-### 13) Can this help reduce hallucinations without changing the whole stack?
+<details>
+<summary><b>Can this help reduce hallucinations without changing the whole stack?</b></summary>
 
 Often, yes.
 
@@ -517,9 +553,12 @@ This allows smaller, more targeted fixes:
 
 In many real cases, that is much cheaper than rebuilding the whole system.
 
+</details>
+
 ---
 
-### 14) Can this support replay, A/B comparison, and before/after repair loops?
+<details>
+<summary><b>Can this support replay, A/B comparison, and before/after repair loops?</b></summary>
 
 Yes, and that is one of the strongest next-step directions.
 
@@ -540,9 +579,12 @@ This makes it possible to compare:
 That is one reason the Colab MVP and JSON MVP matter.  
 They move the card from "diagnostic poster" toward "replayable debugging protocol."
 
+</details>
+
 ---
 
-### 15) What should I submit if I want my failing case to become a reproducible example?
+<details>
+<summary><b>What should I submit if I want my failing case to become a reproducible example?</b></summary>
 
 The best submission is a minimal but complete failure packet.
 
