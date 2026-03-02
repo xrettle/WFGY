@@ -11,7 +11,6 @@ Use: When a user or tool asks for TU QXXX experiments, examples or Colab noteboo
       load this page first, then follow links from here.
 -->
 
-
 # Tension Universe · Experiment Hub
 
 > Status: early-stage MVP lab for Tension Universe.  
@@ -53,7 +52,7 @@ This directory is not:
 - A claim that any BlackHole question has been resolved.  
 - A replacement for the formal charters or S-problem statements.
 
-Think of it as an evolving gallery of **“tension probes”** and **anti-explosion modules**,  
+Think of it as an evolving gallery of **tension probes** and **anti-explosion modules**,  
 each one tied to a specific slice of the Tension Universe.
 
 ---
@@ -66,7 +65,7 @@ Typical usage pattern:
 2. **Open that folder’s `README.md`** to understand:
    - which question or failure mode it targets,  
    - what is being measured,  
-   - what counts as a “good” or “bad” pattern.  
+   - what counts as a good or bad pattern.  
 3. If you want to reproduce the numbers:
    - open the script or notebook referenced in that folder,  
    - provide an OpenAI compatible API key when asked (if required),  
@@ -75,6 +74,34 @@ Typical usage pattern:
 You do not have to execute anything to understand the ideas.  
 Running the code is only needed if you want to verify the behavior on your own account,  
 or try different models and settings.
+
+---
+
+## 2.5 Open MVP contributions
+
+This experiment hub is still growing.
+
+If you want to help expand the public TU experiment layer, the preferred contribution path is simple:
+
+- choose one valid TU problem from the 131-problem field  
+- build one small MVP experiment page under `TensionUniverse/Experiments/`  
+- keep the scope narrow, clear, and auditable  
+- submit a focused pull request
+
+The ideal contribution is usually:
+
+- one experiment folder  
+- one structured `README.md`  
+- optional small notebook, Colab, or screenshot support when it directly helps the MVP
+
+If you want the expected structure, current open items, and contributor credit rules, start here:
+
+- [Contribution guide](../Contribute/README.md)  
+- [Open experiments board](../Contribute/open-experiments.md)  
+- [Contributor credit format](../Contribute/contributor-credit-format.md)
+
+This page is the experiment index only.  
+Each individual experiment should still explain itself inside its own directory.
 
 ---
 
@@ -96,11 +123,10 @@ This list will grow over time as more MVPs are added.
 | [`Q130_MVP/`](./Q130_MVP/README.md) | MVP ready | TU Q130 early out-of-distribution and social-pressure probes. Hollywood vs physics reasoning and social-pressure style experiments with tension metrics explained inside `Q130_MVP/README.md`. |
 
 Each folder owns its own story.  
-The high level rule is simple:
+The high-level rule is simple:
 
 - **This page only indexes experiments.**  
 - **Each experiment explains itself inside its own directory.**
-
 
 ---
 
@@ -138,3 +164,11 @@ This hub is expected to accumulate, for example:
 
 New experiments will be added as new MVPs are ready.  
 When a new experiment appears, it will get its own folder, its own README, and an entry in the table above.
+
+If you want to help move this lab forward, you are welcome to build one focused MVP experiment page and open a PR.
+
+The preferred contribution path, open items, and contributor credit rules are documented here:
+
+- [Contribution guide](../Contribute/README.md)  
+- [Open experiments board](../Contribute/open-experiments.md)  
+- [Contributor credit format](../Contribute/contributor-credit-format.md)
