@@ -121,7 +121,9 @@ Think of this page as a signpost, not a homepage.
   Reproducible experiments written at the Effective Layer.  
   This is where TU MVP runs such as Q121 (alignment slices), Q124 (oversight ladders),
   Q127 (synthetic worlds and entropy), and Q130 (early OOD / social pressure probes) are collected.  
-  - [Experiments/README.md](./Experiments/README.md)
+  Contributors who want to help expand the public MVP layer should focus here: one problem, one experiment page, one focused PR.  
+  - [Experiments/README.md](./Experiments/README.md)  
+  - [Contribute/README.md](./Contribute/README.md)
 
 Other top-level files include overview notes, external verification sketches,  
 and small helper documents that explain how TU packs are meant to be loaded or checked.
