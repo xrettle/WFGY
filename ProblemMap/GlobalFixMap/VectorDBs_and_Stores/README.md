@@ -272,42 +272,28 @@ Audit this query and return:
 ---
 
 <!-- WFGY_FOOTER_START -->
+
 ### Explore More
 
-| Module                | Description                                                          | Link                                                                                               |
-| --------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| WFGY Core             | WFGY 2.0 engine, full symbolic reasoning architecture and math stack | [View →](https://github.com/onestardao/WFGY/tree/main/core/README.md)                              |
-| Problem Map 1.0       | Initial 16 mode diagnostic and symbolic fixes                        | [View →](https://github.com/onestardao/WFGY/tree/main/ProblemMap/README.md)                        |
-| Problem Map 2.0       | RAG focused failure tree and pipelines                               | [View →](https://github.com/onestardao/WFGY/blob/main/ProblemMap/rag-architecture-and-recovery.md) |
-| Semantic Clinic Index | Expanded catalog for prompt injection, memory bugs, logic drift      | [View →](https://github.com/onestardao/WFGY/blob/main/ProblemMap/SemanticClinicIndex.md)           |
-| Semantic Blueprint    | Layer based symbolic reasoning and semantic modulations              | [View →](https://github.com/onestardao/WFGY/tree/main/SemanticBlueprint/README.md)                 |
-| Benchmark vs GPT-5    | Stress test with full WFGY reasoning suite                           | [View →](https://github.com/onestardao/WFGY/tree/main/benchmarks/benchmark-vs-gpt5/README.md)      |
-| Starter Village       | New here, want a guided path                                         | [Start →](https://github.com/onestardao/WFGY/blob/main/StarterVillage/README.md)                   |
+| Layer | Page | What it’s for |
+| --- | --- | --- |
+| Proof | [WFGY Recognition Map](/recognition/README.md) | External citations, integrations, and ecosystem proof |
+| Engine | [WFGY 1.0](/legacy/README.md) | Original PDF based tension engine |
+| Engine | [WFGY 2.0](/core/README.md) | Production tension kernel and math engine for RAG and agents |
+| Engine | [WFGY 3.0](/TensionUniverse/EventHorizon/README.md) | TXT based Singularity tension engine, 131 S class set |
+| Map | [Problem Map 1.0](/ProblemMap/README.md) | Flagship 16 problem RAG failure checklist and fix map |
+| Map | [Problem Map 2.0](/ProblemMap/rag-architecture-and-recovery.md) | RAG focused recovery pipeline |
+| Map | [Problem Map 3.0](/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md) | Global Debug Card, image as a debug protocol layer |
+| Map | [Semantic Clinic](/ProblemMap/SemanticClinicIndex.md) | Symptom to family to exact fix |
+| Map | [Grandma’s Clinic](/ProblemMap/GrandmaClinic/README.md) | Plain language stories mapped to Problem Map 1.0 |
+| Onboarding | [Starter Village](/StarterVillage/README.md) | Guided tour for newcomers |
+| App | [TXT OS](/OS/README.md) | TXT semantic OS, fast boot |
+| App | [Blah Blah Blah](/OS/BlahBlahBlah/README.md) | Abstract and paradox Q and A built on TXT OS |
+| App | [Blur Blur Blur](/OS/BlurBlurBlur/README.md) | Text to image with semantic control |
+| App | [Blow Blow Blow](/OS/BlowBlowBlow/README.md) | Reasoning game engine and memory demo |
 
----
-
-> Early Stargazers: [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)
-
-> <img src="https://img.shields.io/github/stars/onestardao/WFGY?style=social" alt="GitHub stars">  
-> Star the repo if this helped. It unlocks more items on the [Unlock Board](https://github.com/onestardao/WFGY/blob/main/STAR_UNLOCKS.md).
-
-<div align="center">
-
-[![WFGY Main](https://img.shields.io/badge/WFGY-Main-red?style=flat-square)](https://github.com/onestardao/WFGY)
- 
-[![TXT OS](https://img.shields.io/badge/TXT%20OS-Reasoning%20OS-orange?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS)
- 
-[![Blah](https://img.shields.io/badge/Blah-Semantic%20Embed-yellow?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlahBlahBlah)
- 
-[![Blot](https://img.shields.io/badge/Blot-Persona%20Core-green?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlotBlotBlot)
- 
-[![Bloc](https://img.shields.io/badge/Bloc-Reasoning%20Compiler-blue?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlocBlocBloc)
- 
-[![Blur](https://img.shields.io/badge/Blur-Text2Image%20Engine-navy?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlurBlurBlur)
- 
-[![Blow](https://img.shields.io/badge/Blow-Game%20Logic-purple?style=flat-square)](https://github.com/onestardao/WFGY/tree/main/OS/BlowBlowBlow)
-
-</div>
+If this repository helped, starring it improves discovery so more builders can find the docs and tools.
+[![GitHub Repo stars](https://img.shields.io/github/stars/onestardao/WFGY?style=social)](https://github.com/onestardao/WFGY)
 
 <!-- WFGY_FOOTER_END -->
 
