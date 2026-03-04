@@ -202,14 +202,14 @@ No signup. No tracking. No ads. Virus-free. Pure logic.</em>
   <br>
   <img src="./images/kb_boundary_test_demo.gif" width="100%" style="max-width:900px" loading="lazy" />
   <br>
-  <em>The WFGY Reasoning Engine monitors hallucination risk in real-time.</em>  
+  <em>The WFGY Reasoning Engine is designed to monitor hallucination risk during a run.</em>  
   <br>
   Just type <code>kbtest</code> — and watch the system analyze ultra-abstract questions.
 
-  Each test is <strong>randomized</strong>, but detection is always active.  
-  Thanks to BBCR, boundary checks trigger automatically when ΔS is high.
+  Each test is <strong>randomized</strong>, but the detection logic stays active while the module is running.  
+  With BBCR enabled, boundary checks can trigger automatically when ΔS is high.
 
-  > No fake answers. Just safe semantic pivots.
+  > It aims to avoid confident bluffing and prefers safe semantic pivots when uncertainty is high.
 </details>
 
 
