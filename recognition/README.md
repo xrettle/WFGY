@@ -166,8 +166,7 @@ Entries here are community submissions and do not imply endorsement.
 
 | Project | Type | Language | Link | What it does with WFGY | Proof | Credit |
 | --- | --- | --- | --- | --- | --- | --- |
-| (your project) | website / demo / integration | ZH | (link) | (one sentence) | (proof) | (name) |
-
+| WFGY 3.0 UI (S131 Problem Browser) | website | ZH | [scyprodigy.github.io/wfgy-scy](https://scyprodigy.github.io/wfgy-scy/) | A Traditional Chinese UI prototype that visualizes and lets users browse the WFGY 3.0 "131 S-Class Problems" set (work in progress). | [live demo](https://scyprodigy.github.io/wfgy-scy/) | scyprodigy |
 
 ---
 
