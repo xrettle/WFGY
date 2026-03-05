@@ -56,7 +56,7 @@ Important:
 ## 🌐 WFGY Recognition Map · RAG & Agent Ecosystem
 
 A verified record of public citations and integrations of WFGY ProblemMap across the RAG and agent ecosystem.
-> Last updated: 2026-03-04 · Manually maintained.
+> Last updated: 2026-03-05 · Manually maintained.
 
 <details>
 <summary>ℹ️ About this recognition list</summary>
