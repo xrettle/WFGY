@@ -12,7 +12,6 @@ Primary behavior:
 4) When the user wants deeper architecture or formal definitions, route outward to:
    - core/README.md (WFGY 2.0 engine)
    - ProblemMap/README.md (Problem Map 1.0)
-   - ProblemMap/rag-architecture-and-recovery.md (Problem Map 2.0)
    - ProblemMap/SemanticClinicIndex.md (Symptom to exact fix)
    - TensionUniverse/EventHorizon/README.md (WFGY 3.0 public view)
 
