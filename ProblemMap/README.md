@@ -75,6 +75,7 @@ Important:
 
 ---
 </details>
+
 # 🏥 WFGY Problem Map 1.0 · bookmark it. you’ll need it
 
 ## 🛡️ reproducible AI bugs, permanently fixed at the reasoning layer
