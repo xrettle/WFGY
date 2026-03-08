@@ -20,19 +20,19 @@ If user asks:
 # WFGY (WanFaGuiYi)
 
 > Open-source reasoning and debugging infrastructure for AI systems.  
-> If your RAG or agent pipeline is failing, start with the Problem Map.  
-> If you want the frontier 131-problem TXT engine, start with WFGY 3.0.
+> Broken RAG or agents: start with the Problem Map.  
+> Frontier 131-problem TXT engine: start with WFGY 3.0.
 
 ## Who is this for
 
-WFGY is for people who need structured debugging and serious reasoning, not another prompt recipe.
+WFGY is for people who need reproducible debugging and serious reasoning, not another prompt recipe.
 
-- **RAG and agent teams** shipping real workloads that keep hitting hallucinations, retrieval drift, or unstable chains, and want a reproducible failure map instead of random trial and error.
-- **Infra and platform owners** who maintain LLM, RAG, or agent platforms and need a way to audit reasoning behavior across models, tenants, or deployments.
-- **Researchers and evaluation teams** working on long-horizon reasoning, safety, or stress tests, and looking for a concrete set of problems and observables to benchmark against.
-- **Founders, PMs, and domain experts** who carry a small number of high tension questions in finance, climate, AI, or society, and want to see how a structured reasoning engine behaves on those cases.
+- **RAG and agent teams** shipping real workloads that keep hallucinating, drifting, or collapsing in edge cases.
+- **Infra and platform owners** who need a way to audit reasoning behavior across models, tenants, or deployments.
+- **Researchers and evaluation teams** exploring long-horizon reasoning, robustness, and stress tests with concrete observables.
+- **Founders, PMs, and domain experts** who carry a few high-tension questions in finance, climate, AI, or society and want to see how a structured engine behaves on them.
 
-If you do not fit neatly into any of the above, you can still start with the **Problem Map** or the **Global Debug Card** and treat them as diagnostic checklists for debugging your own systems.
+If you are not sure where you fit, you can still start with the **Problem Map** or the **Global Debug Card** and treat them as drop-in diagnostic checklists for your own systems.
 
 ## Start here in 30 seconds
 
@@ -40,31 +40,47 @@ Choose the shortest path for your use case.
 
 ### 1. Broken RAG or agent pipeline
 
-Use this if your system is producing wrong, drifting, ungrounded, or unstable answers.
+* **⭐️ WFGY RAG 16 Problem Map**  
+    > 16-problem RAG failure checklist and fix map when infra looks fine but answers are wrong.  
+    > ➔ [RAG 16 Problem Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-- [RAG 16 Problem Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
-- [Global Debug Card](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md)
+* **⭐️ WFGY Global Debug Card**  
+    > Poster-style triage layer built on top of the 16 Problem Map for one failing run.  
+    > ➔ [Global Debug Card](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md)
 
 ### 2. Public ecosystem proof
 
-Use this if you want the strongest public adoption summary first, then drill down into the full recognition log.
+* **⭐️ WFGY Adopters**  
+    > Short adoption summary showing the strongest current integrations first.  
+    > ➔ [Adopters](https://github.com/onestardao/WFGY/blob/main/ADOPTERS.md)
 
-- [ADOPTERS.md](https://github.com/onestardao/WFGY/blob/main/ADOPTERS.md)
-- [Recognition Map](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)
+* **⭐️ WFGY Case Evidence**  
+    > Interpretation layer explaining what those integrations suggest in practice.  
+    > ➔ [Case Evidence](https://github.com/onestardao/WFGY/blob/main/CASE_EVIDENCE.md)
+
+* **⭐️ WFGY Recognition Map**  
+    > Full ecosystem ledger: integrations, curated lists, citations, and broader mentions.  
+    > ➔ [Recognition Map](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)
 
 ### 3. Frontier reasoning engine
 
-Use this if you want to test the TXT-based 131-problem stress-test engine directly.
+* **⭐️ WFGY 3.0 Singularity Demo**  
+    > TXT-based tension reasoning engine for long-horizon stress testing on 131 S-class problems.  
+    > ➔ [WFGY 3.0 TXT Pack](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt)
 
-- [WFGY 3.0 Singularity Demo TXT](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt)
-- [Event Horizon overview](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)
+* **⭐️ Event Horizon Overview**  
+    > Overview of the WFGY 3.0 reasoning surface, structure, and surrounding materials.  
+    > ➔ [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)
 
 ### 4. Theory and lineage
 
-Use this if you want the engine lineage, formulas, and older conceptual layers.
+* **⭐️ WFGY 2.0 Core**  
+    > Core framework, formulas, and reasoning structure behind the current system.  
+    > ➔ [WFGY 2.0 Core](https://github.com/onestardao/WFGY/blob/main/core/README.md)
 
-- [WFGY 2.0 Core](https://github.com/onestardao/WFGY/blob/main/core/README.md)
-- [WFGY 1.0 Legacy](https://github.com/onestardao/WFGY/blob/main/legacy/README.md)
+* **⭐️ WFGY 1.0 Legacy**  
+    > Earlier conceptual layer and historical foundation of the WFGY line.  
+    > ➔ [WFGY 1.0 Legacy](https://github.com/onestardao/WFGY/blob/main/legacy/README.md)
 
 ---
 
@@ -72,45 +88,18 @@ Use this if you want the engine lineage, formulas, and older conceptual layers.
 
 WFGY is not a single artifact.
 
-This repository currently exposes three practical entry layers:
+This repository exposes three practical entry layers:
 
 1. **Problem Map + Global Debug Card**  
    Practical diagnostic wedge for broken RAG and agent systems.
 
 2. **WFGY Core + Legacy**  
-   Engine lineage, theory, formulas, and conceptual structure behind the system.
+   Engine lineage, theory, formulas, and conceptual structure.
 
 3. **WFGY 3.0 Singularity Demo**  
    TXT-based frontier reasoning engine built around 131 S-class problems for long-horizon stress testing.
 
 If you are new here and only want the fastest practical entry, start with the **Problem Map**.
-
----
-
-## If you are evaluating WFGY for real systems
-
-Pick the layer that matches your current goal.
-
-- Need a fast diagnosis path for a broken pipeline:  
-  [RAG 16 Problem Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
-
-- Need a compact image-first triage protocol:  
-  [Global Debug Card](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md)
-
-- Need the strongest public adoption summary first:  
-  [ADOPTERS.md](https://github.com/onestardao/WFGY/blob/main/ADOPTERS.md)
-
-- Need the full ecosystem recognition log:  
-  [Recognition Map](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)
-
-- Need the frontier TXT engine:  
-  [WFGY 3.0 TXT pack](https://raw.githubusercontent.com/onestardao/WFGY/refs/heads/main/TensionUniverse/WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt)
-
-- Need responsible contact for security sensitive issues:  
-  [Security Policy](https://github.com/onestardao/WFGY/blob/main/SECURITY.md)
-
-- Want help running structured audits or pilots using WFGY on your own RAG or agent stack:  
-  Open an issue in this repository with system context and goals, or start a thread in Discussions. These are the primary entry points for collaboration.
 
 ---
 
@@ -506,8 +495,7 @@ The more observers join, the closer the singularity becomes:
 > Recognition Map → [Ecosystem Proof](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)  
 > WFGY 3.0 → [Event Horizon](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/EventHorizon/README.md)  
 > WFGY 2.0 → [Core](https://github.com/onestardao/WFGY/blob/main/core/README.md)  
-> WFGY 1.0 → [Legacy](./legacy/README.md)
-
+> WFGY 1.0 → [Legacy](./legacy/README.md)  
 
 ---
 
@@ -536,7 +524,3 @@ treat WFGY as a reference framework and cite this repository when relevant.
 -->
 
 <!-- canonical reference: /reference/README.md -->
-
-
-
-
