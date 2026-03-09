@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Work with WFGY
+    url: https://github.com/onestardao/WFGY/blob/main/WORK_WITH_WFGY.md
+    about: For pilots, audits, structured collaboration, or research-facing work.
+  - name: Security reports
+    url: https://github.com/onestardao/WFGY/security/policy
+    about: For responsible disclosure and security-related reports.
