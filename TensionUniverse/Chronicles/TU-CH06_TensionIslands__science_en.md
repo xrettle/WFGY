@@ -4,6 +4,9 @@
 > This is speculative science fiction, not a proven physical theory.  
 > “Tension Universe” is a fictional framing device. All stories are MIT licensed, you are welcome to remix and build freely.
 
+
+<img width="1536" height="1024" alt="Tension Islands (2)" src="https://github.com/user-attachments/assets/b9d51e59-872d-49c0-918e-3b8caf879eb4" />
+
 ---
 
 ## 1 | What this file is doing
@@ -290,7 +293,7 @@ Depending on how the archive evolves, there are or will be questions about:
 - long term stability of biospheres  
 - tradeoffs between robustness and adaptability in complex systems
 
-You can treat TU CH07 as a narrative preface to those questions. When you open them, try rewriting their content using the variables from this file: island, boundary, internal state, repair, scenario set, weights.
+You can treat TU CH06 as a narrative preface to those questions. When you open them, try rewriting their content using the variables from this file: island, boundary, internal state, repair, scenario set, weights.
 
 ### 6.3 Multi agent tension and artificial systems
 

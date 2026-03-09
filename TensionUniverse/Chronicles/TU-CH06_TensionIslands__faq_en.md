@@ -4,7 +4,12 @@
 > This is speculative science fiction, not a proven physical theory.  
 > “Tension Universe” is a fictional framing device. All stories are MIT licensed, you are welcome to remix and build freely.
 
-This file collects common questions about the “tension island” framing for life, consciousness, and free will. It sits behind the story chronicle `TU-CH07_TensionIslands__story_en.md` and the science notes in `TU-CH07_TensionIslands__science_en.md`.
+
+<img width="1536" height="1024" alt="Tension Islands (3)" src="https://github.com/user-attachments/assets/eef93382-211e-4ba2-95a0-a9f8777f881d" />
+
+
+
+This file collects common questions about the “tension island” framing for life, consciousness, and free will. It sits behind the story chronicle `TU-CH06_TensionIslands__story_en.md` and the science notes in `TU-CH06_TensionIslands__science_en.md`.
 
 You can read these answers as one possible way to navigate the same ideas. They are not the only reading, and they are not a claim that the hard problems are solved. They are a way to give the questions sharper edges.
 
