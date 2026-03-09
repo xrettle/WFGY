@@ -1,0 +1,80 @@
+name: Docs and navigation improvement
+description: Report a confusing page, missing link, weak routing path, or documentation structure issue.
+title: "[Docs] "
+labels:
+  - documentation
+  - navigation
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to improve the WFGY documentation and routing system.
+
+        Good examples:
+        - a page is hard to understand
+        - a new reader can get lost
+        - a related page should be linked
+        - a section title or reading path is unclear
+        - a document belongs in a different place
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: What kind of docs issue is this
+      options:
+        - Confusing wording
+        - Missing link
+        - Weak routing path
+        - Redundant or repeated explanation
+        - Wrong page placement
+        - Broken link
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: Affected page
+      description: Which page or file is affected
+      placeholder: e.g. README, ECOSYSTEM_MAP, ADOPTERS, WORK_WITH_WFGY
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is confusing or missing
+      description: Explain what a new reader may misunderstand or fail to find
+      placeholder: Describe the problem clearly
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should happen instead
+      description: What would a cleaner reading path or structure look like
+      placeholder: Describe the improved routing or documentation behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_fix
+    attributes:
+      label: Suggested fix
+      description: Optional suggestion for wording, structure, or placement
+      placeholder: e.g. add a related-pages block, shorten the summary, move this section to another page
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I checked the current README and related page before filing this
+          required: true
+        - label: I am describing a docs or routing problem, not a general support request
+          required: true

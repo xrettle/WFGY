@@ -1,0 +1,80 @@
+name: Feature request
+description: Suggest a meaningful improvement to the WFGY ecosystem, docs, tooling, or public structure.
+title: "[Feature] "
+labels:
+  - enhancement
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for meaningful improvements.
+
+        Good examples:
+        - a new docs surface
+        - a better routing layer
+        - a reusable triage asset
+        - a public proof improvement
+        - a better collaboration or contribution flow
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve
+      description: Explain the gap, friction, or limitation first
+      placeholder: Describe the problem clearly
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+      description: Describe the feature, structure, or improvement you want to see
+      placeholder: Describe the requested improvement
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area does this affect
+      options:
+        - Documentation
+        - Problem Map line
+        - Public proof layer
+        - Collaboration layer
+        - Contribution workflow
+        - Application layer
+        - Core framework
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional. If you considered another path, describe it
+      placeholder: Describe alternative approaches if relevant
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add links, examples, screenshots, or comparisons if useful
+      placeholder: Paste extra context here
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I described the problem before the proposed solution
+          required: true
+        - label: I understand this may be re-scoped into docs, recognition, or another workstream after review
+          required: true
