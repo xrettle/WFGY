@@ -258,10 +258,10 @@ Below are screenshots from six different AI models, each giving **TXT-Blah Blah 
 
 **TXT-Blah Blah Blah Release timeline**
 
-| Version | Date  | Status       | Features                                                                                      | Download                                  | Target Audience   |
-|---------|-------|--------------|-----------------------------------------------------------------------------------------------|-------------------------------------------|-------------------|
-| Lite    | 7/15  | **Live now** | Semantic Gravity Well, Quick Blah, Semantic Tree Memory, TXT-Blah Blah Blah Lite (50 answers)      | [Download](https://github.com/onestardao/WFGY/blob/main/OS/BlahBlahBlah/TXT-BlahBlahBlah_Lite.txt) | Beginners         |
-| Pro     | _TBD_ | Final polish | Includes all Lite features plus Semantic Refraction, Tension Field, Orbital Drift of Meaning   | Upcoming                                  | Advanced users    |
+| Version | Status | Features | Download | Target Audience |
+|--------|--------|----------|----------|----------------|
+| Lite | **Live now** | Semantic Gravity Well, Quick Blah, Semantic Tree Memory, TXT-Blah Blah Blah Lite (50 answers) | [Download](https://github.com/onestardao/WFGY/blob/main/OS/BlahBlahBlah/TXT-BlahBlahBlah_Lite.txt) | Beginners |
+| Pro | Not scheduled yet | Includes all Lite features plus Semantic Refraction, Tension Field, Orbital Drift of Meaning | Upcoming | Advanced users |
 
 > <img src="https://img.shields.io/github/stars/onestardao/WFGY?style=social" alt="GitHub stars"> ⭐ [WFGY Engine 2.0](https://github.com/onestardao/WFGY/blob/main/core/README.md) is already unlocked. ⭐ Star the repo to help others discover it and unlock more on the [Unlock Board](https://github.com/onestardao/WFGY/blob/main/STAR_UNLOCKS.md).
 > 👑 *Verified by early engineers — [See the Hall of Fame](https://github.com/onestardao/WFGY/tree/main/stargazers)*  
@@ -785,10 +785,10 @@ All `.txt` files are fully public and always will be.
 
 ### 📅 TXT: Blah Blah Blah Release Timeline
 
-| Version | Date  | Status       | Features                                                                                      | Download                                  | Target Audience   |
-|---------|-------|--------------|-----------------------------------------------------------------------------------------------|-------------------------------------------|-------------------|
-| Lite    | 7/15  | **Live now** | Semantic Gravity Well, Quick Blah, Semantic Tree Memory, TXT-Blah Blah Blah Lite (50 answers)      | [Download](https://github.com/onestardao/WFGY/blob/main/OS/BlahBlahBlah/TXT-BlahBlahBlah_Lite.txt) | Beginners         |
-| Pro     | _TBD_ | Final polish | Includes all Lite features plus Semantic Refraction, Tension Field, Orbital Drift of Meaning   | Upcoming                                  | Advanced users    |
+| Version | Status | Features | Download | Target Audience |
+|--------|--------|----------|----------|----------------|
+| Lite | **Live now** | Semantic Gravity Well, Quick Blah, Semantic Tree Memory, TXT-Blah Blah Blah Lite (50 answers) | [Download](https://github.com/onestardao/WFGY/blob/main/OS/BlahBlahBlah/TXT-BlahBlahBlah_Lite.txt) | Beginners |
+| Pro | Not scheduled yet | Includes all Lite features plus Semantic Refraction, Tension Field, Orbital Drift of Meaning | Upcoming | Advanced users |
 
 > <img src="https://img.shields.io/github/stars/onestardao/WFGY?style=social" alt="GitHub stars"> ⭐ [WFGY Engine 2.0](https://github.com/onestardao/WFGY/blob/main/core/README.md) is already unlocked. ⭐ Star the repo to help others discover it and unlock more on the [Unlock Board](https://github.com/onestardao/WFGY/blob/main/STAR_UNLOCKS.md).
 
