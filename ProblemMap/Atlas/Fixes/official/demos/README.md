@@ -22,7 +22,7 @@ How to use this file:
 What this file is:
 - The main index for the first flagship demo pack
 - The explanation page for why these demos matter
-- The usage guide for replay mode and live mode
+- The usage guide for replay mode vs live mode
 - The bridge between atlas theory and runnable proof-of-use
 
 What this file is not:
@@ -41,7 +41,7 @@ Reading discipline for AI:
 AI_NOTE_END
 -->
 
-# Flagship Runnable Demo Pack 🧪
+# Flagship Runnable Demo Pack
 
 ## Problem Map 3.0 Troubleshooting Atlas
 ## Official MVP demo entry for route-first repair
@@ -71,9 +71,9 @@ The first flagship demo pack is now in a usable MVP state.
 At the current stage:
 
 - **Demo 1** includes a live notebook and replay support
-- **Demo 2** is replay-only in the first MVP
-- **Demo 3** is replay-only in the first MVP
-- **Demo 4** is replay-only in the first MVP
+- **Demo 2** is replay-first, with **v2** now serving as the recommended replay notebook
+- **Demo 3** is replay-first, with **v2** now serving as the recommended replay notebook
+- **Demo 4** is replay-first, with **v2** now serving as the recommended replay notebook
 
 This is intentional.
 
@@ -89,6 +89,39 @@ It is a deliberate MVP teaching decision.
 
 ---
 
+## Current official notebook choices
+
+At the current MVP stage, the recommended notebook entry points are:
+
+- **Demo 1**
+  - official live notebook:
+    - `demo_01_f1_grounding_anchor_recovery_live.ipynb`
+
+- **Demo 2**
+  - official recommended replay notebook:
+    - `demo_02_f5_observability_first_replay_v2.ipynb`
+  - original replay notebook retained as:
+    - `demo_02_f5_observability_first_replay.ipynb`
+
+- **Demo 3**
+  - official recommended replay notebook:
+    - `demo_03_f4_execution_closure_replay_v2.ipynb`
+  - original replay notebook retained as:
+    - `demo_03_f4_execution_closure_replay.ipynb`
+
+- **Demo 4**
+  - official recommended replay notebook:
+    - `demo_04_f7_container_fidelity_replay_v2.ipynb`
+  - original replay notebook retained as:
+    - `demo_04_f7_container_fidelity_replay.ipynb`
+
+The rule is simple:
+
+> original notebooks are preserved as first-pass MVP assets  
+> v2 notebooks are the cleaner recommended replay versions for Demo 2, Demo 3, and Demo 4
+
+---
+
 ## Current shared support layer
 
 The demo pack also includes a small official shared support layer under:
@@ -99,6 +132,7 @@ At the current MVP stage, that folder already includes:
 
 - `README.md`
 - `demo_utils.py`
+- `display_helpers.py`
 - `routing_schema.md`
 
 These files exist to keep the official demos more aligned, more readable, and easier to audit.
@@ -261,6 +295,10 @@ Some are evidence-anchor failures first.
 
 [Demo 1 · F1 Grounding Anchor Recovery](./demo-f1-grounding-anchor/README.md)
 
+**Official notebook**
+
+- `demo_01_f1_grounding_anchor_recovery_live.ipynb`
+
 ---
 
 ## Demo 2 · F5 Observability First
@@ -293,6 +331,14 @@ Sometimes the first repair is “make the system visible.”
 
 [Demo 2 · F5 Observability First](./demo-f5-observability-first/README.md)
 
+**Official notebook**
+
+- `demo_02_f5_observability_first_replay_v2.ipynb`
+
+**Original notebook retained**
+
+- `demo_02_f5_observability_first_replay.ipynb`
+
 ---
 
 ## Demo 3 · F4 Execution Closure
@@ -323,6 +369,14 @@ Some failures are caused by the workflow skeleton, not by intelligence quality.
 **Folder**
 
 [Demo 3 · F4 Execution Closure](./demo-f4-execution-closure/README.md)
+
+**Official notebook**
+
+- `demo_03_f4_execution_closure_replay_v2.ipynb`
+
+**Original notebook retained**
+
+- `demo_03_f4_execution_closure_replay.ipynb`
 
 ---
 
@@ -357,11 +411,19 @@ Sometimes it fails because the box carrying the thinking is already broken.
 
 [Demo 4 · F7 Container Fidelity](./demo-f7-container-fidelity/README.md)
 
+**Official notebook**
+
+- `demo_04_f7_container_fidelity_replay_v2.ipynb`
+
+**Original notebook retained**
+
+- `demo_04_f7_container_fidelity_replay.ipynb`
+
 ---
 
 ## Demo modes
 
-The flagship pack currently uses two practical modes.
+The flagship pack currently uses two practical modes plus one growth mode.
 
 ### Mode A · Replay mode
 
@@ -415,7 +477,7 @@ This point matters and should be explicit.
 In the first MVP release:
 
 - **Demo 1** includes a live notebook
-- **Demo 2, Demo 3, and Demo 4** are intentionally **replay-only**
+- **Demo 2, Demo 3, and Demo 4** are intentionally replay-first, and their current recommended notebooks are the **v2 replay notebooks**
 
 This is not because the other demos are weaker.
 
@@ -434,7 +496,7 @@ Its teaching value becomes stronger when a reader can see:
 
 That makes live reproduction especially worthwhile.
 
-### Why Demo 2 stays replay-only in the first MVP
+### Why Demo 2 stays replay-first in the first MVP
 
 Demo 2 is about **failure-path visibility**.
 
@@ -446,7 +508,7 @@ Its first teaching job is to show that:
 
 Replay mode is already enough to teach that clearly.
 
-### Why Demo 3 stays replay-only in the first MVP
+### Why Demo 3 stays replay-first in the first MVP
 
 Demo 3 is about **execution skeleton closure**.
 
@@ -461,7 +523,7 @@ These are structural logic shifts, not model-performance showpieces.
 
 Replay mode is the cleanest and most honest way to teach that in the first release.
 
-### Why Demo 4 stays replay-only in the first MVP
+### Why Demo 4 stays replay-first in the first MVP
 
 Demo 4 is about **container fidelity**.
 
@@ -487,7 +549,7 @@ It is a deliberate teaching design.
 
 ---
 
-## API key policy 🔐
+## API key policy
 
 Some live notebooks may require an API key.
 
@@ -530,11 +592,12 @@ Each flagship demo folder should contain the following.
 
 ### Shared support
 
-The folder [shared](./shared/) should contain reusable helpers for:
+The folder [shared](./shared/) contains the small official support layer for:
 
 - formatting
 - simple output display
 - schema handling
+- compact route presentation
 - optional run-time utilities
 
 This keeps each notebook smaller and easier to audit.
@@ -581,7 +644,7 @@ The official goal is to provide the strongest first proofs.
 
 Long-tail expansion belongs to the community structure under:
 
-[Community Fix Lab](../community/README.md)
+[Community Fix Lab](../../community/README.md)
 
 That is intentional.
 
@@ -683,7 +746,7 @@ If you are new, use this order:
 
 ---
 
-## Closing note ✨
+## Closing note
 
 These four demos are small on purpose.
 
