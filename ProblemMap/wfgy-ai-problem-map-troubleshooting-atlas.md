@@ -89,7 +89,7 @@ AI_NOTE_END
 ## The first failure grammar for complex AI systems that changes the first repair move.
 > **Stop debugging from symptoms. Route the failure, find the broken invariant, and repair the right layer first.**
 
-<img width="1536" height="1024" alt="TS_Atlas" src="https://github.com/user-attachments/assets/b323dcf5-7eb8-4916-a8be-d1dd4f61b30f" />
+<img width="1536" height="1024" alt="Atlas_Hero" src="https://github.com/user-attachments/assets/faf34217-83f1-4028-a4b3-daea5422470e" />
 
 
 Modern AI systems rarely fail in one clean way.
