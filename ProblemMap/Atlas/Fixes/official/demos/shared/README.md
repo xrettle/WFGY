@@ -55,6 +55,8 @@ This folder exists so that the demo pack can stay clean, teachable, and maintain
 
 It should never become a dumping ground.
 
+It should also be read as part of the **official demo surface**, not as a separate mini-project.
+
 ---
 
 ## What this folder is for
@@ -91,9 +93,9 @@ The current flagship demo pack is **replay-first by design**.
 At the moment:
 
 - **Demo 1** includes a live notebook because live comparison adds direct proof value
-- **Demo 2** is replay-only in the first MVP
-- **Demo 3** is replay-only in the first MVP
-- **Demo 4** is replay-only in the first MVP
+- **Demo 2** is replay-first, with the cleaner v2 replay notebook serving as the recommended entry point
+- **Demo 3** is replay-first, with the cleaner v2 replay notebook serving as the recommended entry point
+- **Demo 4** is replay-first, with the cleaner v2 replay notebook serving as the recommended entry point
 
 This matters because shared helpers should reflect the real teaching center of the pack.
 
@@ -147,6 +149,17 @@ Current purpose:
 
 This file is intended to be imported by notebooks.  
 It is a support module, not a standalone demo.
+
+### `display_helpers.py`
+
+Current purpose:
+
+- before / after result formatting
+- compact comparison rendering
+- display cleanup for notebook readability
+- small output presentation helpers
+
+This file exists to improve clarity, not to introduce a custom display framework.
 
 ### `routing_schema.md`
 
@@ -448,11 +461,7 @@ This is especially useful now that the four flagship demos are being aligned mor
 
 ---
 
-### Optional files
-
-Only add these if they clearly reduce duplication.
-
-#### `display_helpers.py`
+### `display_helpers.py`
 
 Recommended purpose:
 
@@ -461,9 +470,13 @@ Recommended purpose:
 - compact comparison helpers
 - notebook display cleanup
 
-If this file is not needed, do not create it just for symmetry.
+This file should stay lightweight and readability-first.
 
-#### tiny reference notes
+---
+
+### Optional tiny reference notes
+
+Only add these if they clearly reduce duplication.
 
 Examples:
 
