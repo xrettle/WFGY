@@ -228,15 +228,9 @@ Not just:
 
 ---
 
-## A simple view of the system 👀
+## How the Atlas routes failures 👀
 
-```mermaid
-flowchart LR
-    A[Input case] --> B[Failure family]
-    B --> C[Best-fit node]
-    C --> D[Broken invariant]
-    D --> E[First repair surface]
-````
+<img width="1536" height="1024" alt="Atlas_Routing" src="https://raw.githubusercontent.com/onestardao/WFGY/main/ProblemMap/Atlas/images/Hero_Atlas_02.png" />
 
 **Route first. Repair second. Stop guessing from symptoms alone.**
 
@@ -267,59 +261,10 @@ You do **not** need deep RAG expertise to start.
 ---
 
 <details>
-<summary><strong>🧩 The seven-family mother table</strong></summary>
+<summary><strong>🧩 The seven-family failure map</strong></summary>
 <br>
 
-The current atlas organizes failure space through seven top-level families.
-
-### F1 · Grounding & Evidence Integrity
-
-The system fails to remain correctly aligned with external evidence anchors, truth-like anchors, world anchors, or semantic targets.
-
-**Short intuition**
-the output is no longer properly tied to reality, evidence, or the intended target
-
-### F2 · Reasoning & Progression Integrity
-
-The reasoning chain, decomposition chain, recursive chain, or recovery path loses continuity, controllability, or recoverability.
-
-**Short intuition**
-the system is no longer moving through reasoning space in a stable way
-
-### F3 · State & Continuity Integrity
-
-Memory, role, ownership, session thread, or continuity thread can no longer remain stable across steps, sessions, or interacting entities.
-
-**Short intuition**
-the system no longer preserves what should persist
-
-### F4 · Execution & Contract Integrity
-
-Readiness, ordering, bridge integrity, liveness, closure, protocol, or enforcement skeletons fail to close.
-
-**Short intuition**
-the workflow or operational skeleton breaks before the task can complete safely
-
-### F5 · Observability & Diagnosability Integrity
-
-The system cannot stably expose, trace, audit, interpret, or anticipate the structures required to understand the failure.
-
-**Short intuition**
-the problem may already be there, but you still cannot see it clearly enough
-
-### F6 · Boundary & Safety Integrity
-
-Goal, control, incentive, collective, or regime boundaries drift, erode, fragment, or become captured.
-
-**Short intuition**
-the system no longer stays inside a safe or viable boundary
-
-### F7 · Representation & Localization Integrity
-
-Symbolic shells, formal containers, layouts, local anchors, explanations, or synthetic structures fail to preserve structure faithfully.
-
-**Short intuition**
-the container that carries meaning is distorted before the task can remain stable
+<img width="1536" height="1024" alt="Atlas_Seven_Families" src="https://raw.githubusercontent.com/onestardao/WFGY/main/ProblemMap/Atlas/images/Hero_Atlas_03.png" />
 
 </details>
 
@@ -604,10 +549,12 @@ The safer and more accurate claim is:
 
 ## FAQ
 
-### 1. Getting Started
+### 1. Getting Started ⭐️
 
 <details>
 <summary><strong>Where should a new user start?</strong></summary>
+
+<br>
 
 > That depends on what kind of user you are.
 >
@@ -653,6 +600,8 @@ The safer and more accurate claim is:
 <details>
 <summary><strong>Do I need deep RAG knowledge to use this?</strong></summary>
 
+<br>
+
 > No.
 >
 > That is exactly why the Router TXT and Usage Guide exist.
@@ -668,6 +617,8 @@ The safer and more accurate claim is:
 
 <details>
 <summary><strong>What does Troubleshooting Atlas Router actually do?</strong></summary>
+
+<br>
 
 > The Router is the first compact TXT routing pack built from the Atlas.
 >
@@ -692,6 +643,8 @@ The safer and more accurate claim is:
 <details>
 <summary><strong>What is the difference between Problem Map 1.0, 2.0, and 3.0?</strong></summary>
 
+<br>
+
 > [**Problem Map 1.0**](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md) is the canonical 16-problem RAG failure taxonomy and fix map.
 >
 > [**Problem Map 2.0**](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md) is the Global Debug Card layer.  
@@ -708,10 +661,12 @@ The safer and more accurate claim is:
 
 </details>
 
-### 2. Why This Matters
+### 2. Why This Matters ⭐️
 
 <details>
 <summary><strong>Does this move AI closer to automatic debugging or bug fixing?</strong></summary>
+
+<br>
 
 > Yes, in an important but limited sense.
 >
@@ -737,6 +692,8 @@ The safer and more accurate claim is:
 
 <details>
 <summary><strong>If AI writes code faster, why does debugging still feel broken?</strong></summary>
+
+<br>
 
 > Because faster code generation does not automatically produce better failure diagnosis.
 >
@@ -770,6 +727,8 @@ The safer and more accurate claim is:
 <details>
 <summary><strong>How much debugging time can this realistically save?</strong></summary>
 
+<br>
+
 > It depends on the system and the failure type, so this atlas does **not** claim a universal fixed number.
 >
 > The value is strongest in complex systems where the main cost of debugging comes from entering the wrong diagnostic region first.
@@ -798,6 +757,8 @@ The safer and more accurate claim is:
 
 <details>
 <summary><strong>Can this help in blind benchmarks or hidden-task settings?</strong></summary>
+
+<br>
 
 > Yes, especially when the benchmark contains misleading surface signals, partial information, or multiple plausible failure regions.
 >
@@ -828,10 +789,12 @@ The safer and more accurate claim is:
 
 </details>
 
-### 3. Why Trust This
+### 3. Why Trust This ⭐️
 
 <details>
 <summary><strong>How do you know this atlas is not just a made-up classification system?</strong></summary>
+
+<br>
 
 > Because it was not created by naming categories first and forcing cases into them later.
 >
@@ -859,6 +822,8 @@ The safer and more accurate claim is:
 
 <details>
 <summary><strong>How was this atlas structure actually derived?</strong></summary>
+
+<br>
 
 > It was not created by inventing seven family names first and forcing cases into them afterward.
 >
@@ -890,6 +855,8 @@ The safer and more accurate claim is:
 <details>
 <summary><strong>Why seven families and not more or fewer?</strong></summary>
 
+<br>
+
 > Because the seven-family mother structure was not chosen first as a preferred number.
 >
 > It was carved under pressure.
@@ -913,6 +880,8 @@ The safer and more accurate claim is:
 <details>
 <summary><strong>What would falsify or seriously challenge this atlas?</strong></summary>
 
+<br>
+
 > The atlas is not meant to be treated as unfalsifiable.
 >
 > Several things would count as serious challenge signals:
@@ -935,6 +904,8 @@ The safer and more accurate claim is:
 
 <details>
 <summary><strong>Is this just relabeled debugging common sense?</strong></summary>
+
+<br>
 
 > No.
 >
@@ -962,6 +933,8 @@ The safer and more accurate claim is:
 <details>
 <summary><strong>What if different models route the same case differently?</strong></summary>
 
+<br>
+
 > That can happen, especially when evidence is incomplete or the case sits near a real boundary.
 >
 > The atlas does not assume that every model will always produce identical wording or identical local emphasis.
@@ -983,10 +956,12 @@ The safer and more accurate claim is:
 
 </details>
 
-### 4. Scope, Limits, and What Comes Next
+### 4. Scope, Limits, and What Comes Next ⭐️
 
 <details>
 <summary><strong>Does this system already repair everything automatically?</strong></summary>
+
+<br>
 
 > No.
 >
@@ -1016,6 +991,8 @@ The safer and more accurate claim is:
 <details>
 <summary><strong>Why not just use better prompts, tests, or observability tools?</strong></summary>
 
+<br>
+
 > Because those tools and this atlas do different jobs.
 >
 > Better prompts, better tests, logging, tracing, and observability tools are all useful.
@@ -1035,6 +1012,8 @@ The safer and more accurate claim is:
 
 <details>
 <summary><strong>When is this atlas overkill or unnecessary?</strong></summary>
+
+<br>
 
 > It is not meant for every tiny mistake.
 >
@@ -1059,6 +1038,8 @@ The safer and more accurate claim is:
 
 <details>
 <summary><strong>Is this only the first generation of the atlas?</strong></summary>
+
+<br>
 
 > Yes.
 >
@@ -1091,6 +1072,8 @@ The safer and more accurate claim is:
 
 <details>
 <summary><strong>Is this only for AI systems?</strong></summary>
+
+<br>
 
 > The current strongest public form is **AI-first**.
 >
