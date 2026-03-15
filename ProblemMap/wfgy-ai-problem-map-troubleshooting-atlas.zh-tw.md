@@ -149,6 +149,24 @@ AI_NOTE_END
 
 ---
 
+## 一個快速的前後對比
+
+如果第一個除錯方向更常是正確的，會發生什麼變化？
+
+下面這張圖是一個可重現、由 AI 評估的前後對比估計，用來展示 Atlas 嘗試帶來的操作層面變化。
+
+[![Atlas routing before / after evaluation snapshot](./Atlas/images/atlas-routing-before-after-evaluationatlas-routing-before-after-evaluation.png)](./Atlas/ai-eval-evidence.md)
+
+這**不是**正式的 benchmark。  
+它只是用來說明一個更簡單的主張：
+
+> 更準確的第一刀 routing，可以減少隱性的除錯浪費
+
+更多截圖、重現方式，以及目前仍在整理中的證據頁面，請見：  
+[AI Eval Evidence](./Atlas/ai-eval-evidence.md)
+
+---
+
 ## 你現在立刻能拿到什麼
 
 | 層級 | 你現在就能拿到什麼 |
