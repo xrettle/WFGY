@@ -34,17 +34,35 @@ Reading discipline for AI:
 AI_NOTE_END
 -->
 
-# Demo 4 · F7 Container Fidelity 🧱
+# Demo 4 · F7 Container Fidelity
 
 ## Problem Map 3.0 Troubleshooting Atlas
 ## Official flagship demo for container-first repair
 
+Quick links:
+
+- [Back to demo pack index](../README.md)
+- [Back to AI Eval Evidence](../../../../ai-eval-evidence.md)
+- [Back to Atlas landing page](../../../../../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Open Atlas Hub](../../../../README.md)
+- [Get the Atlas Router TXT](../../../../troubleshooting-atlas-router-v1.txt)
+
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/onestardao/WFGY/blob/Atlas/ProblemMap/Atlas/Fixes/official/demos/demo-f7-container-fidelity/demo_04_f7_container_fidelity_replay_v2.ipynb)
+
+Open in Colab to inspect the recommended replay notebook presentation.  
+The README and replay artifacts are already enough to understand the teaching pattern.
 
 **Replay-only MVP**  
 **No API key required**
 
 This is the fourth flagship demo in the official runnable demo pack.
+
+If the AI eval snapshots suggest that better routing may reduce hidden debugging waste, this page goes one step further.
+
+This demo is meant to make one mechanism-level claim visible:
+
+> when the structure carrier itself is too weak,  
+> the first repair move becomes descriptor and container repair, not generic reasoning pressure
 
 It was chosen because this is one of the most distinctive cuts in the entire atlas.
 
@@ -70,40 +88,25 @@ This demo is designed to make that difference visible.
 
 It shows that once a case is routed as **F7 Representation & Localization Integrity**, the first repair move changes from “push the model to reason harder” to “repair the container that carries the reasoning.”
 
+This demo is not only about bad formatting.
+
+It is about recognizing when the structure carrier itself is too weak to preserve reasoning reliably.
+
 ---
 
-## Current notebook versions
+## Quick start
 
-This folder currently preserves **two replay notebook versions**.
+Use this order for the shortest path through the demo:
 
-### Recommended version
+1. read **Section 1 · What this demo proves**
+2. read **Section 3 · Why not F2 first**
+3. read **Section 5 · First repair move**
+4. open [replay_outputs.json](./replay_outputs.json)
+5. open the recommended replay notebook only if you want the notebook presentation in Colab
 
-- `demo_04_f7_container_fidelity_replay_v2.ipynb`
+The shortest takeaway is:
 
-This is the current recommended notebook for public reading, Colab use, and MVP presentation.
-
-It keeps the replay-first design, while adding:
-
-- clearer route summary
-- clearer structure-target framing
-- stronger before / after teaching contrast
-- better aligned shared-layer presentation
-
-### Original version
-
-- `demo_04_f7_container_fidelity_replay.ipynb`
-
-This version is intentionally retained.
-
-It remains part of the demo history and preserves the earlier first-pass MVP presentation.
-
-### Version rule
-
-The rule for this folder is simple:
-
-- **v1 is preserved**
-- **v2 is the recommended replay notebook**
-- replay-first remains the official design center for Demo 4
+> if the box carrying the structure is weak, repair the box first
 
 ---
 
@@ -389,18 +392,59 @@ If that feeling is not visible in replay mode, the demo is weak.
 
 This is enough for the first public MVP.
 
+Core replay artifacts:
+
+- [input_case.json](./input_case.json)
+- [replay_outputs.json](./replay_outputs.json)
+- [expected_output.json](./expected_output.json)
+
 ---
 
-## 8. Files in this folder
+## 8. Current notebook versions
 
-### Required
+This folder currently preserves **two replay notebook versions**.
 
-- `README.md`
-- `input_case.json`
-- `replay_outputs.json`
-- `expected_output.json`
-- `demo_04_f7_container_fidelity_replay.ipynb`
+### Recommended version
+
 - `demo_04_f7_container_fidelity_replay_v2.ipynb`
+
+This is the current recommended notebook for public reading, Colab use, and MVP presentation.
+
+It keeps the replay-first design, while adding:
+
+- clearer route summary
+- clearer structure-target framing
+- stronger before / after teaching contrast
+- better aligned shared-layer presentation
+
+### Original version
+
+- `demo_04_f7_container_fidelity_replay.ipynb`
+
+This version is intentionally retained.
+
+It remains part of the demo history and preserves the earlier first-pass MVP presentation.
+
+### Version rule
+
+The rule for this folder is simple:
+
+- **v1 is preserved**
+- **v2 is the recommended replay notebook**
+- replay-first remains the official design center for Demo 4
+
+---
+
+## 9. Files in this folder
+
+### Core files
+
+- [README.md](./README.md)
+- [input_case.json](./input_case.json)
+- [replay_outputs.json](./replay_outputs.json)
+- [expected_output.json](./expected_output.json)
+- [demo_04_f7_container_fidelity_replay.ipynb](./demo_04_f7_container_fidelity_replay.ipynb)
+- [demo_04_f7_container_fidelity_replay_v2.ipynb](./demo_04_f7_container_fidelity_replay_v2.ipynb)
 
 ### Optional future additions
 
@@ -410,24 +454,24 @@ This is enough for the first public MVP.
 
 ### File roles
 
-#### `input_case.json`
+#### [input_case.json](./input_case.json)
 Contains the case, structure target, and representational context.
 
-#### `replay_outputs.json`
+#### [replay_outputs.json](./replay_outputs.json)
 Contains the baseline weak output, route explanation, first repair move, and replayed improved output.
 
-#### `expected_output.json`
+#### [expected_output.json](./expected_output.json)
 Contains the clean target structure for what the demo is trying to make visible.
 
-#### `demo_04_f7_container_fidelity_replay.ipynb`
+#### [demo_04_f7_container_fidelity_replay.ipynb](./demo_04_f7_container_fidelity_replay.ipynb)
 The original first-pass replay notebook retained for continuity.
 
-#### `demo_04_f7_container_fidelity_replay_v2.ipynb`
+#### [demo_04_f7_container_fidelity_replay_v2.ipynb](./demo_04_f7_container_fidelity_replay_v2.ipynb)
 The current recommended replay notebook for public reading and Colab use.
 
 ---
 
-## 9. Expected outcome
+## 10. Expected outcome
 
 If the demo works, the user should walk away with the following understanding:
 
@@ -444,7 +488,7 @@ That is enough.
 
 ---
 
-## 10. Limits of this demo
+## 11. Limits of this demo
 
 This demo has real limits, and those limits should be stated clearly.
 
@@ -467,7 +511,7 @@ There is no need to overclaim.
 
 ---
 
-## 11. Community extension ideas
+## 12. Community extension ideas
 
 This demo is also a seed template for future community work.
 
@@ -498,13 +542,15 @@ For contribution structure, see:
 
 ---
 
-## Short summary
+## 13. Why this demo matters
 
 This demo teaches one clean lesson:
 
 > if the box carrying the structure is weak, repair the box first
 
 That is why this is the fourth flagship demo.
+
+It turns F7 from an abstract family label into a practical debugging move.
 
 ---
 
@@ -514,9 +560,26 @@ That is why this is the fourth flagship demo.
 
 ---
 
+## Next steps
+
+After this page, most readers continue with:
+
+1. [Back to the demo pack index](../README.md)
+2. [Back to AI Eval Evidence](../../../../ai-eval-evidence.md)
+3. [Back to the Atlas landing page](../../../../../wfgy-ai-problem-map-troubleshooting-atlas.md)
+4. [Open the Atlas Router TXT](../../../../troubleshooting-atlas-router-v1.txt)
+
+If this demo helped you understand the Atlas, consider:
+
+- [starring the WFGY repo](https://github.com/onestardao/WFGY)
+- opening an issue
+- testing the replay artifacts
+- comparing v1 and v2 notebook presentation
+- using the demo as a pattern for your own container-first cases
+
+---
+
 ## Back to the main page
 
 Read the full product page here:  
-[Problem Map 3.0 Troubleshooting Atlas](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-ai-problem-map-troubleshooting-atlas.md)
-
-If you like the project, star the repo ⭐
+[Problem Map 3.0 Troubleshooting Atlas](../../../../../wfgy-ai-problem-map-troubleshooting-atlas.md)
