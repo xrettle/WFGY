@@ -2,706 +2,572 @@
 AI_NOTE_START
 
 Document role:
-This file is the first formal cross-domain bridge evidence pack for the Atlas system.
+This file is the example pack for tiny planner outputs inside Auto Repair v1.
 
 How to use this file:
-1. Read this file after understanding the frozen Atlas core.
-2. Use this page to understand how the Atlas begins to extend beyond narrow AI-only troubleshooting.
-3. Treat this page as the first formal bridge evidence layer, not as a claim of universal closure.
+1. Read this file after:
+   - [Repair Planner Spec v1](./repair-planner-spec-v1.md)
+   - [Repair Planner Prompt v1](./repair-planner-prompt-v1.md)
+   - [Repair Plan Schema v1](./repair-plan-schema-v1.json)
+2. Use this page to inspect what small, structurally valid planner outputs should look like.
+3. Treat this file as an example pack for planner behavior, not as proof of full autonomous repair.
 4. Read together with:
-   - [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
-   - [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
-   - [Canonical Casebook v1](./canonical-casebook-v1.md)
-   - [Civilization Bridge Modules v1](./civilization-bridge-modules-v1.md)
-   - [Cross-Domain Freeze Note v2](./cross-domain-freeze-note-v2.md)
+   - [Planner Review Checklist v1](./planner-review-checklist-v1.md)
+   - [Planner Test Note v1](./planner-test-note-v1.md)
+   - [Repair Validation Loop v1](./repair-validation-loop-v1.md)
+   - [Rollback Policy v1](./rollback-policy-v1.md)
 
 What this file is:
-- The main document for the first formal cross-domain bridge pack
-- A bridge evidence page from AI troubleshooting toward broader complex-system debugging
-- A structured summary of the first canonical cross-domain cluster
-- The first formal evidence layer showing that the Atlas mother structure survives meaningful bridge travel
+- The tiny output example pack for the planner layer
+- A teaching page for what good first-step planner outputs look like
+- A compact demonstration layer between planner spec and real repair execution
+- A practical reference for humans and AI systems checking planner shape
 
 What this file is not:
-- Not the Atlas core itself
-- Not the full civilization Atlas
-- Not a universal closure claim
-- Not a proof that all domains have already been absorbed
-- Not the final end-state bridge map
+- Not the full planner spec
+- Not the full repair engine
+- Not proof of autonomous closure
+- Not a benchmark suite
+- Not a replacement for validation and rollback discipline
 
 Reading discipline for AI:
-- Preserve the distinction between AI-first validated Atlas structure and broader bridge evidence.
-- Do not overclaim that this pack proves universal completion.
-- Treat this file as the first formal bridge layer, not as the final civilizational ontology.
-- Keep the distinction between core Atlas, bridge evidence, and future bridge expansion clear.
-- Use bridge cases to extend route-first reasoning, not to replace family-level cuts.
+- Preserve the distinction between diagnosis, first repair planning, validation, rollback, and escalation.
+- Treat these outputs as tiny examples of correct planner shape, not as final full repair scripts.
+- Keep the planner in first-move territory.
+- Do not overread compact output examples as proof that full repair is solved.
 
 AI_NOTE_END
 -->
 
-# Cross-Domain Demonstration Pack v2 🌉
+# Tiny Planner Output Examples Pack v1 🧩
 
-## First formal bridge evidence pack beyond narrow AI-only troubleshooting
+## Example pack for small, valid repair-planner outputs inside Auto Repair v1
 
 Quick links:
 
-- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
-- [Back to Atlas Hub](./README.md)
-- [Open Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
-- [Open Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
-- [Open Canonical Casebook v1](./canonical-casebook-v1.md)
-- [Open Civilization Bridge Modules v1](./civilization-bridge-modules-v1.md)
-- [Open Cross-Domain Freeze Note v2](./cross-domain-freeze-note-v2.md)
+- [Back to Auto Repair README](./README.md)
+- [Open Repair Planner Spec v1](./repair-planner-spec-v1.md)
+- [Open Repair Planner Prompt v1](./repair-planner-prompt-v1.md)
+- [Open Repair Plan Schema v1](./repair-plan-schema-v1.json)
+- [Open Planner Review Checklist v1](./planner-review-checklist-v1.md)
+- [Open Planner Test Note v1](./planner-test-note-v1.md)
+- [Open Repair Validation Loop v1](./repair-validation-loop-v1.md)
+- [Open Rollback Policy v1](./rollback-policy-v1.md)
+- [Back to Atlas landing page](../../../wfgy-ai-problem-map-troubleshooting-atlas.md)
 
 ---
 
-If the Atlas core is the frozen AI-first mother structure, this page is the first formal evidence pack showing that the same structure can already travel **beyond narrow AI-only troubleshooting** without losing its shape. 🧭
+If the planner spec defines **what the planner is allowed to produce**, this page shows **what that output actually looks like in small, usable examples**. 🧭
 
-This document is not here to declare that a full Civilization Debug Atlas is complete.
+This file is here for a very practical reason:
 
-It is here to show something narrower and more useful:
+> many systems sound clean at the spec level  
+> but become vague, oversized, or fake-confident when they actually produce output
 
-> the current Atlas mother structure can already absorb a first meaningful set of non-trivial cross-domain cases  
-> without collapsing  
-> without forcing an eighth family  
-> and without losing its major boundary cuts
+This page helps prevent that.
 
-That is the real job of this file.
+It makes the planner layer more concrete by showing tiny outputs that are:
+
+- structured
+- modest
+- validation-aware
+- rollback-aware
+- clearly first-move oriented
 
 Short version:
 
-> the Atlas is already validated in AI-first troubleshooting  
-> this pack shows the first formal bridge beyond that base
+> diagnose first  
+> plan one controlled move  
+> define validation  
+> keep rollback visible  
+> escalate only when needed
+
+That is the spirit of this pack.
 
 ---
 
 ## Quick start 🚀
 
-### I am new to the bridge evidence layer
+### I am new to the planner layer
 
 Use this path:
 
-1. read [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
-2. read [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
-3. read this file
-4. read [Civilization Bridge Modules v1](./civilization-bridge-modules-v1.md)
-5. read [Cross-Domain Freeze Note v2](./cross-domain-freeze-note-v2.md)
+1. read [Repair Planner Spec v1](./repair-planner-spec-v1.md)
+2. read [Repair Planner Prompt v1](./repair-planner-prompt-v1.md)
+3. read this page
+4. compare the examples against [Repair Plan Schema v1](./repair-plan-schema-v1.json)
+5. check them against [Planner Review Checklist v1](./planner-review-checklist-v1.md)
 
-### I already know the Atlas and want the shortest route
+### I already know the planner and want the shortest route
 
 Start here:
 
-1. read Section 2 for what this pack claims
-2. read Section 5 for the current canonical cross-domain cluster
-3. read Section 6 for what the eight cases collectively show
-4. read Section 7 for the three bridge modules
-5. read Section 10 for the main bridge boundary lessons
+1. read Example 1, Example 2, and Example 3
+2. inspect the `repair_move`, `validation_check`, and `rollback_trigger`
+3. compare compact planner behavior across F1, F4, and F7 style cases
+4. use the review checklist if you want to judge output quality
 
 Shortest possible reading:
 
-> the first bridge is real  
-> the core cuts survive travel  
-> the bridge remains bounded  
-> and future expansion should stay disciplined
+> good planner output is small  
+> tied to the diagnosed break  
+> explicit about validation  
+> explicit about rollback  
+> and never pretends to solve the whole case in one jump
 
 ---
 
-## What this pack is protecting 🛡️
+## What this page is teaching 🎯
 
-This page protects the bridge layer from two opposite mistakes:
+This example pack is not only showing JSON-like planner shapes.
 
-1. **underclaim**  
-   acting as if the Atlas is still only an AI-local troubleshooting map
+It is teaching five deeper habits:
 
-2. **overclaim**  
-   acting as if a first cluster of strong cross-domain cases already proves universal completion
+1. **repair must stay route-sensitive**  
+   the move should follow the diagnosed failure family
 
-Both are wrong.
+2. **the first move must stay small**  
+   the planner should not explode into a giant repair screenplay
 
-This pack exists to defend the right middle reading:
+3. **validation is part of the output**  
+   a planner output without validation is incomplete
 
-- the bridge is real
-- the bridge is useful
-- the bridge is formal enough to freeze at first-bridge level
-- the bridge is still not final civilization closure
+4. **rollback must stay visible**  
+   small repair still needs a safe exit
 
-That boundary is the whole point.
+5. **escalation must remain honest**  
+   some cases should not pretend to be locally solved
 
----
+That is why tiny examples matter.
 
-## 1. Why this document exists
-
-The first formal release of the Atlas is grounded in AI troubleshooting.
-
-That is the right starting point because AI systems provide:
-
-- strong failure visibility
-- strong routing pressure
-- strong benchmark-style interpretability for debugging structure
-- a practical setting where route-first repair decisions matter immediately
-
-But if the Atlas is only ever read as an AI-only troubleshooting map, its deeper value stays partially hidden.
-
-This document exists to show that the mother structure is not merely a domain-specific naming trick.
-
-It can already absorb a first formal cluster of cross-domain pressures involving:
-
-- coordination
-- consensus
-- institutions
-- incentives
-- legitimacy
-- probability meaning
-- value and knowledge coherence
-- safe-corridor and overshoot structure
-
-That does not mean the bridge is complete.
-
-It means the bridge is real.
+Tiny examples reveal whether the planner really understands restraint.
 
 ---
 
-## 2. What this pack claims ✅
+## What good tiny planner output should look like ✅
 
-This pack claims that the following are now stable enough to say out loud:
+A good tiny planner output usually has these properties:
 
-- the seven-family mother table survives first cross-domain bridge pressure
-- selected non-AI cases can be routed without forcing a mother-table redraw
-- the Atlas already supports a first canonical cross-domain cluster
-- the current bridge is strong enough to justify formal bridge modules
-- broader system-debugging expansion can proceed through disciplined bridge growth
+- one clear first move
+- one clear target invariant
+- one clear validation check
+- one clear rollback trigger
+- one clear escalation condition when needed
 
-This means the Atlas is no longer only:
+It should feel like:
 
-- an AI troubleshooting Atlas in a narrow sense
+> the smallest controlled step that is still worth trying
 
-It is now also:
+It should **not** feel like:
 
-- an AI-first validated Atlas with a first formal bridge into broader complex-system failure space
-
----
-
-## 3. What this pack does not claim 🚧
-
-This pack does **not** claim that:
-
-- the full Civilization Debug Atlas is complete
-- all major civilizational failure domains are already covered
-- the current bridge modules are final and exhaustive
-- eight cross-domain cases prove universal validity
-- no future mother-table revision will ever be needed
-- bridge growth no longer needs patch discipline
-
-This file claims only that:
-
-> the Atlas already has a first formal cross-domain evidence layer strong enough to justify bridge expansion beyond narrow AI-first use
-
-That is the strongest honest version.
+- a whole migration plan
+- a long repair essay
+- a speculative redesign
+- a fake “AI solved everything” story
 
 ---
 
-## 4. Why this matters ✨
+## Canonical tiny output shape
 
-This matters because many systems look impressive only inside their native domain.
+The exact schema lives elsewhere, but most good tiny planner outputs here follow a compact shape like this:
 
-The real question is harder:
+```json
+{
+  "case_id": "example_name",
+  "diagnosed_family": "F4",
+  "broken_invariant": "execution_skeleton_closure_broken",
+  "repair_move": "insert readiness gate before dependent action",
+  "why_this_move_first": "current failure appears before downstream retries and before broader redesign is justified",
+  "validation_check": "verify dependent action is never executed before readiness condition is true",
+  "rollback_trigger": "if readiness gate blocks valid execution path or creates new deadlock symptoms",
+  "escalate_if": "ordering becomes stable but closure still fails for a deeper reason"
+}
+````
 
-> when pressure shifts, do the cuts survive
+This is not the only acceptable form.
 
-This pack exists to answer that question at a first formal level.
-
-The result is not that “everything is solved.”
-
-The result is that:
-
-- the cuts survive first bridge pressure
-- the family structure remains readable
-- key boundary lines remain meaningful
-- the Atlas can begin to act like a more general debugging grammar
-
-That is a major threshold.
-
----
-
-## 5. The current canonical cross-domain cluster 🗂️
-
-The first formal cross-domain bridge cluster currently includes eight representative cases.
-
-They were not selected because they are easy.
-
-They were selected because they stress the Atlas in ways that matter.
+But this is the right scale.
 
 ---
 
-## Cluster A · coordination, consensus, and collective viability
+# Example pack 📦
 
-### Case 1  
-**Distributed consensus limits**
+## Example 1 · F1 grounding-first case
 
-**Why it matters**
+### Case summary
 
-- tests coordination pressure
-- tests protocol and closure structure
-- tests multi-actor viability
-- pressures the F3 / F4 / F6 region
+The answer cites retrieved material, but the selected chunks do not actually support the final claim.
 
-**Typical primary reading**
+### Tiny planner output
 
-- F4 when protocol closure and operational dependency fail first
-- with strong adjacency to F3 and F6
+```json
+{
+  "case_id": "f1_grounding_recheck",
+  "diagnosed_family": "F1",
+  "broken_invariant": "anchor_to_claim_coupling_broken",
+  "repair_move": "force claim-to-evidence trace before final answer emission",
+  "why_this_move_first": "the main break is grounding integrity, so re-linking claims to supporting evidence is the smallest meaningful first repair",
+  "validation_check": "sample outputs must show that every major claim can be traced to the cited chunk set",
+  "rollback_trigger": "if trace insertion reduces answer quality without improving grounding correctness",
+  "escalate_if": "evidence trace is present but semantic target mismatch still dominates"
+}
+```
 
-### Case 2  
-**Drivers of political polarization**
+### Why this is a good tiny output
 
-**Why it matters**
+This output is good because it does not jump into full retrieval redesign.
 
-- tests incentive distortion
-- tests collective fragmentation
-- tests legitimacy and boundary drift
-- pressures F5 / F6 and broader collective structure
+It stays focused on the first useful controlled move:
 
-**Typical primary reading**
-
-- F6 when collective-boundary erosion and incentive amplification dominate
-- with important adjacency to F5
-
----
-
-## Cluster B · institutions, structure, and cross-layer fragility
-
-### Case 3  
-**Institutional evolution**
-
-**Why it matters**
-
-- tests rule-to-action closure
-- tests enforcement thinning
-- tests structural drift across time
-- pressures F4 / F6 boundary
-
-**Typical primary reading**
-
-- F4 when operational closure and enforcement path fail first
-- with strong adjacency to F6
-
-### Case 4  
-**Multilayer network robustness**
-
-**Why it matters**
-
-- tests bridge integrity
-- tests cross-layer fragility
-- tests structural closure under pressure
-- strengthens F4 beyond narrow software workflow cases
-
-**Typical primary reading**
-
-- F4 when bridge and closure failure dominate
-- with secondary structural adjacency to F3 and F6 depending on the cut
+* restore traceability between claim and evidence
+* validate whether grounding actually improved
+* keep rollback visible if the added constraint harms behavior without fixing the real failure
 
 ---
 
-## Cluster C · coherence, meaning, value, and interpretability
+## Example 2 · F4 readiness / ordering case
 
-### Case 5  
-**Meaning of probability**
+### Case summary
 
-**Why it matters**
+A downstream action runs before the required resource is ready, causing repeated workflow breakage.
 
-- tests meaning-profile visibility
-- tests coherence interpretation
-- tests abstract diagnosability
-- pressures F5 and neighboring abstract structure families
+### Tiny planner output
 
-**Typical primary reading**
+```json
+{
+  "case_id": "f4_readiness_gate",
+  "diagnosed_family": "F4",
+  "broken_invariant": "execution_skeleton_closure_broken",
+  "repair_move": "insert readiness gate before the dependent action",
+  "why_this_move_first": "the visible failure is premature execution, so the first move should repair ordering before deeper architecture changes",
+  "validation_check": "dependent action must not fire while readiness state is false",
+  "rollback_trigger": "if the new gate blocks valid runs or introduces deadlock-like waiting behavior",
+  "escalate_if": "ordering becomes correct but bridge closure still fails later in the path"
+}
+```
 
-- F5 when visibility, auditability, and coherence reading fail first
+### Why this is a good tiny output
 
-### Case 6  
-**Value of information and knowledge**
+This output is good because it respects execution-first logic.
 
-**Why it matters**
+It does **not** drift into:
 
-- tests coherence and evaluability
-- tests value-structure legibility
-- tests when high-abstract meaning remains diagnosable versus when it becomes a boundary problem
-- pressures F5 / F6 boundary in a very useful way
+* memory blame
+* observability essay
+* total workflow redesign
 
-**Typical primary reading**
+It chooses the smallest move that matches the break:
 
-- F5 when meaning-profile visibility fails first
-- with strong boundary adjacency to F6
-
-### Case 7  
-**Scalable interpretability**
-
-**Why it matters**
-
-- already touches AI directly but bridges strongly into more general observability questions
-- tests abstract visibility under scale pressure
-- reinforces that F5 is not just a narrow tool-debugging family
-
-**Typical primary reading**
-
-- F5 when observability and diagnosability fail first
+* enforce readiness first
+* validate ordering
+* watch for deadlock side effects
+* escalate only if closure still fails after the visible ordering problem is fixed
 
 ---
 
-## Cluster D · corridor, overshoot, and regime safety
+## Example 3 · F5 observability-first case
 
-### Case 8  
-**Calibration and safe-corridor structure**
+### Case summary
 
-**Why it matters**
+A workflow fails intermittently, but logs do not expose where the failure path actually breaks.
 
-- tests regime drift
-- tests overshoot logic
-- tests the line between diagnosability and boundary failure
-- helps F6 grow beyond narrow AI alignment reading
+### Tiny planner output
 
-**Typical primary reading**
+```json
+{
+  "case_id": "f5_trace_exposure",
+  "diagnosed_family": "F5",
+  "broken_invariant": "failure_path_visibility_broken",
+  "repair_move": "add step-level trace markers at each transition boundary",
+  "why_this_move_first": "the system is too dark to justify deeper repair, so visibility uplift is the first legitimate move",
+  "validation_check": "failed runs must expose the last successful transition and the first missing or broken transition",
+  "rollback_trigger": "if trace insertion creates excessive noise without improving path localization",
+  "escalate_if": "the failure path becomes visible and a deeper F4 or F6 break becomes primary"
+}
+```
 
-- F6 when safe operating corridor or regime boundary fails first
-- with important adjacency to F5
+### Why this is a good tiny output
 
----
+This output is good because it refuses premature deep repair.
 
-## 6. What these cases collectively show 📌
+It recognizes that the right first move is:
 
-These eight cases collectively show five important things.
+* expose the path
+* improve visibility
+* then let later routing decide whether the true deeper family is F4, F6, or something else
 
-### 6.1 No eighth-family pressure appears in the current bridge cluster
-
-The current bridge cases do not force a new top-level family.
-
-That is a major result.
-
-The mother table may still evolve in the future, but current bridge pressure does not justify redraw.
-
-### 6.2 F4, F5, and F6 become much more general than narrow AI labels suggest
-
-This is one of the strongest outcomes of the bridge cluster.
-
-The cross-domain cases make it much clearer that:
-
-- F4 is not merely about software workflow bugs
-- F5 is not merely about model debugging visibility
-- F6 is not merely about AI alignment vocabulary
-
-Instead:
-
-- F4 can absorb operational closure and institutional enforcement pressure
-- F5 can absorb abstract coherence and diagnosability pressure
-- F6 can absorb collective-boundary and safe-corridor pressure
-
-### 6.3 The major family boundaries still survive outside narrow AI cases
-
-This matters just as much as family survival.
-
-A family table is weak if it only works because every case is domain-local.
-
-This pack shows that selected boundary lines continue to hold under cross-domain pressure.
-
-Most importantly:
-
-- F3 / F4
-- F5 / F6
-- F4 / F6
-- F5 / higher-order coherence pressure
-
-still remain meaningful cuts.
-
-### 6.4 The Atlas can already act like a broader debugging grammar
-
-The bridge cases show that the Atlas is not merely a list of AI failure tags.
-
-It can already help organize:
-
-- operational collapse
-- collective fragmentation
-- coherence visibility failure
-- institutional closure failure
-- incentive distortion
-- regime overshoot logic
-
-This is exactly the kind of evidence needed before talking seriously about broader civilization-scale debugging.
-
-### 6.5 First repair directions remain meaningful even beyond narrow AI use
-
-This is critical.
-
-If the bridge only expands naming, but loses actionability, it becomes weak.
-
-This pack shows that bridge growth can still preserve first repair direction:
-
-- closure and bridge repair for F4-heavy cases
-- coherence visibility uplift for F5-heavy cases
-- incentive and boundary stabilization for F6-heavy cases
-
-That means the Atlas remains a troubleshooting system, not just a classification museum.
+That is exactly the kind of planner restraint Auto Repair v1 is supposed to preserve.
 
 ---
 
-## 7. The three bridge modules 🧩
+## Example 4 · F7 representation-first case
 
-The current bridge cluster naturally supports three first formal bridge modules.
+### Case summary
 
-These are not the final civilization modules.
+The model output looks superficially valid, but required fields appear in unstable locations and break downstream schema parsing.
 
-They are the first stable bridge modules supported by current evidence.
+### Tiny planner output
 
-### Module A  
-## Coordination / Consensus / Multi-Actor Viability
+```json
+{
+  "case_id": "f7_schema_stabilization",
+  "diagnosed_family": "F7",
+  "broken_invariant": "representation_container_fidelity_broken",
+  "repair_move": "enforce one stable schema shell before field population",
+  "why_this_move_first": "the first visible failure is container instability, so carrier repair should come before reasoning or prompt expansion",
+  "validation_check": "multiple runs must preserve identical required-field placement and parse successfully",
+  "rollback_trigger": "if schema stabilization reduces flexibility but does not improve parse reliability",
+  "escalate_if": "container becomes stable but semantic content remains mismatched or incomplete"
+}
+```
 
-This module groups cases where the main pressure involves:
+### Why this is a good tiny output
 
-- coordination breakdown
-- protocol or consensus limits
-- multi-actor stability failure
-- cross-agent or cross-layer viability under dependency
+This output is good because it does not confuse:
 
-**Typical family pattern**
+* structural shell failure
+  with
+* deeper reasoning failure
 
-- F4 primary when operational closure fails first
-- F3 adjacency when continuity threads matter
-- F6 adjacency when collective boundary erosion appears
-
-**Representative cases**
-
-- Distributed consensus limits
-- Multilayer network robustness
-
-### Module B  
-## Institution / Incentive / Legitimacy Drift
-
-This module groups cases where the main pressure involves:
-
-- institutional enforcement drift
-- incentive distortion
-- collective legitimacy erosion
-- boundary weakening at scale
-
-**Typical family pattern**
-
-- F6 primary when collective or incentive boundary fails first
-- F4 primary when rule-to-action closure fails first
-- F5 adjacency when visibility still fails before intervention
-
-**Representative cases**
-
-- Drivers of political polarization
-- Institutional evolution
-- Calibration and safe-corridor structure
-
-### Module C  
-## Meaning / Probability / Value / Knowledge Coherence
-
-This module groups cases where the main pressure involves:
-
-- coherence interpretation
-- meaning-profile visibility
-- value legibility
-- auditability of abstract structures
-
-**Typical family pattern**
-
-- F5 primary when coherence visibility fails first
-- F6 adjacency when abstract coherence collapses into boundary or regime concerns
-
-**Representative cases**
-
-- Meaning of probability
-- Value of information and knowledge
-- Scalable interpretability
+The first move is carrier stabilization, which is exactly what a route-sensitive planner should produce here.
 
 ---
 
-## 8. Why the bridge modules matter 🔗
+## Example 5 · F3 continuity-first case
 
-The bridge modules matter because they do something more useful than a flat case list.
+### Case summary
 
-A flat case list says:
+A multi-step agent loses role ownership and continuity across handoff, causing later actions to be applied under the wrong context.
 
-- here are some examples
+### Tiny planner output
 
-A bridge module says:
+```json
+{
+  "case_id": "f3_role_reisolation",
+  "diagnosed_family": "F3",
+  "broken_invariant": "state_continuity_broken",
+  "repair_move": "re-isolate role and ownership state at each handoff boundary",
+  "why_this_move_first": "the earliest decisive break is continuity drift across handoff, so role fencing is the smallest valid first move",
+  "validation_check": "handoff state must preserve the same role and ownership identity across the tested sequence",
+  "rollback_trigger": "if isolation fragments valid shared context and causes new task discontinuity",
+  "escalate_if": "continuity stabilizes but execution closure still fails in later stages"
+}
+```
 
-- here is a stable pattern of cross-domain stress
-- here is the family logic behind it
-- here is how the Atlas starts to generalize without pretending to close the whole universe
+### Why this is a good tiny output
 
-That is much more valuable for future growth.
+This output is good because it distinguishes continuity repair from execution repair.
 
-These modules give future work a cleaner direction for:
-
-- case expansion
-- teaching structure
-- theory packaging
-- public bridge storytelling
-- future patch growth
-
----
-
-## 9. Current family pressure reinforced by this pack 🔍
-
-This pack most strongly reinforces the following families.
-
-### F4  
-## Execution & Contract Integrity
-
-This family is strengthened by cross-domain evidence showing that it can handle:
-
-- protocol limits
-- institutional closure failure
-- bridge integrity
-- multilayer fragility
-
-This is important because it proves F4 is more general than software execution language alone.
-
-### F5  
-## Observability & Diagnosability Integrity
-
-This family is strengthened by abstract bridge cases showing that it can handle:
-
-- meaning-profile visibility
-- value and knowledge coherence
-- probability interpretation
-- scalable interpretability
-
-This is important because it proves F5 is more than tooling visibility.
-
-### F6  
-## Boundary & Safety Integrity
-
-This family is strengthened by cases involving:
-
-- polarization
-- incentive distortion
-- collective drift
-- safe corridor
-- overshoot and regime transition pressure
-
-This is important because it proves F6 is more than narrow alignment vocabulary.
+It avoids the common failure of treating every multi-step failure as if it were immediately an F4 closure issue.
 
 ---
 
-## 10. Current bridge boundary lessons 🧠
+## Example 6 · early escalation case
 
-The pack also teaches a few important boundary lessons.
+### Case summary
 
-### Lesson 1
+A case shows mixed pressure, and the first visible local repair may help, but there is a real risk that deeper structural continuation will still be needed.
 
-Not every social or collective problem should be routed to F6 first.
+### Tiny planner output
 
-Some cases still fail first at:
+```json
+{
+  "case_id": "mixed_case_escalation_ready",
+  "diagnosed_family": "F5",
+  "broken_invariant": "failure_path_visibility_broken",
+  "repair_move": "expose the local failure path before deeper structural intervention",
+  "why_this_move_first": "the current evidence is still too thin for a larger repair claim, so visibility is the safest honest first move",
+  "validation_check": "local path exposure must clarify whether the deeper break is F4, F6, or unresolved",
+  "rollback_trigger": "if local tracing adds cost without clarifying the underlying break",
+  "escalate_if": "local visibility improves but the structural failure remains unresolved or keeps recurring"
+}
+```
 
-- F4 operational closure
-- F5 diagnosability and coherence visibility
+### Why this is a good tiny output
 
-This matters because otherwise F6 becomes a black hole.
+This output is good because it leaves room for escalation without being lazy.
 
-### Lesson 2
+It does **not** say:
 
-Abstract problems do not automatically become theory-only cases.
+* “we do not know anything”
+* or
+* “just escalate immediately”
 
-Some very abstract cases still preserve practical troubleshooting shape:
+Instead it says:
 
-- first improve visibility
-- first improve closure
-- first stabilize boundary
-- then escalate if needed
+* do one useful local move first
+* validate whether that move reveals the true deeper structure
+* escalate only if the local move is insufficient
 
-This matters because the Atlas stays action-oriented even while scaling upward.
-
-### Lesson 3
-
-Cross-domain bridge strength comes from surviving pressure, not from broad rhetoric
-
-This pack is useful because the bridge is built from hard cuts and stress-tested families, not from vague analogy.
-
-That is why it is worth freezing.
-
----
-
-## 11. Relationship to AI-first troubleshooting 🤖
-
-This bridge pack should not be read as abandoning the AI-first foundation.
-
-It should be read as building on it.
-
-The AI-first Atlas remains:
-
-- the primary validated public domain
-- the clearest operational entry point
-- the strongest first-use setting for route-first repair
-
-This bridge pack adds something else:
-
-- the first formal evidence that the same mother structure can begin to travel further
-
-Short version:
-
-> AI troubleshooting remains the first validated domain  
-> this pack shows that the Atlas can already begin to travel beyond it
+That is mature planner behavior.
 
 ---
 
-## 12. Relationship to the rest of the Atlas system 📚
+# Contrast examples 🚧
 
-This file should be read together with the rest of the Atlas in a disciplined way.
-
-### Read before this file
-
-- [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
-- [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
-
-These explain the frozen core and the intentional limits.
-
-### Read after this file
-
-- [Civilization Bridge Modules v1](./civilization-bridge-modules-v1.md)
-- [Cross-Domain Freeze Note v2](./cross-domain-freeze-note-v2.md)
-
-These deepen the module-level framing and the formal bridge freeze wording.
-
-### Read alongside this file when teaching
-
-- [Canonical Casebook v1](./canonical-casebook-v1.md)
-
-This helps keep bridge claims grounded in actual use patterns.
+These are not good outputs.
+They are here to make the planner standard even clearer.
 
 ---
 
-## 13. What future expansion should do 🌱
+## Bad example 1 · too large
 
-Future bridge work should do the following:
+```json
+{
+  "repair_move": "redesign retrieval, prompt architecture, memory policy, schema layer, and workflow orchestration"
+}
+```
 
-- expand carefully
-- preserve family cuts
-- preserve boundary discipline
-- preserve route-first logic
-- preserve bridge humility
+### Why this is bad
 
-High-value next steps include:
+This is not a first move.
 
-- additional canonical bridge cases
-- better module thickening
-- stronger public-facing bridge summaries
-- tighter provenance and derivation notes
-- future patch waves that extend the bridge without redrawing the core
+It is a vague mini-roadmap pretending to be a planner output.
+
+Tiny planner output should stay small enough that validation and rollback remain believable.
 
 ---
 
-## 14. What future expansion should not do ⛔
+## Bad example 2 · no validation
 
-Future bridge work should **not** do the following:
+```json
+{
+  "repair_move": "insert readiness gate",
+  "why_this_move_first": "ordering seems wrong"
+}
+```
 
-- overclaim universal closure
-- flatten all cross-domain cases into one giant theory bucket
-- erase the distinction between evidence and rhetoric
-- treat bridge growth as proof that the core was unstable
-- collapse AI-first validation into vague civilization branding
+### Why this is bad
 
-The bridge stays strong only if it remains disciplined.
+This is incomplete.
+
+A valid planner output needs at least some explicit sense of:
+
+* how the move will be checked
+* when it should be rolled back
+* when deeper escalation becomes justified
+
+Without that, it is just a suggestion, not a controlled plan.
+
+---
+
+## Bad example 3 · fake closure
+
+```json
+{
+  "repair_move": "fix the entire bug",
+  "confidence": "high"
+}
+```
+
+### Why this is bad
+
+This is planner theater.
+
+A first planner layer should not pretend it has solved full closure from one compact output.
+
+That is exactly the kind of overclaim this package is trying to avoid.
+
+---
+
+# What these examples collectively teach 📚
+
+These examples collectively teach six important things.
+
+### 1. Tiny does not mean shallow
+
+A small planner output can still be structurally serious if it includes:
+
+* correct first move
+* validation
+* rollback
+* escalation boundary
+
+### 2. The planner must stay route-sensitive
+
+A good output is different depending on whether the diagnosed break is:
+
+* F1 grounding
+* F3 continuity
+* F4 closure
+* F5 visibility
+* F7 representation
+
+That difference is the whole point.
+
+### 3. Validation is part of the plan
+
+If the planner output does not say how improvement will be checked, it is not ready.
+
+### 4. Rollback is part of safety
+
+Even a good first move may still fail locally.
+
+That possibility must remain visible.
+
+### 5. Escalation is not failure
+
+Sometimes the right tiny output is the one that cleanly prepares the case for deeper continuation.
+
+### 6. Restraint is a real capability
+
+A planner that stays modest is usually more useful than one that pretends to be omniscient.
+
+---
+
+## How to use this page in practice 🧠
+
+This page is useful in at least four ways.
+
+### A. As a planner calibration page
+
+Use these examples to compare the actual planner output against the intended output shape.
+
+### B. As a review page
+
+Use this file together with [Planner Review Checklist v1](./planner-review-checklist-v1.md) when checking whether a candidate output is too vague, too large, or too confident.
+
+### C. As a prompt-teaching page
+
+Use these examples to teach an AI system what “small but real” planner behavior looks like.
+
+### D. As a demo support page
+
+These examples are small enough to be shown in a README, slide, or tiny demo pack without overwhelming the reader.
+
+---
+
+## Relationship to the rest of Auto Repair v1 🔗
+
+This file should be read in the correct layer order.
+
+### Structure first
+
+* [Repair Planner Spec v1](./repair-planner-spec-v1.md)
+* [Repair Plan Schema v1](./repair-plan-schema-v1.json)
+
+### Example shape next
+
+* this file
+
+### Review and control after that
+
+* [Planner Review Checklist v1](./planner-review-checklist-v1.md)
+* [Planner Test Note v1](./planner-test-note-v1.md)
+* [Repair Validation Loop v1](./repair-validation-loop-v1.md)
+* [Rollback Policy v1](./rollback-policy-v1.md)
+
+This order matters because examples are strongest when the structure behind them is already clear.
+
+---
+
+## Current status 📌
+
+**Tiny Planner Output Examples Pack v1 is now established as the first compact example layer for what a valid small repair-planner output should look like inside Auto Repair v1.**
+
+It does not prove full autonomous repair.
+
+It does prove that the planner layer can now be shown in a compact, teachable, and structurally disciplined form.
 
 ---
 
@@ -709,32 +575,40 @@ The bridge stays strong only if it remains disciplined.
 
 After this page, most readers continue with:
 
-1. [Open Civilization Bridge Modules v1](./civilization-bridge-modules-v1.md)
-2. [Open Cross-Domain Freeze Note v2](./cross-domain-freeze-note-v2.md)
-3. [Open Canonical Casebook v1](./canonical-casebook-v1.md)
+1. [Open Planner Review Checklist v1](./planner-review-checklist-v1.md)
+2. [Open Planner Test Note v1](./planner-test-note-v1.md)
+3. [Open Repair Validation Loop v1](./repair-validation-loop-v1.md)
+4. [Open Rollback Policy v1](./rollback-policy-v1.md)
 
-If you want the broader Atlas surface:
+If you want the broader Auto Repair surface:
 
-- [Back to Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
-- [Back to Atlas Hub](./README.md)
-- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
-
----
-
-## 15. One-line status 🌍
-
-**This document is the first formal bridge evidence pack showing that the Atlas mother structure can already absorb a meaningful cross-domain cluster beyond narrow AI-only troubleshooting.**
+* [Back to Auto Repair README](./README.md)
+* [Back to Fixes Hub](../README.md)
+* [Back to Atlas landing page](../../../wfgy-ai-problem-map-troubleshooting-atlas.md)
 
 ---
 
-## 16. Closing note
+## One-line status 🌍
 
-A real Atlas becomes more interesting when it survives travel.
+**This file provides the first compact example pack for what small, valid, validation-aware repair-planner outputs should look like in Auto Repair v1.**
 
-This document does not claim that the journey is complete.
+---
 
-It claims something more disciplined and more valuable:
+## Closing note
 
-> the first bridge is real  
-> the first crossings work  
-> and the expansion can now continue without pretending to be finished
+A planner becomes more trustworthy when it can show its behavior in small form.
+
+Not in giant architecture talk.
+Not in fake autonomous drama.
+In small form.
+
+That is what this page is for.
+
+It shows that the planner layer can already produce outputs that are:
+
+* small
+* controlled
+* reviewable
+* validation-aware
+* rollback-aware
+* escalation-ready
