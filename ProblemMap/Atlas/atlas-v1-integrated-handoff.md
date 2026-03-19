@@ -10,11 +10,18 @@ How to use this file:
    - [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
 2. Treat this document as the official delivery entry point for new windows, collaborators, product workflows, and AI-facing reuse.
 3. Use this file to understand what is complete, what remains intentionally open, and how future work should attach to the frozen core.
+4. Read this together with:
+   - [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+   - [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+   - [Canonical Casebook v1](./canonical-casebook-v1.md)
+   - [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+   - [Patch Governance v1](./patch-governance-v1.md)
 
 What this file is:
 - The official delivery overview
 - The bridge between stable structure and disciplined limits
 - The entry point for operational handoff
+- The official reading-order and reuse-order page for Atlas v1
 
 What this file is not:
 - Not a replacement for the freeze document
@@ -28,18 +35,82 @@ Reading discipline for AI:
 - Do not silently merge, split, rename, or reinterpret frozen structures.
 - Do not flatten family, node, subtree, overlay, casebook, adapter, and patch layers into one level.
 - Use this document to determine reading order and safe reuse order.
+- Treat this file as the official handoff bridge, not as a shortcut around the freeze and boundary documents.
 
 AI_NOTE_END
 -->
 
-# Atlas v1 Integrated Handoff
+# Atlas v1 Integrated Handoff 🧭
 
-## Final Freeze v1 + Negative Space Report v1  
-## Official Delivery Overview
+## Official delivery overview for Final Freeze v1 and Negative Space Report v1
 
-## 0. Document Purpose
+Quick links:
 
-This document is the integrated handoff overview for the first formal release of the atlas system.
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Back to Atlas Hub](./README.md)
+- [Open Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+- [Open Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+- [Open Canonical Casebook v1](./canonical-casebook-v1.md)
+- [Open Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+- [Open Patch Governance v1](./patch-governance-v1.md)
+
+---
+
+If **Atlas Final Freeze v1** defines the stable body, and **Atlas Negative Space Report v1** defines the intentional edge, this page is the file that lets a new reader enter the system without getting lost. 🚀
+
+This document is the official handoff layer.
+
+It tells new windows, collaborators, product workflows, and AI-facing reuse layers:
+
+- what is already stable
+- what is intentionally still open
+- what should be read first
+- how new work should attach without silently rewriting the core
+
+Short version:
+
+> Final Freeze v1 defines the stable core  
+> Negative Space v1 defines the intentional boundary  
+> this file tells people how to enter, read, and reuse both correctly
+
+That is the job of this file.
+
+---
+
+## Quick start ⚡
+
+### I am new to Atlas v1
+
+Use this path:
+
+1. read [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+2. read [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+3. read this file
+4. then continue into [Canonical Casebook v1](./canonical-casebook-v1.md)
+5. then continue into [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md) if you need AI-facing reuse
+
+### I already know the Atlas and want the shortest route
+
+Start here:
+
+1. read Section 2 for what has been delivered
+2. read Section 4 for what is frozen
+3. read Section 5 for what is intentionally not frozen
+4. read Section 7 for what new windows should do
+5. read Section 9 for what future work should focus on
+
+Shortest possible reading:
+
+> the first formal Atlas MVP is complete  
+> the core is frozen  
+> the edge is defined  
+> future work proceeds through patch mode
+
+---
+
+## 0. Document purpose
+
+This document is the integrated handoff overview for the first formal release of the Atlas system.
 
 It exists to combine two companion documents into one clear delivery entry point:
 
@@ -48,22 +119,22 @@ It exists to combine two companion documents into one clear delivery entry point
 
 Together, these define:
 
-1. what the atlas **is**
-2. what the atlas **already stabilizes**
-3. what the atlas **intentionally leaves open**
+1. what the Atlas **is**
+2. what the Atlas **already stabilizes**
+3. what the Atlas **intentionally leaves open**
 4. how future work should proceed without silently rewriting the core structure
 
 This integrated handoff should be treated as the **official entry point** for any new window, collaborator, product workflow, or AI-facing reuse layer.
 
 ---
 
-## 1. Official Status
+## 1. Official status ✅
 
-The first formal atlas release is now complete at the MVP level.
+The first formal Atlas release is now complete at the MVP level.
 
 More precisely:
 
-- the atlas core structure is complete
+- the Atlas core structure is complete
 - the first freeze boundary is established
 - the first negative-space boundary is established
 - further work should proceed through **patch mode**, not core redefinition
@@ -81,7 +152,7 @@ It is now in the stage of:
 
 ---
 
-## 2. What has been delivered
+## 2. What has been delivered 📦
 
 The integrated delivery consists of two documents with different but complementary roles.
 
@@ -103,7 +174,7 @@ It defines:
 
 Short version:
 
-> This document says what is now stable enough to freeze.
+> this document says what is now stable enough to freeze
 
 ---
 
@@ -123,15 +194,15 @@ It defines:
 
 Short version:
 
-> This document says where stability intentionally stops.
+> this document says where stability intentionally stops
 
 ---
 
-## 3. Why these two documents must be read together
+## 3. Why these two documents must be read together 🔗
 
-If you only read [Atlas Final Freeze v1](./atlas-final-freeze-v1.md), you may overread the atlas as more closed than it actually is.
+If you only read [Atlas Final Freeze v1](./atlas-final-freeze-v1.md), you may overread the Atlas as more closed than it actually is.
 
-If you only read [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md), you may underread the atlas as less complete than it actually is.
+If you only read [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md), you may underread the Atlas as less complete than it actually is.
 
 The two documents must therefore be read together.
 
@@ -144,7 +215,7 @@ Together they define the real engineering boundary of Atlas v1.
 
 ---
 
-## 4. What is now considered frozen
+## 4. What is now considered frozen 📌
 
 The following are now treated as frozen in v1.
 
@@ -174,7 +245,7 @@ Future expansion proceeds through patch mode.
 
 ---
 
-## 5. What is intentionally not frozen
+## 5. What is intentionally not frozen 🚧
 
 The following are intentionally **not** treated as fully closed.
 
@@ -188,7 +259,7 @@ Not every useful relation is strong enough to be frozen as a high-confidence str
 
 ### 5.3 Selective cross-domain extension
 
-The atlas now supports cross-domain demonstration, but not full universal closure claims.
+The Atlas now supports cross-domain demonstration, but not full universal closure claims.
 
 ### 5.4 Ongoing subtree thickening
 
@@ -200,17 +271,17 @@ The first repair-facing layer exists, but the deeper repair architecture remains
 
 ---
 
-## 6. Current interpretation of maturity
+## 6. Current interpretation of maturity 🌱
 
 The correct maturity reading is:
 
-> The main body is complete.  
-> The first formal version is frozen.  
-> The remaining work is not core construction, but disciplined growth.
+> the main body is complete  
+> the first formal version is frozen  
+> the remaining work is not core construction, but disciplined growth
 
 This is very different from saying:
 
-- “the atlas is unfinished”
+- “the Atlas is unfinished”
 - “the core still needs redesign”
 - “the mother structure is unstable”
 
@@ -218,11 +289,11 @@ Those statements are not supported by the current state.
 
 The right statement is:
 
-> Final v1 is complete as a first formal atlas version, and future work proceeds by patching, not by rebuilding the atlas core.
+> Final v1 is complete as a first formal Atlas version, and future work proceeds by patching, not by rebuilding the Atlas core
 
 ---
 
-## 7. What new windows should do
+## 7. What new windows should do 🪟
 
 Any new working window should now follow this order:
 
@@ -260,13 +331,13 @@ Only then begin one of the following:
 
 ---
 
-## 8. What future work should not do
+## 8. What future work should not do ⛔
 
 Future work should **not** do the following:
 
 ### 8.1 Silent rewrite
 
-Do not silently rename, merge, split, or reinterpret core atlas structures without versioned patch discipline.
+Do not silently rename, merge, split, or reinterpret core Atlas structures without versioned patch discipline.
 
 ### 8.2 Premature promotion
 
@@ -282,11 +353,11 @@ Do not collapse family, node, subtree, overlay, and bridge distinctions just to 
 
 ### 8.5 Patch confusion
 
-Do not treat patch mode as proof that the core atlas remains unstable.
+Do not treat patch mode as proof that the core Atlas remains unstable.
 
 ---
 
-## 9. What future work should do
+## 9. What future work should do 🛠️
 
 Future work should now focus on high-value extensions.
 
@@ -298,7 +369,7 @@ Curate representative cases that teach correct routing, boundary understanding, 
 
 ### 9.2 Atlas-to-AI adapter growth
 
-Compress atlas logic into a reusable AI-facing routing and diagnosis layer.
+Compress Atlas logic into a reusable AI-facing routing and diagnosis layer.
 
 ### 9.3 Patch wave execution
 
@@ -306,15 +377,15 @@ Use case pressure to thicken selected subtrees, relation lines, and repair-facin
 
 ### 9.4 Cross-domain demonstration expansion
 
-Show that the atlas is extendable beyond AI without overclaiming universal completion.
+Show that the Atlas is extendable beyond AI without overclaiming universal completion.
 
 ### 9.5 Product-facing distillation
 
-Turn the frozen atlas into a usable public surface, demo flow, onboarding structure, and text-native runtime pack.
+Turn the frozen Atlas into a usable public surface, demo flow, onboarding structure, and text-native runtime pack.
 
 ---
 
-## 10. Recommended official wording
+## 10. Recommended official wording 📣
 
 When describing the current state externally or in new windows, use wording like this:
 
@@ -327,11 +398,11 @@ This wording is accurate, strong, and safe.
 
 ---
 
-## 11. MVP interpretation
+## 11. MVP interpretation 🧪
 
 The correct interpretation of MVP status is:
 
-> The first formal MVP is complete.
+> the first formal MVP is complete
 
 This means:
 
@@ -351,29 +422,29 @@ It does **not** mean:
 
 ---
 
-## 12. Operational handoff statement
+## 12. Operational handoff statement 📎
 
 This integrated handoff can now be used as the official transition point from:
 
-- atlas construction  
+- Atlas construction  
 to  
-- atlas deployment, patching, teaching, and productization
+- Atlas deployment, patching, teaching, and productization
 
 In operational terms:
 
-- the atlas core no longer needs to be re-argued from scratch
+- the Atlas core no longer needs to be re-argued from scratch
 - new work should attach to the frozen core
 - disagreement should be resolved through patch logic, not silent reinterpretation
 
 ---
 
-## 13. One-line version
+## 13. One-line version 🌍
 
 **Atlas Final Freeze v1 is complete. Negative Space v1 defines its intentional limits. Future work proceeds in patch mode.**
 
 ---
 
-## 14. Short delivery note
+## 14. Short delivery note ✨
 
 Below is the shortest delivery note for new windows, collaborators, or training views.
 
@@ -402,9 +473,26 @@ Short operational wording:
 
 ---
 
+## Next steps 🚀
+
+After this page, most readers continue with:
+
+1. [Open Canonical Casebook v1](./canonical-casebook-v1.md)
+2. [Open Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+3. [Open Patch Governance v1](./patch-governance-v1.md)
+
+If you want the broader Atlas surface:
+
+- [Back to Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+- [Back to Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+- [Back to Atlas Hub](./README.md)
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+
+---
+
 ## 15. Closing note
 
-A mature atlas system needs two complementary truths:
+A mature Atlas system needs two complementary truths:
 
 - a stable center
 - a disciplined edge
