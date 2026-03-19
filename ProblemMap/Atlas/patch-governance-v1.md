@@ -5,7 +5,7 @@ Document role:
 This file defines the first formal governance rules for patching the Atlas system.
 
 How to use this file:
-1. Read this file after understanding the frozen atlas core and current patch-wave state.
+1. Read this file after understanding the frozen Atlas core and current patch-wave state.
 2. Use this page to understand how future changes should be added without silently rewriting the system.
 3. Treat this document as the governance layer for patch growth, not as a full patch log.
 4. Read together with:
@@ -17,10 +17,11 @@ How to use this file:
 What this file is:
 - The first formal patch-governance document for the Atlas system
 - A rulebook for how frozen assets, patch waves, and future additions should be handled
-- A discipline layer for controlled atlas growth
+- A discipline layer for controlled Atlas growth
+- The official governance page for version boundaries and patch legitimacy
 
 What this file is not:
-- Not the atlas core
+- Not the Atlas core
 - Not the full internal patch diary
 - Not a benchmark report
 - Not a replacement for the freeze documents
@@ -31,33 +32,95 @@ Reading discipline for AI:
 - Do not treat patching as proof that the core remains unstable.
 - Do not silently merge speculative material into frozen structures.
 - Keep version boundaries explicit and evidence-based.
+- Treat patching as disciplined growth, not as casual editing.
 
 AI_NOTE_END
 -->
 
-# Patch Governance v1
+# Patch Governance v1 🧩
 
-## Problem Map 3.0 Troubleshooting Atlas
-## First formal governance rules for controlled atlas growth
+## First formal governance rules for controlled Atlas growth
 
-This document defines the first formal governance rules for patching the Atlas system.
+Quick links:
 
-Its purpose is simple:
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Back to Atlas Hub](./README.md)
+- [Open Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+- [Open Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+- [Open Atlas v1 Integrated Handoff](./atlas-v1-integrated-handoff.md)
+- [Open Patch Wave 2 Freeze Note v1](./patch-wave-2-freeze-note-v1.md)
+- [Open Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
 
-> to explain how the Atlas can grow without silently mutating  
-> how frozen assets should be respected  
-> and how new work should be added without confusing expansion with core instability
+---
 
-That is the job of this file.
+If **Atlas Final Freeze v1** defines what is stable, this page defines **how the system is allowed to grow without quietly losing its shape**. 🧭
 
-This document should be read as a **patch-governance layer**.
-It does not replace the core freeze.
-It does not replace negative-space discipline.
-It does not replace individual patch-wave notes.
+This document exists to make one thing clear:
 
-Instead, it answers a more operational question:
+> the Atlas may grow  
+> but it must grow through explicit, versioned, evidence-sensitive patching
 
-> once the Atlas has a frozen first body, how should future growth be handled so the system remains legible, disciplined, and trustworthy
+That is the core governance principle.
+
+This page is not a patch diary.
+
+It is the rulebook that keeps later growth legible, layered, and trustworthy.
+
+Short version:
+
+> freeze the core once  
+> patch the edges carefully  
+> version meaningful strengthening waves  
+> never confuse expansion with silent redesign
+
+---
+
+## Quick start 🚀
+
+### I am new to Atlas patching
+
+Use this path:
+
+1. read [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+2. read [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+3. read [Atlas v1 Integrated Handoff](./atlas-v1-integrated-handoff.md)
+4. read this file
+5. then inspect any active patch-wave note
+
+### I already know the Atlas and want the shortest route
+
+Start here:
+
+1. read Section 2 for what patching means in this system
+2. read Section 4 for the four main patch types
+3. read Section 6 for what should never happen through patching
+4. read Section 7 for the governance questions before freezing a patch
+5. read Section 14 for the practical governance rule
+
+Shortest possible reading:
+
+> patching is disciplined growth  
+> not silent rewriting  
+> not proof of core instability  
+> and not an excuse to flatten the system
+
+---
+
+## What this file protects 🛡️
+
+Patch governance exists to protect several things at once:
+
+- the frozen core from silent mutation
+- version boundaries from becoming blurry
+- teaching clarity from collapsing into patch noise
+- AI-facing reuse from chaotic drift
+- honest scope control from rhetorical inflation
+
+That is why this page matters.
+
+A system with no patch governance does not stay elegant for long.
+
+It just slowly becomes harder to trust.
 
 ---
 
@@ -90,7 +153,7 @@ That is the core governance principle.
 
 ---
 
-## 2. What patching means in this system
+## 2. What patching means in this system 🔧
 
 In this system, patching does **not** mean:
 
@@ -111,7 +174,7 @@ A patch is evidence that the system has a disciplined way to grow.
 
 ---
 
-## 3. What patch governance protects
+## 3. What patch governance protects 📚
 
 Patch governance exists to protect several things at once.
 
@@ -147,13 +210,13 @@ The system must preserve the difference between:
 - what is frozen
 - what is supported
 - what is promising
-- and what is not yet ready
+- what is not yet ready
 
 That difference is part of the governance layer itself.
 
 ---
 
-## 4. The four main patch types
+## 4. The four main patch types 🗂️
 
 The current system should use four main patch types.
 
@@ -234,6 +297,7 @@ Typical triggers include:
 - a major layer requiring redesign, not merely thickening
 
 A large patch is not automatically a total redesign.
+
 But it is serious enough that the system must stop pretending the current reading is unchanged.
 
 ### Typical naming style
@@ -269,7 +333,7 @@ That is a key governance rule.
 
 ---
 
-## 5. What can be patched without threatening the core
+## 5. What can be patched without threatening the core ✅
 
 The following areas are normal patch territory and do **not** by themselves imply core instability.
 
@@ -303,7 +367,7 @@ They should not be misread as proof that the Atlas core was premature.
 
 ---
 
-## 6. What should never happen through patching
+## 6. What should never happen through patching ⛔
 
 The following are governance failures and should be avoided.
 
@@ -330,6 +394,7 @@ If a family boundary is truly changing, that must be said explicitly.
 Do not collapse family, node, subtree, bridge module, casebook layer, and adapter layer into one flat patch stream.
 
 The Atlas is a layered system.
+
 Patch growth must preserve that layering.
 
 ### 6.5 Patch inflation
@@ -346,7 +411,7 @@ That destroys trust over time.
 
 ---
 
-## 7. Governance questions before freezing a patch
+## 7. Governance questions before freezing a patch 🧠
 
 Before any patch is frozen, the following questions should be asked.
 
@@ -356,7 +421,7 @@ What layer is being patched?
 
 Examples:
 
-- core atlas layer
+- core Atlas layer
 - relation layer
 - casebook layer
 - adapter layer
@@ -398,6 +463,7 @@ If a patch makes the system more decorative but less useful, that is a warning s
 Does this patch require a freeze note, or is a smaller local note enough?
 
 Not every patch needs its own major document.
+
 But every significant patch needs a visible boundary somewhere.
 
 ### Question 6
@@ -410,7 +476,7 @@ Good patching preserves negative-space discipline.
 
 ---
 
-## 8. How patch waves should be used
+## 8. How patch waves should be used 🌊
 
 Patch waves are useful when multiple related additions should be frozen together as one coherent version boundary.
 
@@ -430,7 +496,7 @@ That is what happened with Patch Wave 2.
 
 ---
 
-## 9. Relationship to negative-space discipline
+## 9. Relationship to negative-space discipline 🔍
 
 Patch governance is tightly linked to negative-space discipline.
 
@@ -456,7 +522,7 @@ This is how the Atlas stays honest while still growing.
 
 ---
 
-## 10. Relationship to bridge growth
+## 10. Relationship to bridge growth 🌉
 
 Bridge growth requires especially careful governance.
 
@@ -482,7 +548,7 @@ Bridge expansion should feel ambitious but controlled.
 
 ---
 
-## 11. Relationship to adapter growth
+## 11. Relationship to adapter growth 🤖
 
 Adapter growth also needs explicit governance.
 
@@ -491,7 +557,7 @@ This is because AI-facing routing layers can become unstable very quickly if:
 - compressed too aggressively
 - over-abstracted
 - silently changed
-- or allowed to absorb every new idea without discipline
+- allowed to absorb every new idea without discipline
 
 For adapter patches, governance must preserve:
 
@@ -503,11 +569,12 @@ For adapter patches, governance must preserve:
 - clear separation between demo convenience and formal adapter logic
 
 This is important because the adapter is not only documentation.
+
 It is part of the operational layer.
 
 ---
 
-## 12. Relationship to repair-surface growth
+## 12. Relationship to repair-surface growth 🛠️
 
 Repair-facing work is especially vulnerable to governance failure because readers often want stronger fixes faster than the structure currently supports.
 
@@ -526,7 +593,7 @@ The Atlas should avoid that.
 
 ---
 
-## 13. Recommended official wording
+## 13. Recommended official wording 📣
 
 When you need one short patch-governance statement for a new window, support page, or collaboration thread, use wording like this:
 
@@ -538,7 +605,7 @@ This wording is strong, accurate, and reusable.
 
 ---
 
-## 14. Practical governance rule for current work
+## 14. Practical governance rule for current work 📎
 
 For current work, the most useful governance rule is this:
 
@@ -551,7 +618,7 @@ That single rule already prevents many common system-growth failures.
 
 ---
 
-## 15. What patch governance currently allows
+## 15. What patch governance currently allows 🌱
 
 At the current stage, patch governance clearly allows:
 
@@ -567,7 +634,7 @@ These are healthy directions.
 
 ---
 
-## 16. What patch governance currently resists
+## 16. What patch governance currently resists 🚧
 
 At the current stage, patch governance resists:
 
@@ -582,7 +649,23 @@ These are exactly the pressures governance exists to resist.
 
 ---
 
-## 17. One-line status
+## Next steps ✨
+
+After this page, most readers continue with:
+
+1. [Open Patch Wave 2 Freeze Note v1](./patch-wave-2-freeze-note-v1.md)
+2. [Open Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+3. [Open Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+
+If you want the broader Atlas surface:
+
+- [Back to Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+- [Back to Atlas Hub](./README.md)
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+
+---
+
+## 17. One-line status 🌍
 
 **This document defines how the Atlas system should grow through disciplined patching, version boundaries, and explicit freeze logic without silently mutating its frozen core.**
 
