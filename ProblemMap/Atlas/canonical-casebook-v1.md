@@ -6,7 +6,7 @@ This file is the formal canonical teaching layer of Atlas v1.
 
 How to use this file:
 1. Read this file after reading [Atlas Final Freeze v1](./atlas-final-freeze-v1.md).
-2. Treat this document as the teaching and exemplar companion to the atlas core.
+2. Treat this document as the teaching and exemplar companion to the Atlas core.
 3. Use this file to learn:
    - what each family looks like in practice
    - how important family boundaries should be cut
@@ -15,14 +15,16 @@ How to use this file:
    - [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
    - [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
    - [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+   - [Case Format v1](./case-format-v1.md)
 
 What this file is:
 - The first formal canonical casebook
 - The exemplar and teaching layer of Atlas v1
 - A reusable routing demonstration set for humans and AI systems
+- The first stable family-anchor, boundary-cut, and repair-teaching pack for Atlas v1
 
 What this file is not:
-- Not the atlas core freeze itself
+- Not the Atlas core freeze itself
 - Not the full adapter specification
 - Not the full validation ledger
 - Not an exhaustive case library
@@ -31,27 +33,90 @@ What this file is not:
 Reading discipline for AI:
 - Preserve the distinction between family anchor cases, boundary cases, and repair cases.
 - Do not confuse exemplar cases with the full ontology.
-- Do not overgeneralize from one case when the atlas core already provides the routing grammar.
+- Do not overgeneralize from one case when the Atlas core already provides the routing grammar.
 - Use cases as teaching anchors, not as replacements for structural rules.
+- Keep route-first discipline visible even when examples are vivid or memorable.
 
 AI_NOTE_END
 -->
 
 # Canonical Casebook v1 📘
 
-## Problem Map 3.0 Troubleshooting Atlas  
-## Official Teaching and Exemplar Layer
+## Official teaching and exemplar layer for Atlas v1
 
-## 0. Document Status 🚦
+Quick links:
+
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Back to Atlas Hub](./README.md)
+- [Open Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+- [Open Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+- [Open Atlas v1 Integrated Handoff](./atlas-v1-integrated-handoff.md)
+- [Open Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+- [Open Case Format v1](./case-format-v1.md)
+
+---
+
+If the Atlas core defines the map, this file is the first formal guide that teaches people and AI systems how to **actually walk that map in practice**. 🧭
+
+This document does not replace the Atlas core.
+
+It shows what the Atlas looks like when it becomes:
+
+- teachable
+- routable
+- demo-friendly
+- AI-readable
+- repair-aware
+
+Short version:
+
+> the Atlas defines the grammar  
+> the casebook teaches how to use the grammar  
+> the adapter later operationalizes that teaching for AI systems
+
+That is the job of this file.
+
+---
+
+## Quick start 🚀
+
+### I am new to the casebook layer
+
+Use this path:
+
+1. read [Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+2. read this file
+3. read [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+4. read [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md) if you want AI-facing reuse
+
+### I already know the Atlas and want the shortest route
+
+Start here:
+
+1. read Section 5 for the standard case format
+2. read Part I for the seven family anchors
+3. read Part II for the major boundary cuts
+4. read Part III for diagnosis-to-repair flow
+5. read Section 9 for patch protocol
+
+Shortest possible reading:
+
+> family anchors teach what each family is  
+> boundary cases teach where the knife-cut matters  
+> repair cases teach why diagnosis changes the first move
+
+---
+
+## 0. Document status 🚦
 
 This document is the **frozen teaching and exemplar companion** to Atlas v1.
 
 It exists to provide a stable first case layer that helps humans and AI systems learn:
 
-- how to route a case into the atlas
+- how to route a case into the Atlas
 - how to distinguish neighboring family cuts
 - how diagnosis changes the first repair move
-- how to use the atlas as a practical troubleshooting grammar
+- how to use the Atlas as a practical troubleshooting grammar
 
 This version is called **Canonical Casebook v1**.
 
@@ -63,11 +128,11 @@ Future work should proceed through **casebook patch mode**, not by silently rewr
 
 ## 1. What this casebook is 🧭
 
-The atlas defines the map.
+The Atlas defines the map.
 
 The casebook teaches how to walk the map.
 
-If the atlas core provides:
+If the Atlas core provides:
 
 - family structure
 - node structure
@@ -86,7 +151,7 @@ then the casebook provides:
 
 In short:
 
-> the atlas defines the grammar  
+> the Atlas defines the grammar  
 > the casebook teaches how to use the grammar
 
 ---
@@ -112,7 +177,7 @@ A curated set of cases chosen because they sit near important family boundaries.
 Purpose:
 
 - teach why a case belongs to one family instead of a neighboring family
-- teach the core knife-cuts of the atlas
+- teach the core knife-cuts of the Atlas
 - reduce confusion in high-pressure routing zones
 
 ### Layer C · Repair Case Pack
@@ -123,7 +188,7 @@ Purpose:
 
 - show how correct routing changes the first repair move
 - show how misrepair begins when routing goes wrong
-- connect the atlas to repair-facing thinking without pretending the full repair system is already complete
+- connect the Atlas to repair-facing thinking without pretending the full repair system is already complete
 
 ---
 
@@ -165,7 +230,7 @@ Canonical Casebook v1 claims only that:
 
 ---
 
-## 5. Standard Case Format 🧩
+## 5. Standard case format 🧩
 
 All canonical cases in v1 use the following stable structure:
 
@@ -192,6 +257,10 @@ For format discipline, see also [Case Format v1](./case-format-v1.md).
 # Part I · Family Anchor Cases 🌟
 
 These seven cases serve as the first anchor teaching set for the seven-family mother table.
+
+They answer the most basic question:
+
+> what does each family look like when it appears in practice
 
 ---
 
@@ -313,7 +382,7 @@ F4_N02 Deployment Deadlock
 - fallback execution route
 
 **Why This Case Matters**  
-This case shows that the atlas can handle runtime and deployment-level failures, not just language-level mistakes.
+This case shows that the Atlas can handle runtime and deployment-level failures, not just language-level mistakes.
 
 ---
 
@@ -410,7 +479,11 @@ This is one of the clearest examples of a container-first rather than progressio
 
 # Part II · Boundary Case Pack ✂️
 
-These cases are selected because they teach the most important family cuts in the current atlas.
+These cases are selected because they teach the most important family cuts in the current Atlas.
+
+They answer the harder question:
+
+> why is this case in one family instead of the neighboring one
 
 ---
 
@@ -607,6 +680,10 @@ This is one of the strongest cases for teaching the F4 / F6 cut at the instituti
 
 These cases are selected because they best demonstrate diagnosis-to-repair flow.
 
+They answer the practical question:
+
+> once the route is correct, what kind of first move becomes correct
+
 ---
 
 ## Repair Case 1
@@ -778,7 +855,7 @@ This case teaches that some problems remain boundary-first even after visibility
 
 # Part IV · Why this casebook matters 💡
 
-Canonical Casebook v1 matters because it turns the atlas from a structural reference into a teaching and routing system.
+Canonical Casebook v1 matters because it turns the Atlas from a structural reference into a teaching and routing system.
 
 It now teaches three things:
 
@@ -796,7 +873,7 @@ through the repair case pack
 
 In other words:
 
-> the atlas supplies the failure grammar  
+> the Atlas supplies the failure grammar  
 > the casebook teaches how to use it
 
 ---
@@ -816,11 +893,11 @@ When using it in a new working context, treat it as the **frozen casebook mainli
 
 ---
 
-## 7. Relationship to the atlas core 🔗
+## 7. Relationship to the Atlas core 🔗
 
-This document depends on the atlas core.
+This document depends on the Atlas core.
 
-Use the atlas core to understand:
+Use the Atlas core to understand:
 
 - family structure
 - routing rules
@@ -834,7 +911,7 @@ Use this casebook to understand:
 - how boundary cuts behave in real teaching cases
 - how first repair moves depend on correct routing
 
-This is why the casebook should be read **after** the core atlas, not before it.
+This is why the casebook should be read **after** the core Atlas, not before it.
 
 ---
 
@@ -885,7 +962,7 @@ Use for:
 Only use if:
 
 - major family boundaries require re-teaching
-- multiple canonical cases become unstable under new atlas patches
+- multiple canonical cases become unstable under new Atlas patches
 - the teaching structure itself must be redesigned
 
 ### Current status
@@ -904,13 +981,30 @@ Its current structure includes:
 - 6 boundary cases
 - 6 repair cases
 
-This means the first full teaching layer of the atlas now exists.
+This means the first full teaching layer of the Atlas now exists.
 
 Further work should continue in patch mode.
 
 ---
 
-## 11. One-line status
+## Next steps ✨
+
+After this page, most readers continue with:
+
+1. [Open Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
+2. [Open Adapter Runtime Modes v1](./adapter-runtime-modes-v1.md)
+3. [Open Adapter Failure Discipline v1](./adapter-failure-discipline-v1.md)
+
+If you want the broader Atlas surface:
+
+- [Back to Atlas Final Freeze v1](./atlas-final-freeze-v1.md)
+- [Back to Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+- [Back to Atlas Hub](./README.md)
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+
+---
+
+## 11. One-line status 🌍
 
 **Canonical Casebook v1 is frozen. Further casebook work proceeds in patch mode.**
 
@@ -918,7 +1012,7 @@ Further work should continue in patch mode.
 
 ## 12. Closing note ✨
 
-A strong atlas is not enough by itself.
+A strong Atlas is not enough by itself.
 
 People and AI systems also need:
 
@@ -928,4 +1022,4 @@ People and AI systems also need:
 
 That is what this casebook is for.
 
-If the atlas is the map, this document is the first formal guide for learning how to move through it.
+If the Atlas is the map, this document is the first formal guide for learning how to move through it.
