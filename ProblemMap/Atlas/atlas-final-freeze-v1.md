@@ -5,17 +5,21 @@ Document role:
 This file is the formal frozen core document of Atlas v1.
 
 How to use this file:
-1. Read this file to understand the stable mother structure of the atlas.
+1. Read this file to understand the stable mother structure of the Atlas.
 2. Treat this document as the positive structural freeze of Atlas v1.
-3. Use this file to understand the seven-family mother table, routing rules, canonical layer, subtree layer, relation layer, and patch discipline.
+3. Use this file to understand the seven-family mother table, routing rules, canonical layer, subtree layer, relation layer, repair-facing layer, and patch discipline.
 4. Read this together with:
    - [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
    - [Atlas v1 Integrated Handoff](./atlas-v1-integrated-handoff.md)
+   - [Canonical Casebook v1](./canonical-casebook-v1.md)
+   - [Validation Basis v1](./validation-basis-v1.md)
+   - [Provenance and Derivation v1](./provenance-and-derivation-v1.md)
 
 What this file is:
-- The core atlas freeze
+- The core Atlas freeze
 - The stable structural reference
 - The positive structure document for Atlas v1
+- The first formal frozen mother body of the Atlas system
 
 What this file is not:
 - Not the full casebook
@@ -29,20 +33,103 @@ Reading discipline for AI:
 - Do not silently reinterpret frozen terms.
 - Do not promote work-branches into frozen nodes without patch discipline.
 - Do not overclaim universal closure from this document alone.
+- Treat this file as the stable positive core, then use companion documents for limits, evidence, and operational reuse.
 
 AI_NOTE_END
 -->
 
-# Atlas Final Freeze v1
+# Atlas Final Freeze v1 🧱
 
-## Problem Map 3.0 Troubleshooting Atlas  
-## Official Core Freeze Document
+## Official core freeze document for the first formal Atlas release
 
-## 0. Document Status
+Quick links:
 
-This document is the **frozen core reference** for the first formal atlas release.
+- [Back to Atlas landing page](../wfgy-ai-problem-map-troubleshooting-atlas.md)
+- [Back to Atlas Hub](./README.md)
+- [Open Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+- [Open Atlas v1 Integrated Handoff](./atlas-v1-integrated-handoff.md)
+- [Open Canonical Casebook v1](./canonical-casebook-v1.md)
+- [Open Validation Basis v1](./validation-basis-v1.md)
+- [Open Provenance and Derivation v1](./provenance-and-derivation-v1.md)
+- [Open Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md)
 
-It exists to define the stable main body of the atlas system, including:
+---
+
+If the Atlas landing page is the product-facing entry, this file is the **frozen mother structure** that tells you what is now stable enough to treat as the first formal Atlas core. 🧭
+
+This document does **not** say that all future work is over.
+
+It says something narrower and much more useful:
+
+> the main body has stabilized enough to freeze  
+> and future work should now grow through patch discipline, not silent rewriting
+
+Short version:
+
+> stable core first  
+> negative space stays visible  
+> future growth happens by patch mode
+
+That is the job of this file.
+
+---
+
+## Quick start 🚀
+
+### I am new to Atlas core structure
+
+Use this path:
+
+1. read this file first
+2. read [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md)
+3. read [Canonical Casebook v1](./canonical-casebook-v1.md)
+4. read [Validation Basis v1](./validation-basis-v1.md)
+5. read [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md) if you want AI-facing reuse
+
+### I already know the Atlas and want the shortest route
+
+Start here:
+
+1. read Section 3 for what is frozen
+2. read Section 5 for the seven-family mother table
+3. read Section 6 for the core routing rules
+4. read Section 11 for the relation matrix
+5. read Section 14 for the patch protocol
+
+Shortest possible reading:
+
+> this file defines what is stable  
+> Negative Space defines where stability intentionally stops  
+> future work should attach through patch logic
+
+---
+
+## What this file freezes 🛠️
+
+This document freezes the first formal positive core of Atlas v1, including:
+
+- the seven-family mother table
+- the core routing rules
+- the canonical node layer
+- the family-entry layer
+- the high-value subtree layer
+- the first relation matrix
+- the repair-facing interface layer
+- the patch protocol
+
+This is why this page matters.
+
+It is not just another Atlas note.
+
+It is the **stable structural reference** for the first formal Atlas release.
+
+---
+
+## 0. Document status
+
+This document is the **frozen core reference** for the first formal Atlas release.
+
+It exists to define the stable main body of the Atlas system, including:
 
 - the seven-family mother table
 - the core routing rules
@@ -53,17 +140,17 @@ It exists to define the stable main body of the atlas system, including:
 - the first repair-facing mapping layer
 - the patch protocol
 
-This document is called **Final Freeze v1** not because all future work is over, but because the first formal atlas body has stabilized enough to be frozen as a reusable versioned core.
+This document is called **Final Freeze v1** not because all future work is over, but because the first formal Atlas body has stabilized enough to be frozen as a reusable versioned core.
 
 Future work should proceed through **patch mode**, not through silent rewriting of this core structure.
 
 ---
 
-## 1. Document Purpose
+## 1. Document purpose
 
 This document answers one question:
 
-> What is now stable enough to treat as the first formal atlas core?
+> What is now stable enough to treat as the first formal Atlas core?
 
 It is meant to support:
 
@@ -87,7 +174,7 @@ Short version:
 
 ---
 
-## 2. Official Freeze Interpretation
+## 2. Official freeze interpretation
 
 The correct interpretation of Atlas v1 is:
 
@@ -105,12 +192,12 @@ This does **not** mean:
 
 It means:
 
-> the atlas core no longer needs to be re-argued from scratch  
+> the Atlas core no longer needs to be re-argued from scratch  
 > future work should attach to the frozen core through patch logic
 
 ---
 
-## 3. What Final Freeze v1 stabilizes
+## 3. What Final Freeze v1 stabilizes 📌
 
 The following are now considered stable enough to freeze.
 
@@ -148,7 +235,7 @@ The current patch protocol is frozen.
 
 ---
 
-## 4. What Final Freeze v1 does not freeze
+## 4. What Final Freeze v1 does not freeze 🚧
 
 The following are intentionally **not** treated as fully closed.
 
@@ -162,7 +249,7 @@ Not every relation is yet strong enough to be frozen as a high-confidence struct
 
 ### 4.3 Selective cross-domain expansion
 
-The atlas now supports the first formal bridge outward, but not universal closure claims.
+The Atlas now supports the first formal bridge outward, but not universal closure claims.
 
 ### 4.4 Ongoing subtree thickening
 
@@ -174,9 +261,9 @@ For those limits, see:
 
 ---
 
-## 5. Seven-Family Mother Table
+## 5. Seven-family mother table 🗂️
 
-The atlas currently organizes failure space through seven top-level families.
+The Atlas currently organizes failure space through seven top-level families.
 
 ---
 
@@ -395,7 +482,7 @@ READY_MINUS
 
 ---
 
-## 6. Core Routing Rules
+## 6. Core routing rules 🧭
 
 The following boundary rules are frozen as the primary routing rules of Atlas v1.
 
@@ -479,7 +566,7 @@ If the anchor may still exist but the system cannot yet stably interpret, audit,
 
 ---
 
-## 7. Canonical Node Layer v1
+## 7. Canonical node layer v1 🔩
 
 The following nodes are currently frozen as the first canonical or near-canonical anchor set.
 
@@ -527,7 +614,7 @@ These are treated as stable enough to function as the first formal canonical cor
 
 ---
 
-## 8. Family-Entry Layer v1
+## 8. Family-entry layer v1 🌱
 
 The following entries are frozen as high-pressure stable entry regions.
 
@@ -567,11 +654,11 @@ The following entries are frozen as high-pressure stable entry regions.
 - Explanation Fidelity Distortion
 - Synthetic Structure Fidelity Failure
 
-These should be treated as stable enough to appear in the atlas core, while still leaving room for further thickening through patch mode.
+These should be treated as stable enough to appear in the Atlas core, while still leaving room for further thickening through patch mode.
 
 ---
 
-## 9. High-Value Subtree Layer v1
+## 9. High-value subtree layer v1 🌲
 
 The following subtrees are treated as the first frozen high-value subtree layer.
 
@@ -607,7 +694,7 @@ These are currently strong enough to be treated as the first formal subtree free
 
 ---
 
-## 10. Overlay Policy
+## 10. Overlay policy 🪟
 
 The following overlays are frozen as overlays, not primary families.
 
@@ -632,7 +719,7 @@ Used when the failure is primarily local to OCR, layout, placement, spatial-text
 
 ---
 
-## 11. Relation Matrix v1
+## 11. Relation matrix v1 🔗
 
 The following relations are frozen as the first relation matrix layer.
 
@@ -664,11 +751,12 @@ This matrix should be treated as the first stable relation layer, not as the fin
 
 ---
 
-## 12. Repair-Facing Layer v1
+## 12. Repair-facing layer v1 🛠️
 
-The atlas includes a first repair-facing mapping layer.
+The Atlas includes a first repair-facing mapping layer.
 
 This layer is not a one-shot universal prescription system.
+
 It is a structured interface that helps connect routing to first repair direction.
 
 ### F1
@@ -731,25 +819,27 @@ It is a structured interface that helps connect routing to first repair directio
 
 For deeper repair mapping, this document should later connect to:
 
-- [Fix Surface v1](./fix-surface-v1.md)
-- [Node-to-Fix Layer v1](./node-to-fix-layer-v1.md)
-- [Atlas-to-WFGY Bridge v1](./atlas-to-wfgy-bridge-v1.md)
+- [Fixes Hub](./Fixes/README.md)
+- [Family Fix Surface v1](./Fixes/official/family-fix-surface-v1.md)
+- [Node-to-Fix Layer v1](./Fixes/official/node-to-fix-layer-v1.md)
+- [Atlas-to-WFGY Bridge v1](./Fixes/official/atlas-to-wfgy-bridge-v1.md)
 
 ---
 
-## 13. Validation Status
+## 13. Validation status ✅
 
-The current atlas freeze is supported by a first formal validation body.
+The current Atlas freeze is supported by a first formal validation body.
 
 At the level of formal claim, the following are currently justified:
 
 - no eighth-family pressure has yet emerged in the current tested body
 - no clear no-fit zone has yet forced a redraw of the mother table
 - major boundary rules survived repeated pressure
-- the atlas is no longer in the stage of “can this exist”
-- the atlas is now in the stage of “freeze the stable core and continue in patch mode”
+- the Atlas is no longer in the stage of “can this exist”
+- the Atlas is now in the stage of “freeze the stable core and continue in patch mode”
 
 This document does **not** function as the full validation ledger.
+
 For provenance and validation basis, see:
 
 - [Validation Basis v1](./validation-basis-v1.md)
@@ -757,7 +847,7 @@ For provenance and validation basis, see:
 
 ---
 
-## 14. Patch Protocol
+## 14. Patch protocol 📎
 
 Final Freeze v1 is frozen, but not closed.
 
@@ -796,33 +886,33 @@ No large-patch pressure is currently justified.
 
 ---
 
-## 15. Operational Reading Rule
+## 15. Operational reading rule 📚
 
 When using Atlas v1 operationally, follow this order:
 
 1. use this document to understand the stable core
 2. use [Atlas Negative Space Report v1](./atlas-negative-space-report-v1.md) to understand the deliberate limits
 3. use [Canonical Casebook v1](./canonical-casebook-v1.md) to learn family anchors, boundary cuts, and first repair moves
-4. use [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md) when converting atlas logic into AI-facing routing
+4. use [Atlas-to-AI Adapter v1](./atlas-to-ai-adapter-v1.md) when converting Atlas logic into AI-facing routing
 5. use patch documents only after the stable core has been understood
 
 This order matters.
 
 ---
 
-## 16. Official Freeze Statement
+## 16. Official freeze statement 📣
 
 The correct formal statement is:
 
-> Atlas Final Freeze v1 is complete as the first formal frozen core of the atlas system.  
+> Atlas Final Freeze v1 is complete as the first formal frozen core of the Atlas system.  
 > The seven-family mother table, major routing rules, canonical node layer, family-entry layer, high-value subtree layer, relation matrix v1, repair-facing layer, and patch discipline are now stable enough for formal use.  
-> Future work should proceed in patch mode, not through silent rewriting of the atlas core.
+> Future work should proceed in patch mode, not through silent rewriting of the Atlas core.
 
 ---
 
-## 17. One-line version
+## 17. One-line version 🌍
 
-**Atlas Final Freeze v1 is the frozen core of Problem Map 3.0 Troubleshooting Atlas. It defines the first stable main body of the atlas.**
+**Atlas Final Freeze v1 is the frozen core of Problem Map 3.0 Troubleshooting Atlas. It defines the first stable main body of the Atlas.**
 
 ---
 
@@ -830,7 +920,7 @@ The correct formal statement is:
 
 This document is the core freeze, not the entire system.
 
-To use the atlas well, do not isolate this file from its companion documents.
+To use the Atlas well, do not isolate this file from its companion documents.
 
 - use this file for stable structure
 - use Negative Space for limits
