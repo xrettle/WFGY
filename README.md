@@ -52,9 +52,16 @@ PSBigBig x MiniPS: big big welcome, mini singularities.
 
 # WFGY · AI Troubleshooting Atlas
 
+[![GitHub stars](https://img.shields.io/github/stars/onestardao/WFGY?style=flat-square&color=5f6b7a)](https://github.com/onestardao/WFGY/stargazers)
+[![MIT License](https://img.shields.io/badge/license-MIT-6b7280.svg?style=flat-square)](https://github.com/onestardao/WFGY/blob/main/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/onestardao/WFGY?style=flat-square&color=7a8594)](https://github.com/onestardao/WFGY/commits/main)
+[![30+ Repos Listed](https://img.shields.io/badge/recognition-30%2B%20repos%20listed-6c7a89?style=flat-square)](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)
+[![Problem Map 3.0](https://img.shields.io/badge/problem%20map-3.0-748091?style=flat-square)](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-ai-problem-map-troubleshooting-atlas.md)
+[![Atlas Router TXT](https://img.shields.io/badge/atlas-router%20txt-6f7d8c?style=flat-square)](https://github.com/onestardao/WFGY/blob/main/ProblemMap/Atlas/troubleshooting-atlas-router-v1.txt)
+[![Public Proof](https://img.shields.io/badge/public-proof-7b8794?style=flat-square)](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)
+
 > **Problem Map 3.0 by WFGY**  
 > **The route-first troubleshooting surface for broken RAG, agent, and AI workflows.**
-
 > Stop debugging from symptoms.  
 > Route the failure, inspect the broken invariant, and take the right first repair move.
 
