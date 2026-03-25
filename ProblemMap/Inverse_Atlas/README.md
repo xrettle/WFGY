@@ -1,7 +1,8 @@
 # 🧭 Inverse Atlas · Before AI Answers, It Must Earn the Right
 
-> A legitimacy-first AI runtime for the age of over-answering.  
-> Inverse Atlas governs whether a model may answer, how strongly it may answer, and when it must stay broad, unresolved, or stop. ⚖️
+> A legitimacy-first AI runtime for rigorous reasoning in the age of over-answering.  
+> Inverse Atlas governs whether a model may answer, how strongly it may answer, when it must stay broad,  
+> unresolved, or stop, and how far it may go under legitimate reasoning conditions. ⚖️  
 
 Most AI systems are built as if answering is the default.
 
