@@ -1,154 +1,279 @@
-<!--
-AI_NOTE_START
+# 🧭 Inverse Atlas · Before AI Answers, It Must Earn the Right
 
-Document role:
-This page is the main entry point for the Inverse Atlas MVP package.
+> A legitimacy-first AI runtime for the age of over-answering.  
+> Inverse Atlas governs whether a model may answer, how strongly it may answer, and when it must stay broad, unresolved, or stop. ⚖️
 
-What this page is for:
-1. Explain what Inverse Atlas is.
-2. Explain how it differs from the forward Atlas.
-3. Explain how to try the current MVP in a short path.
-4. Explain what is included, what is not yet claimed, and where this work is heading next.
+Most AI systems are built as if answering is the default.
 
-How to read this page:
-1. Read this page first for positioning.
-2. Then read the quick start and runtime-related pages if you want to use the MVP.
-3. If you need the route-first structural mapping layer, read the forward atlas page under ProblemMap.
-4. If you need the combined vision of forward + inverse, treat Twin Atlas as the conceptual pairing layer.
-5. If you need the future closed-loop direction, check Atlas Bridge as the future handoff layer.
+Inverse Atlas changes that order.
 
-Important boundary:
-This page describes the current MVP layer of Inverse Atlas.
-Do not treat this page as a claim that the full bridge layer or the full WFGY 4.0 closed-loop system is already complete unless another page explicitly says so.
+Instead of:
+- answer first
+- soften later
+- repair after overclaim
 
-Recommended reading path:
-1. Inverse Atlas README
-2. quickstart.md
-3. runtime-guide.md
-4. dual-layer-positioning.md
-5. status-and-boundaries.md
-6. Forward Atlas page in ProblemMap
-7. Twin_Atlas README
-8. Atlas_Bridge README
+Inverse Atlas asks a harder prior question:
 
-AI_NOTE_END
--->
+**has this answer actually earned the right to exist at this level of resolution?**
 
-# Inverse Atlas · Legitimacy-First AI Governance
-
-> A pre-generative governance layer for AI output.  
-> Not every answer should be generated just because a prompt arrived. ⚖️
-
-Inverse Atlas is the second major atlas line in the WFGY system.
-
-If the forward atlas helps AI find the right structural region of failure,  
-Inverse Atlas helps AI decide whether it is actually entitled to answer yet, how strongly it may answer, and how far it may go without overclaiming.
-
-This is the core shift:
+That is the core shift.
 
 **generation is not treated as a default right**  
 **generation is treated as an authorized act**
 
-That single shift changes the behavior of the whole system.
+This is not just a safer tone wrapper.  
+It is not just a post hoc filter.  
+It is not just a stricter prompt.
 
-Instead of answering first and softening later, Inverse Atlas asks a stricter prior question:
+It is a new pre-generative order for AI output.
 
-**is the current output lawful enough to be emitted at this resolution?**
-
----
-
-## Quick Links 🔎
-
-| Section | Link |
-|---|---|
-| Start here | [Quick Start](./quickstart.md) |
-| Runtime usage | [Runtime Guide](./runtime-guide.md) |
-| Positioning | [Dual-Layer Positioning](./dual-layer-positioning.md) |
-| Boundaries | [Status and Boundaries](./status-and-boundaries.md) |
-| Runtime artifacts | [runtime/README.md](./runtime/README.md) |
-| Paper notes | [paper/README.md](./paper/README.md) |
-| Figure notes | [figures/README.md](./figures/README.md) |
-| Forward Atlas | [Problem Map 3.0 Troubleshooting Atlas](../wfgy-ai-problem-map-troubleshooting-atlas.md) |
-| Twin Atlas | [Twin Atlas README](../Twin_Atlas/README.md) |
-| Future bridge | [Atlas Bridge README](../Atlas_Bridge/README.md) |
+Built for:
+- vibe coders
+- AI builders
+- agent builders
+- engineers debugging with LLMs
+- anyone tired of false certainty, premature diagnosis, cosmetic repair inflation, and public overclaim
 
 ---
 
-## What Inverse Atlas is 🧭
+## ⚡ Start in 60 Seconds
 
-Inverse Atlas is a **pre-generative governance framework**.
+If you want the fastest way to feel what Inverse Atlas changes, use this order:
 
-It does not begin by asking, “what answer sounds useful?”
-It begins by asking:
+1. Start with [Inverse Atlas Advanced](./runtime/inverse-advanced.txt)
+2. Run the [Demo Harness](./runtime/inverse-demo.txt)
+3. Pick one killer case from the [Case Pack](./runtime/inverse-cases.txt)
+4. Compare baseline vs inverse-governed output
+5. Score the difference with the [Evaluator](./runtime/inverse-eval.txt)
+6. Then read the [paper PDF](./paper/inverse-troubleshooting-atlas-pre-generative-governance-for-ai-legitimacy.pdf)
 
-- has the problem actually been constituted
-- is the active world frame legitimate
-- are neighboring routes still materially alive
-- is the current repair really structural
-- does the system have enough support to speak this strongly in public output
-
-So the purpose of Inverse Atlas is not to make AI colder, longer, or more hesitant for style reasons.
-
-Its purpose is much more specific:
-
-**to reduce illegitimate generation**
-
-That includes cases where the model:
-
-- resolves too early
-- sounds more certain than the evidence allows
-- presents cosmetic repair as structural repair
-- collapses unresolved neighboring routes into fake clarity
-- emits public-facing conclusions beyond current support
-
-In simple words:
-
-**it is not just trying to help AI answer**
-  
-**it is trying to help AI answer lawfully**
+If you want the supporting docs first:
+- [Quick Start](./quickstart.md)
+- [Runtime Guide](./runtime-guide.md)
+- [Experiments Hub](./experiments/README.md)
+- [Reproduce in 60 Seconds](./experiments/repro-60-seconds.md)
 
 ---
 
-## Why this exists 🚨
+## 🚀 What Inverse Atlas Is For
 
-Many AI systems still behave as if the moment a user asks something, the model has already earned the right to produce a refined answer.
+Inverse Atlas is designed to reduce a specific family of AI failures:
 
-That assumption creates a huge amount of damage.
+- early illegal resolution
+- false certainty under weak support
+- neighboring-cut collapse
+- cosmetic repair posing as structural repair
+- public-facing conclusions that outrun the current evidence ceiling
 
-The model may:
+In simple language:
 
-- choose a route too quickly
-- speak with false finality
-- patch the surface instead of the broken invariant
-- confuse “plausible” with “authorized”
-- turn partial structure into fake closure
+**it does not merely help AI answer**  
+**it helps AI answer lawfully**
 
-The more fluent the model becomes, the more dangerous this failure mode gets.
+That means the system is allowed to:
+- stay broad when broad is all that is justified
+- stay unresolved when ambiguity is still real
+- stop when a stronger answer would be illegitimate
+- propose repair only when the repair is more than surface cleanup
 
-Forward Atlas already helps with the first half of the problem by improving the **first structural cut**.
+A fluent answer is not enough.  
+A plausible answer is not enough.  
+A detailed answer is not enough.
 
-Inverse Atlas exists because a second half is still needed:
+**The answer must be earned.**
 
-**even if a route looks promising, that does not automatically mean the system is entitled to emit a strong answer yet**
+---
+
+## 🧩 Pick Your Runtime
+
+### 1. [Inverse Atlas Advanced](./runtime/inverse-advanced.txt)
+**Recommended default**
+
+Use this first if you want the best overall MVP experience.
+
+Advanced is the main product-facing runtime:
+- legitimacy-first
+- readable and useful
+- strong enough for serious testing
+- balanced between governance and practical usability
+
+Best for:
+- general serious use
+- product demos
+- side-by-side comparison
+- first public experience
+
+### 2. [Inverse Atlas Basic](./runtime/inverse-basic.txt)
+**Fastest onboarding**
+
+Use this if you want lower friction and more natural user-facing output.
+
+Basic is designed for:
+- easier first contact
+- simpler prompting
+- natural prose output
+- useful lawful answers without heavy structure exposure
+
+Best for:
+- casual first try
+- onboarding
+- quick copy-paste use
+- lightweight daily testing
+
+### 3. [Inverse Atlas Strict](./runtime/inverse-strict.txt)
+**Audit / stress / research mode**
+
+Use this when you want the hardest legality discipline.
+
+Strict is designed for:
+- audit-style runs
+- benchmark pressure
+- evaluator alignment
+- structural stress testing
+- research demonstrations
+
+Best for:
+- hard-case review
+- black-hat testing
+- internal audits
+- structured-output analysis
+
+---
+
+## 🎯 Killer Demo
+
+The killer demo is not:
+
+“look, the answer sounds nicer.”
+
+The killer demo is:
+
+“look where ordinary direct generation over-resolves, overcommits, fakes repair, or speaks past its evidence ceiling, and how Inverse Atlas changes that order.”
+
+Use:
+- [Demo Harness](./runtime/inverse-demo.txt)
+- [Evaluator](./runtime/inverse-eval.txt)
+- [Case Pack](./runtime/inverse-cases.txt)
+
+Recommended killer cases:
+- thin evidence forced confidence
+- neighboring-cut conflict
+- illegal resolution demand
+- world alignment instability
+
+What the demo should reveal:
+- a baseline may sound stronger while being less lawful
+- confident tone does not equal authorized output
+- rhetorical closure does not equal structural closure
+- lawful restraint is not weakness
+- ambiguity honestly preserved is often better than fake completion
+
+This matters because many of the framework’s benefits are invisible if you only look at one final answer.  
+The demo makes the order change visible.
+
+---
+
+## 📊 What the MVP Measures
+
+This MVP does not ask you to “just trust the vibe.”
+
+It gives you a direct comparison surface.
+
+The current measurement idea is simple and inspectable:
+
+### 1. Legality Win Rate
+Across the case pack, does the inverse-governed answer win on legality more often than the baseline?
+
+### 2. Failure Code Reduction
+Does Inverse Atlas reduce major failure patterns such as:
+- illegal resolution escalation
+- neighboring-cut dishonesty
+- cosmetic-only repair posing as structural
+- public ceiling exceedance
+
+### 3. Expected-State Match
+For each case, does the runtime land in a lawful mode such as:
+- STOP
+- COARSE
+- UNRESOLVED
+- AUTHORIZED
+
+### 4. Seven-Dimension Evaluation
+Use the evaluator to judge:
+- problem frame legality
+- world alignment honesty
+- route judgment plausibility
+- neighboring-cut honesty
+- resolution legality
+- repair legality
+- public ceiling compliance
+
+This is the important boundary:
+
+**we are not claiming universal proof at MVP stage**  
+**we are claiming a directly inspectable legality-centered comparison surface**
+
+In other words:
+
+**not “trust us”**  
+**run the killer cases and inspect the deltas**
+
+---
+
+## 🧠 Why This Exists
+
+The first appearance of the forward atlas should be explicit:
+
+The forward atlas, [Troubleshooting Atlas](../wfgy-ai-problem-map-troubleshooting-atlas.md), helps the system find the likely structural region of failure.
+
+That was a major step.
+
+But a second problem remained:
+
+even if the route looks promising, that does **not** automatically mean the model has earned the right to emit a strong answer yet.
 
 That second half is the job of Inverse Atlas.
 
+So the split is clean:
+
+### Troubleshooting Atlas
+Route-first structural orientation
+
+It helps answer:
+- where is the failure likely located
+- what family or region is active
+- what is the likely first structural move
+
+### Inverse Atlas
+Legitimacy-first generation governance
+
+It helps answer:
+- may the system answer yet
+- how strongly may it answer
+- must it remain broad, unresolved, or stop
+- is the proposed repair structural or cosmetic
+- is the public emission ceiling being exceeded
+
+One layer provides the map.  
+The other governs the right to speak from within the map.
+
+That is why Inverse Atlas is not a side note.  
+It is a second major atlas line.
+
 ---
 
-## What it actually does 🛠️
+## 🛠️ What It Actually Does
 
-Inverse Atlas governs output before full public emission.
-
-At the MVP level, its logic centers on seven checks:
+At MVP level, Inverse Atlas governs generation through seven checks:
 
 1. **Problem Constitution**  
-   Has the problem been formed clearly enough to support lawful reasoning?
+   Has the problem been formed clearly enough for lawful reasoning?
 
-2. **World Legitimacy**  
-   Is the active world frame aligned well enough for this answer to be meaningful?
+2. **World Alignment**  
+   Is the active world frame aligned enough for the answer to mean anything?
 
-3. **Collapse Geometry Estimate**  
-   How risky would premature resolution be in the current structure?
+3. **Route / Collapse Estimate**  
+   What is the leading structural route, and how risky would premature resolution be?
 
 4. **Neighboring-Cut Review**  
    Are nearby competing routes still materially alive?
@@ -157,258 +282,214 @@ At the MVP level, its logic centers on seven checks:
    Has the system actually earned the right to resolve at this level?
 
 6. **Repair Legality**  
-   Is the proposed fix touching the structural break, or only producing cosmetic repair?
+   Is the proposed fix structural, tentative, or merely cosmetic?
 
 7. **Public Emission Control**  
-   Is the final wording stronger than the evidence ceiling currently allows?
+   Would the final visible answer exceed what is currently supportable?
 
-That means Inverse Atlas does not merely “check tone.”
+This means Inverse Atlas does not merely check style.
 
 It governs:
-
 - whether the model may answer
-- how far the model may go
-- what resolution is lawful
-- when the model must stay coarse
-- when the model must stay unresolved
-- when the model must stop entirely
+- how far it may go
+- when ambiguity must be preserved
+- when repair must stay tentative
+- when strong output is lawful
+- when stopping is the correct result
 
 ---
 
-## The four governance modes 🚦
+## 🚦 The Four Governance Modes
 
-Inverse Atlas uses four main output states.
+Inverse Atlas uses four main output states:
 
 ### STOP
-The system is not currently entitled to produce substantive resolution.
-
-This does **not** mean the system is useless.  
-It means lawful output requires stopping, reframing, or requesting more grounding first.
+Use when the problem is too under-formed, too weakly grounded, or too unstable for substantive output.
 
 ### COARSE
-A broad directional judgment is possible, but finer commitment would currently overreach.
-
-This mode is useful when the system can see shape, but not enough legitimacy for detailed closure.
+Use when broad structure is visible, but finer claims would overreach.
 
 ### UNRESOLVED
-A leading route exists, but one or more neighboring routes are still materially alive.
-
-This mode prevents fake certainty when the structure is still contested.
+Use when one route leads, but a competing route remains materially alive.
 
 ### AUTHORIZED
-The current problem frame, world alignment, route separation, and support ceiling are strong enough to justify substantive output.
+Use only when the problem frame, world alignment, route separation, and requested detail are strong enough to justify strong output.
 
-This is the strongest state, but it is **earned**, not assumed.
+The key principle:
 
----
-
-## Relationship to the forward Atlas 🧩
-
-Forward Atlas and Inverse Atlas are not duplicates.
-
-They solve different parts of the reasoning problem.
-
-### Forward Atlas
-The forward atlas is **route-first**.
-
-It helps identify:
-
-- likely failure region
-- broken invariant region
-- nearby lookalike routes
-- correct first repair direction
-
-In plain terms, it helps answer:
-
-**where is the problem likely located, and what should the first structural move be?**
-
-### Inverse Atlas
-Inverse Atlas is **legitimacy-first**.
-
-It helps determine:
-
-- whether the system may answer yet
-- whether current confidence is lawful
-- whether the repair is structural or cosmetic
-- whether the emission ceiling is being exceeded
-
-In plain terms, it helps answer:
-
-**has the system actually earned the right to speak this strongly yet?**
-
-### Why both matter together
-A system can fail in at least two different ways:
-
-1. it routes badly
-2. it speaks too strongly before lawful support exists
-
-Forward Atlas attacks the first failure.  
-Inverse Atlas attacks the second.
-
-So when they stand side by side, the system gets much stronger:
-
-- better first diagnosis
-- fewer fake repairs
-- fewer premature conclusions
-- better control of uncertainty
-- cleaner distinction between route prior and authorized output
-
-That is why the two atlas lines are not competing products.
-
-They are twin weapons of the same reasoning family. ⚔️⚔️
+**AUTHORIZED is earned, not assumed.**
 
 ---
 
-## What makes this different from a normal safety layer
+## 🔥 What Actually Changes When You Use It
 
-Inverse Atlas is not just a moderation wrapper.
+If Inverse Atlas is working, you should see less of this:
 
-It is not a generic refusal layer.  
-It is not a simple post hoc filter.  
-It is not just “be careful” rewritten as a prompt.
+- early illegal closure
+- unsupported specificity
+- topic lure turning into fake diagnosis
+- cosmetic rewrite being mislabeled as structural repair
+- final answers that outrun evidence
 
-Its concern is narrower and deeper:
+And more of this:
 
-**output legitimacy under unresolved structure**
+- lawful restraint
+- honest ambiguity
+- cleaner uncertainty handling
+- better distinction between route guess and authorized emission
+- better repair honesty
+- safer public output at the right resolution
 
-That means its role is especially important in cases where the model looks fluent enough to bluff its way into false closure.
+This is not a cosmetic improvement layer.
 
-In other words, this system is not built to make answers merely softer.
-
-It is built to make answers more lawfully proportioned to what the system has actually earned.
-
----
-
-## Current MVP scope 📦
-
-The current Inverse Atlas MVP includes:
-
-- the core positioning framework
-- the main runtime artifact
-- a short demo harness
-- an evaluator artifact
-- a minimal case pack
-- the MVP paper
-- the core figures
-- supporting documentation pages for usage and boundaries
-
-This is already enough to make the system understandable, testable, and comparable at the text-artifact level.
+It changes the order of cognition:
+- orientation first
+- governance second
+- emission only after authorization
 
 ---
 
-## What is already true ✅
+## 🧪 Included in the Current MVP
 
-At the current stage, it is fair to say:
+The current Inverse Atlas MVP already includes:
 
-- Inverse Atlas exists as a distinct atlas line
-- it can already be presented as an MVP product surface
-- it has a runtime form, a demo form, an evaluator form, and a case-pack form
-- it has a paper-level explanation and figure set
-- it can already be paired conceptually with the forward atlas as part of a larger twin-atlas direction
+- [Inverse Atlas Advanced](./runtime/inverse-advanced.txt)
+- [Inverse Atlas Basic](./runtime/inverse-basic.txt)
+- [Inverse Atlas Strict](./runtime/inverse-strict.txt)
+- [Demo Harness](./runtime/inverse-demo.txt)
+- [Evaluator](./runtime/inverse-eval.txt)
+- [Case Pack](./runtime/inverse-cases.txt)
+- [Runtime Notes](./runtime/README.md)
+- [Experiments Hub](./experiments/README.md)
+- [Showcase Cases](./experiments/showcase-cases.md)
+- [Evidence Snapshot](./experiments/evidence-snapshot.md)
+- [Case Studies](./experiments/case-studies/README.md)
+- [Colab / Reproduction Entry](./colab.md)
+- [Paper PDF](./paper/inverse-troubleshooting-atlas-pre-generative-governance-for-ai-legitimacy.pdf)
+- [Paper Notes](./paper/README.md)
+- [Figures](./figures/README.md)
 
----
+This is already enough to make the current layer:
+- visible
+- testable
+- comparable
+- discussable
+- attackable in public
 
-## What is not yet claimed ⛔
+That matters.
 
-This page does **not** claim that the following are already complete:
-
-- a full bridge implementation between forward and inverse layers
-- a universal production operating layer
-- complete hallucination elimination
-- final large-scale benchmark superiority
-- the completed WFGY 4.0 closed-loop system
-
-Those directions are important, but they belong to later layers.
-
-For now, the correct statement is simpler and more precise:
-
-**Inverse Atlas is a completed MVP product direction within the broader atlas family, but the full closed-loop architecture is still ahead**
-
----
-
-## The next architectural step 🌉
-
-The next major step after the forward and inverse atlas lines is the bridge layer.
-
-That future layer is currently referred to as **Atlas Bridge**.
-
-Its role will be to connect:
-
-- route judgment from the forward atlas
-- legitimacy states from Inverse Atlas
-- repair legality checks
-- output ceiling control
-- escalation and de-escalation logic
-
-When that handoff becomes explicit and stable, the broader closed-loop architecture becomes much more real.
-
-That future direction matters.
-
-But this page is intentionally focused on the Inverse Atlas line itself.
+Because a framework that cannot be surfaced as an inspectable object is much harder to evaluate honestly.
 
 ---
 
-## Why this matters beyond one product line 🌌
+## 📘 Paper, Figures, and Theory
 
-Inverse Atlas is important not only because it improves one atlas family, but because it changes what AI debugging can become.
+If you want the formal layer, go here:
 
-Without a governance layer, a model may become good at producing persuasive structure without lawful structure.
+- [Read the paper PDF](./paper/inverse-troubleshooting-atlas-pre-generative-governance-for-ai-legitimacy.pdf)
+- [Read the paper notes](./paper/README.md)
+- [See the figures](./figures/README.md)
 
-With a governance layer, the system gains a better chance of doing something much harder:
+The paper is not a footnote.  
+It is the formal surface that explains:
 
-- staying unresolved when unresolved is correct
-- demanding more evidence when evidence is missing
-- refusing fake repair when root structure is untouched
-- preserving neighboring routes instead of collapsing them too early
-- earning strong output instead of performing it
-
-That difference becomes even more important as problems get larger, messier, and more multi-layered.
-
-So while the current MVP is focused and bounded, the design direction is much bigger.
-
----
-
-## Reading path 📚
-
-If you are new here, use this order:
-
-1. read this page first
-2. go to [Quick Start](./quickstart.md)
-3. read [Runtime Guide](./runtime-guide.md)
-4. read [Dual-Layer Positioning](./dual-layer-positioning.md)
-5. read [Status and Boundaries](./status-and-boundaries.md)
-
-If you want the route-first side, go to the forward atlas page:
-
-[Problem Map 3.0 Troubleshooting Atlas](../wfgy-ai-problem-map-troubleshooting-atlas.md)
-
-If you want the paired concept, go to:
-
-[Twin Atlas README](../Twin_Atlas/README.md)
-
-If you want the future closed-loop direction, go to:
-
-[Atlas Bridge README](../Atlas_Bridge/README.md)
+- why this is not just another checker
+- why legitimacy failure is earlier than output-quality failure
+- why the demo harness matters
+- why the evaluator is legality-centered
+- why the case pack defines the MVP benchmark seed
+- why forward-layer mapping and inverse-layer governance are complementary
 
 ---
 
-## Final positioning
+## 💬 Quick FAQ
 
-Inverse Atlas is the legitimacy-first half of a larger atlas family.
+### Is this just a stricter prompt?
+No.  
+It changes the order of generation.  
+Instead of answer first and clean up later, it asks whether the answer is currently lawful enough to emit.
 
-It does not replace the forward atlas.  
-It completes a missing dimension.
+### Which runtime should I start with?
+Start with [Inverse Atlas Advanced](./runtime/inverse-advanced.txt).  
+It is the recommended default.
 
-The forward atlas helps the system ask:
+### What does the killer demo actually show?
+It shows where a plausible direct-answer baseline escalates too early, overclaims certainty, skips neighboring-cut honesty, or presents cosmetic repair as structural.
+
+### Do I need the full experiment stack to understand it?
+No.  
+You can start with Advanced + Demo Harness + one killer case.  
+The experiment layer simply gives you a cleaner public comparison surface.
+
+### Is this already claiming universal benchmark superiority?
+No.  
+This README describes an MVP product direction with a runtime, demo, evaluator, case pack, paper, and figure set.  
+It does not claim that the full closed-loop WFGY 4.0 architecture is already complete.
+
+---
+
+## ⛔ What Is Not Yet Claimed
+
+This page does **not** claim:
+
+- full hallucination elimination
+- universal superiority across all tasks
+- a completed production operating system
+- a finished forward-plus-inverse closed loop
+- a fully completed WFGY 4.0 bridge implementation
+
+The current claim is narrower and stronger:
+
+**Inverse Atlas already exists as a real MVP artifact layer**  
+**the broader architecture is still ahead**
+
+---
+
+## 🌉 Where This Goes Next
+
+Inverse Atlas is not the end state.
+
+It is one side of a larger architecture.
+
+If the route-first layer keeps improving structural orientation, and the inverse layer keeps improving output legitimacy, then the next natural step is tighter pairing inside the broader twin-atlas direction.
+
+For that conceptual pairing layer, see:
+- [Twin Atlas README](../Twin_Atlas/README.md)
+
+The larger vision is not:
+“make answers look safer.”
+
+The larger vision is:
+
+**make generative systems know when they have, and have not, earned the right to speak strongly**
+
+That is a much bigger shift.
+
+---
+
+## 🏁 Final Positioning
+
+Inverse Atlas is not just another GitHub artifact.
+
+It is a new governance layer for AI generation.
+
+It says:
+
+- not every prompt has earned an answer
+- not every likely route has earned public resolution
+- not every repair has earned the word structural
+- not every strong tone has earned trust
+
+The forward atlas, [Troubleshooting Atlas](../wfgy-ai-problem-map-troubleshooting-atlas.md), helps answer:
 
 **where is the failure likely located?**
 
-Inverse Atlas helps the system ask:
+Inverse Atlas answers the second question:
 
 **has the system actually earned the right to resolve this yet?**
 
-Put together, those two questions make the whole family much stronger.
+Put together, those two questions create a much stronger family.
 
-That is why Inverse Atlas is not a side note.
+That is why Inverse Atlas is not a side feature.
 
-It is a second product line, and a necessary step toward the larger closed-loop architecture of what comes next.
+It is a second major atlas line, and a necessary step toward a larger generation architecture that treats legitimacy as seriously as intelligence. ✨
