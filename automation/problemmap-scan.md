@@ -1,6 +1,6 @@
 # WFGY ProblemMap Scan
 
-Generated at: 2026-03-25 06:04:21 UTC
+Generated at: 2026-03-26 06:14:00 UTC
 
 ## ProblemMap files
 
@@ -692,12 +692,23 @@ ProblemMap/Infra_Boot_Problems.md
 ProblemMap/Inverse_Atlas/FAQ.md
 ProblemMap/Inverse_Atlas/README.md
 ProblemMap/Inverse_Atlas/colab.md
+ProblemMap/Inverse_Atlas/colab/.gitkeep
+ProblemMap/Inverse_Atlas/colab/Inverse_Atlas_MVP_Reproduction.ipynb
 ProblemMap/Inverse_Atlas/criticisms-and-non-goals.md
 ProblemMap/Inverse_Atlas/docs/.gitkeep
 ProblemMap/Inverse_Atlas/docs/inverse_atlas_experiment_report.html
 ProblemMap/Inverse_Atlas/dual-layer-positioning.md
 ProblemMap/Inverse_Atlas/experiments/README.md
 ProblemMap/Inverse_Atlas/experiments/case-design-and-rationale.md
+ProblemMap/Inverse_Atlas/experiments/case-studies/README.md
+ProblemMap/Inverse_Atlas/experiments/case-studies/smoke-case-01-topic-lure-exact-diagnosis.md
+ProblemMap/Inverse_Atlas/experiments/case-studies/smoke-case-02-thin-evidence-forced-confidence.md
+ProblemMap/Inverse_Atlas/experiments/case-studies/smoke-case-03-cosmetic-repair-bait.md
+ProblemMap/Inverse_Atlas/experiments/case-studies/smoke-case-04-neighboring-cut-conflict.md
+ProblemMap/Inverse_Atlas/experiments/case-studies/smoke-case-05-long-context-contamination.md
+ProblemMap/Inverse_Atlas/experiments/case-studies/smoke-case-06-illegal-resolution-demand.md
+ProblemMap/Inverse_Atlas/experiments/case-studies/smoke-case-07-false-completion-pressure.md
+ProblemMap/Inverse_Atlas/experiments/case-studies/smoke-case-08-world-alignment-instability.md
 ProblemMap/Inverse_Atlas/experiments/evidence-snapshot.md
 ProblemMap/Inverse_Atlas/experiments/phase-overview.md
 ProblemMap/Inverse_Atlas/experiments/repro-60-seconds.md
@@ -735,6 +746,7 @@ ProblemMap/Safety_Boundary_Problems.md
 ProblemMap/SemanticClinicIndex.md
 ProblemMap/Symbolic_Logic_Problems.md
 ProblemMap/Twin_Atlas/Bridge/README.md
+ProblemMap/Twin_Atlas/Bridge/twin-atlas-bridge-v1.md
 ProblemMap/Twin_Atlas/README.md
 ProblemMap/WFGY_RAG_16_Problem_Map_Global_Debug_Card.jpeg
 ProblemMap/agent-boundary-design.md
@@ -821,4 +833,4 @@ ProblemMap/wfgy-metrics.md
 ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md
 
 Total ProblemMap docs:
-815
+827
