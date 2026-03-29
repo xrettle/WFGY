@@ -6,13 +6,13 @@ This page is the FAQ entry for WFGY 4.0 Twin Atlas Engine.
 
 What this page is for:
 1. Answer the most likely questions new readers will have.
-2. Clarify product identity, architecture boundaries, and current project status.
-3. Reduce confusion between Twin Atlas, Troubleshooting Atlas, Inverse Atlas, Bridge, and runtime variants.
+2. Clarify product identity, architecture boundaries, evidence boundaries, and current project status.
+3. Reduce confusion between Twin Atlas, Troubleshooting Atlas, Inverse Atlas, Bridge, runtime, evidence, and demo surfaces.
 4. Help both vibe coders and serious engineers quickly understand what this engine is trying to do.
 
 How to use this page:
 1. Read this page after the Twin Atlas README if you want fast clarification.
-2. Use the sections below to jump to product, architecture, runtime, demos, and roadmap questions.
+2. Use the sections below to jump to product, architecture, evidence, runtime, and demo questions.
 3. Expand only the questions you care about.
 4. Treat this page as a clarification layer, not as a replacement for the formal specs.
 
@@ -23,12 +23,12 @@ It also does not claim that every future closed-loop runtime detail is already f
 
 Recommended reading path:
 1. Twin Atlas README
-2. Bridge README
-3. Demos README
-4. Runtime README
-5. This FAQ
-6. Bridge v1 Spec
-7. Demo cases
+2. Quickstart
+3. Related Documents
+4. Bridge README
+5. Runtime README
+6. Evidence Hub
+7. This FAQ
 
 AI_NOTE_END
 -->
@@ -39,13 +39,15 @@ AI_NOTE_END
 
 This page exists because Twin Atlas is not a small toy.
 
-It is a high-concept engine direction with multiple layers:
+It is a large release surface with multiple connected layers:
 
 - Forward Atlas
 - Bridge
 - Inverse Atlas
-- runtime variants
+- runtime surfaces
+- evidence surfaces
 - demo surfaces
+- raw experiment assets
 - future coupling work
 
 That means readers will naturally have a lot of questions.
@@ -59,14 +61,26 @@ This page is here to reduce confusion early.
 | Section | Link |
 |---|---|
 | Twin Atlas Home | [Twin Atlas](./README.md) |
+| Quickstart | [Quickstart](./quickstart.md) |
+| Related Documents | [Related Documents](./related-documents.md) |
+| Status and Boundaries | [Status and Boundaries](./status-and-boundaries.md) |
 | Bridge Home | [Bridge README](./Bridge/README.md) |
-| Bridge v1 Spec | [Bridge v1 Spec](./Bridge/bridge-v1-spec.md) |
-| Bridge Examples | [Bridge v1 Examples](./Bridge/bridge-v1-examples.md) |
-| Demos Home | [Demos README](./demos/README.md) |
+| Why Bridge Exists | [Why Bridge Exists](./Bridge/why-bridge-exists.md) |
 | Runtime Home | [Runtime README](./runtime/README.md) |
-| Basic Runtime | [Twin Atlas Basic](./runtime/twin-atlas-basic.txt) |
-| Advanced Runtime | [Twin Atlas Advanced](./runtime/twin-atlas-advanced.txt) |
-| Strict Runtime | [Twin Atlas Strict](./runtime/twin-atlas-strict.txt) |
+| Runtime Constitution | [Twin Atlas Runtime Constitution](./runtime/twin-atlas-runtime-constitution.md) |
+| Inverse Governance Contract | [Inverse Governance Contract](./runtime/inverse-governance-contract.md) |
+| State Machine and Output | [State Machine and Output](./runtime/state-machine-and-output.md) |
+| Seal and Audit | [Seal and Audit](./runtime/seal-and-audit.md) |
+| Evidence Hub | [Evidence Hub](./evidence/README.md) |
+| Results Summary | [Results Summary](./evidence/results-summary.md) |
+| Governance Stress Suite | [Governance Stress Suite](./evidence/governance-stress-suite.md) |
+| Basic Repro Demo | [Basic Repro Demo](./evidence/basic-repro-demo.md) |
+| Advanced Clean Protocol | [Advanced Clean Protocol](./evidence/advanced-clean-protocol.md) |
+| Flagship Cases | [Flagship Cases](./evidence/flagship-cases.md) |
+| Methodology Boundary | [Methodology Boundary](./evidence/methodology-boundary.md) |
+| Raw Runs | [Raw Runs](./evidence/raw-runs/) |
+| Figures | [Figures README](./figures/README.md) |
+| Demos | [Demos README](./demos/README.md) |
 | Forward Atlas | [Problem Map 3.0 Troubleshooting Atlas](../wfgy-ai-problem-map-troubleshooting-atlas.md) |
 | Inverse Atlas Home | [Inverse Atlas README](../Inverse_Atlas/README.md) |
 
@@ -133,7 +147,8 @@ This page is here to reduce confusion early.
 > - authorization discipline
 > - repair discipline
 > - handoff discipline
-> - runtime variants
+> - runtime structure
+> - evidence structure
 > - demo proof surfaces
 >
 > That is engine-like behavior, not just wording decoration.
@@ -162,7 +177,7 @@ This page is here to reduce confusion early.
 
 > Not primarily.
 >
-> You can still use lighter runtime forms in casual situations.
+> You can still understand the architecture in lighter ways.
 >
 > But Twin Atlas becomes most valuable when:
 >
@@ -354,23 +369,6 @@ This page is here to reduce confusion early.
 </details>
 
 <details>
-<summary>❓ What does Twin Atlas do better than normal prompting?</summary>
-
-> At its best, Twin Atlas improves:
->
-> - first-cut quality
-> - ambiguity handling
-> - evidence boundary discipline
-> - repair discipline
-> - visible answer lawfulness
->
-> Normal prompting often optimizes for answer flow.
->
-> Twin Atlas is trying to optimize for answer lawfulness under structural ambiguity.
-
-</details>
-
-<details>
 <summary>❓ Why do you keep saying “lawful” instead of just “careful”?</summary>
 
 > Because “careful” is too vague.
@@ -419,9 +417,8 @@ This page is here to reduce confusion early.
 > What is already present is:
 >
 > - a clear architectural role
-> - a formal v1 specification
-> - example mappings
-> - evaluation notes
+> - a formal v1 direction
+> - examples and notes
 > - a strong design target for future implementation
 >
 > So Bridge is already real at the specification layer, but not yet fully complete at every future runtime detail.
@@ -429,9 +426,9 @@ This page is here to reduce confusion early.
 </details>
 
 <details>
-<summary>❓ What is Bridge v1 supposed to do right now?</summary>
+<summary>❓ What is Bridge supposed to do right now?</summary>
 
-> Bridge v1 is supposed to be a disciplined advisory-only coupling layer.
+> Bridge is supposed to be a disciplined advisory-only coupling layer.
 >
 > It should:
 >
@@ -446,9 +443,9 @@ This page is here to reduce confusion early.
 </details>
 
 <details>
-<summary>❓ What is Bridge v1 not allowed to do?</summary>
+<summary>❓ What is Bridge not allowed to do?</summary>
 
-> Bridge v1 should not:
+> Bridge should not:
 >
 > - authorize stronger visible output
 > - finalize route truth
@@ -509,7 +506,117 @@ This page is here to reduce confusion early.
 
 ---
 
-# 🎭 Section 5 · Demo Questions
+# 🧪 Section 5 · Evidence Questions
+
+<details>
+<summary>❓ Is WFGY 4.0 evidence meant to be a universal benchmark?</summary>
+
+> No.
+>
+> The current evidence layer is best understood as:
+>
+> - a reproducible governance stress demo
+> - a targeted governance stress surface
+>
+> It is not claiming universal benchmark dominance across all tasks and all domains.
+>
+> Its target is narrower and more specific:
+>
+> whether a model overcommits beyond what the evidence has actually earned under pressure.
+
+</details>
+
+<details>
+<summary>❓ What is the evidence layer actually trying to show?</summary>
+
+> The evidence layer is trying to show that:
+>
+> - baseline systems often overcommit under forced-choice pressure
+> - WFGY 4.0 can pull the output back toward a more lawful release level
+>
+> In practical terms, that usually means:
+>
+> - less illegal commitment
+> - less evidence-boundary violation
+> - less fake closure
+> - more lawful downgrade
+
+</details>
+
+<details>
+<summary>❓ Why are raw runs public?</summary>
+
+> Because transparency matters.
+>
+> The raw TXT files are there as:
+>
+> - raw experiment records
+> - model-specific traces
+> - prompt-visible assets
+> - reproducibility helpers
+>
+> They are not being presented as universal proof by themselves.
+>
+> The healthiest reading posture is:
+>
+> summary first, raw runs visible, rerun encouraged.
+
+</details>
+
+<details>
+<summary>❓ Do all models react to WFGY 4.0 in exactly the same way?</summary>
+
+> No.
+>
+> Many visible runs point in the same general direction:
+>
+> - less overcommitment
+> - more lawful downgrade
+>
+> But that does not mean every model family internalizes the governance layer in exactly the same way.
+>
+> Outliers matter, and they should be read honestly.
+
+</details>
+
+<details>
+<summary>❓ What is the strongest fair public claim right now?</summary>
+
+> The strongest safe public claim is:
+>
+> WFGY 4.0 provides a reproducible governance stress surface showing that many baseline assistants overcommit under pressure, while WFGY 4.0 tends to push outputs back toward more lawful downgrade, ambiguity preservation, and ceiling-respecting release.
+>
+> That is already a strong claim.
+>
+> It does not need inflation.
+
+</details>
+
+<details>
+<summary>❓ Why does the project need both Basic Repro Demo and Advanced Clean Protocol?</summary>
+
+> Because they solve different problems.
+>
+> Basic Repro Demo is for:
+>
+> - speed
+> - screenshots
+> - first-contact public understanding
+>
+> Advanced Clean Protocol is for:
+>
+> - cleaner separation
+> - lower contamination criticism
+> - stronger reviewer confidence
+> - a harder-to-dismiss protocol posture
+>
+> They are complementary, not redundant.
+
+</details>
+
+---
+
+# 🎭 Section 6 · Demo Questions
 
 <details>
 <summary>❓ Why is there a whole demos folder?</summary>
@@ -522,37 +629,40 @@ This page is here to reduce confusion early.
 >
 > Not just in release notes.
 >
-> The demo layer is the proof surface.
+> The demo layer is the public proof surface.
 
 </details>
 
 <details>
-<summary>❓ What is the killer demo trying to show?</summary>
+<summary>❓ What is the demo layer trying to show?</summary>
 
-> The killer demo is trying to show that Twin Atlas is not just a different writing style.
+> It is trying to show that Twin Atlas is not just a different writing style.
 >
-> It should show that Twin Atlas is better at:
+> A good demo should make visible:
 >
-> - route discipline
-> - authorization discipline
-> - repair discipline
+> - better route discipline
+> - better authorization discipline
+> - better repair discipline
 >
 > especially in realistic hard cases where a baseline naturally overcommits.
 
 </details>
 
 <details>
-<summary>❓ Why was the first case chosen as thin-evidence F5 vs F6?</summary>
+<summary>❓ Is the demo layer the same thing as the full evidence layer?</summary>
 
-> Because it is realistic and highly legible.
+> No.
 >
-> It creates a strong trap:
+> The demo layer is the public-facing visible proof surface.
 >
-> - dramatic wording tempts the system toward a stronger boundary-like read
-> - trace visibility is still incomplete
-> - the wrong-first-fix is expensive
+> The broader evidence layer also includes:
 >
-> That makes the contrast easy to understand.
+> - results summary
+> - governance stress suite
+> - methodology boundary
+> - raw runs
+>
+> So demos are one important part of evidence, but not the whole evidence stack.
 
 </details>
 
@@ -597,7 +707,7 @@ This page is here to reduce confusion early.
 
 ---
 
-# ⚙️ Section 6 · Runtime Questions
+# ⚙️ Section 7 · Runtime Questions
 
 <details>
 <summary>❓ What is the runtime folder for?</summary>
@@ -609,96 +719,84 @@ This page is here to reduce confusion early.
 </details>
 
 <details>
-<summary>❓ Why are there three runtime variants?</summary>
+<summary>❓ Why is runtime not the same thing as the hidden substrate?</summary>
 
-> Because one intensity does not fit every case.
+> Because the runtime layer is part of the public effective layer.
 >
-> The current public runtime surface is divided into:
->
-> - basic
-> - advanced
-> - strict
->
-> This makes the engine more usable across different difficulty and risk levels.
+> It is meant to be usable and inspectable without exposing the hidden internal reasoning substrate directly.
 
 </details>
 
 <details>
-<summary>❓ What is Basic for?</summary>
+<summary>❓ What is the runtime constitution for?</summary>
 
-> Basic is the lowest-friction entry form.
+> The runtime constitution is the public engine skeleton.
 >
-> It is best for:
+> It shows:
 >
-> - first contact
-> - lighter hard reasoning
-> - debugging first pass
-> - lower-friction use
+> - the major runtime layers
+> - their role boundaries
+> - how information should move
+> - how output stays below unsupported strength
+> - how the system avoids silent upgrade and collapse
 >
-> It preserves the Twin Atlas flavor, but does not push the heaviest governance.
-
-</details>
-
-<details>
-<summary>❓ What is Advanced for?</summary>
-
-> Advanced is the main working mode.
->
-> It is best for:
->
-> - serious debugging
-> - RAG diagnosis
-> - workflow analysis
-> - ambiguity-heavy reasoning
-> - normal difficult cases where wrong-first-fix matters
->
-> If someone asks “what is the real day-to-day mode,” the answer is usually Advanced.
+> It is where Twin Atlas starts looking like a governed engine rather than only an idea.
 
 </details>
 
 <details>
-<summary>❓ What is Strict for?</summary>
+<summary>❓ What is the Inverse Governance Contract for?</summary>
 
-> Strict is the highest-governance public form.
+> It explains the legitimacy-first side in practical runtime form.
 >
-> It is best for:
+> That includes:
 >
-> - thin-evidence cases
-> - research-heavy reasoning
-> - scientific interpretation
-> - high-risk downstream actions
-> - emotionally pressuring users
-> - cases where unsupported detail is expensive
+> - authorization
+> - repair legality
+> - ceiling discipline
+> - downgrade logic
+> - restart logic
 >
-> Strict is where Twin Atlas most clearly refuses fake closure.
-
-</details>
-
-<details>
-<summary>❓ Does the runtime layer expose the hidden internal substrate?</summary>
-
-> No.
->
-> The runtime files are part of the public effective layer.
->
-> They are meant to be usable without exposing the hidden internal reasoning substrate directly.
+> In simple terms, it governs how much answer has actually been earned.
 
 </details>
 
 <details>
-<summary>❓ Does the runtime layer mean the full closed loop is already finished?</summary>
+<summary>❓ What is the State Machine and Output page for?</summary>
 
-> No.
+> It explains how Twin Atlas behaves as a governed runtime.
 >
-> The runtime layer means the architecture is becoming usable.
+> It separates:
 >
-> It does not mean every future operational detail is already finalized.
+> - route-fit
+> - authorization
+> - repair-legality
+> - final output discipline
+>
+> That separation matters because those things should not collapse into one vague “reasoning state.”
+
+</details>
+
+<details>
+<summary>❓ What is Seal and Audit for?</summary>
+
+> Seal and Audit is the anti-self-deception layer.
+>
+> It protects the system from:
+>
+> - silent upgrade
+> - overclaim
+> - lazy compression
+> - layer collapse
+> - prettier wording pretending to be stronger legitimacy
+>
+> It is part of the engine, not decorative cleanup.
 
 </details>
 
 ---
 
-# 🧠 Section 7 · Product Strategy and Roadmap
+# 🧠 Section 8 · Product Strategy and Roadmap
 
 <details>
 <summary>❓ What is already finished enough to talk about publicly?</summary>
@@ -707,9 +805,10 @@ This page is here to reduce confusion early.
 >
 > - Twin Atlas has a clear identity
 > - its architecture is already meaningful
-> - Bridge has a formal v1 direction
-> - the demo layer is already a visible proof surface
+> - Bridge has a real public role
 > - the runtime layer already has a usable public shape
+> - the evidence layer already has a real public surface
+> - the demo layer already serves as visible proof
 >
 > These are strong claims, but still disciplined.
 
@@ -723,7 +822,7 @@ This page is here to reduce confusion early.
 > - every Bridge runtime detail is already complete
 > - every future de-escalation path is already finalized
 > - the full closed-loop engine is already fully finished in every technical sense
-> - one demo proves universal superiority in every environment
+> - the evidence layer already proves universal superiority in every environment
 >
 > The architecture is already real.
 >
@@ -740,11 +839,11 @@ This page is here to reduce confusion early.
 >
 > - a product identity
 > - architecture docs
-> - Bridge specs
-> - example mappings
-> - demo specs
-> - case files
+> - Bridge docs
 > - runtime entry surfaces
+> - evidence surfaces
+> - raw run assets
+> - demo surfaces
 >
 > So this is much closer to build mode than pure concept mode.
 
@@ -753,14 +852,19 @@ This page is here to reduce confusion early.
 <details>
 <summary>❓ What is the next big step after the public pages are filled in?</summary>
 
-> The next big step is moving deeper into actual coupling work.
+> The next big step is moving deeper into:
 >
-> That means:
+> - stronger coupling work
+> - more implementation-facing structure
+> - stronger runtime handoff
+> - better figure surfaces
+> - cleaner advanced evaluation loops
 >
-> - turning Bridge behavior into more implementation-facing structure
-> - tightening runtime handoff
-> - using demo cases as implementation targets
-> - evolving the public runtime surface into stronger operational behavior
+> In short:
+>
+> the next step is not inventing a new identity.
+>
+> It is deepening the current engine direction.
 
 </details>
 
@@ -771,7 +875,7 @@ This page is here to reduce confusion early.
 >
 > There is a difference between:
 >
-> - MVP engine architecture
+> - MVP release surface
 > - implementation-facing coupling design
 > - deeper formalization
 > - full higher-order mathematical packaging
@@ -795,7 +899,7 @@ This page is here to reduce confusion early.
 
 ---
 
-# 💻 Section 8 · Vibe Coder and Engineer Questions
+# 💻 Section 9 · Vibe Coder and Engineer Questions
 
 <details>
 <summary>❓ Why would a vibe coder care about this instead of just asking the model normally?</summary>
@@ -851,7 +955,7 @@ This page is here to reduce confusion early.
 >
 > It is not a benchmark replacement.
 >
-> It is an architecture and runtime discipline layer.
+> It is an architecture, governance, and runtime discipline layer.
 >
 > Benchmarks can still matter.
 >
@@ -879,7 +983,7 @@ This page is here to reduce confusion early.
 
 ---
 
-# 🚀 Section 9 · Practical Use Questions
+# 🚀 Section 10 · Practical Use Questions
 
 <details>
 <summary>❓ What should I read first if I only have 5 minutes?</summary>
@@ -887,10 +991,10 @@ This page is here to reduce confusion early.
 > Read in this order:
 >
 > 1. Twin Atlas README  
-> 2. Demos README  
-> 3. Case 01  
-> 4. Runtime README  
-> 5. the runtime variant you want
+> 2. Quickstart  
+> 3. Results Summary  
+> 4. Bridge README  
+> 5. Runtime README
 >
 > That is the shortest useful path.
 
@@ -902,10 +1006,11 @@ This page is here to reduce confusion early.
 > Read in this order:
 >
 > 1. Twin Atlas README  
-> 2. Bridge README  
-> 3. Bridge v1 Spec  
-> 4. Bridge Examples  
-> 5. Runtime README
+> 2. Related Documents  
+> 3. Bridge README  
+> 4. Why Bridge Exists  
+> 5. Runtime README  
+> 6. Runtime Constitution
 
 </details>
 
@@ -914,25 +1019,31 @@ This page is here to reduce confusion early.
 
 > Read in this order:
 >
-> 1. Demos README  
-> 2. Killer Demo Spec  
-> 3. Case 01  
-> 4. Baseline vs Twin Atlas Table  
-> 5. Evaluator Notes
+> 1. Evidence Hub  
+> 2. Results Summary  
+> 3. Flagship Cases  
+> 4. Basic Repro Demo  
+> 5. Advanced Clean Protocol
 
 </details>
 
 <details>
 <summary>❓ What should I read first if I want to try it immediately?</summary>
 
-> Read:
+> Start here:
 >
-> 1. Runtime README  
-> 2. `twin-atlas-basic.txt`
+> 1. Quickstart  
+> 2. Runtime README  
+> 3. Evidence Hub  
 >
-> Then try a real case.
+> Then choose whether you want:
 >
-> If the case is more costly or ambiguous, move upward to Advanced or Strict.
+> - route-first reading
+> - governance-first reading
+> - runtime-first reading
+> - evidence-first reading
+>
+> That is the healthiest first adoption posture right now.
 
 </details>
 
@@ -941,11 +1052,12 @@ This page is here to reduce confusion early.
 
 > A simple path is:
 >
-> - start with Basic
-> - move to Advanced for serious cases
-> - move to Strict when the cost of being wrong confidently is high
+> - start with the main README
+> - use Quickstart to choose your path
+> - use Results Summary to understand the evidence quickly
+> - move into runtime and Bridge once the main idea clicks
 >
-> That gives you a clean adoption ladder.
+> That gives you a cleaner adoption ladder than trying to read everything at once.
 
 </details>
 
