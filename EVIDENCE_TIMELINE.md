@@ -319,18 +319,6 @@ Public ecosystem milestone
 By this point, the pattern is harder to dismiss as an isolated one-off.  
 The same wedge is being adapted across multiple public stacks.
 
-### 2026/03/01 · FlashRAG reinforces cross-stack reuse
-
-**Track**  
-Public ecosystem milestone
-
-**What became public**  
-[FlashRAG PR #224](https://github.com/RUC-NLPIR/FlashRAG/pull/224) merged a public debug checklist and failure-mode-oriented surface.
-
-**Why this matters**  
-By this point, the pattern is harder to dismiss as an isolated one-off.  
-The same wedge is being adapted across multiple public stacks.
-
 ### 2026/03/04 · LightAgent extends the signal into multi-agent territory
 
 **Track**  
@@ -406,6 +394,34 @@ It suggests that WFGY-style structured troubleshooting ideas were legible enough
 This is weaker evidence than a direct named integration.  
 But it is still meaningful as a public ecosystem signal because it shows concept-level adoption in a large and highly visible repository.
 
+### 2026/03/30 · Open-source support surface becomes publicly legible
+
+**Track**  
+Packaging milestone
+
+**What became public**  
+WFGY publicly exposed a distinct open-source support surface across its proof-facing pages and homepage trust wall, making program-level support and infrastructure backing visible in one place.
+
+The visible support surface now includes:
+
+* GitLab
+* Snyk
+* Sentry
+* 1Password
+* DigitalOcean
+* Algolia
+
+**Why this matters**  
+This does **not** mean these providers adopted the full WFGY stack, deployed it in production, or should be read as public adoption proof.
+
+What it does mean is that WFGY crossed an important legibility threshold.  
+Outside observers can now see that the project is not only accumulating integrations and citations, but is also receiving a recognizable layer of open-source program support, sponsored access, and infrastructure backing.
+
+This matters because it strengthens the external trust surface of the project without collapsing the boundary between **support** and **adoption**.
+
+**Related layer**  
+This milestone should be read together with the trust surface shown in [ADOPTERS](./ADOPTERS.md), the broader ledger in [Recognition Map](./recognition/README.md), and the homepage packaging in [README](./README.md).
+
 [Back to top](#top)
 
 ---
@@ -430,7 +446,7 @@ At the same time, this timeline also shows that WFGY is broader than that wedge 
 The wider stack has been built in parallel, even if public proof is currently strongest on the diagnostic side.
 
 It also shows that external legibility now spans more than one channel.  
-The signal appears through direct documentation integration, tool wrapping, academic references, curated list inclusion, and concept-level troubleshooting adoption.
+The signal appears through direct documentation integration, tool wrapping, academic references, curated list inclusion, concept-level troubleshooting adoption, and a now-visible open-source support surface.
 
 ## Safest reading
 
@@ -441,6 +457,7 @@ The safest disciplined reading today is:
 * the system became practical through the Problem Map line
 * the strongest public adoption signal still clusters around diagnostic and debugging use
 * the broader WFGY stack is larger than that single wedge, but public proof is currently strongest there
+* open-source support is now publicly legible, but should not be confused with adoption
 * the timeline shows continuity, structure, and increasing external legibility, but should not be exaggerated into universal adoption claims
 
 ---
@@ -485,5 +502,5 @@ Structure and reference:
 
 ---
 
-Last updated: 2026/03/15  
+Last updated: 2026/03/30  
 Maintained manually.
