@@ -2,30 +2,32 @@
 AI_NOTE_START
 
 Document role:
-This page is the public AI evaluation surface for WFGY 4.0 Twin Atlas Engine.
+This page is the public screenshot-first AI evaluation surface for WFGY 4.0 Twin Atlas Engine.
 
 What this page is for:
-1. Give first-time readers a screenshot-first entry into the current public evidence layer.
-2. Show how different model families visibly change under the same governance stress surface.
-3. Connect screenshots to raw runs, results summary, and the rerun path.
-4. Make the public proof layer easy to inspect without forcing readers into the full architecture first.
+1. Give first-time readers the fastest visible entry into the current WFGY 4.0 public proof surface.
+2. Show how the same public governance stress surface changes visible model behavior across different model families.
+3. Connect screenshots to raw runs, results summary, and the shortest rerun path.
+4. Help readers verify that WFGY 4.0 is not being presented as theory alone.
 
 What this page is not:
-1. It is not a universal benchmark claim page.
+1. It is not a universal benchmark certification page.
 2. It is not the full experiment archive.
-3. It is not a replacement for raw runs or results summary.
-4. It is not a claim that every model behaves identically under WFGY 4.0.
+3. It is not a replacement for raw runs.
+4. It is not a replacement for results summary.
+5. It is not a claim that every model behaves identically under WFGY 4.0.
 
 Reading strategy:
-1. Scan the opening summary first.
-2. Use the screenshot gallery as the first-contact layer.
-3. Open raw runs if you want the original model wording.
-4. Open Reproduce in 60 Seconds if you want to rerun the same public surface yourself.
+1. Read the opening summary first.
+2. Use the gallery as the first-contact layer.
+3. Open raw runs if you want original output wording.
+4. Open Results Summary if you want the aggregate interpretation.
+5. Open Reproduce in 60 Seconds if you want to test the same public surface yourself.
 
 Important boundary:
 This page is a public proof surface for a custom governance stress demo.
-It is designed to be inspectable and reproducible.
-It is not a universal benchmark certification page.
+It is designed to be visible, inspectable, and reproducible.
+It is not a universal benchmark claim page.
 
 AI_NOTE_END
 -->
@@ -44,11 +46,9 @@ The current AI Eval surface is built around a narrower but very important questi
 
 This is not a universal benchmark page.
 
-It is a visible comparison layer built around the current public WFGY 4.0 governance stress surface.
+It is a public comparison surface for the current WFGY 4.0 governance stress demo.
 
----
-
-## 🧭 How to read this page
+## What you should look for
 
 A good rerun is not just one where the AFTER answer looks more careful.
 
@@ -66,140 +66,135 @@ The right reading lens is:
 **not softer vs louder**  
 **but more lawful vs more premature**
 
----
+## Why this page matters
 
-## 📌 What this page is showing
+The current WFGY 4.0 public surface already includes:
 
-The screenshots on this page are drawn from the same public release surface:
+- a public Twin Atlas runtime TXT
+- a public governance stress suite TXT
+- screenshot comparisons across the current public model set
+- model-specific raw runs
+- a results-summary layer
+- deeper flagship evidence pages
 
-- the public Twin Atlas runtime TXT
-- the public governance stress suite TXT
-- model-specific public runs
-- the current screenshot layer
-- the current results-summary layer
-
-That means this page should be read as a visible proof surface, not as a one-off visual anecdote.
+That means this page should be read as a visible proof surface, not as a one-off screenshot wall.
 
 If you want the aggregate read, go to [Results Summary](../evidence/results-summary.md).  
 If you want the original outputs, go to [Raw Runs](../evidence/raw-runs/).  
-If you want to test the same public surface yourself, go to [Reproduce in 60 Seconds](./reproduce-in-60-seconds.md).
+If you want to run the same public surface yourself, go to [Reproduce in 60 Seconds](./reproduce-in-60-seconds.md).
 
----
-
-## 🖼️ Current Public Gallery
+## Current Public Gallery
 
 ### ChatGPT
 
-**Why it matters:**  
-A strong public example of visible lawful downgrade without collapsing into a blanket stop system.
+**Why it matters**  
+A strong public example of lawful downgrade without collapsing into a blanket stop system.
 
-**Use this if you want to see:**  
-How a strong default assistant shifts from premature closure toward authorization-aware restraint.
+**Best first use**  
+Open this if you want to see how a strong default assistant shifts from premature closure toward authorization-aware restraint.
 
-- [View raw run](../evidence/raw-runs/chatgpt.txt)
-- [Open screenshot](./screenshots/chatgpt_before-after.png)
+- [Raw run](../evidence/raw-runs/chatgpt.txt)
+- [Screenshot](./screenshots/chatgpt_before-after.png)
 
 ---
 
 ### Claude
 
-**Why it matters:**  
-One of the clearest public examples of ambiguity preservation and conflict-preserving output under pressure.
+**Why it matters**  
+One of the clearest public examples of ambiguity preservation and conflict-sensitive restraint under pressure.
 
-**Use this if you want to see:**  
-How WFGY 4.0 resists collapsing mixed evidence into one over-confident narrative.
+**Best first use**  
+Open this if you want to see how WFGY 4.0 resists collapsing mixed evidence into one over-confident narrative.
 
-- [View raw run](../evidence/raw-runs/claude.txt)
-- [Open screenshot](./screenshots/claude_before-after.png)
+- [Raw run](../evidence/raw-runs/claude.txt)
+- [Screenshot](./screenshots/claude_before-after.png)
 
 ---
 
 ### Gemini
 
-**Why it matters:**  
+**Why it matters**  
 A strong example of downgrade discipline under thin evidence and forced-choice pressure.
 
-**Use this if you want to see:**  
-How a model stops treating pressure as permission to conclude.
+**Best first use**  
+Open this if you want to see how a model stops treating pressure as permission to conclude.
 
-- [View raw run](../evidence/raw-runs/gemini.txt)
-- [Open screenshot](./screenshots/gemini_before-after.png)
+- [Raw run](../evidence/raw-runs/gemini.txt)
+- [Screenshot](./screenshots/gemini_before-after.png)
 
 ---
 
 ### Grok
 
-**Why it matters:**  
+**Why it matters**  
 A useful public comparison point for attribution pressure, authenticity pressure, and over-commitment control.
 
-**Use this if you want to see:**  
-How visible output strength changes when route and authorization are no longer allowed to collapse.
+**Best first use**  
+Open this if you want to see how visible output strength changes when route and authorization are no longer allowed to collapse.
 
-- [View raw run](../evidence/raw-runs/grok.txt)
-- [Open screenshot](./screenshots/grok_before-after.png)
+- [Raw run](../evidence/raw-runs/grok.txt)
+- [Screenshot](./screenshots/grok_before-after.png)
 
 ---
 
 ### DeepSeek
 
-**Why it matters:**  
+**Why it matters**  
 A clear public case for stronger evidence-boundary discipline and attribution restraint.
 
-**Use this if you want to see:**  
-How the same cases change when the model is no longer allowed to turn circumstantial pressure into hard public naming.
+**Best first use**  
+Open this if you want to see how the same cases change when the model is no longer allowed to turn circumstantial pressure into hard public naming.
 
-- [View raw run](../evidence/raw-runs/deepseek.txt)
-- [Open screenshot](./screenshots/deepseek_before-after.png)
+- [Raw run](../evidence/raw-runs/deepseek.txt)
+- [Screenshot](./screenshots/deepseek_before-after.png)
 
 ---
 
 ### Kimi
 
-**Why it matters:**  
-A strong before / after separation in several pressure-heavy business and evidence-chain cases.
+**Why it matters**  
+A strong before-after separation in several pressure-heavy business and evidence-chain cases.
 
-**Use this if you want to see:**  
-How governance framing changes the output shape in a way that is easy to inspect from screenshots first.
+**Best first use**  
+Open this if you want to inspect a screenshot layer where the governance shift is easy to see quickly.
 
-- [View raw run](../evidence/raw-runs/kimi.txt)
-- [Open screenshot](./screenshots/kimi_before-after.png)
+- [Raw run](../evidence/raw-runs/kimi.txt)
+- [Screenshot](./screenshots/kimi_before-after.png)
 
 ---
 
 ### Mistral
 
-**Why it matters:**  
+**Why it matters**  
 A useful comparison point for visible output-strength reduction under the same stress surface.
 
-**Use this if you want to see:**  
-How governance discipline alters the public answer profile even when the model family differs.
+**Best first use**  
+Open this if you want to compare how governance discipline changes the public answer profile across model families.
 
-- [View raw run](../evidence/raw-runs/mistral.txt)
-- [Open screenshot](./screenshots/mistral_before-after.png)
+- [Raw run](../evidence/raw-runs/mistral.txt)
+- [Screenshot](./screenshots/mistral_before-after.png)
 
 ---
 
 ### Perplexity
 
-**Why it matters:**  
+**Why it matters**  
 An important public outlier.
 
-**Use this if you want to see:**  
-Why this page is a proof surface instead of a polished promo wall. This run is useful precisely because it makes over-downgrade and blanket-refusal drift inspectable rather than hidden.
+**Best first use**  
+Open this if you want to see why this page is a proof surface instead of a polished promo wall. This run is useful precisely because it makes over-downgrade and blanket-refusal drift inspectable rather than hidden.
 
-- [View raw run](../evidence/raw-runs/perplexity.txt)
-- [Open screenshot](./screenshots/perplexity_before-after.png)
+- [Raw run](../evidence/raw-runs/perplexity.txt)
+- [Screenshot](./screenshots/perplexity_before-after.png)
 
----
+## What changed most across the current public screenshot layer
 
-## 🔍 What changed most across the public screenshot layer
-
-Across the current public runs, the most consistent visible shift is not “the answer got nicer.”
+Across the current public runs, the most consistent visible shift is not that the AFTER answer becomes “nicer.”
 
 The more important shift is that the AFTER pass becomes less willing to:
 
 - convert a plausible route into an authorized conclusion
-- treat appearance as if it were proof
+- treat appearance as if it were already proof
 - erase live ambiguity just to satisfy pressure
 - compress multi-factor situations into one exact cause
 - speak above the lawful output ceiling just because the user demanded it
@@ -210,9 +205,7 @@ It is not here to prove that every model became perfect.
 
 It is here to show that the current public WFGY 4.0 surface produces a visible governance shift that readers can inspect for themselves.
 
----
-
-## 🧪 Want to run the same public surface yourself
+## Want to run the same public surface yourself
 
 Use these two files:
 
@@ -223,9 +216,19 @@ Then follow:
 
 - [Reproduce in 60 Seconds](./reproduce-in-60-seconds.md)
 
----
+## Important boundary
 
-## 🧭 Where to go next
+This page is useful because it is visible, repeatable, and easy to inspect.
+
+It does **not** by itself prove universal superiority in every domain, every workflow, or every deployment environment.
+
+For broader interpretation, use:
+
+- [Results Summary](../evidence/results-summary.md)
+- [Governance Stress Suite](../evidence/governance-stress-suite.md)
+- [Flagship Cases](../evidence/flagship-cases.md)
+
+## Where to go next
 
 ### If you want the aggregate interpretation
 - [Results Summary](../evidence/results-summary.md)
