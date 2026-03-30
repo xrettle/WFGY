@@ -2,19 +2,21 @@
 AI NOTE · ADOPTERS
 
 Purpose:
-- This page is the short public adoption summary for WFGY.
-- It is meant for evaluators, collaborators, and first-time visitors who want the strongest public evidence first.
-- This page is intentionally shorter than the full recognition log.
+* This page is the short public adoption summary for WFGY.
+* It is meant for evaluators, collaborators, and first-time visitors who want the strongest public evidence first.
+* This page is intentionally shorter than the full recognition log.
 
 How to read this page:
-- The entries below are the strongest current public examples of WFGY adoption, integration, or research-facing reuse.
-- Most public adoption today points to the WFGY ProblemMap / 16-problem failure checklist line.
-- For the full and continuously maintained ecosystem record, go to recognition/README.md.
+* The entries below are the strongest current public examples of WFGY adoption, integration, or research-facing reuse.
+* Most public adoption today points to the WFGY ProblemMap / 16-problem failure checklist line.
+* For the full and continuously maintained ecosystem record, go to recognition/README.md.
 
 Important boundary:
-- This is not a customer logo page.
-- This does not claim that every listed project uses the full WFGY ecosystem.
-- This page is a short summary layer, not the canonical source-of-truth ledger.
+* This is not a customer logo page.
+* This is not an enterprise logo page.
+* This does not claim that every listed project uses the full WFGY ecosystem.
+* Open-source program support, sponsored plans, and infrastructure credits are a separate signal from public adoption.
+* This page is a short summary layer, not the canonical source-of-truth ledger.
 -->
 
 # ADOPTERS
@@ -29,17 +31,30 @@ At the current stage, the clearest public adoption is concentrated around the **
 
 For the full and continuously maintained recognition log, see:
 
-- [WFGY Recognition Map](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)
+* [WFGY Recognition Map](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)
+
+## Open-source support surface
+
+> Separate from adoption evidence, WFGY is also supported through selected open-source programs, sponsored plans, and infrastructure credits.
+
+<p align="center">
+  <img width="1536" alt="WFGY Trust Wall" src="https://github.com/user-attachments/assets/28e47e15-e287-4e7b-b0f5-4f3b4dfed178" />
+</p>
+
+> This support surface should not be read as the same thing as adoption.  
+> It is a parallel trust signal, not a substitute for the adoption evidence below.
+
+---
 
 ## Strongest current public adoption examples
 
 These are the strongest public examples because they involve one or more of the following:
 
-- merged documentation integrations
-- direct tool wrapping
-- official troubleshooting references
-- research-facing citation or adaptation
-- structured reuse of the WFGY ProblemMap
+* merged documentation integrations
+* direct tool wrapping
+* official troubleshooting references
+* research-facing citation or adaptation
+* structured reuse of the WFGY ProblemMap
 
 | Project | Stars | Segment | How it uses WFGY ProblemMap | Proof (PR / doc) |
 | --- | --- | --- | --- | --- |
@@ -57,19 +72,21 @@ These are the strongest public examples because they involve one or more of the 
 
 The safest reading is:
 
-- WFGY already has real public ecosystem traction
-- the strongest traction today is around the **ProblemMap** line
-- WFGY is most visible as a **diagnostic and debugging layer** for RAG and agent systems
-- this is stronger than a purely theoretical project, but should **not** be exaggerated into full enterprise-adoption claims
+* WFGY already has real public ecosystem traction
+* the strongest traction today is around the **ProblemMap** line
+* WFGY is most visible as a **diagnostic and debugging layer** for RAG and agent systems
+* open-source program support is real, but it is a separate signal from adoption
+* this is stronger than a purely theoretical project, but should **not** be exaggerated into full enterprise-adoption claims
 
 ## What this page does not claim
 
 This page does not claim that:
 
-- every listed project is a paid customer
-- every listed project uses the full WFGY ecosystem
-- every listed project has deployed WFGY in production
-- every public reference implies endorsement of all WFGY directions
+* every listed project is a paid customer
+* every listed project uses the full WFGY ecosystem
+* every listed project has deployed WFGY in production
+* every public reference implies endorsement of all WFGY directions
+* every support logo implies adoption of the WFGY stack
 
 This page is intentionally narrow: it shows the strongest public adoption evidence first.
 
@@ -77,12 +94,17 @@ This page is intentionally narrow: it shows the strongest public adoption eviden
 
 For the full, continuously maintained ecosystem record, including broader curated lists, discussions, and weaker-but-still-useful public mentions, go to:
 
-- [WFGY Recognition Map](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)
+* [WFGY Recognition Map](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)
 
-## Related pages
+<details>
+<summary><strong> Related pages </strong></summary>
 
-- [WFGY main repository](https://github.com/onestardao/WFGY)
-- [WFGY Recognition Map](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)
-- [RAG 16 Problem Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
-- [Global Debug Card](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md)
-- [Work with WFGY](https://github.com/onestardao/WFGY/blob/main/WORK_WITH_WFGY.md)
+<br/>
+
+* [WFGY main repository](https://github.com/onestardao/WFGY)
+* [WFGY Recognition Map](https://github.com/onestardao/WFGY/blob/main/recognition/README.md)
+* [RAG 16 Problem Map](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
+* [Global Debug Card](https://github.com/onestardao/WFGY/blob/main/ProblemMap/wfgy-rag-16-problem-map-global-debug-card.md)
+* [Work with WFGY](https://github.com/onestardao/WFGY/blob/main/WORK_WITH_WFGY.md)
+
+</details>
