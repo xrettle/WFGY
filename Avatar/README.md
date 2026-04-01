@@ -19,7 +19,7 @@ It does not claim universal final closure across all routes, all languages, or a
 AI_NOTE_END
 -->
 
-# 🧠 WFGY 5.0 Avatar
+# ⭐️ WFGY 5.0 Avatar ⭐️
 
 > **One runtime. Many avatars.**
 
