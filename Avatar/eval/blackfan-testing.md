@@ -404,3 +404,104 @@ If you want a simple structure for a blackfan pass, use something like this:
 
 ### Notes
 <short honest explanation of what broke first>
+````
+
+This is not a permanent universal law.
+
+It is a practical pressure-reading shape.
+
+---
+
+## What a Stronger Route Looks Like Here
+
+A stronger route under blackfan pressure usually shows some of these signs:
+
+* it stays more recognizably itself
+* it does not immediately fall into generic AI safety language
+* it does not hide behind polished slogans
+* it does not become sweeter just to survive
+* it keeps some grounding
+* it still feels reusable after the pressure pass
+* it takes the hit without becoming total noise
+
+This is not about perfection.
+
+It is about structural resilience.
+
+---
+
+## What This Page Does Not Claim
+
+This page helps pressure-test routes, but the boundary matters.
+
+It does **not** claim:
+
+* that every route must perform equally well under all hostile styles
+* that blackfan pressure is the only evaluation lens
+* that one bad pressure pass makes a route worthless forever
+* that all future blackfan cases are already publicly documented
+* that pressure testing fully replaces normal route inspection
+* that Avatar is already fully hardened against every hostile condition
+
+This page is about useful stress.
+
+Not fake totality.
+
+---
+
+## Why This Makes the Product Stronger
+
+A product becomes much more serious when it can survive not only affection, but scrutiny.
+
+That is what this page is trying to support.
+
+Without blackfan testing, Avatar could still look interesting.
+
+With blackfan testing, it becomes easier to ask tougher questions like:
+
+* is this route actually real
+* is this branch only pretty
+* is this persona too fragile
+* is this strength earned
+* is this worth saving
+* is this worth showing to others later
+
+That is a much healthier direction.
+
+This is why blackfan testing belongs in the eval layer.
+
+---
+
+## Where To Go Next
+
+### If you want the eval hub
+
+Go to [📊 Eval Hub](./README.md)
+
+### If you want route-level checks
+
+Go to [🧪 Persona Behavior Checks](./persona-behavior-checks.md)
+
+### If you want multilingual status
+
+Go to [🌍 Multilingual Status](./multilingual-status.md)
+
+### If you want the workflow path
+
+Go to [🧭 Avatar Tuning Workflow](../docs/avatar-tuning-workflow.md)
+
+### If you want the highlights map
+
+Go to [✨ Highlights Index](../highlights/README.md)
+
+---
+
+## Quick Links
+
+* [🏠 Avatar Home](../README.md)
+* [📊 Eval Hub](./README.md)
+* [🧪 Persona Behavior Checks](./persona-behavior-checks.md)
+* [🌍 Multilingual Status](./multilingual-status.md)
+* [🧭 Avatar Tuning Workflow](../docs/avatar-tuning-workflow.md)
+* [✨ Highlights Index](../highlights/README.md)
+* [⬆️ Back to WFGY Root](../../README.md)
