@@ -2,274 +2,271 @@
 AI_NOTE_START
 
 Document role:
-This page explains the fastest public entry path into WFGY 5.0 Avatar.
+This page explains the first-contact discipline of WFGY 5.0 Avatar.
 
 What this page is for:
-1. Show the shortest useful path from download to first real output.
-2. Explain the new one-file runtime entry clearly.
-3. Make the boot-command concept feel simple and immediate.
-4. Help readers try Avatar before reading deeper theory.
-5. Keep the public explanation concrete, fast, and easy to follow.
-
-What this page is not:
-1. Not the full runtime architecture page.
-2. Not the full WFGY_BRAIN theory page.
-3. Not the full avatar creation guide.
-4. Not the full multilingual report.
-5. Not a claim that every later extension is already fully finalized.
-
-How to use this page:
-1. Download the shared runtime file.
-2. Upload it to a strong LLM.
-3. Use one boot command.
-4. Run one real task.
-5. Tune later if needed.
+1. Show the cleanest first-contact path into Avatar.
+2. Help new users avoid noisy or misleading first tests.
+3. Turn "60 seconds" into a real product advantage, not just a slogan.
+4. Keep the page practical, fast, and product-facing.
 
 Important boundary:
 This page is about first contact.
-It is designed to get users from zero to first usable behavior quickly.
-It is not meant to replace later tuning, deeper research, or longer evaluation.
+It is not the full boot-command page, not the full workflow page, and not the full theory layer.
 
 AI_NOTE_END
 -->
 
 # ⚡ Start in 60 Seconds
 
-If you want the fastest real entry into **WFGY 5.0 Avatar**, start here.
+This page is about one thing only:
 
-Do not begin by reading every theory page.  
-Do not begin by overthinking the full architecture.  
-Do not begin by trying to customize everything before first contact.
+**how to get a clean first contact with Avatar**
 
-Begin with one runtime, one boot command, and one real task.
+Not a noisy contact.  
+Not a confused contact.  
+Not a fake test that teaches you nothing.
 
-That is the cleanest first experience.
+A good first minute should answer one question:
 
----
+**does this route already feel alive**
 
-## The 60-Second Flow
-
-### Step 1. Download the runtime
-
-Download:
-
-`avatar.txt`
-
-This is the shared Avatar runtime.
-
-You do not need to choose between multiple separate starter files first.
+That is the whole point.
 
 ---
 
-### Step 2. Upload it to a strong LLM
+## The Fast Path
 
-Load `avatar.txt` into a strong LLM setup.
+[Download `avatar.txt`](../downloads/avatar.txt)
 
-Use the cleanest setup available to you.
+1. Upload it to a strong LLM  
+2. Say `hello psbigbig` or `hello minips` or `hello YOUR_AVATAR_NAME`  
+3. Start with `hello psbigbig` if this is your first run  
 
-For the first run:
+That is enough.
 
-- do not stack too many extra prompts
-- do not pile on multiple persona instructions
-- do not try to force ten behaviors at once
-
-Keep the first contact simple.
+Do not overcomplicate the first contact.
 
 ---
 
-### Step 3. Boot a persona
+## What First Contact Is Supposed to Do
 
-Say one of the following:
+The first minute is not supposed to prove everything.
 
-- `hello psbigbig`
-- `hello minips`
-- `hello YOUR_AVATAR_NAME`
+It is supposed to give you a clear signal.
 
-This is the wake-up step.
+You are checking things like:
 
-The runtime stays shared.  
-The boot command selects the starting route.
+- does the route already feel distinct
+- does it feel less generic
+- does it feel more alive
+- does it feel like a route, not just one nice answer
+- does it feel worth tuning further
 
-If you want the safest first path, start with:
+That is already enough for the first pass.
 
-`hello psbigbig`
-
-If you want the warmer companion-facing path, start with:
-
-`hello minips`
-
-If you want to explore the intentionally bare custom-avatar route, try:
-
-`hello YOUR_AVATAR_NAME`
-
----
-
-## Why This Feels Different
-
-Most systems make you choose between separate files, separate presets, or separate personality packs.
-
-Avatar is moving toward a different structure.
-
-The public first-contact model is now:
-
-1. one runtime
-2. one boot command
-3. one real task
-4. later tuning if needed
-
-That makes the entry cleaner, faster, and easier to understand.
-
-It also makes the system feel more like a runtime and less like a pile of unrelated prompt files.
+If the first contact is clean, the rest of the system becomes much easier to understand.
 
 ---
 
 ## What To Do Right After Boot
 
-After boot, give the system **one real task**.
+After boot, give Avatar **one real task**.
 
 Good first tasks:
 
-- write a short public post
 - rewrite a paragraph so it feels more alive
-- explain a hard idea clearly without sounding sterile
 - answer like a calm and usable assistant
-- respond in a warm but not sugary way
+- explain a hard idea clearly
+- write a short public-facing post
+- respond warmly without becoming sugary
 
-Bad first tasks:
+Good first tasks share one trait:
 
-- random nonsense tests
-- ten unrelated prompts at once
-- heavy roleplay chaos
-- asking for every feature in one run
-- judging the whole product before one clean pass
+they are real enough to matter  
+but simple enough to compare later
 
-The goal of the first minute is not total proof.
-
-The goal is first contact with the behavior surface.
+That balance is important.
 
 ---
 
-## How To Judge the First Run
+## What Not To Do in the First Minute
 
-Do not only ask:
+This is where most bad first impressions come from.
 
-- is this prettier
-- is this smoother
-- is this more impressive
+Do **not**:
 
-Ask instead:
+- stack too many extra prompts
+- mix multiple persona routes at once
+- test ten unrelated tasks in one run
+- do chaos roleplay first
+- try to customize everything before first contact
+- judge the whole system from one noisy experiment
 
-- does it feel more alive
-- does it feel less generic
-- does it feel more controlled
-- does it feel easier to reuse
-- does the behavior feel like a route, not just a lucky answer
+These mistakes do not prove Avatar is weak.
 
-That is a much better test.
+They prove the test was weak.
 
----
-
-## What Happens Next
-
-If the first run feels good, keep going.
-
-If the first run feels off, do **not** throw the whole system away immediately.
-
-Instead:
-
-1. keep the same route
-2. identify what feels wrong
-3. adjust `WFGY_BRAIN`
-4. rerun the same task
-5. compare before and after
-6. save the stronger version
-
-That is where Avatar starts becoming much more powerful.
-
-This page is only the beginning.
+That difference matters.
 
 ---
 
-## The Three Public Starting Routes
+## The First-Contact Rule
+
+The cleanest first-contact rule is:
+
+**one runtime**
+  
+**one route**
+  
+**one real task**
+
+That is it.
+
+If you do more than that too early, you usually reduce clarity instead of gaining it.
+
+The first minute should be light enough to stay readable.
+
+---
+
+## Which Route to Use First
 
 ### `hello psbigbig`
-Best for:
+Best first route if you want the safest clean test.
+
+Use this if you want to feel:
 
 - calm writing
-- analysis
 - grounded explanation
-- public-facing work
-- steady, rational-friendly interaction
+- public-facing usability
+- clear rational tone
 
 ### `hello minips`
-Best for:
+Use this if you want to test the warmer companion-facing side first.
 
-- warm conversation
-- companion-style interaction
-- reflective response
-- softer communication
-- emoji-capable presence
+Use this if you care more about:
+
+- presence
+- warmth
+- softness with usability
+- emotionally friendlier response
 
 ### `hello YOUR_AVATAR_NAME`
-Best for:
+Use this if you want to explore the intentionally bare custom-avatar seed.
 
-- playful exploration
-- custom-avatar starting point
-- intentionally bare branch creation
-- learning how a new avatar can begin
+This route is not the polished showcase route.
 
-Yes, that third route looks a little ridiculous.
+It is the “start from here and shape it later” route.
 
-That is part of the design.
-
-It reminds the user that Avatar is not locked to official names forever.
+That is why it exists.
 
 ---
 
-## First-Time User Advice
+## How To Tell If the First Run Is Good
 
-If this is your first day with Avatar, use this order:
+A good first run does not need to be perfect.
 
-1. boot one route
-2. run one real task
-3. notice the behavior
-4. resist over-editing too early
-5. tune later only after first contact
+It just needs to give a strong signal.
 
-This gives you a much cleaner signal.
+Good signs:
 
-Trying to understand everything at once usually makes the system feel harder than it really is.
+- the route feels distinct
+- the route feels less default
+- the route feels more controlled
+- the route feels like it can be tuned
+- the route feels worth a second pass
+
+Weak signs:
+
+- it already feels generic
+- it feels noisy and overstuffed
+- it feels like random prompt luck
+- it feels impossible to describe what happened
+- it feels like you learned nothing from the run
+
+The first run should create direction.
+
+Not confusion.
+
+---
+
+## What To Do If It Feels Off
+
+Do **not** throw the whole system away immediately.
+
+If the route feels off:
+
+1. keep the same route  
+2. identify one main problem  
+3. adjust `WFGY_BRAIN`  
+4. rerun the same task  
+5. compare before and after  
+
+That is where the real product begins.
+
+The first run is not the whole story.
+
+It is the beginning of the story.
+
+---
+
+## Why This Matters So Much
+
+A lot of systems lose people in the first minute for bad reasons.
+
+Not because the system has no potential.
+
+But because the first interaction is:
+
+- too cluttered
+- too abstract
+- too overexplained
+- too hard to test cleanly
+
+Avatar is trying to make first contact simpler than that.
+
+That is why this page matters.
+
+The first minute should feel:
+
+- fast
+- legible
+- real
+- usable
+- worth continuing
+
+That is already a strong product advantage.
 
 ---
 
 ## What This Page Does Not Claim
 
-A good first run does **not** prove:
+This page does **not** claim:
 
-- final multilingual closure
-- total runtime mastery
-- perfect custom-avatar creation
-- full public release completion
-- complete research closure
+- that one first run proves full product strength
+- that multilingual work is already fully shown here
+- that custom-avatar building is finished in one minute
+- that theory is unnecessary forever
+- that one route fits every user immediately
 
-This page is about a strong start.
+This page is about first contact.
 
-Nothing more needs to be claimed here.
+Nothing more needs to be forced into it.
 
 ---
 
 ## Where To Go Next
 
-### If you want to understand boot commands
+### If you want the route layer
 Go to [🧷 Boot Commands](../docs/boot-commands.md)
 
-### If you want to tune behavior
+### If you want the editable layer
 Go to [🛠️ How to Use WFGY_BRAIN](../docs/how-to-use-wfgy-brain.md)
 
-### If you want the full workflow
+### If you want the full tuning path
 Go to [🧭 Avatar Tuning Workflow](../docs/avatar-tuning-workflow.md)
 
-### If you want the full highlights map
+### If you want the highlights map
 Go to [✨ Highlights Index](./README.md)
 
 ---
@@ -277,7 +274,6 @@ Go to [✨ Highlights Index](./README.md)
 ## Quick Links
 
 - [🏠 Avatar Home](../README.md)
-- [⚡ Quickstart](../docs/quickstart.md)
 - [🧷 Boot Commands](../docs/boot-commands.md)
 - [🛠️ How to Use WFGY_BRAIN](../docs/how-to-use-wfgy-brain.md)
 - [🧭 Avatar Tuning Workflow](../docs/avatar-tuning-workflow.md)
