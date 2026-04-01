@@ -53,35 +53,15 @@ It can be booted, tuned, compared, saved, branched, and eventually shared.
 
 ## ⚡ Start in 60 Seconds
 
-Download `avatar.txt`.
+| Step | Action |
+|---|---|
+| 1 | 👉 [Download `avatar.txt`](./downloads/avatar.txt) |
+| 2 | 👉 Upload it to any strong LLM |
+| 3 | 👉 Say `hello psbigbig` or `hello minips` or `hello YOUR_AVATAR_NAME` |
 
-Upload it to a strong LLM.
+Start with `hello psbigbig` if this is your first run.
 
-Say:
-
-- `hello psbigbig`
-- `hello minips`
-- `hello YOUR_AVATAR_NAME`
-
-That is the first contact path.
-
-You do not need to choose between many different starter files first.  
-You start from one runtime, then wake one route.
-
-If this is your first run, start with:
-
-`hello psbigbig`
-
-If you want the warmer companion-facing route first, use:
-
-`hello minips`
-
-If you want the intentionally bare custom-avatar seed, use:
-
-`hello YOUR_AVATAR_NAME`
-
-👉 Start here: [⚡ Quickstart](./docs/quickstart.md)  
-👉 See the route layer: [🧷 Boot Commands](./docs/boot-commands.md)
+Quick links: [Quickstart](./docs/quickstart.md) · [Boot Commands](./docs/boot-commands.md)
 
 ---
 
