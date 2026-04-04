@@ -5,7 +5,7 @@ Document role:
 This page is the main hub for the WFGY 5.0 Avatar research layer.
 
 Primary mission:
-1. Present the research layer as the lawful home for deeper structural questions.
+1. Present the Research layer as the lawful home for deeper structural questions.
 2. Help readers move from product curiosity into architecture, runtime, route, governance, audit, and reduction law.
 3. Keep research pages connected as one system instead of a scattered list of theory notes.
 4. Prevent research reading from being confused with startup docs or pressure eval.
@@ -35,7 +35,7 @@ Allowed use:
 
 Do not do:
 1. Do not treat this hub as the packed master body.
-2. Do not flatten research into a theory dump with no reading order.
+2. Do not flatten Research into a theory dump with no reading order.
 3. Do not present research pages as startup guidance.
 4. Do not treat one local research page as if it explained the whole system.
 5. Do not overclaim that current research coverage is exhaustive or universally final.
@@ -321,23 +321,23 @@ Typical questions here include:
 
 This is important.
 
-The **docs** layer helps users do things.
+The **Docs** layer helps users do things.
 
-The **research** layer helps users understand why those things are structured the way they are.
+The **Research** layer helps users understand why those things are structured the way they are.
 
 For example:
 
-1. docs say how to start
-2. research says why the front door is structured as entrance law
+1. Docs say how to start
+2. Research says why the front door is structured as entrance law
 
-1. docs say how to tune
-2. research says why bounded controls are not sovereign
+1. Docs say how to tune
+2. Research says why bounded controls are not sovereign
 
-1. docs say how to recover
-2. research says why recovery is not magic and why reentry must be arbitrated
+1. Docs say how to recover
+2. Research says why recovery is not magic and why reentry must be arbitrated
 
-1. docs say how to read the file
-2. research says why the packed body has a spine, a bridge, matrices, and preservation law
+1. Docs say how to read the file
+2. Research says why the packed body has a spine, a bridge, matrices, and preservation law
 
 This separation keeps the project readable without throwing away its deeper logic.
 
@@ -345,16 +345,16 @@ This separation keeps the project readable without throwing away its deeper logi
 
 ## 🧪 Why research and eval are different
 
-Research and eval are related, but they are not the same job.
+Research and Eval are related, but they are not the same job.
 
-The **research** layer asks things like:
+The **Research** layer asks things like:
 
 1. what does this structure mean
 2. why does this operator family exist
 3. why is this boundary necessary
 4. what kind of law is being proposed
 
-The **eval** layer asks things like:
+The **Eval** layer asks things like:
 
 1. what breaks under pressure
 2. did return-path recovery actually hold
@@ -364,10 +364,10 @@ The **eval** layer asks things like:
 
 That means:
 
-1. research explains
-2. eval inspects
+1. Research explains
+2. Eval inspects
 
-Both matter.
+Both matter.  
 They just do different jobs.
 
 ---
@@ -378,7 +378,7 @@ As Avatar grows, people will eventually ask harder questions such as:
 
 1. what makes one branch structurally distinct from another
 2. what should remain stable across branches
-3. what belongs in docs versus research versus eval
+3. what belongs in Docs versus Research versus Eval
 4. what counts as real innovation versus shell rearrangement
 5. how many avatars can grow without the whole ecosystem becoming unreadable
 
@@ -386,7 +386,7 @@ Those are not only workflow questions.
 
 They are research questions.
 
-That is another reason this hub matters.
+That is another reason this hub matters.  
 It gives deeper questions a place to live before the ecosystem gets noisier.
 
 ---
@@ -400,7 +400,7 @@ This hub does **not** claim:
 3. that all deeper math is already universally closed
 4. that the public research layer is already exhaustive
 5. that research pages replace the packed master body
-6. that research pages replace docs or eval
+6. that research pages replace Docs or Eval
 7. that current release-baseline strength equals final universal completion
 
 This hub is an honest entry point.
