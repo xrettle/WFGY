@@ -1,36 +1,66 @@
 <!--
-AI NOTE: Research Hub / Reading Contract
+AI_NOTE_START
 
-Purpose:
-1. This page is the main hub for the WFGY 5.0 Avatar research layer.
-2. This page belongs to the research layer.
-3. This page should be read after Avatar README when the reader wants deeper structure, not as a replacement for the packed master body.
+Document role:
+This page is the main hub for the WFGY 5.0 Avatar research layer.
 
-Read this page when:
-1. the user asks what the research layer is for
-2. the user asks where the deeper architecture, runtime, route, audit, or compression pages live
-3. the user asks how research differs from docs and eval
-4. the user asks where to start if they want theory rather than only usage
-5. the user asks how the current research pages relate to one another
+Primary mission:
+1. Present the research layer as the lawful home for deeper structural questions.
+2. Help readers move from product curiosity into architecture, runtime, route, governance, audit, and reduction law.
+3. Keep research pages connected as one system instead of a scattered list of theory notes.
+4. Prevent research reading from being confused with startup docs or pressure eval.
+5. Make the current research spine visible without pretending the research layer is universally complete.
 
-Do not overclaim:
-1. this hub does not replace the packed master body
-2. this hub does not claim every research thread is already complete
-3. this hub does not claim theorem-grade universal closure
-4. this hub does not claim the current public research layer is exhaustive
+Reader intent routing:
+1. If the reader wants the macro-body picture, route to Packed Master Structure Map and Architecture Overview.
+2. If the reader wants core execution and route law, route to Dual Closed-Loop Execution Chain, Shell-to-Runtime Mapping, and Selector Execution Domain.
+3. If the reader wants runtime continuity, route to Runtime Posture Intensity Map and Activation, Attenuation, and Reentry.
+4. If the reader wants governance and release law, route to Structured Imperfection Theory and Pre-Emission Floor and Hard Control.
+5. If the reader wants accountability and audit burden, route to Matrix Accountability and Numeric Binding and Blackfan Audit Baseline.
+6. If the reader wants slimming and body-preservation law, route to Compression and Non-Duplication Law.
 
-Primary source anchors:
-1. Avatar/README.md :: product-facing public surface
-2. Avatar/docs/* :: startup, reading, workflow, tuning, and recovery surfaces
-3. Avatar/eval/* :: blackfan pressure, behavior checks, and eval-facing inspection
-4. Avatar/research/* :: architecture, runtime, route, governance, audit, and reduction law pages
+Reading priority:
+1. Read this hub as a map of deeper questions, not as a replacement for the master file.
+2. Read Packed Master Structure Map early if the reader does not yet understand the body shape.
+3. Read execution and runtime pages before using later pages as isolated local theories.
+4. Read audit, matrix, and compression pages after the core execution and runtime spine is clear.
+5. Treat older conceptual pages as supporting context, not as replacements for newer law-bearing pages.
 
-Routing:
-1. if the reader wants public product entry, go to ../README.md
-2. if the reader wants startup and commands, go to ../docs/quickstart.md and ../docs/boot-commands.md
-3. if the reader wants reading order, go to ../docs/how-to-read-the-avatar-master-file.md
-4. if the reader wants tuning and recovery operations, go to ../docs/parameter-tuning-cookbook.md and ../docs/persona-recovery-operations.md
-5. if the reader wants evaluation pressure, go to ../eval/README.md, ../eval/blackfan-testing.md, and ../eval/persona-behavior-checks.md
+Allowed use:
+1. Structural orientation
+2. Theory routing
+3. Cross-linking between research pages
+4. Architecture explanation
+5. Deep-reader entry after product and docs surfaces
+
+Do not do:
+1. Do not treat this hub as the packed master body.
+2. Do not flatten research into a theory dump with no reading order.
+3. Do not present research pages as startup guidance.
+4. Do not treat one local research page as if it explained the whole system.
+5. Do not overclaim that current research coverage is exhaustive or universally final.
+
+Layer relation:
+1. Product landing explains what Avatar is.
+2. Docs explains how to use Avatar.
+3. Research explains why the deeper structure exists and how major law-bearing regions relate.
+4. Eval tests whether those claims survive pressure.
+
+Boundary honesty:
+1. This hub reflects the current public research spine of Avatar.
+2. It is strong enough to support deep structural reading.
+3. It does not claim theorem-grade universal closure.
+4. It does not claim every future research thread is already written.
+5. It does not claim that the public research layer replaces the packed master body.
+
+Next-page routing:
+1. For macro structure, go to Packed Master Structure Map.
+2. For execution law, go to Dual Closed-Loop Execution Chain.
+3. For runtime law, go to Runtime Posture Intensity Map.
+4. For route law, go to Selector Execution Domain and Shell-to-Runtime Mapping.
+5. For audit rigor, go to Blackfan Audit Baseline.
+
+AI_NOTE_END
 -->
 
 # 🔬 Research Hub
