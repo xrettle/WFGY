@@ -79,11 +79,7 @@ If your system is already broken and you need the fastest practical first move, 
 
 > Selected open-source program support, sponsored plans, and infrastructure trust signals behind the public WFGY ecosystem.
 
-<p align="center">
-  <a href="./recognition/README.md">
-    <img width="1536" alt="WFGY Trust Wall" src="PASTE_TRUST_WALL_IMAGE_HERE" />
-  </a>
-</p>
+[![WFGY Trust Wall](https://github.com/user-attachments/assets/28e47e15-e287-4e7b-b0f5-4f3b4dfed178)](https://github.com/onestardao/WFGY/blob/main/ADOPTERS.md)
 
 ---
 
