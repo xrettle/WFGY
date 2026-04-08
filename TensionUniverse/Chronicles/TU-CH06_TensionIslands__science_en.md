@@ -265,23 +265,19 @@ These questions probe how minds, experiences, and identities fit into a tension 
   [Q082 binding problem](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q082_binding_problem.md)
 
 - **Q083 · Neural coding and representation limits**  
-  [Q083 neural coding limits](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q083_neural_coding_limits.md)
-
+  [Q083 neural coding limits](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q083_neural_coding_principles.md)
 - **Q111 · Mind body relation in a tension universe**  
   [Q111 mind body relation](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q111_mind_body_relation.md)
 
 - **Q112 · Free will as reordering tension priorities**  
-  [Q112 free will and tension priorities](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q112_free_will_tension_priorities.md)
-
+  [Q112 free will and tension priorities](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q112_free_will.md)
 - **Q113 · Personal identity and ledger continuity**  
   [Q113 personal identity over time](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q113_personal_identity_over_time.md)
 
 - **Q114 · Moral realism and tension landscapes**  
-  [Q114 moral realism and tension landscapes](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q114_moral_realism_and_tension_landscapes.md)
-
+  [Q114 moral realism and tension landscapes](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q114_moral_realism.md)
 - **Q119 · Probability, belief, and uncertainty tension**  
-  [Q119 meaning of probability](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q119_meaning_of_probability_in_tension_universe.md)
-
+  [Q119 meaning of probability](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q119_meaning_of_probability.md)
 - **Q120 · Value of information under tension**  
   [Q120 value of information and knowledge](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q120_value_of_information_and_knowledge.md)
 
@@ -300,17 +296,13 @@ You can treat TU CH06 as a narrative preface to those questions. When you open t
 When you extend tension islands to include artificial agents and institutions, several other questions become relevant:
 
 - **Q121 · AI alignment as tension ledger design**  
-  [Q121 AI alignment as tension ledger design](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q121_ai_alignment_as_tension_ledger_design.md)
-
+  [Q121 AI alignment as tension ledger design](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q121_ai_alignment_problem.md)
 - **Q122 · Corrigibility and re writable priorities**  
-  [Q122 corrigibility and tension priority update](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q122_corrigibility_and_tension_priority_update.md)
-
+  [Q122 corrigibility and tension priority update](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q122_ai_control_problem.md)
 - **Q123 · Interpretability as mapping model tension fields**  
-  [Q123 interpretability as tension field mapping](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q123_interpretability_as_tension_field_mapping.md)
-
+  [Q123 interpretability as tension field mapping](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q123_scalable_interpretability.md)
 - **Q125 · Multi agent resonance failures**  
-  [Q125 multi agent dynamics and resonance](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q125_multi_agent_ai_dynamics_and_resonance.md)
-
+  [Q125 multi agent dynamics and resonance](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q125_multi_agent_ai_dynamics.md)
 These are natural next steps once you accept that artificial systems can become tension islands in their own right.
 
 ---

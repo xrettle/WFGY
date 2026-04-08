@@ -348,8 +348,8 @@ If you prefer another coordinate system, you can use that. Tension language is a
 
 You do not have to, but it helps.
 
-- `TU-CH02_HumanTension__story_en.md` and its science and FAQ files focus on everyday life: crushes, relationships, comparison, and the 0–1 tension line. They build basic intuitions about what tension feels like from the inside.  
-- `TU-CH06_QuantumObserver__story_en.md` and its companions talk about quantum superposition and observation in tension language. They show what it means for several futures to coexist as ledger drafts and what “observation” means as a signature on one draft.
+- `TU-CH01_HumanTension__story_en.md` and its science and FAQ files focus on everyday life: crushes, relationships, comparison, and the 0–1 tension line. They build basic intuitions about what tension feels like from the inside.  
+- `TU-CH05_QuantumObserver__story_en.md` and its companions talk about quantum superposition and observation in tension language. They show what it means for several futures to coexist as ledger drafts and what "observation" means as a signature on one draft.
 
 This chronicle, `TU-CH07`, uses those intuitions and tools to talk about life, consciousness, and free will. If you read them in order, you will see the same ideas recur at different scales.
 

@@ -11,12 +11,12 @@
 
 ### Q1. Why is there a whole FAQ just for human tension?
 
-Because for most readers, “tension” only becomes real when it touches everyday life: crushes, relationships, jealousy, shame, and the feeling of “I am behind”. The TU-CH02 story uses a future historian to talk about these things in a narrative way. This FAQ is the matching “plain talk” document.
+Because for most readers, "tension" only becomes real when it touches everyday life: crushes, relationships, jealousy, shame, and the feeling of "I am behind". The TU-CH01 story uses a future historian to talk about these things in a narrative way. This FAQ is the matching "plain talk" document.
 
 So you can think of this file as a bridge between three layers:
 
-1. Story: the feelings and images in TU-CH02.  
-2. Science notes: the variables and simple models in `TU-CH02_HumanTension__science_en.md`.  
+1. Story: the feelings and images in TU-CH01.  
+2. Science notes: the variables and simple models in `TU-CH01_HumanTension__science_en.md`.
 3. BlackHole archive: the 131 S-class questions that generalize these patterns to mind, AI, economics, climate, and so on.
 
 This FAQ stays mostly on the human side. It uses simple language and concrete examples, so that you can apply the “tension” view to your own life without needing to read everything else first.
@@ -550,7 +550,7 @@ You do not have to start from the technical side. You can start from a sentence 
 
 > “I constantly feel like I am the wrong person in the wrong life.”
 
-Then you look through the index in `TU-CH02_HumanTension__science_en.md` and the BlackHole archive for any question whose description smells like your issue. Once you find one or two, you can ask an AI to “rewrite this question in terms of self_now, self_ideal, and shared_imagination”.
+Then you look through the index in `TU-CH01_HumanTension__science_en.md` and the BlackHole archive for any question whose description smells like your issue. Once you find one or two, you can ask an AI to "rewrite this question in terms of self_now, self_ideal, and shared_imagination".
 
 ---
 

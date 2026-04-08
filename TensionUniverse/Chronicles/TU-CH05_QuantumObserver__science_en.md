@@ -303,31 +303,24 @@ Several questions in the BlackHole archive focus directly on quantum foundations
 ### 6.1 Quantum state, measurement, and decoherence
 
 - **Q071 – What does the wavefunction represent in a tension universe?**  
-  [Q071_wavefunction_as_tension_field](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q071_wavefunction_as_tension_field.md)
-
+  [Q071_origin_of_life](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q071_origin_of_life.md)
 - **Q072 – Measurement as tension commit rather than mystical collapse**  
-  [Q072_measurement_as_tension_commit](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q072_measurement_as_tension_commit.md)
-
+  [Q072_measurement_as_tension_commit](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q072_origin_of_the_genetic_code.md)
 - **Q073 – Born weights as tension compatible frequencies**  
-  [Q073_born_rule_and_tension_weights](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q073_born_rule_and_tension_weights.md)
-
+  [Q073_born_rule_and_tension_weights](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q073_major_evolutionary_transitions.md)
 - **Q074 – Decoherence and the cost of keeping drafts coherent**  
-  [Q074_decoherence_as_tension_cost](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q074_decoherence_as_tension_cost.md)
-
+  [Q074_decoherence_as_tension_cost](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q074_robustness_of_cell_differentiation.md)
 ### 6.2 Probability, information, and observers
 
 - **Q119 – Probability, belief, and tension over uncertainty**  
-  [Q119_probability_and_tension](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q119_meaning_of_probability_in_tension_universe.md)
-
+  [Q119_probability_and_tension](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q119_meaning_of_probability.md)
 - **Q120 – Value of information and knowledge under tension**  
   [Q120_information_value_under_tension](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q120_value_of_information_and_knowledge.md)
 
 - **Q121 – AI alignment as shared tension ledger design**  
-  [Q121_alignment_as_ledger_design](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q121_ai_alignment_as_tension_ledger_design.md)
-
+  [Q121_alignment_as_ledger_design](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q121_ai_alignment_problem.md)
 - **Q123 – Interpretability as mapping model tension fields**  
-  [Q123_interpretability_and_tension_fields](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q123_interpretability_as_tension_field_mapping.md)
-
+  [Q123_interpretability_and_tension_fields](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q123_scalable_interpretability.md)
 These questions go beyond individual experiments. They ask:
 
 - what it means for a state description to be “real” or “merely epistemic”;

@@ -224,7 +224,7 @@ Several questions in the BlackHole archive are directly relevant to outsourced i
 
 - Q119, "Probability, belief, and tension over uncertainty"  
   This question looks at how agents allocate tension across possible futures. Outsourced imagination shifts this allocation toward externally provided branches.  
-  See: [Q119_meaning_of_probability_in_tension_universe.md](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q119_meaning_of_probability_in_tension_universe.md)
+  See: [Q119_meaning_of_probability.md](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q119_meaning_of_probability.md)
 
 - Q120, "Value of information and knowledge under tension"  
   Short video provides high emotional signal with low information value for the local field. This is a direct application of Q120's distinction between information that changes optimal action and information that only excites.  
@@ -232,11 +232,11 @@ Several questions in the BlackHole archive are directly relevant to outsourced i
 
 - Q121, "AI alignment as shared tension ledger design"  
   AI companions sit exactly at the boundary of personal and synthetic tension. They are live test cases for what it means to align a system with a human in a way that does not quietly erase the human's own design practice.  
-  See: [Q121_ai_alignment_as_tension_ledger_design.md](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q121_ai_alignment_as_tension_ledger_design.md)
+  See: [Q121_ai_alignment_as_tension_ledger_design.md](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q121_ai_alignment_problem.md)
 
 - Q127, "Synthetic data, simulated tension, and drift"  
   Here the main concern is how synthetic signals at scale can move the baseline of a field without being recognized as such. Outsourced imagination is a human level instance of that problem.  
-  See: [Q127_synthetic_data_and_tension_drift.md](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q127_synthetic_data_and_tension_drift.md)
+  See: [Q127_synthetic_data_and_tension_drift.md](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q127_data_entropy_truth_synthetic_worlds.md)
 
 Readers who want to go deeper can treat TU-CH07 as a narrative entry point, then pick one of these questions and ask an AI system to map it back into their own habits and environment.
 

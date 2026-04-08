@@ -190,31 +190,31 @@ These questions touch the nature of mind, experience, and what it means for a �
 
 - [Q081 · Hard problem of consciousness](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q081_hard_problem_of_consciousness.md)  
 - [Q082 · Binding problem of perception](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q082_binding_problem.md)  
-- [Q083 · Neural coding and representation limits](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q083_neural_coding_limits.md)  
+- [Q083 · Neural coding and representation limits](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q083_neural_coding_principles.md)  
 - [Q111 · Mind–body relation in a tension universe](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q111_mind_body_relation.md)  
-- [Q112 · Free will as reordering of tension priorities](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q112_free_will_tension_priorities.md)  
+- [Q112 · Free will as reordering of tension priorities](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q112_free_will.md)  
 - [Q113 · Personal identity over time and ledger continuity](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q113_personal_identity_over_time.md)  
-- [Q114 · Moral realism, value landscapes, and shared ledgers](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q114_moral_realism_and_tension_landscapes.md)  
-- [Q119 · Probability, belief, and tension over uncertainty](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q119_meaning_of_probability_in_tension_universe.md)  
+- [Q114 · Moral realism, value landscapes, and shared ledgers](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q114_moral_realism.md)  
+- [Q119 · Probability, belief, and tension over uncertainty](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q119_meaning_of_probability.md)  
 - [Q120 · Value of information and knowledge under tension](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q120_value_of_information_and_knowledge.md)  
 
 ### 4.2 Social comparison, inequality, and economic tension
 
 These questions take self_ideal and comparison patterns and move them into economic and social scales.
 
-- [Q101 · Equity premium puzzle as a tension gap](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q101_equity_premium_puzzle_tension_form.md)  
-- [Q102 · Home bias and local tension comfort zones](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q102_home_bias_in_portfolios_tension_view.md)  
-- [Q104 · Inequality dynamics and social tension thresholds](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q104_inequality_dynamics_and_tension_thresholds.md)  
+- [Q101 · Equity premium puzzle as a tension gap](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q101_equity_premium_puzzle.md)  
+- [Q102 · Home bias and local tension comfort zones](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q102_home_bias_in_portfolios.md)  
+- [Q104 · Inequality dynamics and social tension thresholds](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q104_inequality_dynamics.md)  
 
 ### 4.3 Multi-agent tension, AI, and alignment (for later chapters)
 
 These questions are not directly about human crushes or relationships, but they extend the same patterns into AI and multi-agent systems. They become important when you connect human tension to AI companions, recommender systems, and governance.
 
-- [Q121 · AI alignment as shared tension ledger design](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q121_ai_alignment_as_tension_ledger_design.md)  
-- [Q122 · Corrigibility and re-writable tension priorities](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q122_corrigibility_and_tension_priority_update.md)  
-- [Q123 · Interpretability as mapping model tension fields](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q123_interpretability_as_tension_field_mapping.md)  
-- [Q125 · Multi-agent AI dynamics and resonance failures](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q125_multi_agent_ai_dynamics_and_resonance.md)  
-- [Q127 · Synthetic data, simulated tension, and drift](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q127_synthetic_data_and_tension_drift.md)  
+- [Q121 · AI alignment as shared tension ledger design](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q121_ai_alignment_problem.md)  
+- [Q122 · Corrigibility and re-writable tension priorities](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q122_ai_control_problem.md)  
+- [Q123 · Interpretability as mapping model tension fields](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q123_scalable_interpretability.md)  
+- [Q125 · Multi-agent AI dynamics and resonance failures](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q125_multi_agent_ai_dynamics.md)  
+- [Q127 · Synthetic data, simulated tension, and drift](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q127_data_entropy_truth_synthetic_worlds.md)  
 
 This is not an exhaustive list of all 131 questions. It is the subset most directly connected to the human-scale patterns in TU-CH02. You are encouraged to browse the full BlackHole archive if you want to see how the same structures appear in physics, climate, finance, and other domains.
 

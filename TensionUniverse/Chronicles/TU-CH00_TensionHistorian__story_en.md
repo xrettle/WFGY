@@ -51,9 +51,6 @@ But if at some point you suddenly feel:
 
 That spot is where tension is saying hello to you.
 
-> If you want the framing memo behind this whole piece, continue here:
-> [Story](./TU-CH00_TensionHistorian__story_en.md)
-
 --
 
 ## 🧭 1 | The Invisible Things Between People Are All Tension

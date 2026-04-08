@@ -238,22 +238,22 @@ The exact file names may evolve, but the Q numbers are intended to be stable ide
 
 ### 6.1 Cosmology and initial conditions
 
-- [Q021 — Big Bang initial conditions in tension form](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q021_big_bang_initial_conditions_in_tension_form.md)  
-- [Q022 — Cosmic inflation and tension smoothing](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q022_cosmic_inflation_and_tension_smoothing.md)
+- [Q021 — Big Bang initial conditions in tension form](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q021_quantum_gravity_unification.md)  
+- [Q022 — Cosmic inflation and tension smoothing](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q022_hierarchy_problem.md)
 
 These questions ask what it would mean to encode standard cosmological scenarios as statements about the structure of T(x) near the earliest times.
 
 ### 6.2 Gravity, dark matter, and missing ledger entries
 
-- [Q023 — Dark matter as missing tension ledger](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q023_dark_matter_as_missing_tension_ledger.md)  
-- [Q024 — Dark energy and metric tension balance](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q024_dark_energy_and_metric_tension_balance.md)
+- [Q023 — Dark matter as missing tension ledger](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q023_strong_cp_problem.md)  
+- [Q024 — Dark energy and metric tension balance](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q024_origin_of_neutrino_masses_and_mixing.md)
 
 These questions use the scalar T(x) language to express, in Effective Layer form, the ways that untracked demands can produce apparent mass or vacuum energy effects.
 
 ### 6.3 Arrow of time and information
 
-- [Q025 — Arrow of time and entropy in a tension ledger](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q025_arrow_of_time_and_entropy_ledger.md)  
-- [Q026 — Black hole information and tension conservation](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q026_black_hole_information_and_tension_conservation.md)
+- [Q025 — Arrow of time and entropy in a tension ledger](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q025_baryon_asymmetry_universe.md)  
+- [Q026 — Black hole information and tension conservation](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q026_quantum_measurement_problem.md)
 
 These questions focus on how information, loss, and reconstruction look when the primary object is a tension field, not just microstate counting.
 

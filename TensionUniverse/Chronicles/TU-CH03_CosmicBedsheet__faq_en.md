@@ -4,7 +4,7 @@
 > This is speculative science fiction, not a proven physical theory.  
 > “Tension Universe” is a fictional framing device. All stories are MIT licensed — remix and build freely.
 
-This FAQ sits behind **TU-CH04_CosmicBedsheet__story_en.md** and **TU-CH04_CosmicBedsheet__science_en.md**. It is written for readers who like to argue, nitpick, or stress-test the metaphor before they decide whether it is useful.
+This FAQ sits behind **TU-CH03_CosmicBedsheet__story_en.md** and **TU-CH03_CosmicBedsheet__science_en.md**. It is written for readers who like to argue, nitpick, or stress-test the metaphor before they decide whether it is useful.
 
 <img width="1536" height="1024" alt="TU_CosmicBedsheet_ (3)" src="https://github.com/user-attachments/assets/47fdf87c-949c-46ee-98eb-4dd64d1e1cb5" />
 
@@ -155,7 +155,7 @@ No. It does not explain dark matter in the experimental sense.
 
 What TU-CH04 does is to rephrase the dark matter puzzle in tension language: you are reconstructing the effective shape of T(x) from observed trajectories (how stars move in galaxies, how clusters lens light), but your current model only includes a subset of demands in the sum \( T(x) = \sum w_i v_i(x) \).
 
-The [Q023 – Dark matter as missing tension ledger](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q023_dark_matter_as_missing_tension_ledger.md) question in the BlackHole archive asks:
+The [Q023 – Dark matter as missing tension ledger](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q023_strong_cp_problem.md) question in the BlackHole archive asks:
 
 - what families of “untracked demands” could produce the same effective dents in the bedsheet as unseen mass,  
 - and how we might design experiments to distinguish between “new particles” and “new ledger structure”.
@@ -173,7 +173,7 @@ In standard thermodynamics, entropy measures the number of microstates compatibl
 - how many **compatible compromise configurations** exist for a given set of demands and weights,  
 - and how complex the bookkeeping is if we try to respect all of them.
 
-The [Q025 – Arrow of time and entropy in a tension ledger](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q025_arrow_of_time_and_entropy_ledger.md) problem invites you to rewrite thermodynamic reasoning in this language. It does not claim that the answer is “the real reason” for the arrow of time. It offers a mirrored version that might reveal new questions or hidden assumptions.
+The [Q025 – Arrow of time and entropy in a tension ledger](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q025_baryon_asymmetry_universe.md) problem invites you to rewrite thermodynamic reasoning in this language. It does not claim that the answer is “the real reason” for the arrow of time. It offers a mirrored version that might reveal new questions or hidden assumptions.
 
 ---
 
@@ -186,7 +186,7 @@ In the story frame, a black hole is an extreme region of the bedsheet where:
 - T(x) is so steep and concentrated that almost all nearby trajectories are forced inward,  
 - the local ledger structure makes it very hard to recover which demands were active and how they interacted, once things fall in.
 
-The [Q026 – Black hole information and tension conservation](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q026_black_hole_information_and_tension_conservation.md) file asks:
+The [Q026 – Black hole information and tension conservation](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/BlackHole/Q026_quantum_measurement_problem.md) file asks:
 
 - if we treat black holes as “ledger compression machines”, what does it mean for tension to be conserved or lost,  
 - and how that picture sits next to standard discussions of information loss and unitary evolution.
@@ -255,8 +255,8 @@ The TU chronicles try to keep these failure modes visible by constantly jumping 
 
 If you enjoyed the cosmic bedsheet chapter, there are several natural next steps:
 
-- For **human-scale tension**, read or re-read [TU-CH02 · Human Tension](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Chronicles/TU-CH02_HumanTension__story_en.md) and its science / FAQ companions, then map those variables (`self_now`, `self_ideal`, etc.) into local patches of the bedsheet.  
-- For the **0–1 tension recipes**, visit [TU-CH03 · Tension Recipes](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Chronicles/TU-CH03_TensionRecipes__story_en.md) and treat each recipe as a different way of weighting demands in T(x).  
+- For **human-scale tension**, read or re-read [TU-CH01 · Human Tension](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Chronicles/TU-CH01_HumanTension__story_en.md) and its science / FAQ companions, then map those variables (`self_now`, `self_ideal`, etc.) into local patches of the bedsheet.  
+- For the **0–1 tension recipes**, visit [TU-CH02 · Tension Recipes](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Chronicles/TU-CH02_TensionRecipes__story_en.md) and treat each recipe as a different way of weighting demands in T(x).  
 - For deeper **cosmology and physics prompts**, browse the cosmology cluster in the [BlackHole Archive](https://github.com/onestardao/WFGY/tree/main/TensionUniverse/BlackHole), starting from Q021–Q026.  
 - For a broader overview of all chronicles, use the [Chronicles index](https://github.com/onestardao/WFGY/blob/main/TensionUniverse/Chronicles/README.md) as the main entry point.
 
