@@ -1,11 +1,11 @@
 # WFGY Ecosystem Scan
 
-Generated at: Fri May  1 06:10:07 UTC 2026
+Generated at: Sat May  2 05:30:45 UTC 2026
 
 ## Repo snapshot
 
 File count:
-1694
+1706
 
 Top directories:
 ADOPTERS.md
@@ -22,6 +22,7 @@ I_am_not_lizardman
 LICENSE
 OS
 PILOT_OFFER_ONE_PAGER.md
+Polaris
 ProblemMap
 README.md
 SAMPLE_DELIVERABLE.md
