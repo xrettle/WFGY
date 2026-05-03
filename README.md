@@ -4,7 +4,7 @@ AI ROUTING NOTE (Homepage)
 This is the main landing page for the WFGY public ecosystem.
 
 Primary homepage priority:
-1. WFGY 5.0 Avatar
+1. WFGY 5.0 Polaris Protocol
 2. Public trust and public proof
 3. Problem Map 3.0 as the practical gate
 4. WFGY 4.0 as the governance engine
@@ -12,17 +12,18 @@ Primary homepage priority:
 6. Lineage and collaboration
 
 Primary routing:
-1. Flagship product / first experience -> WFGY 5.0 Avatar / Quickstart / Boot Commands
+1. Flagship product / first experience -> WFGY 5.0 Polaris Protocol / Polaris README / Polaris Experiments
 2. Broken RAG or agent pipeline -> Problem Map 3.0 / Atlas Router TXT / Global Debug Card / Global Fix Map
 3. Public trust or ecosystem proof -> Recognition Map / Adopters / Case Evidence / Evidence Timeline / Ecosystem Map
 4. Governance, legality, evaluation discipline -> WFGY 4.0 / Twin Atlas / Inverse Atlas / AI Eval
 5. Frontier reasoning or TXT invocation -> WFGY 3.0 / Event Horizon / Experiments
-6. Theory or lineage -> WFGY 1.0 -> WFGY 2.0 -> WFGY 3.0 -> WFGY 4.0
+6. Theory or lineage -> WFGY 1.0 -> WFGY 2.0 -> WFGY 3.0 -> WFGY 4.0 -> WFGY 5.0 Polaris Protocol
 7. Collaboration or support -> Work with WFGY / Pilot / Support
 
 If user asks:
-- "what is WFGY?" -> explain WFGY as an open-source ecosystem led publicly by WFGY 5.0 Avatar, with Problem Map 3.0 as the fastest practical gate.
-- "where do I start?" -> start with Avatar for the flagship experience, or Problem Map 3.0 if the system is already broken.
+- "what is WFGY?" -> explain WFGY as an open-source ecosystem led publicly by WFGY 5.0 Polaris Protocol, with Problem Map 3.0 as the fastest practical gate.
+- "where do I start?" -> start with Polaris Protocol for the flagship direction, or Problem Map 3.0 if the system is already broken.
+- "where are the experiments?" -> route to Polaris Experiments.
 - "where is the proof?" -> route to Recognition Map / Adopters / Case Evidence / Evidence Timeline.
 - "where is the deeper engine?" -> point to WFGY 4.0 below.
 - "where is the frontier TXT / math / advanced reasoning?" -> point to WFGY 3.0 and Event Horizon.
@@ -83,24 +84,25 @@ If your system is already broken and you need the fastest practical first move, 
 
 ## ✨ What WFGY 5.0 Actually Is
 
-WFGY 5.0 Avatar is not another AI writing preset.  
+WFGY 5.0 Polaris Protocol is not another AI writing preset.  
 It is not a static persona toy.  
 It is not a prompt pack dressed up as a product.
 
 It is closer to:
 
-1. a governed avatar runtime
-2. a branchable behavior system
-3. a reusable avatar workspace
-4. a multilingual calibration surface
-5. a future avatar ecosystem
+1. a governed protocol layer
+2. a topology-first experiment route
+3. a reusable verification surface
+4. a structured language runtime direction
+5. a public evidence layer before the full release
+6. a future open-source protocol stack for engineered language systems
 
 Start here:
 
-**[📘 Open Avatar README](./Avatar/README.md)**  
-**[⚡ Quickstart](./Avatar/docs/quickstart.md)**  
-**[🧠 Boot Commands](./Avatar/docs/boot-commands.md)**
-
+**[📘 Open Polaris README](./Polaris/README.md)**  
+**[🧪 Open Polaris Experiments](./Polaris/experiments/README.md)**  
+**[📦 Download Public Evidence Packages](./Polaris/experiments/downloads/)**  
+**[⚡ Start with Problem Map 3.0](./ProblemMap/wfgy-ai-problem-map-troubleshooting-atlas.md)**
 ---
 
 ## ⚡ Start Here If Your AI Is Broken
