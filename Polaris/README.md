@@ -3,6 +3,8 @@
 > Public release target: **2026/05/05**  
 > Current status: **pre release teaser and public evidence layer**
 
+[![WFGY Polaris Protocol](https://github.com/user-attachments/assets/5f220659-8245-4cb0-8d13-6d287eacde70)](https://github.com/onestardao/WFGY/blob/main/Polaris/README.md)
+
 **WFGY 5.0 Polaris Protocol** is the next public route of WFGY after the earlier Avatar stage materials.
 
 This folder is the new home for the Polaris line: topology first AI generation, protocol level experiments, public evidence packages, future Colab reproduction materials, and the mathematical logic that will be released after the full open source release begins.
