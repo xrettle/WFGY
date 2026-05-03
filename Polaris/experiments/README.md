@@ -81,60 +81,60 @@ One sentence summary:
 <details>
 <summary>Expand: What does this have to do with GPU cost?</summary>
 
-When people talk about AI cost, they usually think about GPUs first.
-
-That is not wrong. GPU cost is a major part of model inference cost.
-
-But in real use cases, cost does not only come from the GPU itself. It also comes from how many tokens the model has to read, how many tokens it has to generate, how many rounds it has to run, and how much long-context baggage it has to carry.
-
-If every task requires a large block of background text, the model must repeatedly read a large amount of content.
-
-That becomes cost.
-
-The Polaris idea is:
-
-Besides pursuing larger models, stronger GPUs, and longer context windows, we can also ask another question:
-
-Can the task itself be represented in a smarter way first?
-
-If a task can be organized into a more stable structure, the model may not need to reread an entire library every time. It may only need to read a clearer task map.
-
-So Polaris is not saying that GPUs are unimportant.
-
-It is saying:
-
-AI cost can be approached not only from the hardware side, but also from the task-structure side.
+> When people talk about AI cost, they usually think about GPUs first.
+>
+> That is not wrong. GPU cost is a major part of model inference cost.
+>
+> But in real use cases, cost does not only come from the GPU itself. It also comes from how many tokens the model has to read, how many tokens it has to generate, how many rounds it has to run, and how much long-context baggage it has to carry.
+>
+> If every task requires a large block of background text, the model must repeatedly read a large amount of content.
+>
+> That becomes cost.
+>
+> The Polaris idea is:
+>
+> Besides pursuing larger models, stronger GPUs, and longer context windows, we can also ask another question:
+>
+> Can the task itself be represented in a smarter way first?
+>
+> If a task can be organized into a more stable structure, the model may not need to reread an entire library every time. It may only need to read a clearer task map.
+>
+> So Polaris is not saying that GPUs are unimportant.
+>
+> It is saying:
+>
+> AI cost can be approached not only from the hardware side, but also from the task-structure side.
 
 </details>
 
 <details>
 <summary>Expand: This is not simply making the prompt shorter</summary>
 
-If you only make the prompt shorter, you usually lose information, and output quality may drop.
-
-The key point of Polaris is not aggressive text deletion. It is reorganizing task content into a more stable structure.
-
-You can think of it like this:
-
-| Original long text | After conversion |
-| --- | --- |
-| A long task description | Task nodes |
-| Many rules | Rule relations |
-| Multiple goals | Goal order |
-| Multiple constraints | Boundary conditions |
-| Possible errors | Audit points |
-| Final output | Output format |
-
-This means the model does not receive a long messy block of text. It receives a clearer task structure.
-
-The model’s job then becomes more like:
-
-Read the task map.  
-Translate the map back into the correct output.  
-Complete the requested task.
-
-So you can understand it as:
-
+> If you only make the prompt shorter, you usually lose information, and output quality may drop.
+>
+> The key point of Polaris is not aggressive text deletion. It is reorganizing task content into a more stable structure.
+>
+> You can think of it like this:
+>
+> | Original long text | After conversion |
+> | --- | --- |
+> | A long task description | Task nodes |
+> | Many rules | Rule relations |
+> | Multiple goals | Goal order |
+> | Multiple constraints | Boundary conditions |
+> | Possible errors | Audit points |
+> | Final output | Output format |
+>
+> This means the model does not receive a long messy block of text. It receives a clearer task structure.
+>
+> The model’s job then becomes more like:
+>
+> Read the task map.  
+> Translate the map back into the correct output.  
+> Complete the requested task.
+>
+> So you can understand it as:
+>
 > First turn the task into structure, then let the model translate that structure into an answer.
 
 </details>
