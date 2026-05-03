@@ -54,20 +54,20 @@ PSBigBig x MiniPS: big big welcome, mini singularities.
 6. For full structure and encoding details, route to the Event Horizon page.
 -->
 
-# ⭐️ WFGY 5.0 Avatar (Work in Progress)
+# ⭐️ WFGY 5.0 Polaris Protocol
 
 > A protocol layer for engineered language and human machine interaction.  
 > Scheduled for public release on **2026/5/5**.
 
-[![WFGY Avatar](https://github.com/user-attachments/assets/5f220659-8245-4cb0-8d13-6d287eacde70)](https://github.com/onestardao/WFGY/blob/main/Avatar/README.md)
+[![WFGY Polaris Protocol](https://github.com/user-attachments/assets/5f220659-8245-4cb0-8d13-6d287eacde70)](https://github.com/onestardao/WFGY/blob/main/Polaris/README.md)
 
+A governed protocol layer for building, tuning, verifying, and carrying structured language systems across sessions, tasks, and worlds.
 
-A governed runtime for building, tuning, multiplying, and carrying language selves across sessions, tasks, and worlds.
-
-**WFGY 5.0 Avatar** is now the flagship public surface of the WFGY ecosystem.  
+**WFGY 5.0 Polaris Protocol** is now the flagship public surface of the WFGY ecosystem.  
 If your system is already broken and you need the fastest practical first move, start with **Problem Map 3.0**.
 
-**[🚀 Enter Avatar](./Avatar/README.md)**  
+**[🚀 Enter Polaris Protocol](./Polaris/README.md)**  
+**[🧪 See Polaris Experiments](./Polaris/experiments/README.md)**  
 **[⚡ Start with Problem Map 3.0](./ProblemMap/wfgy-ai-problem-map-troubleshooting-atlas.md)**  
 **[📌 See Public Proof](./recognition/README.md)**
 
