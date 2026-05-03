@@ -1,15 +1,16 @@
 # Polaris Experiments
 
+> 繁體中文版本：[`README.zh-TW.md`](./README.zh-TW.md)  
+> Note: Not every WFGY page currently has a Traditional Chinese version. If versions differ, the English page is the primary reference.
+
 Public evidence layer for **WFGY 5.0 Polaris Protocol**.
 
 We are publishing the evidence first.
 
 This folder contains downloadable experiment evidence packages for the current WFGY 5.0 Polaris Protocol pre release track. The packages include raw model outputs, parsed outputs, case verdicts, token accounting, audit records, warning records, certificate files, and SHA256 integrity records.
 
-This is not a screenshot gallery.
-
-This is not a marketing only result page.
-
+This is not a screenshot gallery.  
+This is not a marketing only result page.  
 This is a public evidence layer that lets readers inspect what was tested, what was produced, how outputs were parsed, how verdicts were assigned, and what evidence is currently available before the full open source release.
 
 Official repository:
@@ -22,33 +23,104 @@ MIT License, unless a specific file states otherwise.
 
 ---
 
-## Why This Page Exists
+## 30 Second Summary
 
-Most AI result pages show only the final score.
-
-This page is different.
-
-The goal is to expose the experiment trail itself:
-
-| Layer | What is exposed |
+| Question | Answer |
 | --- | --- |
-| Test layer | case manifests and branch descriptions |
-| Output layer | raw model outputs |
-| Parse layer | parsed structured outputs |
-| Verdict layer | case verdicts, family verdicts, stage verdicts, certificates |
-| Cost layer | token accounting and token related records |
-| Audit layer | leakage checks, hard veto checks, warning tables, Blackfan style audit records |
-| Integrity layer | SHA256 hashes and manifest records |
+| What is this page? | The first public evidence layer for WFGY 5.0 Polaris Protocol |
+| What is public now? | Four evidence packages with raw outputs, parsed outputs, verdicts, token records, audits, and hashes |
+| Is this only a screenshot page? | No. The ZIP files contain inspectable experiment records |
+| How many main packages are public? | 4 packages: PP01, PP02A, PP02B, PP02C |
+| Main branch test cases | 680 |
+| Main branch primary outputs | 3600 |
+| Is the full mathematical core included? | Not yet. It is planned for the 2026/05/05 open source release |
+| Are execution notebooks included? | Not yet. This is an evidence release, not a full execution package |
+| Does this claim that all AI problems are solved? | No. The claims are scoped to the recorded experiment branches |
 
-For non technical readers, this means:
+---
 
-You do not have to trust a screenshot.
+## Who Should Read This Page
 
-You can download the evidence.
+| Reader | Suggested path |
+| --- | --- |
+| Non technical reader | Start with the summary, token saving explanation, and package overview |
+| Engineer | Inspect raw outputs, parsed outputs, verdicts, token tables, audit records, and SHA256 files |
+| Skeptical reader | Read the FAQ, audit records, leakage checks, hard veto checks, and integrity hashes |
+| Reproduction focused reader | Start with the public evidence now. Full math and Colab reproduction materials are planned after 2026/05/05 |
+| WFGY 5.0 follower | This is the first public evidence entry point for Polaris Protocol |
 
-For engineers, this means:
+---
 
-You can inspect the raw outputs, parsed outputs, verdict rows, token tables, audit records, and integrity files directly.
+## Why Token Cost Can Be Reduced
+
+The core intuition is simple.
+
+A common long context workflow gives the model a large block of background, rules, constraints, examples, and task instructions every time.
+
+That is expensive.
+
+The model has to read a large amount of text again and again.
+
+Polaris explores a different direction:
+
+1. Break the task apart
+2. Turn the task into structure
+3. Compress the structure into a task map
+4. Let the model produce the final answer from that map
+
+The task map can be understood as a topology.
+
+Topology does not try to preserve every word. It tries to preserve the important relationships between parts of the task.
+
+| Long context workflow | Polaris topology workflow |
+| --- | --- |
+| Send the full instruction block every time | Build the task structure first |
+| The model rereads long text each time | The model reads a shorter structured representation |
+| Cost grows with context length | Cost can go down |
+| Long text noise can cause drift | Structure can be easier to stabilize |
+| Like carrying an entire library | Like carrying a precise map |
+
+Plain example:
+
+If you want someone to find a place in a city, the traditional way is like giving them a full city encyclopedia every time.
+
+The Polaris direction is more like giving them a route map, area relationships, and key landmarks.
+
+You do not need to carry the whole encyclopedia every time.
+
+You need to preserve the correct structure.
+
+<details>
+<summary>Details: this is not just shortening the prompt</summary>
+
+If you only cut a prompt shorter, information is usually lost and quality often drops.
+
+The Polaris direction is not simple text deletion. The goal is to reorganize the task into a more stable structure.
+
+| Original long text | Structured version |
+| --- | --- |
+| A long task description | Task nodes |
+| Many rules | Rule relationships |
+| Multiple goals | Goal order |
+| Many constraints | Boundary conditions |
+| Possible errors | Audit points |
+| Final answer requirement | Output format |
+
+The model receives a clearer task structure instead of a large unorganized block of text.
+
+The model then does something closer to this:
+
+Read the task map.  
+Translate the task map back into the required output.  
+Complete the requested task.
+
+A simple way to say it:
+
+> Turn the task into structure first, then let the model translate that structure into an answer.
+
+This is one reason why token cost can go down while result quality can still be preserved under the tested workloads.
+
+</details>
 
 ---
 
@@ -79,7 +151,7 @@ The current public layer contains:
 
 Additional sandbox and reference artifacts are preserved inside PP02A and PP02C, but they are not double counted in the primary output table above.
 
-This is the first public evidence layer before the full **2026 05 05** open source release.
+This is the first public evidence layer before the full **2026/05/05** open source release.
 
 ---
 
@@ -103,31 +175,44 @@ If a single branch package is missing from the downloads folder, use the bundle 
 
 ---
 
-## How To Read The Evidence
-
-If you are not an engineer, start here:
+## Quick Inspection Path
 
 | Step | What to open | What it tells you |
 | --- | --- | --- |
-| 1 | README inside each package | What this experiment branch is about |
-| 2 | final verdict or certificate file | Whether the branch passed its current gate |
-| 3 | token accounting file | How much token budget was used |
-| 4 | audit files | Whether leakage, warnings, hard vetoes, or failure surfaces were found |
-| 5 | raw outputs | What the model actually produced |
+| 1 | README inside each package | What the experiment branch is about |
+| 2 | Final verdict or certificate file | Whether the branch passed its current gate |
+| 3 | Token accounting file | How much token budget was used |
+| 4 | Audit files | Whether leakage, warnings, hard vetoes, or failure surfaces were found |
+| 5 | Raw outputs | What the model actually produced |
 
-If you are an engineer, start here:
+<details>
+<summary>Details: inspection path for engineers</summary>
 
 | Step | What to inspect | Why it matters |
 | --- | --- | --- |
-| 1 | raw outputs | Confirms that the run produced real model responses |
-| 2 | parsed outputs | Shows how outputs were converted into structured records |
-| 3 | case verdicts | Connects each case to a verdict |
-| 4 | family or stage verdicts | Shows broader pattern level results |
-| 5 | token accounting | Shows cost and token efficiency behavior |
-| 6 | audit records | Shows leakage checks, warning checks, hard veto checks, or source quality checks |
+| 1 | Raw outputs | Confirms that the run produced real model responses |
+| 2 | Parsed outputs | Shows how outputs were converted into structured records |
+| 3 | Case verdicts | Connects each case to a verdict |
+| 4 | Family or stage verdicts | Shows broader pattern level results |
+| 5 | Token accounting | Shows cost and token efficiency behavior |
+| 6 | Audit records | Shows leakage checks, warning checks, hard veto checks, or source quality checks |
 | 7 | SHA256 manifests | Lets readers verify file integrity |
 
+</details>
+
 ---
+
+## Four Package Overview
+
+| Branch | Plain meaning | Key signal |
+| --- | --- | --- |
+| PP01 | Tests whether structured task representation can reduce token cost while keeping quality | 320 cases, 1920 outputs, C condition used about 16.6 percent of raw total token budget |
+| PP02A | Tests a T4 evidence branch moving from weaker reference to final pass | 120 cases, final `SEAL_PASS`, weaker reference preserved |
+| PP02B | Tests math oriented structured evaluation | 120 cases, 720 outputs, `T4_MAIN_CERTIFICATE_PASS` |
+| PP02C | Tests coding repair, contract validation, sandbox checks, and hard vetoes | 120 cases, 720 outputs, zero hard vetoes, `FULL_SANDBOX_STRONG_PASS` |
+
+<details>
+<summary>Details: PP01</summary>
 
 # PP01: OSK 320 Case Evidence Run
 
@@ -176,7 +261,10 @@ Plain reading:
 
 PP01 shows that, under this tested workload, the compressed condition kept strong output behavior while using a much smaller token budget.
 
----
+</details>
+
+<details>
+<summary>Details: PP02A</summary>
 
 # PP02A: T4 Evidence Branch With Seal Pass
 
@@ -228,7 +316,10 @@ Plain reading:
 
 PP02A is useful because it does not hide the path. It keeps both the weaker reference and the final stronger result.
 
----
+</details>
+
+<details>
+<summary>Details: PP02B</summary>
 
 # PP02B: SP Math 120 Case Evaluation
 
@@ -273,7 +364,10 @@ Plain reading:
 
 PP02B shows that the recorded SP math branch produced complete outputs, passed parsing and contract checks, produced zero family red count, zero compiler verifier red count, zero model stress warning count, and reached `T4_MAIN_CERTIFICATE_PASS`.
 
----
+</details>
+
+<details>
+<summary>Details: PP02C</summary>
 
 # PP02C: Coding Repair And Contract Validation
 
@@ -331,15 +425,15 @@ Plain reading:
 
 PP02C does not claim that all coding tasks are solved. It shows that this specific coding repair and contract validation branch passed the current recorded sandbox, hard veto, and synthetic distractor checks.
 
+</details>
+
 ---
 
-# What The Evidence Supports
+## What The Evidence Supports
 
 The current public evidence supports a scoped reading:
 
 Under the tested Polaris workloads, structured task representations can preserve strong output behavior, reduce token cost in the PP01 branch, and maintain inspectable evidence chains across raw outputs, parsed outputs, verdicts, audits, and hashes.
-
-More specifically:
 
 | Branch | Supported reading |
 | --- | --- |
@@ -354,7 +448,171 @@ It is not only a final claim.
 
 ---
 
-# What This Evidence Does Not Claim
+## FAQ For Skeptical Readers
+
+These results are strong, so skepticism is expected.
+
+This section answers common questions directly.
+
+<details>
+<summary>Q1. Could the data be fake?</summary>
+
+This is the right first question.
+
+That is why this page is not only a screenshot gallery or a score table. The public packages include raw model outputs, parsed outputs, case verdicts, token accounting, audit records, and SHA256 file hashes.
+
+If someone only wanted to fake a result, they would usually show only the final score.
+
+Here, readers can inspect the evidence trail: what the model produced, how outputs were parsed, and how verdicts were assigned.
+
+</details>
+
+<details>
+<summary>Q2. Did you only publish the best looking results?</summary>
+
+This is a fair concern.
+
+PP02A preserves a weaker previous reference run, not only the final pass. PP02C also preserves sandbox checks, hard veto checks, and synthetic distractor checks.
+
+The goal is to publish the experiment trail, not only a victory screenshot.
+
+This is still the first public evidence layer, not the final complete benchmark. Full mathematical logic, reproduction flow, and additional materials are planned after the 2026/05/05 open source release begins.
+
+</details>
+
+<details>
+<summary>Q3. Is this just a shorter prompt?</summary>
+
+No.
+
+If you only make a prompt shorter, information is usually lost and quality often drops.
+
+The Polaris direction is not simple prompt shortening. The task is broken down, structured, and represented more like a task map. The model receives clearer relationships instead of only less text.
+
+Plain version:
+
+A long context workflow is like giving the model a whole encyclopedia every time.  
+The Polaris direction is more like giving the model a map.
+
+That is why PP01 looks at token ratio and output quality together.
+
+</details>
+
+<details>
+<summary>Q4. Did the prompts leak the answers?</summary>
+
+The public packages include leakage checks and audit records.
+
+For example, PP01 records leakage count as 0 and includes checks related to wrong source behavior and shadow overclaim. PP02C also preserves source behavior checks, synthetic distractor checks, and metadata as evidence checks.
+
+These checks are meant to catch cases where the model appears to rely on answers, fake sources, or evidence that should not count.
+
+This does not mean future experiments can never fail. It means the current public packages include the relevant checks instead of hiding them.
+
+</details>
+
+<details>
+<summary>Q5. Why not publish the Colab notebooks and full math now?</summary>
+
+Because this is the first public evidence layer, not the full execution package.
+
+The current release publishes evidence first: raw outputs, parsed outputs, verdict tables, token accounting, audit records, and file hashes.
+
+The full mathematical logic, execution notebooks, and Colab reproduction flow are planned for release after the 2026/05/05 open source release begins.
+
+Simple reason:
+
+Show the evidence first. Release deeper execution and mathematical materials next.
+
+</details>
+
+<details>
+<summary>Q6. Does this prove small models always beat large models?</summary>
+
+No.
+
+A more precise statement is:
+
+Under the tested Polaris workloads, structured task representations can reduce token cost in some branches while preserving strong output behavior.
+
+This does not mean all small models beat all large models.
+
+It also does not mean all tasks are solved.
+
+PP01 supports a scoped claim: under the tested workload, structured task representation preserved strong output behavior while reducing token cost.
+
+</details>
+
+<details>
+<summary>Q7. Does this prove all math, coding, and agent tasks are solved?</summary>
+
+No.
+
+The public data only supports the recorded experiment branches.
+
+PP02B is a math oriented evidence package, but it does not claim that all mathematics is solved.
+
+PP02C is a coding repair and contract validation evidence package, but it does not claim that all coding tasks are solved.
+
+The careful reading is:
+
+These packages show current branch results under specific test conditions, with inspectable evidence trails.
+
+</details>
+
+<details>
+<summary>Q8. What is SHA256 for?</summary>
+
+SHA256 is a file fingerprint.
+
+If a ZIP file is changed, its SHA256 value usually changes.
+
+The SHA256 records let readers check whether the downloaded file matches the public record.
+
+Plain version:
+
+SHA256 does not prove that an experiment is correct.
+
+It helps prove that the file was not silently changed.
+
+</details>
+
+<details>
+<summary>Q9. If I am not an engineer, where should I start?</summary>
+
+Start with the README inside each ZIP package.
+
+Then check the final verdict file, token accounting file, and audit records.
+
+The simple path:
+
+Read what the experiment tests.  
+Check whether it passed.  
+Check how much token cost was used.  
+Check whether leakage, warnings, or hard vetoes were found.
+
+If you want the fastest entry point, start with PP01 because it is the largest and cleanest public evidence package in this release.
+
+</details>
+
+<details>
+<summary>Q10. What is the most important point of this release?</summary>
+
+The most important point is not that there are many ZIP files.
+
+The important point is:
+
+Evidence is being published before the deeper mathematical and execution materials.
+
+Readers do not have to trust only screenshots or slogans. They can inspect raw outputs, parsed outputs, verdict tables, token accounting, audit records, and file hashes.
+
+This is the first public evidence layer of WFGY 5.0 Polaris Protocol before the 2026/05/05 open source release.
+
+</details>
+
+---
+
+## What This Evidence Does Not Claim
 
 This folder does not claim that:
 
@@ -372,20 +630,18 @@ This folder does not claim that:
 
 The current public status is narrower:
 
-This is the first public evidence layer before the **2026 05 05** open source release.
+This is the first public evidence layer before the **2026/05/05** open source release.
 
 ---
 
-# What Is Not Included Yet
+## What Is Not Included Yet
 
 These packages are public evidence packages, not full execution packages.
-
-They do not include:
 
 | Excluded item | Current status |
 | --- | --- |
 | Execution notebooks | Not included in this first evidence layer |
-| Full mathematical logic | Planned for the 2026 05 05 open source release |
+| Full mathematical logic | Planned for the 2026/05/05 open source release |
 | Full implementation spine | Planned for later public release stages |
 | Complete Colab reproduction notebooks | Planned to be linked through the official WFGY repository |
 | Final universal benchmark suite | Not claimed in this first evidence layer |
@@ -396,13 +652,11 @@ The deeper mathematical logic and reproduction materials are planned to follow a
 
 ---
 
-# Reproducibility Plan
+## Reproducibility Plan
 
 The experiments are designed for Colab based reproduction workflows.
 
 The current ZIP files are public evidence packages, not full execution packages.
-
-That means:
 
 | Item | Included now |
 | --- | --- |
@@ -422,7 +676,7 @@ https://github.com/onestardao/WFGY
 
 ---
 
-# Integrity Hashes
+## Integrity Hashes
 
 SHA256 values for the current public ZIP files:
 
@@ -436,13 +690,13 @@ SHA256 values for the current public ZIP files:
 
 ---
 
-# Suggested Short Description
+## Suggested Short Description
 
 Public evidence layer for WFGY 5.0 Polaris Protocol, including raw outputs, parsed outputs, verdicts, token accounting, audits, SHA256 records, and pre release experiment packages for PP01, PP02A, PP02B, and PP02C.
 
 ---
 
-# Current Status
+## Current Status
 
 | Field | Value |
 | --- | --- |
@@ -461,13 +715,13 @@ Public evidence layer for WFGY 5.0 Polaris Protocol, including raw outputs, pars
 | SHA256 records | Included |
 | Execution notebooks | Not included yet |
 | Private mathematical core | Not included in this first layer |
-| Full implementation release | Planned after the 2026 05 05 open source release begins |
+| Full implementation release | Planned after the 2026/05/05 open source release begins |
 | License | MIT License, unless a specific file states otherwise |
 | Repository | https://github.com/onestardao/WFGY |
 
 ---
 
-# Final Note
+## Final Note
 
 This folder exists to make the evidence visible before the full open source release.
 
@@ -475,4 +729,4 @@ The current packages show the experiment trail:
 
 case design, raw output, parsing, scoring, token accounting, audit, verdicts, and integrity records.
 
-The full mathematical logic and reproduction materials are planned to follow after the 2026 05 05 release begins.
+The full mathematical logic and reproduction materials are planned to follow after the 2026/05/05 release begins.
