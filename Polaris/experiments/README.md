@@ -1,464 +1,478 @@
 # Polaris Experiments
 
-Public experiment evidence packages for **WFGY 5.0 Polaris Protocol**.
+Public evidence layer for **WFGY 5.0 Polaris Protocol**.
 
-This folder contains the downloadable experiment records for the current Polaris evidence layer. The packages include test cases, prompt manifests, raw model outputs, parsed outputs, scoring rows, token usage tables, verdict files, audit records, and hash records.
+We are publishing the evidence first.
 
-The purpose of this folder is simple:
+This folder contains downloadable experiment evidence packages for the current WFGY 5.0 Polaris Protocol pre release track. The packages include raw model outputs, parsed outputs, case verdicts, token accounting, audit records, warning records, certificate files, and SHA256 integrity records.
 
-Readers can inspect the experiment evidence directly.
+This is not a screenshot gallery.
 
-This is not a screenshot gallery.  
-This is not a marketing-only result page.  
-This is a public evidence index for the current Polaris experiment runs.
+This is not a marketing only result page.
+
+This is a public evidence layer that lets readers inspect what was tested, what was produced, how outputs were parsed, how verdicts were assigned, and what evidence is currently available before the full open source release.
+
+Official repository:
+
+https://github.com/onestardao/WFGY
+
+License:
+
+MIT License, unless a specific file states otherwise.
 
 ---
 
-## What This Folder Contains
+## Why This Page Exists
 
-The current public packages cover two experiment branches:
+Most AI result pages show only the final score.
 
-| Branch | Main role | What readers can inspect |
+This page is different.
+
+The goal is to expose the experiment trail itself:
+
+| Layer | What is exposed |
+| --- | --- |
+| Test layer | case manifests and branch descriptions |
+| Output layer | raw model outputs |
+| Parse layer | parsed structured outputs |
+| Verdict layer | case verdicts, family verdicts, stage verdicts, certificates |
+| Cost layer | token accounting and token related records |
+| Audit layer | leakage checks, hard veto checks, warning tables, Blackfan style audit records |
+| Integrity layer | SHA256 hashes and manifest records |
+
+For non technical readers, this means:
+
+You do not have to trust a screenshot.
+
+You can download the evidence.
+
+For engineers, this means:
+
+You can inspect the raw outputs, parsed outputs, verdict rows, token tables, audit records, and integrity files directly.
+
+---
+
+## Current Public Release
+
+The current public release contains four main evidence packages:
+
+| Branch | What it tests | Main result |
 | --- | --- | --- |
-| **AI Tsunami** | topology conservation, compression, negative-control testing, robustness scaling | case manifests, payloads, raw outputs, parsed outputs, score rows, token usage, leakage audit, verdicts |
-| **Moses** | staged robustness, judge traceability, failure-surface tracking, patch verification | pre-registration, arm manifests, prompt manifests, raw outputs, parsed outputs, judge rows, family summaries, hash chains |
+| **PP01** | Large scale OSK evidence run and token efficiency behavior | `OSK_MVP_FINAL_PASS` |
+| **PP02A** | T4 evidence branch with seal pass and near pass reference | `SEAL_PASS` |
+| **PP02B** | SP math oriented 120 case evaluation | `T4_MAIN_CERTIFICATE_PASS` |
+| **PP02C** | Coding repair and contract validation with sandbox checks | `FULL_SANDBOX_STRONG_PASS` |
 
-These two branches should not be read as identical tests.
-
-AI Tsunami focuses on whether compressed task topology can preserve output quality with far fewer tokens.
-
-Moses focuses on whether a staged experiment chain can preserve prompts, outputs, parsing, scoring, verdicts, and failure-surface records across multiple test stages.
-
----
-
-## Download Index
-
-All packages are stored under:
-
-`Polaris/experiments/downloads/`
-
-| Package | Branch | Stage | Main content | Download |
-| --- | --- | --- | --- | --- |
-| `AI_TSU~1.ZIP` | AI Tsunami | Frozen MVP primary seed | First public topology-conservation seed package | [Download](https://github.com/onestardao/WFGY/raw/main/Polaris/experiments/downloads/AI_TSU~1.ZIP) |
-| `AI_TSU~2.ZIP` | AI Tsunami | Frozen MVP v3 evidence | Improved compressed-topology evidence package | [Download](https://github.com/onestardao/WFGY/raw/main/Polaris/experiments/downloads/AI_TSU~2.ZIP) |
-| `AI_TSU~3.ZIP` | AI Tsunami | Frozen MVP v4 pass | Clean frozen MVP pass evidence package | [Download](https://github.com/onestardao/WFGY/raw/main/Polaris/experiments/downloads/AI_TSU~3.ZIP) |
-| `AI_TSU~4.ZIP` | AI Tsunami | T3 internal scale pass | Larger topology-conservation scale package | [Download](https://github.com/onestardao/WFGY/raw/main/Polaris/experiments/downloads/AI_TSU~4.ZIP) |
-| `AI6389~1.ZIP` | AI Tsunami | T4 robustness expansion pass | Largest current AI Tsunami robustness package | [Download](https://github.com/onestardao/WFGY/raw/main/Polaris/experiments/downloads/AI6389~1.ZIP) |
-| `AI_MOSES_P1_EVIDENCE_SEED_OUTPUTS_v3.zip` | Moses | P1 evidence seed pass | First executable Moses evidence seed | [Download](https://github.com/onestardao/WFGY/raw/main/Polaris/experiments/downloads/AI_MOSES_P1_EVIDENCE_SEED_OUTPUTS_v3.zip) |
-| `AI_MOSES_P2_LOCKED_MVP_OUTPUTS.zip` | Moses | P2 locked MVP pass | Locked MVP evidence package | [Download](https://github.com/onestardao/WFGY/raw/main/Polaris/experiments/downloads/AI_MOSES_P2_LOCKED_MVP_OUTPUTS.zip) |
-| `AI_MOSES_T4_PATCH_MINI_VERIFIER_OUTPUTS.zip` | Moses | T4 patch mini verifier pass | Small targeted verifier for known failure surfaces | [Download](https://github.com/onestardao/WFGY/raw/main/Polaris/experiments/downloads/AI_MOSES_T4_PATCH_MINI_VERIFIER_OUTPUTS.zip) |
-| `AI_MOSES_T4_ROBUSTNESS_EXPANSION_OUTPUTS.zip` | Moses | T4 robustness expansion halt record | Full stress record with preserved halt reasons | [Download](https://github.com/onestardao/WFGY/raw/main/Polaris/experiments/downloads/AI_MOSES_T4_ROBUSTNESS_EXPANSION_OUTPUTS.zip) |
-
----
-
-## Public Evidence Scale
-
-The current indexed packages contain:
+The current public layer contains:
 
 | Evidence item | Count |
 | --- | ---: |
-| ZIP packages indexed | 9 |
-| Files inside ZIP packages | 141 |
-| Total test cases | 478 |
-| Raw model output records | 2228 |
-| Parsed output records | 2228 |
-| Judge or score rows | 2228 |
-| Full prompt manifest rows | 948 |
-| AI Tsunami case payload rows | 320 |
-| Total uncompressed evidence size | about 8.6 MB |
+| Main evidence packages | 4 |
+| Main branch test cases | 680 |
+| Main branch primary outputs | 3600 |
+| PP01 outputs | 1920 |
+| PP02A final run outputs | 240 |
+| PP02B outputs | 720 |
+| PP02C main run outputs | 720 |
+| Execution notebooks included | 0 |
+| Private mathematical core included | 0 |
 
-This scale matters because the experiment is not represented only by a final score.
+Additional sandbox and reference artifacts are preserved inside PP02A and PP02C, but they are not double counted in the primary output table above.
 
-The packages expose the surrounding evidence chain:
-
-case design, prompt construction, raw model output, parsed output, scoring rows, token records, verdict records, audit records, and hash records.
+This is the first public evidence layer before the full **2026 05 05** open source release.
 
 ---
 
-## How To Read The Packages
+## Downloads
 
-A reader does not need to inspect every file first.
+All files are stored under:
 
-The recommended reading order is:
+`Polaris/experiments/downloads/`
 
-| Step | File type | Why it matters |
+| Package | Branch | Contents | Download |
+| --- | --- | --- | --- |
+| `wfgy5_polaris_protocol_pp01_t4_osk_320case_public_evidence_20260503.zip` | PP01 | 320 cases, 1920 outputs, verdicts, token accounting, audits, hashes | [Download](https://github.com/onestardao/WFGY/raw/main/Polaris/experiments/downloads/wfgy5_polaris_protocol_pp01_t4_osk_320case_public_evidence_20260503.zip) |
+| `wfgy5_polaris_protocol_pp02a_t4_120case_public_evidence_20260503.zip` | PP02A | 120 case T4 evidence branch, final seal pass, near pass reference | [Download](https://github.com/onestardao/WFGY/raw/main/Polaris/experiments/downloads/wfgy5_polaris_protocol_pp02a_t4_120case_public_evidence_20260503.zip) |
+| `wfgy5_polaris_protocol_pp02b_sp_120case_public_evidence_20260503.zip` | PP02B | 120 case SP math evaluation, 720 outputs, certificate evidence | [Download](https://github.com/onestardao/WFGY/raw/main/Polaris/experiments/downloads/wfgy5_polaris_protocol_pp02b_sp_120case_public_evidence_20260503.zip) |
+| `wfgy5_polaris_protocol_pp02c_t4_120case_public_evidence_20260503.zip` | PP02C | 120 case coding repair and contract validation, sandbox and hard veto evidence | [Download](https://github.com/onestardao/WFGY/raw/main/Polaris/experiments/downloads/wfgy5_polaris_protocol_pp02c_t4_120case_public_evidence_20260503.zip) |
+| `wfgy5_polaris_protocol_public_evidence_bundle_20260503.zip` | Bundle | All current public evidence packages in one bundle | [Download](https://github.com/onestardao/WFGY/raw/main/Polaris/experiments/downloads/wfgy5_polaris_protocol_public_evidence_bundle_20260503.zip) |
+
+Important note:
+
+If a single branch package is missing from the downloads folder, use the bundle package until the individual file is uploaded.
+
+---
+
+## How To Read The Evidence
+
+If you are not an engineer, start here:
+
+| Step | What to open | What it tells you |
 | --- | --- | --- |
-| 1 | `global_verdict.json` or `10_GLOBAL_VERDICT.json` | Start here. This gives the top-level result, output count, parse status, leakage status, score summary, token summary, pass state, or halt reason. |
-| 2 | `arm_summary.csv`, `07_ARM_SUMMARY.csv`, `08_FAMILY_ARM_SUMMARY.csv` | These show arm-level and family-level performance. |
-| 3 | `token_usage.csv`, `token_ratio_summary.csv` | These show token cost, token ratio, and compression behavior. |
-| 4 | `raw_outputs.jsonl` or `04_RAW_OUTPUTS.jsonl` | These are the original model outputs. They show that the experiment actually produced responses. |
-| 5 | `parsed_outputs.jsonl` or `05_PARSED_OUTPUTS.json` | These show how raw outputs were converted into structured scoring records. |
-| 6 | `case_level_scores.csv` or `06_JUDGE_ROWS.csv` | These connect individual cases to scored results. |
-| 7 | `trial_freeze_manifest.json`, `00_PRE_REGISTRATION.json`, `03_PROMPT_MANIFEST_HASHES.csv`, `11_HASH_CHAIN.json` | These preserve run state, prompt hashes, and integrity records. |
+| 1 | README inside each package | What this experiment branch is about |
+| 2 | final verdict or certificate file | Whether the branch passed its current gate |
+| 3 | token accounting file | How much token budget was used |
+| 4 | audit files | Whether leakage, warnings, hard vetoes, or failure surfaces were found |
+| 5 | raw outputs | What the model actually produced |
+
+If you are an engineer, start here:
+
+| Step | What to inspect | Why it matters |
+| --- | --- | --- |
+| 1 | raw outputs | Confirms that the run produced real model responses |
+| 2 | parsed outputs | Shows how outputs were converted into structured records |
+| 3 | case verdicts | Connects each case to a verdict |
+| 4 | family or stage verdicts | Shows broader pattern level results |
+| 5 | token accounting | Shows cost and token efficiency behavior |
+| 6 | audit records | Shows leakage checks, warning checks, hard veto checks, or source quality checks |
+| 7 | SHA256 manifests | Lets readers verify file integrity |
 
 ---
 
-# AI Tsunami Branch
+# PP01: OSK 320 Case Evidence Run
 
-## What AI Tsunami Tests
+## What PP01 Tests
 
-AI Tsunami tests whether a compressed topology packet can preserve output quality while using far fewer tokens than a long-context baseline.
+PP01 is the largest main branch in this first public evidence layer.
 
-The important comparison is not simply:
+It tests whether a compressed or structured task representation can preserve strong output behavior while using much fewer tokens than a long context baseline.
 
-> long prompt versus short prompt
+The simple version:
 
-The important comparison is:
+Can the system keep the important structure of a task without carrying the full long prompt every time?
 
-| Arm | Meaning |
-| --- | --- |
-| A | long-context baseline |
-| B | teacher topology condition |
-| C | compressed topology condition |
-| D | corrupted or paired-corrupted topology condition |
-
-The key question is:
-
-> If useful task topology is preserved, can the model keep high output quality even with a much smaller input?
-
-The expected pattern is:
-
-| Condition | Expected behavior |
-| --- | --- |
-| Long context | strong but expensive |
-| Teacher topology | strong reference condition |
-| Compressed topology | should stay close to strong conditions while using fewer tokens |
-| Corrupted topology | should degrade clearly |
-
-This gives the experiment a negative-control structure. The corrupted condition is important because it shows that the result is not only caused by shorter prompts or lucky scoring. If topology is damaged, performance should fall.
-
----
-
-## AI Tsunami Package Contents
-
-Most AI Tsunami packages contain:
-
-| File | Meaning |
-| --- | --- |
-| `case_manifest.csv` | List of test cases and metadata |
-| `case_payloads_internal.jsonl` | Case payloads used to construct the test inputs |
-| `raw_outputs.jsonl` | Original model outputs |
-| `parsed_outputs.jsonl` | Structured parsed results |
-| `case_level_scores.csv` | Per-case scoring rows |
-| `token_usage.csv` | Token usage by case and arm |
-| `token_ratio_summary.csv` | Token ratio and compression summary |
-| `coverage_unit_summary.csv` | Coverage summary by unit |
-| `failure_signature_table.csv` | Failure signature records |
-| `leakage_audit.csv` | Leakage and contamination checks |
-| `arm_summary.csv` | Arm-level score and token summary |
-| `global_verdict.json` | Top-level verdict and gate status |
-| `trial_freeze_manifest.json` | Frozen trial metadata |
-| `gate_manifest.json` | Gate definitions and thresholds |
-| `arm_manifest.json` | Arm definitions |
-| `blackfan_audit.md` | Adversarial audit notes |
-| `public_safe_summary_template.md` | Public summary layer |
-
----
-
-## AI Tsunami Progression
-
-| Package | Cases | Raw outputs | Score rows | Result reading |
-| --- | ---: | ---: | ---: | --- |
-| `AI_TSU~1.ZIP` | 48 | 192 | 192 | Quality seed. Output and parsing were clean, but token-ratio and corruption-separation gates were not yet strong enough. |
-| `AI_TSU~2.ZIP` | 48 | 192 | 192 | Major improvement. Compressed topology passed token-ratio behavior, but still missed some strict gates. |
-| `AI_TSU~3.ZIP` | 48 | 192 | 192 | Frozen MVP primary pass. All listed gates passed in this run. |
-| `AI_TSU~4.ZIP` | 80 | 320 | 320 | T3 internal scale pass. The test surface expanded while preserving clean parse, leakage, scoring, and topology behavior. |
-| `AI6389~1.ZIP` | 96 | 384 | 384 | T4 robustness expansion pass. This is the strongest AI Tsunami package currently indexed here. |
-
----
-
-## AI Tsunami Result Snapshot
-
-The strongest current AI Tsunami package is:
-
-`AI6389~1.ZIP`
-
-It records:
+## PP01 Result Snapshot
 
 | Metric | Value |
 | --- | ---: |
-| Cases | 96 |
-| Expected outputs | 384 |
-| Actual outputs | 384 |
+| Cases | 320 |
+| Arms | 6 |
+| Expected outputs | 1920 |
+| Actual outputs | 1920 |
+| Parse pass rate | 1.0 |
+| Leakage count | 0 |
+| C score mean | 0.988465 |
+| B score mean | 0.967265 |
+| C retention vs B | 1.0219 |
+| C raw total ratio vs A | 0.1656 |
+| C input ratio vs A | 0.1242 |
+| Failure signature match rate | 1.0 |
+| Shadow overclaim count | 0 |
+| Wrong source critical count | 0 |
+| Family collapse count | 0 |
+| Hard gates pass | true |
+| Final pass | true |
+| Global status | `OSK_MVP_FINAL_PASS` |
+
+## Why PP01 Matters
+
+PP01 is the cleanest large scale evidence package in this release.
+
+It records 320 cases and 1920 outputs. The run reached 100 percent parse success, zero leakage, zero family collapse, zero wrong source critical count, and final pass status.
+
+The compressed condition used about **16.6 percent** of the raw total token budget compared with the long context baseline. It used about **12.4 percent** of the input token budget.
+
+Plain reading:
+
+PP01 shows that, under this tested workload, the compressed condition kept strong output behavior while using a much smaller token budget.
+
+---
+
+# PP02A: T4 Evidence Branch With Seal Pass
+
+## What PP02A Tests
+
+PP02A is a 120 case T4 evidence branch.
+
+Its value is not only the final result.
+
+It also preserves a near pass reference, which means readers can inspect part of the development trail rather than only seeing a polished final number.
+
+## PP02A Final Result Snapshot
+
+| Metric | Final value |
+| --- | ---: |
+| Cases | 120 |
+| Raw outputs in final run | 240 |
+| Domain count | 6 |
 | API error count | 0 |
-| Parse pass rate | 1.0 |
-| Leakage count | 0 |
-| Failure signature match | 1.0 |
-| Global level | `L5_T4_ROBUSTNESS_EXPANSION_PASS` |
-| Global pass | `true` |
+| Parser fail count | 0 |
+| Parse success rate | 1.0 |
+| Total weak rows | 0 |
+| Seal domain count | 6 |
+| Dominant or better domains | 6 |
+| Release or better domains | 6 |
+| T4 system score | 100.0 |
+| OVER100 internal score | 125.0 |
+| Final verdict | `SEAL_PASS` |
 
-Arm-level score and token summary:
+## PP02A Reference Trail
 
-| Arm | Input type | Model | Mean score | Mean total tokens |
-| --- | --- | --- | ---: | ---: |
-| A | long context | GPT-4.1 | 0.9323 | 1754.56 |
-| B | teacher topology | GPT-4.1 | 0.9750 | 464.42 |
-| C | compressed topology | GPT-4.1 mini | 0.9365 | 380.63 |
-| D | paired corrupted topology | GPT-4.1 mini | 0.2448 | 459.19 |
-
-Key derived results:
-
-| Metric | Value |
+| Metric | Previous reference value |
 | --- | ---: |
-| C minus A | 0.0042 |
-| C retention against B | 0.9605 |
-| C case pass rate | 1.0 |
-| C minus D | 0.6917 |
-| Raw token ratio C/A | 0.2169 |
-| Amortized token ratio C/A | 0.1627 |
+| Cases | 120 |
+| Parser fail count | 1 |
+| Parse success rate | 0.9958 |
+| Total weak rows | 1 |
+| Seal domain count | 5 |
+| T4 system score | 76.56 |
+| Final verdict | `INVALID` |
 
-Readable interpretation:
+## Why PP02A Matters
 
-The compressed topology condition stayed close to the long-context baseline while using roughly **21.7 percent** of the raw token budget. Under the amortized calculation recorded in the package, it used roughly **16.3 percent** of the long-context baseline token budget.
+PP02A shows an evidence branch moving from a weaker reference run into a final seal pass.
 
-The corrupted topology condition collapsed clearly, which supports the interpretation that topology preservation mattered.
+The final run records zero parser failures, zero weak rows, all six domains reaching the seal condition, and a final `SEAL_PASS`.
+
+Plain reading:
+
+PP02A is useful because it does not hide the path. It keeps both the weaker reference and the final stronger result.
 
 ---
 
-# Moses Branch
+# PP02B: SP Math 120 Case Evaluation
 
-## What Moses Tests
+## What PP02B Tests
 
-Moses is a staged robustness and verification branch.
+PP02B is the first public math oriented evidence package in this release set.
 
-It tests whether the experiment chain can preserve:
+It tests a structured 120 case SP math evaluation branch with compiled outputs, model stress outputs, audits, certificates, and verdicts.
 
-| Layer | What is checked |
-| --- | --- |
-| Case layer | cases and families are recorded |
-| Prompt layer | full prompts and prompt hashes are preserved |
-| Output layer | raw outputs are retained |
-| Parse layer | outputs are converted into structured records |
-| Judge layer | every output has a judge row |
-| Summary layer | arm and family summaries are produced |
-| Verdict layer | pass or halt state is explicit |
-| Integrity layer | hash chain and run records are preserved |
+This package does not claim that all mathematics is solved.
 
-Moses is useful because it includes both pass records and a halt record. The halt record is not hidden. It is part of the public evidence.
+It shows that this recorded math oriented branch passed its current T4 certificate checks.
+
+## PP02B Result Snapshot
+
+| Metric | Value |
+| --- | ---: |
+| Cases | 120 |
+| Expected compiled outputs | 120 |
+| Actual compiled outputs | 120 |
+| Expected total outputs | 720 |
+| Actual total outputs | 720 |
+| Expected model stress outputs | 600 |
+| Actual model stress outputs | 600 |
+| Model API calls | 600 |
+| C parse pass rate | 1.0 |
+| C contract pass rate | 1.0 |
+| Family red count | 0 |
+| Compiler verifier red count | 0 |
+| Model stress warning count | 0 |
+| Model stress verdict | `MODEL_STRESS_PASS` |
+| Main certificate verdict | `T4_MAIN_CERTIFICATE_PASS` |
+| Final verdict | `T4_MAIN_CERTIFICATE_PASS` |
+
+## Why PP02B Matters
+
+PP02B extends the evidence layer beyond token reduction and into math oriented structured evaluation.
+
+It records 720 total outputs, including 600 model stress outputs and 120 compiled outputs.
+
+Plain reading:
+
+PP02B shows that the recorded SP math branch produced complete outputs, passed parsing and contract checks, produced zero family red count, zero compiler verifier red count, zero model stress warning count, and reached `T4_MAIN_CERTIFICATE_PASS`.
 
 ---
 
-## Moses Package Contents
+# PP02C: Coding Repair And Contract Validation
 
-Most Moses packages contain:
+## What PP02C Tests
 
-| File | Meaning |
-| --- | --- |
-| `00_PRE_REGISTRATION.json` | Pre-registration record for the run |
-| `01_ARM_MANIFEST.json` | Arm definitions |
-| `02_CASE_MANIFEST.json` | Case manifest in JSON format |
-| `02_CASE_MANIFEST.csv` | Case manifest in CSV format |
-| `03_PROMPT_MANIFEST_FULL.json` | Full prompt manifest |
-| `03_PROMPT_MANIFEST_HASHES.csv` | Prompt hash table |
-| `04_RAW_OUTPUTS.jsonl` | Original model outputs |
-| `05_PARSED_OUTPUTS.json` | Parsed model outputs |
-| `06_JUDGE_ROWS.csv` | Per-output judge rows |
-| `07_ARM_SUMMARY.csv` | Arm-level summary |
-| `08_FAMILY_ARM_SUMMARY.csv` | Family-by-arm summary |
-| `09_WORST_FAMILY_TABLE.csv` | Worst-family table for stress runs |
-| `09_FAMILY_PASS_TABLE.csv` | Family pass table for the mini verifier package |
-| `10_GLOBAL_VERDICT.json` | Top-level verdict file |
-| `11_HASH_CHAIN.json` | Hash chain and integrity record |
+PP02C moves the public evidence layer toward coding repair and contract based validation.
 
----
+Coding repair is easy to overclaim, so this branch uses stronger boundaries around hard vetoes, sandbox checks, warning checks, source behavior, and synthetic distractor behavior.
 
-## Moses Progression
+The simple version:
 
-| Package | Cases | Raw outputs | Judge rows | Verdict |
-| --- | ---: | ---: | ---: | --- |
-| `AI_MOSES_P1_EVIDENCE_SEED_OUTPUTS_v3.zip` | 32 | 192 | 192 | `P1_EVIDENCE_SEED_PASS` |
-| `AI_MOSES_P2_LOCKED_MVP_OUTPUTS.zip` | 48 | 288 | 288 | `P2_LOCKED_MVP_PASS` |
-| `AI_MOSES_T4_PATCH_MINI_VERIFIER_OUTPUTS.zip` | 6 | 36 | 36 | `T4_PATCH_MINI_VERIFIER_PASS` |
-| `AI_MOSES_T4_ROBUSTNESS_EXPANSION_OUTPUTS.zip` | 72 | 432 | 432 | `T4_ROBUSTNESS_EXPANSION_HALT` |
+Can the branch pass strict coding repair checks without relying on fake sources, metadata as evidence, ignored source priority, or unsafe patch claims?
 
----
-
-## Moses Result Snapshot
-
-### P1 Evidence Seed
-
-Package:
-
-`AI_MOSES_P1_EVIDENCE_SEED_OUTPUTS_v3.zip`
+## PP02C Main Result Snapshot
 
 | Metric | Value |
 | --- | ---: |
-| Cases | 32 |
-| Expected outputs | 192 |
-| Actual outputs | 192 |
+| Main cases | 120 |
+| Arms per case | 6 |
+| Expected main outputs | 720 |
+| Actual main outputs | 720 |
 | Parse pass rate | 1.0 |
-| Leakage count | 0 |
-| Gold leakage count | 0 |
-| Scorer shortcut count | 0 |
-| C1 vs A1 margin | 0.0445 |
-| C1 vs B1 margin | 0.0592 |
-| C1 vs S1 margin | 0.4375 |
-| Token ratio C1/A1 | 0.4849 |
-| Poison accepted count | 0 |
-| Failure signature match rate | 1.0 |
-| Verdict | `P1_EVIDENCE_SEED_PASS` |
+| Hard veto count | 0 |
+| Warning count | 0 |
+| Repo hallucination count | 0 |
+| Metadata as evidence count | 0 |
+| Synthetic distractor as source count | 0 |
+| Source priority ignored count | 0 |
+| Exact patch without source count | 0 |
+| Contract missing field count | 0 |
+| Contract enum invalid count | 0 |
+| Contract value mismatch count | 0 |
+| Claim ceiling pass rate | 1.0 |
+| Overpass score | 120 |
+| Final branch verdict | `FULL_SANDBOX_STRONG_PASS` |
 
-### P2 Locked MVP
+## PP02C Supporting Checks
 
-Package:
+| Sub run | Cases | Outputs | Result |
+| --- | ---: | ---: | --- |
+| Final canonical result | 120 | 720 | `FULL_SANDBOX_STRONG_PASS` |
+| Sandbox run 1 | 120 | 720 | `FULL_SANDBOX_STRONG_PASS` |
+| Sandbox run 2 | 120 | 720 | `FULL_SANDBOX_STRONG_PASS` |
+| Global hard veto matrix | 96 | 480 | `GLOBAL_HARD_VETO_MATRIX_STRONG_PASS` |
+| Mini preflight | 24 | 96 | `MINI_PREFLIGHT_STRONG_PASS` |
+| Synthetic distractor matrix | 64 | 320 | `SYNTHETIC_DISTRACTOR_MATRIX_STRONG_PASS` |
 
-`AI_MOSES_P2_LOCKED_MVP_OUTPUTS.zip`
+## Why PP02C Matters
 
-| Metric | Value |
-| --- | ---: |
-| Cases | 48 |
-| Expected outputs | 288 |
-| Actual outputs | 288 |
-| Parse pass rate | 1.0 |
-| Leakage count | 0 |
-| Gold leakage count | 0 |
-| Scorer shortcut count | 0 |
-| C1 vs A1 margin | 0.0495 |
-| C1 vs B1 margin | 0.0494 |
-| C1 vs S1 margin | 0.4608 |
-| Token ratio C1/A1 | 0.4873 |
-| Poison accepted count | 0 |
-| Failure signature match rate | 1.0 |
-| Verdict | `P2_LOCKED_MVP_PASS` |
+PP02C is the strongest current public signal for the coding repair side of this experiment track.
 
-### T4 Patch Mini Verifier
+The main run records 720 of 720 outputs, 100 percent parse success, zero hard vetoes, zero warnings, zero repo hallucination count, zero synthetic distractor as source count, and `FULL_SANDBOX_STRONG_PASS`.
 
-Package:
+Plain reading:
 
-`AI_MOSES_T4_PATCH_MINI_VERIFIER_OUTPUTS.zip`
-
-| Metric | Value |
-| --- | ---: |
-| Cases | 6 |
-| Expected outputs | 36 |
-| Actual outputs | 36 |
-| Parse pass rate | 1.0 |
-| Leakage count | 0 |
-| Gold leakage count | 0 |
-| Scorer shortcut count | 0 |
-| C1 vs A1 margin | 0.0 |
-| C1 vs B1 margin | 0.0 |
-| C1 vs S1 margin | 0.5392 |
-| Token ratio C1/A1 | 0.3264 |
-| Poison accepted count | 0 |
-| Failure signature match rate | 1.0 |
-| Verdict | `T4_PATCH_MINI_VERIFIER_PASS` |
-
-### T4 Robustness Expansion
-
-Package:
-
-`AI_MOSES_T4_ROBUSTNESS_EXPANSION_OUTPUTS.zip`
-
-| Metric | Value |
-| --- | ---: |
-| Cases | 72 |
-| Expected outputs | 432 |
-| Actual outputs | 432 |
-| Parse pass rate | 1.0 |
-| Leakage count | 0 |
-| Gold leakage count | 0 |
-| Scorer shortcut count | 0 |
-| C1 vs A1 margin | -0.0047 |
-| C1 vs B1 margin | -0.0113 |
-| C1 vs S1 margin | 0.3839 |
-| Token ratio C1/A1 | 0.6159 |
-| Poison accepted count | 0 |
-| Failure signature match rate | 1.0 |
-| Halt reason | `c1_le_b1` |
-| Verdict | `T4_ROBUSTNESS_EXPANSION_HALT` |
-
-Readable interpretation:
-
-The Moses branch has clean pass records at P1, P2, and the patch mini verifier stage. The larger T4 robustness expansion run is preserved as a halt record, not hidden or renamed into a pass. This makes the branch useful for audit and future correction because both success records and failure surfaces are visible.
+PP02C does not claim that all coding tasks are solved. It shows that this specific coding repair and contract validation branch passed the current recorded sandbox, hard veto, and synthetic distractor checks.
 
 ---
 
 # What The Evidence Supports
 
-The current public evidence supports a scoped interpretation:
+The current public evidence supports a scoped reading:
 
-> Under the tested topology-conservation workloads, compressed topology packets can preserve high output quality with far fewer tokens, while corrupted topology conditions degrade in the expected direction.
+Under the tested Polaris workloads, structured task representations can preserve strong output behavior, reduce token cost in the PP01 branch, and maintain inspectable evidence chains across raw outputs, parsed outputs, verdicts, audits, and hashes.
 
-The strongest AI Tsunami result shows that the compressed topology condition stayed near long-context quality while using a much smaller token budget.
+More specifically:
 
-The Moses branch shows staged evidence for experiment traceability, prompt preservation, output preservation, judge rows, family summaries, pass states, and halt states.
+| Branch | Supported reading |
+| --- | --- |
+| PP01 | Strong evidence for topology first token reduction under the tested OSK workload |
+| PP02A | Strong evidence for a T4 evidence branch reaching seal pass after a weaker reference |
+| PP02B | Public evidence for a math oriented structured evaluation passing current T4 certificate checks |
+| PP02C | Public evidence for coding repair and contract validation passing current sandbox and hard veto checks |
 
-Together, the packages show a public experiment trail rather than only a final claim.
+This is a public experiment trail.
+
+It is not only a final claim.
 
 ---
 
-# What This Folder Does Not Claim
+# What This Evidence Does Not Claim
 
-This folder does not claim:
+This folder does not claim that:
 
 * all AI tasks are solved
 * all benchmarks are complete
 * GPU scaling is globally disproven
 * small models universally beat large models
-* coding is fully proven
-* math is fully proven
-* creative generation is fully proven
-* multimodal generation is fully proven
-* agent execution is fully proven
-* Moses and AI Tsunami are fully merged
-* Polaris Protocol is final
+* all coding tasks are solved
+* all math tasks are solved
+* all creative generation tasks are solved
+* all multimodal tasks are solved
+* all agent tasks are solved
+* the full WFGY 5.0 Polaris Protocol implementation is already released here
+* the full mathematical core is already released here
 
 The current public status is narrower:
 
-> downloadable public evidence packages for the current Polaris topology-first experiment line.
+This is the first public evidence layer before the **2026 05 05** open source release.
 
 ---
 
-# What Is Not Included
+# What Is Not Included Yet
 
-These packages are public experiment records.
+These packages are public evidence packages, not full execution packages.
 
-They do not release the private mathematical core of WFGY 5.0 Polaris Protocol. They also do not release the full private implementation spine or unreleased internal construction logic.
+They do not include:
 
-They make the benchmark evidence inspectable.
+| Excluded item | Current status |
+| --- | --- |
+| Execution notebooks | Not included in this first evidence layer |
+| Full mathematical logic | Planned for the 2026 05 05 open source release |
+| Full implementation spine | Planned for later public release stages |
+| Complete Colab reproduction notebooks | Planned to be linked through the official WFGY repository |
+| Final universal benchmark suite | Not claimed in this first evidence layer |
 
-They do not make the underlying private engine public.
+This release makes the evidence inspectable first.
+
+The deeper mathematical logic and reproduction materials are planned to follow after the open source release begins.
+
+---
+
+# Reproducibility Plan
+
+The experiments are designed for Colab based reproduction workflows.
+
+The current ZIP files are public evidence packages, not full execution packages.
+
+That means:
+
+| Item | Included now |
+| --- | --- |
+| Raw outputs | Yes |
+| Parsed outputs | Yes |
+| Verdict tables | Yes |
+| Token accounting | Yes |
+| Audit records | Yes |
+| SHA256 records | Yes |
+| Execution notebooks | Not yet |
+| Core mathematical logic | Not yet |
+| Colab reproduction materials | Planned after release |
+
+Future reproduction materials will be referenced from:
+
+https://github.com/onestardao/WFGY
 
 ---
 
 # Integrity Hashes
 
-SHA256 values for the current ZIP files:
+SHA256 values for the current public ZIP files:
 
 | Package | SHA256 |
 | --- | --- |
-| `AI_TSU~1.ZIP` | `b1a294f7bf9c726e943a799d93d46e4b209c7172683bfb30172129dcb1a270f5` |
-| `AI_TSU~2.ZIP` | `95b02544c2670f9f7ec52f510bef44da3516cddb31b8e576a5df365d9961ba3b` |
-| `AI_TSU~3.ZIP` | `9e971365d503df385af50adf9613149706a20fcfde57314569c9e975428b86bf` |
-| `AI_TSU~4.ZIP` | `14947dcf070bbb304086844a6552a497ab4a1a1946f39310dbe40aaa5e20991f` |
-| `AI6389~1.ZIP` | `5e0be386588eb76799bd6698b203da581da956a5adb970c0564e3b267a2093f4` |
-| `AI_MOSES_P1_EVIDENCE_SEED_OUTPUTS_v3.zip` | `fa6b97f21dee729c4bfc1550cdcc50de88da945698f0f72d425e6f34eaada93d` |
-| `AI_MOSES_P2_LOCKED_MVP_OUTPUTS.zip` | `1976da1ab62cbf3c912fa1c06b5472e990fdf7df61a8a6114e2831dd094782d9` |
-| `AI_MOSES_T4_PATCH_MINI_VERIFIER_OUTPUTS.zip` | `715888fc1e8e705a0a01c9502c1ff50ae21c04f84b19d04bfa94b0eefecf4de5` |
-| `AI_MOSES_T4_ROBUSTNESS_EXPANSION_OUTPUTS.zip` | `4c2b4a3874795e30748668853f570cfdb86ee88bee3188efa198a99b6690e2e2` |
+| `wfgy5_polaris_protocol_pp01_t4_osk_320case_public_evidence_20260503.zip` | `ff0caa1d7784199d4dcddf558a822041bc026a93b57dfe9e5af0ce3245311856` |
+| `wfgy5_polaris_protocol_pp02a_t4_120case_public_evidence_20260503.zip` | `28f2ca19a0a6bac27967bedbc07b4c2f9b44f1c212687ae74512967d42a2e7ad` |
+| `wfgy5_polaris_protocol_pp02b_sp_120case_public_evidence_20260503.zip` | `10c5d39a15d74afb29d89386147ba60e830fc624b050d53f0e4187c97fe3df65` |
+| `wfgy5_polaris_protocol_pp02c_t4_120case_public_evidence_20260503.zip` | `a85b7919da2fae8c543189fbaf586e3573af73642a1e410e49e5df6a5e6bb9f8` |
+| `wfgy5_polaris_protocol_public_evidence_bundle_20260503.zip` | `50ed006c83f25d69b3080da044882e21663ada2cecb432622b843411d078657e` |
 
 ---
 
 # Suggested Short Description
 
-Use this short description when linking to this folder:
-
-> Public experiment evidence packages for WFGY 5.0 Polaris Protocol, including cases, prompts, raw outputs, parsed outputs, scoring traces, token usage records, verdicts, and hash files.
+Public evidence layer for WFGY 5.0 Polaris Protocol, including raw outputs, parsed outputs, verdicts, token accounting, audits, SHA256 records, and pre release experiment packages for PP01, PP02A, PP02B, and PP02C.
 
 ---
 
-# Status
+# Current Status
 
 | Field | Value |
 | --- | --- |
 | Project | WFGY 5.0 Polaris Protocol |
-| Folder role | public experiment evidence layer |
-| Data type | downloadable experiment records |
-| Indexed ZIP packages | 9 |
-| Total public cases | 478 |
-| Total raw output records | 2228 |
-| Total parsed output records | 2228 |
-| Total judge or score rows | 2228 |
-| Private mathematical core | not included |
-| Full implementation release | not included |
+| Folder role | Public evidence layer |
+| Release type | First public evidence layer |
+| Public branches | PP01, PP02A, PP02B, PP02C |
+| Main evidence packages | 4 |
+| Main branch test cases | 680 |
+| Main branch primary outputs | 3600 |
+| Raw outputs | Included |
+| Parsed outputs | Included |
+| Verdict files | Included |
+| Audit files | Included |
+| Token accounting | Included |
+| SHA256 records | Included |
+| Execution notebooks | Not included yet |
+| Private mathematical core | Not included in this first layer |
+| Full implementation release | Planned after the 2026 05 05 open source release begins |
+| License | MIT License, unless a specific file states otherwise |
+| Repository | https://github.com/onestardao/WFGY |
+
+---
+
+# Final Note
+
+This folder exists to make the evidence visible before the full open source release.
+
+The current packages show the experiment trail:
+
+case design, raw output, parsing, scoring, token accounting, audit, verdicts, and integrity records.
+
+The full mathematical logic and reproduction materials are planned to follow after the 2026 05 05 release begins.
