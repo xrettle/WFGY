@@ -7,9 +7,9 @@ This is the public experimental evidence page for **WFGY 5.0 Polaris Protocol**.
 
 The purpose of this page is simple:
 
-You should be able to understand what these experiments are testing, why they matter for AI cost, what the four evidence packages represent, and what the current results can and cannot claim, without downloading any ZIP file first.
+You should be able to understand what these experiments are testing, why they matter for AI cost, what the public evidence packages represent, and what the current results can and cannot claim, without downloading any ZIP file first.
 
-The ZIP files are mainly for people who want to reproduce, research, audit, or inspect the raw model outputs.
+The ZIP files are mainly for people who want to reproduce, research, audit, or inspect the public evidence records.
 
 Official repository:
 
@@ -28,7 +28,8 @@ Unless a specific file states otherwise, this project uses the MIT License.
 | What you want to see | Jump to |
 | --- | --- |
 | Understand the experiment first | [3-minute overview](#quick-start) |
-| What the four packages mean | [Four public evidence packages](#evidence-packs) |
+| What the packages mean | [Seven public evidence packages](#evidence-packs) |
+| Why PP02D was added | [Community follow-up supplement](#community-follow-up) |
 | Core numbers | [Core results overview](#results) |
 | Whether the tasks were too easy | [Task design and rigor](#rigor) |
 | How skeptic questions are answered | [FAQ and skeptic attacks](#faq) |
@@ -81,61 +82,61 @@ One sentence summary:
 <details>
 <summary>Expand: What does this have to do with GPU cost?</summary>
 
-> When people talk about AI cost, they usually think about GPUs first.
->
-> That is not wrong. GPU cost is a major part of model inference cost.
->
-> But in real use cases, cost does not only come from the GPU itself. It also comes from how many tokens the model has to read, how many tokens it has to generate, how many rounds it has to run, and how much long-context baggage it has to carry.
->
-> If every task requires a large block of background text, the model must repeatedly read a large amount of content.
->
-> That becomes cost.
->
-> The Polaris idea is:
->
-> Besides pursuing larger models, stronger GPUs, and longer context windows, we can also ask another question:
->
-> Can the task itself be represented in a smarter way first?
->
-> If a task can be organized into a more stable structure, the model may not need to reread an entire library every time. It may only need to read a clearer task map.
->
-> So Polaris is not saying that GPUs are unimportant.
->
-> It is saying:
->
-> AI cost can be approached not only from the hardware side, but also from the task-structure side.
+When people talk about AI cost, they usually think about GPUs first.
+
+That is not wrong. GPU cost is a major part of model inference cost.
+
+But in real use cases, cost does not only come from the GPU itself. It also comes from how many tokens the model has to read, how many tokens it has to generate, how many rounds it has to run, and how much long-context baggage it has to carry.
+
+If every task requires a large block of background text, the model must repeatedly read a large amount of content.
+
+That becomes cost.
+
+The Polaris idea is:
+
+Besides pursuing larger models, stronger GPUs, and longer context windows, we can also ask another question:
+
+Can the task itself be represented in a smarter way first?
+
+If a task can be organized into a more stable structure, the model may not need to reread an entire library every time. It may only need to read a clearer task map.
+
+So Polaris is not saying that GPUs are unimportant.
+
+It is saying:
+
+AI cost can be approached not only from the hardware side, but also from the task-structure side.
 
 </details>
 
 <details>
 <summary>Expand: This is not simply making the prompt shorter</summary>
 
-> If you only make the prompt shorter, you usually lose information, and output quality may drop.
->
-> The key point of Polaris is not aggressive text deletion. It is reorganizing task content into a more stable structure.
->
-> You can think of it like this:
->
-> | Original long text | After conversion |
-> | --- | --- |
-> | A long task description | Task nodes |
-> | Many rules | Rule relations |
-> | Multiple goals | Goal order |
-> | Multiple constraints | Boundary conditions |
-> | Possible errors | Audit points |
-> | Final output | Output format |
->
-> This means the model does not receive a long messy block of text. It receives a clearer task structure.
->
-> The model’s job then becomes more like:
->
-> Read the task map.  
-> Translate the map back into the correct output.  
-> Complete the requested task.
->
-> So you can understand it as:
->
-> First turn the task into structure, then let the model translate that structure into an answer.
+If you only make the prompt shorter, you usually lose information, and output quality may drop.
+
+The key point of Polaris is not aggressive text deletion. It is reorganizing task content into a more stable structure.
+
+You can think of it like this:
+
+| Original long text | After conversion |
+| --- | --- |
+| A long task description | Task nodes |
+| Many rules | Rule relations |
+| Multiple goals | Goal order |
+| Multiple constraints | Boundary conditions |
+| Possible errors | Audit points |
+| Final output | Output format |
+
+This means the model does not receive a long messy block of text. It receives a clearer task structure.
+
+The model’s job then becomes more like:
+
+Read the task map.  
+Translate the map back into the correct output.  
+Complete the requested task.
+
+So you can understand it as:
+
+First turn the task into structure, then let the model translate that structure into an answer.
 
 </details>
 
@@ -145,11 +146,15 @@ One sentence summary:
 
 <a id="evidence-packs"></a>
 
-## Four public evidence packages 📦
+## Seven public evidence packages 📦
 
-This page currently publishes four main evidence packages.
+This page currently publishes seven main evidence packages.
 
-They are not four copies of the same material. They represent four different angles of evidence.
+They are not seven copies of the same material. They represent different angles of evidence.
+
+The first four packages, PP01 through PP02C, are the original public evidence layer. The PP02D_A, PP02D_B, and PP02D_C packages are a later supplementary evidence layer added after community feedback, including suggestions from [Zaious (@ChronicleCore)](https://github.com/Zaious).
+
+The PP02D packages do not replace the earlier packages. They add more checks around API stability, hardcase final-run gates, and public QA noninferiority.
 
 | Evidence package | What it answers | One-line meaning |
 | --- | --- | --- |
@@ -157,6 +162,9 @@ They are not four copies of the same material. They represent four different ang
 | PP02A | Can the T4 branch move from a weaker version to final pass? | Version evolution evidence |
 | PP02B | Can math-leaning tasks form an inspectable structured evidence chain? | Math stress test |
 | PP02C | Can code repair preserve source boundaries, sandbox checks, and hard red lines? | Skeptic red-line test |
+| PP02D_A | Can sharded API fixtures preserve structured outputs under stability checks? | API stability supplement |
+| PP02D_B | Can hardcase final-run gates pass without parser rescue or semantic fallback? | Hardcase final-run supplement |
+| PP02D_C | Can public QA compact context reduce cost while staying noninferior on inspectable QA metrics? | Public QA noninferiority supplement |
 
 ### PP01 / Main evidence bundle
 
@@ -186,6 +194,58 @@ This package focuses on code repair, sandbox checks, source boundaries, and hard
 
 Code repair is especially prone to false success, such as guessing repository content, misusing metadata, following distractor sources, claiming precise fixes without evidence, or ignoring source priority. PP02C is designed to check exactly these problems.
 
+### PP02D_A
+
+This package focuses on sharded API stability and output preservation checks.
+
+It adds evidence that structured outputs, support checks, aggregate support checks, counterfactual checks, and poison-rejection checks can pass across a 216-fixture supplement.
+
+### PP02D_B
+
+This package focuses on hardcase final-run API evidence.
+
+It checks transport success, parse success, certificate exactness, arena valid-set matching, valid recall, and invalid rejection across 216 API calls.
+
+### PP02D_C
+
+This package focuses on public QA noninferiority under compact context.
+
+It uses 100 public QA cases and compares baseline raw context against Polaris compact context across two model levels. The purpose is not to claim global QA superiority. The purpose is to publish inspectable evidence that compact context can reduce token cost while preserving a comparable QA signal within this public test scope.
+
+[Back to quick navigation](#top)
+
+---
+
+<a id="community-follow-up"></a>
+
+## Community follow-up supplement 🤝
+
+The PP02D_A, PP02D_B, and PP02D_C packages were added as a community-follow-up supplement.
+
+After the first public evidence layer was prepared, community feedback suggested that the release would be stronger if it included additional evidence for several pressure points that were not the main focus of PP01 through PP02C.
+
+Special thanks to [Zaious (@ChronicleCore)](https://github.com/Zaious) for suggesting that these supplementary checks be made more explicit.
+
+The added PP02D packages are implemented and published by the WFGY / OneStarDAO side. They should be read as additional public experimental evidence, not as third-party validation, official benchmark certification, or a release of the core mathematics.
+
+What PP02D adds:
+
+| Supplement | What it adds | Why it matters |
+| --- | --- | --- |
+| PP02D_A | 216-fixture sharded API stability and preservation checks | Adds evidence that structured outputs, support checks, counterfactual checks, and poison-rejection checks can survive API-style sharding |
+| PP02D_B | 216-call hardcase final-run evidence | Adds evidence that hardcase gates can pass without parser rescue, semantic fallback, certificate mismatch, or valid-set mismatch |
+| PP02D_C | 100-case public QA noninferiority pilot | Adds a public QA comparison between baseline raw context and Polaris compact context, with token and cost reduction records |
+
+In plain language:
+
+PP01 through PP02C established the first public evidence layer.
+
+PP02D_A through PP02D_C make that layer harder to dismiss by adding extra checks where a skeptical reader may reasonably ask for more evidence.
+
+This does not change the claim boundary.
+
+The PP02D supplement makes the evidence layer broader and more inspectable, but it does not claim that all AI tasks are solved, that small models universally beat large models, or that the full core mathematics has already been released.
+
 [Back to quick navigation](#top)
 
 ---
@@ -200,13 +260,13 @@ This layer focuses on publishing results, evidence chains, and auditable materia
 
 | Item | Count or status |
 | --- | ---: |
-| Main public evidence packages | 4 |
-| Main test cases | 680 |
-| Main model outputs | 3600 |
-| PP01 outputs | 1920 |
-| PP02A final-run outputs | 240 |
-| PP02B outputs | 720 |
-| PP02C main-run outputs | 720 |
+| Main public evidence packages | 7 |
+| Original PP01–PP02C main test cases | 680 |
+| Original PP01–PP02C main model outputs | 3600 |
+| PP02D_A fixtures | 216 |
+| PP02D_B final-run API calls / raw outputs | 216 |
+| PP02D_C public QA cases | 100 |
+| PP02D_C model-arm output records | 400 |
 | Full core mathematics included | 0 |
 | Full Colab execution notebook included | 0 |
 
@@ -228,7 +288,7 @@ What the current public version should not be interpreted as:
 Full core mathematics, formal reproduction materials, and more release materials are expected to be added after the official open-source release.
 
 <details>
-<summary>Expand: detailed result snapshots of the four packages</summary>
+<summary>Expand: detailed result snapshots of the seven packages</summary>
 
 ### PP01 / Main evidence bundle
 
@@ -319,6 +379,81 @@ PP02A also preserves a weaker previous reference record: parse success rate 0.99
 
 PP02C also includes supporting checks such as sandbox runs, a global hard-veto matrix, a mini preflight test, and a synthetic distractor matrix.
 
+### PP02D_A
+
+| Metric | Value |
+| --- | ---: |
+| Fixture count | 216 |
+| Shard count | 6 |
+| API exception count | 0 |
+| Shard parse fail count | 0 |
+| Parse fail count | 0 |
+| Fixture pass count | 216/216 |
+| Semantic support checks | 1944/1944 |
+| Aggregate support union checks | 216/216 |
+| Total support closure checks | 2160/2160 |
+| Forbidden-use count | 0 |
+| Hard-zero count | 0 |
+| Counterfactual pairs pass | 180/180 |
+| DeltaHitScore | 1.0 |
+| StabilityScore | 1.0 |
+| CounterfactualScore | 1.0 |
+| Poison reject count | 12/12 |
+| Schema budget pass | true |
+| Final result | `GREEN` |
+
+### PP02D_B
+
+| Metric | Value |
+| --- | ---: |
+| API calls | 216/216 |
+| Transport pass | 216/216 |
+| Transport fail | 0 |
+| Parse pass | 216/216 |
+| Parse fail | 0 |
+| Parser rescue count | 0 |
+| Semantic fallback count | 0 |
+| Certificate exact | 216/216 |
+| Arena valid-set match | 54/54 |
+| Valid recall | 108/108 |
+| Invalid rejection | 108/108 |
+| Final result | `GREEN` |
+| Claim ceiling | `API_216_EVIDENCE_ONLY_NOT_GLOBAL_PROOF` |
+
+### PP02D_C
+
+| Metric | Value |
+| --- | ---: |
+| Public QA cases | 100 |
+| Models | `gpt-4.1-mini`, `gpt-4.1` |
+| Arms | baseline raw context, Polaris compact context |
+| Model-arm output records | 400 |
+| Parse pass records | 400/400 |
+| Metadata leakage fail count | 0 |
+| Self-grading fail count | 0 |
+| API key pattern in prompts count | 0 |
+| Baseline answer F1 mean, both models | 0.7884761905 |
+| Compact-context answer F1 mean, both models | 0.7941428571 |
+| Baseline support-title F1 mean, both models | 0.8966666667 |
+| Compact-context support-title F1 mean, both models | 0.8453333333 |
+| Token reduction, compact vs baseline | 0.3704355582 |
+| Estimated cost reduction, compact vs baseline | 0.3124261543 |
+| Baseline wrong-source total, both models | 2 |
+| Compact-context wrong-source total, both models | 5 |
+| Baseline hallucinated-detail total, both models | 0 |
+| Compact-context hallucinated-detail total, both models | 1 |
+| Final result | `GREEN` |
+| Claim ceiling | `100_CASE_PUBLIC_HOTPOTQA_MODEL_LADDER_EVIDENCE_ONLY` |
+
+Model-ladder detail:
+
+| Model | Arm | Answer F1 mean | Support-title F1 mean | Wrong-source total | Hallucinated-detail total | Estimated cost USD |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| `gpt-4.1` | `A_BASELINE_RAW_CONTEXT` | 0.7791428571 | 0.9026666667 | 1 | 0 | 0.498238 |
+| `gpt-4.1` | `B_POLARIS_COMPACT_CONTEXT` | 0.7819761905 | 0.8403333333 | 3 | 1 | 0.342512 |
+| `gpt-4.1-mini` | `A_BASELINE_RAW_CONTEXT` | 0.7978095238 | 0.8906666667 | 1 | 0 | 0.099630 |
+| `gpt-4.1-mini` | `B_POLARIS_COMPACT_CONTEXT` | 0.8063095238 | 0.8503333333 | 2 | 0 | 0.068566 |
+
 </details>
 
 [Back to quick navigation](#top)
@@ -367,7 +502,7 @@ They also check:
 | Whether hard red lines are crossed | Prevents good-looking answers from hiding unacceptable errors |
 | Whether raw outputs can be inspected | Prevents reliance only on normalized summaries |
 
-### What risks do the four branches test?
+### What risks do the branches test?
 
 | Branch | Main test direction | What it protects against |
 | --- | --- | --- |
@@ -375,10 +510,13 @@ They also check:
 | PP02A | T4 evidence branch and version evolution | Showing only the final good result without preserving process context |
 | PP02B | Structured testing for math-leaning tasks | Symbol drift, condition loss, false equivalence, ignored counterexamples |
 | PP02C | Code repair, source boundaries, sandbox checks, and hard red lines | Repository hallucination, metadata misuse, distractor-source misuse, precise-fix claims without evidence |
+| PP02D_A | Sharded API stability and output preservation | Passing only a visible summary while parse, support, or counterfactual checks fail |
+| PP02D_B | Hardcase final API evidence | Transport failure, parser rescue dependency, certificate mismatch, valid-set mismatch |
+| PP02D_C | Public QA noninferiority pilot | Token reduction that quietly loses QA quality, increases leakage, or inflates claims |
 
-These four branches are not testing the same thing repeatedly.
+These branches are not testing the same thing repeatedly.
 
-They correspond to different risk surfaces:
+They correspond to different risk surfaces.
 
 PP01 checks the main cost signal.
 
@@ -387,6 +525,12 @@ PP02A checks the evidence path.
 PP02B checks math-leaning reasoning pressure.
 
 PP02C checks code repair and skeptic red lines.
+
+PP02D_A checks sharded API stability and preservation.
+
+PP02D_B checks hardcase final-run gates.
+
+PP02D_C checks public QA noninferiority under compact context.
 
 <details>
 <summary>Expand: Were the tasks intentionally made easy?</summary>
@@ -404,6 +548,12 @@ PP02A does not only check the final pass. It also preserves a weaker previous re
 PP02B does not only check whether the math answer looks good. It checks symbols, conditions, assumptions, counterexamples, and reasoning structure.
 
 PP02C does not only check whether the code answer sounds plausible. It checks source usage, sandbox checks, distractor sources, and hard red lines.
+
+PP02D_A does not only check whether a summary is green. It checks fixtures, support closure, counterfactual pairs, poison rejection, and parse stability.
+
+PP02D_B does not only check whether an API run completed. It checks transport, parsing, certificate exactness, valid-set match, valid recall, and invalid rejection.
+
+PP02D_C does not only check whether compact context uses fewer tokens. It also checks answer F1, support-title F1, leakage, wrong-source totals, hallucinated-detail totals, and cost records.
 
 So the task design is not “watering things down.”
 
@@ -466,154 +616,182 @@ This section answers the questions first-time readers and skeptics are most like
 <details>
 <summary>Q1. Is this just making the prompt shorter?</summary>
 
-> No.
->
-> A short prompt reduces words.
->
-> Polaris organizes task structure.
->
-> If you only shorten text, you can easily remove constraints, boundaries, scoring conditions, and error checks. Polaris tries to preserve those key pieces of information, but organize them into a task map that is easier for the model to use.
->
-> In plain language:
->
-> The traditional approach is like giving the model an entire encyclopedia every time.
->
-> The Polaris approach is more like drawing a map first, then asking the model to complete the task by following the map.
+No.
+
+A short prompt reduces words.
+
+Polaris organizes task structure.
+
+If you only shorten text, you can easily remove constraints, boundaries, scoring conditions, and error checks. Polaris tries to preserve those key pieces of information, but organize them into a task map that is easier for the model to use.
+
+In plain language:
+
+The traditional approach is like giving the model an entire encyclopedia every time.
+
+The Polaris approach is more like drawing a map first, then asking the model to complete the task by following the map.
 
 </details>
 
 <details>
 <summary>Q2. Is this just a self-made experiment congratulating itself?</summary>
 
-> This is a self-built public experiment, not a third-party official benchmark.
->
-> But it still has value because it does not only publish the final score.
->
-> The material publishes an evidence chain, including raw model outputs, normalized results, per-case verdicts, token cost, audit records, warning records, hard red lines, and file fingerprints.
->
-> So its position is not external ranking. It is inspectable public experimental evidence.
->
-> More precisely:
->
-> This is not asking you to first believe that we are strong.
->
-> It first publishes the experimental trace, so you can inspect backward from the result.
+This is a self-built public experiment, not a third-party official benchmark.
+
+But it still has value because it does not only publish the final score.
+
+The material publishes an evidence chain, including raw model outputs, normalized results, per-case verdicts, token cost, audit records, warning records, hard red lines, and file fingerprints.
+
+So its position is not external ranking. It is inspectable public experimental evidence.
+
+More precisely:
+
+This is not asking you to first believe that we are strong.
+
+It first publishes the experimental trace, so you can inspect backward from the result.
 
 </details>
 
 <details>
 <summary>Q3. Were the tasks intentionally made simple?</summary>
 
-> This is not a single-question showcase. It uses family-based pressure design.
->
-> PP01 tests cost and quality retention.
->
-> PP02A tests version evolution and evidence path.
->
-> PP02B tests symbols, conditions, counterexamples, and reasoning pressure in math-leaning tasks.
->
-> PP02C tests code repair, source boundaries, sandbox checks, and hard red lines.
->
-> These branches do not only test comfortable scenarios. They check different types of failure risk.
->
-> So this task design is not watered down.
->
-> It is closer to:
->
-> Turn common model failure paths into a test field, then check whether Polaris can reduce those failures.
+This is not a single-question showcase. It uses family-based pressure design.
+
+The branches do not only test comfortable scenarios. They check different types of failure risk.
+
+So this task design is not watered down.
+
+It is closer to:
+
+Turn common model failure paths into a test field, then check whether Polaris can reduce those failures.
 
 </details>
 
 <details>
 <summary>Q4. Did you leak answers or contaminate the tasks?</summary>
 
-> The public packages do not only publish total scores. They also include leakage checks, raw outputs, normalized results, and audit records.
->
-> This does not mean future experiments can never make mistakes.
->
-> It means this public release does not only provide a beautiful screenshot. It preserves inspection material that can be checked backward.
->
-> For example:
->
-> PP01 checks leakage, wrong sources, overclaiming, and family collapse.
->
-> PP02C checks source behavior, distractor sources, metadata as evidence, sandbox checks, and hard red lines.
->
-> The purpose of these checks is to avoid models relying on leaked answers, misusing sources, or treating non-evidence as evidence.
+The public packages do not only publish total scores. They also include leakage checks, raw outputs, normalized results, and audit records.
+
+This does not mean future experiments can never make mistakes.
+
+It means this public release does not only provide a beautiful screenshot. It preserves inspection material that can be checked backward.
+
+For example:
+
+PP01 checks leakage, wrong sources, overclaiming, and family collapse.
+
+PP02C checks source behavior, distractor sources, metadata as evidence, sandbox checks, and hard red lines.
+
+PP02D_C checks metadata leakage, self-grading risk, API key pattern risk, wrong-source totals, and hallucinated-detail totals.
+
+The purpose of these checks is to avoid models relying on leaked answers, misusing sources, or treating non-evidence as evidence.
 
 </details>
 
 <details>
 <summary>Q5. Does this mean small models completely beat large models?</summary>
 
-> No.
->
-> A more precise statement is:
->
-> Within the currently published task scope, Polaris shows a signal that structured task representation can reduce token cost while preserving inspectable output quality.
->
-> This should not be interpreted as all small models completely beating all large models.
->
-> It should also not be interpreted as all AI tasks being solved.
->
-> What can be said for now:
->
-> In these public test branches, structured task representation shows a cost and quality signal worth paying attention to.
+No.
+
+A more precise statement is:
+
+Within the currently published task scope, Polaris shows a signal that structured task representation can reduce token cost while preserving inspectable output quality.
+
+This should not be interpreted as all small models completely beating all large models.
+
+It should also not be interpreted as all AI tasks being solved.
+
+What can be said for now:
+
+In these public test branches, structured task representation shows a cost and quality signal worth paying attention to.
 
 </details>
 
 <details>
 <summary>Q6. Does this mean GPU scaling is no longer important?</summary>
 
-> No.
->
-> GPUs remain important.
->
-> Polaris focuses on reducing cost from another direction: improving the representation of the task itself, so the model does not have to reread large amounts of context every time.
->
-> In other words:
->
-> Hardware scaling is one path.
->
-> Task-structure optimization is another path.
->
-> These experiments are not saying GPUs are unimportant. They are showing that AI cost can also be reconsidered from the task-structure side.
+No.
+
+GPUs remain important.
+
+Polaris focuses on reducing cost from another direction: improving the representation of the task itself, so the model does not have to reread large amounts of context every time.
+
+In other words:
+
+Hardware scaling is one path.
+
+Task-structure optimization is another path.
+
+These experiments are not saying GPUs are unimportant. They are showing that AI cost can also be reconsidered from the task-structure side.
 
 </details>
 
 <details>
 <summary>Q7. Why do the ZIP files not include the full core mathematics and full Colab yet?</summary>
 
-> Because this release is a pre-release evidence package, not a full execution package.
->
-> The current goal is to let readers inspect raw model outputs, verdicts, cost, audits, warnings, red lines, and file fingerprints first.
->
-> Full core mathematics, formal reproduction materials, and more release materials will be added after the official open-source release.
->
-> In simple terms:
->
-> This version publishes the evidence first.
->
-> Deeper mathematical logic and reproduction materials will follow later.
+Because this release is a pre-release evidence package, not a full execution package.
+
+The current goal is to let readers inspect raw model outputs, verdicts, cost, audits, warnings, red lines, and file fingerprints first.
+
+Full core mathematics, formal reproduction materials, and more release materials will be added after the official open-source release.
+
+In simple terms:
+
+This version publishes the evidence first.
+
+Deeper mathematical logic and reproduction materials will follow later.
 
 </details>
 
 <details>
 <summary>Q8. What is the most important meaning of this release?</summary>
 
-> The most important point is not that there are many ZIP files.
->
-> The most important point is:
->
-> Evidence is published first, before deeper mathematics and execution materials are released.
->
-> This means readers do not have to rely only on screenshots or slogans. They can first inspect raw model outputs, normalized results, verdict tables, token cost, audit records, and file fingerprints.
->
-> In other words:
->
-> This material is not asking you to believe first.
->
-> It first publishes the public evidence chain so you can understand it and inspect backward. ✨
+The most important point is not that there are many ZIP files.
+
+The most important point is:
+
+Evidence is published first, before deeper mathematics and execution materials are released.
+
+This means readers do not have to rely only on screenshots or slogans. They can first inspect raw model outputs, normalized results, verdict tables, token cost, audit records, and file fingerprints.
+
+In other words:
+
+This material is not asking you to believe first.
+
+It first publishes the public evidence chain so you can understand it and inspect backward. ✨
+
+</details>
+
+<details>
+<summary>Q9. Why were PP02D_A, PP02D_B, and PP02D_C added?</summary>
+
+They were added as a community-follow-up supplement.
+
+PP01 through PP02C already covered the first public evidence layer: cost signal, version evolution, math-leaning tasks, and code-repair red lines.
+
+The PP02D packages add extra evidence where readers may reasonably ask for more pressure:
+
+API stability.
+
+Hardcase final-run gates.
+
+Public QA noninferiority under compact context.
+
+Special thanks to [Zaious (@ChronicleCore)](https://github.com/Zaious) for suggesting that these supplementary checks be made more explicit.
+
+This does not change the claim boundary. PP02D makes the public evidence layer broader and more inspectable, but it is still not a full release of the core mathematics or a third-party official benchmark.
+
+</details>
+
+<details>
+<summary>Q10. Why are public prompt bodies removed from PP02D_C?</summary>
+
+PP02D_C is published as an evidence package, not as a core-method package.
+
+The public ZIP keeps the result evidence: case manifest, raw outputs, parser records, scorer traces, leakage audits, and verdicts.
+
+Prompt bodies and compact-selection trace internals are excluded to avoid exposing non-public method details before the formal open-source release.
+
+The public PP02D_C archive also normalizes the uploaded source label from `DD02C` to `PP02D_C` and renames stale `full_30` artifact filenames to `full100`, while preserving raw model JSON bodies for hash integrity.
 
 </details>
 
@@ -629,7 +807,7 @@ If you only want a quick understanding, reading this README should be enough.
 
 The ZIP files are mainly for people who want to reproduce, research, audit, or inspect raw outputs.
 
-The current official public evidence packages are the following four files:
+The current official public evidence packages are the following seven files:
 
 | Official name | File | Purpose |
 | --- | --- | --- |
@@ -637,6 +815,9 @@ The current official public evidence packages are the following four files:
 | PP02A | `wfgy5_polaris_protocol_pp02a_t4_120case_public_evidence_20260503.zip` | T4 evidence branch and version evolution |
 | PP02B | `wfgy5_polaris_protocol_pp02b_sp_120case_public_evidence_20260503.zip` | Structured testing for math-leaning tasks |
 | PP02C | `wfgy5_polaris_protocol_pp02c_t4_120case_public_evidence_20260503.zip` | Code repair, sandbox checks, and hard red lines |
+| PP02D_A | `wfgy5_polaris_protocol_pp02d_a_public_evidence_20260504.zip` | 216-fixture sharded API stability and preservation checks |
+| PP02D_B | `wfgy5_polaris_protocol_pp02d_b_public_evidence_20260504.zip` | 216-call API hardcase final-run evidence |
+| PP02D_C | `wfgy5_polaris_protocol_pp02d_c_public_evidence_20260504.zip` | Public QA noninferiority pilot evidence |
 
 Download links:
 
@@ -646,8 +827,13 @@ Download links:
 | `wfgy5_polaris_protocol_pp02a_t4_120case_public_evidence_20260503.zip` | [Download](./downloads/wfgy5_polaris_protocol_pp02a_t4_120case_public_evidence_20260503.zip) |
 | `wfgy5_polaris_protocol_pp02b_sp_120case_public_evidence_20260503.zip` | [Download](./downloads/wfgy5_polaris_protocol_pp02b_sp_120case_public_evidence_20260503.zip) |
 | `wfgy5_polaris_protocol_pp02c_t4_120case_public_evidence_20260503.zip` | [Download](./downloads/wfgy5_polaris_protocol_pp02c_t4_120case_public_evidence_20260503.zip) |
+| `wfgy5_polaris_protocol_pp02d_a_public_evidence_20260504.zip` | [Download](./downloads/wfgy5_polaris_protocol_pp02d_a_public_evidence_20260504.zip) |
+| `wfgy5_polaris_protocol_pp02d_b_public_evidence_20260504.zip` | [Download](./downloads/wfgy5_polaris_protocol_pp02d_b_public_evidence_20260504.zip) |
+| `wfgy5_polaris_protocol_pp02d_c_public_evidence_20260504.zip` | [Download](./downloads/wfgy5_polaris_protocol_pp02d_c_public_evidence_20260504.zip) |
 
-The downloads folder may also contain earlier process files. First-time readers should use the four official public evidence packages listed above as the main reference.
+The downloads folder may also contain earlier process files.
+
+First-time readers should use the seven official public evidence packages listed above as the main reference.
 
 <details>
 <summary>Expand: suggested inspection order for engineers</summary>
@@ -656,7 +842,7 @@ The downloads folder may also contain earlier process files. First-time readers 
 | --- | --- | --- |
 | 1 | Raw model outputs | Confirms that the run actually produced model responses |
 | 2 | Normalized outputs | Shows how outputs were converted into structured records |
-| 3 | Per-case verdicts | Shows how each case maps to a result |
+| 3 | Per-case or per-fixture verdicts | Shows how each case maps to a result |
 | 4 | Group or stage verdicts | Shows higher-level result patterns |
 | 5 | Token cost records | Checks cost and token efficiency behavior |
 | 6 | Audit records | Checks leakage, warnings, hard vetoes, or source quality checks |
@@ -677,6 +863,9 @@ It does not prove that the experimental conclusion is correct. It verifies wheth
 | `wfgy5_polaris_protocol_pp02a_t4_120case_public_evidence_20260503.zip` | `28f2ca19a0a6bac27967bedbc07b4c2f9b44f1c212687ae74512967d42a2e7ad` |
 | `wfgy5_polaris_protocol_pp02b_sp_120case_public_evidence_20260503.zip` | `10c5d39a15d74afb29d89386147ba60e830fc624b050d53f0e4187c97fe3df65` |
 | `wfgy5_polaris_protocol_pp02c_t4_120case_public_evidence_20260503.zip` | `a85b7919da2fae8c543189fbaf586e3573af73642a1e410e49e5df6a5e6bb9f8` |
+| `wfgy5_polaris_protocol_pp02d_a_public_evidence_20260504.zip` | `3915a336566074344314ced1c9c332640f659019d6278e434e18e987118af299` |
+| `wfgy5_polaris_protocol_pp02d_b_public_evidence_20260504.zip` | `0fcd4529f531b5a0c8724183c7034f36b083995509fb977ddaa81a34f14a76a5` |
+| `wfgy5_polaris_protocol_pp02d_c_public_evidence_20260504.zip` | `2a372b926f2aeb7fa8043018dedb45087d8a5ab45be24c035bdd24d06bb85d8b` |
 
 </details>
 
@@ -692,9 +881,9 @@ What this material can currently say:
 
 | Can say | Explanation |
 | --- | --- |
-| Polaris shows a strong token-cost reduction signal within the public task scope | Especially in the PP01 main cost experiment |
+| Polaris shows a token-cost reduction signal within the public task scope | Especially in the PP01 main cost experiment and the PP02D_C public QA pilot |
 | Structured task representation may preserve inspectable output quality | The evidence chain matters, not only whether the answer looks good |
-| The four public packages cover different risk surfaces | Cost, version evolution, math-leaning tasks, code repair, and red lines |
+| The public packages cover different risk surfaces | Cost, version evolution, math-leaning tasks, code repair, API stability, hardcase gates, and public QA |
 | ZIP files allow researchers and skeptics to inspect backward | Includes raw outputs, verdicts, cost, audits, and file fingerprints |
 
 What this material currently cannot say:
@@ -718,7 +907,7 @@ One-sentence summary:
 
 ## Suggested short description ✍️
 
-The public evidence layer for WFGY 5.0 Polaris Protocol, including raw model outputs, normalized outputs, verdict tables, token cost records, audit records, SHA256 file fingerprints, and pre-release experimental evidence packages for PP01, PP02A, PP02B, and PP02C.
+The public evidence layer for WFGY 5.0 Polaris Protocol, including raw model outputs, normalized outputs, verdict tables, token cost records, audit records, SHA256 file fingerprints, the original PP01–PP02C evidence layer, and the community-follow-up PP02D_A–PP02D_C supplementary evidence layer.
 
 ---
 
@@ -729,17 +918,21 @@ The public evidence layer for WFGY 5.0 Polaris Protocol, including raw model out
 | Project | WFGY 5.0 Polaris Protocol |
 | Folder role | Public experimental evidence layer |
 | Release type | First-layer public evidence |
-| Public branches | PP01, PP02A, PP02B, PP02C |
-| Main evidence packages | 4 |
-| Main branch test cases | 680 |
-| Main branch model outputs | 3600 |
-| Raw model outputs | Included |
-| Normalized outputs | Included |
+| Public branches | PP01, PP02A, PP02B, PP02C, PP02D_A, PP02D_B, PP02D_C |
+| Main evidence packages | 7 |
+| Original PP01–PP02C test cases | 680 |
+| Original PP01–PP02C model outputs | 3600 |
+| Additional PP02D_A fixtures | 216 |
+| Additional PP02D_B API calls / raw outputs | 216 |
+| Additional PP02D_C public QA cases | 100 |
+| Additional PP02D_C model-arm output records | 400 |
+| Raw model outputs | Included where public-safe |
+| Normalized outputs | Included where public-safe |
 | Verdict files | Included |
 | Audit files | Included |
-| Token cost records | Included |
+| Token cost records | Included where available |
 | SHA256 records | Included |
-| Execution notebook | Not yet included |
+| Execution notebook | Not included |
 | Core mathematics | Not included in the first-layer public evidence |
 | Full implementation release | Expected after the official open-source release begins |
 | License | MIT License unless a specific file states otherwise |
@@ -754,5 +947,7 @@ The purpose of this folder is to make evidence visible before the full open-sour
 The current packages show the experimental trace:
 
 task design, raw model outputs, parsing, scoring, token cost, audits, result verdicts, and file integrity records.
+
+The PP02D supplement adds community-requested pressure checks while preserving the same public-evidence boundary.
 
 The full mathematical logic and reproduction materials are expected to follow after the official open-source release begins.
