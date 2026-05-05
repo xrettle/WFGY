@@ -55,6 +55,12 @@ PSBigBig x MiniPS: big big welcome, mini singularities.
 6. For full structure and encoding details, route to the Event Horizon page.
 -->
 
+> [!NOTE]
+> **WFGY 5.0 Polaris Protocol is almost here.**  
+> Thank you for waiting and supporting WFGY. We are taking a little more time to polish the release, so the official launch will be slightly delayed.  
+> As a small thank you gift, we are releasing an early Easter Egg for everyone: **Cite First Verification**.  
+> **[Open the CFV Easter Egg](./EasterEggs/CiteFirstVerification/)**
+
 # ⭐️ WFGY 5.0 Polaris Protocol
 
 > A protocol layer for engineered language and human machine interaction.  
