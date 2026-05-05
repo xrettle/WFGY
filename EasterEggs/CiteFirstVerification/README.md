@@ -6,10 +6,6 @@
 
 **Download the full Easter Egg TXT here:**
 
-**[🥚 Download WFGY_Easter_Egg_CFV.txt](https://raw.githubusercontent.com/onestardao/WFGY/main/EasterEggs/CiteFirstVerification/WFGY_Easter_Egg_CFV.txt)**
-
-Or open it in GitHub:
-
 **[🥚 View the CFV Easter Egg file](https://github.com/onestardao/WFGY/blob/main/EasterEggs/CiteFirstVerification/WFGY_Easter_Egg_CFV.txt)**
 
 ## 🐣 What is this?
