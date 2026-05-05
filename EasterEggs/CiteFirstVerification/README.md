@@ -1,5 +1,7 @@
 # WFGY Easter Egg: Cite First Verification
 
+<img width="1672" height="941" alt="WFGY_EGG" src="https://github.com/user-attachments/assets/1efdc596-ca38-4de7-ac14-fa156cd311a4" />
+
 Make AI pay a confidence cost before it sounds certain.
 
 Cite First Verification, or CFV, is a small WFGY Easter Egg that makes AI answers expose confidence on the surface. Instead of letting every polished sentence sound equally reliable, CFV adds compact confidence scores, softens weak statements, and blocks low confidence claims in strict mode.
