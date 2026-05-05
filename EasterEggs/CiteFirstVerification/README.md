@@ -1,6 +1,18 @@
-# WFGY Easter Egg: Cite First Verification
+# 🥚 WFGY Easter Egg: Cite First Verification
 
 <img width="1672" height="941" alt="WFGY_EGG" src="https://github.com/user-attachments/assets/1efdc596-ca38-4de7-ac14-fa156cd311a4" />
+
+## 🥚 Get the Easter Egg
+
+**Download the full Easter Egg TXT here:**
+
+**[🥚 Download WFGY_Easter_Egg_CFV.txt](https://raw.githubusercontent.com/onestardao/WFGY/main/EasterEggs/CiteFirstVerification/WFGY_Easter_Egg_CFV.txt)**
+
+Or open it in GitHub:
+
+**[🥚 View the CFV Easter Egg file](https://github.com/onestardao/WFGY/blob/main/EasterEggs/CiteFirstVerification/WFGY_Easter_Egg_CFV.txt)**
+
+## 🐣 What is this?
 
 Make AI pay a confidence cost before it sounds certain.
 
@@ -9,6 +21,16 @@ Cite First Verification, or CFV, is a small WFGY Easter Egg that makes AI answer
 This is a playable preview from the WFGY line.
 
 It is small enough to try in one prompt, but sharp enough to change how an answer feels.
+
+🥚 A small gift before WFGY 5.0 arrives.  
+🥚 A confidence layer for AI answers.  
+🥚 A tiny audit mechanism that makes uncertainty harder to hide.  
+🥚 Not the full Polaris Protocol, just a fun early egg from the WFGY vault.
+
+## 🥚 Try it
+
+After loading the TXT, paste this into a chat:
+
 
 ```text
 Use WFGY with CFV Strict. Show only surface CI.
