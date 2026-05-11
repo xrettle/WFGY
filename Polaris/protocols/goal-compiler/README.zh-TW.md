@@ -2,9 +2,16 @@
 
 # 北極星目標編譯器
 
-> Polaris Goal Compiler 的繁體中文版。  
-> 這是 WFGY 5.0 Polaris Protocol 底下的人機任務協議。
-> 先編譯，再執行一個 active atom。先驗證，再解鎖。只宣稱有證據支撐的完成度。
+> Polaris Goal Compiler 的繁體中文版。
+> 這是 WFGY 5.0 Polaris Protocol 底下的人機任務協議。先編譯，再執行一個 active atom。先驗證，再解鎖。只宣稱有證據支撐的完成度。
+
+> [!IMPORTANT]
+> **目前 teaser 相容性：僅 ChatGPT。**
+>
+> Polaris Goal Compiler 目前是以 ChatGPT 為第一個公開測試目標的 teaser component。
+> 這個協議的長期設計方向是可攜式 TXT protocol，但本次 teaser release 目前只正式驗證 ChatGPT 使用情境。
+>
+> 其他 AI 助手、coding agent、IDE rule layer、workflow runner、未來 skill system，都屬於後續設計方向，不是本次 teaser release 的正式支援宣稱。
 
 語言版本：[English](./README.md) | [繁體中文](./README.zh-TW.md)
 
