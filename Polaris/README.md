@@ -1,12 +1,19 @@
 > [!NOTE]
-> **WFGY 5.0 Polaris Protocol is almost here.**  
-> Thank you for waiting and supporting WFGY. We are taking a little more time to polish the release, so the official launch will be slightly delayed.  
-> As a small thank you gift, we are releasing an early Easter Egg for everyone: **Cite First Verification**.  
-> **[Open the CFV Easter Egg](./EasterEggs/CiteFirstVerification/)**
+> **WFGY 5.0 Polaris Protocol is now moving through a staged functional rollout.**
+>
+> The original single-date release plan has been expanded because WFGY 5.0 has grown into multiple public layers: evidence packages, portable protocols, reproducibility materials, runtime structures, and deeper engine components.
+>
+> Instead of making everyone wait for one giant drop, useful parts will now be released in batches.
+>
+> The earlier **Cite First Verification** release was a small Easter Egg during the schedule adjustment. The next public component is now available: **Polaris Goal Compiler**, a portable human-AI execution protocol you can download and test immediately.
+>
+> [Open the CFV Easter Egg](./EasterEggs/cite-first-verification/README.md)  
+> [Open Polaris Goal Compiler](./Polaris/protocols/goal-compiler/README.md)  
+> [Join the WFGY Discord](https://discord.gg/KRxBsr6GYx)
 
 # WFGY 5.0 Polaris Protocol
 
-> Public release target: **2026/05/05**  
+> Now entering staged public release, with useful components released batch by batch.
 > Current status: **pre release teaser and public evidence layer**
 
 [![WFGY Polaris Protocol](https://github.com/user-attachments/assets/5f220659-8245-4cb0-8d13-6d287eacde70)](https://github.com/onestardao/WFGY/blob/main/Polaris/README.md)
