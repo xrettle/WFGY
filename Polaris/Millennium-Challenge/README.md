@@ -1,4 +1,4 @@
-# Polaris Millennium Challenge Archive
+# Polaris Millennium Challenge Archive 
 
 > Public timestamp archive for selected Millennium Prize Problem challenge packages under the WFGY / Polaris research direction.
 
