@@ -1,5 +1,7 @@
 # 7MP Clay-Strict Native Lean No-Sorry External Review Package
 
+<img width="1672" height="941" alt="7MP_ER" src="https://github.com/user-attachments/assets/ebd944fb-dbe5-46cf-b877-b8487c7cd438" />
+
 This folder contains the public external review package for the Seven Millennium Problems track under WFGY / Polaris.
 
 This package is prepared as a Clay-strict native Lean no-sorry machine-replay artifact.  
