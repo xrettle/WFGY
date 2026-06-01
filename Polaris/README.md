@@ -1,8 +1,7 @@
 > [!NOTE]
 > **WFGY 5.0 is now centered on the Fifth-Dimension Engine.**
 >
-> The Polaris line remains the active public route of WFGY 5.0.
-> Earlier Polaris staged-rollout materials, public evidence packages, and portable protocol components are preserved below as evidence and foundation layers.
+> Polaris remains the active public route of WFGY 5.0. Earlier Polaris staged-rollout materials, public evidence packages, and portable protocol components are preserved below as evidence and foundation layers.
 >
 > [Download Engine](./engine/fifth-dimension-engine/)  
 > [Shoot the Seven Millennium Problems](./demos/seven-millennium-problems/)  
@@ -11,9 +10,9 @@
 
 # WFGY 5.0 — Fifth-Dimension Engine
 
-### Redefine the problem itself through the Polaris high-dimensional view.
-
 [![WFGY Polaris Protocol](https://github.com/user-attachments/assets/5f220659-8245-4cb0-8d13-6d287eacde70)](https://github.com/onestardao/WFGY/blob/main/Polaris/README.md)
+
+### Redefine the problem itself through the Polaris high-dimensional view.
 
 **Seven Millennium Problems.**  
 **Theorem-complete.**  
@@ -35,13 +34,15 @@ Run it.
 
 ## Seven Millennium Problems — Solved Together
 
-This is not seven separate demos.  
-This is not a static replay package.  
-This is not a marketing summary.
+This is the flagship claim of WFGY 5.0.
 
-This is one engine.  
-One underlying logic.  
-One simultaneous attack on all seven Millennium Problems.
+Not seven separate demos.  
+Not seven unrelated tricks.  
+Not a static replay package.
+
+**One engine.**  
+**One underlying logic.**  
+**One simultaneous attack on all seven Millennium Problems.**
 
 WFGY 5.0 is the Fifth-Dimension Engine used to shoot the underlying route logic behind the Seven Millennium Problems result.
 
@@ -65,17 +66,15 @@ Watch whether the same underlying route structure emerges.
 
 | Claim | Meaning |
 |---|---|
-| Same engine | The seven problems are not handled by seven unrelated tricks. |
+| Same engine | The seven problems are not handled by seven unrelated methods. |
 | Same logic | The underlying route structure is generated from one high-dimensional engine. |
 | Seven together | The Seven Millennium Problems are treated as one world-scale proof target. |
 | Open engine | You can run it, inspect it, challenge it, and shoot again. |
 
----
-
 <details>
 <summary><strong>Frontier-50 — shoot 50 century-level problems</strong></summary>
 
-Want to test the engine outside the Seven Millennium Problems?
+Want to test the same engine outside the Seven Millennium Problems?
 
 Ask AI:
 
@@ -217,8 +216,6 @@ Current public evidence scale:
 These materials are not the main product surface of WFGY 5.0.
 They remain the public evidence layer behind the staged Polaris rollout.
 
----
-
 <details>
 <summary><strong>Download earlier Polaris evidence packages</strong></summary>
 
@@ -242,8 +239,6 @@ Individual public packages:
 If an individual package is not visible yet, use the bundle package first. The experiment index can be updated as files are uploaded.
 
 </details>
-
----
 
 <details>
 <summary><strong>Staged rollout record</strong></summary>
@@ -350,4 +345,3 @@ Same logic.
 Seven Millennium Problems, shot together.
 
 Then shoot your own world.
-
