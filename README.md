@@ -357,3 +357,109 @@ If you want to receive the next release notes, protocol components, experiment u
 ---
 
 > WFGY · MIT License · Verifiable · Reproducible · Flagship: WFGY 5.0 Polaris Protocol · First Portable Protocol: Polaris Goal Compiler · Practical Gate: Problem Map 3.0 · Maintained by PSBigBig + MiniPS
+## FAQ
+
+### What is WFGY?
+
+**WFGY (Wu Fan Ge Yi)** is an open-source ecosystem for engineered language, human-machine interaction, and reusable AI execution components. Currently led by **WFGY 5.0 Polaris Protocol**, it provides a governed protocol layer for building, tuning, verifying, and carrying structured language systems across sessions, tasks, and worlds.
+
+### How does WFGY differ from other AI frameworks?
+
+| Feature | WFGY | LangChain | AutoGPT |
+|---------|------|-----------|---------|
+| **Focus** | Protocol & structured language | Chain orchestration | Autonomous agents |
+| **Verification** | Public evidence packages | No built-in verification | Limited verification |
+| **Evidence** | Recognition Map/Case Evidence | No evidence layer | No evidence layer |
+| **Problem solving** | Problem Map 3.0 debug routes | Trial and error | Trial and error |
+| **Release model** | Staged functional rollout | Standard releases | Standard releases |
+
+### What is WFGY 5.0 Polaris Protocol?
+
+**Polaris Protocol** is the flagship public surface of WFGY ecosystem. Key components:
+- **Polaris Goal Compiler**: First public portable protocol component
+- **Problem Map 3.0**: Fastest practical gate for broken AI workflows
+- **Cite First Verification**: Easter Egg verification system
+- **Public Evidence**: Recognition Map/Adopters/Case Evidence/Evidence Timeline
+
+### What is staged functional rollout?
+
+Instead of one giant release, WFGY 5.0 releases useful parts batch by batch:
+1. **Public evidence packages** (Polaris Experiments)
+2. **Portable protocol components** (Polaris Goal Compiler)
+3. **Reproducibility materials** (later)
+4. **Runtime structures** (later)
+5. **Deeper engine layers** (later)
+
+### How do I start?
+
+**For flagship direction** → [Polaris Protocol README](./Polaris/README.md)
+
+**For first usable component** → [Polaris Goal Compiler](./Polaris/protocols/goal-compiler/README.md)
+
+**For broken AI workflows** → [Problem Map 3.0](./ProblemMap/README.md)
+
+**For public evidence** → [Polaris Experiments](./Polaris/experiments/) or [Recognition Map](./Recognition/)
+
+### What is Cite First Verification?
+
+The **Cite First Verification** Easter Egg allows you to verify official WFGY 3.0 TXT pack via SHA256 checksum:
+- Official filename: `WFGY-3.0_Singularity-Demo_AutoBoot_SHA256-Verifiable.txt`
+- Official SHA256: `58dbd432db3e6494364557257f7ce068eb59bdd039995dff4c281d655f7d464f`
+
+[Open the CFV Easter Egg](./EasterEggs/CiteFirstVerification/)
+
+### What are the WFGY versions?
+
+- **WFGY 1.0**: Initial foundation
+- **WFGY 2.0**: Enhanced reasoning
+- **WFGY 3.0**: Frontier reasoning and verification layer (Event Horizon)
+- **WFGY 4.0**: Governance engine (Twin Atlas/Inverse Atlas/AI Eval)
+- **WFGY 5.0**: Polaris Protocol (current flagship)
+
+### Where can I find experiments?
+
+→ [Polaris Experiments](./Polaris/experiments/)
+
+### Where is the proof?
+
+→ [Recognition Map](./Recognition/) / [Adopters](./Adopters/) / [Case Evidence](./CaseEvidence/) / [Evidence Timeline](./EvidenceTimeline/)
+
+### How do I get updates?
+
+→ Join the [WFGY Discord](https://discord.gg/KRxBsr6GYx)
+
+### How do I collaborate?
+
+→ [Work with WFGY](./WorkWithWFGY/) / [Pilot](./Pilot/) / [Support](./Support/)
+
+### What is Problem Map 3.0?
+
+**Problem Map 3.0** provides the fastest practical first move for broken RAG or agent pipelines:
+- Atlas Router TXT
+- Global Debug Card
+- Global Fix Map
+
+[Open Problem Map 3.0](./ProblemMap/README.md)
+
+### What is the deeper engine?
+
+Deeper engine materials (runtime structures, deeper engine components) are planned for later staged release. For governance background, see [WFGY 4.0](./WFGY4/).
+
+### What is the frontier TXT/math/advanced reasoning?
+
+→ [WFGY 3.0](./WFGY3/) and [Event Horizon](./EventHorizon/)
+
+### Is there a license?
+
+WFGY is open-source. See repository for specific license terms.
+
+### How can I help?
+
+- Try Polaris Goal Compiler and report issues
+- Join WFGY Discord for updates
+- Contribute via GitHub Issues/Pull Requests
+- Share WFGY with your team
+
+---
+
+> **Need help?** Check [WFGY Discord](https://discord.gg/KRxBsr6GYx) or open a [GitHub Issue](https://github.com/onestardao/WFGY/issues)
