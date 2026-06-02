@@ -1,10 +1,10 @@
 # WFGY Ecosystem Metrics
 
-Generated at: Mon Jun  1 11:40:55 UTC 2026
+Generated at: Tue Jun  2 10:41:56 UTC 2026
 
 ## Repo statistics
 
 Stars: 1752
 Forks: 162
-Open issues: 12
+Open issues: 11
 Watchers: 24
